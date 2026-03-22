@@ -2318,5 +2318,217 @@
         "priority_score": 52,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "8a2949dfbe5f9607437a65bf96de76e6",
+        "timestamp": "2026-03-22T15:41:40.954012",
+        "title": "Voltarent ECU (Engine Control Unit)",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKA117ylDD6tSNuEpfZo5IcPgOMFUw-Ve1omBs40lITkwOEtZq0ttDDvMnczXl-dXF7inQHKGxqOgF7U5C-yiu-bpBLWHVlP3mU8B6rve7cmHe4m60axr9SiXD7fKDCq2fdWgeGko=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGF5R4X1YKqge_tlb156CfUO0Y7SZLyN13m8-bmNyq8_2Z4VwuK6YvGs3dR5UANvc5_FA0l9d8veuYbZtehbZVHGtbK13g4KVimjYUBPBrvuXEkE7mORPfvFdEoceeF-4p_snem14xwp-KiqObJyVr_gYSmy6VwZCHYAgMxvyX7hFDboeMU5WRNUNqM3NQv8K8aTctN573QSjYiY-9SqgJ5fDNPL_cG9IdGOT8pmvo=",
+            "https://www.arduino.cc/blog/2024/10/01/this-kenyan-engineer-modernizes-vintage-cars-with-a-custom-ecu-and-efi-upgrades/"
+        ],
+        "summary": "A custom-built, Arduino-based electronic fuel injection (EFI) system designed to modernize vintage internal combustion engines, improving fuel efficiency and performance by replacing outdated mechanical systems.",
+        "category": [
+            "Automotive",
+            "Electronics",
+            "Upcycling",
+            "Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Thika",
+            "lat": -1.036648,
+            "lon": 37.077523
+        },
+        "process": {
+            "how_it_works": "The system replaces mechanical fuel injection or carburation with a digital electronic fuel injection system. It utilizes an Arduino Due microcontroller to process real-time engine data through sophisticated algorithms to precisely control ignition timing and fuel delivery.",
+            "materials_used": [
+                "Arduino Due",
+                "Electronic Fuel Injection (EFI) components",
+                "Sensors",
+                "Wiring harnesses",
+                "Custom software algorithms"
+            ],
+            "step_by_step": [
+                "Identify a vintage engine with inefficient mechanical fuel delivery (e.g., Mercedes-Benz M102)",
+                "Remove the outdated mechanical fuel injection or carburetor system",
+                "Install modern electronic fuel injectors and necessary engine sensors",
+                "Integrate the Arduino Due microcontroller to the engine's sensor array",
+                "Implement custom algorithms to process real-time data for ignition and fuel control",
+                "Calibrate the system for optimal fuel efficiency and power output"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High fuel consumption and inefficiency of vintage 'junk' engines; high cost of modern vehicle replacements for local farmers and travelers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "fire hazard",
+                "explosion"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "Modifying internal combustion engines to use custom-built electronic fuel injection (EFI) systems involves significant risks. High-pressure fuel delivery and precise ignition timing are critical; any hardware failure or software bug in the Arduino-based ECU could result in fuel leaks, engine fires, or catastrophic mechanical failure during operation. Professional calibration and fire suppression systems are essential for such grassroots automotive engineering."
+        },
+        "priority_score": 62,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "c3b9555e7166acee1034b6f9063af32e",
+        "timestamp": "2026-03-22T15:42:00.395466",
+        "title": "William Kamkwamba's Windmill and Irrigation System",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH07iunThrdEhEe03qDmW5E-dvnS3rd4zrvT9hj6_Lp5S8crxv1Ci9c40rT3enRfJY9zK74cB0KWpESAGqEx0iUYbC3tYGHUIQpJ82A8sFk67LGtLl6a08Quw0xE_nLpqbu1LvpWf5_74oKjOEWte6k5PHXsAC_6B-zeTPJ5scp4952bguLUU5YkUDrhxzjgLG7C0OcI6pEKcSzLaepLOjOnlrjd7tFrCYVtdWszEaOPhSNAf9yEF6I",
+            "https://williamkamkwamba.com/",
+            "https://www.ted.com/talks/william_kamkwamba_how_i_harnessed_the_wind",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLjTbUw7ydKoGDAjVFThucbM-cG17T6sBlajmcVfq4UkMPIX-liDUFbOnJqZowkrGV9daVlnMSTGQ2hmGCDsBo8JlDojAl16pg6xZ_4LxCyufInhPJcZFPo79yEg2A-VhM3S6cu6pn6SfWxr7YUYUn3tmd9o64Bu6HXz_m9ijpiYCK07gCsxz5uqX351CKn_iQhtsYHCMhwcln-Esdw80vdQ==",
+            "https://movingwindmills.org/"
+        ],
+        "summary": "A functional windmill and irrigation system built from salvaged scrap materials, including tractor parts and bicycle frames, to provide electricity and water during a severe famine in rural Malawi.",
+        "category": [
+            "Renewable Energy",
+            "Agriculture",
+            "Water Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Malawi",
+            "region": "Wimbe",
+            "lat": -12.9853902,
+            "lon": 33.6923324
+        },
+        "process": {
+            "how_it_works": "A wind turbine constructed from a tractor fan blade captures wind energy to spin a motor reclaimed from a radio, generating electricity stored in a car battery to power a drip irrigation pump.",
+            "materials_used": [
+                "tractor fan blade",
+                "bicycle frame",
+                "old shock absorbers",
+                "radio motor",
+                "car battery",
+                "salvaged engine parts"
+            ],
+            "step_by_step": [
+                "Scavenge local scrapyards for discarded mechanical and agricultural components.",
+                "Repurpose a tractor fan blade to serve as the turbine's rotor.",
+                "Assemble a support structure using a bicycle frame and old shock absorbers.",
+                "Integrate a small motor from a broken radio to act as a generator.",
+                "Connect the generator to a repurposed car battery for energy storage.",
+                "Link the battery to a small pump to facilitate a drip irrigation system."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Severe famine and lack of electricity/water for crops during drought.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Mechanical failure",
+                "Electrical hazard",
+                "Toxic chemicals"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation uses salvaged mechanical and automotive components. Primary risks include structural failure of the DIY turbine tower, mechanical injury from rotating blades, and potential chemical exposure or fire hazards from the repurposed lead-acid car battery. While these risks are present, they are manageable at a small scale and the system does not involve high-pressure or volatile chemical reactions."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "7a372321dd5ae9710c39f09043e1b617",
+        "timestamp": "2026-03-22T15:42:29.913204",
+        "title": "Wayne Keith's Wood-Gas Powered Bio-Trucks",
+        "sources": [
+            "https://www.woodgas.com",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2ZPxg2LFppGTe8LgWmYDxj64ltvrPH8dbkt4WBpA9PvxuJ5kVggqEyClN4t_2rpzwQOvhXkqyAVHkGINSQEafmjSWu0FUOuZcyU_iOQTkVDvGv7H3lwWYPbm16KykoZ_FJpvaFc-YlayT7w==",
+            "https://www.motherearthnews.com",
+            "https://en.wikipedia.org/wiki/Wood_gas_generator",
+            "https://www.motherearthnews.com/sustainable-living/renewable-energy/wood-gas-powered-truck-zm0z12amzkon/"
+        ],
+        "summary": "Inventor Wayne Keith repurposes standard internal combustion engines to run on wood gas produced by an onboard gasifier, allowing vehicles to operate entirely on wood chips instead of petroleum fuels.",
+        "category": [
+            "Renewable Energy",
+            "Sustainable Transportation",
+            "Biomass Conversion"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Alabama",
+            "lat": 33.2588817,
+            "lon": -86.8295337
+        },
+        "process": {
+            "how_it_works": "A custom gasifier unit converts wood chips into a flammable gas mixture of carbon monoxide and hydrogen through thermochemical conversion. This gas is then cooled and filtered before being fed into the engine's air intake to power the cylinders.",
+            "materials_used": [
+                "Internal combustion engine (e.g., V8)",
+                "Custom gasifier unit",
+                "Wood chips",
+                "Cooling system components",
+                "Filtration system",
+                "Vehicle chassis"
+            ],
+            "step_by_step": [
+                "Build a custom gasifier unit designed to convert biomass into flammable gas",
+                "Mount the gasifier and associated plumbing onto the vehicle's chassis",
+                "Modify the engine's air intake system to receive gas instead of liquid fuel",
+                "Install a cooling system to reduce the temperature of the wood gas for better combustion",
+                "Add a filtration system to remove ash and particulates from the gas stream",
+                "Load the gasifier with wood chips and ignite to begin the gasification process"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a carbon-neutral alternative to petroleum for transportation and power generation using locally sourced biomass.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "explosion"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The process of wood gasification produces high concentrations of Carbon Monoxide (CO) and Hydrogen (H2). CO is a colorless, odorless, and highly lethal gas, posing a severe risk of asphyxiation if leaks occur in the vehicle cabin or enclosed spaces. Additionally, the high-temperature gasifier unit mounted on a vehicle chassis presents significant fire and explosion risks, especially in the event of a collision or mechanical failure of the custom-built filtration and cooling systems."
+        },
+        "priority_score": 66,
+        "hidden_gem": true,
+        "critical_flag": true
     }
 ]
