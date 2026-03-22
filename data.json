@@ -2530,5 +2530,205 @@
         "priority_score": 66,
         "hidden_gem": true,
         "critical_flag": true
+    },
+    {
+        "id": "3867af53d76b98d8b4b5203b836ddf2f",
+        "timestamp": "2026-03-22T16:18:23.631892",
+        "title": "Victoria Hand Project",
+        "sources": [
+            "https://www.victoriahandproject.com/",
+            "https://blog.prusa3d.com/victoria-hand-project-changing-prosthetic-care-with-3d-printing_119667/",
+            "https://3dprint.com/81223/victoria-hand-project/",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10662584/"
+        ],
+        "summary": "A Canadian charity that establishes local 3D printing ecosystems in developing countries to provide low-cost, high-functioning upper-limb prostheses by training local technicians and providing specialized hardware.",
+        "category": [
+            "Healthcare",
+            "3D Printing",
+            "Assistive Technology",
+            "Social Enterprise"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Canada",
+            "region": "Global",
+            "lat": 43.7025817,
+            "lon": -79.2659509
+        },
+        "process": {
+            "how_it_works": "The project equips local clinics with 3D printers and scanners, allowing them to manufacture and fit customized prosthetics on-site rather than relying on imported, expensive alternatives.",
+            "materials_used": [
+                "3D printers",
+                "3D scanners",
+                "Specialized software",
+                "3D printing filament"
+            ],
+            "step_by_step": [
+                "Partner with local clinics in developing countries",
+                "Provide 3D printing and scanning hardware and software",
+                "Train local technicians in the production and fitting process",
+                "Scan the patient's limb to ensure a custom fit",
+                "3D print and assemble the Victoria Hand on-site",
+                "Provide ongoing maintenance and repairs using local resources"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and lack of accessibility for upper-limb prosthetics in low-resource settings.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Safety",
+                "Fire"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The primary risks involve the operation of 3D printing hardware, such as potential fire hazards from heating elements and electrical issues in regions with unstable power grids. There is also a safety risk regarding the ergonomic fit and durability of the prostheses. However, the technology is generally safe, and the project includes training for local technicians to manage these risks."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "ec075bb968de7038aac7fca2aa3ddfc9",
+        "timestamp": "2026-03-22T16:18:49.189548",
+        "title": "e-NABLE",
+        "sources": [
+            "https://enablingthefuture.org/",
+            "https://shop3duniverse.com/blogs/news/enablecon-2019-new-3d-printed-prosthetic-designs",
+            "https://enmed.tamu.edu/enmed-students-launch-e-nable-chapter-to-deliver-free-3d-printed-prosthetics/"
+        ],
+        "summary": "A global grassroots network of over 40,000 volunteers who use personal 3D printers and open-source designs to create free or low-cost prosthetic hands and arms for those in need, particularly children.",
+        "category": [
+            "3D Printing",
+            "Healthcare",
+            "Assistive Technology",
+            "Open Source"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "Multiple (including USA, Mexico, and Colombia)",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Volunteers and local chapters use decentralized production hubs to 3D print prosthetic components from open-source files, which are then assembled and delivered to local recipients.",
+            "materials_used": [
+                "PLA",
+                "PETG",
+                "3D printers"
+            ],
+            "step_by_step": [
+                "Select an open-source prosthetic design from the e-NABLE community",
+                "Scale the design to fit the specific measurements of the recipient",
+                "3D print the individual components using materials like PLA or PETG",
+                "Assemble the printed parts into a functional device",
+                "Connect with the recipient for fitting and adjustment"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and accessibility barriers of traditional prosthetics, especially for growing children who require frequent resizing.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire hazard",
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The decentralized use of 3D printers involves heating elements and the melting of thermoplastics (PLA/PETG), which presents a minor fire hazard and the release of volatile organic compounds (VOCs) and ultrafine particles. Because these are grassroots operations in non-industrial settings, they may lack standardized ventilation and fire suppression systems, though the materials themselves are relatively low-risk."
+        },
+        "priority_score": 62,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "b91dffb6b24a5172bf134ddc6115210f",
+        "timestamp": "2026-03-22T16:19:12.810243",
+        "title": "3D PrintAbility",
+        "sources": [
+            "https://niatech.org",
+            "https://niatech.org/",
+            "https://www.utoronto.ca/news/nia-technologies-brings-3d-prosthetic-printing-developing-countries",
+            "https://3dprint.com/128833/nia-technologies-vorum-uganda/",
+            "https://www.engineeringforchange.org/news/nias-3d-printed-prosthetic-limbs-cut-costs-and-production-time/"
+        ],
+        "summary": "A digital toolchain developed by Nia Technologies that uses smartphone-based scanning and 3D printing to create high-quality prosthetic sockets in low-resource settings, significantly reducing production time.",
+        "category": [
+            "Healthcare",
+            "3D Printing",
+            "Assistive Technology",
+            "Social Enterprise"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Uganda, Tanzania, Cambodia",
+            "region": "East Africa and Southeast Asia",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system replaces traditional plaster-casting with a digital workflow where a patient's limb is scanned via smartphone and a custom socket is manufactured using a 3D printer.",
+            "materials_used": [
+                "Smartphone",
+                "3D Printer",
+                "3D PrintAbility software",
+                "3D printing filament"
+            ],
+            "step_by_step": [
+                "Scan the patient's residual limb using a smartphone-based scanner",
+                "Rectify and design the socket digitally using specialized software",
+                "3D print the custom transtibial socket",
+                "Fit the socket to the patient and provide necessary adjustments"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces the labor-intensive, messy, and slow (week-long) manual plaster-casting process for prosthetics to a 1.5-day digital workflow.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Safety",
+                "Environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks involve the structural integrity of the 3D-printed prosthetic sockets; if printed with incorrect settings or low-quality filament, they could fail during use, leading to patient injury. Additionally, 3D printers present minor fire hazards due to heating elements and produce plastic waste. However, the process is significantly cleaner and safer than traditional plaster casting and chemical resin work."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
