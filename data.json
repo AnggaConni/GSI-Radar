@@ -2730,5 +2730,207 @@
         "priority_score": 46,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "741275b9c0bbfd02da4bd4b45e4eb189",
+        "timestamp": "2026-03-22T16:43:07.055175",
+        "title": "From Pollutants to Cash",
+        "sources": [
+            "https://unfccc.int/climate-action/momentum-for-change/women-for-results/from-pollutants-to-cash-urban-poor-women-turning-waste-into-wealth-malawi",
+            "https://unhabitat.org/"
+        ],
+        "summary": "A community-led waste management initiative in Lilongwe, Malawi, that empowers vulnerable urban women to collect and process organic household waste into high-quality compost, creating a sustainable income stream while improving local sanitation.",
+        "category": [
+            "Waste Management",
+            "Women Empowerment",
+            "Circular Economy",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Malawi",
+            "region": "Lilongwe",
+            "lat": -13.9875107,
+            "lon": 33.768144
+        },
+        "process": {
+            "how_it_works": "Community members collect organic waste from households in informal settlements, sort it, and use composting techniques to turn it into a marketable fertilizer product.",
+            "materials_used": [
+                "Organic household waste",
+                "Sorting bins",
+                "Composting tools",
+                "Vegetable garden plots"
+            ],
+            "step_by_step": [
+                "Collection of organic waste from thousands of households",
+                "Sorting waste to separate organic matter from non-recyclables",
+                "Processing organic material into high-quality compost",
+                "Packaging and selling compost to landscaping companies",
+                "Utilizing surplus compost for community vegetable gardens"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of municipal waste collection leading to drain blockage and water contamination; high poverty rates among widows and caregivers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Biological",
+                "Respiratory"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the project has high social and environmental value, handling organic waste poses biological risks from pathogens and respiratory risks from fungal spores or dust during the composting process. Safety gear like gloves, boots, and masks are essential to prevent illness or injury from contaminated materials."
+        },
+        "priority_score": 56,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "3b4a1f72f6de614a25d2f50f25bb7bb6",
+        "timestamp": "2026-03-22T16:43:26.116321",
+        "title": "Waste Concern Decentralized Composting Model",
+        "sources": [
+            "https://wasteconcern.org/decentralised-composting-in-bangladesh-a-win-win-situation-for-all-stakeholders/",
+            "https://wasteconcern.org",
+            "https://www.unescap.org/resources/waste-concern-decentralized-composting-model-bangladesh",
+            "https://www.c40.org/case-studies/dhaka-composting-project/",
+            "https://iclei.org/en/Dhaka_Bangladesh.html"
+        ],
+        "summary": "A decentralized composting system in Dhaka that utilizes the Indonesian Windrow Technique to transform organic waste into nutrient-rich fertilizer through public-private-community partnerships, providing jobs for the urban poor and reducing landfill waste.",
+        "category": [
+            "Waste Management",
+            "Sustainable Agriculture",
+            "Circular Economy",
+            "Social Entrepreneurship"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Bangladesh",
+            "region": "Dhaka",
+            "lat": 23.7643863,
+            "lon": 90.3890144
+        },
+        "process": {
+            "how_it_works": "The model uses a decentralized approach where organic waste is collected from households and processed in neighborhood-scale plants using aerobic composting to create fertilizer for commercial sale.",
+            "materials_used": [
+                "Organic waste",
+                "Microorganisms",
+                "Bamboo aerators",
+                "Collection vans",
+                "Land (government-provided)"
+            ],
+            "step_by_step": [
+                "Door-to-door collection of segregated organic waste by community members.",
+                "Transportation of waste to decentralized composting sites.",
+                "Piling of organic waste into windrows using the Indonesian Windrow Technique for aerobic decomposition.",
+                "Regular turning and monitoring of the piles to ensure proper aeration and temperature.",
+                "Screening and refining the matured compost into high-quality fertilizer.",
+                "Bulk sale to fertilizer companies for nutrient enrichment and national distribution."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the lack of waste management in dense slums, reduces landfill pressure from organic waste (80% of total refuse), and provides employment for marginalized groups.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "biological",
+                "occupational"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The composting process is generally safe and environmentally beneficial. The primary risks are biological exposure to pathogens in organic waste and physical hazards for workers during collection and sorting. These are well-managed through the established Indonesian Windrow Technique and standard safety gear."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "bfc004596cfbd7d3c79c34a7fa2070ba",
+        "timestamp": "2026-03-22T16:43:44.426380",
+        "title": "Healthy Places, Prosperous People",
+        "sources": [
+            "https://www.idrc.ca/en/article/reducing-pollution-jakarta-slums-haryanti-koostanto-indonesia",
+            "https://www.mercycorps.org/where-we-work/indonesia"
+        ],
+        "summary": "A community-led waste management and circular economy initiative in the Penjaringan slum that converts organic waste into compost and income, effectively reducing canal pollution and flooding while providing economic relief to the urban poor.",
+        "category": [
+            "Waste Management",
+            "Circular Economy",
+            "Urban Resilience",
+            "Poverty Alleviation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Indonesia",
+            "region": "North Jakarta",
+            "lat": -6.136197,
+            "lon": 106.9006902
+        },
+        "process": {
+            "how_it_works": "The system integrates communal composting with micro-entrepreneurship. Residents divert organic waste from landfills and canals, turning it into a resource that supports urban gardening and direct sales.",
+            "materials_used": [
+                "Organic kitchen waste",
+                "Plastic waste",
+                "Composting equipment",
+                "Ornamental plants",
+                "Soil amendments"
+            ],
+            "step_by_step": [
+                "Household collection of organic kitchen waste and plastics",
+                "Processing of organic waste into nutrient-rich compost",
+                "Utilization of compost for growing ornamental plants",
+                "Sale of plants and surplus compost to generate income",
+                "Sorting and recycling of plastic materials"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigates waste dumping in canals which causes flooding and disease outbreaks; addresses lack of income for residents in extreme poverty.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "biological",
+                "toxic",
+                "fire"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the project provides significant environmental and economic benefits, communal waste management in high-density informal settlements carries inherent risks. Handling organic waste without professional oversight can lead to pathogen exposure and vector-borne diseases. Plastic recycling, depending on the method used (e.g., melting or shredding), can introduce toxic fumes or fire hazards. The grassroots nature of the project requires formal safety protocols, PPE, and training to mitigate these health and safety risks."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
