@@ -359,6 +359,11 @@
                   <div class="md:w-2/3">
                     <h5 class="text-xs font-bold text-slate-500 uppercase mb-3"><i class="ph-fill ph-list-numbers text-unesco-blue align-middle"></i> Step-by-Step</h5>
                     <ol class="text-sm text-slate-600 space-y-2 list-decimal list-inside" id="modal-steps"></ol>
+                    <div id="modal-sources-section" class="mt-6 pt-4 border-t border-slate-100 hidden">
+                    <h5 class="text-[10px] font-bold text-slate-400 uppercase mb-2">Verified Sources</h5>
+                    <div id="modal-sources-list" class="flex flex-col gap-2"></div>
+                  </div>
+              </div>
                   </div>
                 </div>
               </div>
@@ -691,6 +696,29 @@
     activeItemId = id;
     const item = globalData.find(i => i.id === id);
     if (!item) return;
+
+    // --- LOGIKA UNTUK MENAMPILKAN MULTIPLE SOURCES ---
+    const sourcesSection = document.getElementById('modal-sources-section');
+    const sourcesList = document.getElementById('modal-sources-list');
+    sourcesList.innerHTML = ''; // Bersihkan daftar lama
+
+    // Cek jika ada data sources di dalam item
+    if (item.sources && item.sources.length > 0) {
+        sourcesSection.classList.remove('hidden');
+        item.sources.forEach(url => {
+            const isVideo = url.includes('youtube.com') || url.includes('youtu.be');
+            const icon = isVideo ? 'ph-youtube-logo text-red-500' : 'ph-link-simple text-unesco-blue';
+            
+            const linkHtml = `
+                <a href="${url}" target="_blank" class="flex items-center gap-2 text-xs text-slate-600 hover:text-unesco-blue transition-colors bg-slate-50 p-2 rounded-lg border border-slate-100 hover:border-unesco-blue/30">
+                    <i class="ph-fill ${icon} text-base"></i>
+                    <span class="truncate text-blue-600 underline">${url}</span>
+                </a>`;
+            sourcesList.insertAdjacentHTML('beforeend', linkHtml);
+        });
+    } else {
+        sourcesSection.classList.add('hidden');
+    }
     let bHtml = `<span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-1 rounded uppercase border border-slate-200">${item.innovation_level}</span>`;
     if(item.hidden_gem) bHtml += `<span class="bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-1 rounded uppercase border border-yellow-200"><i class="ph-fill ph-diamond"></i> GEM</span>`;
     document.getElementById('modal-badges').innerHTML = bHtml;
@@ -735,6 +763,7 @@
     });
   }
 
+  
   function closeModal() {
     const modal = document.getElementById('item-modal'), wrapper = document.getElementById('modal-content-wrapper');
     modal.classList.add('opacity-0'); wrapper.classList.add('scale-95'); setTimeout(() => modal.classList.add('hidden'), 300);
