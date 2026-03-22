@@ -324,23 +324,6 @@ def run_discovery_pipeline(api_key, database, max_items=3):
     keyword = random.choice(KEYWORDS)
     log.info(f"Initiating radar ping with keyword: '{keyword}'")
 
-    seed_prompt = f"Search the web for 5 distinct, real-world examples of: {keyword}. Provide a detailed paragraph for each, AND include a list of all relevant source URLs found (YouTube, news, or project sites). Return a JSON object with an array 'innovations' containing these descriptions and their associated URLs."
-    # Tambahkan larangan penggunaan link grounding di sini juga
-    seed_sys = "You are an OSINT web scraper. Use google search. IMPORTANT: Always return the direct, original source URLs and avoid google search redirect links. Return pure JSON. Do not hallucinate."
-
-    seed_data = call_gemini_with_retry(api_key, seed_prompt, seed_sys, use_search=True)  # ✅ changed
-    if not seed_data or "innovations" not in seed_data:
-        log.warning("No raw material found on this run.")
-        return 0
-
-    raw_descriptions = seed_data["innovations"]
-    success_count = 0
-
-def run_discovery_pipeline(api_key, database, max_items=3):
-    """Mencari data baru dan menambahkannya ke database."""
-    keyword = random.choice(KEYWORDS)
-    log.info(f"Initiating radar ping with keyword: '{keyword}'")
-
     # Prompt yang memerintahkan AI untuk mencari URL
     seed_prompt = f"Search the web for 5 distinct, real-world examples of: {keyword}. Provide a detailed paragraph for each, AND include a list of all relevant source URLs found (YouTube, news, or project sites). Return a JSON object with an array 'innovations' containing these descriptions and their associated URLs."
     seed_sys = "You are an OSINT web scraper. Use google search. Return pure JSON. Do not hallucinate."
@@ -419,7 +402,7 @@ def run_discovery_pipeline(api_key, database, max_items=3):
     return success_count
     
 def generate_intelligence_report(api_key, database):
-    """Membaca database dan menambahkan resume baru ke resume.json."""
+    """Read database and append new report to resume.json."""
     if not database:
         log.warning("Database is empty. Skipping report generation.")
         return
@@ -429,6 +412,7 @@ def generate_intelligence_report(api_key, database):
 
     db_string = json.dumps(database, ensure_ascii=False)
 
+    # Prompt tetap meminta 'gsi-current' untuk laporan baru
     sys_prompt = """You are an elite AI Intelligence Analyst generating a quarterly global report on grassroots and institutional innovation.
                 You will be given a JSON array containing raw innovation records.
                 OUTPUT EXACTLY THIS JSON FORMAT:
@@ -448,23 +432,32 @@ def generate_intelligence_report(api_key, database):
 
     prompt = f"Analyze the following innovation dataset and generate the report.\n\nDATASET:\n{db_string}"
 
-    new_report = call_gemini_with_retry(api_key, prompt, sys_prompt, expect_json=True)  # ✅ changed
+    new_report = call_gemini_with_retry(api_key, prompt, sys_prompt, expect_json=True)
 
     if new_report:
         new_report["report_metadata"]["generated_at"] = datetime.now().isoformat()
         new_report["report_metadata"]["period"] = quarter
 
+        # --- LOGIKA BARU UNTUK ID MANAGEMENT ---
         resume_db = load_json_file(RESUME_FILE, [])
         if not isinstance(resume_db, list):
             resume_db = []
 
+        # ✅ Langkah 1: Ubah SEMUA laporan yang sudah ada di database menjadi 'gsi-older'
+        for old_report in resume_db:
+            if "report_metadata" in old_report:
+                old_report["report_metadata"]["report_id"] = "gsi-older"
+
+        # ✅ Langkah 2: Tambahkan laporan baru (yang ID-nya masih 'gsi-current')
         resume_db.append(new_report)
+        
         save_json_file(RESUME_FILE, resume_db)
+        # ---------------------------------------
 
         md_content = convert_report_to_markdown(new_report)
         save_text_file(REPORT_MD_FILE, md_content)
 
-        log.info("✅ Intelligence Resume successfully appended to resume.json.")
+        log.info("✅ Intelligence Resume successfully appended. Only the latest is 'gsi-current'.")
     else:
         log.error("Failed to generate intelligence report.")
 
