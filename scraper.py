@@ -233,7 +233,10 @@ def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_js
         payload["generationConfig"]["responseMimeType"] = "application/json"
         
     if use_search:
-        payload["tools"] = [{"google_search_retrieval": {}}]
+        # --- KODE YANG DIPERBAIKI ---
+        # Mengikuti format API terbaru Google
+        payload["tools"] = [{"googleSearch": {}}]
+        # ----------------------------
         
     headers = {
         'Content-Type': 'application/json',
