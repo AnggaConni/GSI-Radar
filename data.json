@@ -1,1 +1,190 @@
-[]
+[
+    {
+        "id": "807ae0f4e918c227cd45f558d186cb17",
+        "timestamp": "2026-03-22T08:39:04.899100",
+        "title": "The Humanure Handbook Sawdust Toilet System",
+        "summary": "A simple, low-cost DIY composting toilet system popularized by Joseph Jenkins, utilizing a 5-gallon bucket within a wooden box, where dry organic material like sawdust is added after each use. Full buckets are then emptied into an outdoor thermophilic compost pile to produce nutrient-rich garden compost.",
+        "category": [
+            "Composting Toilet",
+            "Sustainable Sanitation",
+            "DIY",
+            "Off-grid Living"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "",
+            "region": "globally, in rural and off-grid settings",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses a 5-gallon bucket housed within a wooden box with a toilet seat. After each use, dry organic material is added to cover waste, absorb moisture, control odors, and initiate composting. Full buckets are transferred to an outdoor thermophilic compost pile for pathogen breakdown and compost creation.",
+            "materials_used": [
+                "5-gallon bucket",
+                "Wooden box",
+                "Toilet seat",
+                "Sawdust",
+                "Peat moss",
+                "Rice hulls"
+            ],
+            "step_by_step": [
+                "Place a 5-gallon bucket within a wooden box with a toilet seat.",
+                "After each use, add a scoop of dry organic material (sawdust, peat moss, or rice hulls) to cover the waste.",
+                "Once the bucket is full, empty its contents into an outdoor thermophilic compost pile.",
+                "Manage the compost pile to reach high temperatures to safely break down pathogens.",
+                "Allow the waste to transform into nutrient-rich compost."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a sanitation solution where traditional septic systems or water hookups are unavailable or undesirable, while also transforming human waste into a valuable soil amendment.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "toxic",
+                "environment",
+                "safety gear",
+                "fire hazard"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The system involves direct handling of human waste, posing a significant risk of pathogen exposure if the thermophilic composting process is not diligently managed to reach and maintain high temperatures. Improper management can lead to environmental contamination through runoff of incompletely composted material. The grassroots, DIY nature suggests varied adherence to best practices, increasing overall risk. Sawdust, used as cover material, is combustible and its storage presents a minor fire hazard. There is an implicit need for safety gear (gloves, proper hygiene) during handling that may not always be followed."
+        },
+        "priority_score": 72,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "4c71acde070a84327d8db45ace42c5d8",
+        "timestamp": "2026-03-22T08:39:29.799902",
+        "title": "SOIL's EkoLakay Service in Haiti",
+        "summary": "SOIL's EkoLakay Service is an ecological sanitation (EcoSan) toilet service in Haiti that provides container-based composting toilets to households. The organization collects the waste and transforms it into agricultural-grade compost, contributing to local food production and ecological restoration.",
+        "category": [
+            "Ecological Sanitation",
+            "Waste Management",
+            "Composting",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Haiti",
+            "region": "dense urban settlements and rural areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "SOIL provides container-based composting toilets to households. Users deposit waste into these containers, which are then regularly collected by SOIL. The collected human waste is safely transported to SOIL's composting facilities, treated according to World Health Organization standards, and transformed into organic compost for agricultural use.",
+            "materials_used": [
+                "container-based composting toilets",
+                "human waste"
+            ],
+            "step_by_step": [
+                "SOIL provides EkoLakay ecological sanitation toilets to households.",
+                "Users deposit waste into the provided containers.",
+                "SOIL offers a regular collection service for the waste containers.",
+                "Collected human waste is safely transported to SOIL's composting facilities.",
+                "Waste undergoes a treatment process adhering to World Health Organization standards.",
+                "Treated waste is transformed into rich, organic compost.",
+                "The compost is used to improve and fertilize soil, contributing to local food production and ecological restoration."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of safe sanitation, inefficient waste management, soil degradation, and food insecurity.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "toxic",
+                "environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation involves handling human waste, which inherently carries a high risk of pathogen exposure and disease transmission (toxic risk). There's also a potential for environmental contamination if collection, transport, or composting processes are compromised. However, SOIL explicitly states adherence to World Health Organization standards for waste treatment, which significantly mitigates these risks, indicating robust safety protocols are in place. The service also has significant positive environmental impacts by producing compost and improving sanitation. The high risk score reflects the inherent danger of the material being handled, applying a conservative assessment to a grassroots initiative, despite strong mitigation efforts."
+        },
+        "priority_score": 82,
+        "hidden_gem": false,
+        "critical_flag": true
+    },
+    {
+        "id": "44713aec8da0928c0b5702ff49099458",
+        "timestamp": "2026-03-22T08:39:51.349823",
+        "title": "The Uphill Trust Compost Toilet Project",
+        "summary": "This project converts existing shallow drop latrines into compost toilet blocks for staff and visitors at a school in rural Uganda, where there are no mains waste or water systems. It involves retrofitting latrines with new toilet boxes containing recycled plastic buckets for waste collection, which is then composted using dry organic material to enhance soil fertility in school gardens.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Sustainability",
+            "Agriculture"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda",
+            "region": "rural Uganda",
+            "lat": 0.9433144,
+            "lon": 30.8164758
+        },
+        "process": {
+            "how_it_works": "Existing latrine cubicles are retrofitted with new toilet boxes that house plastic buckets for waste collection. After each use, dry organic material like grass is added as a cover. Full buckets are emptied into raised, multi-bin compost heaps, which have a base filled with dry grass. Organic waste, including the toilet material, is deposited and covered with a thick layer of dry grass to facilitate hot composting, producing compost for school gardens.",
+            "materials_used": [
+                "plastic buckets (recycled paint tubs)",
+                "dry organic material (like grass)"
+            ],
+            "step_by_step": [
+                "Retrofit existing latrine cubicles with new toilet boxes.",
+                "Place plastic buckets (recycled paint tubs) inside the toilet boxes to collect waste.",
+                "After use, add dry organic material (like grass) as a cover.",
+                "Once full, empty the buckets into raised, multi-bin compost heaps.",
+                "Ensure the base of the compost bins is shaped into a shallow dish and filled with dry grass.",
+                "Deposit organic waste, including the toilet material, into the compost bins.",
+                "Cover the deposited waste with a thick layer of dry grass to facilitate hot composting."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of mains waste or water systems for sanitation at a rural school, and a need to enhance soil fertility in school gardens.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "toxic",
+                "fire hazard",
+                "environment"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "High risk of pathogen exposure from human waste if hot composting is not consistently effective, especially as the resulting compost is intended for school gardens. There is a significant fire hazard due to hot composting processes involving large volumes of dry organic material (grass). Potential for environmental contamination exists if pathogens persist or if compost management is inadequate. The grassroots nature of the project and lack of explicit mention of safety gear for waste handlers further elevates the overall risk."
+        },
+        "priority_score": 76,
+        "hidden_gem": false,
+        "critical_flag": true
+    }
+]

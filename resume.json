@@ -1,1 +1,141 @@
-{}
+[
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-22T08:40:09.569581",
+            "period": "Q1 2026",
+            "total_records_analyzed": 3
+        },
+        "global_summary": {
+            "total_innovations": 3,
+            "grassroots_percentage": 33.33,
+            "institutional_percentage": 33.33,
+            "semi_formal_percentage": 33.33
+        },
+        "top_categories": [
+            {
+                "category": "Sanitation",
+                "count": 3,
+                "trend": "dominant"
+            },
+            {
+                "category": "Waste Management",
+                "count": 2,
+                "trend": "growing"
+            },
+            {
+                "category": "Composting",
+                "count": 2,
+                "trend": "growing"
+            },
+            {
+                "category": "Agriculture",
+                "count": 2,
+                "trend": "growing"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Globally (rural and off-grid settings)",
+                "key_pattern": "DIY sustainable sanitation and waste-to-compost systems, often with varied adherence to safety protocols.",
+                "risk_level": "High"
+            },
+            {
+                "region": "Haiti",
+                "key_pattern": "Institutionalized ecological sanitation services, transforming human waste into agricultural compost with robust standards.",
+                "risk_level": "Medium-High"
+            },
+            {
+                "region": "Uganda",
+                "key_pattern": "Semi-formal school-based sanitation retrofits, utilizing local materials for composting and soil enrichment.",
+                "risk_level": "High"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 3,
+            "critical_cases": 2,
+            "top_risk_types": [
+                "toxic",
+                "environment",
+                "fire hazard"
+            ],
+            "emerging_risks": [
+                "safety gear"
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Ecological Sanitation & Composting Systems",
+                "description": "Innovations focused on converting human waste into valuable compost, addressing sanitation needs, soil degradation, and resource recovery, particularly in areas lacking conventional infrastructure.",
+                "regions": [
+                    "Globally",
+                    "Haiti",
+                    "Uganda"
+                ],
+                "risk_level": "High"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "The Humanure Handbook Sawdust Toilet System",
+                "country": "Global (DIY)",
+                "reason": "A highly replicable, low-cost DIY system empowering individuals in off-grid settings, demonstrating significant potential for decentralized sanitation despite its inherent risks."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "Safety Protocol Enhancement & Training",
+                "target": "Grassroots Composting Toilet Users (Global)",
+                "priority_level": "High"
+            },
+            {
+                "type": "Safety Protocol & Hot Composting Training",
+                "target": "Uphill Trust Compost Toilet Project (Uganda)",
+                "priority_level": "High"
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "A significant reliance on adapting existing knowledge, indicating a practical, iterative approach to innovation in these sectors.",
+            "observation": "While 'self-taught' initiatives demonstrate raw ingenuity, 'adapted from existing' knowledge sources are more prevalent, suggesting a pattern of building upon proven concepts, especially in institutional and semi-formal settings."
+        },
+        "recommendations": [
+            "Prioritize safety training and clear guidelines for grassroots and semi-formal ecological sanitation projects, especially regarding pathogen management and fire hazards.",
+            "Support the development and dissemination of standardized, low-cost safety gear and protocols for waste handlers in community-based composting initiatives.",
+            "Invest in research and development for more robust and easily verifiable thermophilic composting methods suitable for varied grassroots contexts.",
+            "Facilitate knowledge sharing between institutional successes (like SOIL) and grassroots efforts to elevate safety standards and replicability."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Globally",
+                    "count": 1
+                },
+                {
+                    "region": "Haiti",
+                    "count": 1
+                },
+                {
+                    "region": "Uganda",
+                    "count": 1
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "High",
+                    "count": 3
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "self-taught",
+                    "count": 1
+                },
+                {
+                    "source": "adapted_from_existing",
+                    "count": 2
+                }
+            ]
+        }
+    }
+]
