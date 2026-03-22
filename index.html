@@ -75,6 +75,18 @@
 
     /* Radar Chart Container */
     #modal-radar-chart { width: 100%; height: 280px; }
+
+    /* Smart Visualization Custom CSS */
+    @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow { animation: spin-slow 12s linear infinite; }
+    .pattern-grid {
+        background-size: 20px 20px;
+        background-image: linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px);
+    }
   </style>
   
 </head>
@@ -94,7 +106,6 @@
       </div>
 
       <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
-        <!-- Tombol Guide Baru -->
         <button onclick="openGuideModal()" class="text-slate-600 hover:text-unesco-blue bg-white border border-slate-200 hover:border-unesco-blue transition-all flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-md shadow-sm" title="Guide & Methodology">
           <i class="ph-fill ph-info text-lg"></i> <span class="hidden md:inline">Guide</span>
         </button>
@@ -153,7 +164,7 @@
 
       <div id="inventory-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
-      <!-- Pagination yang Lebih Pintar & Aman untuk HP -->
+      <!-- Pagination -->
       <div id="pagination-container" class="w-full flex flex-col md:flex-row items-center justify-between gap-4 pt-4 pb-8 hidden">
         <div class="flex items-center gap-2 w-full md:w-auto justify-center md:justify-start bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
            <label for="page-size" class="text-xs text-slate-500 font-bold ml-1">SHOW:</label>
@@ -278,7 +289,7 @@
     </div>
   </div>
 
-  <!-- Modal: Guide & Methodology (BARU) -->
+  <!-- Modal: Guide & Methodology -->
   <div id="guide-modal" class="fixed inset-0 z-[110] flex items-center justify-center hidden modal-blur bg-slate-900/70 p-4 opacity-0 transition-opacity duration-300">
     <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden transform scale-95 transition-transform duration-300 shadow-2xl" id="guide-modal-wrapper">
       
@@ -292,14 +303,10 @@
       </div>
 
       <div class="p-4 sm:p-6 overflow-y-auto flex-grow text-sm text-slate-600 leading-relaxed space-y-6">
-        
-        <!-- Section 1 -->
         <div>
           <h4 class="font-bold text-slate-800 mb-2 uppercase tracking-wide text-xs">Platform Overview</h4>
           <p>The <strong>Global Innovation Intelligence Radar</strong> is an autonomous AI horizon-scanning tool. It continuously crawls the web to discover, extract, and evaluate global innovations—ranging from unregistered grassroots inventions to institutional solutions.</p>
         </div>
-
-        <!-- Section 2 -->
         <div>
           <h4 class="font-bold text-slate-800 mb-2 uppercase tracking-wide text-xs">AI Engine & Execution</h4>
           <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg">
@@ -311,8 +318,6 @@
             </ul>
           </div>
         </div>
-
-        <!-- Section 3 -->
         <div>
           <h4 class="font-bold text-slate-800 mb-2 uppercase tracking-wide text-xs">Metrics & Scoring</h4>
           <p class="mb-2">Every innovation discovered is rigorously analyzed by the AI pipeline across four main axes. These metrics fuel the <strong>Smart Visualization</strong> on every nodecard and detail modal.</p>
@@ -331,14 +336,13 @@
              </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 
   <script>
   // ═══════════════════════════════════════════════════════════════
-  //  MOCK DATA (Fallback jika data.json gagal diload)
+  //  MOCK DATA
   // ═══════════════════════════════════════════════════════════════
   const RAW_JSON = [
       {
@@ -405,7 +409,7 @@
   let map = null;
   let markersLayer = null;
   let currentPage = 1;
-  let itemsPerPage = 9; // Default jumlah card per halaman dikurangi agar HP aman
+  let itemsPerPage = 9; 
   let activeItemId = null;
   let currentModalRadar = null;
 
@@ -422,24 +426,20 @@
     } catch (e) {
       console.log("Using embedded mock data.", e);
       globalData = RAW_JSON;
-      
-      // Menggandakan data dummy agar pagination bisa ditest (hanya untuk preview jika file data.json tidak ada)
       for(let i=0; i<4; i++) {
         globalData.push({...globalData[0], id: `mock-1-${i}`, title: `Mock Variation A-${i}`});
         globalData.push({...globalData[1], id: `mock-2-${i}`, title: `Mock Variation B-${i}`});
       }
     }
     
-    // Pengurutan bawaan: Terbaru
     globalData.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
-    
     renderStats();
     setupFilters();
     applyFilters();
   }
 
   // ═══════════════════════════════════════════════════════════════
-  //  LOGIKA TABS
+  //  LOGIKA TABS & STATS
   // ═══════════════════════════════════════════════════════════════
   function switchTab(tab) {
     document.getElementById('tab-directory').classList.toggle('active', tab === 'directory');
@@ -459,9 +459,6 @@
     }
   }
 
-  // ═══════════════════════════════════════════════════════════════
-  //  UI RENDERING (Stats & Grid)
-  // ═══════════════════════════════════════════════════════════════
   function renderStats() {
     const total = globalData.length;
     const grassroots = globalData.filter(i => i.innovation_level === 'grassroots').length;
@@ -488,12 +485,71 @@
     `;
   }
 
-  // Fungsi utilitas untuk hashing string jadi nilai warna (hue 0-360)
+  // ═══════════════════════════════════════════════════════════════
+  //  SMART VISUALIZATION RENDERER (NEW)
+  // ═══════════════════════════════════════════════════════════════
   const getHashColor = (str) => {
       let hash = 0;
       for (let i = 0; i < str.length; i++) hash = str.charCodeAt(i) + ((hash << 5) - hash);
-      return Math.abs(hash % 360);
+      return Math.abs(hash);
   };
+
+  // Fungsi menghasilkan ilustrasi dinamis menggunakan Phosphor Icons
+  function getIllustration(categories) {
+      const catStr = categories.join(' ').toLowerCase();
+      const base = "relative flex items-center justify-center w-full h-full";
+      
+      if (catStr.includes('agri') || catStr.includes('farm') || catStr.includes('food')) {
+          return `
+              <div class="${base}">
+                  <i class="ph ph-recycle text-[100px] text-white/10 absolute rotate-12"></i>
+                  <div class="flex gap-1 items-end relative z-10">
+                      <i class="ph-fill ph-plant text-5xl text-white"></i>
+                      <i class="ph-fill ph-drop text-3xl text-cyan-200 animate-bounce"></i>
+                  </div>
+              </div>`;
+      } else if (catStr.includes('health') || catStr.includes('medic') || catStr.includes('sanitation')) {
+          return `
+              <div class="${base}">
+                  <div class="w-24 h-24 border-4 border-dashed border-white/30 rounded-full absolute animate-spin-slow"></div>
+                  <div class="bg-white/20 p-4 rounded-3xl relative z-10">
+                      <i class="ph-fill ph-heart text-5xl text-white"></i>
+                      <i class="ph-fill ph-lightning text-2xl text-amber-300 absolute -top-2 -right-2"></i>
+                  </div>
+              </div>`;
+      } else if (catStr.includes('energy') || catStr.includes('solar') || catStr.includes('power')) {
+           return `
+              <div class="${base}">
+                  <i class="ph-fill ph-target text-[80px] text-white/20 absolute"></i>
+                  <i class="ph-fill ph-lightning text-6xl text-white relative z-10"></i>
+                  <div class="absolute w-full h-full bg-white/20 blur-xl opacity-30"></div>
+              </div>`;
+      } else if (catStr.includes('build') || catStr.includes('construct') || catStr.includes('housing')) {
+          return `
+              <div class="${base}">
+                  <div class="absolute bottom-8 w-32 h-1 bg-white/30 rounded"></div>
+                  <i class="ph-fill ph-house text-6xl text-white relative z-10"></i>
+                  <i class="ph-fill ph-map-pin text-3xl text-orange-200 absolute top-8 right-1/4 animate-bounce"></i>
+              </div>`;
+      } else if (catStr.includes('water') || catStr.includes('ocean')) {
+          return `
+              <div class="${base}">
+                  <i class="ph-fill ph-sun text-[60px] text-yellow-200 absolute top-6 right-12 animate-spin-slow"></i>
+                  <div class="relative mt-8 z-10">
+                      <i class="ph-fill ph-flask text-[70px] text-white"></i>
+                      <i class="ph-fill ph-drop text-3xl text-blue-200 absolute -bottom-2 -right-4 animate-pulse"></i>
+                  </div>
+              </div>`;
+      } else {
+          // Default illustration / Grassroots general
+          return `
+              <div class="${base}">
+                  <div class="absolute w-28 h-28 bg-white/20 rounded-full animate-ping opacity-50"></div>
+                  <i class="ph-fill ph-lightbulb text-[70px] text-white relative z-10"></i>
+                  <i class="ph-fill ph-sparkle text-3xl text-yellow-300 absolute top-6 right-1/3 animate-pulse"></i>
+              </div>`;
+      }
+  }
 
   function renderGrid(data) {
     const grid = document.getElementById('inventory-grid');
@@ -505,63 +561,73 @@
       return;
     }
 
-    // Melindungi RAM browser (DOM node slicing absolut)
     const totalPages = Math.ceil(data.length / itemsPerPage);
     if(currentPage > totalPages) currentPage = Math.max(1, totalPages);
     
     const startIndex = (currentPage - 1) * itemsPerPage;
     const pageData = data.slice(startIndex, startIndex + itemsPerPage);
 
+    // Palet warna gradien cerah
+    const gradientPalette = [
+        "from-emerald-400 to-emerald-600",
+        "from-blue-500 to-blue-700",
+        "from-cyan-400 to-cyan-600",
+        "from-amber-400 to-amber-600",
+        "from-purple-500 to-purple-700",
+        "from-orange-400 to-orange-600",
+        "from-indigo-400 to-indigo-600"
+    ];
+
     pageData.forEach(item => {
       const isCritical = item.critical_flag;
       const isGem = item.hidden_gem;
       
-      let levelColor = 'bg-slate-100 text-slate-700';
-      if (item.innovation_level === 'grassroots') levelColor = 'bg-green-100 text-green-800';
-      if (item.innovation_level === 'institutional') levelColor = 'bg-blue-100 text-blue-800';
+      let levelColor = 'bg-white/90 text-slate-800';
+      if (item.innovation_level === 'grassroots') levelColor = 'bg-emerald-50 text-emerald-800';
+      if (item.innovation_level === 'institutional') levelColor = 'bg-blue-50 text-blue-800';
 
       const card = document.createElement('div');
-      card.className = "bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group cursor-pointer h-full";
+      card.className = "bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer h-full";
       card.onclick = () => openModal(item.id);
 
-      // Membangkitkan cover berbasis CSS Linear Gradient (Jauh lebih ringan dari SVG)
-      const hue = getHashColor(item.id + item.title);
-      const isDangerHue = isCritical ? '0' : hue; // Merah jika kritikal
-      const sat = isCritical ? '70%' : '50%';
-      const gradCss = `background: linear-gradient(135deg, hsl(${isDangerHue}, ${sat}, 90%), hsl(${(Number(isDangerHue)+30)%360}, ${sat}, 80%));`;
+      // Pemilihan warna dan pembuatan ilustrasi
+      const hash = getHashColor(item.id + item.title);
+      const gradientClass = isCritical ? "from-red-500 to-red-700" : gradientPalette[hash % gradientPalette.length];
+      const illustration = getIllustration(item.category || []);
       
-      const initial = item.title.charAt(0).toUpperCase();
-      
-      // Ambil skor untuk Smart Visualization
       const scorePri = item.priority_score || 0;
       const scoreRisk = item.risk_assessment?.risk_score || 0;
-      let riskBarColor = 'bg-green-500';
-      let riskTxtColor = 'text-green-600';
+      let riskBarColor = 'bg-emerald-500';
+      let riskTxtColor = 'text-emerald-600';
       if(scoreRisk >= 8) { riskBarColor = 'bg-red-500'; riskTxtColor = 'text-red-600'; }
-      else if(scoreRisk >= 4) { riskBarColor = 'bg-orange-400'; riskTxtColor = 'text-orange-500'; }
+      else if(scoreRisk >= 4) { riskBarColor = 'bg-amber-400'; riskTxtColor = 'text-amber-500'; }
       
+      // Menggunakan Header yang lebih besar (h-40) dengan Pattern Grid
       card.innerHTML = `
-        <div class="h-28 w-full relative overflow-hidden flex items-center justify-center border-b border-slate-100" style="${gradCss}">
-           <span class="font-serif text-5xl font-bold text-black/10 mix-blend-overlay drop-shadow-sm">${initial}</span>
-           
-           <div class="absolute top-2 left-2 flex gap-1">
-             <span class="${levelColor} text-[9px] font-bold px-2 py-1 rounded shadow-sm uppercase tracking-wide">${item.innovation_level}</span>
+        <div class="h-40 sm:h-48 w-full relative flex items-center justify-center bg-gradient-to-br ${gradientClass} overflow-hidden border-b border-slate-100">
+           <div class="absolute inset-0 pattern-grid opacity-30"></div>
+           <div class="absolute inset-0 transform group-hover:scale-110 transition-transform duration-700 ease-out flex items-center justify-center">
+               ${illustration}
            </div>
-           <div class="absolute top-2 right-2 flex gap-1">
-             ${isGem ? '<span class="bg-yellow-100 text-yellow-800 border border-yellow-200 text-[9px] font-bold px-1.5 py-1 rounded shadow-sm"><i class="ph-fill ph-diamond"></i> GEM</span>' : ''}
-             ${isCritical ? '<span class="bg-red-100 text-red-800 border border-red-200 text-[9px] font-bold px-1.5 py-1 rounded shadow-sm"><i class="ph-fill ph-warning"></i> CRITICAL</span>' : ''}
+           
+           <div class="absolute top-3 left-3 flex gap-1 z-20">
+             <span class="${levelColor} text-[9px] font-bold px-2 py-1.5 rounded-lg shadow-sm uppercase tracking-wider backdrop-blur-md border border-white/20">${item.innovation_level}</span>
+           </div>
+           <div class="absolute top-3 right-3 flex gap-1.5 z-20">
+             ${isGem ? '<span class="bg-yellow-100/90 text-yellow-800 border border-yellow-200/50 text-[9px] font-bold px-2 py-1.5 rounded-lg shadow-sm backdrop-blur-md flex items-center gap-1"><i class="ph-fill ph-diamond text-yellow-600"></i> GEM</span>' : ''}
+             ${isCritical ? '<span class="bg-red-100/90 text-red-800 border border-red-200/50 text-[9px] font-bold px-2 py-1.5 rounded-lg shadow-sm backdrop-blur-md flex items-center gap-1"><i class="ph-fill ph-warning text-red-600"></i> CRITICAL</span>' : ''}
            </div>
         </div>
-        <div class="p-4 sm:p-5 flex flex-col flex-grow gap-2">
+        <div class="p-4 sm:p-5 flex flex-col flex-grow gap-2 bg-white relative z-10">
           <div>
-            <p class="text-[9px] text-unesco-blue font-bold uppercase tracking-wider mb-1 line-clamp-1">${item.category.join(' • ')}</p>
+            <p class="text-[9px] text-unesco-blue font-bold uppercase tracking-wider mb-1.5 line-clamp-1 opacity-70">${item.category.join(' • ')}</p>
             <h3 class="font-serif font-bold text-base sm:text-lg text-slate-900 leading-snug line-clamp-2 group-hover:text-unesco-blue transition-colors">${item.title}</h3>
-            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1 font-medium"><i class="ph-fill ph-map-pin"></i>${item.location?.country || 'Global'} <span class="text-slate-400 font-normal truncate">(${item.location?.region || '-'})</span></p>
+            <p class="text-[11px] text-slate-500 mt-1 flex items-center gap-1 font-medium"><i class="ph-fill ph-map-pin"></i>${item.location?.country || 'Global'} <span class="text-slate-400 font-normal truncate">(${item.location?.region || '-'})</span></p>
           </div>
           <p class="text-[13px] sm:text-sm text-slate-600 line-clamp-2 leading-relaxed mt-1">${item.summary}</p>
           
           <!-- SMART VISUALIZATION (CSS Data Bars) -->
-          <div class="mt-auto pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+          <div class="mt-auto pt-4 border-t border-slate-100/80 flex flex-col gap-2.5">
              <div>
                <div class="flex justify-between items-center text-[9px] font-bold text-slate-500 uppercase mb-1">
                  <span>Priority Index</span>
@@ -589,7 +655,7 @@
   }
 
   // ═══════════════════════════════════════════════════════════════
-  //  PAGINATION (Aman untuk Perangkat Seluler)
+  //  PAGINATION, FILTER & UTILS
   // ═══════════════════════════════════════════════════════════════
   function renderPagination(total) {
     const cont = document.getElementById('pagination-container');
@@ -622,13 +688,10 @@
 
   function changePageSize(size) {
     itemsPerPage = parseInt(size, 10);
-    currentPage = 1; // Reset ke page awal jika batas ukuran diubah
+    currentPage = 1;
     renderGrid(filteredData);
   }
 
-  // ═══════════════════════════════════════════════════════════════
-  //  FILTER
-  // ═══════════════════════════════════════════════════════════════
   function setupFilters() {
     ['filter-level', 'filter-risk', 'sort-order'].forEach(id => {
       document.getElementById(id).addEventListener('change', () => { currentPage = 1; applyFilters(); });
@@ -675,7 +738,6 @@
     const item = globalData.find(i => i.id === id);
     if (!item) return;
 
-    // Badges
     let bHtml = `<span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-1 rounded uppercase border border-slate-200">${item.innovation_level}</span>`;
     if(item.hidden_gem) bHtml += `<span class="bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-1 rounded uppercase border border-yellow-200"><i class="ph-fill ph-diamond"></i> GEM</span>`;
     document.getElementById('modal-badges').innerHTML = bHtml;
@@ -683,14 +745,12 @@
     document.getElementById('modal-title').innerText = item.title;
     document.getElementById('modal-location').innerText = `${item.location?.country || 'Global'} (${item.location?.region || '-'})`;
     
-    // Summary & Detail
     document.getElementById('modal-summary').innerText = item.summary || '-';
     document.getElementById('modal-impact').innerText = item.impact?.problem_solved || '-';
     
     const origins = item.origin?.knowledge_source || [];
     document.getElementById('modal-origin').innerHTML = origins.length ? origins.map(o => `<span class="bg-unesco-light text-unesco-blue text-xs font-semibold px-2.5 py-1 rounded-md capitalize">${o.replace(/_/g, ' ')}</span>`).join('') : '-';
 
-    // Process
     document.getElementById('modal-how-works').innerText = item.process?.how_it_works || '-';
     
     const mats = item.process?.materials_used || [];
@@ -699,7 +759,6 @@
     const steps = item.process?.step_by_step || [];
     document.getElementById('modal-steps').innerHTML = steps.length ? steps.map(s => `<li>${s}</li>`).join('') : '<li class="text-slate-400 italic">Not specified</li>';
 
-    // Risk Box
     const risk = item.risk_assessment || {};
     const riskScore = risk.risk_score || 0;
     const rBox = document.getElementById('modal-risk-box');
@@ -720,7 +779,6 @@
       rScoreEl.className = "text-2xl sm:text-3xl font-bold text-green-600 mb-1 font-serif";
     }
 
-    // Modal Visibility
     const modal = document.getElementById('item-modal');
     const wrapper = document.getElementById('modal-content-wrapper');
     modal.classList.remove('hidden');
@@ -728,7 +786,6 @@
     modal.classList.remove('opacity-0');
     wrapper.classList.remove('scale-95');
 
-    // Radar Chart Rendering
     setTimeout(() => { renderItemRadarChart(item); }, 300);
   }
 
@@ -737,10 +794,9 @@
     const dom = document.getElementById('modal-radar-chart');
     currentModalRadar = echarts.init(dom);
 
-    // Convert string categories to numerical scores
     const impactScale = valMap(item.impact?.scale, {high:10, medium:6, low:2});
-    const repCost = valMap(item.replicability?.cost_level, {low:10, medium:5, high:2}); // Low cost = good (10)
-    const repDiff = valMap(item.replicability?.difficulty, {easy:10, medium:5, hard:2}); // Easy = good (10)
+    const repCost = valMap(item.replicability?.cost_level, {low:10, medium:5, high:2}); 
+    const repDiff = valMap(item.replicability?.difficulty, {easy:10, medium:5, hard:2}); 
     const safetyLevel = valMap(item.risk_assessment?.safety_level, {high:10, medium:5, low:2});
     const priority = (item.priority_score || 0) / 10;
 
@@ -785,7 +841,6 @@
     setTimeout(() => modal.classList.add('hidden'), 300);
   }
 
-  // --- LOGIKA GUIDE MODAL (BARU) ---
   function openGuideModal() {
     const modal = document.getElementById('guide-modal');
     const wrapper = document.getElementById('guide-modal-wrapper');
@@ -803,7 +858,6 @@
     setTimeout(() => modal.classList.add('hidden'), 300);
   }
 
-  // Mencegah klik di luar border box jika pengguna ingin keluar
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       if(!document.getElementById('item-modal').classList.contains('hidden')) closeModal();
@@ -811,7 +865,6 @@
     }
   });
   
-  // Tutup bila click overlay background
   document.getElementById('item-modal').addEventListener('click', e => {
     if(e.target === document.getElementById('item-modal')) closeModal();
   });
@@ -819,9 +872,8 @@
     if(e.target === document.getElementById('guide-modal')) closeGuideModal();
   });
 
-
   // ═══════════════════════════════════════════════════════════════
-  //  MAP & GLOBAL CHARTS (Tab 2)
+  //  MAP & GLOBAL CHARTS
   // ═══════════════════════════════════════════════════════════════
   function initMap() {
     map = L.map('map', { zoomControl: true, scrollWheelZoom: false }).setView([20, 0], 2);
@@ -845,11 +897,10 @@
       let lat = item.location?.lat;
       let lon = item.location?.lon;
       
-      // Fallback pseudo-coords if null, just for visualization spread
       if(!lat || !lon) {
           if(item.location?.country === "Haiti") { lat=18.9; lon=-72.2; }
           else if(item.location?.country === "Uganda") { lat=1.3; lon=32.2; }
-          else { lat = (Math.random()-0.5)*100; lon = (Math.random()-0.5)*160; } // random scatter for "global"
+          else { lat = (Math.random()-0.5)*100; lon = (Math.random()-0.5)*160; }
       }
 
       const icon = L.divIcon({ className: '', html: '<div class="marker-main"></div>', iconSize: [16,16], iconAnchor: [8,8] });
@@ -869,7 +920,6 @@
     if(!chartCat) chartCat = echarts.init(document.getElementById('chart-category'));
     if(!chartOrg) chartOrg = echarts.init(document.getElementById('chart-origin'));
 
-    // Category Aggregation
     const cats = {};
     filteredData.forEach(i => {
       (i.category||[]).forEach(c => { cats[c] = (cats[c]||0) + 1; });
@@ -887,7 +937,6 @@
       }]
     });
 
-    // Origin Aggregation
     const orgs = {};
     filteredData.forEach(i => {
       (i.origin?.knowledge_source||[]).forEach(o => { orgs[o] = (orgs[o]||0) + 1; });
@@ -942,7 +991,6 @@
     const item = globalData.find(i => i.id === activeItemId);
     if (!item) return;
 
-    // Grab ECharts as a Data URL to bypass print rendering issues
     let chartImgTag = '';
     if (currentModalRadar) {
       const imgData = currentModalRadar.getDataURL({ type: 'png', backgroundColor: '#f8fafc', pixelRatio: 2 });
