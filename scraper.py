@@ -207,6 +207,10 @@ def get_current_quarter():
 # =====================================================================
 
 def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_json=True):
+    # Pastikan prompt adalah string. Jika berupa objek/dict, ubah jadi teks JSON.
+    if not isinstance(prompt, str):
+        prompt = json.dumps(prompt)
+        
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     
     payload = {
@@ -218,8 +222,6 @@ def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_js
         }
     }
     
-    # ✅ FIX: Gemini menolak MimeType JSON jika Tools Search aktif.
-    # Jika pakai search, kita andalkan extract_json_safe() untuk memparsing output.
     if expect_json and not use_search:
         payload["generationConfig"]["responseMimeType"] = "application/json"
         
@@ -241,7 +243,6 @@ def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_js
             return extract_json_safe(raw_text)
         return raw_text
     except Exception as e:
-        # ✅ FIX: Tambahkan log detail dari response text Google agar kalau gagal lagi, alasannya langsung terlihat di log Action
         error_details = e.response.text if hasattr(e, 'response') and e.response is not None else str(e)
         log.error(f"Gemini API Error: {error_details}")
         return None
@@ -333,51 +334,88 @@ def run_discovery_pipeline(api_key, database, max_items=3):
     raw_descriptions = seed_data["innovations"]
     success_count = 0
 
-    for idx, raw_text in enumerate(raw_descriptions):
+def run_discovery_pipeline(api_key, database, max_items=3):
+    """Mencari data baru dan menambahkannya ke database."""
+    keyword = random.choice(KEYWORDS)
+    log.info(f"Initiating radar ping with keyword: '{keyword}'")
+
+    # Prompt yang memerintahkan AI untuk mencari URL
+    seed_prompt = f"Search the web for 5 distinct, real-world examples of: {keyword}. Provide a detailed paragraph for each, AND include a list of all relevant source URLs found (YouTube, news, or project sites). Return a JSON object with an array 'innovations' containing these descriptions and their associated URLs."
+    seed_sys = "You are an OSINT web scraper. Use google search. Return pure JSON. Do not hallucinate."
+
+    seed_data = call_gemini_with_retry(api_key, seed_prompt, seed_sys, use_search=True)
+    if not seed_data or "innovations" not in seed_data:
+        log.warning("No raw material found on this run.")
+        return 0
+
+    raw_descriptions = seed_data["innovations"]
+    success_count = 0
+
+    for idx, item in enumerate(raw_descriptions):
         if success_count >= max_items:
             log.info(f"Reached maximum limit of {max_items} items. Stopping.")
             break
 
         log.info(f"Processing candidate {idx+1}/{len(raw_descriptions)}...")
 
+        # 1. Pisahkan teks deskripsi dan URL
+        if isinstance(item, dict):
+            raw_text = item.get("description", str(item))
+            discovered_urls = item.get("urls", [])
+        else:
+            raw_text = str(item)
+            discovered_urls = []
+
+        # Layer 1: Validate
         validation = pass_1_validate(api_key, raw_text)
         if not validation.get("is_innovation") or validation.get("confidence", 0) < 0.6:
             continue
 
+        # Layer 2: Extract
         base_data = pass_2_extract(api_key, raw_text)
         if not base_data or not base_data.get("title"):
             continue
 
-        # ✅ CHANGED: Use normalize_title() before hashing to prevent
-        # duplicates caused by different capitalization or spacing.
+        # 2. Cek Duplikat (Gunakan db_item agar tidak bentrok dengan variabel item)
         title_hash = hashlib.md5(normalize_title(base_data["title"]).encode('utf-8')).hexdigest()
-        if any(item.get("id") == title_hash for item in database):
+        if any(db_item.get("id") == title_hash for db_item in database):
             log.info("Item is a duplicate. Skipping.")
             continue
 
+        # Layer 3 & 4: Risk & Lineage
         risk_data = pass_3_risk(api_key, raw_text)
         lineage_data = pass_4_lineage(api_key, raw_text)
 
         final_item = {
-            "id": title_hash, "timestamp": datetime.now().isoformat(),
+            "id": title_hash, 
+            "timestamp": datetime.now().isoformat(),
             **base_data,
             "origin": lineage_data if lineage_data else {"knowledge_source": []},
             "risk_assessment": risk_data if risk_data else {}
         }
 
+        # 3. Gabungkan URL ke field 'sources'
+        if "sources" not in final_item: 
+            final_item["sources"] = []
+        
+        # Gabungkan dan pastikan tidak ada URL ganda (set)
+        final_item["sources"] = list(set(final_item.get("sources", []) + discovered_urls))
+
+        # Geocoding
         country = final_item.get("location", {}).get("country", "")
         region = final_item.get("location", {}).get("region", "")
         lat, lon = get_coordinates(f"{region}, {country}".strip(", "))
         final_item["location"]["lat"] = lat
         final_item["location"]["lon"] = lon
 
+        # Metrics
         final_item = calculate_advanced_metrics(final_item)
         database.append(final_item)
         success_count += 1
         log.info(f"🔥 Successfully processed: {final_item['title']} (Score: {final_item.get('priority_score')})")
 
     return success_count
-
+    
 def generate_intelligence_report(api_key, database):
     """Membaca database dan menambahkan resume baru ke resume.json."""
     if not database:
