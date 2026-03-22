@@ -254,7 +254,7 @@
         <!-- Knowledge Source -->
         <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 fade-up fade-up-4">
           <div class="resume-section-title"><i class="ph-fill ph-brain text-purple-600"></i> Knowledge Insights</div>
-          <div id="resume-knowledge-chart" style="height:160px;" class="mb-3"></div>
+          <div id="resume-knowledge-chart" style="height:190px;" class="mb-5"></div>
           <div id="resume-knowledge-insight" class="bg-purple-50 border border-purple-100 rounded-xl p-3 text-sm text-purple-900 leading-relaxed"></div>
         </div>
       </div>
@@ -1042,14 +1042,17 @@ function renderCatChart(cats) {
     if (!resumeCharts.knowledge) resumeCharts.knowledge = echarts.init(document.getElementById('resume-knowledge-chart'));
     resumeCharts.knowledge.setOption({
       tooltip: { trigger:'item', formatter:'{b}: {d}%' },
-      legend: { bottom: '0%', left: 'center', itemWidth: 10, itemHeight: 10, textStyle: { fontSize: 10, color: '#475569' } }, // Legend modern
+      // KODE BARU: Legend didorong mentok ke bawah (bottom: 0%)
+      legend: { bottom: '0%', left: 'center', itemWidth: 12, itemHeight: 12, textStyle: { fontSize: 11, color: '#475569' } }, 
       color:['#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e'],
       series:[{
         type: 'pie', 
-        radius: ['45%', '70%'], // Dibuat bentuk Donut
-        center: ['50%', '40%'], // Dinaikkan sedikit ke atas
+        // Ukuran tetap besar (80%), sedikit dikurangi 5% dari sebelumnya agar tidak menyentuh tepi
+        radius: ['55%', '80%'], 
+        // KODE BARU: Posisi Cincin ditarik ke atas (dari 45% menjadi 38%) agar menjauh dari legend
+        center: ['50%', '43%'], 
         data: trend.map(t=>({name:t.source.replace(/_/g,' '),value:t.count})), 
-        label: { show: false }, // Sembunyikan label garis berantakan
+        label: { show: false }, 
         itemStyle: { borderRadius: 6, borderColor: '#fff', borderWidth: 2 }
       }]
     });
