@@ -148,6 +148,7 @@ Each discovered innovation is enriched into a structured record:
   }
 }
 
+<div
 🌱 Why It Matters
 
 Most global systems — including those aligned with institutions like UNESCO — tend to highlight:
