@@ -148,8 +148,9 @@ Each discovered innovation is enriched into a structured record:
   }
 }
 
-<div
-🌱 Why It Matters
+```
+
+# 🌱 Why It Matters
 
 Most global systems — including those aligned with institutions like UNESCO — tend to highlight:
 
@@ -161,13 +162,14 @@ But in reality:
 
 innovation often starts in places that are never documented
 
-GSI Radar focuses on:
+## GSI Radar focuses on:
 
 Science from below
 Innovation before validation
 Risk before disaster
 Potential before recognition
-🎯 Use Cases
+
+## 🎯 Use Cases
 🏛️ Governments
 Identify local innovations without field deployment
 Detect unsafe practices early
@@ -185,7 +187,8 @@ where innovation is not judged by visibility, but by:
 relevance
 impact
 and context
-⚖️ Disclaimer
+
+# ⚖️ Disclaimer
 
 This tool is intended for research, innovation mapping, and risk awareness.
 All data is sourced from publicly available information and structured using AI.
@@ -196,6 +199,7 @@ The platform does not endorse their use and highlights them to support:
 awareness
 analysis
 and potential intervention
+
 <div align="center">
 
 Built for those who innovate quietly — before the world notices.
