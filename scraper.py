@@ -211,14 +211,18 @@ def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_js
     if not isinstance(prompt, str):
         prompt = json.dumps(prompt)
         
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+    # Menggunakan endpoint Gemini 3 Flash Preview
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent"
     
+    # Konfigurasi payload
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "systemInstruction": {"parts": [{"text": system_instruction}]},
         "generationConfig": {
             "temperature": 0.5,
-            "maxOutputTokens": 8192
+            "maxOutputTokens": 8192,
+            # Menghasilkan output dalam format JSON jika diminta
+            "responseMimeType": "application/json" if expect_json else "text/plain"
         }
     }
     
@@ -226,7 +230,7 @@ def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_js
         payload["generationConfig"]["responseMimeType"] = "application/json"
         
     if use_search:
-        payload["tools"] = [{"googleSearch": {}}]
+        payload["tools"] = [{"google_search_retrieval": {}}]
         
     headers = {
         'Content-Type': 'application/json',
