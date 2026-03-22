@@ -277,9 +277,10 @@ def pass_1_validate(api_key, raw_content):
     return res if res else {"is_innovation": False, "confidence": 0}
 
 def pass_2_extract(api_key, raw_content):
+    # Kita tambahkan instruksi "DIRECT, ORIGINAL links"
     sys_prompt = """Extract structured data about this innovation. 
-Look closely for any URLs (YouTube, websites, etc.) mentioned in the text and put them in the "sources" array.
-Return EXACTLY this JSON structure:
+    IMPORTANT: For 'sources', provide only DIRECT, ORIGINAL website links (e.g., youtube.com, bbc.com) and NOT the google search grounding redirect links.
+    Return EXACTLY this JSON structure:
 {"title": "", "sources": [], "summary": "", "category": [], "innovation_level": "grassroots | semi-formal | institutional", "location": {"country": "", "region": ""}, "process": {"how_it_works": "", "materials_used": [], "step_by_step": []}, "impact": {"problem_solved": "", "scale": "low | medium | high"}, "replicability": {"cost_level": "low | medium | high", "difficulty": "easy | medium | hard"}}"""
     return call_gemini_with_retry(api_key, raw_content, sys_prompt)   # ✅ changed
 
@@ -324,7 +325,8 @@ def run_discovery_pipeline(api_key, database, max_items=3):
     log.info(f"Initiating radar ping with keyword: '{keyword}'")
 
     seed_prompt = f"Search the web for 5 distinct, real-world examples of: {keyword}. Provide a detailed paragraph for each, AND include a list of all relevant source URLs found (YouTube, news, or project sites). Return a JSON object with an array 'innovations' containing these descriptions and their associated URLs."
-    seed_sys = "You are an OSINT web scraper. Use google search. Return pure JSON. Do not hallucinate."
+    # Tambahkan larangan penggunaan link grounding di sini juga
+    seed_sys = "You are an OSINT web scraper. Use google search. IMPORTANT: Always return the direct, original source URLs and avoid google search redirect links. Return pure JSON. Do not hallucinate."
 
     seed_data = call_gemini_with_retry(api_key, seed_prompt, seed_sys, use_search=True)  # ✅ changed
     if not seed_data or "innovations" not in seed_data:
