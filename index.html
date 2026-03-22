@@ -523,18 +523,34 @@
   // ═══════════════════════════════════════════════════════
   //  INIT
   // ═══════════════════════════════════════════════════════
+  // Tambahkan variabel global baru di bagian atas state
+  let globalResume = []; 
+
   async function init() {
+    // 1. Load data.json (Inovasi)
     try {
       const r = await fetch('data.json');
-      if (r.ok) { const d = await r.json(); globalData = Array.isArray(d) ? d : (d.inventory || []); }
-      else throw new Error('no fetch');
+      if (r.ok) { 
+        const d = await r.json(); 
+        globalData = Array.isArray(d) ? d : (d.inventory || []); 
+      } else throw new Error();
     } catch(e) { globalData = RAW_JSON; }
+
+    // 2. Load resume.json (Laporan Intelijen)
+    try {
+      const r = await fetch('resume.json');
+      if (r.ok) { 
+        globalResume = await r.json(); 
+      } else throw new Error();
+    } catch(e) { globalResume = RAW_RESUME; } // Fallback ke data lama jika file tidak ada
 
     globalData.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
     renderStats();
     setupFilters();
     applyFilters();
-    populateReportSelector();
+    
+    // Pastikan fungsi ini sekarang membaca dari globalResume
+    populateReportSelector(); 
   }
 
   // ═══════════════════════════════════════════════════════
@@ -837,19 +853,28 @@
   // ═══════════════════════════════════════════════════════
   //  INTELLIGENCE RESUME TAB
   // ═══════════════════════════════════════════════════════
-  function populateReportSelector() {
+function populateReportSelector() {
     const sel = document.getElementById('report-selector');
     sel.innerHTML = '';
-    RAW_RESUME.forEach((r, i) => {
+    
+    // Gunakan globalResume, bukan RAW_RESUME
+    globalResume.forEach((r, i) => {
+      const isCurrent = r.report_metadata?.report_id === 'gsi-current';
       const opt = document.createElement('option');
       opt.value = i;
-      opt.textContent = `${r.report_metadata?.period || 'Report'} — ${new Date(r.report_metadata?.generated_at).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}`;
+      opt.textContent = `${isCurrent ? '⭐ ' : ''}${r.report_metadata?.period || 'Report'} — ${new Date(r.report_metadata?.generated_at).toLocaleDateString()}`;
       sel.appendChild(opt);
+      
+      // Otomatis muat yang terbaru (gsi-current)
+      if (isCurrent) {
+          sel.value = i;
+          loadReport(i);
+      }
     });
   }
 
   function loadReport(idx) {
-    const report = RAW_RESUME[parseInt(idx)];
+    const report = globalResume[parseInt(idx)]; // Gunakan globalResume
     if (!report) return;
 
     const meta = report.report_metadata || {};
