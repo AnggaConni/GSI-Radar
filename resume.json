@@ -137,5 +137,251 @@
                 }
             ]
         }
+    },
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-22T09:19:17.545800",
+            "period": "Q1 2026",
+            "total_records_analyzed": 9
+        },
+        "global_summary": {
+            "total_innovations": 9,
+            "grassroots_percentage": 66.67,
+            "institutional_percentage": 22.22,
+            "semi_formal_percentage": 11.11
+        },
+        "top_categories": [
+            {
+                "category": "Sustainable Agriculture",
+                "count": 4,
+                "trend": "Sustained focus on ecological farming"
+            },
+            {
+                "category": "Agriculture",
+                "count": 4,
+                "trend": "Fundamental area of innovation"
+            },
+            {
+                "category": "Pest Control",
+                "count": 3,
+                "trend": "Growing importance of natural solutions"
+            },
+            {
+                "category": "Sanitation",
+                "count": 3,
+                "trend": "Critical need for accessible waste management"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Global/Unspecified",
+                "key_pattern": "Decentralized, DIY solutions for basic needs (sanitation, pest control)",
+                "risk_level": "medium-high"
+            },
+            {
+                "region": "Haiti",
+                "key_pattern": "Institutional ecological sanitation addressing public health and soil degradation",
+                "risk_level": "high"
+            },
+            {
+                "region": "Uganda",
+                "key_pattern": "Semi-formal sanitation improvements in rural school settings, converting waste to resources",
+                "risk_level": "high"
+            },
+            {
+                "region": "Canada (Alberta)",
+                "key_pattern": "Community-led organic pest control in established agricultural regions",
+                "risk_level": "low"
+            },
+            {
+                "region": "Mexico",
+                "key_pattern": "Revival and application of ancient, highly sustainable agricultural systems",
+                "risk_level": "medium"
+            },
+            {
+                "region": "Brazil",
+                "key_pattern": "Understanding and replicating ancient soil enhancement techniques (Terra Preta)",
+                "risk_level": "medium"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 4,
+            "critical_cases": 2,
+            "top_risk_types": [
+                "toxic",
+                "environment",
+                "safety gear"
+            ],
+            "emerging_risks": [
+                "fire hazard",
+                "irritant"
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Ecological Sanitation Solutions",
+                "description": "Innovations focused on converting human waste into valuable resources (compost) to address sanitation challenges, particularly in off-grid or resource-limited environments.",
+                "regions": [
+                    "Global",
+                    "Haiti",
+                    "Uganda"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Natural Pest Management",
+                "description": "Community-led and traditional approaches to pest control using organic, readily available materials to reduce reliance on synthetic chemicals.",
+                "regions": [
+                    "Global",
+                    "Canada"
+                ],
+                "risk_level": "medium"
+            },
+            {
+                "pattern_name": "Ancient Agricultural Systems Revival",
+                "description": "Re-adoption and study of pre-Columbian farming techniques to enhance soil fertility, biodiversity, and agricultural resilience.",
+                "regions": [
+                    "Mexico",
+                    "Brazil"
+                ],
+                "risk_level": "medium"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "The Humanure Handbook Sawdust Toilet System",
+                "country": "globally",
+                "reason": "Provides a robust, low-cost sanitation solution with significant positive environmental impact, often overlooked due to its DIY nature."
+            },
+            {
+                "title": "Garlic-Based Sprays for Grasshopper Control",
+                "country": "Canada",
+                "reason": "An effective, organic pest control method with community-led adoption, demonstrating sustainable alternatives."
+            },
+            {
+                "title": "Garlic Brew",
+                "country": "unspecified",
+                "reason": "Simple, accessible, and empowering natural pest control, particularly valuable for resource-limited communities."
+            },
+            {
+                "title": "Hot Pepper Solution",
+                "country": "unspecified",
+                "reason": "Highly accessible and effective natural pest repellent using common ingredients, empowering local crop protection."
+            },
+            {
+                "title": "The Milpa system",
+                "country": "Mexico, Guatemala",
+                "reason": "Ancient, highly sustainable agricultural system that naturally enhances soil fertility and biodiversity, offering lessons for modern farming."
+            },
+            {
+                "title": "Terra Preta",
+                "country": "Brazil",
+                "reason": "Historical example of advanced soil creation, offering insights into long-term soil fertility and carbon sequestration."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "Safety Training & Best Practices Dissemination",
+                "target": "Off-grid communities, DIY enthusiasts",
+                "priority_level": "high"
+            },
+            {
+                "type": "Best Practices Dissemination & Environmental Impact Guidance",
+                "target": "Organic farmers, community groups",
+                "priority_level": "medium"
+            },
+            {
+                "type": "Safety Guidelines & Basic Hygiene Education",
+                "target": "Rural communities, Peace Corps volunteers",
+                "priority_level": "medium"
+            },
+            {
+                "type": "Safety Gear Promotion & Irritant Awareness",
+                "target": "Villagers, crop protectors",
+                "priority_level": "high"
+            },
+            {
+                "type": "Pathogen Control & Safe Waste Handling Protocols",
+                "target": "Traditional farmers, agricultural communities",
+                "priority_level": "high"
+            },
+            {
+                "type": "Safe Biochar Production Methods & Smoke Exposure Mitigation",
+                "target": "Farmers, soil improvers",
+                "priority_level": "high"
+            },
+            {
+                "type": "Safety Gear Provision, Pathogen Monitoring & Fire Prevention",
+                "target": "School staff, local communities",
+                "priority_level": "high"
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "traditional",
+            "trend": "Strong reliance on traditional knowledge, with some adaptation",
+            "observation": "Traditional knowledge forms the backbone of many grassroots and even some institutional innovations, particularly in agriculture and basic sanitation, highlighting its enduring relevance and potential for modern application."
+        },
+        "recommendations": [
+            "Develop and disseminate standardized, accessible safety protocols and best practices for grassroots and semi-formal sanitation innovations to mitigate inherent health and environmental risks.",
+            "Invest in research and adaptation of ancient agricultural systems like Milpa and Chinampa, and soil enhancement techniques like Terra Preta, to integrate their sustainable principles into modern farming for enhanced resilience and productivity.",
+            "Promote community-led knowledge exchange platforms for natural pest control methods, ensuring guidance on effective application, potential non-target impacts, and safety gear usage to maximize benefits and minimize risks."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Global/Unspecified",
+                    "count": 3
+                },
+                {
+                    "region": "Haiti",
+                    "count": 1
+                },
+                {
+                    "region": "Uganda",
+                    "count": 1
+                },
+                {
+                    "region": "Canada",
+                    "count": 1
+                },
+                {
+                    "region": "Mexico",
+                    "count": 2
+                },
+                {
+                    "region": "Brazil",
+                    "count": 1
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "Low",
+                    "count": 3
+                },
+                {
+                    "level": "Medium",
+                    "count": 2
+                },
+                {
+                    "level": "High",
+                    "count": 4
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "self-taught",
+                    "count": 1
+                },
+                {
+                    "source": "adapted_from_existing",
+                    "count": 2
+                },
+                {
+                    "source": "traditional",
+                    "count": 6
+                }
+            ]
+        }
     }
 ]

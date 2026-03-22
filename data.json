@@ -356,5 +356,183 @@
         "priority_score": 84,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "2f295b7c749946ccf33ca3e2ec42a905",
+        "timestamp": "2026-03-22T09:18:07.511196",
+        "title": "Chinampa system",
+        "summary": "The Chinampa system is an ancient Aztec agricultural innovation involving artificial islands, or 'floating gardens', constructed on shallow lake beds. These platforms are built from woven reeds and branches, layered with mud and vegetation, and anchored by trees. They enable year-round crop cultivation, drought resilience, and extraordinary soil fertility through continuous nutrient recycling from surrounding canals and organic waste.",
+        "category": [
+            "Agriculture",
+            "Ancient Technology",
+            "Sustainable Farming",
+            "Water Management"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Mexico",
+            "region": "Valley of Mexico",
+            "lat": 19.5018295,
+            "lon": -99.0661917
+        },
+        "process": {
+            "how_it_works": "Artificial islands are constructed on shallow lake beds, creating stable, nutrient-rich platforms. These 'floating gardens' are constantly supplied with water from surrounding canals, which also create an ideal microclimate. Continuous recycling of organic waste, including lakebed silt, plant matter, and human/animal manures, enriches the soil, allowing for multiple harvests per year.",
+            "materials_used": [
+                "reeds",
+                "branches",
+                "mud",
+                "vegetation",
+                "ahuejote trees",
+                "lakebed silt",
+                "organic waste",
+                "plant matter",
+                "human manures",
+                "animal manures"
+            ],
+            "step_by_step": [
+                "Weave a base of reeds and branches on shallow lake beds.",
+                "Layer the base with mud and vegetation to create stable platforms.",
+                "Plant trees (e.g., ahuejote) at the corners to anchor the chinampa and retain soil moisture."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Enabled year-round crop cultivation, provided resilience during droughts, and maintained extraordinarily fertile soil for multiple harvests.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "toxic"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The continuous recycling of organic waste, including human and animal manures, while highly beneficial for soil fertility, presents a significant biological risk. Untreated human and animal waste can carry pathogens (bacteria, viruses, parasites) that could contaminate crops and pose a health hazard if consumed raw or improperly handled. Anaerobic decomposition of large amounts of organic matter could also potentially generate toxic gases like hydrogen sulfide, though this is less likely to accumulate to dangerous levels in an open agricultural system. Given the 'grassroots + chemical/energy -> higher risk' rule and the direct use of potentially hazardous biological materials, a conservative assessment indicates notable risks requiring intervention for safe practices."
+        },
+        "priority_score": 78,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "1deb9d32dde1e9e64a9d50b29372c08d",
+        "timestamp": "2026-03-22T09:18:26.595995",
+        "title": "The Milpa system",
+        "summary": "The Milpa system is a traditional intercropping technique, primarily practiced by indigenous communities like the Maya in Mesoamerica, involving the cultivation of diverse crops, most famously corn, beans, and squash, together in the same plot to create a symbiotic growing environment.",
+        "category": [
+            "Agriculture",
+            "Traditional Farming",
+            "Intercropping",
+            "Sustainable Agriculture",
+            "Polyculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Mexico, Guatemala",
+            "region": "Mesoamerica",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Corn provides a stalk for beans to climb, beans fix nitrogen in the soil, and squash plants spread across the ground, shading the soil to retain moisture, suppress weeds, and deter pests. This polyculture approach increases biodiversity, reduces nutrient depletion, and enhances soil fertility naturally, often incorporating organic matter and beneficial microorganisms.",
+            "materials_used": [
+                "Corn",
+                "Beans",
+                "Squash"
+            ],
+            "step_by_step": [
+                "Plant corn to provide structural support.",
+                "Plant beans near corn stalks for climbing.",
+                "Plant squash to spread on the ground, providing ground cover."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces nutrient depletion, enhances soil fertility naturally, increases biodiversity, provides a resilient and sustainable food source, and reduces the need for external fertilizers and pesticides.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Milpa system is a traditional, sustainable agricultural practice with inherently low risks. It avoids the use of external chemicals and energy, aligning with a lower risk profile as per the conservative rules. Its environmental impact is overwhelmingly positive, enhancing biodiversity, soil fertility, and moisture retention. No specific fire, explosion, or toxic hazards are identified, nor does it require specialized safety gear beyond general agricultural practices. The 'environmental' risk type is noted due to its direct interaction with ecosystems, though the impact is beneficial."
+        },
+        "priority_score": 64,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "aad279fce548e0c2600136913563572f",
+        "timestamp": "2026-03-22T09:18:53.093636",
+        "title": "Terra Preta",
+        "summary": "Terra Preta, or 'black earth', is an exceptionally fertile anthropogenic soil created by pre-Columbian indigenous populations in the Amazon Basin. It was developed by mixing charcoal (biochar), organic matter (plant residues, animal bones), and pottery shards into nutrient-poor soils. This process significantly enhances soil fertility, water retention, and carbon sequestration, enabling sustained agricultural productivity.",
+        "category": [
+            "Agriculture",
+            "Soil Improvement",
+            "Biochar",
+            "Sustainable Farming"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Brazil",
+            "region": "Amazon Basin",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Terra Preta is created by incorporating charcoal (biochar), organic matter (plant residues, animal bones), and pottery shards into naturally nutrient-poor soils. The charcoal acts as a stable, long-lasting sponge, binding and retaining essential minerals and nutrients, preventing leaching. This fosters a rich microbial environment, leading to increased soil fertility, water retention, and carbon sequestration.",
+            "materials_used": [
+                "charcoal (biochar)",
+                "plant residues",
+                "animal bones",
+                "pottery shards"
+            ],
+            "step_by_step": []
+        },
+        "impact": {
+            "problem_solved": "Naturally nutrient-poor Amazonian soils and the challenge of maintaining sustained agricultural productivity without extensive fallow periods.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 5,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "Terra Preta is an exceptionally beneficial innovation for soil fertility, water retention, and carbon sequestration. However, applying the 'grassroots + chemical/energy -> higher risk' rule, the production of biochar (charcoal), a critical component, in a pre-Columbian, grassroots context inherently carries risks. These include potential fire hazards during the charcoal production process, exposure to toxic smoke, and potential environmental impact from unsustainable wood sourcing. While the resulting soil itself is safe and highly beneficial, the methods for creating its key components would warrant safety considerations and interventions in a modern context."
+        },
+        "priority_score": 80,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
