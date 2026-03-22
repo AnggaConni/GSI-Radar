@@ -48,6 +48,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # Ambil input dari dropdown jika di-trigger manual, jika tidak (cron) gunakan 'auto'
+
+          # 👇 TAMBAHKAN BARIS INI 👇
+          GEMINI_MODEL: "gemini-3-flash-preview" # Default model, bisa diubah lewat env var jika ingin coba model lain
+          # Ambil input dari dropdown jika di-trigger manual, jika tidak (cron) gunakan 'auto'
           RUN_TYPE: ${{ github.event.inputs.run_type || 'auto' }}
         run: python scraper.py
 
