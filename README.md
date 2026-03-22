@@ -173,20 +173,21 @@ Potential before recognition
 🏛️ Governments
 Identify local innovations without field deployment
 Detect unsafe practices early
+
 🌍 Donors & NGOs
 Find high-impact + high-risk cases needing intervention
 Discover scalable low-cost solutions
+
 🔬 Researchers
 Study innovation diffusion
 Analyze knowledge transfer patterns
-🌌 Vision
 
+🌌 Vision
 GSI Radar aims to become a global observatory of human ingenuity —
 where innovation is not judged by visibility, but by:
-
-relevance
-impact
-and context
+1. relevance
+2. impact
+3. and context
 
 # ⚖️ Disclaimer
 
