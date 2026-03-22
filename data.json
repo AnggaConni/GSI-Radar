@@ -417,7 +417,7 @@
             "country": "Mexico",
             "region": "Valley of Mexico — Lakes Xochimilco and Chalco",
             "lat": 19.2833,
-            "lon": -99.1000
+            "lon": -99.1
         },
         "process": {
             "how_it_works": "Artificial islands are constructed on shallow lake beds by weaving reeds and stakes to form underwater fences, then piling in mud, aquatic vegetation, and organic waste until the platform rises above the water surface. Surrounding canals supply constant moisture and carry nutrient-rich runoff. Continuous recycling of organic waste — lakebed silt, plant matter, and human/animal manures — enriches the soil, allowing multiple harvests per year. The Aztecs designated chinampas a UNESCO Globally Important Agricultural Heritage System (2018).",
@@ -804,6 +804,205 @@
         },
         "priority_score": 50,
         "hidden_gem": false,
+        "critical_flag": true
+    },
+    {
+        "id": "aa6f6cadc8b18ddb96dcab86d0b97cc9",
+        "timestamp": "2026-03-22T10:22:26.032864",
+        "title": "Mini Biogas Plant",
+        "sources": [
+            "https://www.instructables.com/id/Biogas-at-Home-Cheap-and-Easy/"
+        ],
+        "summary": "Sahas Chitlange, a 14-year-old from India, developed a highly cost-effective and easy-to-build mini biogas plant. This system utilizes readily available materials to convert cow dung into biogas, which can burn for 20-30 minutes, and also produces excellent manure as a byproduct.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Sustainable Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "",
+            "lat": 22.3511148,
+            "lon": 78.6677428
+        },
+        "process": {
+            "how_it_works": "Cow dung is mixed with water to form a slurry, which is then added to a digester tank. Anaerobic digestion occurs, producing biogas that is collected in an inverted gas holder tank. The process also yields organic manure.",
+            "materials_used": [
+                "digester tank (e.g., a 50-liter scrap tank)",
+                "inlet pipe",
+                "outlet pipe",
+                "gas holder tank (like a 20-liter paint bucket)",
+                "gas outlet pipe",
+                "cow dung",
+                "water"
+            ],
+            "step_by_step": [
+                "Mix approximately 5kg of cow dung with water to create a slurry.",
+                "Add the slurry to the digester tank (e.g., a 50-liter scrap tank).",
+                "Invert the gas holder tank (e.g., a 20-liter paint bucket) and place it into the digester.",
+                "Allow the system to produce biogas, which collects in the gas holder tank (within 12 hours for initial gas production)."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a source of clean, renewable energy (biogas) for burning and generates high-quality organic fertilizer (manure), offering an alternative to traditional fuels and chemical fertilizers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "Fire Hazard",
+                "Explosion",
+                "Toxic"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The mini biogas plant, while innovative and cost-effective, presents significant safety concerns due to its grassroots development by a 14-year-old using readily available scrap materials. Biogas, primarily methane, is highly flammable and explosive when mixed with air, posing a substantial fire and explosion risk from potential leaks or improper pressure management. The gas can also contain toxic hydrogen sulfide (H2S) and high concentrations of carbon dioxide (CO2), posing toxic and asphyxiation hazards, especially in enclosed spaces. The use of non-pressure-rated materials like scrap tanks and paint buckets increases the likelihood of structural failure or leaks. Without professional supervision, engineered safety features, or proper safety gear, the overall safety level is low, necessitating intervention to ensure safe operation and mitigate potential harm."
+        },
+        "priority_score": 76,
+        "hidden_gem": true,
+        "critical_flag": true
+    },
+    {
+        "id": "da9f18a63f139dd6ad1bc0288099913b",
+        "timestamp": "2026-03-22T10:22:43.714591",
+        "title": "Biogas Chambers in North-West Cameroon",
+        "sources": [
+            "https://www.villageaid.org/news/cooking-with-cow-manure/"
+        ],
+        "summary": "Village Aid, in partnership with MBOSCUDA, implemented biogas chambers in North-West Cameroon to provide clean cooking fuel. The system utilizes cow manure for anaerobic digestion, producing biogas that is piped directly to homes for cooking, thereby reducing reliance on firewood, combating deforestation, and mitigating smoke-related health issues. The process also yields nutrient-rich slurry for agricultural use.",
+        "category": [
+            "Energy",
+            "Agriculture",
+            "Environmental Protection",
+            "Health"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Cameroon",
+            "region": "North-West",
+            "lat": 5.9522187,
+            "lon": 10.1673248
+        },
+        "process": {
+            "how_it_works": "Cow manure is mixed with water in a concrete cauldron, then flows into a large underground tank for anaerobic digestion. As the organic matter decays, biogas is produced, rises, and is channeled through a pipe directly into homes to connect to gas stoves for cooking.",
+            "materials_used": [
+                "cow manure",
+                "water",
+                "concrete cauldron",
+                "underground tank",
+                "pipes",
+                "gas stoves"
+            ],
+            "step_by_step": [
+                "Mix cow manure with water in a concrete cauldron.",
+                "The mixture flows into a large underground tank.",
+                "Anaerobic digestion occurs in the tank, causing organic matter to decay and produce biogas.",
+                "Biogas rises and is channeled through a pipe.",
+                "The pipe connects directly to gas stoves in homes for cooking."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reliance on firewood for cooking, deforestation, smoke-related health problems, lack of nutrient-rich fertilizer for crops.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 9,
+            "risk_type": [
+                "Fire Hazard",
+                "Explosion",
+                "Toxic",
+                "Environmental"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The grassroots biogas initiative directly channels flammable and explosive methane, along with toxic hydrogen sulfide, into homes for cooking. This poses severe risks of fire, explosion, and poisoning from gas leaks, especially without explicit mention of safety protocols, ventilation, or leak detection. The combination of grassroots implementation and direct energy/chemical use significantly elevates the inherent risk profile. Intervention is critically needed to ensure user safety, proper installation, and maintenance."
+        },
+        "priority_score": 70,
+        "hidden_gem": false,
+        "critical_flag": true
+    },
+    {
+        "id": "9185b673a6cdce24123d0295a2f43b2b",
+        "timestamp": "2026-03-22T10:23:01.171803",
+        "title": "FREnergy Home Biogas System",
+        "sources": [
+            "https://frenergy.co.nz/biogas-at-home/"
+        ],
+        "summary": "The FREnergy home biogas system utilizes an Intermediate Bulk Container (IBC) as the main digester and 500/600-liter gas bags for storage. It's initiated with animal manure and then continuously fed with chopped food waste mixed with water to produce biogas for cooking and a valuable digestate.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Biogas"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "",
+            "region": "",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system converts organic waste (animal manure, food waste) into biogas through anaerobic digestion within an IBC digester. The produced gas is stored in gas bags and can be used for cooking, while the byproduct, digestate, is a valuable fertilizer.",
+            "materials_used": [
+                "Intermediate Bulk Container (IBC)",
+                "500/600-liter gas bags",
+                "Fresh cow manure (or other animal manures)",
+                "Food waste",
+                "Fresh water"
+            ],
+            "step_by_step": [
+                "Set up the system with an IBC as the primary digester and gas bags for storage.",
+                "Initiate the digester with approximately 100 liters of fresh cow manure (or other animal manures).",
+                "Wait for gas production to begin (typically 4-6 weeks).",
+                "Continuously feed the digester with food waste, mixed with an equal volume of fresh water and chopped to accelerate gas production."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a sustainable energy source for cooking, reduces household organic waste, and produces a valuable fertilizer (digestate).",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 9,
+            "risk_type": [
+                "fire hazard",
+                "explosion",
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The home biogas system utilizes an IBC and gas bags for biogas production and storage, which presents significant risks. Biogas contains highly flammable and explosive methane, posing severe fire and explosion hazards, especially in a residential setting. Additionally, biogas typically contains toxic hydrogen sulfide (H2S) and carbon dioxide (CO2), which can lead to poisoning or asphyxiation if leaks occur. The grassroots nature of the system and its home application suggest a potential lack of professional safety engineering and robust containment, increasing the likelihood of gas leaks, pressure incidents, and exposure to hazardous substances. Methane leaks also contribute to environmental concerns as a potent greenhouse gas."
+        },
+        "priority_score": 70,
+        "hidden_gem": true,
         "critical_flag": true
     }
 ]
