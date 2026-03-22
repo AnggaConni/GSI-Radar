@@ -1,6 +1,6 @@
 """
 =======================================================================
-  INNOVATION RADAR v9.1 — Global Intelligence Engine
+  INNOVATION RADAR v1.1 — Global Intelligence Engine
   AI Engine : Google Gemini 2.5 Flash
   Mode      : Multi-Schedule Tracker (Data = 2 Days, Resume = 3 Months)
   Feature   : Append-Only DB, Smart Execution, Independent Force Crawl
@@ -207,15 +207,25 @@ def get_current_quarter():
 # =====================================================================
 
 def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_json=True):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "systemInstruction": {"parts": [{"text": system_instruction}]}
+        "generationConfig": {
+            "temperature": 0.5, # Lower temperature for strictly formatted output
+            "maxOutputTokens": 8192
+        }
     }
+    # API Key dimasukkan dengan aman melalui Header
+    headers = {
+        'Content-Type': 'application/json',
+        'x-goog-api-key': api_key
+    }
+    
     if expect_json:
         payload["generationConfig"] = {"responseMimeType": "application/json"}
     if use_search:
-        payload["tools"] = [{"google_search": {}}]
+        payload["tools"] = [{"googleSearch": {}}]
     headers = {"Content-Type": "application/json"}
     try:
         response = requests.post(url, json=payload, headers=headers, timeout=120)
