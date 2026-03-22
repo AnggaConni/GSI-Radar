@@ -124,13 +124,13 @@ p{margin-bottom:13px;text-align:justify;}
 .sbx,.fsel{padding:7px 11px;font-family:'Montserrat',sans-serif;font-size:11px;border:1.5px solid var(--border);border-radius:4px;outline:none;background:var(--paper);color:var(--ink);transition:border .2s;}
 .sbx{flex:1;min-width:150px;} .sbx:focus,.fsel:focus{border-color:var(--accent2);}
 .fsel{cursor:pointer;}
-.jtable{width:100%;border-collapse:collapse;font-size:9pt;margin-bottom:6px;}
-.jtable th{background:var(--paper2);font-family:'Montserrat',sans-serif;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink);padding:8px 9px;border:1px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none;}
+.jtable{width:100%;border-collapse:collapse;font-size:9pt;margin-bottom:6px;table-layout:fixed;} /* Mencegah overflow horizontal */
+.jtable th{background:var(--paper2);font-family:'Montserrat',sans-serif;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink);padding:8px 9px;border:1px solid var(--border);cursor:pointer;user-select:none;word-wrap:break-word;white-space:normal;}
 .jtable th:hover{color:var(--accent);}
 .jtable th .sa{opacity:.4;font-size:9px;}
 .jtable th.sasc .sa::after{content:' ▲';opacity:1;}
 .jtable th.sdsc .sa::after{content:' ▼';opacity:1;}
-.jtable td{padding:7px 9px;border:1px solid var(--border);vertical-align:top;}
+.jtable td{padding:7px 9px;border:1px solid var(--border);vertical-align:top;word-wrap:break-word;overflow-wrap:break-word;}
 .jtable tbody tr:nth-child(even){background:var(--paper2);}
 .jtable tbody tr:hover{background:var(--accent-pale);}
 .ct{font-weight:600;font-family:'Montserrat',sans-serif;font-size:8.5pt;}
@@ -167,19 +167,21 @@ p{margin-bottom:13px;text-align:justify;}
 /* MISC */
 .orn{text-align:center;color:var(--accent);font-size:15pt;margin:22px 0 8px;letter-spacing:6px;}
 .pfooter{margin-top:30px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:8pt;color:var(--ink-faint);flex-wrap:wrap;gap:4px;}
-/* PRINT */
+
+/* PRINT MODE - Aggressive Background Removal & Formatting */
 @media print{
-  @page{size:A4 portrait;margin:18mm;}
-  body{background:none;}
-  .shell{padding:0;}
-  .toc-sidebar,.topbar,.mbd,.tctrl,.pag,.sbanner{display:none!important;}
-  .a4{width:100%;box-shadow:none;padding:0;}
-  h2.st,h3,.figcap{page-break-after:avoid;break-after:avoid;}
-  .fig,.sc,.kpi,.qbox{page-break-inside:avoid;break-inside:avoid;}
-  .mapbox,.netbox{height:260px!important;}
-  .cb{height:220px!important;} .cb.tall{height:260px!important;}
-  canvas{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  .fb{page-break-before:always;break-before:page;}
+  @page{size:A4 portrait;margin:15mm;}
+  /* Paksa background putih bersih */
+  body, .shell, .a4, html {background: #ffffff !important; color: #000000 !important;}
+  .fig, .sc, .kpi, .sbanner, .qbox, .abswrap, .jtable th, .jtable td, .jtable tbody tr {background: #ffffff !important; border-color: #cccccc !important;}
+  .toc-sidebar,.topbar,.mbd,.tctrl,.pag,.sbanner {display:none!important;}
+  .a4 {width:100%; box-shadow:none; padding:0;}
+  h2.st,h3,.figcap {page-break-after:avoid; break-after:avoid;}
+  .fig,.sc,.kpi,.qbox, tr {page-break-inside:avoid; break-inside:avoid;}
+  .mapbox,.netbox {height:260px!important;}
+  .cb {height:220px!important;} .cb.tall {height:260px!important;}
+  * {-webkit-print-color-adjust: exact; print-color-adjust: exact;}
+  .fb {page-break-before:always; break-before:page;}
 }
 </style>
 </head>
@@ -270,7 +272,7 @@ p{margin-bottom:13px;text-align:justify;}
     <p>All charts are generated directly from the curated dataset. No values are illustrative or estimated.</p>
     <h3 class="sub">2.1. Thematic Category Distribution</h3>
     <div class="fig"><div class="cb tall"><canvas id="barChart"></canvas></div>
-      <div class="figcap"><strong>Figure 1.</strong> Frequency of thematic category tags across all documented innovations.</div></div>
+      <div class="figcap" id="fig1-cap"><strong>Figure 1.</strong> Frequency of the Top 10 thematic category tags across documented innovations.</div></div>
     <div class="chart-row">
       <div class="fig" style="margin:0;"><div class="cb sh"><canvas id="levelChart"></canvas></div>
         <div class="figcap"><strong>Figure 2.</strong> Innovation level distribution.</div></div>
@@ -280,9 +282,9 @@ p{margin-bottom:13px;text-align:justify;}
 
     <h2 class="st" id="sec-risk">3. Risk &amp; Safety Assessment</h2>
     <div class="qbox">"Risk scoring follows a conservative 1–10 scale: 1–3 low; 4–6 medium; 7–10 high. Scores reflect inherent hazard regardless of mitigation measures — to surface innovations requiring the most urgent safety guidance."</div>
-    <h3 class="sub">3.1. Risk Score by Innovation</h3>
+    <h3 class="sub">3.1. Risk Score Distribution</h3>
     <div class="fig"><div class="cb tall"><canvas id="riskChart"></canvas></div>
-      <div class="figcap"><strong>Figure 4.</strong> Comparative risk scores. Red ≥7 = high-risk; Amber 4–6 = moderate; Green 1–3 = low-risk.</div></div>
+      <div class="figcap" id="fig4-cap"><strong>Figure 4.</strong> Distribution of risk scores across all innovations. Green (1-3) = Low Risk, Amber (4-6) = Moderate, Red (7-10) = High Risk.</div></div>
     <h3 class="sub">3.2. Risk vs. Priority Matrix</h3>
     <div class="fig"><div class="cb"><canvas id="scatterChart"></canvas></div>
       <div class="figcap"><strong>Figure 5.</strong> Risk score (X) vs. priority score (Y). Upper-right = highest urgency for safety-informed scaling.</div></div>
@@ -354,12 +356,12 @@ p{margin-bottom:13px;text-align:justify;}
     </div>
     <table class="jtable" id="dtable">
       <thead><tr>
-        <th onclick="sortT('title')" style="width:29%">Title <span class="sa"></span></th>
-        <th onclick="sortT('country')" style="width:14%">Country <span class="sa"></span></th>
-        <th style="width:18%">Categories</th>
+        <th onclick="sortT('title')" style="width:25%">Title <span class="sa"></span></th>
+        <th onclick="sortT('country')" style="width:15%">Country <span class="sa"></span></th>
+        <th style="width:20%">Categories</th>
         <th onclick="sortT('level')" style="width:12%">Level <span class="sa"></span></th>
         <th onclick="sortT('risk')" style="width:8%">Risk <span class="sa"></span></th>
-        <th onclick="sortT('priority')" style="width:9%">Priority <span class="sa"></span></th>
+        <th onclick="sortT('priority')" style="width:10%">Priority <span class="sa"></span></th>
         <th style="width:10%">Flags</th>
       </tr></thead>
       <tbody id="tbody"></tbody>
@@ -388,7 +390,7 @@ p{margin-bottom:13px;text-align:justify;}
       <p><strong>Editor-in-Chief:</strong> Angga Conni Saputra</p>
       <p><strong>Contact:</strong> [conniezz.cool@gmail.com]</p>
       <p><strong>Data Curation:</strong> GII Intelligence Engine (AI-Assisted)</p>
-      <p><strong>Address:</strong>[Jakarta, Indonesia]</p>
+      <p><strong>Address:</strong> [Jakarta, Indonesia]</p>
       <p><strong>ISSN (Online):</strong> XXXX-XXXX</p>
       <p><strong>DOI Prefix:</strong> 10.XXXXX/giib</p>
     </div>
@@ -571,13 +573,87 @@ function renderKPI(){
 }
 
 // ─── CHARTS ───
-function renderCat(){if(!INNOVATIONS.length)return;try{const freq={};INNOVATIONS.forEach(d=>(d.category||[]).forEach(c=>{freq[c]=(freq[c]||0)+1;}));const s=Object.entries(freq).sort((a,b)=>b[1]-a[1]);if(CH.bar){CH.bar.destroy();delete CH.bar;}CH.bar=new Chart(document.getElementById('barChart').getContext('2d'),{type:'bar',data:{labels:s.map(e=>e[0]),datasets:[{label:'Count',data:s.map(e=>e[1]),backgroundColor:'rgba(159,18,57,0.78)',borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},title:{display:true,text:'Category Tag Frequency',font:{size:11}}},scales:{x:{beginAtZero:true,ticks:{stepSize:1}},y:{ticks:{font:{size:9}}}}}})}catch(e){console.error("Error renderCat", e);}}
+function renderCat(){
+    if(!INNOVATIONS.length)return;
+    try{
+        const freq={};
+        INNOVATIONS.forEach(d=>(d.category||[]).forEach(c=>{freq[c]=(freq[c]||0)+1;}));
+        const s=Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0, 10); // LIMIT TO TOP 10
+        if(CH.bar){CH.bar.destroy();delete CH.bar;}
+        CH.bar=new Chart(document.getElementById('barChart').getContext('2d'),{
+            type:'bar',
+            data:{
+                labels:s.map(e=>trunc(e[0],25)),
+                datasets:[{label:'Count',data:s.map(e=>e[1]),backgroundColor:'rgba(159,18,57,0.78)',borderRadius:3}]
+            },
+            options:{
+                indexAxis:'y',responsive:true,maintainAspectRatio:false,
+                plugins:{legend:{display:false},title:{display:true,text:'Top 10 Category Tags',font:{size:11}}},
+                scales:{x:{beginAtZero:true,ticks:{stepSize:1}},y:{ticks:{font:{size:9}}}}
+            }
+        });
+    }catch(e){console.error("Error renderCat", e);}
+}
 
 function renderLvl(){if(!INNOVATIONS.length)return;try{const c={};INNOVATIONS.forEach(d=>{const l=d.innovation_level||'unknown';c[l]=(c[l]||0)+1;});const col={grassroots:'#9f1239','semi-formal':'#b45309',institutional:'#0f766e',unknown:'#94a3b8'};const labs=Object.keys(c);if(CH.lvl){CH.lvl.destroy();delete CH.lvl;}CH.lvl=new Chart(document.getElementById('levelChart').getContext('2d'),{type:'doughnut',data:{labels:labs,datasets:[{data:Object.values(c),backgroundColor:labs.map(l=>col[l]||'#aaa'),borderWidth:2,borderColor:document.documentElement.getAttribute('data-theme')==='dark'?'#22263a':'#faf8f3'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Innovation Level',font:{size:11}}}}});}catch(e){console.error("Error renderLvl", e);}}
 
-function renderReg(){if(!INNOVATIONS.length)return;try{const r={};INNOVATIONS.forEach(d=>{const x=getRegion(d.location?.country||'');r[x]=(r[x]||0)+1;});const pal=['rgba(15,118,110,.7)','rgba(217,119,6,.7)','rgba(37,99,235,.7)','rgba(225,29,72,.7)','rgba(139,92,246,.7)','rgba(100,116,139,.7)'];const labs=Object.keys(r);if(CH.pol){CH.pol.destroy();delete CH.pol;}CH.pol=new Chart(document.getElementById('polarChart').getContext('2d'),{type:'polarArea',data:{labels:labs,datasets:[{data:Object.values(r),backgroundColor:pal.slice(0,labs.length),borderWidth:1,borderColor:document.documentElement.getAttribute('data-theme')==='dark'?'#22263a':'#faf8f3'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Regional Distribution',font:{size:11}}}}});}catch(e){console.error("Error renderReg", e);}}
+function renderReg(){
+    if(!INNOVATIONS.length)return;
+    try{
+        const r={};
+        INNOVATIONS.forEach(d=>{const x=getRegion(d.location?.country||'');r[x]=(r[x]||0)+1;});
+        const pal=['rgba(15,118,110,.7)','rgba(217,119,6,.7)','rgba(37,99,235,.7)','rgba(225,29,72,.7)','rgba(139,92,246,.7)','rgba(100,116,139,.7)'];
+        const labs=Object.keys(r);
+        if(CH.pol){CH.pol.destroy();delete CH.pol;}
+        CH.pol=new Chart(document.getElementById('polarChart').getContext('2d'),{
+            type:'pie', // CHANGED TO PIE
+            data:{
+                labels:labs,
+                datasets:[{data:Object.values(r),backgroundColor:pal.slice(0,labs.length),borderWidth:1,borderColor:document.documentElement.getAttribute('data-theme')==='dark'?'#22263a':'#faf8f3'}]
+            },
+            options:{
+                responsive:true,maintainAspectRatio:false,
+                plugins:{legend:{position:'right',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Regional Distribution',font:{size:11}}}
+            }
+        });
+    }catch(e){console.error("Error renderReg", e);}
+}
 
-function renderRisk(){if(!INNOVATIONS.length)return;try{const s=[...INNOVATIONS].sort((a,b)=>(b.risk_assessment?.risk_score||0)-(a.risk_assessment?.risk_score||0)).slice(0,50);const cols=s.map(d=>(d.risk_assessment?.risk_score||0)>=7?'rgba(220,38,38,.82)':(d.risk_assessment?.risk_score||0)>=4?'rgba(217,119,6,.82)':'rgba(5,150,105,.82)');if(CH.risk){CH.risk.destroy();delete CH.risk;}CH.risk=new Chart(document.getElementById('riskChart').getContext('2d'),{type:'bar',data:{labels:s.map(d=>trunc(d.title,34)),datasets:[{label:'Risk Score',data:s.map(d=>(d.risk_assessment?.risk_score||0)),backgroundColor:cols,borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},title:{display:true,text:'Risk Score by Innovation (1 = low, 10 = high)',font:{size:11}}},scales:{x:{beginAtZero:true,max:10,ticks:{stepSize:1}},y:{ticks:{font:{size:8.5}}}}}});}catch(e){console.error("Error renderRisk", e);}}
+function renderRisk(){
+    if(!INNOVATIONS.length)return;
+    try{
+        // HISTOGRAM: Count innovations per risk score (1-10)
+        const counts = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0};
+        INNOVATIONS.forEach(d => {
+            let score = Math.round(d.risk_assessment?.risk_score || 0);
+            if(score < 1) score = 1; if(score > 10) score = 10;
+            counts[score]++;
+        });
+        const labels = Object.keys(counts);
+        const data = Object.values(counts);
+        const cols = labels.map(l => {
+            const score = parseInt(l);
+            return score >= 7 ? 'rgba(220,38,38,.82)' : score >= 4 ? 'rgba(217,119,6,.82)' : 'rgba(5,150,105,.82)';
+        });
+
+        if(CH.risk){CH.risk.destroy();delete CH.risk;}
+        CH.risk=new Chart(document.getElementById('riskChart').getContext('2d'),{
+            type:'bar', // VERTICAL BAR
+            data:{
+                labels: labels,
+                datasets:[{label:'Innovations',data:data,backgroundColor:cols,borderRadius:3}]
+            },
+            options:{
+                responsive:true,maintainAspectRatio:false,
+                plugins:{legend:{display:false},title:{display:true,text:'Distribution of Risk Scores (1-10)',font:{size:11}}},
+                scales:{
+                    x:{title:{display:true,text:'Risk Score'}, ticks:{font:{size:9}}},
+                    y:{title:{display:true,text:'Count'}, beginAtZero:true,ticks:{stepSize:1,font:{size:9}}}
+                }
+            }
+        });
+    }catch(e){console.error("Error renderRisk", e);}
+}
 
 function renderSct(){if(!INNOVATIONS.length)return;try{const sets=[{label:'Grassroots',data:[],backgroundColor:'rgba(159,18,57,.72)',pointRadius:6},{label:'Semi-formal',data:[],backgroundColor:'rgba(180,83,9,.72)',pointRadius:6},{label:'Institutional',data:[],backgroundColor:'rgba(15,118,110,.72)',pointRadius:6}];const lmap={grassroots:0,'semi-formal':1,institutional:2};INNOVATIONS.forEach(d=>{const i=lmap[d.innovation_level]??0;sets[i].data.push({x:(d.risk_assessment?.risk_score||0),y:(d.priority_score||0),label:trunc(d.title,22)});});if(CH.sct){CH.sct.destroy();delete CH.sct;}CH.sct=new Chart(document.getElementById('scatterChart').getContext('2d'),{type:'scatter',data:{datasets:sets},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Risk vs. Priority Matrix',font:{size:11}},tooltip:{callbacks:{label:ctx=>`${ctx.raw.label} — Risk:${ctx.raw.x} Priority:${ctx.raw.y}`}}},scales:{x:{title:{display:true,text:'Risk Score'},min:0,max:10,ticks:{stepSize:1}},y:{title:{display:true,text:'Priority Score'},min:0,max:100}}}});}catch(e){console.error("Error renderSct", e);}}
 
