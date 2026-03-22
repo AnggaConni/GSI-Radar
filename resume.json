@@ -1,0 +1,214 @@
+[
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-22T13:57:15.470188",
+            "period": "Q1 2026",
+            "total_records_analyzed": 33
+        },
+        "global_summary": {
+            "total_innovations": 32,
+            "grassroots_percentage": 56.25,
+            "institutional_percentage": 25.0,
+            "semi_formal_percentage": 18.75
+        },
+        "top_categories": [
+            {
+                "category": "Sustainable Agriculture",
+                "count": 12,
+                "trend": "increasing"
+            },
+            {
+                "category": "Waste Management & Upcycling",
+                "count": 10,
+                "trend": "stable"
+            },
+            {
+                "category": "Renewable Energy & Biogas",
+                "count": 6,
+                "trend": "increasing"
+            },
+            {
+                "category": "Sanitation",
+                "count": 4,
+                "trend": "stable"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Africa",
+                "key_pattern": "Focus on post-harvest preservation and energy autonomy through engine modification and biogas.",
+                "risk_level": "high"
+            },
+            {
+                "region": "Americas",
+                "key_pattern": "Revival of ancient polyculture systems (Milpa, Chinampa) alongside DIY off-grid sanitation.",
+                "risk_level": "medium"
+            },
+            {
+                "region": "Europe",
+                "key_pattern": "Institutional circular economy projects focusing on industrial composite waste (wind turbine blades).",
+                "risk_level": "medium"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 21,
+            "critical_cases": 10,
+            "top_risk_types": [
+                "Explosion",
+                "Fire Hazard",
+                "Toxic Pathogen Exposure",
+                "Chemical Leaching"
+            ],
+            "emerging_risks": [
+                "DIY modification of engine control units (ECUs) without safety certification",
+                "Methane accumulation in unvented residential biogas systems",
+                "Toxic dust inhalation from grinding decommissioned fiberglass turbine blades",
+                "Chemical contamination of food crops from scavenged plastic hydroponic containers"
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Repurposed Combustion",
+                "description": "Converting small engines (lawnmowers, old cars) into generators or air-powered motors.",
+                "regions": [
+                    "Kenya",
+                    "USA",
+                    "Global"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Airtight Preservation",
+                "description": "Utilizing hermetic sealing (bags, silos, clay) to eliminate pesticide use in grain storage.",
+                "regions": [
+                    "Tanzania",
+                    "Kenya",
+                    "Chad",
+                    "Malawi"
+                ],
+                "risk_level": "low"
+            },
+            {
+                "pattern_name": "Composite Upcycling",
+                "description": "Transforming non-recyclable industrial fiberglass into public infrastructure and furniture.",
+                "regions": [
+                    "Netherlands",
+                    "Sweden",
+                    "USA"
+                ],
+                "risk_level": "medium"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "The Milpa System",
+                "country": "Mexico",
+                "reason": "Ancient, low-cost, zero-risk polyculture that provides complete nutrition and soil regeneration."
+            },
+            {
+                "title": "Massa Endogenous Granaries",
+                "country": "Chad",
+                "reason": "Highly sustainable climate resilience tool using 100% local biodegradable materials."
+            },
+            {
+                "title": "Terra Preta Biochar",
+                "country": "Brazil",
+                "reason": "High-impact carbon sequestration method that turns poor soil into hyper-fertile land for centuries."
+            },
+            {
+                "title": "Garlic-Based Pest Control",
+                "country": "Canada",
+                "reason": "Scalable, non-toxic alternative to synthetic pesticides with minimal environmental footprint."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "regulation",
+                "target": "DIY Biogas Systems",
+                "priority_level": "high",
+                "justification": "Multiple records show high explosion and toxicity risks in residential settings without leak detection."
+            },
+            {
+                "type": "research",
+                "target": "Scavenged Plastic Hydroponics",
+                "priority_level": "medium",
+                "justification": "Risk of chemical leaching from non-food-grade plastics into the food supply in Zimbabwe-based models."
+            },
+            {
+                "type": "funding",
+                "target": "Hermetic Storage Scaling",
+                "priority_level": "high",
+                "justification": "Proven high impact on food security and farmer income with very low inherent risk."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "shifting",
+            "observation": "Knowledge is moving from traditional ancestral wisdom toward 'Internet-enabled' DIY adaptations of industrial technology."
+        },
+        "recommendations": [
+            "Develop and distribute 'Safety-First' open-source blueprints for biogas digesters to mitigate explosion risks.",
+            "Establish local testing labs for DIY engine modifications (like the Voltarent ECU) to ensure emissions compliance.",
+            "Incentivize the transition from traditional 'slash-and-burn' to 'slash-and-char' (Terra Preta) to enhance carbon storage.",
+            "Provide PPE and filtration guidelines for community groups upcycling fiberglass and composite materials.",
+            "Standardize the cleaning protocols for scavenged plastics used in urban agriculture to prevent toxic leaching."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Africa",
+                    "count": 11
+                },
+                {
+                    "region": "Americas",
+                    "count": 8
+                },
+                {
+                    "region": "Europe",
+                    "count": 5
+                },
+                {
+                    "region": "Asia",
+                    "count": 3
+                },
+                {
+                    "region": "Global/Online",
+                    "count": 5
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "low",
+                    "count": 5
+                },
+                {
+                    "level": "medium",
+                    "count": 6
+                },
+                {
+                    "level": "high",
+                    "count": 21
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "Adapted",
+                    "count": 14
+                },
+                {
+                    "source": "Traditional",
+                    "count": 7
+                },
+                {
+                    "source": "Self-taught",
+                    "count": 6
+                },
+                {
+                    "source": "Formal",
+                    "count": 5
+                }
+            ]
+        }
+    }
+]
