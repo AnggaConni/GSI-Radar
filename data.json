@@ -1375,5 +1375,185 @@
         "priority_score": 66,
         "hidden_gem": true,
         "critical_flag": true
+    },
+    {
+        "id": "a805ead42c785792c4b349f5766a3922",
+        "timestamp": "2026-03-22T10:57:05.030065",
+        "title": "Remote-Controlled River-Cleaning Bot",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOrfhEEuORGLXarRUj-dBd8pU-egDqetMwu_kKcpSAZd4akU7yD1zn2P-gg-Yy3lwMFn2QaqRHHC_3V7tte1r18HqMQZiYprvag3eHdFrGnONR1mUwJJhPFcMdqQE8v7jH8uyBDIk9noW4bDGbN5fHKLN5zQjyJMRrcYIexxmjZfqqo7DFZ_x98v77Jsho7Xw2uCjxNvB-kywZekQ9eXqoYKtWyrjtZ0XPOsCAwYBaHAzd"
+        ],
+        "summary": "A low-cost, remote-controlled river-cleaning bot designed to float on plastic bottles. It navigates using a propeller system and is steered via a Bluetooth app, collecting surface-level floating waste with a net. The design emphasizes cost-effectiveness, modularity, and replicability for community-led initiatives and educational purposes.",
+        "category": [
+            "Environmental",
+            "Robotics",
+            "Waste Management",
+            "Community Empowerment"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "",
+            "region": "",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The bot floats on plastic bottles and uses a propeller system for navigation. It is remotely steered via a Bluetooth app interface. As it moves through polluted waters, an attached net collects floating waste and debris from the water surface.",
+            "materials_used": [
+                "Plastic bottles",
+                "Propeller system",
+                "Net",
+                "Bluetooth app interface",
+                "Remote control system"
+            ],
+            "step_by_step": []
+        },
+        "impact": {
+            "problem_solved": "Water pollution, specifically the accumulation of surface-level floating waste in rivers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "internet"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "fire hazard",
+                "explosion",
+                "environmental",
+                "safety gear",
+                "electrical shock"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The low-cost, grassroots nature of this innovation, combined with the use of a propeller system (implying batteries and motors), introduces several risks. There's a fire and potential explosion hazard from batteries, especially if they are low-cost or poorly maintained. Operating electrical components in water poses an electrical shock risk if not properly sealed. Environmental risks include potential battery leakage or fragmentation of plastic bottle flotation if the device breaks down, and propellers could harm aquatic life. Operators handling collected waste from polluted waters will require appropriate safety gear to prevent exposure to toxins."
+        },
+        "priority_score": 72,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "6672077de5daf7353c19544cf0c27c4b",
+        "timestamp": "2026-03-22T10:57:24.829090",
+        "title": "Brute Broom",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsbAKE1N0ZjkrwMODr2wuVnML5caynTEA2gUa8KgAxv0gpxpNqEQd38uTFOiA_X6XnX8sxII3X50VMccWKrTX0Y3jpNto5TvdcVBCDj_UlUTvti5NIv7mqZTogYSt_UZqmwQ6j2s2aWNmtE3eU20KTfEPHgqoviAxfZfOy9ahNCvctQYC0"
+        ],
+        "summary": "The Brute Broom is a homemade floating boom with a metal screen implemented by the non-profit group Wildcoast in the Tijuana River to collect plastic waste. This initiative is part of a broader community-driven approach that includes the community's first recycling program and an educational initiative to raise awareness about reducing plastic use.",
+        "category": [
+            "Waste Management",
+            "River Cleanup",
+            "Community Engagement",
+            "Environmental Education"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Mexico",
+            "region": "Tijuana",
+            "lat": 32.5317397,
+            "lon": -117.019529
+        },
+        "process": {
+            "how_it_works": "A floating boom equipped with a metal screen is deployed in the river to effectively collect debris flowing downstream.",
+            "materials_used": [
+                "floating boom",
+                "metal screen"
+            ],
+            "step_by_step": []
+        },
+        "impact": {
+            "problem_solved": "Plastic waste pollution in the Tijuana River, lack of local recycling infrastructure, and low community awareness regarding plastic reduction.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Toxic",
+                "Environment",
+                "Safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The 'Brute Broom' itself is a low-tech, mechanical device with minimal inherent risks like fire or explosion. However, operational risks are present due to the river environment and handling collected waste. Workers face potential exposure to pathogens and hazardous materials in the river and debris, necessitating appropriate safety gear. There's also a potential environmental risk of wildlife entanglement or the boom becoming debris itself if not properly maintained and monitored. Intervention is needed to ensure robust safety protocols, worker training, and consistent maintenance."
+        },
+        "priority_score": 60,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "58d32fc75ee6256e506300a41c7a0066",
+        "timestamp": "2026-03-22T10:57:44.733271",
+        "title": "Floating River Plastic Traps",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsbAKE1N0ZjkrwMODr2wuVnML5caynTEA2gUa8KgAxv0gpxpNqEQd38uTFOiA_X6XnX8sxII3X50VMccWKrTX0Y3jpNto5TvdcVBCDj_UlUTtvi5NIv7mqZTogYSt_UZqmwQ6j2s2aWNmtE3eU20KTfEPHgqoviAxfZfOy9ahNCvctQYC0"
+        ],
+        "summary": "A partnership between Ocean Conservancy and the Center for Marine Conservation & Community Development in Vietnam has led to the deployment of locally designed, inexpensive floating traps with mesh on the Song Hong River. These traps are strategically positioned to guide and collect floating plastics, anchored to riverbanks with bamboo platforms for easy maintenance by local community members. This initiative demonstrates the effectiveness of simple, community-built solutions for river cleanup.",
+        "category": [
+            "Waste Management",
+            "River Cleanup",
+            "Community Engagement",
+            "Plastic Pollution"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Vietnam",
+            "region": "Song Hong River",
+            "lat": 21.0992219,
+            "lon": 105.8146065
+        },
+        "process": {
+            "how_it_works": "Floating traps with mesh are strategically positioned in the river to guide and collect floating plastic waste. These traps direct the plastics towards a collection point, making it easier for local communities to remove them.",
+            "materials_used": [
+                "mesh",
+                "bamboo platforms"
+            ],
+            "step_by_step": [
+                "Design and construct floating traps using mesh materials.",
+                "Position the traps strategically in the river to intercept floating plastics.",
+                "Anchor the traps to the riverbank using bamboo platforms.",
+                "Local community members regularly maintain and empty the collected waste from the traps."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Floating plastic pollution in the Song Hong River.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "environment",
+                "safety_gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The locally designed cleanup tools (floating traps, bamboo platforms) themselves present minimal inherent risks. However, the deployment and maintenance by local community members in a river environment, which may contain pollutants, introduces risks related to exposure to waste, slips, falls, and potential lack of adequate safety gear or training. While the initiative is environmentally beneficial, ensuring the safety of participants handling collected waste and working near water is crucial."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
