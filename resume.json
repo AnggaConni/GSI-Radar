@@ -213,7 +213,7 @@
     },
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-03-22T14:28:24.872141",
             "period": "Q1 2026",
             "total_records_analyzed": 33
@@ -433,6 +433,222 @@
                 {
                     "source": "Internet",
                     "count": 2
+                }
+            ]
+        }
+    },
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-22T14:34:30.316181",
+            "period": "Q1 2026",
+            "total_records_analyzed": 36
+        },
+        "global_summary": {
+            "total_innovations": 32,
+            "grassroots_percentage": 50,
+            "institutional_percentage": 25,
+            "semi_formal_percentage": 25
+        },
+        "top_categories": [
+            {
+                "category": "Waste Management & Upcycling",
+                "count": 12,
+                "trend": "increasing"
+            },
+            {
+                "category": "Sustainable Agriculture",
+                "count": 10,
+                "trend": "stable"
+            },
+            {
+                "category": "Renewable Energy & Biogas",
+                "count": 6,
+                "trend": "increasing"
+            },
+            {
+                "category": "Automotive Engineering",
+                "count": 4,
+                "trend": "stable"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Africa",
+                "key_pattern": "Focus on post-harvest grain preservation and decentralized energy solutions (Biogas, ECU)",
+                "risk_level": "high"
+            },
+            {
+                "region": "Latin America",
+                "key_pattern": "Revitalization of traditional agricultural systems (Chinampa, Milpa) and urban sanitation",
+                "risk_level": "medium"
+            },
+            {
+                "region": "Global (Online/DIY)",
+                "key_pattern": "High-risk mechanical engine conversions and household upcycling",
+                "risk_level": "high"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 21,
+            "critical_cases": 10,
+            "top_risk_types": [
+                "Explosion",
+                "Toxic Pathogen Exposure",
+                "Fire Hazard",
+                "Chemical Leaching"
+            ],
+            "emerging_risks": [
+                "DIY biogas systems using non-pressure-rated scrap materials (IBC tanks, paint buckets)",
+                "Scavenged plastic bottles in hydroponics potentially leaching industrial toxins into food",
+                "Unregulated electronic control unit (ECU) modifications in older vehicles"
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Industrial Symbiosis Upcycling",
+                "description": "Repurposing complex industrial waste (wind turbine blades, PET bottles) into public infrastructure and furniture.",
+                "regions": [
+                    "USA",
+                    "Netherlands",
+                    "Sweden",
+                    "Barbados"
+                ],
+                "risk_level": "medium"
+            },
+            {
+                "pattern_name": "Decentralized Pathogen Management",
+                "description": "Grassroots systems for human waste composting and water purification using solar radiation.",
+                "regions": [
+                    "Haiti",
+                    "Uganda",
+                    "Kenya",
+                    "Indonesia"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Mechanical Resource Extension",
+                "description": "Modifying internal combustion engines for alternative fuels (compressed air) or modernized efficiency (ECUs).",
+                "regions": [
+                    "Kenya",
+                    "Germany",
+                    "Global"
+                ],
+                "risk_level": "high"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "Milpa System",
+                "country": "Mexico/Guatemala",
+                "reason": "Extremely low-cost, zero-risk polyculture that provides a nutritionally complete food source while regenerating soil."
+            },
+            {
+                "title": "Garlic-Based Pest Control",
+                "country": "Canada/Global",
+                "reason": "High-impact organic alternative to synthetic pesticides using common household ingredients."
+            },
+            {
+                "title": "Traditional Massa Granaries",
+                "country": "Chad",
+                "reason": "Culturally embedded, zero-cost climate resilience solution for food security using local clay and straw."
+            },
+            {
+                "title": "Gravity-fed Hydroponics",
+                "country": "Zimbabwe",
+                "reason": "Solves electricity dependency in food production, though requires intervention for material safety."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "training",
+                "target": "Grassroots Biogas Builders",
+                "priority_level": "high",
+                "justification": "Multiple records show 14-year-olds and community groups handling explosive methane in non-rated scrap containers."
+            },
+            {
+                "type": "research",
+                "target": "Scavenged Plastic Safety",
+                "priority_level": "medium",
+                "justification": "Hydroponic systems using bottles from illegal dump sites pose unknown toxic risks to food supplies."
+            },
+            {
+                "type": "regulation",
+                "target": "Automotive ECU Retrofitting",
+                "priority_level": "medium",
+                "justification": "Semi-formal engine modernizations in Kenya/Global lack standardized safety testing for fuel system failures."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "shifting",
+            "observation": "Innovation is moving away from purely traditional methods toward 'MacGyver-style' adaptation of modern waste materials (IBCs, PET, engine parts) to solve ancient problems (sanitation, energy)."
+        },
+        "recommendations": [
+            "Develop and distribute 'Safety Blueprints' for DIY biogas and composting toilets to mitigate explosion and pathogen risks.",
+            "Establish a certification bridge for semi-formal engineers like Peter Mbiria to validate automotive safety standards.",
+            "Promote the Milpa and Terra Preta systems as global standards for low-tech carbon sequestration and food security.",
+            "Implement 'Material Sourcing Guidelines' for upcycling projects to prevent toxic leaching from repurposed plastics and engine parts.",
+            "Support the scaling of hermetic storage bags in Africa to reduce the 40% post-harvest loss without chemical fumigants."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Africa",
+                    "count": 10
+                },
+                {
+                    "region": "Americas",
+                    "count": 6
+                },
+                {
+                    "region": "Asia",
+                    "count": 4
+                },
+                {
+                    "region": "Europe",
+                    "count": 3
+                },
+                {
+                    "region": "Global/Online",
+                    "count": 9
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "high",
+                    "count": 21
+                },
+                {
+                    "level": "medium",
+                    "count": 7
+                },
+                {
+                    "level": "low",
+                    "count": 4
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "Adapted from existing",
+                    "count": 11
+                },
+                {
+                    "source": "Traditional",
+                    "count": 6
+                },
+                {
+                    "source": "Self-taught",
+                    "count": 6
+                },
+                {
+                    "source": "Formal education",
+                    "count": 6
+                },
+                {
+                    "source": "Internet",
+                    "count": 3
                 }
             ]
         }
