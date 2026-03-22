@@ -2,6 +2,7 @@
     {
         "id": "807ae0f4e918c227cd45f558d186cb17",
         "timestamp": "2026-03-22T08:39:04.899100",
+        "source_url": "https://humanurehandbook.com/",
         "title": "The Humanure Handbook Sawdust Toilet System",
         "summary": "A simple, low-cost DIY composting toilet system popularized by Joseph Jenkins, utilizing a 5-gallon bucket within a wooden box, where dry organic material like sawdust is added after each use. Full buckets are then emptied into an outdoor thermophilic compost pile to produce nutrient-rich garden compost.",
         "category": [
@@ -12,31 +13,37 @@
         ],
         "innovation_level": "grassroots",
         "location": {
-            "country": "",
+            "country": "USA (origin); globally adopted",
             "region": "globally, in rural and off-grid settings",
-            "lat": null,
-            "lon": null
+            "lat": 41.1534,
+            "lon": -80.0842
         },
         "process": {
             "how_it_works": "The system uses a 5-gallon bucket housed within a wooden box with a toilet seat. After each use, dry organic material is added to cover waste, absorb moisture, control odors, and initiate composting. Full buckets are transferred to an outdoor thermophilic compost pile for pathogen breakdown and compost creation.",
             "materials_used": [
-                "5-gallon bucket",
-                "Wooden box",
+                "5-gallon (20-litre) bucket",
+                "Wooden box (toilet cabinet)",
                 "Toilet seat",
                 "Sawdust",
                 "Peat moss",
-                "Rice hulls"
+                "Rice hulls",
+                "Compost thermometer (recommended)",
+                "Long-handled toilet brush",
+                "Dish soap (for bucket cleaning)",
+                "Rainwater collection barrel (optional)"
             ],
             "step_by_step": [
-                "Place a 5-gallon bucket within a wooden box with a toilet seat.",
-                "After each use, add a scoop of dry organic material (sawdust, peat moss, or rice hulls) to cover the waste.",
-                "Once the bucket is full, empty its contents into an outdoor thermophilic compost pile.",
-                "Manage the compost pile to reach high temperatures to safely break down pathogens.",
-                "Allow the waste to transform into nutrient-rich compost."
+                "Build or purchase a wooden box (Loveable Loo) sized to house a 5-gallon bucket, fitted with a standard toilet seat on top.",
+                "Place a 5-gallon bucket inside the box; optionally line with a small amount of cover material at the base.",
+                "After each use, add a generous scoop (roughly half a litre) of dry cover material — sawdust, peat moss, or rice hulls — to fully cover the waste.",
+                "Once the bucket is about two-thirds full, seal it with a lid, carry it to the outdoor compost site, and swap in a clean bucket.",
+                "Empty bucket contents into the active thermophilic compost pile; rinse the bucket with water and a brush, then pour rinse water onto the pile.",
+                "Manage the outdoor compost pile to reach and sustain internal temperatures of 55–65 °C for pathogen destruction; cover each addition with a thick carbon-rich layer (straw, leaves, or more sawdust).",
+                "After at least one full year of ageing, use the finished compost on ornamental gardens or fruit trees."
             ]
         },
         "impact": {
-            "problem_solved": "Provides a sanitation solution where traditional septic systems or water hookups are unavailable or undesirable, while also transforming human waste into a valuable soil amendment.",
+            "problem_solved": "Provides a waterless, low-cost sanitation solution where traditional septic systems or water hookups are unavailable or undesirable, while also transforming human waste into a valuable soil amendment.",
             "scale": "medium"
         },
         "replicability": {
@@ -67,6 +74,7 @@
     {
         "id": "4c71acde070a84327d8db45ace42c5d8",
         "timestamp": "2026-03-22T08:39:29.799902",
+        "source_url": "https://www.oursoil.org/",
         "title": "SOIL's EkoLakay Service in Haiti",
         "summary": "SOIL's EkoLakay Service is an ecological sanitation (EcoSan) toilet service in Haiti that provides container-based composting toilets to households. The organization collects the waste and transforms it into agricultural-grade compost, contributing to local food production and ecological restoration.",
         "category": [
@@ -78,28 +86,31 @@
         "innovation_level": "institutional",
         "location": {
             "country": "Haiti",
-            "region": "dense urban settlements and rural areas",
-            "lat": null,
-            "lon": null
+            "region": "Port-au-Prince and Cap-Haïtien, urban communities",
+            "lat": 19.7573,
+            "lon": -72.2049
         },
         "process": {
             "how_it_works": "SOIL provides container-based composting toilets to households. Users deposit waste into these containers, which are then regularly collected by SOIL. The collected human waste is safely transported to SOIL's composting facilities, treated according to World Health Organization standards, and transformed into organic compost for agricultural use.",
             "materials_used": [
-                "container-based composting toilets",
-                "human waste"
+                "Container-based composting toilet (wooden or cement model, locally manufactured)",
+                "Removable plastic collection bucket",
+                "Urine collection gallon",
+                "Carbon cover material (sawdust or similar)",
+                "Plastic toilet seat (imported)"
             ],
             "step_by_step": [
-                "SOIL provides EkoLakay ecological sanitation toilets to households.",
-                "Users deposit waste into the provided containers.",
-                "SOIL offers a regular collection service for the waste containers.",
-                "Collected human waste is safely transported to SOIL's composting facilities.",
-                "Waste undergoes a treatment process adhering to World Health Organization standards.",
-                "Treated waste is transformed into rich, organic compost.",
-                "The compost is used to improve and fertilize soil, contributing to local food production and ecological restoration."
+                "SOIL installs EkoLakay ecological sanitation toilets in households, fitted with a sealable, removable collection container.",
+                "Users deposit waste into the provided container; carbon cover material is added after each use to suppress odour.",
+                "SOIL's collection team visits weekly to swap out full containers for clean ones.",
+                "Full containers are safely transported to one of SOIL's composting waste treatment facilities (Cap-Haïtien or Port-au-Prince).",
+                "Waste undergoes managed thermophilic composting, monitored to meet WHO standards for pathogen inactivation.",
+                "All outputs are lab-tested before bagging and selling as 'Konpòs Lakay' organic compost.",
+                "The compost is sold to farmers and reforestation projects, improving soil fertility and contributing to local food production."
             ]
         },
         "impact": {
-            "problem_solved": "Lack of safe sanitation, inefficient waste management, soil degradation, and food insecurity.",
+            "problem_solved": "Lack of safe sanitation, inefficient waste management, soil degradation, and food insecurity. Serves over 1,500 households (~9,000 people) in urban Haiti as of 2021.",
             "scale": "high"
         },
         "replicability": {
@@ -128,6 +139,7 @@
     {
         "id": "44713aec8da0928c0b5702ff49099458",
         "timestamp": "2026-03-22T08:39:51.349823",
+        "source_url": "https://www.uphilltrust.org/compost-toilet-project/",
         "title": "The Uphill Trust Compost Toilet Project",
         "summary": "This project converts existing shallow drop latrines into compost toilet blocks for staff and visitors at a school in rural Uganda, where there are no mains waste or water systems. It involves retrofitting latrines with new toilet boxes containing recycled plastic buckets for waste collection, which is then composted using dry organic material to enhance soil fertility in school gardens.",
         "category": [
@@ -139,24 +151,30 @@
         "innovation_level": "semi-formal",
         "location": {
             "country": "Uganda",
-            "region": "rural Uganda",
+            "region": "Iruhuura trading centre, Western Uganda",
             "lat": 0.9433144,
             "lon": 30.8164758
         },
         "process": {
             "how_it_works": "Existing latrine cubicles are retrofitted with new toilet boxes that house plastic buckets for waste collection. After each use, dry organic material like grass is added as a cover. Full buckets are emptied into raised, multi-bin compost heaps, which have a base filled with dry grass. Organic waste, including the toilet material, is deposited and covered with a thick layer of dry grass to facilitate hot composting, producing compost for school gardens.",
             "materials_used": [
-                "plastic buckets (recycled paint tubs)",
-                "dry organic material (like grass)"
+                "Recycled plastic buckets (repurposed paint tubs)",
+                "Wooden toilet boxes (built by local joiners)",
+                "Standard toilet seats",
+                "Dry organic material (grass, sawdust, or similar)",
+                "Bricks and cement (for latrine pit capping)",
+                "Lumber for raised compost bins",
+                "Roofing sheets"
             ],
             "step_by_step": [
-                "Retrofit existing latrine cubicles with new toilet boxes.",
-                "Place plastic buckets (recycled paint tubs) inside the toilet boxes to collect waste.",
-                "After use, add dry organic material (like grass) as a cover.",
-                "Once full, empty the buckets into raised, multi-bin compost heaps.",
-                "Ensure the base of the compost bins is shaped into a shallow dish and filled with dry grass.",
-                "Deposit organic waste, including the toilet material, into the compost bins.",
-                "Cover the deposited waste with a thick layer of dry grass to facilitate hot composting."
+                "Cap the existing latrine pit with brick and cement to form a stable plinth for the toilet box.",
+                "Fit new wooden toilet boxes (built by a local joiner) inside each existing latrine cubicle, incorporating a standard toilet seat.",
+                "Place recycled plastic buckets inside the boxes to collect waste.",
+                "After each use, add a scoop of dry organic material (grass cuttings or sawdust) as a cover to absorb moisture and suppress odour.",
+                "Once a bucket is full, empty it into the designated active raised compost bin lined with a base layer of dry grass.",
+                "Cover each fresh deposit with a thick layer of dry grass to initiate hot composting and suppress pathogens.",
+                "Rotate across three compost bins: one actively filling, one maturing for year one, one maturing for year two, ensuring at least 24 months before compost is used on school food gardens.",
+                "Renovate toilet block infrastructure (higher roof, plaster, paint, clear signage) to improve comfort and user uptake."
             ]
         },
         "impact": {
@@ -190,6 +208,7 @@
     {
         "id": "ddded287aabdb34aefa36270af2efb3b",
         "timestamp": "2026-03-22T09:14:06.864781",
+        "source_url": "https://www.peacecorps.gov/educators-and-students/educators/resources/making-natural-pest-controls/",
         "title": "Garlic-Based Sprays for Grasshopper Control",
         "summary": "An organic farming community in Alberta, Canada, has collectively implemented homemade garlic-based sprays as a pesticide to manage grasshopper populations. This community-led innovation leverages garlic's natural deterrent properties and, when combined with crop rotation, has significantly reduced pest pressure without synthetic chemicals.",
         "category": [
@@ -205,12 +224,23 @@
             "lon": -115.002136
         },
         "process": {
-            "how_it_works": "Garlic's strong scent and sulfur compounds act as a natural deterrent to many insects, including grasshoppers. The sprays are applied to crops to repel pests.",
+            "how_it_works": "Garlic's strong scent and sulfur compounds (primarily allicin) act as a natural deterrent to many insects, including grasshoppers. Concentrated garlic sprays repel and can kill insects on contact. The sprays are applied to crops and combined with crop rotation to reduce overall pest pressure.",
             "materials_used": [
-                "Garlic"
+                "Garlic bulbs",
+                "Water",
+                "Optional: mineral oil (carrier)",
+                "Optional: liquid soap (emulsifier)",
+                "Spray bottles or field sprayer",
+                "Protective gloves and eye protection"
             ],
             "step_by_step": [
-                "Prepare sprays from garlic."
+                "Finely chop or blend several garlic bulbs.",
+                "Soak the chopped garlic in water (or mineral oil) for 24 hours.",
+                "Strain the liquid through cloth or a fine mesh to remove solids.",
+                "Dilute the strained concentrate as needed (typically 1 part concentrate to 10–20 parts water); add a small amount of liquid soap to help the spray adhere to leaves.",
+                "Apply the spray to crops in the early morning or evening, ensuring coverage on both sides of leaves.",
+                "Reapply after rain or every 1–2 weeks during peak grasshopper season.",
+                "Combine spray application with crop rotation to reduce long-term pest pressure."
             ]
         },
         "impact": {
@@ -244,6 +274,7 @@
     {
         "id": "93fdb78d352dccf75810063c74c76ded",
         "timestamp": "2026-03-22T09:14:26.462507",
+        "source_url": "https://www.peacecorps.gov/educators-and-students/educators/resources/making-natural-pest-controls/",
         "title": "Garlic Brew",
         "summary": "The Garlic Brew is a natural pest control solution promoted by the Peace Corps in rural communities. It is made from garlic and water, and is effective against various insects like ants, aphids, caterpillars, and nematodes, empowering local individuals to create their own pest solutions.",
         "category": [
@@ -253,23 +284,28 @@
         ],
         "innovation_level": "grassroots",
         "location": {
-            "country": "",
-            "region": "",
+            "country": "Global (Peace Corps programme countries)",
+            "region": "Rural communities worldwide",
             "lat": null,
             "lon": null
         },
         "process": {
-            "how_it_works": "The garlic brew acts as a natural repellent and pesticide against various insects and nematodes when applied to plants and soil.",
+            "how_it_works": "The garlic brew acts as a natural repellent and pesticide against various insects and nematodes when applied to plants and soil. Allicin and sulfur compounds in garlic disrupt insects' sensory systems and act as a contact insecticide at higher concentrations.",
             "materials_used": [
-                "Garlic",
-                "Water"
+                "Garlic (half a cup, finely chopped)",
+                "Water (three-quarters of a litre)",
+                "Strainer or fine cloth",
+                "Spray bottle or watering can",
+                "Protective gloves (recommended)"
             ],
             "step_by_step": [
                 "Finely chop half a cup of garlic.",
                 "Add the chopped garlic to three-fourths of a liter of water.",
                 "Soak the mixture for 24 hours.",
-                "Strain the liquid.",
-                "Apply the strained brew to plants and the surrounding soil."
+                "Strain the liquid through cloth or a fine mesh to remove solids.",
+                "Transfer strained brew to a spray bottle.",
+                "Apply the strained brew directly to affected plants and the surrounding soil.",
+                "Reapply every 1–2 weeks or after rainfall."
             ]
         },
         "impact": {
@@ -302,6 +338,7 @@
     {
         "id": "268eab279cb422e8a07947e077866ef2",
         "timestamp": "2026-03-22T09:14:41.578437",
+        "source_url": "https://www.peacecorps.gov/educators-and-students/educators/resources/making-natural-pest-controls/",
         "title": "Hot Pepper Solution",
         "summary": "The Hot Pepper Solution is a natural, homemade pest repellent encouraged by the Peace Corps. It is effective against a variety of crop pests like caterpillars, cabbage worms, ants, aphids, beetles, and cutworms, allowing villagers to protect their crops using common and inexpensive ingredients.",
         "category": [
@@ -311,23 +348,29 @@
         ],
         "innovation_level": "grassroots",
         "location": {
-            "country": "",
-            "region": "",
+            "country": "Global (Peace Corps programme countries)",
+            "region": "Rural communities worldwide",
             "lat": null,
             "lon": null
         },
         "process": {
-            "how_it_works": "The solution acts as a general repellent against various insect pests, deterring them from affected plants.",
+            "how_it_works": "Capsaicin in hot peppers acts as a general irritant and repellent against various insect pests, deterring them from landing on and feeding on affected plants. The solution does not kill insects outright but makes the plant surface inhospitable.",
             "materials_used": [
-                "Hot peppers",
-                "Water"
+                "Hot peppers (15 peppers, finely chopped)",
+                "Water (1 litre)",
+                "Strainer or fine cloth",
+                "Spray bottle or watering can",
+                "Gloves and eye protection (essential during preparation)"
             ],
             "step_by_step": [
+                "Wear gloves and avoid touching eyes when handling hot peppers.",
                 "Finely chop 15 hot peppers.",
                 "Add the chopped peppers to 1 liter of water.",
                 "Steep the mixture for 24 hours.",
-                "Strain the solution.",
-                "Apply the strained solution to affected plants."
+                "Strain the solution through cloth or a fine mesh to remove solids.",
+                "Transfer to a spray bottle.",
+                "Apply the strained solution to affected plants, ensuring coverage on stems and both sides of leaves.",
+                "Reapply every 1–2 weeks or after rainfall."
             ]
         },
         "impact": {
@@ -360,6 +403,7 @@
     {
         "id": "2f295b7c749946ccf33ca3e2ec42a905",
         "timestamp": "2026-03-22T09:18:07.511196",
+        "source_url": "https://en.wikipedia.org/wiki/Chinampa",
         "title": "Chinampa system",
         "summary": "The Chinampa system is an ancient Aztec agricultural innovation involving artificial islands, or 'floating gardens', constructed on shallow lake beds. These platforms are built from woven reeds and branches, layered with mud and vegetation, and anchored by trees. They enable year-round crop cultivation, drought resilience, and extraordinary soil fertility through continuous nutrient recycling from surrounding canals and organic waste.",
         "category": [
@@ -371,32 +415,35 @@
         "innovation_level": "institutional",
         "location": {
             "country": "Mexico",
-            "region": "Valley of Mexico",
-            "lat": 19.5018295,
-            "lon": -99.0661917
+            "region": "Valley of Mexico — Lakes Xochimilco and Chalco",
+            "lat": 19.2833,
+            "lon": -99.1000
         },
         "process": {
-            "how_it_works": "Artificial islands are constructed on shallow lake beds, creating stable, nutrient-rich platforms. These 'floating gardens' are constantly supplied with water from surrounding canals, which also create an ideal microclimate. Continuous recycling of organic waste, including lakebed silt, plant matter, and human/animal manures, enriches the soil, allowing for multiple harvests per year.",
+            "how_it_works": "Artificial islands are constructed on shallow lake beds by weaving reeds and stakes to form underwater fences, then piling in mud, aquatic vegetation, and organic waste until the platform rises above the water surface. Surrounding canals supply constant moisture and carry nutrient-rich runoff. Continuous recycling of organic waste — lakebed silt, plant matter, and human/animal manures — enriches the soil, allowing multiple harvests per year. The Aztecs designated chinampas a UNESCO Globally Important Agricultural Heritage System (2018).",
             "materials_used": [
-                "reeds",
-                "branches",
-                "mud",
-                "vegetation",
-                "ahuejote trees",
-                "lakebed silt",
-                "organic waste",
-                "plant matter",
-                "human manures",
-                "animal manures"
+                "Reeds (woven into base fences)",
+                "Wooden stakes",
+                "Branches and wattling",
+                "Lakebed mud and silt",
+                "Aquatic vegetation",
+                "Ahuejote trees (Salix bonplandiana, planted at corners as anchors)",
+                "Human and animal manures",
+                "Plant residues",
+                "Broken pottery (as drainage material)"
             ],
             "step_by_step": [
-                "Weave a base of reeds and branches on shallow lake beds.",
-                "Layer the base with mud and vegetation to create stable platforms.",
-                "Plant trees (e.g., ahuejote) at the corners to anchor the chinampa and retain soil moisture."
+                "Mark out a rectangular plot on the shallow lake bed (typically 6–10 m wide, 100–200 m long).",
+                "Drive wooden stakes into the lakebed to form the perimeter; weave reeds between stakes to create underwater retaining fences.",
+                "Layer the enclosed area with alternating loads of aquatic vegetation and lakebed mud until the platform reaches above the water surface.",
+                "Plant ahuejote (willow) trees at the corners and edges to anchor the structure with their root systems and reduce erosion.",
+                "Leave a narrow canal (wide enough for a canoe) between adjacent chinampas to allow water circulation and transport.",
+                "Fertilise continuously with lakebed silt dredged from the canals, and with human and animal manure collected by canoe.",
+                "Sow successive crops (maize, beans, squash, chillies, tomatoes, flowers) to achieve up to seven harvests per year."
             ]
         },
         "impact": {
-            "problem_solved": "Enabled year-round crop cultivation, provided resilience during droughts, and maintained extraordinarily fertile soil for multiple harvests.",
+            "problem_solved": "Enabled year-round crop cultivation, provided resilience during droughts, maintained extraordinarily fertile soil for multiple harvests, and fed large urban populations including the Aztec capital Tenochtitlan. Recognised as a UNESCO World Heritage feature (Xochimilco, 1987) and FAO Globally Important Agricultural Heritage System (2018).",
             "scale": "high"
         },
         "replicability": {
@@ -415,7 +462,7 @@
             ],
             "safety_level": "low",
             "needs_intervention": true,
-            "explanation": "The continuous recycling of organic waste, including human and animal manures, while highly beneficial for soil fertility, presents a significant biological risk. Untreated human and animal waste can carry pathogens (bacteria, viruses, parasites) that could contaminate crops and pose a health hazard if consumed raw or improperly handled. Anaerobic decomposition of large amounts of organic matter could also potentially generate toxic gases like hydrogen sulfide, though this is less likely to accumulate to dangerous levels in an open agricultural system. Given the 'grassroots + chemical/energy -> higher risk' rule and the direct use of potentially hazardous biological materials, a conservative assessment indicates notable risks requiring intervention for safe practices."
+            "explanation": "The continuous recycling of organic waste, including human and animal manures, while highly beneficial for soil fertility, presents a significant biological risk. Untreated human and animal waste can carry pathogens (bacteria, viruses, parasites) that could contaminate crops and pose a health hazard if consumed raw or improperly handled. Anaerobic decomposition of large amounts of organic matter could also potentially generate toxic gases like hydrogen sulfide, though this is less likely to accumulate to dangerous levels in an open agricultural system."
         },
         "priority_score": 78,
         "hidden_gem": false,
@@ -424,6 +471,7 @@
     {
         "id": "1deb9d32dde1e9e64a9d50b29372c08d",
         "timestamp": "2026-03-22T09:18:26.595995",
+        "source_url": "https://en.wikipedia.org/wiki/Milpa",
         "title": "The Milpa system",
         "summary": "The Milpa system is a traditional intercropping technique, primarily practiced by indigenous communities like the Maya in Mesoamerica, involving the cultivation of diverse crops, most famously corn, beans, and squash, together in the same plot to create a symbiotic growing environment.",
         "category": [
@@ -435,26 +483,32 @@
         ],
         "innovation_level": "grassroots",
         "location": {
-            "country": "Mexico, Guatemala",
-            "region": "Mesoamerica",
-            "lat": null,
-            "lon": null
+            "country": "Mexico, Guatemala, and broader Mesoamerica",
+            "region": "Mesoamerica — Yucatán Peninsula and Central American highlands",
+            "lat": 18.5,
+            "lon": -89.5
         },
         "process": {
-            "how_it_works": "Corn provides a stalk for beans to climb, beans fix nitrogen in the soil, and squash plants spread across the ground, shading the soil to retain moisture, suppress weeds, and deter pests. This polyculture approach increases biodiversity, reduces nutrient depletion, and enhances soil fertility naturally, often incorporating organic matter and beneficial microorganisms.",
+            "how_it_works": "Corn provides a vertical stalk for beans to climb; beans fix atmospheric nitrogen in the soil through root nodules, feeding corn and squash; squash plants spread across the ground, shading the soil to retain moisture, suppress weeds, and deter pests. This polyculture increases biodiversity, reduces nutrient depletion, and enhances soil fertility naturally. The traditional land-conservation cycle is 2 years of cultivation followed by 8 years of fallow to allow natural forest regeneration.",
             "materials_used": [
-                "Corn",
-                "Beans",
-                "Squash"
+                "Corn (maize, Zea mays) seed",
+                "Bean (Phaseolus spp.) seed",
+                "Squash (Cucurbita spp.) seed",
+                "Optional: chilli peppers, tomatoes, avocados, sweet potato, amaranth, tobacco",
+                "Digging stick or hoe"
             ],
             "step_by_step": [
-                "Plant corn to provide structural support.",
-                "Plant beans near corn stalks for climbing.",
-                "Plant squash to spread on the ground, providing ground cover."
+                "Select and clear the milpa plot; in the traditional slash-and-burn system, clear vegetation and allow ash to fertilise the soil.",
+                "Sow corn seeds in mounds or hills roughly 1 metre apart; plant multiple seeds per hill to compensate for variable germination.",
+                "Once corn is 20–30 cm tall, sow bean seeds at the base of each corn stalk so they can climb as they grow.",
+                "Sow squash seeds between the mounds; their broad leaves will spread outward to cover the ground.",
+                "Weed minimally during early growth; the squash canopy progressively suppresses weeds as it spreads.",
+                "Harvest in sequence: squash and beans first, then corn; save seed from vigorous plants for the next season.",
+                "Rotate the plot to a new area after 2 years and allow the used plot to lie fallow for approximately 8 years before re-cultivation."
             ]
         },
         "impact": {
-            "problem_solved": "Reduces nutrient depletion, enhances soil fertility naturally, increases biodiversity, provides a resilient and sustainable food source, and reduces the need for external fertilizers and pesticides.",
+            "problem_solved": "Reduces nutrient depletion, enhances soil fertility naturally, increases biodiversity, provides a resilient and nutritionally complete food source (starch, protein, vitamins), and reduces the need for external fertilizers and pesticides. Considered one of the most productive human agricultural inventions.",
             "scale": "high"
         },
         "replicability": {
@@ -473,7 +527,7 @@
             ],
             "safety_level": "high",
             "needs_intervention": false,
-            "explanation": "The Milpa system is a traditional, sustainable agricultural practice with inherently low risks. It avoids the use of external chemicals and energy, aligning with a lower risk profile as per the conservative rules. Its environmental impact is overwhelmingly positive, enhancing biodiversity, soil fertility, and moisture retention. No specific fire, explosion, or toxic hazards are identified, nor does it require specialized safety gear beyond general agricultural practices. The 'environmental' risk type is noted due to its direct interaction with ecosystems, though the impact is beneficial."
+            "explanation": "The Milpa system is a traditional, sustainable agricultural practice with inherently low risks. It avoids the use of external chemicals and energy, aligning with a lower risk profile. Its environmental impact is overwhelmingly positive, enhancing biodiversity, soil fertility, and moisture retention. No specific fire, explosion, or toxic hazards are identified beyond the traditional slash-and-burn clearing phase, which carries minor fire and smoke risks."
         },
         "priority_score": 64,
         "hidden_gem": true,
@@ -482,6 +536,7 @@
     {
         "id": "aad279fce548e0c2600136913563572f",
         "timestamp": "2026-03-22T09:18:53.093636",
+        "source_url": "https://en.wikipedia.org/wiki/Terra_preta",
         "title": "Terra Preta",
         "summary": "Terra Preta, or 'black earth', is an exceptionally fertile anthropogenic soil created by pre-Columbian indigenous populations in the Amazon Basin. It was developed by mixing charcoal (biochar), organic matter (plant residues, animal bones), and pottery shards into nutrient-poor soils. This process significantly enhances soil fertility, water retention, and carbon sequestration, enabling sustained agricultural productivity.",
         "category": [
@@ -493,22 +548,32 @@
         "innovation_level": "grassroots",
         "location": {
             "country": "Brazil",
-            "region": "Amazon Basin",
-            "lat": null,
-            "lon": null
+            "region": "Amazon Basin — concentrated near rivers and elevated terraces",
+            "lat": -3.4653,
+            "lon": -62.2159
         },
         "process": {
-            "how_it_works": "Terra Preta is created by incorporating charcoal (biochar), organic matter (plant residues, animal bones), and pottery shards into naturally nutrient-poor soils. The charcoal acts as a stable, long-lasting sponge, binding and retaining essential minerals and nutrients, preventing leaching. This fosters a rich microbial environment, leading to increased soil fertility, water retention, and carbon sequestration.",
+            "how_it_works": "Terra Preta is created by incorporating charcoal (biochar), organic matter (plant residues, fish and animal bones, manure), and pottery shards into naturally nutrient-poor tropical soils. The charcoal acts as a stable, long-lasting sponge, binding and retaining essential minerals and nutrients, preventing leaching. This fosters a rich microbial environment, leading to increased soil fertility, water retention, and carbon sequestration. Unlike ordinary compost, charcoal is recalcitrant and persists for thousands of years.",
             "materials_used": [
-                "charcoal (biochar)",
-                "plant residues",
-                "animal bones",
-                "pottery shards"
+                "Charcoal (biochar, from low-temperature, low-oxygen burning)",
+                "Plant residues (leaves, stems, crop waste)",
+                "Animal and fish bones",
+                "Human and animal manure",
+                "Broken pottery shards (acting as drainage aggregate and microbial substrate)",
+                "Existing mineral soil"
             ],
-            "step_by_step": []
+            "step_by_step": [
+                "Produce charcoal through slow, low-temperature burning of woody biomass with limited oxygen (slash-and-char rather than slash-and-burn).",
+                "Allow the charcoal to cool; crush or break into small pieces to maximise surface area.",
+                "Collect organic waste materials: food scraps, fish and animal bones, plant residues, and manure.",
+                "Mix charcoal thoroughly with organic waste and broken pottery shards.",
+                "Incorporate the mixture into the top 30–50 cm of existing mineral soil by digging it in.",
+                "Allow the amended soil to rest and undergo microbial colonisation; earthworms and soil fauna help integrate the charcoal deeper over time.",
+                "Plant crops in the enriched soil; reapply organic matter periodically to sustain fertility across multiple growing seasons."
+            ]
         },
         "impact": {
-            "problem_solved": "Naturally nutrient-poor Amazonian soils and the challenge of maintaining sustained agricultural productivity without extensive fallow periods.",
+            "problem_solved": "Naturally nutrient-poor Amazonian soils and the challenge of maintaining sustained agricultural productivity without extensive fallow periods. Terra Preta soils support population densities exceeding those of modern Bangladesh, Netherlands, or Japan on equivalent land areas.",
             "scale": "high"
         },
         "replicability": {
@@ -529,7 +594,7 @@
             ],
             "safety_level": "medium",
             "needs_intervention": true,
-            "explanation": "Terra Preta is an exceptionally beneficial innovation for soil fertility, water retention, and carbon sequestration. However, applying the 'grassroots + chemical/energy -> higher risk' rule, the production of biochar (charcoal), a critical component, in a pre-Columbian, grassroots context inherently carries risks. These include potential fire hazards during the charcoal production process, exposure to toxic smoke, and potential environmental impact from unsustainable wood sourcing. While the resulting soil itself is safe and highly beneficial, the methods for creating its key components would warrant safety considerations and interventions in a modern context."
+            "explanation": "Terra Preta is an exceptionally beneficial innovation for soil fertility, water retention, and carbon sequestration. However, the production of biochar (charcoal) inherently carries risks: fire hazards during the charring process, exposure to toxic smoke (carbon monoxide, volatile organic compounds), and potential environmental impact from unsustainable wood sourcing. While the resulting soil itself is safe and highly beneficial, safe charring practices and sustainable sourcing of biomass warrant safety considerations and interventions in a modern replication context."
         },
         "priority_score": 80,
         "hidden_gem": true,
@@ -538,8 +603,8 @@
     {
         "id": "8872649a2d80af1bbe30fe93d65b123f",
         "timestamp": "2026-03-22T09:28:51.606649",
-        "title": "Voltarent ECU",
         "source_url": "https://www.youtube.com/watch?v=u_HkMGQH3zg",
+        "title": "Voltarent ECU",
         "summary": "Peter Mbiria, a Kenyan engineer and founder of Volter Engineering Limited, developed the Voltarent ECU to modernize old car engines. This innovation replaces outdated mechanical fuel injection systems with a custom-designed electronic control unit, significantly improving fuel economy and overall performance by precisely metering fuel and cutting supply during deceleration or cruising.",
         "category": [
             "Automotive",
@@ -555,16 +620,23 @@
             "lon": 37.077523
         },
         "process": {
-            "how_it_works": "The Voltarent ECU replaces mechanical fuel injection systems with electronic control. It precisely meters fuel and cuts off supply during deceleration or cruising, optimizing fuel economy and performance.",
+            "how_it_works": "The Voltarent ECU replaces mechanical fuel injection systems with electronic control. It precisely meters fuel delivery based on engine conditions and cuts off fuel supply during deceleration or cruising, optimizing fuel economy and performance.",
             "materials_used": [
-                "Voltarent ECU",
-                "custom harness",
-                "individual coil-on-plug ignition systems"
+                "Voltarent ECU (custom-designed circuit board)",
+                "Custom wiring harness",
+                "Individual coil-on-plug ignition systems",
+                "Electronic fuel injectors",
+                "Sensors (throttle position, manifold pressure, coolant temperature)",
+                "Diagnostic interface cable"
             ],
             "step_by_step": [
-                "Remove the mechanical fuel distributor (e.g., Bosch K-Jetronic).",
-                "Upgrade to individual coil-on-plug ignition systems.",
-                "Connect all components via a custom harness to the Voltarent ECU."
+                "Diagnose the existing mechanical fuel injection system (e.g., Bosch K-Jetronic) and document the engine configuration.",
+                "Remove the mechanical fuel distributor and associated mechanical injection components.",
+                "Upgrade the ignition system to individual coil-on-plug units for precise timing control.",
+                "Connect all engine sensors (throttle position, manifold pressure, temperature) to the Voltarent ECU via a custom harness.",
+                "Program and calibrate the ECU fuel and ignition maps for the specific engine.",
+                "Perform road testing and iterative calibration to verify improved fuel economy and performance.",
+                "Conduct emissions testing to confirm compliance with local standards."
             ]
         },
         "impact": {
@@ -590,7 +662,7 @@
             ],
             "safety_level": "low",
             "needs_intervention": true,
-            "explanation": "The innovation directly modifies critical engine systems (fuel injection and ignition) in older vehicles, which falls under the 'chemical/energy' category. Improper calibration, installation, or component failure could lead to severe consequences such as fire hazards, explosions, and increased toxic emissions. The 'grassroots' nature of the development and application to diverse older engines necessitates robust testing, validation, and regulatory oversight to ensure safety and environmental compliance."
+            "explanation": "The innovation directly modifies critical engine systems (fuel injection and ignition) in older vehicles. Improper calibration, installation, or component failure could lead to severe consequences such as fire hazards, explosions, and increased toxic emissions. The semi-formal nature of the development and application to diverse older engines necessitates robust testing, validation, and regulatory oversight to ensure safety and environmental compliance."
         },
         "priority_score": 76,
         "hidden_gem": false,
@@ -599,8 +671,8 @@
     {
         "id": "dc176773882a633d4ff424880732f5bd",
         "timestamp": "2026-03-22T09:29:23.525534",
-        "title": "Hartman Wartween's Inline 4-Cylinder Motorcycle Engine",
         "source_url": "https://www.youtube.com/watch?v=N_8I7M1Pj6I",
+        "title": "Hartman Wartween's Inline 4-Cylinder Motorcycle Engine",
         "summary": "German engineer Hartman Wartween from Rimbach, Odenwald, engineered a unique inline 4-cylinder motorcycle engine. He achieved this by meticulously transforming a small 50 cm³ single-cylinder, four-stroke engine, originally from a Chinese Honda Z50 Monkey copy. Starting in March 2007, he used computer modeling to design the new configuration and fabricated most components himself, including the camshaft, cylinder blocks, and rocker arms. The innovative design features only two connecting rods and eight pistons, resulting in a compact four-cylinder engine from a significantly smaller base unit.",
         "category": [
             "Mechanical Engineering",
@@ -610,19 +682,33 @@
         "innovation_level": "grassroots",
         "location": {
             "country": "Germany",
-            "region": "Odenwald",
+            "region": "Rimbach, Odenwald, Baden-Württemberg",
             "lat": 49.608764,
             "lon": 9.0443539
         },
         "process": {
-            "how_it_works": "Hartman Wartween engineered an inline 4-cylinder motorcycle engine by adapting a small 50 cm³ single-cylinder engine. His design utilizes only two connecting rods and eight pistons to achieve a compact four-cylinder configuration, demonstrating a novel approach to engine architecture and component integration.",
-            "materials_used": [],
+            "how_it_works": "Hartman Wartween engineered an inline 4-cylinder motorcycle engine by adapting a small 50 cm³ single-cylinder engine. His design utilises only two connecting rods — each shared between two pistons — and eight pistons to achieve a compact four-cylinder configuration, demonstrating a novel approach to engine architecture and component integration.",
+            "materials_used": [
+                "Chinese Honda Z50 Monkey copy 50 cm³ engine (donor unit)",
+                "Custom-fabricated camshaft",
+                "Custom-fabricated cylinder blocks (4 cylinders)",
+                "Custom-fabricated rocker arms",
+                "Two shared connecting rods (each pairing two pistons)",
+                "Eight custom pistons",
+                "Custom crankshaft",
+                "Custom engine casings",
+                "CAD/computer modelling software",
+                "Precision machining tools (lathe, milling machine)"
+            ],
             "step_by_step": [
-                "Started the project in March 2007.",
-                "Meticulously disassembled the original 50 cm³ single-cylinder, four-stroke engine (from a Chinese Honda Z50 Monkey copy).",
-                "Used computer modeling to design the new inline 4-cylinder configuration.",
-                "Fabricated most of the necessary components himself, including the camshaft, cylinder blocks, and rocker arms.",
-                "Assembled the engine with a unique design featuring only two connecting rods and eight pistons to create a compact four-cylinder unit."
+                "Disassemble the donor 50 cm³ single-cylinder, four-stroke engine completely.",
+                "Use computer modelling (CAD) to design the new inline 4-cylinder configuration around the original engine's dimensions.",
+                "Design a novel crankshaft and connecting rod arrangement where each connecting rod drives two opposed pistons.",
+                "Machine custom cylinder blocks, camshaft, rocker arms, and crankshaft components using a lathe and milling machine.",
+                "Assemble the two shared connecting rods with four pistons each (eight total).",
+                "Fit all custom components into the modified engine casing.",
+                "Assemble the complete inline 4-cylinder unit and perform static testing.",
+                "Run the engine under controlled conditions and refine tolerances as needed."
             ]
         },
         "impact": {
@@ -657,8 +743,8 @@
     {
         "id": "400d5182c5b70825e57dba0074806c29",
         "timestamp": "2026-03-22T09:29:47.149183",
-        "title": "Repurposing Gasoline Lawnmower Engines to Run on Compressed Air",
         "source_url": "http://hackaday.com/2016/07/08/from-a-lawnmower-engine-to-a-compressed-air-engine/",
+        "title": "Repurposing Gasoline Lawnmower Engines to Run on Compressed Air",
         "summary": "DIY enthusiasts are converting gasoline-powered lawnmower engines to run on compressed air. This innovation, shared through online guides and communities, involves modifying the engine, typically by adding a sleeve valve, to allow compressed air to drive the piston, effectively creating an alternative power source without gasoline.",
         "category": [
             "DIY",
@@ -668,25 +754,34 @@
         ],
         "innovation_level": "grassroots",
         "location": {
-            "country": "",
+            "country": "Global (online DIY community)",
             "region": "",
             "lat": null,
             "lon": null
         },
         "process": {
-            "how_it_works": "The engine is modified by adding a sleeve valve, which allows compressed air to drive the piston, mimicking the power stroke of a traditional internal combustion engine without the need for gasoline.",
+            "how_it_works": "The engine is modified by adding a sleeve valve to the cylinder head, which allows compressed air to enter and drive the piston on the power stroke, mimicking the expansion of combustion gases. The fuel and ignition systems are removed or disabled. The engine acts as an air motor rather than a combustion engine.",
             "materials_used": [
-                "gasoline-powered lawnmower engines",
-                "compressed air",
-                "sleeve valve"
+                "Gasoline-powered lawnmower engine (donor unit)",
+                "Sleeve valve (custom-machined or fabricated)",
+                "Compressed air source (tank and regulator)",
+                "High-pressure air lines and fittings",
+                "Pipe thread sealant",
+                "Basic machining tools"
             ],
             "step_by_step": [
-                "Modify the existing lawnmower engine by adding a sleeve valve.",
-                "Connect a source of compressed air to the modified engine."
+                "Source a suitable gasoline lawnmower engine and drain all fuel.",
+                "Remove the carburettor, fuel tank, and ignition system.",
+                "Machine or fabricate a sleeve valve insert sized to fit the cylinder head.",
+                "Install the sleeve valve in the cylinder head to control the timing of compressed air admission.",
+                "Connect a regulated compressed air supply to the air inlet via high-pressure rated fittings.",
+                "Seal all connections and test for leaks at low pressure before increasing to operating pressure.",
+                "Start the engine on compressed air at low pressure; increase pressure incrementally while monitoring for unusual vibration or leaks.",
+                "Note: engine block was not designed for sustained high-pressure air — limit operating pressure and duration."
             ]
         },
         "impact": {
-            "problem_solved": "Reliance on gasoline for small engines; provides a way to repurpose old engines into a different type of power source.",
+            "problem_solved": "Provides a way to repurpose old or broken lawnmower engines into a gasoline-free power source, demonstrating DIY alternative energy principles.",
             "scale": "low"
         },
         "replicability": {
@@ -705,7 +800,7 @@
             ],
             "safety_level": "low",
             "needs_intervention": true,
-            "explanation": "The DIY conversion of gasoline engines to run on compressed air introduces a significant explosion risk. Original lawnmower engines are not designed to safely contain the continuous high internal pressures of compressed air, and amateur modifications, such as adding a sleeve valve, can lead to catastrophic failure of engine components or pressure lines. While it removes the fire hazard of gasoline, it replaces it with the substantial danger of high-pressure air systems, exacerbated by the grassroots nature of the innovation and the potential for improper engineering or material choices."
+            "explanation": "The DIY conversion of gasoline engines to run on compressed air introduces a significant explosion risk. Original lawnmower engines are not designed to safely contain the continuous high internal pressures of compressed air, and amateur modifications can lead to catastrophic failure of engine components or pressure lines. While it removes the fire hazard of gasoline, it replaces it with the substantial danger of high-pressure air systems, exacerbated by the grassroots nature of the innovation and the potential for improper engineering or material choices."
         },
         "priority_score": 50,
         "hidden_gem": false,
