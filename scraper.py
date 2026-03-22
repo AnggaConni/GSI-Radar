@@ -207,7 +207,7 @@ def get_current_quarter():
 # =====================================================================
 
 def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_json=True):
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         # ✅ FIX 2: Tambahkan koma di akhir baris ini
