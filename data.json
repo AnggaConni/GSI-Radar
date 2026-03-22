@@ -186,5 +186,175 @@
         "priority_score": 76,
         "hidden_gem": false,
         "critical_flag": true
+    },
+    {
+        "id": "ddded287aabdb34aefa36270af2efb3b",
+        "timestamp": "2026-03-22T09:14:06.864781",
+        "title": "Garlic-Based Sprays for Grasshopper Control",
+        "summary": "An organic farming community in Alberta, Canada, has collectively implemented homemade garlic-based sprays as a pesticide to manage grasshopper populations. This community-led innovation leverages garlic's natural deterrent properties and, when combined with crop rotation, has significantly reduced pest pressure without synthetic chemicals.",
+        "category": [
+            "Pest Control",
+            "Organic Farming",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Canada",
+            "region": "Alberta",
+            "lat": 55.001251,
+            "lon": -115.002136
+        },
+        "process": {
+            "how_it_works": "Garlic's strong scent and sulfur compounds act as a natural deterrent to many insects, including grasshoppers. The sprays are applied to crops to repel pests.",
+            "materials_used": [
+                "Garlic"
+            ],
+            "step_by_step": [
+                "Prepare sprays from garlic."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Managing grasshopper populations and reducing overall pest pressure in organic farming without synthetic chemicals.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "toxic",
+                "environment",
+                "safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The innovation presents low direct toxicity risk to humans, but as a homemade spray, concentrations can vary, potentially causing skin/eye irritation. The primary concern is the environmental impact on non-target beneficial insects and potential for ecological disruption, despite being natural. Basic safety gear (gloves, eye protection) is recommended during preparation and application. Intervention is needed to provide best practices for preparation, application, and minimizing harm to beneficial insects."
+        },
+        "priority_score": 72,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "93fdb78d352dccf75810063c74c76ded",
+        "timestamp": "2026-03-22T09:14:26.462507",
+        "title": "Garlic Brew",
+        "summary": "The Garlic Brew is a natural pest control solution promoted by the Peace Corps in rural communities. It is made from garlic and water, and is effective against various insects like ants, aphids, caterpillars, and nematodes, empowering local individuals to create their own pest solutions.",
+        "category": [
+            "Pest Control",
+            "Natural Solutions",
+            "Community Empowerment"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "",
+            "region": "",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The garlic brew acts as a natural repellent and pesticide against various insects and nematodes when applied to plants and soil.",
+            "materials_used": [
+                "Garlic",
+                "Water"
+            ],
+            "step_by_step": [
+                "Finely chop half a cup of garlic.",
+                "Add the chopped garlic to three-fourths of a liter of water.",
+                "Soak the mixture for 24 hours.",
+                "Strain the liquid.",
+                "Apply the strained brew to plants and the surrounding soil."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Control of common agricultural pests such as ants, aphids, caterpillars, and nematodes, providing an accessible and sustainable solution for rural communities.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "toxic",
+                "safety gear"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The 'Garlic Brew' innovation utilizes natural ingredients, posing a generally low inherent risk. However, the concentrated nature of the garlic solution could potentially cause skin or eye irritation upon direct contact, particularly for sensitive individuals or children. While garlic is a common food, accidental ingestion of the concentrated brew by children is a minor concern. Given the grassroots context and involvement of children, the absence of explicit safety guidelines (e.g., hand washing, avoiding eye contact) suggests a need for basic safety interventions to ensure proper handling and application."
+        },
+        "priority_score": 56,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "268eab279cb422e8a07947e077866ef2",
+        "timestamp": "2026-03-22T09:14:41.578437",
+        "title": "Hot Pepper Solution",
+        "summary": "The Hot Pepper Solution is a natural, homemade pest repellent encouraged by the Peace Corps. It is effective against a variety of crop pests like caterpillars, cabbage worms, ants, aphids, beetles, and cutworms, allowing villagers to protect their crops using common and inexpensive ingredients.",
+        "category": [
+            "Pest Control",
+            "Natural Pesticide",
+            "Crop Protection"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "",
+            "region": "",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The solution acts as a general repellent against various insect pests, deterring them from affected plants.",
+            "materials_used": [
+                "Hot peppers",
+                "Water"
+            ],
+            "step_by_step": [
+                "Finely chop 15 hot peppers.",
+                "Add the chopped peppers to 1 liter of water.",
+                "Steep the mixture for 24 hours.",
+                "Strain the solution.",
+                "Apply the strained solution to affected plants."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Protection of crops from damage caused by caterpillars, cabbage worms, ants, aphids, beetles, and cutworms.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Irritant",
+                "Safety Gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The primary risk is severe skin and eye irritation from capsaicin in hot peppers during preparation (chopping, straining) and application. While not acutely toxic, direct contact can cause significant discomfort and pain. There are no fire, explosion, or significant environmental risks. Intervention is needed to ensure users are aware of the irritant nature and encouraged to use protective gear like gloves and eye protection."
+        },
+        "priority_score": 84,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
