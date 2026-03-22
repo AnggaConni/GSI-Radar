@@ -1,7 +1,7 @@
 [
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-03-22T08:40:09.569581",
             "period": "Q1 2026",
             "total_records_analyzed": 3
@@ -140,7 +140,7 @@
     },
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-03-22T09:19:17.545800",
             "period": "Q1 2026",
             "total_records_analyzed": 9
@@ -386,7 +386,7 @@
     },
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-03-22T10:10:46.109879",
             "period": "Q1 2026",
             "total_records_analyzed": 12
@@ -613,7 +613,7 @@
     },
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-03-22T10:23:59.726375",
             "period": "Q1 2026",
             "total_records_analyzed": 15
@@ -936,6 +936,384 @@
                 {
                     "source": "internet",
                     "count": 1
+                }
+            ]
+        }
+    },
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-22T11:22:09.273728",
+            "period": "Q1 2026",
+            "total_records_analyzed": 20
+        },
+        "global_summary": {
+            "total_innovations": 20,
+            "grassroots_percentage": 45.0,
+            "institutional_percentage": 25.0,
+            "semi_formal_percentage": 30.0
+        },
+        "top_categories": [
+            {
+                "category": "Waste Management",
+                "count": 8,
+                "trend": "stable"
+            },
+            {
+                "category": "Agriculture",
+                "count": 6,
+                "trend": "stable"
+            },
+            {
+                "category": "Sustainable Agriculture",
+                "count": 5,
+                "trend": "stable"
+            },
+            {
+                "category": "Recycling",
+                "count": 5,
+                "trend": "stable"
+            },
+            {
+                "category": "Sustainability",
+                "count": 4,
+                "trend": "stable"
+            },
+            {
+                "category": "Repurposing",
+                "count": 4,
+                "trend": "stable"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Global / Unspecified",
+                "key_pattern": "DIY Repurposing, Natural Pest Control, and River Cleanup",
+                "risk_level": "high"
+            },
+            {
+                "region": "Africa (Kenya, Uganda, Cameroon, Zimbabwe)",
+                "key_pattern": "Sustainable Sanitation, Biogas Energy, and Climate-Smart Agriculture",
+                "risk_level": "high"
+            },
+            {
+                "region": "Mesoamerica (Mexico, Haiti, Barbados)",
+                "key_pattern": "Traditional Agriculture, Ecological Sanitation, and Plastic Reuse",
+                "risk_level": "medium"
+            },
+            {
+                "region": "Europe (Germany, Netherlands, Sweden, Ireland)",
+                "key_pattern": "Advanced Engineering, Waste Upcycling, and Community Gardening",
+                "risk_level": "medium"
+            },
+            {
+                "region": "Asia (India, Vietnam)",
+                "key_pattern": "Mini Biogas Systems and River Plastic Traps",
+                "risk_level": "high"
+            },
+            {
+                "region": "North America (USA, Canada)",
+                "key_pattern": "Composting Sanitation and Organic Pest Control",
+                "risk_level": "medium"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 18,
+            "critical_cases": 11,
+            "top_risk_types": [
+                "toxic",
+                "fire hazard",
+                "environment",
+                "explosion",
+                "safety gear"
+            ],
+            "emerging_risks": [
+                "High-pressure system failures in repurposed engines",
+                "Pathogen exposure from improperly managed human waste composting",
+                "Combustion and toxic gas release from DIY biogas systems",
+                "Leaching of unknown chemicals from scavenged plastics in food systems",
+                "Mechanical failure and toxic emissions from custom-engineered automotive components"
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Sustainable Sanitation & Waste-to-Resource",
+                "description": "Innovations focused on ecological sanitation, composting human waste, and converting it into valuable soil amendments.",
+                "regions": [
+                    "USA",
+                    "Haiti",
+                    "Uganda"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Natural & Traditional Agricultural Solutions",
+                "description": "Community-led and ancient practices for pest control, soil fertility, and resilient farming using natural inputs.",
+                "regions": [
+                    "Canada",
+                    "Global",
+                    "Mexico",
+                    "Brazil"
+                ],
+                "risk_level": "low"
+            },
+            {
+                "pattern_name": "DIY & Repurposed Engine/Energy Systems",
+                "description": "Grassroots efforts to convert or repurpose engines for alternative power, often involving high-risk mechanical or chemical modifications.",
+                "regions": [
+                    "Kenya",
+                    "Germany",
+                    "Global"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Biogas for Energy & Fertilizer",
+                "description": "Development of systems, from mini to community-scale, for anaerobic digestion of organic waste to produce biogas and digestate.",
+                "regions": [
+                    "India",
+                    "Cameroon",
+                    "Global"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Upcycling Wind Turbine Blades",
+                "description": "Institutional and semi-formal initiatives to transform decommissioned wind turbine blades into urban infrastructure and furniture.",
+                "regions": [
+                    "United States",
+                    "Netherlands",
+                    "Sweden"
+                ],
+                "risk_level": "medium"
+            },
+            {
+                "pattern_name": "Recycled Plastic for Environmental & Agricultural Use",
+                "description": "Utilizing discarded PET bottles and other plastics for greenhouses, hydroponics, and river cleanup devices.",
+                "regions": [
+                    "Barbados",
+                    "Ireland",
+                    "Zimbabwe",
+                    "Global",
+                    "Mexico",
+                    "Vietnam"
+                ],
+                "risk_level": "medium"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "The Humanure Handbook Sawdust Toilet System",
+                "country": "USA (origin); globally adopted",
+                "reason": "Provides a low-cost, waterless sanitation solution with high impact on waste transformation, though requiring diligent management for safety."
+            },
+            {
+                "title": "Garlic-Based Sprays for Grasshopper Control",
+                "country": "Canada",
+                "reason": "A simple, low-cost, and high-impact organic pest control method that reduces reliance on synthetic chemicals."
+            },
+            {
+                "title": "Garlic Brew",
+                "country": "Global (Peace Corps programme countries)",
+                "reason": "An accessible, low-cost natural pest control empowering rural communities with sustainable crop protection."
+            },
+            {
+                "title": "Hot Pepper Solution",
+                "country": "Global (Peace Corps programme countries)",
+                "reason": "An effective, low-cost, and easily replicable natural pest repellent for crop protection in rural communities."
+            },
+            {
+                "title": "The Milpa system",
+                "country": "Mexico, Guatemala, and broader Mesoamerica",
+                "reason": "An ancient, highly productive, low-cost, and sustainable intercropping system that naturally enhances soil fertility and biodiversity."
+            },
+            {
+                "title": "Terra Preta",
+                "country": "Brazil",
+                "reason": "An ancient, low-cost method for creating highly fertile, carbon-sequestering soils, addressing nutrient-poor land challenges."
+            },
+            {
+                "title": "Remote-Controlled River-Cleaning Bot",
+                "country": "",
+                "reason": "A low-cost, replicable grassroots robotics solution for river waste collection, empowering community-led environmental action."
+            },
+            {
+                "title": "Brute Broom",
+                "country": "Mexico",
+                "reason": "A simple, low-cost, and effective floating boom for river plastic collection, fostering community engagement in waste management."
+            },
+            {
+                "title": "Mini Biogas Plant",
+                "country": "India",
+                "reason": "A highly cost-effective and easy-to-build grassroots biogas system providing renewable energy and organic fertilizer."
+            },
+            {
+                "title": "FREnergy Home Biogas System",
+                "country": "",
+                "reason": "A low-cost, adaptable home biogas system for sustainable cooking fuel and fertilizer from organic waste."
+            },
+            {
+                "title": "Gravity-fed Hydroponics from Recycled Plastic Bottles",
+                "country": "Zimbabwe",
+                "reason": "A low-cost, electricity-independent hydroponics system using recycled materials, boosting food security and reducing waste."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "training",
+                "target": "Grassroots Biogas System Users (India, Cameroon, Global)",
+                "priority_level": "high",
+                "justification": "High risk of fire, explosion, and toxic gas exposure from DIY biogas systems necessitates comprehensive safety training on design, installation, operation, and leak detection."
+            },
+            {
+                "type": "regulation",
+                "target": "DIY Engine Modification & Repurposing (Kenya, Germany, Global)",
+                "priority_level": "high",
+                "justification": "Custom engine modifications and repurposing (e.g., Voltarent ECU, compressed air engines, generators) carry critical risks of fire, explosion, and toxic emissions. Standardized testing and certification are crucial."
+            },
+            {
+                "type": "research",
+                "target": "Recycled Plastic in Food Systems (Zimbabwe)",
+                "priority_level": "high",
+                "justification": "Using scavenged plastic bottles for hydroponics poses a significant toxic risk due to unknown prior contents. Research into safe sanitization methods or alternative food-grade recycled materials is vital."
+            },
+            {
+                "type": "funding",
+                "target": "Community Sanitation Projects (Uganda, Haiti)",
+                "priority_level": "medium",
+                "justification": "Projects like The Uphill Trust and SOIL's EkoLakay address critical sanitation needs but require sustained funding for infrastructure, training, and adherence to WHO safety standards to mitigate pathogen risks."
+            },
+            {
+                "type": "training",
+                "target": "Natural Pest Control Users (Canada, Global)",
+                "priority_level": "medium",
+                "justification": "While low risk, interventions are needed to provide best practices for preparation, application, and minimizing harm to beneficial insects and ensuring user safety (e.g., handling hot peppers)."
+            },
+            {
+                "type": "research",
+                "target": "Wind Turbine Blade Upcycling Safety (Netherlands, Sweden, US)",
+                "priority_level": "medium",
+                "justification": "Processing composite materials from wind turbine blades and their large-scale structural reuse (facades) present fire and toxic fume risks. Research into fire-retardant treatments and safe processing techniques is needed."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "shifting",
+            "observation": "A significant portion of innovations (45%) are adaptations of existing knowledge, indicating a strong trend towards iterative improvement and localization. Traditional knowledge remains a vital source (25%), particularly in agriculture and natural solutions. Formal education and internet sources contribute almost equally, suggesting a diverse, multi-modal knowledge ecosystem where practical application and adaptation are key."
+        },
+        "recommendations": [
+            "Establish clear safety guidelines and provide training for grassroots innovations involving chemical/energy systems (biogas, engine modifications) to mitigate critical fire, explosion, and toxic risks.",
+            "Invest in research and development for safe, food-grade recycling processes for plastics, especially when repurposed for agricultural or food-contact applications.",
+            "Develop regional hubs for technical support and quality control for grassroots sanitation and waste-to-resource initiatives, ensuring adherence to health and environmental standards.",
+            "Promote knowledge sharing platforms for traditional and adapted agricultural practices, emphasizing best practices for sustainability and safety, especially regarding natural pest controls.",
+            "Encourage institutional partnerships with grassroots innovators to scale high-impact, low-cost solutions while integrating professional engineering and safety protocols.",
+            "Implement regulatory frameworks for the safe decommissioning and repurposing of large industrial components (e.g., wind turbine blades) to ensure worker safety and environmental compliance."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Global/Unspecified",
+                    "count": 6
+                },
+                {
+                    "region": "Kenya",
+                    "count": 2
+                },
+                {
+                    "region": "Mexico",
+                    "count": 2
+                },
+                {
+                    "region": "USA/United States",
+                    "count": 2
+                },
+                {
+                    "region": "Canada",
+                    "count": 1
+                },
+                {
+                    "region": "Germany",
+                    "count": 1
+                },
+                {
+                    "region": "Haiti",
+                    "count": 1
+                },
+                {
+                    "region": "Uganda",
+                    "count": 1
+                },
+                {
+                    "region": "Brazil",
+                    "count": 1
+                },
+                {
+                    "region": "India",
+                    "count": 1
+                },
+                {
+                    "region": "Cameroon",
+                    "count": 1
+                },
+                {
+                    "region": "Netherlands",
+                    "count": 1
+                },
+                {
+                    "region": "Sweden",
+                    "count": 1
+                },
+                {
+                    "region": "Barbados",
+                    "count": 1
+                },
+                {
+                    "region": "Ireland",
+                    "count": 1
+                },
+                {
+                    "region": "Zimbabwe",
+                    "count": 1
+                },
+                {
+                    "region": "Vietnam",
+                    "count": 1
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "low",
+                    "count": 6
+                },
+                {
+                    "level": "medium",
+                    "count": 6
+                },
+                {
+                    "level": "high",
+                    "count": 8
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "adapted_from_existing",
+                    "count": 9
+                },
+                {
+                    "source": "traditional",
+                    "count": 5
+                },
+                {
+                    "source": "formal_education",
+                    "count": 3
+                },
+                {
+                    "source": "self-taught",
+                    "count": 2
+                },
+                {
+                    "source": "internet",
+                    "count": 2
                 }
             ]
         }

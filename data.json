@@ -1555,5 +1555,194 @@
         "priority_score": 60,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "5e9f75b68d6ebb44ef28489c53d2b117",
+        "timestamp": "2026-03-22T11:20:57.669077",
+        "title": "Voltarent ECU by Peter Mbiria",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLDv4Gkt6HJzxAG5zoktKxoEyACB7WN9Ag5mJgECemuFmnCN7MBwi6S0UV9G0qZga0MpOXxsaFEdjHuM6HCVl_amkjsEvIkRNFTeF38xZCYXx1cQRi9XSAFm9o9BI1II3UkXH7Euc=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGduCFjbfA4jMY5Meyn5Z_rJe4IqgrE_zpydQLiwWp9y-sx3ln4KH777j7Q5porKLUHZ90LWiSpWdwp-QG2H8cGjH63jXjHxllSWj5R9KMzHJao1vx2OHx0--7X23tcv0famITtAgI="
+        ],
+        "summary": "Peter Mbiria, a Kenyan engineer and founder of Volter Engineering Limited, developed the Voltarent ECU. This technology modernizes old car engines (from the 1950s to 1990s) by replacing outdated fuel distribution systems with custom fuel injectors, a regulator, and a self-designed ECU. The system precisely meters fuel and calculates ignition angles, significantly improving fuel economy and reducing emissions, thus offering a sustainable alternative to planned obsolescence in the automotive industry.",
+        "category": [
+            "Automotive Engineering",
+            "Sustainable Technology",
+            "Engine Modernization"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "",
+            "lat": 1.4419683,
+            "lon": 38.4313975
+        },
+        "process": {
+            "how_it_works": "The Voltarent ECU system replaces an old car's outdated mechanical fuel injection or carburetor system. It integrates custom fuel injectors, a regulator, and a custom wiring harness connected to a self-designed Electronic Control Unit (ECU). The ECU precisely meters fuel and calculates optimal ignition angles for each cylinder, leading to improved performance, fuel economy, and reduced emissions.",
+            "materials_used": [
+                "custom fuel injectors",
+                "fuel regulator",
+                "custom wiring harness",
+                "self-designed Electronic Control Unit (ECU)"
+            ],
+            "step_by_step": [
+                "Replace outdated mechanical fuel injection or carburetor system",
+                "Install custom fuel injectors and a fuel regulator",
+                "Connect components with a custom wiring harness",
+                "Integrate the self-designed Voltarent ECU to control fuel metering and ignition timing"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Planned obsolescence in the automotive industry; inefficient fuel consumption and high emissions from classic cars (1950s-1990s); need for sustainable alternatives to discarding old vehicles.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Fire hazard",
+                "Explosion",
+                "Toxic (emissions)"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The innovation involves custom modification of critical fuel and ignition systems in older vehicles, which inherently carries risks of fuel leaks (fire/explosion) and improper combustion (toxic emissions). As a grassroots project, rigorous testing and certification are crucial to ensure safety, reliability, and consistent performance across diverse vehicle platforms, mitigating the potential for unintended hazards."
+        },
+        "priority_score": 72,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "84f583bc6e029f90c877f904e8cf57e5",
+        "timestamp": "2026-03-22T11:21:14.997789",
+        "title": "Lawnmower Engine Generator",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtL38bLCT57JozgFE3LIYgorMv3m-Sf77LXoB4DD9heufaDdvgOz16sQODIRX80-j13poNPdRoVC6Zt3XMtQEgfzpNzRz4LPLebHrxlDTgbsmIWjkVXoQJ5dIk-p9URD8UaBKrfB_qb-kQNpNXw24VvJ-kcyxQaN-G_RxLvmx-UmrQ9jQsYS4I042Me1kWSo-3ox8zCg="
+        ],
+        "summary": "Local inventors and DIY enthusiasts repurpose old lawnmower engines to create functional generators, typically producing around 500 watts of electricity. This project costs under $40 and uses readily available or junkyard parts, providing a practical solution for emergency power or off-grid needs for small electronics and tools.",
+        "category": [
+            "Energy",
+            "DIY",
+            "Repurposing",
+            "Emergency Power"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "",
+            "region": "",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A small gasoline engine, originally from a lawnmower, is converted into a power source capable of generating approximately 500 watts of electricity.",
+            "materials_used": [
+                "old lawnmower engine",
+                "other readily available or junkyard parts"
+            ],
+            "step_by_step": []
+        },
+        "impact": {
+            "problem_solved": "Provides a practical solution for emergency power or off-grid needs, and extends the utility of discarded engines.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 9,
+            "risk_type": [
+                "fire hazard",
+                "explosion",
+                "toxic",
+                "environment",
+                "safety gear"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "Repurposing gasoline engines for power generation by DIY enthusiasts presents significant risks. Gasoline is highly flammable and explosive, especially with improvised fuel systems. The combustion produces toxic carbon monoxide (CO), posing a severe indoor hazard. There are also risks of electrical shock from uninsulated components, mechanical injuries from moving parts, and environmental pollution from fuel/oil spills and exhaust. The lack of professional engineering and safety features inherent in grassroots modifications to chemical/energy systems elevates the overall risk considerably."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": true
+    },
+    {
+        "id": "bea026c98f8c71cbfeecf80cb3082ec1",
+        "timestamp": "2026-03-22T11:21:35.324040",
+        "title": "Repurposing Automotive Engine Parts into Household Items",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsYVd3kvedEcvrnz3yzI4bR5NMzAPdMpcyehraYaoTAmpI0oj5a9Rg5EooM-qddDNGa6B-RwSRDNTblcLVXGweE9hnf4r6CyxuD-24Bb0eWb-Q_3gSg1L6nrtnMyydXghDJ1VsEww="
+        ],
+        "summary": "Creative individuals repurpose components from old automotive engines, such as a Honda D-series engine, into unique household items and decorative pieces. This includes transforming engine blocks into wine racks, cylinder heads into tables, camshafts into light fixtures, and clutch assemblies into clocks, giving discarded mechanical parts a second life.",
+        "category": [
+            "Repurposing",
+            "DIY",
+            "Home Decor",
+            "Furniture",
+            "Upcycling"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "",
+            "region": "",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Old automotive engine components are cleaned, modified, and assembled to create new functional or aesthetic objects for the home, leveraging their unique shapes and materials.",
+            "materials_used": [
+                "Honda D-series engine",
+                "engine block",
+                "cylinder head",
+                "camshaft",
+                "clutch assembly"
+            ],
+            "step_by_step": [
+                "Engine block is cleaned and modified to serve as a wine rack.",
+                "Cylinder head is adapted to become a distinctive table.",
+                "Camshaft is converted into a light fixture.",
+                "Clutch assembly is ingeniously turned into a clock."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a creative solution for reusing discarded automotive parts, reducing waste, and creating unique, personalized home decor and furniture.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self_taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "toxic",
+                "fire hazard",
+                "safety"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "Repurposing automotive engine parts into household items presents multiple risks. Residual engine fluids (oil, fuel) pose a fire hazard if not thoroughly removed. Engine components can contain toxic heavy metals, and older parts might have asbestos (e.g., in clutch assemblies), leading to toxic exposure risks if not properly handled or if residues remain. Electrical modifications for items like light fixtures introduce electrical shock and fire hazards if not installed correctly. Additionally, heavy and irregularly shaped parts can present physical safety risks (sharp edges, instability) if not properly secured and finished."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
