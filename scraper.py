@@ -324,9 +324,8 @@ def run_discovery_pipeline(api_key, database, max_items=3):
     keyword = random.choice(KEYWORDS)
     log.info(f"Initiating radar ping with keyword: '{keyword}'")
 
-    # Prompt yang memerintahkan AI untuk mencari URL
-    seed_prompt = f"Search the web for 5 distinct, real-world examples of: {keyword}. Provide a detailed paragraph for each, AND include a list of all relevant source URLs found (YouTube, news, or project sites). Return a JSON object with an array 'innovations' containing these descriptions and their associated URLs."
-    seed_sys = "You are an OSINT web scraper. Use google search. Return pure JSON. Do not hallucinate."
+    seed_prompt = f"Search the web for 5 distinct, real-world examples of: {keyword}. Provide a detailed paragraph for each, AND include a list of all relevant source URLs found. Return a JSON object with an array 'innovations' containing these descriptions and their associated URLs."
+    seed_sys = "You are an OSINT web scraper. Use google search. IMPORTANT: Always return the direct, original source URLs. Return pure JSON."
 
     seed_data = call_gemini_with_retry(api_key, seed_prompt, seed_sys, use_search=True)
     if not seed_data or "innovations" not in seed_data:
@@ -337,13 +336,8 @@ def run_discovery_pipeline(api_key, database, max_items=3):
     success_count = 0
 
     for idx, item in enumerate(raw_descriptions):
-        if success_count >= max_items:
-            log.info(f"Reached maximum limit of {max_items} items. Stopping.")
-            break
+        if success_count >= max_items: break
 
-        log.info(f"Processing candidate {idx+1}/{len(raw_descriptions)}...")
-
-        # 1. Pisahkan teks deskripsi dan URL
         if isinstance(item, dict):
             raw_text = item.get("description", str(item))
             discovered_urls = item.get("urls", [])
@@ -351,23 +345,18 @@ def run_discovery_pipeline(api_key, database, max_items=3):
             raw_text = str(item)
             discovered_urls = []
 
-        # Layer 1: Validate
         validation = pass_1_validate(api_key, raw_text)
         if not validation.get("is_innovation") or validation.get("confidence", 0) < 0.6:
             continue
 
-        # Layer 2: Extract
         base_data = pass_2_extract(api_key, raw_text)
         if not base_data or not base_data.get("title"):
             continue
 
-        # 2. Cek Duplikat (Gunakan db_item agar tidak bentrok dengan variabel item)
         title_hash = hashlib.md5(normalize_title(base_data["title"]).encode('utf-8')).hexdigest()
         if any(db_item.get("id") == title_hash for db_item in database):
-            log.info("Item is a duplicate. Skipping.")
             continue
 
-        # Layer 3 & 4: Risk & Lineage
         risk_data = pass_3_risk(api_key, raw_text)
         lineage_data = pass_4_lineage(api_key, raw_text)
 
@@ -379,40 +368,31 @@ def run_discovery_pipeline(api_key, database, max_items=3):
             "risk_assessment": risk_data if risk_data else {}
         }
 
-        # 3. Gabungkan URL ke field 'sources'
-        if "sources" not in final_item: 
-            final_item["sources"] = []
-        
-        # Gabungkan dan pastikan tidak ada URL ganda (set)
+        if "sources" not in final_item: final_item["sources"] = []
         final_item["sources"] = list(set(final_item.get("sources", []) + discovered_urls))
 
-        # Geocoding
         country = final_item.get("location", {}).get("country", "")
         region = final_item.get("location", {}).get("region", "")
         lat, lon = get_coordinates(f"{region}, {country}".strip(", "))
-        final_item["location"]["lat"] = lat
-        final_item["location"]["lon"] = lon
+        final_item["location"]["lat"], final_item["location"]["lon"] = lat, lon
 
-        # Metrics
         final_item = calculate_advanced_metrics(final_item)
         database.append(final_item)
         success_count += 1
-        log.info(f"🔥 Successfully processed: {final_item['title']} (Score: {final_item.get('priority_score')})")
+        log.info(f"🔥 Processed: {final_item['title']}")
 
     return success_count
     
 def generate_intelligence_report(api_key, database):
-    """Read database and append new report to resume.json."""
+    """Membaca database dan menambahkan resume baru dengan rotasi ID."""
     if not database:
         log.warning("Database is empty. Skipping report generation.")
         return
 
     log.info("📊 Generating Periodic Intelligence Resume...")
     quarter = get_current_quarter()
-
     db_string = json.dumps(database, ensure_ascii=False)
 
-    # Prompt tetap meminta 'gsi-current' untuk laporan baru
     sys_prompt = """You are an elite AI Intelligence Analyst generating a quarterly global report on grassroots and institutional innovation.
                 You will be given a JSON array containing raw innovation records.
                 OUTPUT EXACTLY THIS JSON FORMAT:
@@ -430,37 +410,35 @@ def generate_intelligence_report(api_key, database):
                 "charts": { "innovation_by_region": [{"region": "", "count": 0}], "risk_distribution": [{"level": "", "count": 0}], "knowledge_source_trend": [{"source": "", "count": 0}] }
                 }"""
 
-    prompt = f"Analyze this innovation dataset:\n{db_string}"
+    prompt = f"Analyze the following innovation dataset and generate the report.\n\nDATASET:\n{db_string}"
     new_report = call_gemini_with_retry(api_key, prompt, sys_prompt, expect_json=True)
 
     if new_report:
-        # Set metadata untuk laporan baru
-        new_report["report_metadata"]["generated_at"] = datetime.now().isoformat()
-        new_report["report_metadata"]["period"] = quarter
-        new_report["report_metadata"]["report_id"] = "gsi-current" # Pastikan ID-nya current
-
-        # Muat database resume yang ada
+        # Load data lama
         resume_db = load_json_file(RESUME_FILE, [])
-        if not isinstance(resume_db, list):
+        if not isinstance(resume_db, list): 
             resume_db = []
 
         # ✅ ROTASI ID: Ubah semua 'gsi-current' lama menjadi 'gsi-older'
-        log.info("🔄 Rotating old report IDs to 'gsi-older'...")
         for report in resume_db:
-            if isinstance(report, dict) and "report_metadata" in report:
+            if isinstance(report, dict):
+                if "report_metadata" not in report: report["report_metadata"] = {}
                 report["report_metadata"]["report_id"] = "gsi-older"
 
-        # Tambahkan laporan baru ke urutan paling akhir
-        resume_db.append(new_report)
+        # Setup metadata laporan baru
+        new_report["report_metadata"]["generated_at"] = datetime.now().isoformat()
+        new_report["report_metadata"]["period"] = quarter
+        new_report["report_metadata"]["report_id"] = "gsi-current"
         
-        # Simpan kembali
+        # ✅ SIMPAN HANYA SEKALI
+        resume_db.append(new_report)
         save_json_file(RESUME_FILE, resume_db)
-
+        
         # Update file Markdown untuk preview cepat
         md_content = convert_report_to_markdown(new_report)
         save_text_file(REPORT_MD_FILE, md_content)
 
-        log.info(f"✅ Resume successfully generated. ID: {new_report['report_metadata']['report_id']}")
+        log.info(f"✅ Resume successfully generated and rotated. ID: gsi-current")
     else:
         log.error("Failed to generate intelligence report.")
 
