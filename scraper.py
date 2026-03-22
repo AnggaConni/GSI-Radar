@@ -211,8 +211,11 @@ def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_js
     if not isinstance(prompt, str):
         prompt = json.dumps(prompt)
         
-    # Menggunakan endpoint Gemini 3 Flash Preview
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent"
+    # --- KODE BARU (Penerapan No. 6) ---
+    # Mengambil nama model dari Environment Variable, default-nya tetap pakai 3-flash-preview
+    # Jika besok Google rilis gemini-4, Anda tinggal set env var GEMINI_MODEL="gemini-4"
+    model_name = os.environ.get("GEMINI_MODEL", "gemini-3-flash-preview")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
     
     # Konfigurasi payload
     payload = {
@@ -256,18 +259,23 @@ def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_js
 # it will automatically try again up to `retries` times.
 # Each retry waits longer: 1s, 2s, 4s (exponential backoff).
 def call_gemini_with_retry(api_key, prompt, system_instruction, retries=3, **kwargs):
-    """
-    Calls call_gemini() and retries on failure with exponential backoff.
-    retries=3 means: attempt 1 → wait 1s → attempt 2 → wait 2s → attempt 3 → give up.
-    """
     for attempt in range(retries):
-        result = call_gemini(api_key, prompt, system_instruction, **kwargs)
-        if result:
-            return result
-        wait_time = 2 ** attempt   # 1s, 2s, 4s
+        try:
+            result = call_gemini(api_key, prompt, system_instruction, **kwargs)
+            if result:
+                return result
+        except requests.exceptions.HTTPError as e:
+            status_code = e.response.status_code
+            if status_code in [400, 403, 404]: # Error fatal yang tidak akan sembuh dengan retry
+                log.error(f"Fatal HTTP Error {status_code}. Aborting retry.")
+                break
+            elif status_code == 429: # Too many requests
+                log.warning("Rate limit hit. Retrying...")
+                
+        wait_time = 2 ** attempt
         log.warning(f"Gemini call failed (attempt {attempt + 1}/{retries}). Retrying in {wait_time}s...")
         time.sleep(wait_time)
-    log.error("All Gemini retry attempts exhausted. Returning None.")
+        
     return None
 
 # =====================================================================
@@ -357,7 +365,15 @@ def run_discovery_pipeline(api_key, database, max_items=3):
         if not base_data or not base_data.get("title"):
             continue
 
-        title_hash = hashlib.md5(normalize_title(base_data["title"]).encode('utf-8')).hexdigest()
+        # --- KODE BARU (Penerapan No. 5) ---
+        normalized_title = normalize_title(base_data["title"])
+        country = base_data.get("location", {}).get("country", "unknown").lower()
+        
+        # Gabungkan title dan negara agar ID unik per lokasi
+        unique_string = f"{normalized_title}-{country}"
+        title_hash = hashlib.md5(unique_string.encode('utf-8')).hexdigest()
+        # -----------------------------------
+
         if any(db_item.get("id") == title_hash for db_item in database):
             continue
 
