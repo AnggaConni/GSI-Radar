@@ -2932,5 +2932,200 @@
         "priority_score": 50,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "b1c73deeeeae381987cd75d20a9b9321",
+        "timestamp": "2026-03-22T16:47:11.215317",
+        "title": "Red Global de Trueque (Global Barter Network)",
+        "sources": [
+            "https://www.researchgate.net/publication/23542284_Argentina's_Barter_Network_New_Currency_for_New_Times",
+            "https://www.jstor.org/stable/3172152",
+            "https://en.wikipedia.org/wiki/Cr%C3%A9dito",
+            "https://en.wikipedia.org/wiki/Global_Barter_Network",
+            "https://www.greenamerica.org/time-banks-and-bartering-get-what-you-need-without-money"
+        ],
+        "summary": "A grassroots parallel economy system established in Argentina that enabled millions of citizens to survive the 2001-2002 economic collapse by exchanging goods and services using a social currency called 'créditos'.",
+        "category": [
+            "Economics",
+            "Social Innovation",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Argentina",
+            "region": "South America",
+            "lat": -32.054651,
+            "lon": -52.1345452
+        },
+        "process": {
+            "how_it_works": "Participants, acting as both producers and consumers ('prosumers'), gather in community centers to trade goods and services using a non-state paper scrip, bypassing the formal banking system and national currency.",
+            "materials_used": [
+                "Créditos (paper scrip)",
+                "Community centers (nodos)",
+                "Home-produced goods",
+                "Professional services"
+            ],
+            "step_by_step": [
+                "Establishment of community centers known as 'nodos'.",
+                "Issuance of 'créditos' to act as a medium of exchange within the network.",
+                "Participants ('prosumers') bring home-cooked meals, clothing, or offer services like repairs and medical care.",
+                "Transactions are settled using the paper scrip instead of the Argentine peso.",
+                "Earned créditos are reinvested within the network to purchase other essential goods and services."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of liquidity and access to basic necessities for the unemployed and middle class during a total economic and banking collapse.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Red Global de Trueque is a social and economic innovation focused on peer-to-peer barter and community-based currency. It does not involve hazardous chemicals, industrial energy systems, or physical processes that pose risks of fire, explosion, or toxicity. The primary risks were economic, such as currency devaluation and counterfeiting, rather than physical safety hazards."
+        },
+        "priority_score": 54,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "0aca0bbd280b8f9dad2c54bcba51fe75",
+        "timestamp": "2026-03-22T16:47:30.029265",
+        "title": "Bangla-Pesa",
+        "sources": [
+            "https://www.boell.de/en/2016/01/25/how-bangla-pesa-tapped-value-informal-community",
+            "https://www.patternsofcommoning.org/how-the-bangla-pesa-tapped-the-value-of-an-informal-community/",
+            "https://www.grassrootseconomics.org/bangla-pesa",
+            "https://fatumasvoice.org/bangla-pesa-how-a-slum-currency-in-mombasa-reimagined-local-economies/"
+        ],
+        "summary": "A community-based mutual credit system in Mombasa, Kenya, that uses physical vouchers to facilitate local trade among micro-businesses, overcoming chronic liquidity shortages of national currency.",
+        "category": [
+            "Finance",
+            "Community Development",
+            "Social Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Mombasa",
+            "lat": -4.05052,
+            "lon": 39.667169
+        },
+        "process": {
+            "how_it_works": "A mutual credit system where members of a business network issue and accept physical vouchers as a medium of exchange for goods and services, keeping local trade active when national currency is unavailable.",
+            "materials_used": [
+                "Physical vouchers",
+                "Network registry",
+                "Community trust agreements"
+            ],
+            "step_by_step": [
+                "Form a network of local micro-businesses and service providers",
+                "Issue a set amount of physical vouchers to each member of the network",
+                "Members accept vouchers as payment for goods and services like vegetables, schooling, or transport",
+                "Vouchers circulate within the community to facilitate daily transactions",
+                "National currency is reserved for external payments such as taxes and utilities"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of liquidity in informal economies preventing trade despite the availability of goods and services.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Bangla-Pesa is a community-based mutual credit system using physical paper vouchers. It involves no chemical processes, energy production, or hazardous materials. There are no risks related to fire, explosion, toxicity, or environmental damage beyond the negligible flammability of paper. The innovation is purely economic and social in nature."
+        },
+        "priority_score": 38,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "0b1b166d6c5c3e27565ed992de29943b",
+        "timestamp": "2026-03-22T16:47:49.005861",
+        "title": "Sardex",
+        "sources": [
+            "https://www.gsef-net.org/en/node/26890",
+            "https://www.sardex.net/",
+            "https://www.ft.com/content/cf7f332c-196d-11e5-a130-2e751bc45525",
+            "https://monneta.org/en/sardex/",
+            "https://www.cbsnews.com/news/creating-new-wealth-on-sardinia-without-cash/"
+        ],
+        "summary": "A digital business-to-business (B2B) mutual credit clearing system that allows small and medium-sized enterprises to trade goods and services using an interest-free internal currency, bypassing traditional bank credit constraints.",
+        "category": [
+            "Fintech",
+            "Alternative Currency",
+            "Economic Resilience"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Italy",
+            "region": "Sardinia",
+            "lat": 40.0912813,
+            "lon": 9.0305773
+        },
+        "process": {
+            "how_it_works": "Members of the network grant each other interest-free credit lines denominated in 'Sardex' units. Businesses use their excess capacity to earn credits, which can then be spent on other goods and services within the local network.",
+            "materials_used": [
+                "Digital ledger system",
+                "Mutual credit software platform",
+                "Network of participating SMEs"
+            ],
+            "step_by_step": [
+                "A business joins the Sardex network and is assigned an interest-free credit line.",
+                "The business offers its surplus goods or services (excess capacity) to other members.",
+                "Transactions are recorded on a digital ledger in Sardex units (pegged 1:1 to the Euro).",
+                "The business uses the earned Sardex credits to purchase necessary services or supplies from other network members.",
+                "The balance is cleared over time through continued trade within the ecosystem."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Liquidity shortages and credit crunches for SMEs during financial crises.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Sardex is a digital mutual credit and barter system. It is a financial and socio-economic innovation that does not involve any chemical processes, energy production, or physical manufacturing that would pose risks of fire, explosion, toxicity, or environmental damage."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
