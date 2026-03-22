@@ -1,19 +1,22 @@
-name: ICH Shared Heritage Auto-Crawler
+name: Innovation Radar Auto-Crawler
 
 on:
   schedule:
-    # Runs every 2 days to prioritize fixing INCOMPLETE data, then discovers new data
+    # Memeriksa setiap 2 hari. Script Python yang akan menentukan 
+    # apakah hanya data.json yang dicrawl, atau sekalian resume.json
     - cron: "0 0 */2 * *"
   workflow_dispatch: 
     inputs:
-      force_crawl:
-        description: 'Force crawl now?'
+      run_type:
+        description: 'Pilih tipe eksekusi yang ingin dijalankan:'
         required: true
-        default: 'false'
+        default: 'auto'
         type: choice
         options:
-          - 'true'
-          - 'false'
+          - 'auto'          # Mengikuti jadwal history (Data 2 hari, Resume 3 bulan)
+          - 'force_data'    # Hanya mencari 3 data.json baru secara paksa
+          - 'force_resume'  # Hanya men-generate resume.json baru secara paksa
+          - 'force_both'    # Mencari data sekaligus men-generate resume
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -41,10 +44,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run Scraper & Gemini AI
+      - name: Run Intelligent Scheduler & AI
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          FORCE_CRAWL: ${{ github.event.inputs.force_crawl }}
+          # Ambil input dari dropdown jika di-trigger manual, jika tidak (cron) gunakan 'auto'
+          RUN_TYPE: ${{ github.event.inputs.run_type || 'auto' }}
         run: python scraper.py
 
       - name: Commit and Push changes
@@ -52,11 +56,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          git add data.json history.json resume.json || true
+          # Daftarkan semua file yang berpotensi berubah
+          git add data.json resume.json history.json report.md || true
           
           if git diff --staged --quiet; then
             echo "No new data to commit."
           else
-            git commit -m "ICH Update: Enriched incomplete data & discovered new heritage [skip ci]"
-            git push origin main
+            git commit -m "🤖 Auto-update: Synchronized Radar Data & Resumes [skip ci]"
+            git push
           fi
