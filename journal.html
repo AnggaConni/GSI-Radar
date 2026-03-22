@@ -1,1652 +1,523 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grassroots Innovation Intelligence Bulletin</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-
-    <style>
-        /* ================================================
-           ROOT VARIABLES & SCREEN BASE
-           ================================================ */
-        :root {
-            --bg:          #dde1e7;
-            --paper:       #faf8f3;
-            --ink:         #1c2230;
-            --ink-soft:    #4a5568;
-            --ink-faint:   #94a3b8;
-            --border:      #d1d9e0;
-            --accent:      #9f1239;       /* deep maroon */
-            --accent2:     #0f766e;       /* teal */
-            --accent3:     #b45309;       /* amber / warning */
-            --accent-pale: rgba(159,18,57,0.06);
-            --risk-low:    #059669;
-            --risk-mid:    #d97706;
-            --risk-hi:     #dc2626;
-        }
-
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Crimson Pro', Georgia, serif;
-            background-color: var(--bg);
-            color: var(--ink);
-            line-height: 1.75;
-            padding: 24px 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* ================================================
-           CONTROL BAR (no-print)
-           ================================================ */
-        .no-print-area {
-            width: 210mm;
-            max-width: 100%;
-            background: white;
-            padding: 14px 24px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        .no-print-area label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--ink-soft);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .no-print-area .controls-left { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-
-        select.journal-select {
-            padding: 8px 14px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            border: 2px solid var(--accent);
-            border-radius: 4px;
-            color: var(--accent);
-            background-color: #fff0f4;
-            cursor: pointer;
-            outline: none;
-            transition: all 0.25s;
-        }
-        select.journal-select:hover { background-color: var(--accent); color: white; }
-
-        .btn {
-            display: inline-flex; align-items: center; gap: 6px;
-            padding: 9px 18px;
-            font-size: 13px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.25s, transform 0.1s;
-            text-decoration: none;
-        }
-        .btn:active { transform: translateY(1px); }
-        .btn-primary { background-color: var(--accent2); color: white; }
-        .btn-primary:hover { background-color: #0d5c56; }
-        .btn-secondary { background-color: var(--accent); color: white; }
-        .btn-secondary:hover { background-color: #7e0e2d; }
-
-        /* ================================================
-           A4 PAPER
-           ================================================ */
-        .a4-paper {
-            background-color: var(--paper);
-            width: 210mm;
-            max-width: 100%;
-            min-height: 297mm;
-            padding: 22mm 20mm 22mm 20mm;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.14);
-            margin-bottom: 20px;
-            font-size: 10.5pt;
-            position: relative;
-        }
-
-        /* ================================================
-           MASTHEAD
-           ================================================ */
-        .masthead {
-            border-top: 3px solid var(--ink);
-            border-bottom: 1px solid var(--ink);
-            padding: 6px 0;
-            margin-bottom: 4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-        .masthead-left {
-            font-family: 'DM Mono', monospace;
-            font-size: 9pt;
-            color: var(--ink-soft);
-            letter-spacing: 0.5px;
-        }
-        .masthead-right {
-            font-family: 'DM Mono', monospace;
-            font-size: 9pt;
-            color: var(--ink-soft);
-            text-align: right;
-        }
-        .masthead-right .issn { color: var(--accent); font-weight: 500; }
-
-        .journal-name-band {
-            text-align: center;
-            padding: 14px 0 10px 0;
-            border-bottom: 3px double var(--ink);
-            margin-bottom: 20px;
-        }
-        .journal-series {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9pt;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--ink-soft);
-            margin-bottom: 6px;
-        }
-        .journal-wordmark {
-            font-family: 'Playfair Display', serif;
-            font-size: 22pt;
-            font-weight: 900;
-            color: var(--ink);
-            line-height: 1.1;
-            letter-spacing: -0.5px;
-        }
-        .journal-wordmark em {
-            color: var(--accent);
-            font-style: italic;
-        }
-        .journal-subtitle-band {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 8.5pt;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--ink-soft);
-            margin-top: 6px;
-        }
-
-        /* ================================================
-           EDITORIAL BOX
-           ================================================ */
-        .editorial-box {
-            background: #f1f5f9;
-            border: 1px solid var(--border);
-            border-left: 3px solid var(--accent);
-            border-radius: 2px;
-            padding: 14px 18px;
-            margin: 16px 0 22px 0;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9.5pt;
-            color: #334155;
-            page-break-inside: avoid;
-        }
-        .editorial-box h3 {
-            font-size: 10pt;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 6px;
-        }
-        .editorial-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px 20px;
-        }
-        .editorial-grid p { margin: 0; font-size: 9pt; }
-        .editorial-footer {
-            margin-top: 12px;
-            padding-top: 10px;
-            border-top: 1px dashed var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        /* ================================================
-           KPI CARDS
-           ================================================ */
-        .kpi-row {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin: 18px 0 24px 0;
-            page-break-inside: avoid;
-        }
-        .kpi-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 12px 14px;
-            text-align: center;
-        }
-        .kpi-card .kpi-value {
-            font-family: 'Playfair Display', serif;
-            font-size: 26pt;
-            font-weight: 700;
-            line-height: 1;
-            color: var(--accent);
-        }
-        .kpi-card.teal .kpi-value { color: var(--accent2); }
-        .kpi-card.amber .kpi-value { color: var(--accent3); }
-        .kpi-card.dark .kpi-value { color: var(--ink); }
-        .kpi-card .kpi-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 7.5pt;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--ink-soft);
-            margin-top: 4px;
-        }
-        .kpi-card .kpi-sub {
-            font-family: 'DM Mono', monospace;
-            font-size: 8pt;
-            color: var(--ink-faint);
-            margin-top: 2px;
-        }
-
-        /* ================================================
-           ABSTRACT
-           ================================================ */
-        .abstract-container {
-            border-top: 2px solid var(--accent);
-            border-bottom: 2px solid var(--accent);
-            padding: 16px 0;
-            margin-bottom: 24px;
-            background-color: var(--accent-pale);
-        }
-        .abstract-title {
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9.5pt;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-        .abstract-text {
-            font-size: 10.5pt;
-            font-weight: 600;
-            text-align: justify;
-            color: var(--ink);
-        }
-        .keywords {
-            margin-top: 10px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9pt;
-            color: var(--ink-soft);
-        }
-        .keywords strong { color: var(--accent); }
-
-        /* ================================================
-           SECTION TITLES & TYPOGRAPHY
-           ================================================ */
-        h1.article-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 20pt;
-            font-weight: 700;
-            text-align: center;
-            color: var(--ink);
-            line-height: 1.25;
-            margin-bottom: 10px;
-        }
-        .article-byline {
-            text-align: center;
-            font-family: 'Crimson Pro', serif;
-            font-style: italic;
-            font-size: 11pt;
-            color: var(--ink-soft);
-            margin-bottom: 6px;
-        }
-        .article-date {
-            text-align: center;
-            font-family: 'DM Mono', monospace;
-            font-size: 8.5pt;
-            color: var(--ink-faint);
-            margin-bottom: 20px;
-        }
-
-        h2.section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 10.5pt;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--ink);
-            border-bottom: 1.5px solid var(--border);
-            padding-bottom: 5px;
-            margin-top: 32px;
-            margin-bottom: 14px;
-        }
-        h3.subsection-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9.5pt;
-            font-weight: 700;
-            color: var(--ink-soft);
-            margin-top: 20px;
-            margin-bottom: 8px;
-        }
-
-        p { margin-bottom: 14px; text-align: justify; }
-
-        .two-columns { column-count: 2; column-gap: 9mm; text-align: justify; }
-
-        .drop-cap::first-letter {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.2em;
-            float: left;
-            line-height: 0.8;
-            margin-right: 6px;
-            margin-top: 5px;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        /* ================================================
-           FIGURE & CHART CONTAINERS
-           ================================================ */
-        .figure-container {
-            margin: 24px 0;
-            padding: 14px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 3px;
-            page-break-inside: avoid;
-        }
-        .chart-wrapper {
-            position: relative;
-            height: 260px;
-            width: 100%;
-        }
-        .chart-wrapper.tall { height: 320px; }
-        .chart-wrapper.short { height: 200px; }
-        .figure-caption {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 8.5pt;
-            color: var(--ink-soft);
-            margin-top: 10px;
-            border-left: 3px solid var(--accent);
-            padding-left: 8px;
-        }
-        .chart-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-        .map-container { width: 100%; height: 360px; margin-bottom: 10px; border: 1px solid var(--border); background: #f8fafc; }
-        .network-container { width: 100%; height: 380px; border: 1px solid var(--border); margin-bottom: 10px; background: #f8fafc; }
-
-        /* ================================================
-           QUOTE BOX
-           ================================================ */
-        .quote-box {
-            font-family: 'Crimson Pro', serif;
-            font-size: 12pt;
-            font-style: italic;
-            color: var(--accent2);
-            border-left: 4px solid var(--accent2);
-            padding: 12px 18px;
-            margin: 20px 0;
-            background: #f0fdfa;
-            page-break-inside: avoid;
-        }
-
-        /* ================================================
-           BADGES & TAGS
-           ================================================ */
-        .badge {
-            display: inline-block;
-            font-family: 'DM Mono', monospace;
-            font-size: 8pt;
-            font-weight: 500;
-            padding: 2px 7px;
-            border-radius: 3px;
-            letter-spacing: 0.3px;
-        }
-        .badge-grassroots { background: #ffe4e6; color: #9f1239; }
-        .badge-semiformal { background: #fef3c7; color: #92400e; }
-        .badge-institutional { background: #ccfbf1; color: #0f5f57; }
-        .badge-gem { background: #dbeafe; color: #1d4ed8; }
-        .badge-critical { background: #fee2e2; color: #b91c1c; }
-        .badge-risk-low { background: #dcfce7; color: #15803d; }
-        .badge-risk-mid { background: #fef3c7; color: #b45309; }
-        .badge-risk-hi  { background: #fee2e2; color: #dc2626; }
-
-        /* ================================================
-           SPOTLIGHT CARDS
-           ================================================ */
-        .spotlight-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 16px 0;
-        }
-        .spotlight-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-top: 3px solid var(--accent);
-            border-radius: 3px;
-            padding: 12px;
-            page-break-inside: avoid;
-        }
-        .spotlight-card.teal { border-top-color: var(--accent2); }
-        .spotlight-card.amber { border-top-color: var(--accent3); }
-        .spotlight-card .sc-rank {
-            font-family: 'Playfair Display', serif;
-            font-size: 18pt;
-            font-weight: 700;
-            color: var(--accent);
-            line-height: 1;
-        }
-        .spotlight-card.teal .sc-rank { color: var(--accent2); }
-        .spotlight-card.amber .sc-rank { color: var(--accent3); }
-        .spotlight-card .sc-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 8.5pt;
-            font-weight: 700;
-            color: var(--ink);
-            margin: 4px 0;
-            line-height: 1.3;
-        }
-        .spotlight-card .sc-body {
-            font-family: 'Crimson Pro', serif;
-            font-size: 9.5pt;
-            color: var(--ink-soft);
-            margin-top: 6px;
-        }
-        .spotlight-card .sc-meta {
-            margin-top: 8px;
-            display: flex;
-            gap: 5px;
-            flex-wrap: wrap;
-        }
-        .sc-score {
-            font-family: 'DM Mono', monospace;
-            font-size: 8pt;
-            background: var(--accent-pale);
-            color: var(--accent);
-            padding: 2px 6px;
-            border-radius: 2px;
-        }
-
-        /* ================================================
-           TABLE
-           ================================================ */
-        .journal-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 9pt;
-            margin-bottom: 20px;
-        }
-        .journal-table th {
-            background: #f1f5f9;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 8pt;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--ink);
-            padding: 8px 10px;
-            border: 1px solid var(--border);
-            white-space: nowrap;
-        }
-        .journal-table td {
-            padding: 7px 10px;
-            border: 1px solid var(--border);
-            vertical-align: top;
-        }
-        .journal-table tbody tr:nth-child(even) { background: #f8fafc; }
-        .journal-table tbody tr:hover { background: #fff7f0; }
-        .journal-table tr { page-break-inside: avoid; }
-        .cell-title { font-weight: 600; font-family: 'Montserrat', sans-serif; font-size: 8.5pt; }
-        .cell-mono { font-family: 'DM Mono', monospace; font-size: 8.5pt; }
-        .risk-pill {
-            display: inline-block;
-            width: 28px;
-            height: 18px;
-            border-radius: 9px;
-            text-align: center;
-            font-family: 'DM Mono', monospace;
-            font-size: 8pt;
-            font-weight: 500;
-            line-height: 18px;
-            color: white;
-        }
-        .r-low { background: var(--risk-low); }
-        .r-mid { background: var(--risk-mid); }
-        .r-hi  { background: var(--risk-hi); }
-
-        /* Table search box */
-        .table-controls {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .search-box {
-            padding: 7px 12px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            border: 1.5px solid var(--border);
-            border-radius: 4px;
-            outline: none;
-            flex: 1;
-            min-width: 160px;
-            transition: border 0.2s;
-        }
-        .search-box:focus { border-color: var(--accent2); }
-        .filter-select {
-            padding: 7px 12px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            border: 1.5px solid var(--border);
-            border-radius: 4px;
-            outline: none;
-            background: white;
-            cursor: pointer;
-        }
-        .filter-select:focus { border-color: var(--accent2); }
-
-        /* ================================================
-           REFERENCES
-           ================================================ */
-        .reference-list {
-            font-size: 9pt;
-            padding-left: 18px;
-            color: var(--ink-soft);
-        }
-        .reference-list li { margin-bottom: 7px; word-wrap: break-word; }
-        .reference-list a { color: var(--accent2); text-decoration: none; }
-        .reference-list a:hover { text-decoration: underline; }
-
-        /* ================================================
-           RISK MATRIX (bubble chart area)
-           ================================================ */
-        .risk-legend {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            font-family: 'DM Mono', monospace;
-            font-size: 8pt;
-            margin-top: 8px;
-        }
-        .risk-legend-item { display: flex; align-items: center; gap: 5px; }
-        .risk-legend-dot {
-            width: 10px; height: 10px; border-radius: 50%;
-        }
-
-        /* ================================================
-           ORNAMENT / RULE
-           ================================================ */
-        .ornament {
-            text-align: center;
-            color: var(--accent);
-            font-size: 16pt;
-            margin: 24px 0 8px 0;
-            letter-spacing: 6px;
-        }
-        hr.section-rule {
-            border: none;
-            border-top: 1px solid var(--border);
-            margin: 28px 0;
-        }
-
-        /* ================================================
-           FOOTNOTE / FOOTER
-           ================================================ */
-        .paper-footer {
-            margin-top: 32px;
-            padding-top: 10px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            font-family: 'DM Mono', monospace;
-            font-size: 8pt;
-            color: var(--ink-faint);
-        }
-
-        /* ================================================
-           PRINT STYLES
-           ================================================ */
-        @media print {
-            @page { size: A4 portrait; margin: 18mm 18mm; }
-            body { background: none; padding: 0; display: block; }
-            .a4-paper { width: 100%; min-height: auto; box-shadow: none; padding: 0; }
-            .no-print-area, .table-controls { display: none !important; }
-            h1, h2, h3, .figure-caption { page-break-after: avoid; break-after: avoid; }
-            .figure-container, .spotlight-card, .kpi-card, .quote-box { page-break-inside: avoid; break-inside: avoid; }
-            .map-container, .network-container { height: 260px !important; }
-            .chart-wrapper { height: 220px !important; }
-            .chart-wrapper.tall { height: 260px !important; }
-            canvas { -webkit-print-color-adjust: exact; color-adjust: exact; print-color-adjust: exact; }
-            .force-break { page-break-before: always; break-before: page; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GII Bulletin — Grassroots Innovation Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<style>
+:root {
+  --bg:#dde1e7;--paper:#faf8f3;--paper2:#f1ede6;--ink:#1c2230;--ink-soft:#4a5568;--ink-faint:#94a3b8;--border:#d1d9e0;
+  --accent:#9f1239;--accent-rgb:159,18,57;--accent2:#0f766e;--accent2-rgb:15,118,110;--accent3:#b45309;
+  --accent-pale:rgba(159,18,57,0.06);--risk-low:#059669;--risk-mid:#d97706;--risk-hi:#dc2626;
+  --shadow:0 8px 24px rgba(0,0,0,0.10);--toc-width:200px;
+}
+[data-theme="dark"] {
+  --bg:#0f1117;--paper:#1a1d27;--paper2:#22263a;--ink:#e8ecf4;--ink-soft:#9aa5c0;--ink-faint:#4a5578;--border:#2e3352;
+  --accent:#fb7185;--accent-rgb:251,113,133;--accent2:#34d399;--accent2-rgb:52,211,153;--accent3:#fbbf24;
+  --accent-pale:rgba(251,113,133,0.08);--shadow:0 8px 32px rgba(0,0,0,0.45);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--bg);color:var(--ink);line-height:1.75;transition:background .3s,color .3s;}
+.shell{display:flex;justify-content:center;padding:20px 12px;gap:0;}
+/* TOC */
+.toc-sidebar{position:sticky;top:70px;align-self:flex-start;width:var(--toc-width);margin-right:18px;flex-shrink:0;}
+.toc-inner{background:var(--paper);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:4px;padding:14px 12px 10px;box-shadow:var(--shadow);transition:background .3s;}
+.toc-title{font-family:'Montserrat',sans-serif;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:10px;}
+.toc-list{list-style:none;}
+.toc-list li{margin-bottom:1px;}
+.toc-list a{font-family:'Montserrat',sans-serif;font-size:7.5pt;font-weight:500;color:var(--ink-soft);text-decoration:none;display:block;padding:3px 6px;border-radius:3px;transition:background .15s,color .15s;line-height:1.3;}
+.toc-list a:hover,.toc-list a.active{background:var(--accent-pale);color:var(--accent);}
+.toc-progress{height:3px;background:var(--border);border-radius:2px;margin-top:10px;overflow:hidden;}
+.toc-bar{height:100%;background:var(--accent);width:0%;transition:width .1s;}
+@media(max-width:900px){.toc-sidebar{display:none;}}
+/* TOPBAR */
+.topbar{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.07);padding:8px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;transition:background .3s;}
+.topbar-brand{font-family:'Playfair Display',serif;font-size:13pt;font-weight:900;color:var(--accent);}
+.topbar-brand span{color:var(--ink);}
+.topbar-right{display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
+select.eslt{padding:6px 10px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;border:1.5px solid var(--border);border-radius:4px;color:var(--ink);background:var(--paper2);cursor:pointer;outline:none;}
+select.eslt:focus{border-color:var(--accent2);}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:7px 13px;font-size:11px;font-family:'Montserrat',sans-serif;font-weight:600;border:none;border-radius:4px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.btn:active{transform:translateY(1px);}
+.btn-p{background:var(--accent2);color:#fff;} .btn-p:hover{background:#0d5c56;}
+.btn-m{background:var(--accent-pale);color:var(--accent);border:1.5px solid rgba(var(--accent-rgb),.25);} .btn-m:hover{background:var(--accent);color:#fff;}
+.btn-c{background:var(--paper2);color:var(--ink-soft);border:1.5px solid var(--border);} .btn-c:hover{border-color:var(--accent2);color:var(--accent2);}
+.thm{cursor:pointer;background:var(--paper2);border:1.5px solid var(--border);border-radius:20px;padding:5px 10px;font-size:13px;color:var(--ink-soft);display:flex;align-items:center;gap:5px;transition:all .2s;}
+.thm:hover{border-color:var(--accent3);}
+/* A4 */
+.a4{background:var(--paper);width:210mm;max-width:100%;min-height:297mm;padding:20mm 20mm 24mm;box-shadow:var(--shadow);font-size:10.5pt;transition:background .3s;}
+/* MASTHEAD */
+.masthead{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding:5px 0;margin-bottom:3px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px;}
+.mc{font-family:'DM Mono',monospace;font-size:8.5pt;color:var(--ink-soft);}
+.mc .issn{color:var(--accent);font-weight:500;}
+.jnb{text-align:center;padding:12px 0 8px;border-bottom:3px double var(--ink);margin-bottom:18px;}
+.jseries{font-family:'Montserrat',sans-serif;font-size:8pt;letter-spacing:3px;text-transform:uppercase;color:var(--ink-soft);margin-bottom:5px;}
+.jwm{font-family:'Playfair Display',serif;font-size:22pt;font-weight:900;color:var(--ink);line-height:1.1;}
+.jwm em{color:var(--accent);font-style:italic;}
+.jsub{font-family:'Montserrat',sans-serif;font-size:8pt;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft);margin-top:5px;}
+/* META */
+.meta-strip{display:flex;justify-content:center;align-items:center;gap:14px;margin:8px 0 16px;flex-wrap:wrap;}
+.mc2{font-family:'DM Mono',monospace;font-size:8pt;background:var(--paper2);border:1px solid var(--border);border-radius:20px;padding:3px 10px;color:var(--ink-soft);}
+.mc2 strong{color:var(--ink);}
+/* KPI */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 22px;}
+.kpi{background:var(--paper2);border:1px solid var(--border);border-radius:5px;padding:14px 12px;text-align:center;transition:transform .15s,box-shadow .15s;}
+.kpi:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.kv{font-family:'Playfair Display',serif;font-size:28pt;font-weight:700;line-height:1;color:var(--accent);}
+.kpi.t .kv{color:var(--accent2);} .kpi.a .kv{color:var(--accent3);} .kpi.d .kv{color:var(--ink);}
+.kl{font-family:'Montserrat',sans-serif;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-soft);margin-top:5px;}
+.ks{font-family:'DM Mono',monospace;font-size:8pt;color:var(--ink-faint);margin-top:2px;}
+/* ABSTRACT */
+.abswrap{border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);padding:14px 0;margin-bottom:22px;background:var(--accent-pale);}
+.abslabel{text-align:center;font-family:'Montserrat',sans-serif;font-size:9pt;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+.absbody{font-size:10.5pt;font-weight:600;text-align:justify;}
+.kw{margin-top:10px;font-family:'Montserrat',sans-serif;font-size:8.5pt;color:var(--ink-soft);}
+.kw strong{color:var(--accent);}
+/* HEADINGS */
+h1.atitle{font-family:'Playfair Display',serif;font-size:19pt;font-weight:700;text-align:center;color:var(--ink);line-height:1.25;margin-bottom:8px;}
+.abyline{text-align:center;font-style:italic;font-size:11pt;color:var(--ink-soft);margin-bottom:4px;}
+.adate{text-align:center;font-family:'DM Mono',monospace;font-size:8pt;color:var(--ink-faint);margin-bottom:18px;}
+h2.st{font-family:'Montserrat',sans-serif;font-size:10.5pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink);border-bottom:1.5px solid var(--border);padding-bottom:5px;margin-top:32px;margin-bottom:12px;scroll-margin-top:62px;}
+h3.sub{font-family:'Montserrat',sans-serif;font-size:9.5pt;font-weight:700;color:var(--ink-soft);margin-top:18px;margin-bottom:8px;}
+p{margin-bottom:13px;text-align:justify;}
+.twocol{column-count:2;column-gap:9mm;text-align:justify;}
+.dc::first-letter{font-family:'Playfair Display',serif;font-size:3.2em;float:left;line-height:.8;margin-right:6px;margin-top:5px;color:var(--accent);font-weight:700;}
+/* FIGURES */
+.fig{margin:22px 0;padding:14px;background:var(--paper2);border:1px solid var(--border);border-radius:4px;transition:background .3s;}
+.cb{position:relative;height:260px;width:100%;}
+.cb.tall{height:320px;} .cb.sh{height:200px;}
+.chart-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.figcap{font-family:'Montserrat',sans-serif;font-size:8.5pt;color:var(--ink-soft);margin-top:10px;border-left:3px solid var(--accent);padding-left:8px;}
+.mapbox{width:100%;height:360px;border:1px solid var(--border);background:var(--paper2);}
+.netbox{width:100%;height:380px;border:1px solid var(--border);background:var(--paper2);}
+/* QUOTE */
+.qbox{font-family:'Crimson Pro',serif;font-size:12pt;font-style:italic;color:var(--accent2);border-left:4px solid var(--accent2);padding:12px 18px;margin:18px 0;background:rgba(var(--accent2-rgb),.06);}
+/* BADGES */
+.badge{display:inline-block;font-family:'DM Mono',monospace;font-size:7.5pt;font-weight:500;padding:2px 7px;border-radius:3px;}
+.bg{background:rgba(159,18,57,.12);color:var(--accent);}
+.bs{background:rgba(180,83,9,.12);color:var(--accent3);}
+.bi{background:rgba(15,118,110,.12);color:var(--accent2);}
+.bgem{background:rgba(29,78,216,.1);color:#1d4ed8;}
+.rpill{display:inline-block;width:28px;height:18px;border-radius:9px;text-align:center;font-family:'DM Mono',monospace;font-size:8pt;font-weight:500;line-height:18px;color:#fff;}
+.rl{background:var(--risk-low);} .rm{background:var(--risk-mid);} .rh{background:var(--risk-hi);}
+/* SPOTLIGHT */
+.spgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0;}
+.sc{background:var(--paper2);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:3px;padding:12px;transition:transform .15s;}
+.sc:hover{transform:translateY(-2px);}
+.sc.t{border-top-color:var(--accent2);} .sc.a{border-top-color:var(--accent3);}
+.scr{font-family:'Playfair Display',serif;font-size:18pt;font-weight:700;color:var(--accent);line-height:1;}
+.sc.t .scr{color:var(--accent2);} .sc.a .scr{color:var(--accent3);}
+.sct{font-family:'Montserrat',sans-serif;font-size:8.5pt;font-weight:700;color:var(--ink);margin:4px 0;line-height:1.3;}
+.scb{font-family:'Crimson Pro',serif;font-size:9.5pt;color:var(--ink-soft);margin-top:6px;}
+.scm{margin-top:8px;display:flex;gap:4px;flex-wrap:wrap;}
+.scs{font-family:'DM Mono',monospace;font-size:7.5pt;background:var(--accent-pale);color:var(--accent);padding:2px 6px;border-radius:2px;}
+/* TABLE */
+.tctrl{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;align-items:center;}
+.sbx,.fsel{padding:7px 11px;font-family:'Montserrat',sans-serif;font-size:11px;border:1.5px solid var(--border);border-radius:4px;outline:none;background:var(--paper);color:var(--ink);transition:border .2s;}
+.sbx{flex:1;min-width:150px;} .sbx:focus,.fsel:focus{border-color:var(--accent2);}
+.fsel{cursor:pointer;}
+.jtable{width:100%;border-collapse:collapse;font-size:9pt;margin-bottom:6px;}
+.jtable th{background:var(--paper2);font-family:'Montserrat',sans-serif;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink);padding:8px 9px;border:1px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none;}
+.jtable th:hover{color:var(--accent);}
+.jtable th .sa{opacity:.4;font-size:9px;}
+.jtable th.sasc .sa::after{content:' ▲';opacity:1;}
+.jtable th.sdsc .sa::after{content:' ▼';opacity:1;}
+.jtable td{padding:7px 9px;border:1px solid var(--border);vertical-align:top;}
+.jtable tbody tr:nth-child(even){background:var(--paper2);}
+.jtable tbody tr:hover{background:var(--accent-pale);}
+.ct{font-weight:600;font-family:'Montserrat',sans-serif;font-size:8.5pt;}
+.cm{font-family:'DM Mono',monospace;font-size:8.5pt;}
+/* PAGINATION */
+.pag{display:flex;align-items:center;justify-content:flex-end;gap:6px;padding:8px 0;flex-wrap:wrap;}
+.pbtn{padding:4px 10px;border:1px solid var(--border);border-radius:3px;background:var(--paper);color:var(--ink-soft);cursor:pointer;font-family:'DM Mono',monospace;font-size:9pt;transition:all .15s;}
+.pbtn:hover:not(:disabled){border-color:var(--accent2);color:var(--accent2);}
+.pbtn.act{background:var(--accent);color:#fff;border-color:var(--accent);}
+.pbtn:disabled{opacity:.35;cursor:not-allowed;}
+/* REFS */
+.refs{font-size:9pt;padding-left:18px;color:var(--ink-soft);}
+.refs li{margin-bottom:7px;word-wrap:break-word;}
+.refs a{color:var(--accent2);text-decoration:none;}
+.refs a:hover{text-decoration:underline;}
+/* MODAL */
+.mbd{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+.mbd.open{display:flex;}
+.mbox{background:var(--paper);border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.3);width:min(680px,95vw);max-height:85vh;overflow-y:auto;padding:28px 30px;position:relative;border-top:4px solid var(--accent);animation:slu .25s ease;}
+@keyframes slu{from{transform:translateY(18px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+.mcls{position:absolute;top:13px;right:14px;background:none;border:1.5px solid var(--border);border-radius:50%;width:28px;height:28px;cursor:pointer;color:var(--ink-soft);font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.mcls:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.mtitle{font-family:'Montserrat',sans-serif;font-size:12pt;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin-bottom:18px;}
+.mgrid p{font-family:'Montserrat',sans-serif;font-size:9.5pt;margin-bottom:0;text-align:left;}
+.msec{font-family:'Montserrat',sans-serif;font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);margin:14px 0 8px;padding-top:12px;border-top:1px dashed var(--border);}
+.stags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.stag{font-family:'DM Mono',monospace;font-size:8pt;padding:3px 9px;border-radius:3px;background:var(--paper2);border:1px solid var(--border);color:var(--ink-soft);}
+.mabtn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;padding:9px 18px;border-radius:4px;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;transition:background .2s;}
+.mabtn:hover{background:#7e0e2d;}
+/* SCALE BANNER */
+.sbanner{background:rgba(var(--accent2-rgb),.08);border:1px solid rgba(var(--accent2-rgb),.25);border-radius:4px;padding:10px 14px;margin:14px 0;font-family:'Montserrat',sans-serif;font-size:8.5pt;color:var(--ink-soft);display:flex;align-items:flex-start;gap:8px;}
+.sbanner strong{color:var(--accent2);}
+/* MISC */
+.orn{text-align:center;color:var(--accent);font-size:15pt;margin:22px 0 8px;letter-spacing:6px;}
+.pfooter{margin-top:30px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:8pt;color:var(--ink-faint);flex-wrap:wrap;gap:4px;}
+/* PRINT */
+@media print{
+  @page{size:A4 portrait;margin:18mm;}
+  body{background:none;}
+  .shell{padding:0;}
+  .toc-sidebar,.topbar,.mbd,.tctrl,.pag,.sbanner{display:none!important;}
+  .a4{width:100%;box-shadow:none;padding:0;}
+  h2.st,h3,.figcap{page-break-after:avoid;break-after:avoid;}
+  .fig,.sc,.kpi,.qbox{page-break-inside:avoid;break-inside:avoid;}
+  .mapbox,.netbox{height:260px!important;}
+  .cb{height:220px!important;} .cb.tall{height:260px!important;}
+  canvas{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .fb{page-break-before:always;break-before:page;}
+}
+</style>
 </head>
 <body>
 
-<!-- ========================================================
-     CONTROL BAR (screen only)
-     ======================================================== -->
-<div class="no-print-area">
-    <div class="controls-left">
-        <label>Edition:</label>
-        <select id="edition-select" class="journal-select" onchange="switchEdition(this.value)">
-            <option value="2026-Q1">2026 — Q1 Edition</option>
-        </select>
-        <span style="font-family:'DM Mono',monospace; font-size:11px; color:#94a3b8;">All 12 innovations loaded</span>
-    </div>
-    <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <button class="btn btn-primary" onclick="window.print()">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-            Print / Save PDF
-        </button>
-    </div>
-</div>
+<nav class="topbar">
+  <div class="topbar-brand">GII <span>Bulletin</span></div>
+  <div class="topbar-right">
+    <select class="eslt" id="edition-select" onchange="switchEdition(this.value)">
+      <option value="2026-Q1">Vol.1 No.1 — Q1 2026</option>
+    </select>
+    <button class="btn btn-m" onclick="openModal()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      About / Editorial
+    </button>
+    <button class="btn btn-c" onclick="exportCSV()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Export CSV
+    </button>
+    <button class="btn btn-p" onclick="window.print()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Print / PDF
+    </button>
+    <button class="thm" onclick="toggleTheme()" id="thmbtn">🌙 Dark</button>
+  </div>
+</nav>
 
-<!-- ========================================================
-     MAIN A4 PAPER
-     ======================================================== -->
-<div class="a4-paper" id="report-content">
+<div class="shell">
+  <aside class="toc-sidebar">
+    <div class="toc-inner">
+      <div class="toc-title">Contents</div>
+      <ul class="toc-list" id="toc-list"></ul>
+      <div class="toc-progress"><div class="toc-bar" id="toc-bar"></div></div>
+    </div>
+  </aside>
 
-    <!-- MASTHEAD -->
+  <main class="a4" id="paper">
+
     <div class="masthead">
-        <div class="masthead-left">Vol. 1 &nbsp;|&nbsp; No. 1 &nbsp;|&nbsp; Q1 2026</div>
-        <div class="masthead-right">
-            <span class="issn">ISSN: XXXX-XXXX (Online)</span><br>
-            <span>DOI: 10.XXXXX/giib.2026.1.1</span>
-        </div>
+      <div class="mc">Vol. 1 &nbsp;·&nbsp; No. 1 &nbsp;·&nbsp; Q1 2026</div>
+      <div class="mc" style="text-align:center;">Grassroots Innovation Intelligence Bulletin</div>
+      <div class="mc" style="text-align:right;"><span class="issn">ISSN: XXXX-XXXX (Online)</span> &nbsp;·&nbsp; DOI: 10.XXXXX/giib.2026.1.1</div>
     </div>
 
-    <!-- JOURNAL WORDMARK -->
-    <div class="journal-name-band">
-        <div class="journal-series">A Periodic Bulletin of Community-Led Technical Practices</div>
-        <div class="journal-wordmark">Grassroots <em>Innovation</em> Intelligence</div>
-        <div class="journal-subtitle-band">Bulletin of Frugal, Appropriate &amp; Indigenous Technologies</div>
+    <div class="jnb">
+      <div class="jseries">A Periodic Bulletin of Community-Led Technical Practices</div>
+      <div class="jwm">Grassroots <em>Innovation</em> Intelligence</div>
+      <div class="jsub">Bulletin of Frugal, Appropriate &amp; Indigenous Technologies</div>
     </div>
 
-    <!-- ARTICLE TITLE -->
-    <h1 class="article-title" id="j-title">
-        Community-Driven Innovations in Sanitation, Agriculture &amp; Engineering: A Cross-Sectoral Quarterly Survey
-    </h1>
-    <div class="article-byline">Autonomous Innovation Intelligence Engine &mdash; Curation &amp; Analysis Unit</div>
-    <div class="article-date" id="j-date">Published: 22 March 2026 &nbsp;|&nbsp; Received: 22 March 2026 &nbsp;|&nbsp; Accepted: 22 March 2026</div>
+    <h1 class="atitle">Community-Driven Innovations in Sanitation, Agriculture &amp; Engineering: A Cross-Sectoral Quarterly Survey</h1>
+    <div class="abyline">Autonomous Innovation Intelligence Engine — Curation &amp; Analysis Unit</div>
+    <div class="adate" id="j-date">Published: 22 March 2026 &nbsp;·&nbsp; Received: 22 March 2026 &nbsp;·&nbsp; Accepted: 22 March 2026</div>
 
-    <!-- EDITORIAL BOX -->
-    <div class="editorial-box">
-        <h3>&#9642; Journal Information &amp; Editorial Board</h3>
-        <div class="editorial-grid">
-            <div>
-                <p><strong>Publisher:</strong> Angga Conni Saputra</p>
-                <p><strong>Editor-in-Chief:</strong> Angga Conni Saputra</p>
-                <p><strong>Data Curation:</strong> GII Intelligence Engine (AI-Assisted)</p>
-            </div>
-            <div>
-                <p><strong>Frequency:</strong> Quarterly (March, June, September, December)</p>
-                <p><strong>Contact:</strong> [editor@yourdomain.org]</p>
-                <p><strong>Scope:</strong> Grassroots, Frugal &amp; Appropriate Technology</p>
-            </div>
-        </div>
-        <div class="editorial-footer">
-            <div>
-                <strong style="font-size:9pt;">Archive &amp; Back Issues</strong><br>
-                <span style="font-size:8.5pt; color:#64748b;">Download static PDF editions for offline citation and archival use.</span>
-            </div>
-            <a href="./GII_Bulletin_Vol1_No1_2026Q1.pdf" download class="btn btn-secondary" style="font-size:11px;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download Vol.1 No.1 (2026-Q1)
-            </a>
-        </div>
+    <div class="meta-strip">
+      <span class="mc2" id="meta-rt">⏱ Calculating…</span>
+      <span class="mc2">📦 <strong id="meta-n">—</strong> entries</span>
+      <span class="mc2">🌍 <strong id="meta-c">—</strong> countries</span>
+      <span class="mc2">📅 Quarterly edition</span>
     </div>
 
-    <!-- KPI CARDS -->
-    <div class="kpi-row" id="kpi-row">
-        <div class="kpi-card">
-            <div class="kpi-value" id="kpi-total">—</div>
-            <div class="kpi-label">Innovations Documented</div>
-            <div class="kpi-sub">this edition</div>
-        </div>
-        <div class="kpi-card teal">
-            <div class="kpi-value" id="kpi-gems">—</div>
-            <div class="kpi-label">Hidden Gems</div>
-            <div class="kpi-sub">underreported finds</div>
-        </div>
-        <div class="kpi-card amber">
-            <div class="kpi-value" id="kpi-critical">—</div>
-            <div class="kpi-label">Critical Flag</div>
-            <div class="kpi-sub">require intervention</div>
-        </div>
-        <div class="kpi-card dark">
-            <div class="kpi-value" id="kpi-avg">—</div>
-            <div class="kpi-label">Avg Priority Score</div>
-            <div class="kpi-sub">out of 100</div>
-        </div>
+    <div class="sbanner" id="scale-notice" style="display:none;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <div><strong>Large dataset detected.</strong> Charts show aggregated statistics. The map uses marker clustering (handles 100k+ points). The network is capped at the top <strong id="ncap">50</strong> innovations by priority. Table is paginated. Use <em>Export CSV</em> for full-dataset analysis.</div>
     </div>
 
-    <!-- ABSTRACT -->
-    <div class="abstract-container">
-        <div class="abstract-title">Abstract</div>
-        <div class="abstract-text" id="j-abstract">Loading…</div>
-        <div class="keywords" id="j-keywords"></div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="kv" id="kv1">0</div><div class="kl">Innovations</div><div class="ks">this edition</div></div>
+      <div class="kpi t"><div class="kv" id="kv2">0</div><div class="kl">Hidden Gems</div><div class="ks">underreported finds</div></div>
+      <div class="kpi a"><div class="kv" id="kv3">0</div><div class="kl">Critical Flags</div><div class="ks">require intervention</div></div>
+      <div class="kpi d"><div class="kv" id="kv4">0</div><div class="kl">Avg Priority</div><div class="ks" id="ks4">out of 100</div></div>
     </div>
 
-    <!-- 1. PROLOGUE -->
-    <h2 class="section-title">1. Introduction &amp; Scope</h2>
-    <div class="two-columns">
-        <p class="drop-cap">This bulletin presents the inaugural quarterly survey of community-driven technological innovations curated by the Grassroots Innovation Intelligence Engine. Spanning twelve documented practices across five thematic domains — ecological sanitation, organic pest management, traditional agro-ecology, soil remediation, and mechanical engineering — this edition establishes the analytical baseline for the GII reporting series.</p>
-        <p>Each documented practice is assessed along six dimensions: process reproducibility, material accessibility, geographic origin, impact scale, safety risk level, and priority score for further investigation or dissemination support. The intelligence engine operates as a <em>computational pre-field layer</em>: surfacing, structuring, and scoring innovations at scale to serve as a starting point for deeper ethnographic, policy, or technical engagement.</p>
-        <p>The innovations in this edition range from ancient pre-Columbian agricultural systems still practiced today, to contemporary grassroots engineering experiments in Kenya and Germany. This diversity reflects both the richness of the human technical imagination and the uneven distribution of documentation, attention, and institutional support across regions and knowledge traditions.</p>
+    <div class="abswrap">
+      <div class="abslabel">Abstract</div>
+      <div class="absbody" id="j-abstract">Loading…</div>
+      <div class="kw" id="j-kw"></div>
     </div>
 
-    <!-- 2. LANDSCAPE ANALYTICS -->
-    <h2 class="section-title">2. Innovation Landscape Analytics</h2>
-    <p>The following visualizations are auto-generated from the curated dataset for this edition. All charts reflect actual data counts rather than illustrative estimates.</p>
-
-    <h3 class="subsection-title">2.1. Thematic Category Distribution</h3>
-    <div class="figure-container">
-        <div class="chart-wrapper tall"><canvas id="barChart"></canvas></div>
-        <div class="figure-caption"><strong>Figure 1.</strong> Frequency of thematic category tags across all documented innovations. Each innovation may carry multiple category labels; counts reflect total tag occurrences.</div>
+    <h2 class="st" id="sec-intro">1. Introduction &amp; Scope</h2>
+    <div class="twocol">
+      <p class="dc">This bulletin presents the inaugural quarterly survey of community-driven technological innovations curated by the Grassroots Innovation Intelligence Engine. Spanning twelve documented practices across five thematic domains — ecological sanitation, organic pest management, traditional agro-ecology, soil remediation, and mechanical engineering — this edition establishes the analytical baseline for the GII reporting series.</p>
+      <p>Each practice is assessed along six dimensions: process reproducibility, material accessibility, geographic origin, impact scale, safety risk level, and priority score. The engine operates as a <em>computational pre-field layer</em>: surfacing, structuring, and scoring innovations at scale to direct deeper ethnographic, policy, or technical engagement.</p>
+      <p>The innovations surveyed range from ancient pre-Columbian agricultural systems still practiced today, to contemporary grassroots engineering experiments in Kenya and Germany. This diversity reflects both the richness of the human technical imagination and the uneven distribution of documentation, attention, and institutional support across regions and knowledge traditions.</p>
     </div>
 
+    <h2 class="st" id="sec-analytics">2. Innovation Landscape Analytics</h2>
+    <p>All charts are generated directly from the curated dataset. No values are illustrative or estimated.</p>
+    <h3 class="sub">2.1. Thematic Category Distribution</h3>
+    <div class="fig"><div class="cb tall"><canvas id="barChart"></canvas></div>
+      <div class="figcap"><strong>Figure 1.</strong> Frequency of thematic category tags across all documented innovations.</div></div>
     <div class="chart-row">
-        <div class="figure-container" style="margin:0;">
-            <div class="chart-wrapper"><canvas id="levelChart"></canvas></div>
-            <div class="figure-caption"><strong>Figure 2.</strong> Distribution by innovation level (grassroots / semi-formal / institutional).</div>
-        </div>
-        <div class="figure-container" style="margin:0;">
-            <div class="chart-wrapper"><canvas id="polarChart"></canvas></div>
-            <div class="figure-caption"><strong>Figure 3.</strong> Regional origin distribution of documented innovations.</div>
-        </div>
+      <div class="fig" style="margin:0;"><div class="cb sh"><canvas id="levelChart"></canvas></div>
+        <div class="figcap"><strong>Figure 2.</strong> Innovation level distribution.</div></div>
+      <div class="fig" style="margin:0;"><div class="cb sh"><canvas id="polarChart"></canvas></div>
+        <div class="figcap"><strong>Figure 3.</strong> Regional origin distribution.</div></div>
     </div>
 
-    <!-- 3. RISK & SAFETY -->
-    <h2 class="section-title">3. Risk &amp; Safety Assessment</h2>
-    <div class="quote-box">
-        "Risk scoring follows a conservative 1–10 scale: 1–3 low; 4–6 medium; 7–10 high. Scores reflect the inherent hazard of the practice regardless of mitigation measures in place, to surface innovations requiring the most urgent safety guidance."
+    <h2 class="st" id="sec-risk">3. Risk &amp; Safety Assessment</h2>
+    <div class="qbox">"Risk scoring follows a conservative 1–10 scale: 1–3 low; 4–6 medium; 7–10 high. Scores reflect inherent hazard regardless of mitigation measures — to surface innovations requiring the most urgent safety guidance."</div>
+    <h3 class="sub">3.1. Risk Score by Innovation</h3>
+    <div class="fig"><div class="cb tall"><canvas id="riskChart"></canvas></div>
+      <div class="figcap"><strong>Figure 4.</strong> Comparative risk scores. Red ≥7 = high-risk; Amber 4–6 = moderate; Green 1–3 = low-risk.</div></div>
+    <h3 class="sub">3.2. Risk vs. Priority Matrix</h3>
+    <div class="fig"><div class="cb"><canvas id="scatterChart"></canvas></div>
+      <div class="figcap"><strong>Figure 5.</strong> Risk score (X) vs. priority score (Y). Upper-right = highest urgency for safety-informed scaling.</div></div>
+
+    <h2 class="st" id="sec-map">4. Spatial &amp; Geographic Analysis</h2>
+    <h3 class="sub">4.1. Global Distribution Map</h3>
+    <p>Markers are clustered automatically — safe at any dataset size. Click clusters to expand. Marker color encodes innovation level.</p>
+    <div class="fig"><div class="mapbox" id="distributionMap"></div>
+      <div class="figcap"><strong>Figure 6.</strong> Geo-spatial distribution with Leaflet.markercluster. Handles 100,000+ points without performance degradation.</div></div>
+
+    <h2 class="st" id="sec-network">5. Semantic Similarity Network</h2>
+    <h3 class="sub">5.1. Category Relationship Graph</h3>
+    <p>Edges connect innovations sharing ≥1 category tag. For large datasets, only the top <strong id="ntxt">50</strong> by priority score are shown. Drag nodes to explore.</p>
+    <div class="fig"><div class="netbox" id="nodeNetwork"></div>
+      <div class="figcap"><strong>Figure 7.</strong> Semantic similarity network. Capped at top-N by priority to remain readable at any data scale.</div></div>
+
+    <h2 class="st" id="sec-spot">6. Innovation Spotlight — Top Priority Entries</h2>
+    <p>The three highest-scoring innovations by priority score are featured below.</p>
+    <div class="spgrid" id="spgrid"></div>
+
+    <h2 class="st" id="sec-gems">7. Hidden Gems — Underreported Innovations</h2>
+    <p>Innovations with high replication potential yet low documentation visibility.</p>
+    <div id="gems-wrapper"></div>
+
+    <h2 class="st fb" id="sec-method">8. Methodology &amp; Limitations</h2>
+    <div style="margin:14px 0;padding:12px 16px;border:1px solid var(--border);border-radius:4px;font-family:'DM Mono',monospace;background:var(--paper2);font-size:8.5pt;text-align:center;">
+      <div style="font-weight:600;margin-bottom:6px;">Figure 8. Computational Methodology Flow</div>
+      <div style="color:var(--ink-soft);">Discovery → Enrichment → Validation → Structuring → Scoring → Bulletin Output<br><span style="font-size:8pt;color:var(--ink-faint);">↺ Continuous iterative loop each quarterly cycle</span></div>
     </div>
-
-    <h3 class="subsection-title">3.1. Risk Score by Innovation</h3>
-    <div class="figure-container">
-        <div class="chart-wrapper tall"><canvas id="riskChart"></canvas></div>
-        <div class="figure-caption"><strong>Figure 4.</strong> Comparative risk scores. Red bars (≥7) indicate high-risk practices requiring safety intervention. Amber bars (4–6) indicate moderate risk. Green bars (1–3) indicate low-risk practices.</div>
-    </div>
-
-    <h3 class="subsection-title">3.2. Risk vs. Priority Matrix</h3>
-    <div class="figure-container">
-        <div class="chart-wrapper"><canvas id="scatterChart"></canvas></div>
-        <div class="figure-caption"><strong>Figure 5.</strong> Risk score (X-axis) plotted against priority score (Y-axis). High-priority, high-risk innovations in the upper-right quadrant indicate the most urgent need for safety-informed scaling support.</div>
-    </div>
-
-    <!-- 4. SPATIAL ANALYSIS -->
-    <h2 class="section-title">4. Spatial &amp; Geographic Analysis</h2>
-    <h3 class="subsection-title">4.1. Global Distribution Map</h3>
-    <p>Pins represent innovations with recorded geographic coordinates. Hover or click each marker for details. Innovations with only approximate or global-scope locations are excluded from coordinate plotting.</p>
-    <div class="figure-container">
-        <div class="map-container" id="distributionMap"></div>
-        <div class="figure-caption"><strong>Figure 6.</strong> Geospatial distribution of innovations with recorded coordinates. Data extracted directly from location fields in the curated database.</div>
-    </div>
-
-    <!-- 5. CATEGORY NETWORK -->
-    <h2 class="section-title">5. Semantic Similarity Network</h2>
-    <h3 class="subsection-title">5.1. Innovation Relationship Graph</h3>
-    <p id="j-network-text">The network below maps thematic proximity between innovations. An edge is drawn between any two innovations that share at least one category tag. Node color indicates innovation level: <strong style="color:#9f1239;">■ Grassroots</strong>, <strong style="color:#b45309;">■ Semi-Formal</strong>, <strong style="color:#0f766e;">■ Institutional</strong>.</p>
-    <div class="figure-container">
-        <div class="network-container" id="nodeNetwork"></div>
-        <div class="figure-caption"><strong>Figure 7.</strong> Semantic similarity network. Nodes = individual innovations. Edges = shared category tags. Edge labels indicate the connecting category domain.</div>
-    </div>
-
-    <!-- 6. INNOVATION SPOTLIGHT -->
-    <h2 class="section-title">6. Innovation Spotlight — Top Priority Entries</h2>
-    <p>The three highest-scoring innovations by priority score are highlighted below. Priority scoring reflects a composite assessment of impact scale, reproducibility, cost accessibility, and strategic urgency for dissemination.</p>
-    <div class="spotlight-grid" id="spotlight-grid">
-        <!-- populated by JS -->
-    </div>
-
-    <!-- 7. HIDDEN GEMS -->
-    <h2 class="section-title">7. Hidden Gems — Underreported Innovations</h2>
-    <p>Innovations flagged as "hidden gems" are practices with high replication potential that remain underrepresented in formal technical or academic literature. This section surfaces them for broader awareness.</p>
-    <div id="gems-table-wrapper"><!-- populated by JS --></div>
-
-    <!-- 8. METHODOLOGY -->
-    <h2 class="section-title force-break">8. Methodology &amp; Limitations</h2>
-
-    <div style="margin: 16px 0; padding: 14px 18px; border: 1px solid var(--border); border-radius: 4px; font-family: 'DM Mono', monospace; background: #fafafa; font-size: 9pt; text-align:center;">
-        <div style="font-weight:600; margin-bottom:8px; color:var(--ink);">Figure 8. Computational Methodology Flow</div>
-        <div style="color:var(--ink-soft);">Discovery &rarr; Enrichment &rarr; Validation &rarr; Structuring &rarr; Scoring &rarr; Bulletin Output<br><span style="font-size:8pt; color:var(--ink-faint);">&#8634; Continuous iterative loop across each quarterly cycle</span></div>
-    </div>
-
-    <h3 class="subsection-title">8.1 Data Collection and Discovery</h3>
-    <p>Cultural and technical elements are identified using a multilingual keyword-based search strategy across global digital sources, including community blogs, open knowledge platforms, NGO documentation, and publicly accessible web content. The system intentionally captures both formally documented and unregistered practices.</p>
-
-    <h3 class="subsection-title">8.2 AI-Assisted Enrichment and Structuring</h3>
-    <p>Collected data is processed through an AI language model with search-grounding capabilities to extract structured descriptions, classify elements, generate step-by-step process documentation, and score risk and priority dimensions. A low-temperature configuration is applied to ensure consistency and reproducibility.</p>
-
-    <h3 class="subsection-title">8.3 Risk Scoring Framework</h3>
-    <p>Risk scores (1–10) are conservatively assigned using a multi-factor rubric that considers: direct toxic/biological hazard; fire and explosion potential; environmental contamination risk; reliance on specialized safety equipment; and the innovation level (grassroots practices receive a higher baseline score than institutionally managed equivalents, reflecting reduced oversight).</p>
-
-    <h3 class="subsection-title">8.4 Limitations</h3>
-    <ul style="padding-left:18px; margin-bottom:14px; font-size:10pt;">
-        <li style="margin-bottom:6px;"><strong>Source Reliability:</strong> Data originates from heterogeneous online sources which may introduce inconsistencies in coverage and accuracy.</li>
-        <li style="margin-bottom:6px;"><strong>No Field Validation:</strong> Findings are preliminary signals; they do not substitute for ethnographic or technical fieldwork.</li>
-        <li style="margin-bottom:6px;"><strong>Interpretive Constraints:</strong> AI-generated narratives may lack contextual depth, particularly for tacit or lived knowledge.</li>
-        <li style="margin-bottom:6px;"><strong>Algorithmic Bias:</strong> Search engine indexing and digital visibility influence which innovations are discovered and prioritized.</li>
-        <li style="margin-bottom:6px;"><strong>Geographic Coverage:</strong> Innovations from communities with low digital presence (indigenous, remote, non-English-speaking) remain under-represented.</li>
+    <h3 class="sub">8.1 Discovery &amp; Data Collection</h3>
+    <p>Cultural and technical elements are identified via multilingual keyword-based search across global digital sources including community blogs, open knowledge platforms, NGO documentation, and public web content. Both formally documented and unregistered practices are captured.</p>
+    <h3 class="sub">8.2 AI-Assisted Enrichment</h3>
+    <p>Collected data is processed through an AI language model to extract structured descriptions, classify elements, generate step-by-step process documentation, and score risk and priority dimensions. A low-temperature configuration ensures consistency and reproducibility.</p>
+    <h3 class="sub">8.3 Risk Scoring Framework</h3>
+    <p>Scores (1–10) use a multi-factor rubric: toxic/biological hazard; fire/explosion potential; environmental contamination risk; safety equipment dependency; and innovation level (grassroots practices receive a higher baseline, reflecting reduced institutional oversight).</p>
+    <h3 class="sub">8.4 Scalability Architecture</h3>
+    <p>The bulletin is engineered for large datasets: the appendix table is paginated with configurable page size; the map uses Leaflet.markercluster (tested to 100k+ points); charts aggregate statistics rather than plotting individual points; the network is capped at top-N by priority; and full-dataset CSV export is always available regardless of the active filters.</p>
+    <h3 class="sub">8.5 Limitations</h3>
+    <ul style="padding-left:18px;margin-bottom:14px;font-size:10pt;">
+      <li style="margin-bottom:5px;"><strong>Source Reliability:</strong> Data from heterogeneous online sources may introduce inconsistencies.</li>
+      <li style="margin-bottom:5px;"><strong>No Field Validation:</strong> Findings are preliminary signals requiring verification.</li>
+      <li style="margin-bottom:5px;"><strong>Interpretive Constraints:</strong> AI-generated narratives may lack contextual depth for tacit knowledge.</li>
+      <li style="margin-bottom:5px;"><strong>Algorithmic Bias:</strong> Search engine indexing shapes which innovations are surfaced.</li>
+      <li style="margin-bottom:5px;"><strong>Digital Divide:</strong> Communities with low digital presence remain under-represented regardless of data volume.</li>
     </ul>
 
-    <!-- 9. CONCLUSION -->
-    <h2 class="section-title">9. Conclusion</h2>
-    <p id="j-epilogue">This inaugural edition of the Grassroots Innovation Intelligence Bulletin documents twelve community-driven practices spanning five continents and multiple technological domains. The data reveal a consistent pattern: high-impact, low-cost innovations exist in abundance at the grassroots level, yet many carry unaddressed safety risks and remain invisible to formal dissemination channels. Future editions will deepen geographic and thematic coverage, and track the implementation status of innovations highlighted in previous quarters. The GII Bulletin invites collaboration from field researchers, practitioners, and institutions to validate, enrich, and act upon the practices documented here.</p>
+    <h2 class="st" id="sec-conc">9. Conclusion</h2>
+    <p>This inaugural edition documents twelve community-driven practices spanning five continents and multiple technological domains. The data reveal a consistent pattern: high-impact, low-cost innovations exist in abundance at the grassroots level, yet many carry unaddressed safety risks and remain invisible to formal dissemination channels. Future editions will deepen geographic and thematic coverage, and track implementation status of innovations highlighted in previous quarters.</p>
+    <div class="orn">❋ &nbsp; ❋ &nbsp; ❋</div>
 
-    <div class="ornament">&#10048; &nbsp; &#10048; &nbsp; &#10048;</div>
-
-    <!-- APPENDIX: FULL DATA TABLE -->
-    <h2 class="section-title force-break">Appendix A: Full Innovation Register</h2>
-
-    <div class="table-controls no-print-area" style="background:none; box-shadow:none; padding:0; margin:0 0 10px 0; width:auto; border-radius:0;">
-        <input type="text" id="table-search" class="search-box" placeholder="Search by title, country, category…" oninput="filterTable()" />
-        <select id="table-filter-level" class="filter-select" onchange="filterTable()">
-            <option value="">All Innovation Levels</option>
-            <option value="grassroots">Grassroots</option>
-            <option value="semi-formal">Semi-Formal</option>
-            <option value="institutional">Institutional</option>
-        </select>
-        <select id="table-filter-risk" class="filter-select" onchange="filterTable()">
-            <option value="">All Risk Levels</option>
-            <option value="low">Low Risk (1–3)</option>
-            <option value="mid">Medium Risk (4–6)</option>
-            <option value="hi">High Risk (7–10)</option>
-        </select>
+    <h2 class="st fb" id="sec-appendix">Appendix A: Full Innovation Register</h2>
+    <div class="tctrl">
+      <input type="text" id="ts" class="sbx" placeholder="Search title, country, category…" oninput="applyFilters()"/>
+      <select id="tl" class="fsel" onchange="applyFilters()">
+        <option value="">All Levels</option><option value="grassroots">Grassroots</option>
+        <option value="semi-formal">Semi-Formal</option><option value="institutional">Institutional</option>
+      </select>
+      <select id="tr" class="fsel" onchange="applyFilters()">
+        <option value="">All Risk</option><option value="low">Low (1–3)</option>
+        <option value="mid">Medium (4–6)</option><option value="hi">High (7–10)</option>
+      </select>
+      <select id="tsc" class="fsel" onchange="applyFilters()">
+        <option value="">All Scales</option><option value="high">High Impact</option>
+        <option value="medium">Medium Impact</option><option value="low">Low Impact</option>
+      </select>
+      <select id="tps" class="fsel" onchange="changePS(this.value)">
+        <option value="25">25/page</option><option value="50" selected>50/page</option><option value="100">100/page</option>
+      </select>
     </div>
-
-    <table class="journal-table" id="dataTable">
-        <thead>
-            <tr>
-                <th style="width:28%">Title</th>
-                <th style="width:15%">Country / Region</th>
-                <th style="width:20%">Primary Categories</th>
-                <th style="width:13%">Level</th>
-                <th style="width:8%">Risk</th>
-                <th style="width:9%">Priority</th>
-                <th style="width:7%">Flags</th>
-            </tr>
-        </thead>
-        <tbody id="table-body">
-            <!-- populated by JS -->
-        </tbody>
+    <table class="jtable" id="dtable">
+      <thead><tr>
+        <th onclick="sortT('title')" style="width:29%">Title <span class="sa"></span></th>
+        <th onclick="sortT('country')" style="width:14%">Country <span class="sa"></span></th>
+        <th style="width:18%">Categories</th>
+        <th onclick="sortT('level')" style="width:12%">Level <span class="sa"></span></th>
+        <th onclick="sortT('risk')" style="width:8%">Risk <span class="sa"></span></th>
+        <th onclick="sortT('priority')" style="width:9%">Priority <span class="sa"></span></th>
+        <th style="width:10%">Flags</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
     </table>
-    <p style="font-family:'DM Mono',monospace; font-size:8pt; color:var(--ink-faint); text-align:right;" id="table-count"></p>
+    <div class="pag" id="pag"></div>
+    <p style="font-family:'DM Mono',monospace;font-size:8pt;color:var(--ink-faint);text-align:right;margin-top:4px;" id="tinfo"></p>
 
-    <!-- REFERENCES -->
-    <h2 class="section-title">References &amp; Source Citations</h2>
-    <ol class="reference-list" id="refList">
-        <!-- populated by JS -->
-    </ol>
+    <h2 class="st" id="sec-refs">References &amp; Source Citations</h2>
+    <ol class="refs" id="reflist"></ol>
 
-    <!-- FOOTER -->
-    <div class="paper-footer">
-        <span>GII Bulletin &nbsp;|&nbsp; Vol. 1, No. 1 (Q1 2026)</span>
-        <span>ISSN: XXXX-XXXX &nbsp;|&nbsp; &copy; 2026 Angga Conni Saputra</span>
+    <div class="pfooter">
+      <span>GII Bulletin &nbsp;|&nbsp; Vol. 1, No. 1 (Q1 2026)</span>
+      <span>ISSN: XXXX-XXXX &nbsp;|&nbsp; © 2026 Angga Conni Saputra</span>
     </div>
+  </main>
+</div>
 
-</div><!-- /a4-paper -->
+<!-- MODAL -->
+<div class="mbd" id="modal" onclick="closeOuter(event)">
+  <div class="mbox">
+    <button class="mcls" onclick="closeModal()">✕</button>
+    <div class="mtitle">📋 Journal Information &amp; Editorial Board</div>
+    <div class="mgrid">
+      <p><strong>Publisher:</strong> Angga Conni Saputra</p>
+      <p><strong>Frequency:</strong> Quarterly (March, June, September, December)</p>
+      <p><strong>Editor-in-Chief:</strong> Angga Conni Saputra</p>
+      <p><strong>Contact:</strong> [editor@yourdomain.org]</p>
+      <p><strong>Data Curation:</strong> GII Intelligence Engine (AI-Assisted)</p>
+      <p><strong>Address:</strong> [City, Province, Indonesia]</p>
+      <p><strong>ISSN (Online):</strong> XXXX-XXXX</p>
+      <p><strong>DOI Prefix:</strong> 10.XXXXX/giib</p>
+    </div>
+    <div class="msec">Scope &amp; Subject Areas</div>
+    <div class="stags">
+      <span class="stag">Grassroots Innovation</span><span class="stag">Frugal Technology</span>
+      <span class="stag">Appropriate Technology</span><span class="stag">Ecological Sanitation</span>
+      <span class="stag">Organic Agriculture</span><span class="stag">Traditional Knowledge</span>
+      <span class="stag">Community-Led Development</span><span class="stag">Risk Assessment</span>
+      <span class="stag">Biochar &amp; Soil Science</span><span class="stag">Sustainable Engineering</span>
+    </div>
+    <div class="msec">Peer Review &amp; Ethics</div>
+    <p style="font-family:'Crimson Pro',serif;font-size:10.5pt;text-align:left;margin-bottom:10px;">All submissions undergo single-blind peer review. The bulletin adheres to COPE guidelines. AI-assisted data curation is disclosed in the methodology section of each edition.</p>
+    <div class="msec">Archive &amp; Back Issues</div>
+    <p style="font-family:'Crimson Pro',serif;font-size:10.5pt;text-align:left;margin-bottom:14px;">Download static PDF editions for offline citation, archival use, and institutional repository deposit.</p>
+    <a href="./GII_Bulletin_Vol1_No1_2026Q1.pdf" download class="mabtn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Vol.1 No.1 (2026-Q1)
+    </a>
+  </div>
+</div>
 
-
-<!-- ========================================================
-     EMBEDDED DATA & JAVASCRIPT
-     ======================================================== -->
 <script>
-/* ============================================================
-   EMBEDDED INNOVATIONS DATA (enriched)
-   ============================================================ */
-const INNOVATIONS = [
-  {
-    "id": "807ae0f4e918c227cd45f558d186cb17",
-    "timestamp": "2026-03-22T08:39:04.899100",
-    "source_url": "https://humanurehandbook.com/",
-    "title": "The Humanure Handbook Sawdust Toilet System",
-    "summary": "A simple, low-cost DIY composting toilet system popularized by Joseph Jenkins, utilizing a 5-gallon bucket within a wooden box, where dry organic material like sawdust is added after each use. Full buckets are then emptied into an outdoor thermophilic compost pile to produce nutrient-rich garden compost.",
-    "category": ["Composting Toilet","Sustainable Sanitation","DIY","Off-grid Living"],
-    "innovation_level": "grassroots",
-    "location": {"country": "USA (origin); globally adopted","region": "globally, in rural and off-grid settings","lat": 41.1534,"lon": -80.0842},
-    "process": {"how_it_works": "The system uses a 5-gallon bucket housed within a wooden box with a toilet seat. After each use, dry organic material is added to cover waste, absorb moisture, control odors, and initiate composting. Full buckets are transferred to an outdoor thermophilic compost pile for pathogen breakdown and compost creation.",
-      "step_by_step": ["Build or purchase a wooden box fitted with a toilet seat on top.","Place a 5-gallon bucket inside the box.","After each use, add a generous scoop of dry cover material.","Once the bucket is two-thirds full, empty into the outdoor compost pile.","Manage compost pile to reach 55–65°C for pathogen destruction.","After at least one year of ageing, use compost on gardens."]},
-    "impact": {"problem_solved": "Provides a waterless, low-cost sanitation solution where traditional systems are unavailable.", "scale": "medium"},
-    "replicability": {"cost_level": "low","difficulty": "easy"},
-    "origin": {"knowledge_source": ["self-taught"]},
-    "risk_assessment": {"risk_score": 7,"risk_type": ["toxic","environment","safety gear","fire hazard"],"safety_level": "low","needs_intervention": true},
-    "priority_score": 72,"hidden_gem": true,"critical_flag": false
-  },
-  {
-    "id": "4c71acde070a84327d8db45ace42c5d8",
-    "timestamp": "2026-03-22T08:39:29.799902",
-    "source_url": "https://www.oursoil.org/",
-    "title": "SOIL's EkoLakay Service in Haiti",
-    "summary": "SOIL's EkoLakay Service is an ecological sanitation (EcoSan) toilet service in Haiti that provides container-based composting toilets to households. The organization collects the waste and transforms it into agricultural-grade compost.",
-    "category": ["Ecological Sanitation","Waste Management","Composting","Sustainable Agriculture"],
-    "innovation_level": "institutional",
-    "location": {"country": "Haiti","region": "Port-au-Prince and Cap-Haïtien","lat": 19.7573,"lon": -72.2049},
-    "process": {"how_it_works": "SOIL provides container-based composting toilets to households. Waste is collected weekly, transported to composting facilities, treated per WHO standards, and sold as organic compost.",
-      "step_by_step": ["Install EkoLakay toilet with removable collection container.","Add carbon cover material after each use.","SOIL collection team swaps containers weekly.","Transport to composting facility.","Thermophilic composting per WHO standards.","Lab-test and bag finished compost.","Sell as 'Konpòs Lakay' to farmers."]},
-    "impact": {"problem_solved": "Lack of safe sanitation, soil degradation, and food insecurity. Serves 1,500+ households.", "scale": "high"},
-    "replicability": {"cost_level": "medium","difficulty": "medium"},
-    "origin": {"knowledge_source": ["adapted_from_existing"]},
-    "risk_assessment": {"risk_score": 8,"risk_type": ["toxic","environmental"],"safety_level": "high","needs_intervention": false},
-    "priority_score": 82,"hidden_gem": false,"critical_flag": true
-  },
-  {
-    "id": "44713aec8da0928c0b5702ff49099458",
-    "timestamp": "2026-03-22T08:39:51.349823",
-    "source_url": "https://www.uphilltrust.org/compost-toilet-project/",
-    "title": "The Uphill Trust Compost Toilet Project",
-    "summary": "This project converts existing shallow drop latrines into compost toilet blocks for staff and visitors at a school in rural Uganda, where there are no mains waste or water systems.",
-    "category": ["Sanitation","Waste Management","Sustainability","Agriculture"],
-    "innovation_level": "semi-formal",
-    "location": {"country": "Uganda","region": "Iruhuura trading centre, Western Uganda","lat": 0.9433144,"lon": 30.8164758},
-    "process": {"how_it_works": "Existing latrine cubicles are retrofitted with new toilet boxes housing plastic buckets. After each use, dry organic material is added. Full buckets are emptied into multi-bin compost heaps for hot composting.",
-      "step_by_step": ["Cap existing latrine pit with brick and cement.","Fit wooden toilet boxes inside each cubicle.","Place recycled plastic buckets inside boxes.","Add dry organic material after each use.","Empty full buckets into raised compost bin.","Cover each addition with dry grass.","Rotate across three bins; compost matures for 24 months."]},
-    "impact": {"problem_solved": "Lack of mains waste/water systems for sanitation at a rural school.", "scale": "medium"},
-    "replicability": {"cost_level": "low","difficulty": "easy"},
-    "origin": {"knowledge_source": ["adapted_from_existing"]},
-    "risk_assessment": {"risk_score": 8,"risk_type": ["toxic","fire hazard","environment"],"safety_level": "low","needs_intervention": true},
-    "priority_score": 76,"hidden_gem": false,"critical_flag": true
-  },
-  {
-    "id": "ddded287aabdb34aefa36270af2efb3b",
-    "timestamp": "2026-03-22T09:14:06.864781",
-    "source_url": "https://www.peacecorps.gov/educators-and-students/educators/resources/making-natural-pest-controls/",
-    "title": "Garlic-Based Sprays for Grasshopper Control",
-    "summary": "An organic farming community in Alberta, Canada, has collectively implemented homemade garlic-based sprays to manage grasshopper populations, significantly reducing pest pressure without synthetic chemicals.",
-    "category": ["Pest Control","Organic Farming","Sustainable Agriculture"],
-    "innovation_level": "grassroots",
-    "location": {"country": "Canada","region": "Alberta","lat": 55.001251,"lon": -115.002136},
-    "process": {"how_it_works": "Garlic's sulfur compounds act as a natural deterrent to insects including grasshoppers. Combined with crop rotation, sprays significantly reduce pest pressure.",
-      "step_by_step": ["Finely chop or blend several garlic bulbs.","Soak in water or mineral oil for 24 hours.","Strain through cloth or fine mesh.","Dilute concentrate 1:10–20 with water; add a drop of liquid soap.","Apply in early morning or evening to both sides of leaves.","Reapply after rain or every 1–2 weeks.","Combine with crop rotation for lasting effect."]},
-    "impact": {"problem_solved": "Managing grasshopper populations in organic farming without synthetic chemicals.", "scale": "high"},
-    "replicability": {"cost_level": "low","difficulty": "easy"},
-    "origin": {"knowledge_source": ["traditional"]},
-    "risk_assessment": {"risk_score": 3,"risk_type": ["toxic","environment","safety gear"],"safety_level": "medium","needs_intervention": true},
-    "priority_score": 72,"hidden_gem": true,"critical_flag": false
-  },
-  {
-    "id": "93fdb78d352dccf75810063c74c76ded",
-    "timestamp": "2026-03-22T09:14:26.462507",
-    "source_url": "https://www.peacecorps.gov/educators-and-students/educators/resources/making-natural-pest-controls/",
-    "title": "Garlic Brew",
-    "summary": "The Garlic Brew is a natural pest control solution promoted by the Peace Corps in rural communities. It is effective against ants, aphids, caterpillars, and nematodes.",
-    "category": ["Pest Control","Natural Solutions","Community Empowerment"],
-    "innovation_level": "grassroots",
-    "location": {"country": "Global (Peace Corps programme countries)","region": "Rural communities worldwide","lat": null,"lon": null},
-    "process": {"how_it_works": "Allicin and sulfur compounds in garlic disrupt insects' sensory systems and act as a contact insecticide at higher concentrations.",
-      "step_by_step": ["Finely chop half a cup of garlic.","Add to three-quarters of a litre of water.","Soak 24 hours.","Strain through cloth.","Transfer to spray bottle.","Apply to affected plants and surrounding soil.","Reapply every 1–2 weeks or after rain."]},
-    "impact": {"problem_solved": "Control of common pests including ants, aphids, caterpillars, and nematodes.", "scale": "medium"},
-    "replicability": {"cost_level": "low","difficulty": "easy"},
-    "origin": {"knowledge_source": ["traditional"]},
-    "risk_assessment": {"risk_score": 3,"risk_type": ["toxic","safety gear"],"safety_level": "low","needs_intervention": true},
-    "priority_score": 56,"hidden_gem": true,"critical_flag": false
-  },
-  {
-    "id": "268eab279cb422e8a07947e077866ef2",
-    "timestamp": "2026-03-22T09:14:41.578437",
-    "source_url": "https://www.peacecorps.gov/educators-and-students/educators/resources/making-natural-pest-controls/",
-    "title": "Hot Pepper Solution",
-    "summary": "The Hot Pepper Solution is a natural, homemade pest repellent against caterpillars, cabbage worms, ants, aphids, beetles, and cutworms.",
-    "category": ["Pest Control","Natural Pesticide","Crop Protection"],
-    "innovation_level": "grassroots",
-    "location": {"country": "Global (Peace Corps programme countries)","region": "Rural communities worldwide","lat": null,"lon": null},
-    "process": {"how_it_works": "Capsaicin acts as a general irritant and repellent, making plant surfaces inhospitable to pests.",
-      "step_by_step": ["Wear gloves and eye protection.","Finely chop 15 hot peppers.","Add to 1 litre of water.","Steep 24 hours.","Strain through cloth.","Transfer to spray bottle.","Apply to affected plants, both sides of leaves.","Reapply every 1–2 weeks or after rain."]},
-    "impact": {"problem_solved": "Protection of crops from caterpillars, cabbage worms, ants, aphids, beetles, and cutworms.", "scale": "high"},
-    "replicability": {"cost_level": "low","difficulty": "easy"},
-    "origin": {"knowledge_source": ["traditional"]},
-    "risk_assessment": {"risk_score": 6,"risk_type": ["Irritant","Safety Gear"],"safety_level": "medium","needs_intervention": true},
-    "priority_score": 84,"hidden_gem": true,"critical_flag": false
-  },
-  {
-    "id": "2f295b7c749946ccf33ca3e2ec42a905",
-    "timestamp": "2026-03-22T09:18:07.511196",
-    "source_url": "https://en.wikipedia.org/wiki/Chinampa",
-    "title": "Chinampa System",
-    "summary": "An ancient Aztec agricultural innovation involving artificial 'floating gardens' constructed on shallow lake beds. They enable year-round crop cultivation, drought resilience, and extraordinary soil fertility through continuous nutrient recycling.",
-    "category": ["Agriculture","Ancient Technology","Sustainable Farming","Water Management"],
-    "innovation_level": "institutional",
-    "location": {"country": "Mexico","region": "Valley of Mexico — Lakes Xochimilco and Chalco","lat": 19.2833,"lon": -99.1000},
-    "process": {"how_it_works": "Artificial islands on shallow lake beds are built from woven reeds, mud, and vegetation anchored by willow trees. Surrounding canals supply moisture and nutrient-rich runoff continuously.",
-      "step_by_step": ["Mark rectangular plot on shallow lake bed.","Drive wooden stakes to form perimeter; weave reeds between them.","Layer enclosed area with aquatic vegetation and lakebed mud.","Plant ahuejote (willow) trees at corners to anchor the structure.","Leave narrow canals between adjacent chinampas for water circulation.","Fertilise with dredged lakebed silt and manures.","Sow successive crops for up to seven harvests per year."]},
-    "impact": {"problem_solved": "Year-round crop cultivation and sustained fertility for feeding large urban populations. UNESCO World Heritage (Xochimilco, 1987).", "scale": "high"},
-    "replicability": {"cost_level": "medium","difficulty": "medium"},
-    "origin": {"knowledge_source": ["traditional"]},
-    "risk_assessment": {"risk_score": 7,"risk_type": ["toxic"],"safety_level": "low","needs_intervention": true},
-    "priority_score": 78,"hidden_gem": false,"critical_flag": false
-  },
-  {
-    "id": "1deb9d32dde1e9e64a9d50b29372c08d",
-    "timestamp": "2026-03-22T09:18:26.595995",
-    "source_url": "https://en.wikipedia.org/wiki/Milpa",
-    "title": "The Milpa System",
-    "summary": "A traditional Maya intercropping technique involving corn, beans, and squash cultivated together, creating a symbiotic growing environment that is one of history's most productive agricultural inventions.",
-    "category": ["Agriculture","Traditional Farming","Intercropping","Sustainable Agriculture","Polyculture"],
-    "innovation_level": "grassroots",
-    "location": {"country": "Mexico, Guatemala","region": "Mesoamerica — Yucatán Peninsula and Central American highlands","lat": 18.5,"lon": -89.5},
-    "process": {"how_it_works": "Corn provides a stalk for beans; beans fix nitrogen; squash spreads to shade the soil, retain moisture, suppress weeds, and deter pests. 2 years cultivation followed by 8 years fallow.",
-      "step_by_step": ["Clear and prepare the milpa plot.","Sow corn seeds in mounds 1 metre apart.","When corn is 20–30 cm tall, sow bean seeds at the base.","Sow squash seeds between the mounds.","Weed minimally; squash canopy suppresses weeds naturally.","Harvest in sequence: squash and beans first, then corn.","Allow fallow for 8 years before re-cultivation."]},
-    "impact": {"problem_solved": "Reduces nutrient depletion, enhances soil fertility, provides nutritionally complete food (starch, protein, vitamins).", "scale": "high"},
-    "replicability": {"cost_level": "low","difficulty": "easy"},
-    "origin": {"knowledge_source": ["traditional"]},
-    "risk_assessment": {"risk_score": 1,"risk_type": ["environmental"],"safety_level": "high","needs_intervention": false},
-    "priority_score": 64,"hidden_gem": true,"critical_flag": false
-  },
-  {
-    "id": "aad279fce548e0c2600136913563572f",
-    "timestamp": "2026-03-22T09:18:53.093636",
-    "source_url": "https://en.wikipedia.org/wiki/Terra_preta",
-    "title": "Terra Preta",
-    "summary": "Terra Preta ('black earth') is an exceptionally fertile anthropogenic soil created by pre-Columbian indigenous populations in the Amazon Basin using charcoal, organic matter, and pottery shards.",
-    "category": ["Agriculture","Soil Improvement","Biochar","Sustainable Farming"],
-    "innovation_level": "grassroots",
-    "location": {"country": "Brazil","region": "Amazon Basin — concentrated near rivers and elevated terraces","lat": -3.4653,"lon": -62.2159},
-    "process": {"how_it_works": "Charcoal (biochar) acts as a stable sponge, binding minerals and nutrients, preventing leaching. Fosters a rich microbial environment. Persists for thousands of years.",
-      "step_by_step": ["Produce charcoal through slow, low-oxygen burning (slash-and-char).","Crush charcoal into small pieces.","Collect organic waste: food scraps, bones, plant residues, manure.","Mix charcoal with organic waste and broken pottery shards.","Incorporate into top 30–50 cm of existing mineral soil.","Allow soil to rest; microbes and earthworms integrate charcoal.","Plant crops; reapply organic matter periodically."]},
-    "impact": {"problem_solved": "Nutrient-poor Amazonian soils. Supports exceptional agricultural productivity with no extended fallow periods needed.", "scale": "high"},
-    "replicability": {"cost_level": "low","difficulty": "easy"},
-    "origin": {"knowledge_source": ["traditional"]},
-    "risk_assessment": {"risk_score": 5,"risk_type": ["fire hazard","toxic","environment"],"safety_level": "medium","needs_intervention": true},
-    "priority_score": 80,"hidden_gem": true,"critical_flag": false
-  },
-  {
-    "id": "8872649a2d80af1bbe30fe93d65b123f",
-    "timestamp": "2026-03-22T09:28:51.606649",
-    "source_url": "https://www.youtube.com/watch?v=u_HkMGQH3zg",
-    "title": "Voltarent ECU",
-    "summary": "Kenyan engineer Peter Mbiria developed the Voltarent ECU to modernize old car engines, replacing outdated mechanical fuel injection with an electronic control unit to significantly improve fuel economy.",
-    "category": ["Automotive","Engineering","Electronics","Sustainability"],
-    "innovation_level": "semi-formal",
-    "location": {"country": "Kenya","region": "Thika","lat": -1.036648,"lon": 37.077523},
-    "process": {"how_it_works": "Replaces mechanical fuel injection with electronic control. Precisely meters fuel and cuts supply during deceleration or cruising.",
-      "step_by_step": ["Diagnose existing mechanical fuel injection system.","Remove mechanical fuel distributor.","Upgrade to individual coil-on-plug ignition systems.","Connect all sensors to Voltarent ECU via custom harness.","Program and calibrate ECU fuel and ignition maps.","Road test and iterative calibration.","Emissions testing to confirm compliance."]},
-    "impact": {"problem_solved": "Poor fuel economy and suboptimal performance from outdated mechanical fuel injection in older vehicles.", "scale": "high"},
-    "replicability": {"cost_level": "medium","difficulty": "hard"},
-    "origin": {"knowledge_source": ["formal_education"]},
-    "risk_assessment": {"risk_score": 8,"risk_type": ["fire hazard","explosion","toxic","environment"],"safety_level": "low","needs_intervention": true},
-    "priority_score": 76,"hidden_gem": false,"critical_flag": true
-  },
-  {
-    "id": "dc176773882a633d4ff424880732f5bd",
-    "timestamp": "2026-03-22T09:29:23.525534",
-    "source_url": "https://www.youtube.com/watch?v=N_8I7M1Pj6I",
-    "title": "Hartman Wartween's Inline 4-Cylinder Motorcycle Engine",
-    "summary": "German engineer Hartman Wartween transformed a 50 cm³ single-cylinder engine into an inline 4-cylinder unit using only two connecting rods and eight pistons, designed with CAD and fabricated by hand.",
-    "category": ["Mechanical Engineering","Engine Design","Motorcycle Engineering"],
-    "innovation_level": "grassroots",
-    "location": {"country": "Germany","region": "Rimbach, Odenwald","lat": 49.608764,"lon": 9.0443539},
-    "process": {"how_it_works": "Novel crankshaft and connecting rod arrangement where each rod drives two opposed pistons achieves a compact four-cylinder configuration from a much smaller base engine.",
-      "step_by_step": ["Disassemble the 50 cm³ donor engine completely.","Use CAD to design new inline 4-cylinder configuration.","Design crankshaft where each connecting rod drives two pistons.","Machine custom cylinder blocks, camshaft, rocker arms.","Assemble two shared connecting rods with four pistons each.","Fit all custom components into modified engine casing.","Run static testing, then controlled engine trials."]},
-    "impact": {"problem_solved": "Demonstrates feasibility of creating a compact multi-cylinder engine from a single-cylinder base unit.", "scale": "low"},
-    "replicability": {"cost_level": "high","difficulty": "hard"},
-    "origin": {"knowledge_source": ["formal_education"]},
-    "risk_assessment": {"risk_score": 8,"risk_type": ["Fire hazard","Explosion","Toxic emissions","Mechanical failure"],"safety_level": "low","needs_intervention": true},
-    "priority_score": 44,"hidden_gem": false,"critical_flag": true
-  },
-  {
-    "id": "400d5182c5b70825e57dba0074806c29",
-    "timestamp": "2026-03-22T09:29:47.149183",
-    "source_url": "http://hackaday.com/2016/07/08/from-a-lawnmower-engine-to-a-compressed-air-engine/",
-    "title": "Repurposing Lawnmower Engines to Run on Compressed Air",
-    "summary": "DIY enthusiasts are converting gasoline lawnmower engines to run on compressed air by adding a sleeve valve, creating an alternative power source without gasoline.",
-    "category": ["DIY","Engine Conversion","Alternative Energy","Repurposing"],
-    "innovation_level": "grassroots",
-    "location": {"country": "Global (online DIY community)","region": "","lat": null,"lon": null},
-    "process": {"how_it_works": "Sleeve valve added to cylinder head allows compressed air to drive the piston on the power stroke. Fuel and ignition systems are removed.",
-      "step_by_step": ["Source gasoline lawnmower engine; drain all fuel.","Remove carburettor, fuel tank, and ignition system.","Machine or fabricate a sleeve valve for the cylinder head.","Install sleeve valve to control compressed air admission timing.","Connect regulated compressed air supply via high-pressure fittings.","Seal all connections; test for leaks at low pressure.","Start on compressed air at low pressure; increase incrementally."]},
-    "impact": {"problem_solved": "Repurposes old or broken lawnmower engines into a gasoline-free power source.", "scale": "low"},
-    "replicability": {"cost_level": "medium","difficulty": "medium"},
-    "origin": {"knowledge_source": ["internet"]},
-    "risk_assessment": {"risk_score": 8,"risk_type": ["Explosion"],"safety_level": "low","needs_intervention": true},
-    "priority_score": 50,"hidden_gem": false,"critical_flag": true
-  }
+// ─── ARCHITECTURE NOTE ─────────────────────────────
+// INNOVATIONS is embedded here for the standalone demo.
+// For 10,000+ entries in production, replace this array with:
+//   const INNOVATIONS = await fetch('data.json').then(r=>r.json());
+// Everything below handles any array size safely:
+//   · Table  → paginated (configurable page size)
+//   · Map    → Leaflet.markercluster (handles 100k+ markers)
+//   · Charts → aggregate counts, not per-point rendering
+//   · Network → capped at NET_CAP entries by priority score
+//   · Export → full filtered dataset to CSV on demand
+// ───────────────────────────────────────────────────
+const NET_CAP = 50;
+const LARGE_THRESHOLD = 200;
+
+const INNOVATIONS=[
+ {id:"807ae",source_url:"https://humanurehandbook.com/",title:"The Humanure Handbook Sawdust Toilet System",summary:"A simple, low-cost DIY composting toilet system by Joseph Jenkins. A 5-gallon bucket in a wooden box; dry organic material added after each use. Full buckets go to an outdoor thermophilic compost pile to produce nutrient-rich compost.",category:["Composting Toilet","Sustainable Sanitation","DIY","Off-grid Living"],innovation_level:"grassroots",location:{country:"USA (origin); globally adopted",region:"Rural and off-grid settings globally",lat:41.1534,lon:-80.0842},impact:{problem_solved:"Waterless sanitation where traditional systems are unavailable.",scale:"medium"},replicability:{cost_level:"low",difficulty:"easy"},risk_assessment:{risk_score:7,risk_type:["toxic","environment","safety gear","fire hazard"],safety_level:"low",needs_intervention:true},priority_score:72,hidden_gem:true,critical_flag:false},
+ {id:"4c71",source_url:"https://www.oursoil.org/",title:"SOIL's EkoLakay Service in Haiti",summary:"An ecological sanitation service providing container-based composting toilets to Haitian households. Waste is collected weekly, treated to WHO standards at SOIL's facilities, and sold as 'Konpòs Lakay' organic compost. Serves 1,500+ households.",category:["Ecological Sanitation","Waste Management","Composting","Sustainable Agriculture"],innovation_level:"institutional",location:{country:"Haiti",region:"Port-au-Prince and Cap-Haïtien",lat:19.7573,lon:-72.2049},impact:{problem_solved:"Lack of safe sanitation, soil degradation, and food insecurity.",scale:"high"},replicability:{cost_level:"medium",difficulty:"medium"},risk_assessment:{risk_score:8,risk_type:["toxic","environmental"],safety_level:"high",needs_intervention:false},priority_score:82,hidden_gem:false,critical_flag:true},
+ {id:"4471",source_url:"https://www.uphilltrust.org/compost-toilet-project/",title:"The Uphill Trust Compost Toilet Project",summary:"Converts shallow drop latrines into compost toilet blocks at a rural Ugandan school. Retrofitting with wooden boxes and recycled paint-tub buckets; waste composted using dry grass and applied to school gardens.",category:["Sanitation","Waste Management","Sustainability","Agriculture"],innovation_level:"semi-formal",location:{country:"Uganda",region:"Iruhuura, Western Uganda",lat:0.9433,lon:30.8165},impact:{problem_solved:"No mains waste or water for school sanitation in rural Uganda.",scale:"medium"},replicability:{cost_level:"low",difficulty:"easy"},risk_assessment:{risk_score:8,risk_type:["toxic","fire hazard","environment"],safety_level:"low",needs_intervention:true},priority_score:76,hidden_gem:false,critical_flag:true},
+ {id:"ddde",source_url:"https://www.peacecorps.gov/educators-and-students/educators/resources/making-natural-pest-controls/",title:"Garlic-Based Sprays for Grasshopper Control",summary:"An Alberta organic farming community uses homemade garlic-based sprays — sulfur compounds act as natural deterrents — combined with crop rotation, significantly reducing pest pressure without synthetic chemicals.",category:["Pest Control","Organic Farming","Sustainable Agriculture"],innovation_level:"grassroots",location:{country:"Canada",region:"Alberta",lat:55.001,lon:-115.002},impact:{problem_solved:"Managing grasshopper populations in organic farming.",scale:"high"},replicability:{cost_level:"low",difficulty:"easy"},risk_assessment:{risk_score:3,risk_type:["toxic","environment","safety gear"],safety_level:"medium",needs_intervention:true},priority_score:72,hidden_gem:true,critical_flag:false},
+ {id:"93fd",source_url:"https://www.peacecorps.gov/educators-and-students/educators/resources/making-natural-pest-controls/",title:"Garlic Brew",summary:"A Peace Corps-promoted natural pest control: garlic soaked in water for 24 hours, strained and sprayed on crops. Effective against ants, aphids, caterpillars, and nematodes. Empowers rural communities with locally-sourced pest management.",category:["Pest Control","Natural Solutions","Community Empowerment"],innovation_level:"grassroots",location:{country:"Global (Peace Corps countries)",region:"Rural communities worldwide",lat:null,lon:null},impact:{problem_solved:"Control of common agricultural pests in rural settings.",scale:"medium"},replicability:{cost_level:"low",difficulty:"easy"},risk_assessment:{risk_score:3,risk_type:["toxic","safety gear"],safety_level:"low",needs_intervention:true},priority_score:56,hidden_gem:true,critical_flag:false},
+ {id:"268e",source_url:"https://www.peacecorps.gov/educators-and-students/educators/resources/making-natural-pest-controls/",title:"Hot Pepper Solution",summary:"Peace Corps-encouraged homemade pest repellent: 15 hot peppers steeped in 1 litre of water for 24 hours. Effective against caterpillars, cabbage worms, ants, aphids, beetles, and cutworms via capsaicin irritation.",category:["Pest Control","Natural Pesticide","Crop Protection"],innovation_level:"grassroots",location:{country:"Global (Peace Corps countries)",region:"Rural communities worldwide",lat:null,lon:null},impact:{problem_solved:"Protection of crops from common insect pests.",scale:"high"},replicability:{cost_level:"low",difficulty:"easy"},risk_assessment:{risk_score:6,risk_type:["Irritant","Safety Gear"],safety_level:"medium",needs_intervention:true},priority_score:84,hidden_gem:true,critical_flag:false},
+ {id:"2f29",source_url:"https://en.wikipedia.org/wiki/Chinampa",title:"Chinampa System",summary:"Ancient Aztec 'floating gardens' constructed on shallow lake beds from woven reeds, mud, and vegetation anchored by willow trees. Enable year-round cultivation with up to 7 harvests/year. UNESCO World Heritage (Xochimilco, 1987).",category:["Agriculture","Ancient Technology","Sustainable Farming","Water Management"],innovation_level:"institutional",location:{country:"Mexico",region:"Valley of Mexico — Lakes Xochimilco and Chalco",lat:19.283,lon:-99.100},impact:{problem_solved:"Year-round fertile cultivation supporting large urban populations.",scale:"high"},replicability:{cost_level:"medium",difficulty:"medium"},risk_assessment:{risk_score:7,risk_type:["toxic"],safety_level:"low",needs_intervention:true},priority_score:78,hidden_gem:false,critical_flag:false},
+ {id:"1deb",source_url:"https://en.wikipedia.org/wiki/Milpa",title:"The Milpa System",summary:"Traditional Maya intercropping of corn, beans, and squash — the 'Three Sisters'. Corn supports beans; beans fix nitrogen; squash shades soil, retains moisture, suppresses weeds. One of history's most productive agricultural inventions.",category:["Agriculture","Traditional Farming","Intercropping","Sustainable Agriculture","Polyculture"],innovation_level:"grassroots",location:{country:"Mexico, Guatemala",region:"Mesoamerica",lat:18.5,lon:-89.5},impact:{problem_solved:"Soil fertility, biodiversity, and nutritionally complete food without external inputs.",scale:"high"},replicability:{cost_level:"low",difficulty:"easy"},risk_assessment:{risk_score:1,risk_type:["environmental"],safety_level:"high",needs_intervention:false},priority_score:64,hidden_gem:true,critical_flag:false},
+ {id:"aad2",source_url:"https://en.wikipedia.org/wiki/Terra_preta",title:"Terra Preta",summary:"Pre-Columbian Amazonian 'black earth': biochar, organic matter, and pottery shards incorporated into nutrient-poor tropical soils. Persists for millennia, massively improving fertility, water retention, and carbon sequestration.",category:["Agriculture","Soil Improvement","Biochar","Sustainable Farming"],innovation_level:"grassroots",location:{country:"Brazil",region:"Amazon Basin",lat:-3.465,lon:-62.216},impact:{problem_solved:"Nutrient-poor Amazonian soils; sustained productivity without extended fallow.",scale:"high"},replicability:{cost_level:"low",difficulty:"easy"},risk_assessment:{risk_score:5,risk_type:["fire hazard","toxic","environment"],safety_level:"medium",needs_intervention:true},priority_score:80,hidden_gem:true,critical_flag:false},
+ {id:"8872",source_url:"https://www.youtube.com/watch?v=u_HkMGQH3zg",title:"Voltarent ECU",summary:"Kenyan engineer Peter Mbiria (Volter Engineering Ltd.) developed a custom ECU to replace outdated mechanical fuel injection in older vehicles, significantly improving fuel economy by electronically cutting fuel during deceleration.",category:["Automotive","Engineering","Electronics","Sustainability"],innovation_level:"semi-formal",location:{country:"Kenya",region:"Thika",lat:-1.037,lon:37.078},impact:{problem_solved:"Poor fuel economy from outdated mechanical fuel injection in older vehicles.",scale:"high"},replicability:{cost_level:"medium",difficulty:"hard"},risk_assessment:{risk_score:8,risk_type:["fire hazard","explosion","toxic","environment"],safety_level:"low",needs_intervention:true},priority_score:76,hidden_gem:false,critical_flag:true},
+ {id:"dc17",source_url:"https://www.youtube.com/watch?v=N_8I7M1Pj6I",title:"Hartman Wartween's Inline 4-Cylinder Motorcycle Engine",summary:"German engineer transformed a 50 cm³ single-cylinder engine into an inline 4-cylinder using only two connecting rods and eight pistons, designed in CAD and fully fabricated by hand in Rimbach, Odenwald (2007).",category:["Mechanical Engineering","Engine Design","Motorcycle Engineering"],innovation_level:"grassroots",location:{country:"Germany",region:"Rimbach, Odenwald",lat:49.609,lon:9.044},impact:{problem_solved:"Demonstrates compact multi-cylinder engine feasibility from a single-cylinder base.",scale:"low"},replicability:{cost_level:"high",difficulty:"hard"},risk_assessment:{risk_score:8,risk_type:["Fire hazard","Explosion","Toxic emissions","Mechanical failure"],safety_level:"low",needs_intervention:true},priority_score:44,hidden_gem:false,critical_flag:true},
+ {id:"400d",source_url:"http://hackaday.com/2016/07/08/from-a-lawnmower-engine-to-a-compressed-air-engine/",title:"Repurposing Lawnmower Engines to Run on Compressed Air",summary:"DIY conversion of gasoline lawnmower engines to run on compressed air via a sleeve valve modification. Eliminates gasoline dependency but introduces significant high-pressure explosion risk. Shared via online maker communities.",category:["DIY","Engine Conversion","Alternative Energy","Repurposing"],innovation_level:"grassroots",location:{country:"Global (online DIY community)",region:"",lat:null,lon:null},impact:{problem_solved:"Repurposes old engines into a gasoline-free power source.",scale:"low"},replicability:{cost_level:"medium",difficulty:"medium"},risk_assessment:{risk_score:8,risk_type:["Explosion"],safety_level:"low",needs_intervention:true},priority_score:50,hidden_gem:false,critical_flag:true}
 ];
 
-/* ============================================================
-   GLOBAL STATE
-   ============================================================ */
-Chart.defaults.animation = false;
-Chart.defaults.font.family = "'Montserrat', sans-serif";
-Chart.defaults.color = "#4a5568";
+// ─── GLOBALS ───
+Chart.defaults.animation=false;
+Chart.defaults.font.family="'Montserrat',sans-serif";
+Chart.defaults.color="#4a5568";
+const CH={};
+let leafletMap=null,mcluster=null;
+let filteredData=[...INNOVATIONS],curPage=1,pgSize=50,sortKey=null,sortDir=1;
 
-let leafletMap = null;
-const charts = {};
+// ─── HELPERS ───
+const trunc=(s,n)=>!s?'—':s.length>n?s.slice(0,n-1)+'…':s;
+const rc=s=>s<=3?'low':s<=6?'mid':'hi';
+const lvBadge=lv=>{const m={grassroots:'bg','semi-formal':'bs',institutional:'bi'};const l=(lv||'').toLowerCase().replace(/[\s_]/g,'-');return`<span class="badge ${m[l]||'bg'}">${lv||'—'}</span>`;};
+function getRegion(c){if(!c)return'Global/Other';const s=c.toLowerCase();if(/\b(japan|china|korea|vietnam|philippines|indonesia|malaysia|myanmar|thailand|india|pakistan|iran|bangladesh)\b/.test(s))return'Asia & Pacific';if(/\b(mexico|peru|brazil|usa|canada|colombia|argentina|chile|ecuador|bolivia|venezuela|haiti|guatemala)\b/.test(s))return'Americas';if(/\b(france|greece|italy|spain|russia|ukraine|germany|united kingdom|uk|poland|belgium|switzerland)\b/.test(s))return'Europe';if(/\b(nigeria|tanzania|mali|morocco|algeria|tunisia|uganda|kenya|ethiopia|ghana)\b/.test(s))return'Africa';if(/\b(australia|new zealand|vanuatu|fiji)\b/.test(s))return'Oceania';return'Global/Other';}
+function animN(el,target,ms=900){const start=performance.now();const isF=target%1!==0;function step(now){const t=Math.min((now-start)/ms,1);const e=t<.5?2*t*t:-1+(4-2*t)*t;const v=e*target;el.textContent=isF?v.toFixed(1):Math.round(v);if(t<1)requestAnimationFrame(step);else el.textContent=isF?target.toFixed(1):target;}requestAnimationFrame(step);}
 
-/* ============================================================
-   HELPERS
-   ============================================================ */
-function truncate(str, n) {
-    if (!str) return '—';
-    return str.length > n ? str.slice(0, n - 1) + '…' : str;
-}
+// ─── THEME ───
+function toggleTheme(){const d=document.documentElement;const dk=d.getAttribute('data-theme')==='dark';d.setAttribute('data-theme',dk?'light':'dark');document.getElementById('thmbtn').textContent=dk?'🌙 Dark':'☀️ Light';setTimeout(()=>{renderCat();renderLvl();renderReg();renderRisk();renderSct();},50);localStorage.setItem('gii-theme',dk?'light':'dark');}
 
-function riskClass(score) {
-    if (score <= 3) return 'low';
-    if (score <= 6) return 'mid';
-    return 'hi';
-}
+// ─── MODAL ───
+function openModal(){document.getElementById('modal').classList.add('open');}
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+function closeOuter(e){if(e.target===document.getElementById('modal'))closeModal();}
 
-function levelBadge(level) {
-    const map = {
-        'grassroots': 'badge-grassroots',
-        'semi-formal': 'badge-semiformal',
-        'institutional': 'badge-institutional'
-    };
-    const l = (level || '').toLowerCase().replace(/[\s_]/g, '-');
-    return `<span class="badge ${map[l] || 'badge-grassroots'}">${level || '—'}</span>`;
-}
+// ─── TOC ───
+function buildTOC(){const secs=document.querySelectorAll('h2.st[id]');const list=document.getElementById('toc-list');list.innerHTML='';secs.forEach(sec=>{const li=document.createElement('li');const a=document.createElement('a');a.href='#'+sec.id;a.textContent=sec.textContent.trim();a.onclick=e=>{e.preventDefault();sec.scrollIntoView({behavior:'smooth',block:'start'});};li.appendChild(a);list.appendChild(li);});const bar=document.getElementById('toc-bar');function onSc(){const paper=document.getElementById('paper');const total=paper.offsetHeight;const scrolled=Math.max(0,-paper.getBoundingClientRect().top);const pct=Math.min(100,(scrolled/(total-window.innerHeight))*100);bar.style.width=pct+'%';let active=null;secs.forEach(s=>{if(s.getBoundingClientRect().top<80)active=s.id;});document.querySelectorAll('.toc-list a').forEach(a=>{a.classList.toggle('active',a.href.endsWith('#'+active));});}window.addEventListener('scroll',onSc,{passive:true});}
 
-function getRegion(country) {
-    if (!country) return 'Unknown';
-    const c = country.toLowerCase();
-    if (/\b(japan|china|korea|vietnam|philippines|indonesia|malaysia|myanmar|thailand|india|pakistan|iran|bangladesh)\b/.test(c)) return 'Asia & Pacific';
-    if (/\b(mexico|peru|brazil|usa|canada|colombia|argentina|chile|ecuador|bolivia|venezuela|haiti|guatemala)\b/.test(c)) return 'Americas';
-    if (/\b(france|greece|italy|spain|russia|ukraine|hungary|poland|romania|belgium|switzerland|germany|united kingdom|uk)\b/.test(c)) return 'Europe';
-    if (/\b(nigeria|tanzania|mali|morocco|algeria|tunisia|uganda|kenya|ethiopia|ghana)\b/.test(c)) return 'Africa';
-    if (/\b(australia|new zealand|vanuatu|fiji)\b/.test(c)) return 'Oceania';
-    return 'Global / Other';
-}
+// ─── KPI ───
+function renderKPI(){const d=INNOVATIONS;const n=d.length,gems=d.filter(x=>x.hidden_gem).length,crits=d.filter(x=>x.critical_flag).length;const avgP=d.reduce((a,b)=>a+b.priority_score,0)/n;const avgR=d.reduce((a,b)=>a+b.risk_assessment.risk_score,0)/n;const cntries=new Set(d.map(x=>x.location.country).filter(Boolean)).size;animN(document.getElementById('kv1'),n);animN(document.getElementById('kv2'),gems);animN(document.getElementById('kv3'),crits);animN(document.getElementById('kv4'),Math.round(avgP));document.getElementById('ks4').textContent=`avg risk ${avgR.toFixed(1)}/10`;document.getElementById('meta-n').textContent=n;document.getElementById('meta-c').textContent=cntries;const mins=Math.max(5,Math.round((n*80+2500)/250));document.getElementById('meta-rt').innerHTML=`⏱ ~${mins} min read`;if(n>LARGE_THRESHOLD){document.getElementById('scale-notice').style.display='flex';document.getElementById('ncap').textContent=NET_CAP;}}
 
-/* ============================================================
-   KPI CARDS
-   ============================================================ */
-function renderKPIs() {
-    const total = INNOVATIONS.length;
-    const gems  = INNOVATIONS.filter(d => d.hidden_gem).length;
-    const crits = INNOVATIONS.filter(d => d.critical_flag).length;
-    const avgPri = Math.round(INNOVATIONS.reduce((a, b) => a + b.priority_score, 0) / total);
-    const avgRisk = (INNOVATIONS.reduce((a, b) => a + b.risk_assessment.risk_score, 0) / total).toFixed(1);
+// ─── ABSTRACT ───
+function renderAbs(){const d=INNOVATIONS,n=d.length,gems=d.filter(x=>x.hidden_gem).length,crits=d.filter(x=>x.critical_flag).length,cntries=new Set(d.map(x=>x.location.country).filter(Boolean)).size,hi=d.filter(x=>x.impact.scale==='high').length,interv=d.filter(x=>x.risk_assessment.needs_intervention).length;const freq={};d.forEach(x=>(x.category||[]).forEach(c=>{freq[c]=(freq[c]||0)+1;}));const top3=Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,3).map(e=>e[0]);document.getElementById('j-abstract').textContent=`This inaugural edition documents ${n} community-driven technological practices from ${cntries} geographic contexts, spanning ecological sanitation, organic pest management, traditional agro-ecology, soil remediation, and grassroots mechanical engineering. Of the ${n} practices catalogued, ${hi} exhibit high impact scale, ${gems} are hidden gems with low existing documentation visibility, and ${crits} carry critical flags requiring safety intervention. Risk scores range from 1 (Milpa System) to 8; ${interv} innovations are recommended for immediate safety guidance. Most represented domains: ${top3.join(', ')}. This bulletin serves as a computational pre-ethnographic baseline directing field investigation, policy attention, and dissemination support toward the most impactful grassroots innovations globally.`;document.getElementById('j-kw').innerHTML=`<strong>Keywords:</strong> grassroots innovation, frugal technology, appropriate technology, composting sanitation, organic pest control, traditional agro-ecology, risk assessment, community-led development`;}
 
-    document.getElementById('kpi-total').textContent = total;
-    document.getElementById('kpi-gems').textContent = gems;
-    document.getElementById('kpi-critical').textContent = crits;
-    document.getElementById('kpi-avg').textContent = avgPri;
+// ─── CHARTS ───
+function renderCat(){const freq={};INNOVATIONS.forEach(d=>(d.category||[]).forEach(c=>{freq[c]=(freq[c]||0)+1;}));const s=Object.entries(freq).sort((a,b)=>b[1]-a[1]);if(CH.bar){CH.bar.destroy();delete CH.bar;}CH.bar=new Chart(document.getElementById('barChart').getContext('2d'),{type:'bar',data:{labels:s.map(e=>e[0]),datasets:[{label:'Count',data:s.map(e=>e[1]),backgroundColor:'rgba(159,18,57,0.78)',borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},title:{display:true,text:'Category Tag Frequency',font:{size:11}}},scales:{x:{beginAtZero:true,ticks:{stepSize:1}},y:{ticks:{font:{size:9}}}}}})}
 
-    // Add sub label for avg risk
-    const sub = document.querySelector('#kpi-row .kpi-card.dark .kpi-sub');
-    if (sub) sub.textContent = `avg risk: ${avgRisk} / 10`;
-}
+function renderLvl(){const c={};INNOVATIONS.forEach(d=>{const l=d.innovation_level||'unknown';c[l]=(c[l]||0)+1;});const col={grassroots:'#9f1239','semi-formal':'#b45309',institutional:'#0f766e',unknown:'#94a3b8'};const labs=Object.keys(c);if(CH.lvl){CH.lvl.destroy();delete CH.lvl;}CH.lvl=new Chart(document.getElementById('levelChart').getContext('2d'),{type:'doughnut',data:{labels:labs,datasets:[{data:Object.values(c),backgroundColor:labs.map(l=>col[l]||'#aaa'),borderWidth:2,borderColor:'#faf8f3'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Innovation Level',font:{size:11}}}}});}
 
-/* ============================================================
-   ABSTRACT (auto-generated from data)
-   ============================================================ */
-function renderAbstract() {
-    const total = INNOVATIONS.length;
-    const gems  = INNOVATIONS.filter(d => d.hidden_gem).length;
-    const crits = INNOVATIONS.filter(d => d.critical_flag).length;
-    const countries = [...new Set(INNOVATIONS.map(d => d.location.country).filter(Boolean))].length;
-    const highImpact = INNOVATIONS.filter(d => d.impact.scale === 'high').length;
-    const needsInt   = INNOVATIONS.filter(d => d.risk_assessment.needs_intervention).length;
+function renderReg(){const r={};INNOVATIONS.forEach(d=>{const x=getRegion(d.location.country||'');r[x]=(r[x]||0)+1;});const pal=['rgba(15,118,110,.7)','rgba(217,119,6,.7)','rgba(37,99,235,.7)','rgba(225,29,72,.7)','rgba(139,92,246,.7)','rgba(100,116,139,.7)'];const labs=Object.keys(r);if(CH.pol){CH.pol.destroy();delete CH.pol;}CH.pol=new Chart(document.getElementById('polarChart').getContext('2d'),{type:'polarArea',data:{labels:labs,datasets:[{data:Object.values(r),backgroundColor:pal.slice(0,labs.length),borderWidth:1}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Regional Distribution',font:{size:11}}}}});}
 
-    // Category frequency
-    const catFreq = {};
-    INNOVATIONS.forEach(d => (d.category || []).forEach(c => { catFreq[c] = (catFreq[c] || 0) + 1; }));
-    const topCats = Object.entries(catFreq).sort((a,b) => b[1]-a[1]).slice(0,3).map(e=>e[0]);
+function renderRisk(){const s=[...INNOVATIONS].sort((a,b)=>b.risk_assessment.risk_score-a.risk_assessment.risk_score).slice(0,50);const cols=s.map(d=>d.risk_assessment.risk_score>=7?'rgba(220,38,38,.82)':d.risk_assessment.risk_score>=4?'rgba(217,119,6,.82)':'rgba(5,150,105,.82)');if(CH.risk){CH.risk.destroy();delete CH.risk;}CH.risk=new Chart(document.getElementById('riskChart').getContext('2d'),{type:'bar',data:{labels:s.map(d=>trunc(d.title,34)),datasets:[{label:'Risk Score',data:s.map(d=>d.risk_assessment.risk_score),backgroundColor:cols,borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},title:{display:true,text:'Risk Score by Innovation (1 = low, 10 = high)',font:{size:11}}},scales:{x:{beginAtZero:true,max:10,ticks:{stepSize:1}},y:{ticks:{font:{size:8.5}}}}}});}
 
-    document.getElementById('j-abstract').textContent =
-        `This inaugural edition of the Grassroots Innovation Intelligence Bulletin documents ${total} community-driven technological practices drawn from ${countries} distinct geographic contexts. ` +
-        `The surveyed innovations span the domains of ecological sanitation, organic pest management, traditional agro-ecological systems, soil remediation, and grassroots mechanical engineering. ` +
-        `Of the ${total} practices catalogued, ${highImpact} exhibit high-impact scale, ${gems} are classified as 'hidden gems' — significant innovations with low existing documentation visibility — and ${crits} carry critical flags requiring safety or institutional intervention. ` +
-        `Risk assessment scores range from 1 (Milpa System; negligible hazard) to 8 (multiple high-risk engineering and sanitation practices); ${needsInt} innovations are recommended for immediate safety guidance intervention. ` +
-        `The most represented thematic domains are: ${topCats.join(', ')}. ` +
-        `This bulletin serves as a computational pre-ethnographic baseline, intended to direct field investigation, policy attention, and dissemination support toward the most impactful and underserved grassroots innovations globally.`;
+function renderSct(){const sets=[{label:'Grassroots',data:[],backgroundColor:'rgba(159,18,57,.72)',pointRadius:6},{label:'Semi-formal',data:[],backgroundColor:'rgba(180,83,9,.72)',pointRadius:6},{label:'Institutional',data:[],backgroundColor:'rgba(15,118,110,.72)',pointRadius:6}];const lmap={grassroots:0,'semi-formal':1,institutional:2};INNOVATIONS.forEach(d=>{const i=lmap[d.innovation_level]??0;sets[i].data.push({x:d.risk_assessment.risk_score,y:d.priority_score,label:trunc(d.title,22)});});if(CH.sct){CH.sct.destroy();delete CH.sct;}CH.sct=new Chart(document.getElementById('scatterChart').getContext('2d'),{type:'scatter',data:{datasets:sets},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Risk vs. Priority Matrix',font:{size:11}},tooltip:{callbacks:{label:ctx=>`${ctx.raw.label} — Risk:${ctx.raw.x} Priority:${ctx.raw.y}`}}},scales:{x:{title:{display:true,text:'Risk Score'},min:0,max:10,ticks:{stepSize:1}},y:{title:{display:true,text:'Priority Score'},min:0,max:100}}}});}
 
-    document.getElementById('j-keywords').innerHTML =
-        `<strong>Keywords:</strong> grassroots innovation, frugal technology, appropriate technology, composting sanitation, organic pest control, traditional agro-ecology, risk assessment, community-led development`;
-}
+// ─── MAP (clustered) ───
+function renderMap(){if(!leafletMap){leafletMap=L.map('distributionMap',{zoomControl:true}).setView([20,10],2);L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap © CARTO',maxZoom:18}).addTo(leafletMap);}if(mcluster){leafletMap.removeLayer(mcluster);}mcluster=L.markerClusterGroup({maxClusterRadius:50,iconCreateFunction:cluster=>L.divIcon({html:`<div style="background:#9f1239;color:#fff;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;font-weight:700;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.3);">${cluster.getChildCount()}</div>`,className:'',iconSize:[32,32],iconAnchor:[16,16]})});const lc={grassroots:'#9f1239','semi-formal':'#b45309',institutional:'#0f766e'};const rcol={low:'#059669',mid:'#d97706',hi:'#dc2626'};let bounds=L.latLngBounds(),n=0;INNOVATIONS.forEach(item=>{if(item.location?.lat!=null&&item.location?.lon!=null){const col=lc[item.innovation_level]||'#4a5568';const icon=L.divIcon({className:'',html:`<div style="background:${col};width:11px;height:11px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 5px rgba(0,0,0,.3);"></div>`,iconSize:[15,15],iconAnchor:[7,7]});const r=rc(item.risk_assessment.risk_score);const m=L.marker([item.location.lat,item.location.lon],{icon}).bindPopup(`<strong style="font-size:12px;">${item.title}</strong><br><em style="font-size:10px;color:#555;">${item.location.region||item.location.country}</em><br><span style="font-size:10px;">Level: ${item.innovation_level}</span> &nbsp; <span style="font-size:10px;color:${rcol[r]};">Risk: ${item.risk_assessment.risk_score}/10</span><br><span style="font-size:10px;">Priority: ${item.priority_score}</span>${item.source_url?`<br><a href="${item.source_url}" target="_blank" style="font-size:10px;color:#0f766e;">→ Source</a>`:''}`);mcluster.addLayer(m);bounds.extend([item.location.lat,item.location.lon]);n++;}});leafletMap.addLayer(mcluster);if(n>0)leafletMap.fitBounds(bounds,{padding:[30,30],maxZoom:5});}
 
-/* ============================================================
-   CHART 1: Category bar chart
-   ============================================================ */
-function renderCategoryChart() {
-    const freq = {};
-    INNOVATIONS.forEach(d => (d.category || []).forEach(c => { freq[c] = (freq[c] || 0) + 1; }));
-    const sorted = Object.entries(freq).sort((a,b) => b[1]-a[1]);
-    const labels = sorted.map(e => e[0]);
-    const data   = sorted.map(e => e[1]);
+// ─── NETWORK (capped) ───
+function renderNet(){const dataset=[...INNOVATIONS].sort((a,b)=>b.priority_score-a.priority_score).slice(0,NET_CAP);const lc={grassroots:{background:'#9f1239',border:'#7e0e2d',font:{color:'#fff'}},'semi-formal':{background:'#b45309',border:'#92400e',font:{color:'#fff'}},institutional:{background:'#0f766e',border:'#0d5c56',font:{color:'#fff'}}};const nArr=dataset.map(item=>({id:item.id,label:trunc(item.title,22),title:`${item.title}\nPriority:${item.priority_score} Risk:${item.risk_assessment.risk_score}`,color:lc[item.innovation_level]||lc.grassroots,shape:'box',font:{size:9,...(lc[item.innovation_level]||lc.grassroots).font}}));const eArr=[];const seen=new Set();for(let i=0;i<dataset.length;i++){for(let j=i+1;j<dataset.length;j++){const a=dataset[i],b=dataset[j];const sh=(a.category||[]).filter(c=>(b.category||[]).includes(c));if(sh.length){const k=[a.id,b.id].sort().join('|');if(!seen.has(k)){seen.add(k);eArr.push({from:a.id,to:b.id,label:trunc(sh[0],12),title:'Shared: '+sh.join(', '),color:'#cbd5e1',width:1,font:{size:8,align:'middle'}});}}}}const net=new vis.Network(document.getElementById('nodeNetwork'),{nodes:new vis.DataSet(nArr),edges:new vis.DataSet(eArr)},{physics:{enabled:true,solver:'forceAtlas2Based',forceAtlas2Based:{gravitationalConstant:-40,centralGravity:.005,springLength:180,springConstant:.15},stabilization:{iterations:200}},interaction:{dragNodes:true,zoomView:true,dragView:true}});net.on('stabilizationIterationsDone',()=>net.setOptions({physics:false}));}
 
-    if (charts.bar) charts.bar.destroy();
-    const ctx = document.getElementById('barChart').getContext('2d');
-    charts.bar = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels,
-            datasets: [{ label: 'Count', data, backgroundColor: 'rgba(159,18,57,0.75)', borderRadius: 3 }]
-        },
-        options: {
-            indexAxis: 'y',
-            responsive: true, maintainAspectRatio: false,
-            plugins: { legend: { display: false }, title: { display: true, text: 'Category Tag Frequency (all innovations)', font: { size: 11 } } },
-            scales: { x: { beginAtZero: true, ticks: { stepSize: 1 } }, y: { ticks: { font: { size: 9 } } } }
-        }
-    });
-}
+// ─── SPOTLIGHT ───
+function renderSpot(){const top3=[...INNOVATIONS].sort((a,b)=>b.priority_score-a.priority_score).slice(0,3);const cls=['','t','a'];const med=['#1','#2','#3'];document.getElementById('spgrid').innerHTML=top3.map((item,i)=>`<div class="sc ${cls[i]}"><div class="scr">${med[i]}</div><div class="sct">${item.title}</div><div class="scb">${trunc(item.summary,115)}</div><div class="scm">${lvBadge(item.innovation_level)}<span class="scs">Priority ${item.priority_score}</span><span class="badge b${rc(item.risk_assessment.risk_score)==='hi'?'crit':rc(item.risk_assessment.risk_score)==='mid'?'s':'g'}">Risk ${item.risk_assessment.risk_score}</span>${item.hidden_gem?'<span class="badge bgem">💎</span>':''}</div></div>`).join('');}
 
-/* ============================================================
-   CHART 2: Innovation Level donut
-   ============================================================ */
-function renderLevelChart() {
-    const counts = {};
-    INNOVATIONS.forEach(d => {
-        const l = d.innovation_level || 'unknown';
-        counts[l] = (counts[l] || 0) + 1;
-    });
-    const labels = Object.keys(counts);
-    const data   = Object.values(counts);
-    const colors = { grassroots: '#9f1239', 'semi-formal': '#b45309', institutional: '#0f766e', unknown: '#94a3b8' };
+// ─── GEMS ───
+function renderGems(){const gems=INNOVATIONS.filter(d=>d.hidden_gem).sort((a,b)=>b.priority_score-a.priority_score);const w=document.getElementById('gems-wrapper');if(!gems.length){w.innerHTML='<p><em>No hidden gems flagged in this edition.</em></p>';return;}w.innerHTML=`<table class="jtable"><thead><tr><th style="width:30%">Title</th><th style="width:17%">Country</th><th style="width:31%">Summary</th><th style="width:10%">Priority</th><th style="width:12%">Risk</th></tr></thead><tbody>${gems.map(d=>`<tr><td class="ct">💎 ${d.title}</td><td style="font-size:8.5pt;">${d.location.country||'—'}</td><td style="font-size:8.5pt;">${trunc(d.summary,90)}</td><td class="cm">${d.priority_score}</td><td><span class="rpill r${rc(d.risk_assessment.risk_score)}">${d.risk_assessment.risk_score}</span></td></tr>`).join('')}</tbody></table>`;}
 
-    if (charts.level) charts.level.destroy();
-    const ctx = document.getElementById('levelChart').getContext('2d');
-    charts.level = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels,
-            datasets: [{ data, backgroundColor: labels.map(l => colors[l] || '#aaa'), borderWidth: 2, borderColor: '#faf8f3' }]
-        },
-        options: {
-            responsive: true, maintainAspectRatio: false,
-            plugins: {
-                legend: { position: 'bottom', labels: { boxWidth: 11, font: { size: 9 } } },
-                title: { display: true, text: 'Innovation Level Distribution', font: { size: 11 } }
-            }
-        }
-    });
-}
+// ─── TABLE ───
+function applyFilters(){const q=(document.getElementById('ts').value||'').toLowerCase().trim();const lv=(document.getElementById('tl').value||'').toLowerCase().replace(/\s/g,'-');const r=document.getElementById('tr').value;const sc=document.getElementById('tsc').value;filteredData=INNOVATIONS.filter(d=>{const txt=[d.title,d.location.country||'',...(d.category||[]),d.innovation_level,d.summary].join(' ').toLowerCase();return(!q||txt.includes(q))&&(!lv||(d.innovation_level||'').toLowerCase().replace(/\s/g,'-').includes(lv))&&(!r||rc(d.risk_assessment.risk_score)===r)&&(!sc||d.impact.scale===sc);});if(sortKey)sortFD();curPage=1;renderPage();}
 
-/* ============================================================
-   CHART 3: Regional polar chart
-   ============================================================ */
-function renderRegionChart() {
-    const regions = {};
-    INNOVATIONS.forEach(d => {
-        const r = getRegion(d.location.country || '');
-        regions[r] = (regions[r] || 0) + 1;
-    });
-    const labels = Object.keys(regions);
-    const data   = Object.values(regions);
-    const palette = ['rgba(15,118,110,0.7)','rgba(217,119,6,0.7)','rgba(37,99,235,0.7)','rgba(225,29,72,0.7)','rgba(139,92,246,0.7)','rgba(100,116,139,0.7)'];
+function sortT(key){if(sortKey===key)sortDir*=-1;else{sortKey=key;sortDir=1;}document.querySelectorAll('.jtable th').forEach(th=>{th.classList.remove('sasc','sdsc');});const map={title:0,country:1,level:3,risk:4,priority:5};const ths=document.querySelectorAll('#dtable thead th');if(map[key]!==undefined)ths[map[key]].classList.add(sortDir===1?'sasc':'sdsc');sortFD();renderPage();}
 
-    if (charts.polar) charts.polar.destroy();
-    const ctx = document.getElementById('polarChart').getContext('2d');
-    charts.polar = new Chart(ctx, {
-        type: 'polarArea',
-        data: {
-            labels,
-            datasets: [{ data, backgroundColor: palette.slice(0, labels.length), borderWidth: 1 }]
-        },
-        options: {
-            responsive: true, maintainAspectRatio: false,
-            plugins: {
-                legend: { position: 'bottom', labels: { boxWidth: 11, font: { size: 9 } } },
-                title: { display: true, text: 'Regional Distribution', font: { size: 11 } }
-            }
-        }
-    });
-}
+function sortFD(){filteredData.sort((a,b)=>{if(sortKey==='title'){const v=(s)=>s.title;return sortDir*(v(a)<v(b)?-1:v(a)>v(b)?1:0);}if(sortKey==='country'){const v=(s)=>s.location.country||'';return sortDir*(v(a)<v(b)?-1:v(a)>v(b)?1:0);}if(sortKey==='level'){const v=(s)=>s.innovation_level||'';return sortDir*(v(a)<v(b)?-1:v(a)>v(b)?1:0);}if(sortKey==='risk')return sortDir*(a.risk_assessment.risk_score-b.risk_assessment.risk_score);if(sortKey==='priority')return sortDir*(a.priority_score-b.priority_score);return 0;});}
 
-/* ============================================================
-   CHART 4: Risk Score horizontal bar
-   ============================================================ */
-function renderRiskChart() {
-    const sorted = [...INNOVATIONS].sort((a,b) => b.risk_assessment.risk_score - a.risk_assessment.risk_score);
-    const labels = sorted.map(d => truncate(d.title, 35));
-    const data   = sorted.map(d => d.risk_assessment.risk_score);
-    const colors = data.map(v => v >= 7 ? 'rgba(220,38,38,0.8)' : v >= 4 ? 'rgba(217,119,6,0.8)' : 'rgba(5,150,105,0.8)');
+function changePS(v){pgSize=parseInt(v);curPage=1;renderPage();}
 
-    if (charts.risk) charts.risk.destroy();
-    const ctx = document.getElementById('riskChart').getContext('2d');
-    charts.risk = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels,
-            datasets: [{ label: 'Risk Score', data, backgroundColor: colors, borderRadius: 3 }]
-        },
-        options: {
-            indexAxis: 'y',
-            responsive: true, maintainAspectRatio: false,
-            plugins: { legend: { display: false }, title: { display: true, text: 'Risk Score by Innovation (1 = low, 10 = high)', font: { size: 11 } } },
-            scales: { x: { beginAtZero: true, max: 10, ticks: { stepSize: 1 } }, y: { ticks: { font: { size: 8.5 } } } }
-        }
-    });
-}
+function renderPage(){const total=filteredData.length;const totalPg=Math.max(1,Math.ceil(total/pgSize));if(curPage>totalPg)curPage=totalPg;const start=(curPage-1)*pgSize;const page=filteredData.slice(start,start+pgSize);const tbody=document.getElementById('tbody');tbody.innerHTML='';if(!page.length){tbody.innerHTML=`<tr><td colspan="7" style="text-align:center;color:var(--ink-faint);font-family:'DM Mono',monospace;font-size:9pt;padding:20px;">No results match the current filters.</td></tr>`;}else{page.forEach(item=>{const cats=(item.category||[]).slice(0,2).join(', ');const r=rc(item.risk_assessment.risk_score);const flags=[item.hidden_gem?'💎':'',item.critical_flag?'⚠️':''].filter(Boolean).join(' ');const tr=document.createElement('tr');tr.innerHTML=`<td><span class="ct">${item.title}</span></td><td style="font-size:8.5pt;">${item.location.country||'—'}</td><td style="font-size:8.5pt;">${cats}</td><td>${lvBadge(item.innovation_level)}</td><td><span class="rpill r${r}">${item.risk_assessment.risk_score}</span></td><td class="cm" style="text-align:center;">${item.priority_score}</td><td style="font-size:11pt;text-align:center;">${flags||'—'}</td>`;tbody.appendChild(tr);});}
+const pag=document.getElementById('pag');pag.innerHTML='';const mkBtn=(label,pg,cls='')=>{const b=document.createElement('button');b.className='pbtn'+(cls?' '+cls:'');b.textContent=label;if(pg===null)b.disabled=true;else b.onclick=()=>{curPage=pg;renderPage();};return b;};pag.appendChild(mkBtn('‹ Prev',curPage>1?curPage-1:null));const delta=2;let pages=new Set([1,totalPg]);for(let i=Math.max(1,curPage-delta);i<=Math.min(totalPg,curPage+delta);i++)pages.add(i);let prev=0;[...pages].sort((a,b)=>a-b).forEach(p=>{if(p-prev>1){const el=document.createElement('span');el.className='pbtn';el.textContent='…';el.style.cursor='default';pag.appendChild(el);}pag.appendChild(mkBtn(p,p,p===curPage?'act':''));prev=p;});pag.appendChild(mkBtn('Next ›',curPage<totalPg?curPage+1:null));document.getElementById('tinfo').textContent=`Showing ${start+1}–${Math.min(start+pgSize,total)} of ${total} entries`;}
 
-/* ============================================================
-   CHART 5: Risk vs Priority scatter
-   ============================================================ */
-function renderScatterChart() {
-    const datasets = [
-        { label: 'Grassroots',    data: [], backgroundColor: 'rgba(159,18,57,0.7)',   pointRadius: 6 },
-        { label: 'Semi-formal',   data: [], backgroundColor: 'rgba(180,83,9,0.7)',    pointRadius: 6 },
-        { label: 'Institutional', data: [], backgroundColor: 'rgba(15,118,110,0.7)', pointRadius: 6 }
-    ];
-    const levelMap = { 'grassroots': 0, 'semi-formal': 1, 'institutional': 2 };
-    INNOVATIONS.forEach(d => {
-        const idx = levelMap[d.innovation_level] ?? 0;
-        datasets[idx].data.push({ x: d.risk_assessment.risk_score, y: d.priority_score, label: truncate(d.title, 22) });
-    });
+// ─── CSV EXPORT ───
+function exportCSV(){const fields=['title','country','region','innovation_level','categories','cost_level','difficulty','impact_scale','risk_score','risk_types','needs_intervention','priority_score','hidden_gem','critical_flag','source_url'];const header=fields.join(',');const rows=filteredData.map(d=>[`"${(d.title||'').replace(/"/g,'""')}"`,`"${(d.location.country||'').replace(/"/g,'""')}"`,`"${(d.location.region||'').replace(/"/g,'""')}"`,d.innovation_level||'',`"${(d.category||[]).join('; ').replace(/"/g,'""')}"`,d.replicability?.cost_level||'',d.replicability?.difficulty||'',d.impact?.scale||'',d.risk_assessment?.risk_score||'',`"${(d.risk_assessment?.risk_type||[]).join('; ')}"`,d.risk_assessment?.needs_intervention?'yes':'no',d.priority_score||'',d.hidden_gem?'yes':'no',d.critical_flag?'yes':'no',`"${(d.source_url||'').replace(/"/g,'""')}"`].join(','));const csv=[header,...rows].join('\n');const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);a.download=`GII_Bulletin_2026Q1_${filteredData.length}entries.csv`;a.click();}
 
-    if (charts.scatter) charts.scatter.destroy();
-    const ctx = document.getElementById('scatterChart').getContext('2d');
-    charts.scatter = new Chart(ctx, {
-        type: 'scatter',
-        data: { datasets },
-        options: {
-            responsive: true, maintainAspectRatio: false,
-            plugins: {
-                legend: { position: 'bottom', labels: { boxWidth: 11, font: { size: 9 } } },
-                title: { display: true, text: 'Risk Score vs Priority Score', font: { size: 11 } },
-                tooltip: {
-                    callbacks: {
-                        label: ctx => `${ctx.raw.label} — Risk: ${ctx.raw.x}, Priority: ${ctx.raw.y}`
-                    }
-                }
-            },
-            scales: {
-                x: { title: { display: true, text: 'Risk Score', font: { size: 10 } }, min: 0, max: 10, ticks: { stepSize: 1 } },
-                y: { title: { display: true, text: 'Priority Score', font: { size: 10 } }, min: 0, max: 100 }
-            }
-        }
-    });
-}
+// ─── REFS ───
+function renderRefs(){const list=document.getElementById('reflist');list.innerHTML='';INNOVATIONS.forEach(item=>{const li=document.createElement('li');li.innerHTML=`<b>${item.title}</b>. (2026). ${(item.innovation_level||'').charAt(0).toUpperCase()+(item.innovation_level||'').slice(1)} innovation. ${item.location.country||'Global'}. `+(item.source_url?`Source: <a href="${item.source_url}" target="_blank">${trunc(item.source_url,65)}</a>`:'Source: unpublished / field documentation');list.appendChild(li);});}
 
-/* ============================================================
-   MAP
-   ============================================================ */
-function renderMap() {
-    if (!leafletMap) {
-        leafletMap = L.map('distributionMap', { zoomControl: true }).setView([20, 10], 2);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 18
-        }).addTo(leafletMap);
-    } else {
-        leafletMap.eachLayer(layer => { if (layer instanceof L.Marker) leafletMap.removeLayer(layer); });
-    }
+function switchEdition(v){console.log('Edition:',v);}
 
-    const levelColors = { grassroots: '#9f1239', 'semi-formal': '#b45309', institutional: '#0f766e' };
-    let bounds = L.latLngBounds();
-    let added = 0;
-
-    INNOVATIONS.forEach(item => {
-        if (item.location && item.location.lat != null && item.location.lon != null) {
-            const col = levelColors[item.innovation_level] || '#4a5568';
-            const icon = L.divIcon({
-                className: '',
-                html: `<div style="background:${col};width:11px;height:11px;border-radius:50%;border:2px solid white;box-shadow:0 0 5px rgba(0,0,0,0.35);"></div>`,
-                iconSize: [15,15], iconAnchor: [7,7]
-            });
-            const rClass = riskClass(item.risk_assessment.risk_score);
-            const rColMap = { low: '#059669', mid: '#d97706', hi: '#dc2626' };
-            L.marker([item.location.lat, item.location.lon], { icon })
-             .addTo(leafletMap)
-             .bindPopup(`
-                <strong style="font-size:12px;">${item.title}</strong><br>
-                <em style="font-size:11px;color:#555;">${item.location.region || item.location.country}</em><br>
-                <span style="font-size:10px;">Level: ${item.innovation_level}</span><br>
-                <span style="font-size:10px;color:${rColMap[rClass]};">Risk: ${item.risk_assessment.risk_score}/10</span> &nbsp;
-                <span style="font-size:10px;">Priority: ${item.priority_score}</span>
-                ${item.source_url ? `<br><a href="${item.source_url}" target="_blank" style="font-size:10px;color:#0f766e;">→ Source</a>` : ''}
-             `);
-            bounds.extend([item.location.lat, item.location.lon]);
-            added++;
-        }
-    });
-
-    if (added > 0) leafletMap.fitBounds(bounds, { padding: [30, 30], maxZoom: 5 });
-}
-
-/* ============================================================
-   NETWORK GRAPH (category-similarity)
-   ============================================================ */
-function renderNetwork() {
-    const nodesArr = [];
-    const edgesArr = [];
-    const levelColors = {
-        grassroots:    { background: '#9f1239', border: '#7e0e2d', font: { color: '#fff' } },
-        'semi-formal': { background: '#b45309', border: '#92400e', font: { color: '#fff' } },
-        institutional: { background: '#0f766e', border: '#0d5c56', font: { color: '#fff' } }
-    };
-
-    INNOVATIONS.forEach(item => {
-        nodesArr.push({
-            id: item.id,
-            label: truncate(item.title, 22),
-            title: `${item.title}\nPriority: ${item.priority_score} | Risk: ${item.risk_assessment.risk_score}`,
-            color: levelColors[item.innovation_level] || levelColors.grassroots,
-            shape: 'box',
-            font: { size: 9, ...(levelColors[item.innovation_level] || levelColors.grassroots).font }
-        });
-    });
-
-    // Draw edges between innovations sharing at least one category
-    const edgeSeen = new Set();
-    for (let i = 0; i < INNOVATIONS.length; i++) {
-        for (let j = i + 1; j < INNOVATIONS.length; j++) {
-            const a = INNOVATIONS[i], b = INNOVATIONS[j];
-            const shared = (a.category || []).filter(c => (b.category || []).includes(c));
-            if (shared.length > 0) {
-                const key = [a.id, b.id].sort().join('|');
-                if (!edgeSeen.has(key)) {
-                    edgeSeen.add(key);
-                    edgesArr.push({
-                        from: a.id, to: b.id,
-                        label: truncate(shared[0], 12),
-                        title: `Shared: ${shared.join(', ')}`,
-                        color: '#cbd5e1', width: 1,
-                        font: { size: 8, align: 'middle' }
-                    });
-                }
-            }
-        }
-    }
-
-    const container = document.getElementById('nodeNetwork');
-    const data = {
-        nodes: new vis.DataSet(nodesArr),
-        edges: new vis.DataSet(edgesArr)
-    };
-    const options = {
-        physics: {
-            enabled: true,
-            solver: 'forceAtlas2Based',
-            forceAtlas2Based: { gravitationalConstant: -40, centralGravity: 0.005, springLength: 180, springConstant: 0.15 },
-            stabilization: { iterations: 180 }
-        },
-        interaction: { dragNodes: true, zoomView: true, dragView: true }
-    };
-    const network = new vis.Network(container, data, options);
-    network.on('stabilizationIterationsDone', () => network.setOptions({ physics: false }));
-}
-
-/* ============================================================
-   SPOTLIGHT CARDS (top 3 by priority)
-   ============================================================ */
-function renderSpotlight() {
-    const top3 = [...INNOVATIONS].sort((a,b) => b.priority_score - a.priority_score).slice(0, 3);
-    const colors = ['', 'teal', 'amber'];
-    const medals = ['#1', '#2', '#3'];
-
-    const grid = document.getElementById('spotlight-grid');
-    grid.innerHTML = top3.map((item, i) => `
-        <div class="spotlight-card ${colors[i]}">
-            <div class="sc-rank">${medals[i]}</div>
-            <div class="sc-title">${item.title}</div>
-            <div class="sc-body">${truncate(item.summary, 120)}</div>
-            <div class="sc-meta">
-                ${levelBadge(item.innovation_level)}
-                <span class="sc-score">Priority ${item.priority_score}</span>
-                <span class="badge badge-risk-${riskClass(item.risk_assessment.risk_score)}">Risk ${item.risk_assessment.risk_score}</span>
-                ${item.hidden_gem ? '<span class="badge badge-gem">💎 Gem</span>' : ''}
-            </div>
-        </div>
-    `).join('');
-}
-
-/* ============================================================
-   HIDDEN GEMS TABLE
-   ============================================================ */
-function renderGems() {
-    const gems = INNOVATIONS.filter(d => d.hidden_gem).sort((a,b) => b.priority_score - a.priority_score);
-    const wrapper = document.getElementById('gems-table-wrapper');
-    if (!gems.length) { wrapper.innerHTML = '<p><em>No hidden gems flagged in this edition.</em></p>'; return; }
-
-    wrapper.innerHTML = `
-    <table class="journal-table">
-        <thead><tr>
-            <th style="width:32%">Title</th>
-            <th style="width:20%">Country</th>
-            <th style="width:28%">Summary (excerpt)</th>
-            <th style="width:10%">Priority</th>
-            <th style="width:10%">Risk</th>
-        </tr></thead>
-        <tbody>
-        ${gems.map(item => `
-            <tr>
-                <td class="cell-title">💎 ${item.title}</td>
-                <td>${item.location.country || '—'}</td>
-                <td>${truncate(item.summary, 90)}</td>
-                <td class="cell-mono">${item.priority_score}</td>
-                <td><span class="risk-pill r-${riskClass(item.risk_assessment.risk_score)}">${item.risk_assessment.risk_score}</span></td>
-            </tr>
-        `).join('')}
-        </tbody>
-    </table>`;
-}
-
-/* ============================================================
-   FULL DATA TABLE (searchable / filterable)
-   ============================================================ */
-let tableRows = [];
-
-function renderTable() {
-    const tbody = document.getElementById('table-body');
-    tbody.innerHTML = '';
-    tableRows = [];
-
-    INNOVATIONS.forEach((item, idx) => {
-        const cats = (item.category || []).slice(0, 2).join(', ');
-        const rClass = riskClass(item.risk_assessment.risk_score);
-        const flags = [
-            item.hidden_gem ? '💎' : '',
-            item.critical_flag ? '⚠️' : ''
-        ].filter(Boolean).join(' ');
-
-        const tr = document.createElement('tr');
-        tr.dataset.search = [item.title, item.location.country || '', ...(item.category || []), item.innovation_level].join(' ').toLowerCase();
-        tr.dataset.level = (item.innovation_level || '').toLowerCase().replace(/[\s_]/g, '-');
-        tr.dataset.risk = rClass;
-
-        tr.innerHTML = `
-            <td><span class="cell-title">${item.title}</span></td>
-            <td style="font-size:8.5pt;">${item.location.country || '—'}</td>
-            <td style="font-size:8.5pt;">${cats}</td>
-            <td>${levelBadge(item.innovation_level)}</td>
-            <td><span class="risk-pill r-${rClass}">${item.risk_assessment.risk_score}</span></td>
-            <td class="cell-mono">${item.priority_score}</td>
-            <td style="font-size:11pt; text-align:center;">${flags || '—'}</td>
-        `;
-        tbody.appendChild(tr);
-        tableRows.push(tr);
-    });
-    updateTableCount();
-}
-
-function filterTable() {
-    const q     = (document.getElementById('table-search').value || '').toLowerCase();
-    const level = (document.getElementById('table-filter-level').value || '').toLowerCase();
-    const risk  = document.getElementById('table-filter-risk').value;
-
-    const riskMap = { low: ['low'], mid: ['mid'], hi: ['hi'], '': ['low','mid','hi'] };
-    const validRisks = riskMap[risk] || ['low','mid','hi'];
-
-    let visible = 0;
-    tableRows.forEach(tr => {
-        const matchQ     = !q     || tr.dataset.search.includes(q);
-        const matchLevel = !level || tr.dataset.level.includes(level);
-        const matchRisk  = validRisks.includes(tr.dataset.risk);
-        const show = matchQ && matchLevel && matchRisk;
-        tr.style.display = show ? '' : 'none';
-        if (show) visible++;
-    });
-    updateTableCount(visible);
-}
-
-function updateTableCount(shown) {
-    const el = document.getElementById('table-count');
-    if (!el) return;
-    const total = INNOVATIONS.length;
-    el.textContent = (shown !== undefined && shown < total)
-        ? `Showing ${shown} of ${total} innovations`
-        : `${total} innovations total`;
-}
-
-/* ============================================================
-   REFERENCES
-   ============================================================ */
-function renderReferences() {
-    const list = document.getElementById('refList');
-    list.innerHTML = '';
-
-    const year = new Date().getFullYear();
-    INNOVATIONS.forEach((item, idx) => {
-        const li = document.createElement('li');
-        const url = item.source_url || null;
-        li.innerHTML = `<b>${item.title}</b>. (${year}). ${item.innovation_level.charAt(0).toUpperCase() + item.innovation_level.slice(1)} innovation, ${item.location.country || 'Global'}. `
-            + (url ? `Source: <a href="${url}" target="_blank">${truncate(url, 65)}</a>` : 'Source: unpublished / field documentation');
-        list.appendChild(li);
-    });
-}
-
-/* ============================================================
-   EDITION SWITCH (placeholder for future multi-edition support)
-   ============================================================ */
-function switchEdition(val) {
-    // Future: fetch edition-specific data from a database
-    console.log('Edition selected:', val);
-}
-
-/* ============================================================
-   INIT
-   ============================================================ */
-window.addEventListener('DOMContentLoaded', () => {
-    renderKPIs();
-    renderAbstract();
-    renderCategoryChart();
-    renderLevelChart();
-    renderRegionChart();
-    renderRiskChart();
-    renderScatterChart();
-    renderMap();
-    renderNetwork();
-    renderSpotlight();
-    renderGems();
-    renderTable();
-    renderReferences();
-    console.log(`GII Bulletin loaded: ${INNOVATIONS.length} innovations.`);
-});
+// ─── INIT ───
+window.addEventListener('DOMContentLoaded',()=>{const t=localStorage.getItem('gii-theme');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('thmbtn').textContent='☀️ Light';}renderKPI();renderAbs();renderCat();renderLvl();renderReg();renderRisk();renderSct();renderMap();renderNet();renderSpot();renderGems();filteredData=[...INNOVATIONS];renderPage();renderRefs();buildTOC();console.log('GII Bulletin loaded:',INNOVATIONS.length,'innovations.');});
 </script>
 </body>
 </html>
