@@ -3127,5 +3127,212 @@
         "priority_score": 38,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "d6c236e46cedfaa14566c472341d328b",
+        "timestamp": "2026-03-22T16:55:04.299007",
+        "title": "GiveLove Humanure Composting Toilet System",
+        "sources": [
+            "https://www.borgenmagazine.com/compost-toilets/",
+            "https://givelove.org/haiti/",
+            "https://humanurehandbook.com/africa.html",
+            "https://givelove.org/uganda/",
+            "https://givelove.org"
+        ],
+        "summary": "A low-tech, DIY-oriented sanitation system that uses five-gallon buckets and carbon-based cover materials to manage human waste. The system relies on external thermophilic composting to neutralize pathogens, turning waste into nutrient-rich agricultural compost.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Agriculture",
+            "Sustainable Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Haiti, Uganda, Kenya",
+            "region": "Multiple",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses a simple bucket-collection method where waste is covered with carbon-rich materials to prevent odors and flies. Unlike many composting toilets, it does not divert urine. The contents are later moved to external three-chambered bins where thermophilic (heat-producing) decomposition kills pathogens.",
+            "materials_used": [
+                "Five-gallon bucket",
+                "Locally constructed wooden box",
+                "Sawdust",
+                "Rice hulls",
+                "Coco-coir",
+                "Three-chambered composting bins"
+            ],
+            "step_by_step": [
+                "Construct a wooden box to house a standard five-gallon bucket.",
+                "Add a layer of carbon-based cover material (sawdust or hulls) to the bottom of the bucket.",
+                "Cover waste with additional carbon material after each use to maintain an aerobic environment and suppress odors.",
+                "Transport full buckets to a centralized or communal three-chambered composting bin.",
+                "Allow the waste to undergo thermophilic composting, monitoring temperatures to ensure pathogen destruction.",
+                "Cure the compost until it is safe for use as a soil amendment in agriculture."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a low-cost, odorless sanitation solution in areas where high-tech sewage systems fail or are unavailable, while producing organic fertilizer.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological, as the system involves the manual handling of raw human excreta which contains pathogens like E. coli, cholera, and parasites. While thermophilic composting is a proven method for sterilization, it relies on maintaining specific temperature thresholds (55-60°C) consistently. Failure to reach these temperatures or improper handling during the transfer process could lead to disease outbreaks or groundwater contamination."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "b97639b9903f46bd655fd14c7b664994",
+        "timestamp": "2026-03-22T16:55:24.722194",
+        "title": "EkoLakay Container-Based Sanitation (SOIL)",
+        "sources": [
+            "https://unfccc.int/climate-action/momentum-for-change/planetary-health/composting-waste-treatment",
+            "https://www.oursoil.org/our-work/sanitation/",
+            "https://www.oursoil.org",
+            "https://www.biocycle.net/composting-anchors-sanitation-access-in-haiti/",
+            "https://www.globalcitizen.org/en/content/soil-haiti-compost-toilets-poverty/"
+        ],
+        "summary": "A sustainable sanitation service in Haiti that provides urine-diverting dry toilets to households, collects waste weekly, and converts it into nutrient-rich organic compost for soil restoration.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Agriculture",
+            "Circular Economy"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Haiti",
+            "region": "Rural and peri-urban areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses urine-diverting dry toilets (UDDT) to separate liquid from solid waste, minimizing odor. Solid waste is covered with carbon material and collected weekly for treatment and composting.",
+            "materials_used": [
+                "Urine-diverting dry toilets (UDDT)",
+                "Crushed sugarcane bagasse",
+                "Waste containers",
+                "Composting facility equipment"
+            ],
+            "step_by_step": [
+                "Installation of locally manufactured UDDTs in households",
+                "Residents use crushed sugarcane bagasse as cover material for solid waste",
+                "Weekly collection of waste containers by service providers",
+                "Transportation of waste to a centralized processing facility",
+                "Transformation of waste into 'Konpòs Lakay' organic fertilizer through composting",
+                "Distribution of fertilizer for soil restoration and reforestation"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of sanitation infrastructure, public health risks from untreated waste, and severe soil depletion.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Biological",
+                "Fire"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological due to the handling of human excreta, which can transmit pathogens such as cholera and parasites if hygiene protocols or thermophilic composting temperatures (55°C+) are not strictly maintained. There is also a moderate fire risk associated with the storage of dry sugarcane bagasse and potential spontaneous combustion in large, improperly managed compost piles. However, as an established service with standardized collection and processing, the systemic risk is well-managed."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "16d052908de0f4752848ebe3c996526d",
+        "timestamp": "2026-03-22T16:55:44.334532",
+        "title": "EcoSan (Ecological Sanitation) Toilets by Dream Big Ghana",
+        "sources": [
+            "https://dreambigghana.org.uk/",
+            "https://www.southsouth-galaxy.org/colombia-and-ghana-combine-efforts-to-improve-sanitary-conditions/",
+            "https://dreambigghana.org.uk/eco-sanitation/"
+        ],
+        "summary": "A sustainable sanitation program in rural coastal Ghana that utilizes EcoSan twin-vault composting toilets to eliminate open defecation and provide safe, organic fertilizer for local farmers.",
+        "category": [
+            "Sanitation",
+            "Agriculture",
+            "Waste Management",
+            "Community Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Ghana",
+            "region": "Dzita and Dzita-Agbledomi",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses above-ground, twin-vault units where one vault is used while the other undergoes a 6-12 month decomposition process to turn waste into pathogen-free fertilizer, closing the nutrient loop.",
+            "materials_used": [
+                "Affordable building materials",
+                "Concrete",
+                "Bricks",
+                "Composting vaults"
+            ],
+            "step_by_step": [
+                "Local masons construct above-ground twin-vault composting units.",
+                "The community uses one vault while the second remains sealed.",
+                "Once the first vault is full, it is sealed for a decomposition period of six to twelve months.",
+                "The second vault is put into use while the first undergoes aerobic decomposition.",
+                "Pathogen-free fertilizer is harvested from the decomposed vault for agricultural use.",
+                "The WASH Committee manages the facilities and educates the community on waste recycling."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Elimination of open defecation and provision of affordable agricultural fertilizer.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Biological"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk involves the handling of human waste and the potential for pathogen transmission if the composting period is not strictly observed or if safety gear is not used during vault emptying. However, EcoSan is a proven, low-tech sanitation method, and the involvement of a managed WASH committee significantly mitigates these biological risks."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
