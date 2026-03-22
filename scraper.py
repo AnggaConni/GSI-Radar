@@ -157,29 +157,21 @@ def save_text_file(filepath, text):
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(text)
 
-import re
-
 def extract_json_safe(text):
     try:
-        if not text: return None
-        # 1. Bersihkan komentar gaya JS (// atau /* */) yang sering disisipkan AI
-        content = re.sub(r'//.*?\n|/\*.*?\*/', '', text, flags=re.S)
-        
-        # 2. Cari awal dan akhir blok JSON
-        start_idx = content.find('{') if '{' in content else content.find('[')
-        end_idx = content.rfind('}') if '}' in content else content.rfind(']')
-        
-        if start_idx == -1 or end_idx == -1:
-            return json.loads(content.strip())
-            
-        json_str = content[start_idx:end_idx+1]
-        
-        # 3. Bersihkan trailing commas (koma di akhir array/object yang dilarang di Python)
-        json_str = re.sub(r',\s*([\]}])', r'\1', json_str)
-        
-        return json.loads(json_str)
+        text = text.strip()
+        tick3 = '`' * 3
+        if text.startswith(tick3 + 'json'): text = text[7:]
+        if text.startswith(tick3): text = text[3:]
+        if text.endswith(tick3): text = text[:-3]
+        text = text.strip()
+        start_idx = text.find('{') if '{' in text else text.find('[')
+        end_idx = text.rfind('}') if '}' in text else text.rfind(']')
+        if start_idx != -1 and end_idx != -1:
+            return json.loads(text[start_idx:end_idx+1])
+        return json.loads(text)
     except Exception as e:
-        log.error(f"JSON Parse Error: {e} | Raw Snippet: {text[:100]}...")
+        log.error(f"JSON Parse Error: {e}")
         return None
 
 # ✅ NEW: Normalize title text before hashing.
@@ -392,9 +384,9 @@ def run_discovery_pipeline(api_key, database, max_items=3):
     return success_count
     
 def generate_intelligence_report(api_key, database):
-    """Membaca database dan menghasilkan satu laporan intelijen yang bersih."""
+    """Membaca database dan menambahkan resume baru dengan rotasi ID."""
     if not database:
-        log.warning("Database kosong. Membatalkan pembuatan laporan.")
+        log.warning("Database is empty. Skipping report generation.")
         return
 
     log.info("📊 Generating Periodic Intelligence Resume...")
@@ -569,37 +561,42 @@ def generate_intelligence_report(api_key, database):
                 - Keep text concise but meaningful
                 """
 
-    prompt = f"Analyze this innovation dataset and fill the JSON template accurately:\n\nDATASET:\n{db_string}"
+    prompt = f"Analyze the following innovation dataset and generate the report.\n\nDATASET:\n{db_string}"
     new_report = call_gemini_with_retry(api_key, prompt, sys_prompt, expect_json=True)
 
     if new_report:
-        # Muat database resume (tangani file yang isinya [] atau kosong)
+        # ✅ PAKSA jumlah record agar sesuai dengan kenyataan di database
+        new_report["report_metadata"]["total_records_analyzed"] = len(database)
+        new_report["report_metadata"]["generated_at"] = datetime.now().isoformat()
+        new_report["report_metadata"]["period"] = quarter
+        
+        # Load data lama
         resume_db = load_json_file(RESUME_FILE, [])
         if not isinstance(resume_db, list): 
             resume_db = []
 
         # ✅ ROTASI ID: Ubah semua 'gsi-current' lama menjadi 'gsi-older'
         for report in resume_db:
-            if isinstance(report, dict) and "report_metadata" in report:
+            if isinstance(report, dict):
+                if "report_metadata" not in report: report["report_metadata"] = {}
                 report["report_metadata"]["report_id"] = "gsi-older"
 
-        # Setup metadata laporan baru (Force value agar akurat)
-        new_report["report_metadata"]["total_records_analyzed"] = len(database)
+        # Setup metadata laporan baru
         new_report["report_metadata"]["generated_at"] = datetime.now().isoformat()
         new_report["report_metadata"]["period"] = quarter
         new_report["report_metadata"]["report_id"] = "gsi-current"
         
-        # ✅ SIMPAN (Hanya sekali, tidak dobel)
+        # ✅ SIMPAN HANYA SEKALI
         resume_db.append(new_report)
         save_json_file(RESUME_FILE, resume_db)
         
-        # Update file Markdown
+        # Update file Markdown untuk preview cepat
         md_content = convert_report_to_markdown(new_report)
         save_text_file(REPORT_MD_FILE, md_content)
 
-        log.info(f"✅ Intelligence Resume successfully generated. Total records: {len(database)}")
+        log.info(f"✅ Resume successfully generated and rotated. ID: gsi-current")
     else:
-        log.error("Failed to generate intelligence report due to API or Parsing issues.")
+        log.error("Failed to generate intelligence report.")
 
 def convert_report_to_markdown(report_data):
     meta = report_data.get("report_metadata", {})
