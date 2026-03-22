@@ -1,0 +1,62 @@
+name: ICH Shared Heritage Auto-Crawler
+
+on:
+  schedule:
+    # Runs every 2 days to prioritize fixing INCOMPLETE data, then discovers new data
+    - cron: "0 0 */2 * *"
+  workflow_dispatch: 
+    inputs:
+      force_crawl:
+        description: 'Force crawl now?'
+        required: true
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  run-scraper-and-ai:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run Scraper & Gemini AI
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FORCE_CRAWL: ${{ github.event.inputs.force_crawl }}
+        run: python scraper.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add data.json history.json resume.json || true
+          
+          if git diff --staged --quiet; then
+            echo "No new data to commit."
+          else
+            git commit -m "ICH Update: Enriched incomplete data & discovered new heritage [skip ci]"
+            git push origin main
+          fi

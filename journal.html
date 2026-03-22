@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Journal of Intangible Cultural Heritage</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    
+    <style>
+        /* =========================================
+           SCREEN STYLING (Browser View)
+           ========================================= */
+        :root {
+            --bg-color: #e5e7eb;
+            --paper-color: #ffffff;
+            --text-color: #2d3748;
+            --heading-color: #1a202c;
+            --border-color: #cbd5e1;
+            --accent-color: #9f1239; /* Classic Maroon */
+            --accent-secondary: #0f766e;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* A4 Paper Simulation on Screen */
+        .a4-paper {
+            background-color: var(--paper-color);
+            width: 210mm;
+            min-height: 297mm;
+            padding: 25mm 20mm;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            text-align: justify;
+            font-size: 11pt;
+            position: relative;
+        }
+
+        .no-print-area {
+            margin-bottom: 20px;
+            text-align: center;
+            background: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 210mm;
+            box-sizing: border-box;
+        }
+
+        /* UI Controls (Dropdown & Buttons) */
+        .controls-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        select.journal-select {
+            padding: 10px 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+            color: var(--accent-color);
+            background-color: #fff0f5;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        select.journal-select:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        button {
+            background-color: var(--accent-secondary);
+            color: white;
+            border: none;
+            padding: 11px 24px;
+            font-size: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover { background-color: #0d5c56; }
+        
+        .btn-info { background-color: #475569; }
+        .btn-info:hover { background-color: #334155; }
+
+        /* =========================================
+           MODAL STYLING (For ISSN Info)
+           ========================================= */
+        .modal-overlay {
+            display: none; 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); z-index: 9999;
+            justify-content: center; align-items: center;
+            backdrop-filter: blur(2px);
+        }
+        .modal-content {
+            background: #ffffff; width: 90%; max-width: 550px;
+            padding: 30px; border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            position: relative; font-family: 'Montserrat', sans-serif;
+            color: #334155;
+        }
+        .close-modal {
+            position: absolute; top: 15px; right: 20px;
+            font-size: 24px; cursor: pointer; color: #94a3b8; background: none; border: none; padding: 0;
+        }
+        .close-modal:hover { color: #e11d48; }
+
+        /* =========================================
+           TYPOGRAPHY & FORMATTING
+           ========================================= */
+        .issn-header {
+            text-align: right;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #718096;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; color: var(--heading-color); }
+
+        h1.title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            color: var(--accent-color);
+        }
+
+        .authors {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .abstract-container {
+            border-top: 2px solid var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding: 20px 0;
+            margin-bottom: 25px;
+            background-color: rgba(159, 18, 57, 0.03);
+        }
+
+        h2.abstract-title {
+            text-align: center;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0 0 15px 0;
+            color: var(--accent-color);
+        }
+
+        .abstract-text { font-size: 11pt; font-weight: 600; text-align: justify; }
+
+        .story-start::first-letter {
+            font-size: 3.5em; float: left; line-height: 0.8; margin-right: 8px; margin-top: 4px;
+            color: var(--accent-color); font-family: 'Montserrat', sans-serif; font-weight: 700;
+        }
+
+        h2.section-title {
+            font-size: 16px; letter-spacing: 1px; border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px; margin-top: 35px; text-transform: uppercase;
+        }
+
+        p { margin-bottom: 16px; }
+
+        .two-columns { column-count: 2; column-gap: 10mm; text-align: justify; }
+
+        /* =========================================
+           VISUALIZATION CONTAINERS
+           ========================================= */
+        .figure-container {
+            margin: 35px 0; padding: 15px; background: white; border: 1px solid #e2e8f0;
+            border-radius: 4px; page-break-inside: avoid;
+        }
+        
+        .chart-stack { display: flex; flex-direction: column; gap: 30px; align-items: center; margin-bottom: 15px; }
+        .chart-wrapper { position: relative; height: 280px; width: 100%; display: flex; justify-content: center; }
+
+        .figure-caption {
+            font-size: 10pt; font-family: 'Montserrat', sans-serif; margin-top: 25px; color: #64748b;
+            text-align: left; border-left: 3px solid var(--accent-color); padding-left: 10px;
+        }
+        .map-container, .network-container { width: 100%; height: 400px; margin-bottom: 15px; border: 1px solid var(--border-color); background-color: #f8fafc; z-index: 1; }
+        
+        .quote-box {
+            font-family: 'Montserrat', sans-serif; font-size: 14px; font-style: italic; color: var(--accent-secondary);
+            border-left: 4px solid var(--accent-secondary); padding: 15px 20px; margin: 25px 0; background-color: #f0fdfa; page-break-inside: avoid;
+        }
+
+        /* =========================================
+           TABLE AND REFERENCES STYLING
+           ========================================= */
+        .journal-table {
+            width: 100%; border-collapse: collapse; font-size: 10pt; margin-bottom: 25px; page-break-inside: auto;
+        }
+        .journal-table th, .journal-table td { border: 1px solid var(--border-color); padding: 8px 12px; text-align: left; }
+        .journal-table th { background-color: #f8fafc; font-family: 'Montserrat', sans-serif; color: var(--heading-color); font-weight: 600; }
+        .journal-table tr { page-break-inside: avoid; page-break-after: auto; }
+        .journal-table tbody tr:nth-child(even) { background-color: #f1f5f9; }
+        
+        .reference-list { font-size: 10pt; padding-left: 20px; color: #4a5568; }
+        .reference-list li { margin-bottom: 8px; word-wrap: break-word; }
+        .reference-list a { color: var(--accent-secondary); text-decoration: none; }
+        .reference-list a:hover { text-decoration: underline; }
+
+        /* =========================================
+           PRINT PDF STYLING
+           ========================================= */
+        @media print {
+            @page { size: A4 portrait; margin: 20mm; }
+            body { background: none; padding: 0; margin: 0; display: block !important; }
+            .a4-paper { width: 100%; min-height: auto; box-shadow: none; padding: 0; }
+            .no-print-area, .modal-overlay { display: none !important; }
+            h1, h2, h3, .figure-caption, .journal-table th { page-break-after: avoid; break-after: avoid; }
+            .figure-container, .quote-box { page-break-inside: avoid; break-inside: avoid; margin: 15px 0 !important; }
+            p, td { orphans: 3; widows: 3; }
+            canvas { -webkit-print-color-adjust: exact; color-adjust: exact; }
+            .force-page-break { page-break-before: always; }
+            .chart-wrapper canvas { max-width: 100% !important; max-height: 100% !important; }
+            .chart-wrapper { height: 250px !important; }
+            .map-container, .network-container { height: 280px !important; }
+            .chart-legend-item, .chart-legend-color-box, .chart-legend-label { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+            .chart-legend-label { color: #4a5568 !important; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="infoModal" class="modal-overlay" onclick="if(event.target === this) closeModal()">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">✖</button>
+            <h3 style="margin-top:0; font-size: 18px; color: var(--accent-color); border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; text-transform: uppercase;">Editorial Board & Journal Info</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px; margin-bottom: 20px;">
+                <div>
+                    <p style="margin: 0 0 8px 0;"><strong>Penerbit:</strong><br>Angga Conni Saputra</p>
+                    <p style="margin: 0 0 8px 0;"><strong>Pemimpin Redaksi:</strong><br>Angga Conni Saputra</p>
+                    <p style="margin: 0 0 8px 0;"><strong>Sistem Kurasi:</strong><br>ICH Intelligence Engine (AI)</p>
+                </div>
+                <div>
+                    <p style="margin: 0 0 8px 0;"><strong>Kala Terbit:</strong><br>Kuartalan (Quarterly)</p>
+                    <p style="margin: 0 0 8px 0;"><strong>Kontak Redaksi:</strong><br>conniezz.cool@gmail.com</p>
+                    <p style="margin: 0 0 8px 0;"><strong>Lokasi:</strong><br>[Jakarta Timur], Indonesia</p>
+                </div>
+            </div>
+
+            <div style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 15px; border-radius: 6px; text-align: center;">
+                <h4 style="margin: 0 0 10px 0; font-size: 14px; color: #0f172a;">Arsip Terbitan (Archives)</h4>
+                <p style="font-size: 11px; color: #64748b; margin-top: 0;">Unduh file PDF statis di bawah ini sebagai wujud terbitan resmi.</p>
+                <a href="./Visual%20Journal%20of%20Intangible%20Cultural%20Heritage.pdf" download style="display: inline-block; background-color: var(--accent-secondary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 13px; transition: background 0.3s;">
+                    📥 Download PDF Vol.1 No.1 (2026-Q1)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="no-print-area">
+        <div class="controls-container">
+            <select id="journal-select" class="journal-select" onchange="switchJournal(this.value)">
+                <option value="">Loading Data...</option>
+            </select>
+            <button onclick="window.print()">🖨️ Print Journal (PDF)</button>
+            <button class="btn-info" onclick="openModal()">ℹ️ About & Editorial Board</button>
+        </div>
+        <p style="font-size: 13px; margin: 0; color: #4a5568;">
+            <b>Print Tips:</b> Enable <i>Background graphics</i> in your print dialog to include the pastel colors.
+        </p>
+    </div>
+
+    <div class="a4-paper" id="report-content">
+        
+        <div class="issn-header">ISSN: 2987-XXXX (Online)</div>
+
+        <h1 class="title" id="j-title">Loading Journal...</h1>
+        
+        <div class="authors">
+            <strong>Autonomous Ethnography Agent System<sup>1</sup></strong><br>
+            <sup>1</sup> ICH Shared Heritage Intelligence Engine<br>
+            <span id="j-date" style="font-size: 12px; color: #a0aec0;"></span>
+        </div>
+
+        <div class="abstract-container">
+            <h2 class="abstract-title">Abstract</h2>
+            <div class="abstract-text" id="j-abstract">Connecting to knowledge base...</div>
+        </div>
+
+        <h2 class="section-title" id="j-prologue-title">1. Prologue</h2>
+        <div class="two-columns">
+            <p class="story-start" id="j-prologue-dropcap">-</p>
+            <p style="margin-top:0;" id="j-prologue-text">Initializing data...</p>
+        </div>
+
+        <h2 class="section-title" id="j-anatomy-title">2. Anatomy of Tradition</h2>
+        <p id="j-anatomy-text"></p>
+
+        <h3 class="section-title" style="font-size: 14px; margin-top: 25px;">2.1. Category & Regional Visualization</h3>
+
+        <div class="figure-container">
+            <div class="chart-wrapper"><canvas id="barChart"></canvas></div>
+            <div class="figure-caption">
+                <strong>Figure 1. Category Distribution.</strong> Actual category distribution based on agent data collection.
+            </div>
+        </div>
+
+        <div class="figure-container">
+            <div class="chart-wrapper"><canvas id="polarChart"></canvas></div>
+            <div class="figure-caption">
+                <strong>Figure 2. Regional Distribution.</strong> Regional representation of cultural samples extracted directly from the geographical coordinates of the database.
+            </div>
+        </div>
+
+        <h2 class="section-title">3. Spatial & Network Analysis</h2>
+
+        <h3 class="section-title" style="font-size: 14px; margin-top: 25px;">3.1. Global Distribution Cartography</h3>
+        <p>The map below visualizes the geographical footprint of the documented cultural entities. Each node represents a living heritage actively maintained by local communities, plotted automatically by our intelligence engine based on real-time data scraping.</p>
+        
+        <div class="figure-container">
+            <div class="map-container" id="distributionMap"></div>
+            <div class="figure-caption">
+                <strong>Figure 3. Interactive Geo-Spatial Map.</strong> Distribution of Intangible Cultural Heritage entities extracted from the actual database (<i>data.json</i>).
+            </div>
+        </div>
+
+        <h3 class="section-title" id="j-shared-title" style="font-size: 14px; margin-top: 25px;">3.2. Echoes Across Borders: Shared Heritage Network</h3>
+        <p id="j-shared-text"></p>
+
+        <div class="figure-container">
+            <div class="network-container" id="nodeNetwork"></div>
+            <div class="figure-caption">
+                <strong>Figure 4. Shared Heritage Constellation.</strong> (Dynamic Graph) Box nodes represent formally registered cultural elements from our database. Oval nodes represent detected related traditions spanning across different countries, demonstrating shared human history.
+            </div>
+        </div>
+
+        <h2 class="section-title" id="j-periodic-title">5. Implementation Status (Periodic Report)</h2>
+        <div class="quote-box">
+            "This section adopts the Periodic Reporting framework (UNESCO Form ICH-10), reviewing institutional and legislative capacities in managing cultural heritage for the relevant quarter."
+        </div>
+        <p id="j-periodic-text"></p>
+
+        <h2 class="section-title">5. Methodology & Limitations</h2>
+
+        <div style="margin: 20px 0; padding: 16px; border: 1px solid #ddd; border-radius: 8px; font-family: monospace; background: #fafafa;">
+            <div style="text-align:center; font-weight: bold; margin-bottom: 10px;">
+                Figure 1. Computational Methodology Flow (Discovery–Enrichment Loop)
+            </div>
+            <div style="text-align:center;">
+                Discovery → Enrichment → Validation → Structuring → Journal Output  
+                ↺ Continuous Iterative Loop
+            </div>
+        </div>
+
+        <h3 style="font-size: 14px; margin-top: 20px; font-family: 'Montserrat', sans-serif;">
+        5.1 Data Collection and Discovery Process
+        </h3>
+        <p>This study employs an automated, iterative data collection system designed to identify and document Intangible Cultural Heritage (ICH) elements at scale. Data acquisition is conducted through a two-phase computational pipeline, operating in a continuous discovery–enrichment loop.</p>
+        <p><strong>Discovery Phase:</strong> Cultural elements are identified using a multilingual keyword-based search strategy across global digital sources, including community blogs, local media, open knowledge platforms, and publicly accessible web content. The system intentionally includes both formally recognized and unregistered heritage practices.</p>
+        <p><strong>Enrichment Phase:</strong> The system systematically enriches incomplete records through an AI-assisted retrieval mechanism, enhancing attributes such as descriptive narratives, cultural significance, procedural knowledge (crafting, rituals, recipes), and supporting visual references.</p>
+        <p>This iterative mechanism allows the system to progressively improve data completeness and quality over time, rather than relying on one-time data extraction.</p>
+
+        <h3 style="font-size: 14px; margin-top: 20px; font-family: 'Montserrat', sans-serif;">
+        5.2 AI-Assisted Analysis and Structuring
+        </h3>
+        <p>All collected data is processed using an AI language model with search-grounding capabilities to extract structured descriptions, classify elements, and identify potential cross-cultural relationships. The system applies a low-temperature configuration to ensure consistency, reduce generative variability, and maintain reproducible outputs.</p>
+
+        <h3 style="font-size: 14px; margin-top: 20px; font-family: 'Montserrat', sans-serif;">
+        5.3 Geo-Spatial and Network Mapping
+        </h3>
+        <p>Geographical coordinates are derived using geocoding services to construct global distribution maps and network graphs. This enables spatial visualization of cultural diffusion patterns and transnational linkages.</p>
+
+        <h3 style="font-size: 14px; margin-top: 20px; font-family: 'Montserrat', sans-serif;">
+        5.4 Data Validation and Quality Control
+        </h3>
+        <p>The system incorporates automated validation, including detection of incomplete records, timestamped updates, and fallback retrieval strategies (e.g., Wikimedia). These mechanisms support data traceability and incremental improvement over time. However, no manual ethnographic verification is currently applied.</p>
+
+        <h3 style="font-size: 14px; margin-top: 20px; font-family: 'Montserrat', sans-serif;">
+        5.5 Limitations
+        </h3>
+        <ul style="padding-left: 20px; margin-bottom: 16px;">
+            <li><strong>Source Reliability:</strong> Data is derived from heterogeneous online sources which may introduce inconsistencies. However, this diversity also reflects the distributed and community-driven nature of Intangible Cultural Heritage documentation.</li>
+            <li><strong>Lack of Field Validation:</strong> The system does not replace ethnographic fieldwork; findings should be interpreted as preliminary cultural signals requiring further contextual verification.</li>
+            <li><strong>Interpretive Constraints:</strong> AI-generated narratives may lack contextual depth and community-specific nuance, particularly in representing lived experiences and tacit knowledge.</li>
+            <li><strong>Community and Representation Bias:</strong> In alignment with the principles of the UNESCO 2003 Convention, cultural identification is inherently community-defined. As such, variations, partial perspectives, and representational bias are not treated solely as errors, but as reflections of diverse cultural viewpoints. Nevertheless, these variations may result in uneven representation across regions and groups.</li>
+            <li><strong>Algorithmic Bias:</strong> Search engine indexing, keyword selection, and digital visibility may influence which cultural elements are discovered and prioritized.</li>
+        </ul>
+
+        <h3 style="font-size: 14px; margin-top: 20px; font-family: 'Montserrat', sans-serif;">
+        5.6 Positioning of the System
+        </h3>
+        <p>This framework is not intended to replace traditional ethnographic methodologies. Instead, it functions as a <strong>computational pre-ethnographic layer</strong>, designed to detect, structure, and surface cultural patterns at scale—serving as an entry point for further academic or field-based investigation.</p>
+        
+        <h2 class="section-title" id="j-epilogue-title">6. Epilogue</h2>
+        <p id="j-epilogue-text"></p>
+
+        <h2 class="section-title force-page-break">Appendix A: Documented Entities Register</h2>
+        <table class="journal-table" id="dataTable">
+            <thead>
+                <tr>
+                    <th style="width: 40%">Entity Name</th>
+                    <th style="width: 30%">Region / Country</th>
+                    <th style="width: 30%">Category Classification</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+
+        <h2 class="section-title">References & Source Citations</h2>
+        <ol class="reference-list" id="refList">
+            </ol>
+
+    </div>
+
+    <script>
+        // MODAL LOGIC
+        function openModal() {
+            document.getElementById('infoModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('infoModal').style.display = 'none';
+        }
+
+        // JOURNAL LOGIC
+        let resumeDB = {};
+        let inventoryData = [];
+        let barChartInstance = null;
+        let polarChartInstance = null;
+        let leafletMapInstance = null;
+
+        Chart.defaults.animation = false; 
+        Chart.defaults.font.family = "'Montserrat', sans-serif";
+        Chart.defaults.color = "#4a5568";
+
+        function truncateStr(str, n) {
+            if(!str) return "Unknown";
+            return (str.length > n) ? str.substr(0, n-1) + '...' : str;
+        }
+
+        function getRegion(country) {
+            const c = country.toLowerCase();
+            if (['japan', 'china', 'south korea', 'vietnam', 'philippines', 'indonesia', 'malaysia', 'myanmar', 'thailand', 'india', 'pakistan', 'iran', 'bangladesh'].includes(c)) return 'Asia & Pacific';
+            if (['mexico', 'peru', 'brazil', 'usa', 'colombia', 'argentina', 'chile', 'ecuador', 'bolivia', 'venezuela', 'canada'].includes(c)) return 'Americas';
+            if (['france', 'greece', 'italy', 'spain', 'russia', 'ukraine', 'hungary', 'poland', 'romania', 'slovakia', 'belgium', 'switzerland', 'germany', 'united kingdom'].includes(c)) return 'Europe';
+            if (['nigeria', 'tanzania', 'mali', 'morocco', 'algeria', 'tunisia', 'uganda'].includes(c)) return 'Africa';
+            if (['australia', 'new zealand', 'vanuatu'].includes(c)) return 'Oceania';
+            return 'Other Regions';
+        }
+
+        function renderMap() {
+            if (!leafletMapInstance) {
+                leafletMapInstance = L.map('distributionMap', { zoomControl: true }).setView([20.0, 0.0], 2);
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '&copy; OpenStreetMap &copy; CARTO',
+                    maxZoom: 20
+                }).addTo(leafletMapInstance);
+            }
+
+            leafletMapInstance.eachLayer((layer) => {
+                if(layer instanceof L.Marker) { leafletMapInstance.removeLayer(layer); }
+            });
+
+            const customIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: "<div style='background-color:#0f766e; width:10px; height:10px; border-radius:50%; border:2px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.5);'></div>",
+                iconSize: [14, 14],
+                iconAnchor: [7, 7]
+            });
+
+            let bounds = L.latLngBounds();
+            let addedNodes = 0;
+
+            inventoryData.forEach(item => {
+                if (item.location && item.location.lat && item.location.lng) {
+                    L.marker([item.location.lat, item.location.lng], {icon: customIcon})
+                     .addTo(leafletMapInstance)
+                     .bindPopup(`<b>${item.element_name}</b><br>${item.location.country || 'Unknown'}`);
+                    
+                    bounds.extend([item.location.lat, item.location.lng]);
+                    addedNodes++;
+                }
+            });
+
+            if (addedNodes > 0) {
+                leafletMapInstance.fitBounds(bounds, { padding: [20, 20], maxZoom: 5 });
+            }
+        }
+
+        function renderTable() {
+            const tbody = document.querySelector('#dataTable tbody');
+            tbody.innerHTML = '';
+            
+            if (inventoryData.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;">No data available.</td></tr>';
+                return;
+            }
+
+            inventoryData.forEach(item => {
+                const tr = document.createElement('tr');
+                const name = item.element_name || 'Unknown Entity';
+                const country = (item.location && item.location.country) ? item.location.country : 'Unspecified';
+                const category = item.category || 'Uncategorized';
+                
+                tr.innerHTML = `
+                    <td><strong>${name}</strong></td>
+                    <td>${country}</td>
+                    <td>${category}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderReferences() {
+            const refList = document.getElementById('refList');
+            refList.innerHTML = '';
+
+            if (inventoryData.length === 0) {
+                refList.innerHTML = '<li>No citations generated.</li>';
+                return;
+            }
+
+            inventoryData.forEach(item => {
+                if (item.source_urls && item.source_urls.length > 0) {
+                    const primaryUrl = item.source_urls[0];
+                    const li = document.createElement('li');
+                    li.innerHTML = `<b>${item.element_name || 'Dataset'}</b>. Source: <a href="${primaryUrl}" target="_blank">${truncateStr(primaryUrl, 60)}</a>`;
+                    refList.appendChild(li);
+                }
+            });
+        }
+
+        function renderDynamicNetwork() {
+            const nodesArr = [];
+            const edgesArr = [];
+            const existingNodeIds = new Set();
+
+            inventoryData.forEach(item => {
+                if (!existingNodeIds.has(item.id)) {
+                    nodesArr.push({ 
+                        id: item.id, 
+                        label: `${truncateStr(item.element_name, 20)}\n(${item.location.country})`, 
+                        group: 'main' 
+                    });
+                    existingNodeIds.add(item.id);
+                }
+
+                if (item.shared_heritage_detection && item.shared_heritage_detection.is_shared) {
+                    item.shared_heritage_detection.related_elements.forEach(rel => {
+                        const relId = 'shared_' + rel.element_name.toLowerCase().replace(/\s+/g, '_');
+                        
+                        if (!existingNodeIds.has(relId)) {
+                            nodesArr.push({ 
+                                id: relId, 
+                                label: `${truncateStr(rel.element_name, 20)}\n(${rel.country})`, 
+                                group: 'shared' 
+                            });
+                            existingNodeIds.add(relId);
+                        }
+
+                        edgesArr.push({ 
+                            from: item.id, 
+                            to: relId, 
+                            label: truncateStr(rel.relationship_reason, 15), 
+                            title: rel.relationship_reason
+                        });
+                    });
+                }
+            });
+
+            const container = document.getElementById('nodeNetwork');
+            const data = { nodes: new vis.DataSet(nodesArr), edges: new vis.DataSet(edgesArr) };
+            const options = {
+                groups: {
+                    main: { color: { background: '#9f1239', border: '#7e0e2d' }, font: { color: '#ffffff' }, shape: 'box' },
+                    shared: { color: { background: '#f8fafc', border: '#cbd5e1' }, font: { color: '#4a5568' }, shape: 'ellipse' }
+                },
+                edges: { font: { size: 9, align: 'middle' }, color: '#94a3b8', width: 1 },
+                physics: { 
+                    enabled: true, 
+                    solver: 'forceAtlas2Based', 
+                    forceAtlas2Based: { gravitationalConstant: -30, centralGravity: 0.005, springLength: 200, springConstant: 0.18 },
+                    stabilization: { iterations: 150 } 
+                },
+                interaction: { dragNodes: false, zoomView: true, dragView: true }
+            };
+            
+            const network = new vis.Network(container, data, options);
+            
+            network.on("stabilizationIterationsDone", function () {
+                network.setOptions( { physics: false } );
+            });
+        }
+
+        function updateBarChart(categoriesObj) {
+            const ctxBar = document.getElementById('barChart').getContext('2d');
+            const labels = Object.keys(categoriesObj);
+            const data = Object.values(categoriesObj);
+
+            if (barChartInstance) { barChartInstance.destroy(); }
+
+            barChartInstance = new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: labels.length > 0 ? labels : ['No Data'],
+                    datasets: [{
+                        label: 'Entities Count',
+                        data: data.length > 0 ? data : [0],
+                        backgroundColor: 'rgba(159, 18, 57, 0.8)',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        title: { display: true, text: 'Actual Category Distribution' }
+                    },
+                    scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
+                }
+            });
+        }
+
+        function updatePolarChart() {
+            const ctxPolar = document.getElementById('polarChart').getContext('2d');
+            const regionCounts = { 'Asia & Pacific': 0, 'Americas': 0, 'Europe': 0, 'Africa': 0, 'Oceania': 0, 'Other Regions': 0 };
+            
+            inventoryData.forEach(item => {
+                if (item.location && item.location.country) {
+                    const r = getRegion(item.location.country);
+                    if (regionCounts[r] !== undefined) regionCounts[r]++;
+                }
+            });
+
+            const labels = [];
+            const data = [];
+            const colors = ['rgba(15, 118, 110, 0.7)', 'rgba(217, 119, 6, 0.7)', 'rgba(37, 99, 235, 0.7)', 'rgba(225, 29, 72, 0.7)', 'rgba(139, 92, 246, 0.7)', 'rgba(100, 116, 139, 0.7)'];
+            const activeColors = [];
+            
+            let colorIdx = 0;
+            for (const [key, value] of Object.entries(regionCounts)) {
+                if (value > 0) {
+                    labels.push(key);
+                    data.push(value);
+                    activeColors.push(colors[colorIdx % colors.length]);
+                    colorIdx++;
+                }
+            }
+
+            if (polarChartInstance) { polarChartInstance.destroy(); }
+
+            polarChartInstance = new Chart(ctxPolar, {
+                type: 'polarArea',
+                data: {
+                    labels: labels.length > 0 ? labels : ['No Data'],
+                    datasets: [{
+                        data: data.length > 0 ? data : [1], 
+                        backgroundColor: activeColors.length > 0 ? activeColors : ['#ccc']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { position: 'bottom', labels: { boxWidth: 10 } },
+                        title: { display: true, text: 'Actual Regional Distribution' }
+                    }
+                }
+            });
+        }
+
+        function switchJournal(quarter) {
+            if (!quarter || !resumeDB[quarter]) return;
+            
+            const entry = resumeDB[quarter];
+            const content = entry.content;
+            const sections = content.sections;
+
+            document.getElementById('j-date').textContent = `Published: ${entry.statistics.generated_at || 'N/A'}`;
+            document.getElementById('j-title').textContent = content.title || `Quarter Journal ${quarter}`;
+            document.getElementById('j-abstract').textContent = content.abstract || '';
+
+            document.getElementById('j-prologue-title').textContent = sections.prologue?.title || "1. Prologue";
+            document.getElementById('j-prologue-dropcap').textContent = sections.prologue?.dropcap || "";
+            document.getElementById('j-prologue-text').textContent = sections.prologue?.text || "";
+
+            document.getElementById('j-anatomy-title').textContent = sections.anatomy?.title || "Anatomy of Tradition";
+            document.getElementById('j-anatomy-text').textContent = sections.anatomy?.text || "";
+
+            document.getElementById('j-shared-title').textContent = sections.shared_heritage?.title ? `3.2. ${sections.shared_heritage.title.replace(/^\d+\.\s*/, '')}` : "3.2. Echoes Across Borders";
+            document.getElementById('j-shared-text').textContent = sections.shared_heritage?.text || "";
+
+            document.getElementById('j-periodic-title').textContent = sections.periodic_report?.title ? `4. ${sections.periodic_report.title.replace(/^\d+\.\s*/, '')}` : "4. Implementation Status (Periodic Report)";
+            document.getElementById('j-periodic-text').textContent = sections.periodic_report?.text || "";
+
+            document.getElementById('j-epilogue-title').textContent = sections.epilogue?.title ? `6. ${sections.epilogue.title.replace(/^\d+\.\s*/, '')}` : "6. Epilogue";
+            document.getElementById('j-epilogue-text').textContent = sections.epilogue?.text || "";
+
+            updateBarChart(entry.statistics?.categories_distribution || {});
+        }
+
+        async function fetchAllData() {
+            try {
+                const resJournal = await fetch('resume.json');
+                if (resJournal.ok) resumeDB = await resJournal.json();
+
+                const resData = await fetch('data.json');
+                if (resData.ok) {
+                    const rawData = await resData.json();
+                    inventoryData = rawData.inventory || [];
+                }
+
+                const selectEl = document.getElementById('journal-select');
+                selectEl.innerHTML = ''; 
+                
+                const availableQuarters = Object.keys(resumeDB).filter(q => resumeDB[q].status === "complete").sort().reverse();
+
+                if (availableQuarters.length === 0) {
+                    selectEl.innerHTML = '<option value="">No journals available</option>';
+                    document.getElementById('j-title').textContent = "No Complete Journals Yet";
+                } else {
+                    availableQuarters.forEach(q => {
+                        const option = document.createElement('option');
+                        option.value = q;
+                        option.textContent = `${q} Quarter Edition`;
+                        selectEl.appendChild(option);
+                    });
+                    switchJournal(availableQuarters[0]);
+                }
+
+                renderMap();
+                renderTable();
+                renderReferences();
+                updatePolarChart();
+                renderDynamicNetwork();
+
+            } catch (error) {
+                console.error("Data Fetch Error:", error);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', fetchAllData);
+    </script>
+</body>
+</html>
