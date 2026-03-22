@@ -1004,5 +1004,194 @@
         "priority_score": 70,
         "hidden_gem": true,
         "critical_flag": true
+    },
+    {
+        "id": "962a1010bd429d2cc550280b6cb87822",
+        "timestamp": "2026-03-22T10:34:45.014907",
+        "title": "Canvus: Wind Turbine Blade Furniture",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwnHyz4EfZJfYFKl7vcU-LB27UWfDu0NlpEFwSHT0tDQ8EMBjdzu0NOwEXgaR94mYk2k_V3U4ALXcn6Fis5pznbgiL5K87QP3NIn1YnskjUrHQK_OSsuAKCFr7Rbtm2YEJlWbQe3xil2oz1QWFz57b6UMbBLMW0eofXZFCSurvxD0RKLVZcG_4TQOXZGA=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHS252hHAxLFa08O1bL8AmcFFN2XpSLDgp8F6IawnFvHwTlQ0I0R2llVkudZIbMaJN1oKbDH96qSbgLXQ31-4iuqeIIrabrqk2pSAEOXXBieglrM8l7Rwg0Gp6NkjUAOQODw864GQZ267Kk9xk4MLr4jmKGgJQ1JL0EU_qr_GsOg55TGFc8LqMKptkmCrXOZP-EPSdB61DU",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFluwA4e_SbgrLuCZTyckgrNMDvQcaEwnYFFoHdJAOxecl_Xw23FZtqzVHlJe1B9jzcsjEtc8GRUMnjgv6DhJFWCr6InnrznVXwDk-Yy0h3PmFs8JfROilb4lOd27KdlMaYrU0ZO5hDta3pI2A_g7ZIsWhV-mSiXno5AQq6dQU4Cw7isbnSRGFi7PUMhqHaO-htRJq6cBsys51vWiMDu14-bw==",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETpdTmflT7_XWyzifa9WzdVsit0KgFonDJLsTg5MI-03Fa1G8okFqe3ukKZ9z0QrLWgS2W9N7qX9Wzy-PFp-T5rzQcoJo21BytEi5sox8TIhwk-Z7ZphrLjbG0LgXADXTXt7qRe_l2z4im8zocl1bvy2XcAa94LxSGpd5A6fY01HQtC7Ph6kqBtrLxwaPwJ3pxjJfB6HgW4i5dZ4G0A0CZ5wPE_Q==",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxKq3l5cGdLvHMljArrkoSS-7ilJPiz5JX8H7AuG9gCQXUe_yu-ymQ09_EM2ihN4Ur7Lm3CL9LWu5q6QRgxzapRKWYfWy0Dtv1pty2ybYCr3XIJWFpdHcpbNaNSoFO_pCzHg_A7X1wbbWSfKhuoc2i3CDn-tXxTBVB4FPf_yEkhV9PfgcxByF5zmTj_Mpe-ujy3iry37E="
+        ],
+        "summary": "Canvus, an Ohio-based company, repurposes decommissioned wind turbine blades into durable and artfully designed public furniture, including benches, picnic tables, and planters. This initiative addresses the challenge of wind turbine blade waste, which is difficult to recycle, by transforming fiberglass blades into functional sculptures. The company also integrates other recycled materials like composite lumber, rubber from tires, and mixed plastics, providing sustainable solutions for public spaces across the United States.",
+        "category": [
+            "Waste Management",
+            "Recycling",
+            "Sustainable Design",
+            "Public Furniture",
+            "Upcycling"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "United States",
+            "region": "Ohio",
+            "lat": 40.2253569,
+            "lon": -82.6881395
+        },
+        "process": {
+            "how_it_works": "Decommissioned wind turbine blades, along with other recycled materials, are transformed into public furniture. The massive fiberglass blades are cut into unique cross-sections to create functional sculptures, often featuring custom artwork.",
+            "materials_used": [
+                "Decommissioned wind turbine blades (fiberglass)",
+                "Composite lumber",
+                "Rubber from tires",
+                "Mixed plastics"
+            ],
+            "step_by_step": [
+                "Acquire decommissioned wind turbine blades.",
+                "Cut massive fiberglass blades into unique cross-sections.",
+                "Integrate other recycled materials (composite lumber, rubber, mixed plastics).",
+                "Design and create public furniture (benches, picnic tables, planters).",
+                "Incorporate custom artwork by local artists (optional)."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the growing challenge of wind turbine blade waste, which is difficult to recycle due to its composite materials. Provides a sustainable alternative to landfill disposal and breathes new life into public spaces.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 5,
+            "risk_type": [
+                "Toxic",
+                "Safety gear",
+                "Fire hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks involve worker safety during the processing of wind turbine blades and other recycled materials. Cutting and grinding fiberglass, composite lumber, rubber, and plastics can generate significant dust, posing respiratory and skin irritation hazards, necessitating robust safety gear (respirators, gloves, eye protection). These materials are also combustible, presenting a moderate fire hazard during processing if not properly managed. While the initiative offers substantial environmental benefits by diverting waste from landfills, careful management of manufacturing byproducts and worker exposure is crucial."
+        },
+        "priority_score": 70,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "e0890a17f585affbdf9cd0e0247a85ba",
+        "timestamp": "2026-03-22T10:35:10.958523",
+        "title": "Blade-Made: Repurposing Wind Turbine Blades for Urban Amenities",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7UmNGVUci12Dr21AGIraOkntiCCi68cum5EJ3NdQyisBiJ7CjYRlgbonEfYklmX5iQ6KWos9zVAg4IS1KeOFpHa5452SowO1wOtGQiJj7FLpKU2mgla7haH3siGwHqDMVPHEBrQlmNqIqeiua2LhSp9G5nbEbD5CFeI8mKmmmjN5k8Wa6OvtIPBXCkOJt1aeuDNmt",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUKmgeNAmaPoecWzgQ2xpYh-c52jouggL3Xf726jVc9Iqw2rSyEL2rdmJH9pYuAt5I5a-asT1_7DiOwifa8AHuVqTCGlycGX7x0_BljIQ58KsRuEMuqAmhjy6-fdxIiVVHvdLtooR9Ouq2cOlyZbuz-_qhfIPaStFqgKek7P0yhcGPC1snw8IxkJ7PmutEqkTdg_5QfhxZZAL5"
+        ],
+        "summary": "Blade-Made, a company based in the Netherlands, specializes in repurposing discarded wind turbine blades into various urban amenities. These include playgrounds, urban furniture, and pedestrian bridges, providing functional and aesthetically pleasing additions to community spaces while giving the durable composite material a second life.",
+        "category": [
+            "Recycling",
+            "Urban Design",
+            "Sustainability",
+            "Circular Economy",
+            "Public Furniture"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Netherlands",
+            "region": "",
+            "lat": 52.2434979,
+            "lon": 5.6343227
+        },
+        "process": {
+            "how_it_works": "Wind turbine blades are repurposed and shaped into various urban amenities such as playgrounds, furniture, and bridges.",
+            "materials_used": [
+                "Wind turbine blades (composite material)"
+            ],
+            "step_by_step": []
+        },
+        "impact": {
+            "problem_solved": "Giving durable wind turbine blades a second life, preventing waste, and providing functional and aesthetically pleasing additions to community spaces.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Toxic",
+                "Fire hazard",
+                "Safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "Repurposing wind turbine blades involves processing composite materials (fiberglass, carbon fiber, resins). This process, particularly cutting and grinding, poses risks of toxic dust inhalation, fire hazards from flammable resins and dust, and requires extensive safety gear for workers. While the final urban amenities are stable, the manufacturing process itself carries inherent risks that necessitate strict safety protocols and oversight."
+        },
+        "priority_score": 56,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "a530cd223ad94c50506c91684a657913",
+        "timestamp": "2026-03-22T10:35:35.335108",
+        "title": "Niels Bohr Parking Garage Wind Turbine Blade Facade",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5cmT5_U0fL6z0YtI9i-3DOUfiugxmMsvZ9i14htNVUpx0b9LAStwjyPsBFrtI-OmpmyRFsG1H4IqzQiIqPyZE1aUBE20Cy9PRC5JGVANsIM9kvYgjAVVMEcQFQi1-A2qZNXe16IQ8TxaLWeXHsAhSw5xWmxqR34Y9nGAbETMSdeWhlQ=="
+        ],
+        "summary": "The Niels Bohr parking garage in Lund, Sweden, features a unique facade made from 57 decommissioned wind turbine rotor blades. Architect Jonas Lloyd, in collaboration with Vattenfall, transformed these durable industrial components into decorative curtain walls for the five-story building, creating a striking and sustainable piece of urban infrastructure.",
+        "category": [
+            "Architecture",
+            "Sustainable Building",
+            "Waste Reuse",
+            "Urban Infrastructure"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Sweden",
+            "region": "Lund",
+            "lat": 55.7029296,
+            "lon": 13.1929449
+        },
+        "process": {
+            "how_it_works": "Decommissioned wind turbine rotor blades, known for their extreme durability, are carefully cut and mounted as decorative curtain walls for a building's facade, serving both aesthetic and sustainable purposes.",
+            "materials_used": [
+                "Decommissioned wind turbine blades",
+                "Rotor blades"
+            ],
+            "step_by_step": [
+                "Decommissioned wind turbine rotor blades were obtained",
+                "Blades were carefully cut into sections",
+                "Cut blade sections were mounted as decorative curtain walls on the building's facade"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the challenge of large-scale structural reuse of wind turbine components, transforming industrial waste into a prominent and sustainable urban infrastructure element.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Fire Hazard",
+                "Toxic",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The large-scale structural reuse of decommissioned wind turbine blades, typically made from composite materials (fiberglass, carbon fiber, resin), introduces potential fire hazards. These materials can be combustible, and in the event of a fire, could release significant amounts of toxic fumes, posing risks to occupants and the surrounding environment. While the project is innovative and sustainable, the flammability and smoke toxicity of the facade materials in an urban context warrant specific fire safety engineering and potential mitigation measures."
+        },
+        "priority_score": 78,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
