@@ -430,34 +430,37 @@ def generate_intelligence_report(api_key, database):
                 "charts": { "innovation_by_region": [{"region": "", "count": 0}], "risk_distribution": [{"level": "", "count": 0}], "knowledge_source_trend": [{"source": "", "count": 0}] }
                 }"""
 
-    prompt = f"Analyze the following innovation dataset and generate the report.\n\nDATASET:\n{db_string}"
-
+    prompt = f"Analyze this innovation dataset:\n{db_string}"
     new_report = call_gemini_with_retry(api_key, prompt, sys_prompt, expect_json=True)
 
     if new_report:
+        # Set metadata untuk laporan baru
         new_report["report_metadata"]["generated_at"] = datetime.now().isoformat()
         new_report["report_metadata"]["period"] = quarter
+        new_report["report_metadata"]["report_id"] = "gsi-current" # Pastikan ID-nya current
 
-        # --- LOGIKA BARU UNTUK ID MANAGEMENT ---
+        # Muat database resume yang ada
         resume_db = load_json_file(RESUME_FILE, [])
         if not isinstance(resume_db, list):
             resume_db = []
 
-        # ✅ Langkah 1: Ubah SEMUA laporan yang sudah ada di database menjadi 'gsi-older'
-        for old_report in resume_db:
-            if "report_metadata" in old_report:
-                old_report["report_metadata"]["report_id"] = "gsi-older"
+        # ✅ ROTASI ID: Ubah semua 'gsi-current' lama menjadi 'gsi-older'
+        log.info("🔄 Rotating old report IDs to 'gsi-older'...")
+        for report in resume_db:
+            if isinstance(report, dict) and "report_metadata" in report:
+                report["report_metadata"]["report_id"] = "gsi-older"
 
-        # ✅ Langkah 2: Tambahkan laporan baru (yang ID-nya masih 'gsi-current')
+        # Tambahkan laporan baru ke urutan paling akhir
         resume_db.append(new_report)
         
+        # Simpan kembali
         save_json_file(RESUME_FILE, resume_db)
-        # ---------------------------------------
 
+        # Update file Markdown untuk preview cepat
         md_content = convert_report_to_markdown(new_report)
         save_text_file(REPORT_MD_FILE, md_content)
 
-        log.info("✅ Intelligence Resume successfully appended. Only the latest is 'gsi-current'.")
+        log.info(f"✅ Resume successfully generated. ID: {new_report['report_metadata']['report_id']}")
     else:
         log.error("Failed to generate intelligence report.")
 
