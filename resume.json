@@ -1,7 +1,7 @@
 [
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-03-22T13:57:15.470188",
             "period": "Q1 2026",
             "total_records_analyzed": 33
@@ -207,6 +207,232 @@
                 {
                     "source": "Formal",
                     "count": 5
+                }
+            ]
+        }
+    },
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-22T14:28:24.872141",
+            "period": "Q1 2026",
+            "total_records_analyzed": 33
+        },
+        "global_summary": {
+            "total_innovations": 30,
+            "grassroots_percentage": 60,
+            "institutional_percentage": 20,
+            "semi_formal_percentage": 20
+        },
+        "top_categories": [
+            {
+                "category": "Sustainable Agriculture",
+                "count": 10,
+                "trend": "stable"
+            },
+            {
+                "category": "Waste Management & Upcycling",
+                "count": 6,
+                "trend": "increasing"
+            },
+            {
+                "category": "Renewable Energy & Biogas",
+                "count": 4,
+                "trend": "increasing"
+            },
+            {
+                "category": "Automotive & Mechanical Engineering",
+                "count": 4,
+                "trend": "stable"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Africa",
+                "key_pattern": "Focus on post-harvest preservation and energy modernization through engine repurposing.",
+                "risk_level": "high"
+            },
+            {
+                "region": "Mesoamerica",
+                "key_pattern": "Strong reliance on traditional symbiotic agricultural systems (Milpa, Chinampa).",
+                "risk_level": "low"
+            },
+            {
+                "region": "Europe",
+                "key_pattern": "Institutional upcycling of industrial composite waste (wind turbine blades).",
+                "risk_level": "medium"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 18,
+            "critical_cases": 10,
+            "top_risk_types": [
+                "Fire hazard",
+                "Explosion",
+                "Toxic pathogen exposure",
+                "Chemical leaching"
+            ],
+            "emerging_risks": [
+                "DIY Energy Systems: Repurposing internal combustion engines for air or electrical power without pressure-rated components.",
+                "Contaminated Upcycling: Use of scavenged chemical containers for food-grade hydroponics.",
+                "Biological Hazards: Grassroots sanitation systems lacking thermophilic monitoring."
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Circular Mechanical Upcycling",
+                "description": "Repurposing small engines (lawnmowers, car parts) into generators, air motors, or household furniture.",
+                "regions": [
+                    "Global",
+                    "Kenya",
+                    "Germany"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Airtight Crop Preservation",
+                "description": "Transitioning from traditional granaries to hermetic bags and metal silos to eliminate chemical pesticides.",
+                "regions": [
+                    "Tanzania",
+                    "Kenya",
+                    "Malawi",
+                    "Chad"
+                ],
+                "risk_level": "low"
+            },
+            {
+                "pattern_name": "Composite Waste Architecture",
+                "description": "Transforming decommissioned wind turbine blades into urban infrastructure and furniture.",
+                "regions": [
+                    "USA",
+                    "Netherlands",
+                    "Sweden"
+                ],
+                "risk_level": "medium"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "Gravity-fed Hydroponics from Recycled Plastic Bottles",
+                "country": "Zimbabwe",
+                "reason": "Solves electricity dependency in hydroponics using zero-cost materials, though needs toxicity oversight."
+            },
+            {
+                "title": "Terra Preta",
+                "country": "Brazil",
+                "reason": "Ancient carbon-sequestration and soil-fertility technology with massive modern scalability potential."
+            },
+            {
+                "title": "Milpa System",
+                "country": "Mexico/Guatemala",
+                "reason": "One of the most productive polyculture systems known, requiring zero synthetic inputs."
+            },
+            {
+                "title": "Garlic-Based Sprays for Grasshopper Control",
+                "country": "Canada",
+                "reason": "Community-led organic pesticide that leverages traditional knowledge in a modern agricultural context."
+            },
+            {
+                "title": "Massa Community Granaries",
+                "country": "Chad",
+                "reason": "Highly resilient traditional architecture using local clay and straw to combat climate-driven food insecurity."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "regulation",
+                "target": "DIY Biogas and Engine Conversions",
+                "priority_level": "high",
+                "justification": "Multiple records indicate high explosion and fire risks from uncertified pressure vessels and fuel systems."
+            },
+            {
+                "type": "research",
+                "target": "Upcycled Plastic Toxicity in Agriculture",
+                "priority_level": "medium",
+                "justification": "Widespread use of scavenged PET bottles for hydroponics and greenhouses in Barbados and Zimbabwe poses chemical leaching risks."
+            },
+            {
+                "type": "funding",
+                "target": "Hermetic Storage Scaling",
+                "priority_level": "high",
+                "justification": "Proven 30-40% reduction in post-harvest loss with minimal risk; high ROI for food security."
+            },
+            {
+                "type": "training",
+                "target": "Sanitation Management",
+                "priority_level": "medium",
+                "justification": "Grassroots composting toilets (USA, Uganda) require better pathogen-monitoring education to prevent environmental contamination."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "shifting",
+            "observation": "Knowledge is shifting from purely traditional methods to 'Internet-enabled DIY' where formal engineering concepts (ECUs, CAD) are being simplified for grassroots application."
+        },
+        "recommendations": [
+            "Establish safety certification pathways for semi-formal automotive and energy innovations in emerging markets.",
+            "Integrate traditional polyculture (Milpa) into modern climate-smart farming curricula.",
+            "Implement mandatory food-grade testing for agricultural projects using upcycled waste plastics.",
+            "Subsidize the transition from chemical fumigation to hermetic metal silos for smallholder farmers.",
+            "Develop low-cost thermophilic sensors for grassroots composting toilet systems to ensure pathogen destruction."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Africa",
+                    "count": 10
+                },
+                {
+                    "region": "Global/Online",
+                    "count": 9
+                },
+                {
+                    "region": "Europe",
+                    "count": 5
+                },
+                {
+                    "region": "Mesoamerica",
+                    "count": 3
+                },
+                {
+                    "region": "North America",
+                    "count": 3
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "low",
+                    "count": 7
+                },
+                {
+                    "level": "medium",
+                    "count": 5
+                },
+                {
+                    "level": "high",
+                    "count": 18
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "Adapted from Existing",
+                    "count": 12
+                },
+                {
+                    "source": "Traditional",
+                    "count": 6
+                },
+                {
+                    "source": "Self-taught",
+                    "count": 6
+                },
+                {
+                    "source": "Formal Education",
+                    "count": 4
+                },
+                {
+                    "source": "Internet",
+                    "count": 2
                 }
             ]
         }
