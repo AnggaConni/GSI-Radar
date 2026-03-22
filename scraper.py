@@ -565,6 +565,11 @@ def generate_intelligence_report(api_key, database):
     new_report = call_gemini_with_retry(api_key, prompt, sys_prompt, expect_json=True)
 
     if new_report:
+        # ✅ PAKSA jumlah record agar sesuai dengan kenyataan di database
+        new_report["report_metadata"]["total_records_analyzed"] = len(database)
+        new_report["report_metadata"]["generated_at"] = datetime.now().isoformat()
+        new_report["report_metadata"]["period"] = quarter
+        
         # Load data lama
         resume_db = load_json_file(RESUME_FILE, [])
         if not isinstance(resume_db, list): 
