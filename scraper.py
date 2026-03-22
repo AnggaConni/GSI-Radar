@@ -210,9 +210,10 @@ def call_gemini(api_key, prompt, system_instruction, use_search=False, expect_js
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "systemInstruction": {"parts": [{"text": system_instruction}]}
+        # ✅ FIX 2: Tambahkan koma di akhir baris ini
+        "systemInstruction": {"parts": [{"text": system_instruction}]}, 
         "generationConfig": {
-            "temperature": 0.5, # Lower temperature for strictly formatted output
+            "temperature": 0.5, 
             "maxOutputTokens": 8192
         }
     }
