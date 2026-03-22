@@ -1,23 +1,23 @@
 # Global Innovation Intelligence Report
-**Period:** Q1 2026 | **Generated:** 2026-03-22T09:19:17.545800 | **Records Analyzed:** 9
+**Period:** Q1 2026 | **Generated:** 2026-03-22T10:10:46.109879 | **Records Analyzed:** 12
 
 ---
 ## 🌍 Executive Summary
-Out of 9 innovations tracked:
+Out of 12 innovations tracked:
 - **66.67%** Grassroots
-- **11.11%** Semi-Formal
-- **22.22%** Institutional
+- **16.67%** Semi-Formal
+- **16.67%** Institutional
 
 ## ⚠️ Emerging Risks
-- **High-Risk Cases:** 4 | **Critical:** 2
-- **Top Risks:** toxic, environment, safety gear
+- **High-Risk Cases:** 7 | **Critical:** 5
+- **Top Risks:** toxic, environment, fire hazard, explosion
 
 ## 💎 Hidden Gems
-- **The Humanure Handbook Sawdust Toilet System** (globally)
+- **The Humanure Handbook Sawdust Toilet System** (USA (origin); globally adopted)
 - **Garlic-Based Sprays for Grasshopper Control** (Canada)
-- **Garlic Brew** (unspecified)
-- **Hot Pepper Solution** (unspecified)
-- **The Milpa system** (Mexico, Guatemala)
+- **Garlic Brew** (Global (Peace Corps programme countries))
+- **Hot Pepper Solution** (Global (Peace Corps programme countries))
+- **The Milpa system** (Mexico, Guatemala, and broader Mesoamerica)
 - **Terra Preta** (Brazil)
 
 ---

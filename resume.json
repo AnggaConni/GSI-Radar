@@ -383,5 +383,232 @@
                 }
             ]
         }
+    },
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-22T10:10:46.109879",
+            "period": "Q1 2026",
+            "total_records_analyzed": 12
+        },
+        "global_summary": {
+            "total_innovations": 12,
+            "grassroots_percentage": 66.67,
+            "institutional_percentage": 16.67,
+            "semi_formal_percentage": 16.67
+        },
+        "top_categories": [
+            {
+                "category": "Agriculture & Sustainable Farming",
+                "count": 7,
+                "trend": "stable"
+            },
+            {
+                "category": "DIY & Engine Modification",
+                "count": 4,
+                "trend": "emerging"
+            },
+            {
+                "category": "Sanitation & Waste Management",
+                "count": 4,
+                "trend": "stable"
+            },
+            {
+                "category": "Pest Control",
+                "count": 3,
+                "trend": "stable"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Sub-Saharan Africa",
+                "key_pattern": "Focus on essential services like sanitation and localized technological adaptation for sustainability.",
+                "risk_level": "High"
+            },
+            {
+                "region": "Mesoamerica & Amazon Basin",
+                "key_pattern": "Revitalization and application of ancient, highly sustainable agricultural systems.",
+                "risk_level": "Medium"
+            },
+            {
+                "region": "North America & Global DIY Networks",
+                "key_pattern": "Grassroots innovation in sustainable living, organic farming, and open-source hardware/engine modification.",
+                "risk_level": "Medium-High"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 7,
+            "critical_cases": 5,
+            "top_risk_types": [
+                "toxic",
+                "environment",
+                "fire hazard",
+                "explosion"
+            ],
+            "emerging_risks": [
+                "Risks associated with DIY engine modifications and repurposing high-pressure systems.",
+                "Pathogen exposure from human waste in decentralized sanitation/composting systems.",
+                "Environmental impact of natural pesticides on non-target species."
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Ecological Sanitation & Waste-to-Resource",
+                "description": "Innovations focusing on converting human waste into valuable resources (compost/fertilizer) while providing sanitation.",
+                "regions": [
+                    "USA",
+                    "Haiti",
+                    "Uganda",
+                    "Mexico"
+                ],
+                "risk_level": "High"
+            },
+            {
+                "pattern_name": "Traditional & Sustainable Agriculture Revival",
+                "description": "Re-adopting or adapting ancient agricultural practices for enhanced soil fertility, biodiversity, and pest control.",
+                "regions": [
+                    "Mesoamerica",
+                    "Brazil",
+                    "Canada",
+                    "Global"
+                ],
+                "risk_level": "Low-Medium"
+            },
+            {
+                "pattern_name": "DIY/Grassroots Engineering & Repurposing",
+                "description": "Individual or community-driven efforts to modify, repurpose, or custom-build mechanical/electronic systems, often for alternative energy or performance.",
+                "regions": [
+                    "Global (online communities)",
+                    "Kenya",
+                    "Germany"
+                ],
+                "risk_level": "High"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "The Humanure Handbook Sawdust Toilet System",
+                "country": "USA (origin); globally adopted",
+                "reason": "Provides a waterless, low-cost sanitation solution where traditional systems are unavailable, transforming waste into soil amendment."
+            },
+            {
+                "title": "Garlic-Based Sprays for Grasshopper Control",
+                "country": "Canada",
+                "reason": "Community-led organic pest control reducing reliance on synthetic chemicals."
+            },
+            {
+                "title": "Garlic Brew",
+                "country": "Global (Peace Corps programme countries)",
+                "reason": "Accessible, natural pest control empowering rural communities with sustainable solutions."
+            },
+            {
+                "title": "Hot Pepper Solution",
+                "country": "Global (Peace Corps programme countries)",
+                "reason": "Effective, inexpensive, and natural crop protection using common ingredients."
+            },
+            {
+                "title": "The Milpa system",
+                "country": "Mexico, Guatemala, and broader Mesoamerica",
+                "reason": "Ancient, highly productive intercropping technique enhancing soil fertility and biodiversity."
+            },
+            {
+                "title": "Terra Preta",
+                "country": "Brazil",
+                "reason": "Ancient soil creation method significantly enhancing fertility, water retention, and carbon sequestration for sustained agriculture."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "Enhanced Safety Protocols & Training for Ecological Sanitation",
+                "target": "Grassroots and semi-formal sanitation projects (e.g., Humanure, Uphill Trust, Chinampa)",
+                "priority_level": "High"
+            },
+            {
+                "type": "Safety Guidelines & Certification for DIY Engine Modifications",
+                "target": "Individual engineers and online DIY communities (e.g., Voltarent ECU, Hartman Wartween, Lawnmower Engine Conversion)",
+                "priority_level": "High"
+            },
+            {
+                "type": "Best Practices for Natural Pest Control Application",
+                "target": "Rural and organic farming communities (e.g., Garlic Sprays, Garlic Brew, Hot Pepper Solution)",
+                "priority_level": "Medium"
+            },
+            {
+                "type": "Sustainable Biochar Production & Safety Standards",
+                "target": "Agricultural communities adopting Terra Preta methods",
+                "priority_level": "Medium"
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "traditional",
+            "trend": "Revival and adaptation of traditional knowledge, complemented by modern DIY and formal education applications.",
+            "observation": "A significant portion of current innovation draws from ancient or traditional practices, indicating a strong interest in time-tested, sustainable solutions. Simultaneously, self-taught and internet-driven innovations highlight accessible knowledge sharing."
+        },
+        "recommendations": [
+            "Prioritize funding and technical support for grassroots and semi-formal ecological sanitation projects, ensuring robust safety protocols and hygiene education are integrated from inception.",
+            "Develop and disseminate clear safety guidelines and best practices for DIY and small-scale engineering projects, particularly those involving high-pressure systems or engine modifications, to mitigate explosion and mechanical failure risks.",
+            "Promote the study and adaptation of ancient and traditional sustainable agricultural practices, while also providing guidance on potential health and environmental considerations (e.g., safe manure handling, non-target pesticide effects).",
+            "Invest in educational programs and accessible resources that bridge traditional knowledge with modern scientific understanding, especially in areas like biochar production and natural pest control, to enhance efficacy and safety."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "North America",
+                    "count": 2
+                },
+                {
+                    "region": "Latin America",
+                    "count": 3
+                },
+                {
+                    "region": "Sub-Saharan Africa",
+                    "count": 3
+                },
+                {
+                    "region": "Europe",
+                    "count": 1
+                },
+                {
+                    "region": "Global/Multi-regional",
+                    "count": 3
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "Low",
+                    "count": 3
+                },
+                {
+                    "level": "Medium",
+                    "count": 2
+                },
+                {
+                    "level": "High",
+                    "count": 7
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "self-taught",
+                    "count": 1
+                },
+                {
+                    "source": "adapted_from_existing",
+                    "count": 2
+                },
+                {
+                    "source": "traditional",
+                    "count": 6
+                },
+                {
+                    "source": "formal_education",
+                    "count": 2
+                },
+                {
+                    "source": "internet",
+                    "count": 1
+                }
+            ]
+        }
     }
 ]
