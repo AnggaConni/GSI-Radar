@@ -466,6 +466,13 @@ def main():
 
     try:
         db = load_json_file(DATA_FILE, [])
+        # ✅ NEW: Auto-correction jika format data.json salah (misal: terbaca sisa ICH Radar)
+        if not isinstance(db, list):
+            log.warning("Format data.json bukan List! Melakukan auto-correction...")
+            if isinstance(db, dict) and "inventory" in db:
+                db = db["inventory"]  # Ekstrak list jika ini file bekas ICH Radar
+            else:
+                db = []  # Reset menjadi list kosong agar aman di-append
         history = load_json_file(HISTORY_FILE, {
             "last_data_crawl": "2000-01-01T00:00:00",
             "last_resume_gen": "2000-01-01T00:00:00"
