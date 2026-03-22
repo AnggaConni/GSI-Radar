@@ -426,7 +426,7 @@ p{margin-bottom:13px;text-align:justify;}
 
 <script>
 // ─── DYNAMIC DATA INITIALIZATION ──────────────────
-let INNOVATIONS = [];
+let INNOVATIONS =[];
 let RESUME_DATA =[];
 
 const NET_CAP = 50;
@@ -484,7 +484,8 @@ function populateDropdown() {
         return;
     }
 
-    // Masukkan semua riwayat resume ke dalam opsi dropdown[...RESUME_DATA].reverse().forEach((r, reversedIdx) => {
+    // Masukkan semua riwayat resume ke dalam opsi dropdown
+    [...RESUME_DATA].reverse().forEach((r, reversedIdx) => {
         const actualIdx = RESUME_DATA.length - 1 - reversedIdx;
         const isCurrent = r.report_metadata?.report_id === 'gsi-current';
         const periodStr = r.report_metadata?.period || `Report ${actualIdx + 1}`;
@@ -495,12 +496,12 @@ function populateDropdown() {
         opt.textContent = `${isCurrent ? '⭐ ' : ''}${periodStr} — ${dateStr}`;
         if (isCurrent) opt.selected = true;
         sel.appendChild(opt);
-    };
+    });
     
     // Tampilkan data yang terpilih (biasanya yang terbaru/current)
     const selectedVal = sel.value || (RESUME_DATA.length - 1);
     switchEdition(selectedVal);
-
+}
 
 function switchEdition(idx) {
     const report = RESUME_DATA[idx];
