@@ -100,14 +100,20 @@ p{margin-bottom:13px;text-align:justify;}
 .netbox{width:100%;height:380px;border:1px solid var(--border);background:var(--paper2);}
 /* QUOTE */
 .qbox{font-family:'Crimson Pro',serif;font-size:12pt;font-style:italic;color:var(--accent2);border-left:4px solid var(--accent2);padding:12px 18px;margin:18px 0;background:rgba(var(--accent2-rgb),.06);}
-/* BADGES */
-.badge{display:inline-block;font-family:'DM Mono',monospace;font-size:7.5pt;font-weight:500;padding:2px 7px;border-radius:3px;}
+
+/* BADGES (Diperbaiki agar tidak keluar tabel) */
+.badge{display:inline-block;font-family:'DM Mono',monospace;font-size:7.5pt;font-weight:500;padding:2px 5px;border-radius:3px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;}
 .bg{background:rgba(159,18,57,.12);color:var(--accent);}
 .bs{background:rgba(180,83,9,.12);color:var(--accent3);}
 .bi{background:rgba(15,118,110,.12);color:var(--accent2);}
 .bgem{background:rgba(29,78,216,.1);color:#1d4ed8;}
-.rpill{display:inline-block;width:28px;height:18px;border-radius:9px;text-align:center;font-family:'DM Mono',monospace;font-size:8pt;font-weight:500;line-height:18px;color:#fff;}
-.rl{background:var(--risk-low);} .rm{background:var(--risk-mid);} .rh{background:var(--risk-hi);}
+
+/* RISK PILLS (Diperbaiki CSS warnanya) */
+.rpill{display:inline-block;width:28px;height:18px;border-radius:9px;text-align:center;font-family:'DM Mono',monospace;font-size:8pt;font-weight:700;line-height:18px;color:#fff;}
+.rlow{background:var(--risk-low);} 
+.rmid{background:var(--risk-mid);} 
+.rhi{background:var(--risk-hi);}
+
 /* SPOTLIGHT */
 .spgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0;}
 .sc{background:var(--paper2);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:3px;padding:12px;transition:transform .15s;}
@@ -119,12 +125,13 @@ p{margin-bottom:13px;text-align:justify;}
 .scb{font-family:'Crimson Pro',serif;font-size:9.5pt;color:var(--ink-soft);margin-top:6px;}
 .scm{margin-top:8px;display:flex;gap:4px;flex-wrap:wrap;}
 .scs{font-family:'DM Mono',monospace;font-size:7.5pt;background:var(--accent-pale);color:var(--accent);padding:2px 6px;border-radius:2px;}
-/* TABLE */
+
+/* TABLE (Sistem anti overflow) */
 .tctrl{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;align-items:center;}
 .sbx,.fsel{padding:7px 11px;font-family:'Montserrat',sans-serif;font-size:11px;border:1.5px solid var(--border);border-radius:4px;outline:none;background:var(--paper);color:var(--ink);transition:border .2s;}
 .sbx{flex:1;min-width:150px;} .sbx:focus,.fsel:focus{border-color:var(--accent2);}
 .fsel{cursor:pointer;}
-.jtable{width:100%;border-collapse:collapse;font-size:9pt;margin-bottom:6px;table-layout:fixed;} /* Mencegah overflow horizontal */
+.jtable{width:100%;border-collapse:collapse;font-size:9pt;margin-bottom:6px;table-layout:fixed;} 
 .jtable th{background:var(--paper2);font-family:'Montserrat',sans-serif;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink);padding:8px 9px;border:1px solid var(--border);cursor:pointer;user-select:none;word-wrap:break-word;white-space:normal;}
 .jtable th:hover{color:var(--accent);}
 .jtable th .sa{opacity:.4;font-size:9px;}
@@ -135,17 +142,20 @@ p{margin-bottom:13px;text-align:justify;}
 .jtable tbody tr:hover{background:var(--accent-pale);}
 .ct{font-weight:600;font-family:'Montserrat',sans-serif;font-size:8.5pt;}
 .cm{font-family:'DM Mono',monospace;font-size:8.5pt;}
+
 /* PAGINATION */
 .pag{display:flex;align-items:center;justify-content:flex-end;gap:6px;padding:8px 0;flex-wrap:wrap;}
 .pbtn{padding:4px 10px;border:1px solid var(--border);border-radius:3px;background:var(--paper);color:var(--ink-soft);cursor:pointer;font-family:'DM Mono',monospace;font-size:9pt;transition:all .15s;}
 .pbtn:hover:not(:disabled){border-color:var(--accent2);color:var(--accent2);}
 .pbtn.act{background:var(--accent);color:#fff;border-color:var(--accent);}
 .pbtn:disabled{opacity:.35;cursor:not-allowed;}
+
 /* REFS */
 .refs{font-size:9pt;padding-left:18px;color:var(--ink-soft);}
 .refs li{margin-bottom:7px;word-wrap:break-word;}
 .refs a{color:var(--accent2);text-decoration:none;}
 .refs a:hover{text-decoration:underline;}
+
 /* MODAL */
 .mbd{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
 .mbd.open{display:flex;}
@@ -161,6 +171,7 @@ p{margin-bottom:13px;text-align:justify;}
 .stag{font-family:'DM Mono',monospace;font-size:8pt;padding:3px 9px;border-radius:3px;background:var(--paper2);border:1px solid var(--border);color:var(--ink-soft);}
 .mabtn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;padding:9px 18px;border-radius:4px;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;transition:background .2s;}
 .mabtn:hover{background:#7e0e2d;}
+
 /* SCALE BANNER */
 .sbanner{background:rgba(var(--accent2-rgb),.08);border:1px solid rgba(var(--accent2-rgb),.25);border-radius:4px;padding:10px 14px;margin:14px 0;font-family:'Montserrat',sans-serif;font-size:8.5pt;color:var(--ink-soft);display:flex;align-items:flex-start;gap:8px;}
 .sbanner strong{color:var(--accent2);}
@@ -168,10 +179,9 @@ p{margin-bottom:13px;text-align:justify;}
 .orn{text-align:center;color:var(--accent);font-size:15pt;margin:22px 0 8px;letter-spacing:6px;}
 .pfooter{margin-top:30px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:8pt;color:var(--ink-faint);flex-wrap:wrap;gap:4px;}
 
-/* PRINT MODE - Aggressive Background Removal & Formatting */
+/* PRINT MODE - Putih Bersih */
 @media print{
   @page{size:A4 portrait;margin:15mm;}
-  /* Paksa background putih bersih */
   body, .shell, .a4, html {background: #ffffff !important; color: #000000 !important;}
   .fig, .sc, .kpi, .sbanner, .qbox, .abswrap, .jtable th, .jtable td, .jtable tbody tr {background: #ffffff !important; border-color: #cccccc !important;}
   .toc-sidebar,.topbar,.mbd,.tctrl,.pag,.sbanner {display:none!important;}
@@ -355,13 +365,14 @@ p{margin-bottom:13px;text-align:justify;}
       </select>
     </div>
     <table class="jtable" id="dtable">
+      <!-- Diperlebar persentase agar badges muat dengan baik -->
       <thead><tr>
-        <th onclick="sortT('title')" style="width:25%">Title <span class="sa"></span></th>
-        <th onclick="sortT('country')" style="width:15%">Country <span class="sa"></span></th>
-        <th style="width:20%">Categories</th>
-        <th onclick="sortT('level')" style="width:12%">Level <span class="sa"></span></th>
-        <th onclick="sortT('risk')" style="width:8%">Risk <span class="sa"></span></th>
-        <th onclick="sortT('priority')" style="width:10%">Priority <span class="sa"></span></th>
+        <th onclick="sortT('title')" style="width:26%">Title <span class="sa"></span></th>
+        <th onclick="sortT('country')" style="width:14%">Country <span class="sa"></span></th>
+        <th style="width:17%">Categories</th>
+        <th onclick="sortT('level')" style="width:15%">Level <span class="sa"></span></th>
+        <th onclick="sortT('risk')" style="width:9%">Risk <span class="sa"></span></th>
+        <th onclick="sortT('priority')" style="width:9%">Priority <span class="sa"></span></th>
         <th style="width:10%">Flags</th>
       </tr></thead>
       <tbody id="tbody"></tbody>
@@ -473,8 +484,7 @@ function populateDropdown() {
         return;
     }
 
-    // Masukkan semua riwayat resume ke dalam opsi dropdown
-    [...RESUME_DATA].reverse().forEach((r, reversedIdx) => {
+    // Masukkan semua riwayat resume ke dalam opsi dropdown[...RESUME_DATA].reverse().forEach((r, reversedIdx) => {
         const actualIdx = RESUME_DATA.length - 1 - reversedIdx;
         const isCurrent = r.report_metadata?.report_id === 'gsi-current';
         const periodStr = r.report_metadata?.period || `Report ${actualIdx + 1}`;
@@ -485,12 +495,12 @@ function populateDropdown() {
         opt.textContent = `${isCurrent ? '⭐ ' : ''}${periodStr} — ${dateStr}`;
         if (isCurrent) opt.selected = true;
         sel.appendChild(opt);
-    });
+    };
     
     // Tampilkan data yang terpilih (biasanya yang terbaru/current)
     const selectedVal = sel.value || (RESUME_DATA.length - 1);
     switchEdition(selectedVal);
-}
+
 
 function switchEdition(idx) {
     const report = RESUME_DATA[idx];
@@ -613,7 +623,8 @@ function renderReg(){
             },
             options:{
                 responsive:true,maintainAspectRatio:false,
-                plugins:{legend:{position:'right',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Regional Distribution',font:{size:11}}}
+                // Legend diubah posisinya ke "bottom" agar tidak mengecilkan diagram pie
+                plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Regional Distribution',font:{size:11}}}
             }
         });
     }catch(e){console.error("Error renderReg", e);}
@@ -667,7 +678,7 @@ function renderNet(){if(!INNOVATIONS.length)return;try{const dataset=[...INNOVAT
 function renderSpot(){if(!INNOVATIONS.length)return;const top3=[...INNOVATIONS].sort((a,b)=>(b.priority_score||0)-(a.priority_score||0)).slice(0,3);const cls=['','t','a'];const med=['#1','#2','#3'];document.getElementById('spgrid').innerHTML=top3.map((item,i)=>`<div class="sc ${cls[i]}"><div class="scr">${med[i]}</div><div class="sct">${item.title}</div><div class="scb">${trunc(item.summary,115)}</div><div class="scm">${lvBadge(item.innovation_level)}<span class="scs">Priority ${item.priority_score||0}</span><span class="badge b${rc(item.risk_assessment?.risk_score||0)==='hi'?'crit':rc(item.risk_assessment?.risk_score||0)==='mid'?'s':'g'}">Risk ${item.risk_assessment?.risk_score||0}</span>${item.hidden_gem?'<span class="badge bgem">💎</span>':''}</div></div>`).join('');}
 
 // ─── GEMS ───
-function renderGems(){if(!INNOVATIONS.length)return;const gems=INNOVATIONS.filter(d=>d.hidden_gem).sort((a,b)=>(b.priority_score||0)-(a.priority_score||0));const w=document.getElementById('gems-wrapper');if(!gems.length){w.innerHTML='<p><em>No hidden gems flagged in this edition.</em></p>';return;}w.innerHTML=`<table class="jtable"><thead><tr><th style="width:30%">Title</th><th style="width:17%">Country</th><th style="width:31%">Summary</th><th style="width:10%">Priority</th><th style="width:12%">Risk</th></tr></thead><tbody>${gems.map(d=>`<tr><td class="ct">💎 ${d.title}</td><td style="font-size:8.5pt;">${d.location?.country||'—'}</td><td style="font-size:8.5pt;">${trunc(d.summary,90)}</td><td class="cm">${d.priority_score||0}</td><td><span class="rpill r${rc(d.risk_assessment?.risk_score||0)}">${d.risk_assessment?.risk_score||0}</span></td></tr>`).join('')}</tbody></table>`;}
+function renderGems(){if(!INNOVATIONS.length)return;const gems=INNOVATIONS.filter(d=>d.hidden_gem).sort((a,b)=>(b.priority_score||0)-(a.priority_score||0));const w=document.getElementById('gems-wrapper');if(!gems.length){w.innerHTML='<p><em>No hidden gems flagged in this edition.</em></p>';return;}w.innerHTML=`<table class="jtable"><thead><tr><th style="width:30%">Title</th><th style="width:15%">Country</th><th style="width:33%">Summary</th><th style="width:10%">Priority</th><th style="width:12%">Risk</th></tr></thead><tbody>${gems.map(d=>`<tr><td class="ct">💎 ${d.title}</td><td style="font-size:8.5pt;">${d.location?.country||'—'}</td><td style="font-size:8.5pt;">${trunc(d.summary,90)}</td><td class="cm">${d.priority_score||0}</td><td><span class="rpill r${rc(d.risk_assessment?.risk_score||0)}">${d.risk_assessment?.risk_score||0}</span></td></tr>`).join('')}</tbody></table>`;}
 
 // ─── TABLE ───
 function applyFilters(){const q=(document.getElementById('ts').value||'').toLowerCase().trim();const lv=(document.getElementById('tl').value||'').toLowerCase().replace(/\s/g,'-');const r=document.getElementById('tr').value;const sc=document.getElementById('tsc').value;filteredData=INNOVATIONS.filter(d=>{const txt=[d.title,d.location?.country||'',...(d.category||[]),d.innovation_level||'',d.summary].join(' ').toLowerCase();return(!q||txt.includes(q))&&(!lv||(d.innovation_level||'').toLowerCase().replace(/\s/g,'-').includes(lv))&&(!r||rc(d.risk_assessment?.risk_score||0)===r)&&(!sc||(d.impact?.scale||'')===sc);});if(sortKey)sortFD();curPage=1;renderPage();}
