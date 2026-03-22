@@ -1744,5 +1744,195 @@
         "priority_score": 46,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "74b8b44863b69aad7afa4287ac86da43",
+        "timestamp": "2026-03-22T11:40:30.258635",
+        "title": "Hermetic Storage Bags for Grain Preservation",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEc51sl0OzJ59gJxkim9CDOOxibGmyJaOWG3xoz-_VnAMERsLqyFLvGROXJSvc59QJcWrQXImXh3FEcfT8SkMIVjm2hzMTJcTHgB1fqR3Y7-cKZrYLjk9HTm8VyVEWQ2_5JMPicKKDqoY2ZT_17Upa7qc6M-f4e-XfvxQ9GfxEbAw3UiGrfBYMkHoltxA==",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHw6-ana97SnrI6anEWgIiAfCMo7JtmE4_W8B2aNpwcmiKUJwObxoBKa0JF5-knYDZR6nnD8exIKI-BCPQ8RWLmmgGgcoc7SaEUhpqzpRCT9FQun5cFgwwwZHNsdfOGbgbTrz9c7AjOJGuBA2QScEyz4a-M2JbpjrR7eL2-v6se8rMERGt7OeNY_g3sYl4=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFs7_D8KCBXPIfvTe_wA-gp-6d5qqmMg9D4o9iJtEKpXzQT3Xkbq67YDRKEBBLlYDP4ZC2wvxuba1ss8pRjVb11t_5qS-M_Q4CoYp_LjhhbQYXmPA4G2CR0RI0Nxufj6bDagmlegwdUaeR-M8r7u1IS_FdlmH484IE_o1IvYpgL3LQjHSo7Om5OTrbAbwu3ruYxHhVlEwDuqJ5lYckyJY_57JRPklHeVH4ZqMXgmedTMM694NknTw==",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZE1WZXl8CS5WboA0wunRvVWkPcwzIRO8GdY9L0PhbvHI-KCaN3BTRzdZ8yWbpAUaDsT-Nby4_DFAAYInl1DE-eV_95GksJZzPI1PKl_bS-_NpR6pKwTQt-ZWmYsuEFjNo3Jr1R7ZhwugQ1hfpOYwX-KpqHEuHUYMbn2uASjp42ykH5wLtR0X0TdzL05-U9gqGSnudXIQYbBIJW69I81ZV5Ic_6g==",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFg_3ni-Q_IqXdVqI0SpZCB1g6SPyQFTE0g_cS_ToTSI_mlm8aKk4bcUWS-rGcqYDkID47S-fbFmJ5F5_yEJ6h3g44-aa-S-Rzv2x_bH1qDPPJkUX27eLJom-yl4tkI19DAdEOXp8mVNyJfD5ggfw=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqqdnvywuY3zUX3CHTtOegDQOarxp1ipUERZ1-2zJsAa6JmS0oFUUX977fgYfBqg8rXcbPcN19bSPMvBEyKDiXz0BPdG5JAg2A7YGCrf0K8q8kSRvwLvXkvMnrMITYhIPQGPnumka-ov_4N6QstAiimKuzX3RXB806Q8FBa9TNIm4VuKNe9roqhlKkwxmJbX8QjhNgSA==",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnudGuSe9r581SGQovTmSF94q0AZMjZF7_mGootHC2tummfiikHMhMrNFa5OZPdOUXQLR3zhDopYYpsKeOqYgR8as5wEm0cTLC9Nx-DlAY0yfOUYZuub7M2SEJ28Akd6vSvibCXMBkQKhcwT8btBKIdsEL8ITjzNMyj47paZd_MvHoxOemX2pRKIenHfxe8nx0PCDgUIVE6Fq-Q3PMtVkahxjuwpBfjpJh6UgVRoUVca2Gh-QbY1xT"
+        ],
+        "summary": "Hermetic storage bags, such as PICS, AgroZ, and Elite bags, are multi-layered, airtight solutions that create an oxygen-depleted environment to prevent insect infestation and mold growth in stored grains without chemical pesticides. This innovation significantly reduces post-harvest losses, which can be as high as 30-40% in traditional methods, preserving the quantity and quality of crops like maize, cowpea, and beans. Projects across Africa focus on scaling their use, providing training to smallholder farmers and engaging local manufacturers to ensure affordability and accessibility. This technology enhances food security and boosts farmer income by 35-50% by allowing longer storage and sales when market prices are higher.",
+        "category": [
+            "Agriculture",
+            "Food Security",
+            "Post-harvest Storage",
+            "Pest Control"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": [
+                "Tanzania",
+                "Kenya",
+                "Mozambique",
+                "Malawi",
+                "Niger",
+                "Nigeria"
+            ],
+            "region": "Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Multi-layered, airtight bags create an oxygen-depleted environment that suffocates insects and prevents mold growth without the need for chemical pesticides.",
+            "materials_used": [
+                "Multi-layered airtight bags"
+            ],
+            "step_by_step": []
+        },
+        "impact": {
+            "problem_solved": "High post-harvest losses (30-40%) in traditional storage methods due to insects and mold, leading to food insecurity and reduced farmer income.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation significantly reduces traditional risks by eliminating the need for chemical pesticides, which are often toxic and environmentally harmful. The hermetic bags are inert, creating a safe, oxygen-depleted environment internally without posing fire, explosion, or direct toxic hazards during use. The primary potential risk is the environmental impact of plastic waste at the end of the bags' lifecycle, which is an indirect concern not related to operational safety or immediate hazards. Overall, the technology enhances safety and food security."
+        },
+        "priority_score": 68,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "43fb555c6827305e1c32962e78c2ed64",
+        "timestamp": "2026-03-22T11:40:46.341362",
+        "title": "Household Metal Silo",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHykiKjRlHxSUxBR8Wi4YszxyNs9JVJWl1CKZgStm8dfkqO7L0R9YqJdAT_ZmJZyTGmErwAizEIlWY1paYk3TPZ6X2_6rS-gNPnS9OBviekRMBhMHZeoFk8p0ahq4QT0AinO5XDv78_g9IqR_TFXypHKHPj0_cF-Awg2-wFe9TspzhpbQs5V8RRitRfU7K_EYNSQkXNlmwn4a3VnmM17Umt1aOqTVR3LiJdhr2pHfaS6B5rpg=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJk2CtdgT4b0TD58aR_CI2_y4eCIMUB84tBkZYjRsXh20l4tIwQXsjUqgZ2cNcC2JnaEbaEFEtrWMqJgmXhcTc1JlQRpeZecdTUFIMO_8_hM90i8I6qo_6yWMh6Bs9LMWYR24AnuAAOaZXm1_kJBG_dHHIpboOYrg=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFsJ8YPsoFo-Fdpknf5xDHFyc41lVlAWGG8NXMwt_5gMfn0dzwM3tPz9H5HM5CGf6UzCEcZbLg_vF_5xAMJWekDR8iXuMfZFmtqyB3kIGa1vdR5qzy3Z2q1rsq_eJRn1UqIeb7A6GBNpbPpAVR7cYWxgiYa1mY_pX7_-1lFGQbq8FT3SNerfujhMimGH7Fjh3GN1e3rL57wPVf8nHZFgrM-MnvOflGI1b1qTP_9tsM6UWCM4-vFxXDoLsuD0SvrnG9OWnp0u1ST0vpTKMqg4TO7I3zkxeEUjQrkaCFtNRoEUPqXiET4ZZSx2oU6s4zgmYp7GzP1TD3RWRkKt9mzNLsKcweuQwlh0KmxWtpYHIzu9s-Y8uwuntz465r5ppHvYchhVKpkQelVH6tuoR6gp3LyCkYXvgn",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG5GLDk1KSN5pw1Wj44XgT5-x4ViMHYR80myRRBz5wVO07Dg1-3oAlGatp_klf9U12F7SFURDMGpQQ7lZzbtGnPmM30wGcaAgC8nnrqfsZhwRQbTOcpcsiIdi8lq6qEpHyNU4=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSoml0E6P7zYpuNuND_9xDqXno4iOvcePt9_mq5VlRHQJ4D7o-w48ztmA6D5Fp0WRt5qmPl0d3DybQBFSguzP1kaO3aZoTN-Nh8GghJYyqERY=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4qBrdCi1kmQAoNZT1ZIrXXWaaZio5mpaAlJo8hwKvY_qv_lirKd8AL019XZyEVa9bGyAJjV0pLj693c9-h6ZK2B5Y3TgQrK-Nc_wdcymiqIIhNDUBiCLQWxuT27am4DYXKVbQ6ZxIuAQ="
+        ],
+        "summary": "The household metal silo is a robust and effective grain storage innovation consisting of cylindrical structures made from galvanized iron sheets. They are hermetically sealed to prevent insect infestation and rodent damage, significantly reducing post-harvest losses. Adopted in various African countries, these silos enable farmers to store grains for extended periods, ensuring food security and allowing them to sell surplus produce at favorable prices.",
+        "category": [
+            "Grain Storage",
+            "Food Security",
+            "Post-harvest Technology",
+            "Rural Development"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": [
+                "Swaziland",
+                "Kenya",
+                "Malawi",
+                "Zambia"
+            ],
+            "region": "Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Cylindrical structures constructed from galvanized iron sheets are hermetically sealed to prevent insect infestation and rodent damage, thereby preserving stored grains. The hermetic sealing creates an oxygen-deprived environment that suffocates pests.",
+            "materials_used": [
+                "galvanized iron sheets"
+            ],
+            "step_by_step": [
+                "Local artisans are trained to fabricate silos of varying capacities (from 100 kg to 8-9 tonnes) using galvanized iron sheets.",
+                "The fabricated silos are designed to be hermetically sealed to ensure effective pest control and grain preservation.",
+                "Farmers adopt and use these silos for storing grains post-harvest."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Significant reduction in post-harvest losses due to insect infestation and rodent damage, enhanced food security for families, increased farmer income by enabling sales when prices are favorable, and providing a safer alternative to insecticide powders for pest control.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "toxic"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The innovation involves robust metal silos for grain storage, reducing post-harvest losses and improving food security. The primary risk stems from the use of fumigation for pest control, as fumigants are inherently toxic chemicals. Despite being presented as a safer alternative to insecticide powders, the application of fumigants in a grassroots context, with local artisans and farmers, poses a significant risk of improper handling, insufficient safety gear, or inadequate training on application and post-fumigation ventilation, leading to potential toxic exposure. The combination of grassroots adoption and chemical use (fumigation) elevates the overall risk."
+        },
+        "priority_score": 78,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "e6f92467f2ccbe56eefcc81bbe409097",
+        "timestamp": "2026-03-22T11:41:00.900288",
+        "title": "Massa Community Endogenous Crop Storage Granaries",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNMK-O59-8ep8V4MDbprUll8JIjX09E6ePvAJe7WYBCdZGttklp9sJn60RlyF_6Y5sFfcculZ_GB0NyRfMICGmq6CcXhBmQLrjQKOv7FW1QI0TCbSAStTzPAI9KtDFsc0cV0UiqEZbajOMysBERvbpB0K42S-HGzk="
+        ],
+        "summary": "The Massa community in Chad has developed traditional granaries using local materials like banco clay and conical straw to store crops between harvests. This community-led innovation addresses food insecurity and declining crop yields caused by climate change, with the construction know-how passed down through generations. The granaries, typically 2-4 meters in diameter and height, provide a sustainable and culturally embedded solution for food preservation.",
+        "category": [
+            "Agriculture",
+            "Food Security",
+            "Traditional Knowledge",
+            "Climate Resilience"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Chad",
+            "region": "",
+            "lat": 15.6134137,
+            "lon": 19.0156172
+        },
+        "process": {
+            "how_it_works": "Granaries are constructed to store crops between harvest periods, preserving them and ensuring food availability for families. The design and materials protect the stored produce from environmental factors.",
+            "materials_used": [
+                "banco clay",
+                "conical straw"
+            ],
+            "step_by_step": []
+        },
+        "impact": {
+            "problem_solved": "Declining crop yields and food insecurity caused by droughts and irregular rainfall. It also addresses the challenge of preserving crops between harvest periods.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation involves traditional granaries built with banco clay and conical straw. The primary risk is fire hazard due to the flammability of straw, a common risk for structures using such materials. However, the materials are natural, and there are no indications of chemical, explosive, or toxic risks. The knowledge is passed down through generations, suggesting established practices for managing inherent risks. The grassroots nature combined with natural, well-understood materials keeps the overall risk profile relatively low, with fire being the main concern that communities are likely already managing."
+        },
+        "priority_score": 62,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
