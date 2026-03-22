@@ -534,5 +534,181 @@
         "priority_score": 80,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "8872649a2d80af1bbe30fe93d65b123f",
+        "timestamp": "2026-03-22T09:28:51.606649",
+        "title": "Voltarent ECU",
+        "source_url": "https://www.youtube.com/watch?v=u_HkMGQH3zg",
+        "summary": "Peter Mbiria, a Kenyan engineer and founder of Volter Engineering Limited, developed the Voltarent ECU to modernize old car engines. This innovation replaces outdated mechanical fuel injection systems with a custom-designed electronic control unit, significantly improving fuel economy and overall performance by precisely metering fuel and cutting supply during deceleration or cruising.",
+        "category": [
+            "Automotive",
+            "Engineering",
+            "Electronics",
+            "Sustainability"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "Thika",
+            "lat": -1.036648,
+            "lon": 37.077523
+        },
+        "process": {
+            "how_it_works": "The Voltarent ECU replaces mechanical fuel injection systems with electronic control. It precisely meters fuel and cuts off supply during deceleration or cruising, optimizing fuel economy and performance.",
+            "materials_used": [
+                "Voltarent ECU",
+                "custom harness",
+                "individual coil-on-plug ignition systems"
+            ],
+            "step_by_step": [
+                "Remove the mechanical fuel distributor (e.g., Bosch K-Jetronic).",
+                "Upgrade to individual coil-on-plug ignition systems.",
+                "Connect all components via a custom harness to the Voltarent ECU."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Outdated mechanical fuel injection systems in old cars leading to poor fuel economy and suboptimal performance.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "fire hazard",
+                "explosion",
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The innovation directly modifies critical engine systems (fuel injection and ignition) in older vehicles, which falls under the 'chemical/energy' category. Improper calibration, installation, or component failure could lead to severe consequences such as fire hazards, explosions, and increased toxic emissions. The 'grassroots' nature of the development and application to diverse older engines necessitates robust testing, validation, and regulatory oversight to ensure safety and environmental compliance."
+        },
+        "priority_score": 76,
+        "hidden_gem": false,
+        "critical_flag": true
+    },
+    {
+        "id": "dc176773882a633d4ff424880732f5bd",
+        "timestamp": "2026-03-22T09:29:23.525534",
+        "title": "Hartman Wartween's Inline 4-Cylinder Motorcycle Engine",
+        "source_url": "https://www.youtube.com/watch?v=N_8I7M1Pj6I",
+        "summary": "German engineer Hartman Wartween from Rimbach, Odenwald, engineered a unique inline 4-cylinder motorcycle engine. He achieved this by meticulously transforming a small 50 cm³ single-cylinder, four-stroke engine, originally from a Chinese Honda Z50 Monkey copy. Starting in March 2007, he used computer modeling to design the new configuration and fabricated most components himself, including the camshaft, cylinder blocks, and rocker arms. The innovative design features only two connecting rods and eight pistons, resulting in a compact four-cylinder engine from a significantly smaller base unit.",
+        "category": [
+            "Mechanical Engineering",
+            "Engine Design",
+            "Motorcycle Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Germany",
+            "region": "Odenwald",
+            "lat": 49.608764,
+            "lon": 9.0443539
+        },
+        "process": {
+            "how_it_works": "Hartman Wartween engineered an inline 4-cylinder motorcycle engine by adapting a small 50 cm³ single-cylinder engine. His design utilizes only two connecting rods and eight pistons to achieve a compact four-cylinder configuration, demonstrating a novel approach to engine architecture and component integration.",
+            "materials_used": [],
+            "step_by_step": [
+                "Started the project in March 2007.",
+                "Meticulously disassembled the original 50 cm³ single-cylinder, four-stroke engine (from a Chinese Honda Z50 Monkey copy).",
+                "Used computer modeling to design the new inline 4-cylinder configuration.",
+                "Fabricated most of the necessary components himself, including the camshaft, cylinder blocks, and rocker arms.",
+                "Assembled the engine with a unique design featuring only two connecting rods and eight pistons to create a compact four-cylinder unit."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Demonstrating the feasibility of creating a compact, multi-cylinder motorcycle engine from a significantly smaller, single-cylinder base unit through innovative design and fabrication.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "high",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "Fire hazard",
+                "Explosion",
+                "Toxic emissions",
+                "Mechanical failure"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The innovation involves a grassroots engineer custom-fabricating critical components for an internal combustion engine, a device inherently involving chemical energy and high temperatures/pressures. The novel design (two connecting rods, eight pistons) introduces unknown failure modes. Without professional testing, certification, or adherence to established safety standards, there are significant risks of fire, explosion, toxic emissions, and mechanical failure, warranting a low safety level and potential intervention for any use beyond personal experimentation."
+        },
+        "priority_score": 44,
+        "hidden_gem": false,
+        "critical_flag": true
+    },
+    {
+        "id": "400d5182c5b70825e57dba0074806c29",
+        "timestamp": "2026-03-22T09:29:47.149183",
+        "title": "Repurposing Gasoline Lawnmower Engines to Run on Compressed Air",
+        "source_url": "http://hackaday.com/2016/07/08/from-a-lawnmower-engine-to-a-compressed-air-engine/",
+        "summary": "DIY enthusiasts are converting gasoline-powered lawnmower engines to run on compressed air. This innovation, shared through online guides and communities, involves modifying the engine, typically by adding a sleeve valve, to allow compressed air to drive the piston, effectively creating an alternative power source without gasoline.",
+        "category": [
+            "DIY",
+            "Engine Conversion",
+            "Alternative Energy",
+            "Repurposing"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "",
+            "region": "",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The engine is modified by adding a sleeve valve, which allows compressed air to drive the piston, mimicking the power stroke of a traditional internal combustion engine without the need for gasoline.",
+            "materials_used": [
+                "gasoline-powered lawnmower engines",
+                "compressed air",
+                "sleeve valve"
+            ],
+            "step_by_step": [
+                "Modify the existing lawnmower engine by adding a sleeve valve.",
+                "Connect a source of compressed air to the modified engine."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reliance on gasoline for small engines; provides a way to repurpose old engines into a different type of power source.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "internet"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "Explosion"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The DIY conversion of gasoline engines to run on compressed air introduces a significant explosion risk. Original lawnmower engines are not designed to safely contain the continuous high internal pressures of compressed air, and amateur modifications, such as adding a sleeve valve, can lead to catastrophic failure of engine components or pressure lines. While it removes the fire hazard of gasoline, it replaces it with the substantial danger of high-pressure air systems, exacerbated by the grassroots nature of the innovation and the potential for improper engineering or material choices."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": true
     }
 ]
