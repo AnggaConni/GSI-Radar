@@ -100,7 +100,7 @@
         </div>
         <div>
           <h1 class="font-serif font-bold text-lg sm:text-xl tracking-tight text-slate-900 leading-tight">Global Innovation <span class="text-unesco-blue">Intelligence</span></h1>
-          <p class="text-[10px] sm:text-xs text-slate-500 font-medium truncate">Strategic Horizon Scanning & OSINT Radar</p>
+          <p class="text-[10px] sm:text-xs text-slate-500 font-medium truncate">Strategic Innovation Scanning & OSINT Radar</p>
         </div>
       </div>
       <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
@@ -571,6 +571,14 @@
     if (tab === 'resume') {
       const sel = document.getElementById('report-selector');
       if (sel.options.length > 0) loadReport(sel.value);
+      
+      // KODE BARU: Beri jeda 100ms agar CSS flex/block selesai dirender, lalu paksa resize chart
+      setTimeout(() => {
+        if(resumeCharts.donut) resumeCharts.donut.resize();
+        if(resumeCharts.cat) resumeCharts.cat.resize();
+        if(resumeCharts.risk) resumeCharts.risk.resize();
+        if(resumeCharts.knowledge) resumeCharts.knowledge.resize();
+      }, 100);
     }
   }
 
@@ -862,7 +870,15 @@ function populateReportSelector() {
       const isCurrent = r.report_metadata?.report_id === 'gsi-current';
       const opt = document.createElement('option');
       opt.value = i;
-      opt.textContent = `${isCurrent ? '⭐ ' : ''}${r.report_metadata?.period || 'Report'} — ${new Date(r.report_metadata?.generated_at).toLocaleDateString()}`;
+      
+      // KODE BARU: Memaksa warna dropdown menjadi teks gelap dengan background putih
+      opt.className = "text-slate-800 bg-white font-sans font-medium"; 
+      
+      // KODE BARU: Menangani jika data lama tidak punya tanggal yang valid
+      const periodName = r.report_metadata?.period || 'Historical Report';
+      const dateString = r.report_metadata?.generated_at ? new Date(r.report_metadata.generated_at).toLocaleDateString() : 'Unknown Date';
+      opt.textContent = `${isCurrent ? '⭐ ' : ''}${periodName} — ${dateString}`;
+      
       sel.appendChild(opt);
       
       // Otomatis muat yang terbaru (gsi-current)
@@ -959,18 +975,34 @@ function populateReportSelector() {
     document.getElementById('resume-donut-legend').innerHTML += `<div class="border-t border-slate-100 pt-2 mt-1"><p class="text-xs text-slate-500">Total: <b class="text-slate-800">${gs.total_innovations||0} innovations</b></p></div>`;
   }
 
-  function renderCatChart(cats) {
+function renderCatChart(cats) {
     if (!resumeCharts.cat) resumeCharts.cat = echarts.init(document.getElementById('resume-cat-chart'));
     const trendColors = { dominant: '#005bb5', growing: '#16a34a', stable: '#f59e0b', declining: '#ef4444' };
     resumeCharts.cat.setOption({
-      tooltip: { trigger: 'axis' },
-      grid: { top: 10, bottom: 20, left: 0, right: 60, containLabel: true },
-      xAxis: { type: 'value', splitLine: { lineStyle: { color: '#f1f5f9' } } },
-      yAxis: { type: 'category', data: cats.map(c => c.category), axisLabel: { fontSize: 11, color: '#475569', formatter: v => v.length > 16 ? v.slice(0,16)+'…' : v } },
-      series: [{
-        type: 'bar', data: cats.map(c => ({ value: c.count, itemStyle: { color: trendColors[c.trend?.toLowerCase()] || '#005bb5', borderRadius: [0,4,4,0] } })),
-        barWidth: '55%',
-        label: { show: true, position: 'right', formatter: p => `${p.value} · ${cats[p.dataIndex]?.trend || ''}`, fontSize: 10, color: '#64748b' }
+      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+      grid: { top: 15, bottom: 20, left: 10, right: 40, containLabel: true }, // Grid diperlebar
+      xAxis: { type: 'value', splitLine: { lineStyle: { color: '#f1f5f9', type: 'dashed' } } },
+      yAxis: { 
+        type: 'category', 
+        data: cats.map(c => c.category), 
+        axisLabel: { fontSize: 11, color: '#475569', width: 90, overflow: 'truncate', fontWeight: 500 } 
+      },
+      series:[{
+        type: 'bar', 
+        data: cats.map(c => ({ 
+          value: c.count, 
+          itemStyle: { 
+            // Efek Gradasi keren
+            color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+              { offset: 0, color: trendColors[c.trend?.toLowerCase()] || '#005bb5' },
+              { offset: 1, color: '#93c5fd' }
+            ]),
+            borderRadius: [0,6,6,0],
+            shadowColor: 'rgba(0,0,0,0.1)', shadowBlur: 5
+          } 
+        })),
+        barWidth: '45%',
+        label: { show: true, position: 'right', formatter: p => `{a|${p.value}}`, rich: { a: { fontWeight: 'bold', color: '#1e293b' } } }
       }]
     });
   }
@@ -993,20 +1025,33 @@ function populateReportSelector() {
     if (!resumeCharts.risk) resumeCharts.risk = echarts.init(document.getElementById('resume-risk-chart'));
     const riskColors = { High:'#ef4444', Medium:'#f59e0b', Low:'#22c55e' };
     resumeCharts.risk.setOption({
-      tooltip: { trigger: 'item', formatter: '{b}: {c}' },
-      grid: { top:10, bottom:20, left:0, right:0, containLabel:true },
-      xAxis: { type:'category', data: distrib.map(d=>d.level), axisLabel:{fontSize:10,color:'#64748b'} },
-      yAxis: { type:'value', splitLine:{lineStyle:{color:'#f1f5f9'}}, axisLabel:{fontSize:10,color:'#64748b'} },
-      series: [{ type:'bar', data: distrib.map(d=>({value:d.count,itemStyle:{color:riskColors[d.level]||'#005bb5',borderRadius:[4,4,0,0]}})), barWidth:'50%' }]
+      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+      grid: { top: 20, bottom: 20, left: 10, right: 10, containLabel: true }, // Grid diperbaiki
+      xAxis: { type:'category', data: distrib.map(d=>d.level), axisTick: {show: false}, axisLabel:{fontSize: 11, color: '#475569', fontWeight: 600} },
+      yAxis: { type:'value', splitLine:{lineStyle:{color:'#f1f5f9', type:'dashed'}}, axisLabel:{fontSize:10,color:'#94a3b8'} },
+      series:[{ 
+        type:'bar', 
+        data: distrib.map(d=>({value:d.count, itemStyle:{color:riskColors[d.level]||'#005bb5', borderRadius:[6,6,0,0]}})), 
+        barWidth:'40%',
+        label: { show: true, position: 'top', color: '#1e293b', fontWeight: 'bold' } // Angka di atas bar
+      }]
     });
   }
 
   function renderKnowledgeSection(ki, trend) {
     if (!resumeCharts.knowledge) resumeCharts.knowledge = echarts.init(document.getElementById('resume-knowledge-chart'));
     resumeCharts.knowledge.setOption({
-      tooltip: { trigger:'item', formatter:'{b}: {c}' },
-      color:['#7c3aed','#a78bfa','#c4b5fd','#ddd6fe'],
-      series:[{type:'pie', radius:['35%','65%'], data: trend.map(t=>({name:t.source.replace(/_/g,' '),value:t.count})), label:{show:true,formatter:'{b}\n{d}%',fontSize:10,color:'#475569'}, itemStyle:{borderRadius:4,borderColor:'#fff',borderWidth:2}}]
+      tooltip: { trigger:'item', formatter:'{b}: {d}%' },
+      legend: { bottom: '0%', left: 'center', itemWidth: 10, itemHeight: 10, textStyle: { fontSize: 10, color: '#475569' } }, // Legend modern
+      color:['#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e'],
+      series:[{
+        type: 'pie', 
+        radius: ['45%', '70%'], // Dibuat bentuk Donut
+        center: ['50%', '40%'], // Dinaikkan sedikit ke atas
+        data: trend.map(t=>({name:t.source.replace(/_/g,' '),value:t.count})), 
+        label: { show: false }, // Sembunyikan label garis berantakan
+        itemStyle: { borderRadius: 6, borderColor: '#fff', borderWidth: 2 }
+      }]
     });
     document.getElementById('resume-knowledge-insight').innerHTML = `
       <p class="text-xs font-bold uppercase text-purple-600 mb-1">Key Observation</p>
