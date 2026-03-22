@@ -1193,5 +1193,187 @@
         "priority_score": 78,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "893c5b190c059daebab161d285271a9a",
+        "timestamp": "2026-03-22T10:46:34.849198",
+        "title": "PET Bottle Greenhouses for Climate-Smart Farming Education in Barbados",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAhK-vXiCXOa071eYcrp2fLqhAmqc5nojIPI4wP82OE2DRH5YFa_M5pnsib9b2D39wgHwNbRhv6qGXLdTQQOdtLQo5f4L7F0xvK7mbqDwtp2b9xKIRuaygtaL9kOz8BfJpUa2Yd2ezAp92BQZB2EsjtEzJGCMLWTbVIwXco8V9wO0unSLFCiYqAwo8Bvuc7d2ClOPbeF8Mj8sd9BTN5oD8U4wa3gMxwp3ZmzkQxqElmjg="
+        ],
+        "summary": "A sustainable agriculture project in Barbados transformed 8,000 discarded PET bottles into greenhouses for four schools. This initiative educated students in climate-smart farming techniques, reduced plastic pollution, and included the installation of four rainwater tanks. With farmer assistance, the schools completed three successful sowing cycles, producing various vegetables.",
+        "category": [
+            "Sustainable Agriculture",
+            "Waste Management",
+            "Environmental Education",
+            "Climate-Smart Farming"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Barbados",
+            "region": "",
+            "lat": 13.1500331,
+            "lon": -59.5250305
+        },
+        "process": {
+            "how_it_works": "Discarded PET bottles are repurposed to construct greenhouses, providing a controlled environment for growing vegetables using climate-smart farming techniques, complemented by rainwater harvesting.",
+            "materials_used": [
+                "Discarded PET bottles",
+                "Rainwater tanks",
+                "Vegetable seeds"
+            ],
+            "step_by_step": [
+                "Collect and repurpose 8,000 discarded PET bottles.",
+                "Construct greenhouses at four participating schools using the repurposed bottles (approximately 2,000 bottles per greenhouse).",
+                "Install four rainwater tanks to support irrigation.",
+                "Educate students in climate-smart farming techniques.",
+                "Conduct three sowing cycles with assistance from local farmers, growing vegetables like chili peppers, Chinese broccoli, cabbage, tomatoes, eggplant, and mustard greens."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Plastic pollution, lack of education in climate-smart farming techniques, food insecurity.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project demonstrates significant environmental and educational benefits by repurposing plastic waste and promoting sustainable agriculture. Risks are very low, primarily associated with the flammability of PET plastic under extreme conditions and very minor theoretical concerns about potential leaching from plastics, though PET is generally stable. General safety precautions for construction and farming are advisable."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "413fe3ae3f452299c3aa17de3eca0b98",
+        "timestamp": "2026-03-22T10:46:54.723309",
+        "title": "Gleann na Bearu Community Garden Recycled Bottle Greenhouse",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFjQKThKnY8IPGJ26JCu-qSkEp_mkoBiqewH0yEphuwdfe-vOb08j83H3kHrFTx9s0DPf_TzCJoVGscgQEQCpKj0PE_n1t5ByjPt2Pf87i_ui4GIY35I-ugXwgFli0RG13mr1dyWbTmixji98W6Sw0-YUHlQHi0C4panc="
+        ],
+        "summary": "The Gleann na Bearu community garden, in partnership with Carlow Youth Services, built an award-winning greenhouse using approximately 2,000 recycled plastic water and mineral bottles. This project, funded locally and executed by volunteers, has become a central feature for growing various plants and received recognition in Carlow's Pride of Place Upcycle Challenge.",
+        "category": [
+            "Recycling",
+            "Community Project",
+            "Sustainable Building",
+            "Gardening"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Ireland",
+            "region": "Carlow",
+            "lat": 52.8408344,
+            "lon": -6.9261131
+        },
+        "process": {
+            "how_it_works": "The greenhouse provides a sheltered environment for growing plants, such as tomatoes, cucumbers, and other seedlings, extending the growing season and protecting plants from adverse weather. Its construction from recycled bottles provides insulation and natural light.",
+            "materials_used": [
+                "Recycled plastic water bottles",
+                "Recycled mineral bottles",
+                "Bamboo poles",
+                "Surplus polytunnel plastic",
+                "Chicken wire"
+            ],
+            "step_by_step": [
+                "Volunteers collected around 2,000 plastic water and mineral bottles.",
+                "Bottles were meticulously cut and threaded onto bamboo poles to form the walls.",
+                "Surplus polytunnel plastic was used to fashion the roof.",
+                "The roof was secured with chicken wire."
+            ]
+        },
+        "impact": {
+            "problem_solved": "The project addressed the problem of plastic waste by repurposing bottles into a functional structure, provided a space for community gardening, fostered community engagement, and offered educational opportunities for youth.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "fire hazard",
+                "toxic"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project utilizes inert, recycled plastic bottles and natural bamboo, posing minimal inherent risks. There are no chemical or energy components that would elevate risk. While the materials are combustible (plastic, bamboo), the risk of fire hazard is low in this context without an ignition source. Toxic risks from the materials are negligible under normal operating conditions. The project has a positive environmental impact through recycling. Minor safety considerations during construction, such as cuts from plastic, are low-level and manageable."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "9c13e3ab74a2d1e2c40ebd87b2300338",
+        "timestamp": "2026-03-22T10:47:11.761948",
+        "title": "Gravity-fed Hydroponics from Recycled Plastic Bottles",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNUFQtGTILIdUzlzbY-3Kb96SYgHLYx0FJs6vYD9iF1HD9SHwy4IalljW1EqvWN8rrNu2QqMhOprq2B2UlnwNlQIilk65yX_Ct28q0Fdd2VU1KPPpQ3O12GXjqCDeEJZpErv8WE56mE9IVkD0UuhqY0JtvN94SWhDXtId8NRJfLoOPkpBA"
+        ],
+        "summary": "Ruth Rugeje, a farmer in Mutare, Zimbabwe, developed an innovative, low-cost hydroponics system within a greenhouse. It utilizes scavenged two-liter plastic bottles and a gravity-fed mechanism to circulate water and nutrients, growing leafy vegetables like cabbages, lettuce, and spinach. This system provides a sustainable alternative to electricity-dependent hydroponics, addressing frequent power outages and reducing plastic waste.",
+        "category": [
+            "Agriculture",
+            "Waste Management",
+            "Sustainability",
+            "Food Security"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Zimbabwe",
+            "region": "Mutare",
+            "lat": -18.974656,
+            "lon": 32.670473
+        },
+        "process": {
+            "how_it_works": "The system uses gravity to circulate water and nutrients to the plants, eliminating the need for electricity. It is built within a greenhouse structure.",
+            "materials_used": [
+                "Empty two-liter plastic bottles",
+                "Greenhouse structure"
+            ],
+            "step_by_step": []
+        },
+        "impact": {
+            "problem_solved": "Provides a viable alternative to electricity-dependent hydroponics in regions with frequent power outages, supports livelihood, and reduces plastic waste in the community.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "toxic"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The primary risk stems from using scavenged plastic bottles from illegal dumping sites. These bottles may have contained unknown chemicals, which could leach into the hydroponic water and be absorbed by the vegetables, posing a significant toxic risk to consumers. While the innovation is positive for waste reduction and food security, the lack of control over the bottles' prior contents makes the food safety level low. Intervention is needed to ensure bottles are food-grade or thoroughly tested/sanitized to prevent contamination."
+        },
+        "priority_score": 66,
+        "hidden_gem": true,
+        "critical_flag": true
     }
 ]
