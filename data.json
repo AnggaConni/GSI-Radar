@@ -3534,5 +3534,204 @@
         "priority_score": 74,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "f622c35e32d22072a2bf299df30faccd",
+        "timestamp": "2026-03-23T07:37:04.122001",
+        "title": "Raghav FM (Low-cost Community Radio Transmitter)",
+        "sources": [
+            "http://news.bbc.co.uk/2/hi/south_asia/4744194.stm",
+            "https://www.theguardian.com/world/2006/feb/24/india.randeepramesh"
+        ],
+        "summary": "Raghav Mahato, a radio mechanic from Bihar, developed a functional FM transmitter for less than $1 using salvaged parts. He established a community radio station that broadcasted vital health information, local news, and entertainment to a 15-kilometer radius, serving as a critical communication tool for his rural village.",
+        "category": [
+            "Communication",
+            "Social Innovation",
+            "Electronics"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Bihar",
+            "lat": 25.6440845,
+            "lon": 85.906508
+        },
+        "process": {
+            "how_it_works": "The system utilizes a modified cordless microphone circuit to transmit audio signals on FM frequencies, which are then amplified by an antenna mounted at height to reach standard radio receivers within the vicinity.",
+            "materials_used": [
+                "Modified cordless microphone",
+                "Battery",
+                "Antenna",
+                "Bamboo pole"
+            ],
+            "step_by_step": [
+                "Modified the circuitry of a standard cordless microphone to function as a transmitter.",
+                "Connected the transmitter to a power source using a battery.",
+                "Mounted a makeshift antenna onto a tall bamboo pole to increase signal range.",
+                "Connected an audio input (like a tape recorder or microphone) to the transmitter.",
+                "Broadcasted on a specific FM frequency accessible by local radio sets."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of accessible local communication and information dissemination regarding health (AIDS/polio) and community welfare in rural areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "regulatory",
+                "electrical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a low-power, battery-operated FM transmitter. While it was constructed using grassroots methods and lacked formal licensing, the physical risks such as fire, explosion, or toxicity are extremely low due to the low voltage and wattage involved. The primary risk was legal/regulatory rather than a threat to physical safety."
+        },
+        "priority_score": 42,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "581303324b520c250aed64d30e6368a4",
+        "timestamp": "2026-03-23T07:37:22.901126",
+        "title": "Emma Radio",
+        "sources": [
+            "https://www.newtimes.co.rw/news/teenager-rusizi-sets-own-radio-station"
+        ],
+        "summary": "Bavuginyumvira Emmanuel, a 17-year-old student, built a functional FM radio station using salvaged electronic waste to broadcast news, music, and health information to his local community in Rwanda.",
+        "category": [
+            "Communication",
+            "Electronics",
+            "Waste Management",
+            "Public Health"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Rwanda",
+            "region": "Nyakabuye Sector",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The device functions as a low-power FM transmitter that converts audio signals into radio waves using salvaged electronic components, allowing local residents to tune in via standard FM receivers.",
+            "materials_used": [
+                "discarded electronic components",
+                "timeworn cables",
+                "scrap parts",
+                "painted wooden box"
+            ],
+            "step_by_step": [
+                "Salvage electronic components from trash bins and scrap heaps",
+                "Identify and extract functional transistors, capacitors, and resistors",
+                "Assemble a transmitter circuit using salvaged cables and scrap parts",
+                "House the electronic assembly within a painted wooden box for protection",
+                "Configure the device to broadcast on a specific local FM frequency"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Limited access to local information and health education during the COVID-19 pandemic in remote areas.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "fire hazard",
+                "electrical safety",
+                "regulatory non-compliance"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The use of salvaged, 'timeworn' electronic components and cables housed in a combustible wooden box presents a significant fire and electrical safety risk. Furthermore, unauthorized FM broadcasting can interfere with emergency and aviation communication frequencies, posing a public safety risk beyond the immediate physical device."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "b28f1274ff4e4ec4e9ddd976f47f7a91",
+        "timestamp": "2026-03-23T07:37:41.052038",
+        "title": "Pachikweza Radio Station",
+        "sources": [
+            "http://news.bbc.co.uk/2/hi/africa/4791173.stm"
+        ],
+        "summary": "Gabriel Kondesi, a self-taught innovator in Malawi, built a community radio station named 'Pachikweza' using repurposed electronics and car batteries to broadcast local news and cultural content to a 25-kilometer radius.",
+        "category": [
+            "Telecommunications",
+            "Media",
+            "Electronics",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Malawi",
+            "region": "Mulanje district",
+            "lat": -16.0257329,
+            "lon": 35.5072928
+        },
+        "process": {
+            "how_it_works": "The station functions by using modified transistor radios to act as a transmitter, powered by car batteries and broadcasting through TV aerials to reach local FM frequencies.",
+            "materials_used": [
+                "transistor radios",
+                "car batteries",
+                "TV aerials",
+                "radio cassette player",
+                "mobile phone",
+                "bricks",
+                "grass"
+            ],
+            "step_by_step": [
+                "Constructed a brick building with a high foundation to maximize signal propagation.",
+                "Modified and interconnected three small transistor radios to serve as a transmitter.",
+                "Connected the transmitter setup to a radio cassette player for audio input.",
+                "Attached TV aerials to the system to broadcast the signal.",
+                "Powered the entire rig using car batteries.",
+                "Integrated a mobile phone to allow listeners to call in during live broadcasts."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to local news and cultural programming in rural areas with limited communication infrastructure.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "fire hazard",
+                "electrical safety",
+                "chemical hazard"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The combination of modified electronics and car batteries housed in a grass-roofed structure creates a high risk of fire due to potential short circuits or overheating. Car batteries (lead-acid) also pose chemical risks and can release flammable hydrogen gas. Grassroots electrical setups without standardized circuit protection or grounding are inherently unsafe."
+        },
+        "priority_score": 62,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
