@@ -101,11 +101,20 @@
   <header class="border-b border-slate-200 glass-header sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
       <div class="flex items-center gap-3 w-full sm:w-auto">
-        <div class="w-10 h-10 bg-unesco-blue text-white flex items-center justify-center rounded-lg shadow-md shrink-0">
-          <i class="ph-fill ph-radar text-2xl"></i>
+        
+        <div class="w-11 h-11 relative flex items-center justify-center rounded-xl shadow-lg shrink-0 overflow-hidden bg-gradient-to-br from-[#005bb5] to-blue-800 border border-blue-400/40 glow-blue">
+          <div class="absolute inset-0 pattern-grid opacity-40" style="background-size: 8px 8px;"></div>
+          
+          <div class="absolute w-8 h-8 bg-blue-300/30 rounded-full blur-md"></div>
+          
+          <div class="relative z-10 flex items-center justify-center animate-[spin_8s_linear_infinite]">
+            <i class="ph-fill ph-radar text-2xl text-white"></i>
+          </div>
         </div>
+
         <div>
           <h1 class="font-serif font-bold text-lg sm:text-xl tracking-tight text-slate-900 leading-tight">Global Innovation <span class="text-unesco-blue">Intelligence</span></h1>
+          
           <p class="text-[10px] sm:text-xs text-slate-500 font-medium truncate">Strategic Innovation Scanning & OSINT Radar</p>
         </div>
       </div>
