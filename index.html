@@ -43,6 +43,12 @@
     ::-webkit-scrollbar-track { background: #f1f5f9; }
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    /* CSS Tambahan untuk Progress Bar Lineage (Gambar 1) */
+    .progress-bar-container { background: #f1f5f9; border-radius: 99px; overflow: hidden; position: relative; }
+    .progress-bar-fill { background: #005bb5; height: 100%; border-radius: 99px; transition: width 0.6s ease; }
+    .progress-bar-shadow { position: absolute; top: 0; left: 0; right: 0; bottom: 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); border-radius: 99px; pointer-events: none; }
+    
     .leaflet-popup-content-wrapper { border-radius: 8px !important; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1) !important; }
     .marker-main { width:16px; height:16px; background:#005bb5; border-radius:50%; border:3px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
     .modal-blur { backdrop-filter: blur(4px); }
@@ -187,16 +193,25 @@
           </div>
           <div id="map" class="w-full h-[350px] md:h-[500px] z-10 bg-slate-100"></div>
         </div>
+
         <div class="flex flex-col gap-6">
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 h-[240px] flex flex-col">
-            <h3 class="font-serif font-bold text-sm text-slate-800 mb-2 border-b border-slate-100 pb-2">Category Distribution</h3>
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 h-[320px] flex flex-col">
+            <h3 class="font-serif font-bold text-sm text-slate-800 mb-2 border-b border-slate-100 pb-2 flex items-center gap-2">
+              <i class="ph ph-intersect-three text-unesco-blue"></i> Category Focus (Radar)
+            </h3>
             <div id="chart-category" class="flex-grow w-full"></div>
           </div>
-          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 h-[240px] flex flex-col">
-            <h3 class="font-serif font-bold text-sm text-slate-800 mb-2 border-b border-slate-100 pb-2">Innovation Lineage</h3>
-            <div id="chart-origin" class="flex-grow w-full"></div>
+
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex flex-col flex-grow min-h-[200px]">
+            <h3 class="font-serif font-bold text-sm text-slate-800 mb-3 border-b border-slate-100 pb-3 flex items-center gap-2">
+              <i class="ph ph-tree-structure text-unesco-blue"></i> Innovation Lineage (Units)
+            </h3>
+            <div id="lineage-progress-container" class="space-y-4 overflow-y-auto pr-1 flex-grow">
+              <p class="text-xs text-slate-400 italic py-4 text-center">No lineage data identified.</p>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
 
@@ -944,20 +959,130 @@
   }
 
   let chartCat, chartOrg;
-  function renderGlobalCharts() {
+function renderGlobalCharts() {
+    // Pastikan chartCat diinisialisasi hanya sekali
     if(!chartCat) chartCat = echarts.init(document.getElementById('chart-category'));
-    if(!chartOrg) chartOrg = echarts.init(document.getElementById('chart-origin'));
+    
+    // --- 1. DATA PREPARATION (LOGIC TETAP SAMA) ---
     const cats = {};
-    filteredData.forEach(i => (i.category||[]).forEach(c => { cats[c]=(cats[c]||0)+1; }));
-    const catData = Object.entries(cats).sort((a,b)=>b[1]-a[1]).slice(0,5).map(e=>({name:e[0],value:e[1]}));
-    chartCat.setOption({tooltip:{trigger:'item'},color:['#005bb5','#16a34a','#eab308','#f97316','#8b5cf6'],series:[{type:'pie',radius:['40%','70%'],itemStyle:{borderRadius:4,borderColor:'#fff',borderWidth:2},label:{show:false},data:catData}]});
     const orgs = {};
-    filteredData.forEach(i => (i.origin?.knowledge_source||[]).forEach(o => { orgs[o]=(orgs[o]||0)+1; }));
-    const orgData = Object.entries(orgs).map(e=>({name:e[0].replace(/_/g,' '),value:e[1]}));
-    chartOrg.setOption({tooltip:{trigger:'axis'},grid:{top:10,bottom:20,left:0,right:10,containLabel:true},xAxis:{type:'value',splitLine:{lineStyle:{color:'#f1f5f9'}}},yAxis:{type:'category',data:orgData.map(d=>d.name),axisLabel:{fontSize:10,color:'#64748b',formatter:v=>v.length>10?v.slice(0,10)+'...':v}},series:[{type:'bar',data:orgData.map(d=>d.value),itemStyle:{color:'#005bb5',borderRadius:[0,4,4,0]},barWidth:'50%'}]});
-    window.addEventListener('resize', () => { chartCat.resize(); chartOrg.resize(); });
-  }
+    
+    // Iterasi data yang sudah di-filter
+    filteredData.forEach(i => {
+        // Hitung Kategori
+        (i.category||[]).forEach(c => { cats[c]=(cats[c]||0)+1; });
+        // Hitung Origin/Lineage
+        (i.origin?.knowledge_source||[]).forEach(o => { orgs[o]=(orgs[o]||0)+1; });
+    });
 
+    // Urutkan kategori & Lineage berdasarkan jumlah terbanyak (DESC)
+    const catDataArray = Object.entries(cats).sort((a,b)=>b[1]-a[1]);
+    const orgDataArray = Object.entries(orgs).sort((a,b)=>b[1]-a[1]);
+
+
+    // =========================================================================
+    // --- PART A: CATEGORY FOCUS (UBAH DARI PIE MENJADI RADAR - GAMBAR 0) ---
+    // =========================================================================
+    
+    if (catDataArray.length > 0) {
+        // Ambil Top 6 Kategori saja agar Radar tidak terlalu ramai
+        const topCats = catDataArray.slice(0, 6);
+        
+        // Cari nilai maksimum untuk skala Radar
+        const maxVal = Math.max(...topCats.map(e => e[1]));
+        const scaleMax = maxVal > 0 ? maxVal : 10; // Fallback jika 0
+
+        // Siapkan Indikator (Label di ujung Radar)
+        const indicators = topCats.map(e => ({
+            name: e[0].toUpperCase(), // Ubah jadi Uppercase agar formal
+            max: scaleMax
+        }));
+
+        // Siapkan Data Nilai
+        const seriesData = topCats.map(e => e[1]);
+
+        // SETTING OPTION ECHARTS UNTUK RADAR (SESUAI GAMBAR 0)
+        chartCat.setOption({
+            color: ['#005bb5'], // Warna garis Biru UNESCO
+            tooltip: { trigger: 'item' },
+            radar: {
+                indicator: indicators,
+                radius: '65%', // Ukuran Radar di dalam kotak
+                splitNumber: 4, // Jumlah garis sarang laba-laba
+                axisName: { color: '#64748b', fontSize: 10, fontWeight: 600 }, // Style Label ujung
+                // Style garis internal
+                splitArea: { areaStyle: { color: ['#f8fafc', '#f1f5f9'] } },
+                axisLine: { lineStyle: { color: '#e2e8f0' } },
+                splitLine: { lineStyle: { color: '#e2e8f0' } }
+            },
+            series: [{
+                type: 'radar',
+                symbol: 'circle', // Titik data bulat
+                symbolSize: 6,
+                data: [{
+                    value: seriesData,
+                    name: 'Category Focus',
+                    // Efek warna isi transparan biru (sesuai Gambar 0)
+                    areaStyle: { color: 'rgba(0, 91, 181, 0.15)' }, 
+                    lineStyle: { width: 2 }
+                }]
+            }]
+        });
+    } else {
+        // Tampilkan pesan jika tidak ada data kategori
+        chartCat.showLoading({ text: 'No Data', showSpinner: false });
+    }
+
+
+    // =========================================================================
+    // --- PART B: INNOVATION LINEAGE (UBAH DARI ECHARTS MENJADI HTML - GAMBAR 1) ---
+    // =========================================================================
+    
+    const lineageContainer = document.getElementById('lineage-progress-container');
+    lineageContainer.innerHTML = ''; // Bersihkan container
+
+    if (orgDataArray.length > 0) {
+        // Cari nilai maksimum untuk normalisasi lebar progress bar
+        const maxUnits = orgDataArray[0][1]; // Data pertama pasti terbesar karena sudah di-sort
+
+        orgDataArray.forEach(entry => {
+            const rawKey = entry[0];
+            const units = entry[1];
+            
+            // Rapikan nama key (contoh: "adapted_from_existing" -> "Adapted From Existing")
+            const cleanKey = rawKey
+                .replace(/_/g, ' ')
+                .split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                .join(' ');
+
+            // Hitung persentase lebar bar (normalized 0-100%)
+            const pctWidth = (units / maxUnits) * 100;
+
+            // GENERATE HTML UNTUK SATU BARIS (SESUAI GAMBAR 1)
+            const barHtml = `
+              <div class="fade-up">
+                <div class="flex justify-between items-center mb-1.5">
+                  <span class="text-[11px] font-semibold text-slate-700 truncate pr-2">${cleanKey}</span>
+                  <span class="text-[11px] font-bold text-slate-500 whitespace-nowrap">${units} units</span>
+                </div>
+                <div class="progress-bar-container h-3 shadow-inner">
+                  <div class="progress-bar-fill" style="width: ${pctWidth}%"></div>
+                  <div class="progress-bar-shadow"></div>
+                </div>
+              </div>`;
+            
+            lineageContainer.insertAdjacentHTML('beforeend', barHtml);
+        });
+    } else {
+        // Fallback jika tidak ada data lineage
+        lineageContainer.innerHTML = `<p class="text-xs text-slate-400 italic py-4 text-center">No lineage data identified.</p>`;
+    }
+
+    // Pastikan Radar Chart me-resize saat window diubah ukurannya
+    window.addEventListener('resize', () => { if(chartCat) chartCat.resize(); });
+  }
+  
   // ═══════════════════════════════════════════════════════
   //  INTELLIGENCE RESUME TAB
   // ═══════════════════════════════════════════════════════
