@@ -39,7 +39,7 @@ REPORT_MD_FILE   = os.path.join(BASE_DIR, "report.md")
 # Defaults: data every 2 days, resume every 90 days, max 3 items per run.
 DATA_INTERVAL_DAYS   = int(os.environ.get("DATA_INTERVAL_DAYS", 2))
 RESUME_INTERVAL_DAYS = int(os.environ.get("RESUME_INTERVAL_DAYS", 90))
-MAX_ITEMS_PER_RUN    = int(os.environ.get("MAX_ITEMS_PER_RUN", 50))
+MAX_ITEMS_PER_RUN    = int(os.environ.get("MAX_ITEMS_PER_RUN", 5))
 
 # ── Keywords for Search Grounding ──
 # ✅ EXPANDED: From 7 → 60 keywords across 10 thematic categories
