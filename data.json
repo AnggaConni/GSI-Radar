@@ -6978,5 +6978,272 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "915f3a872b9369dccc3651c9daa46156",
+        "timestamp": "2026-03-23T13:52:38.061872",
+        "title": "Red de Trueque (Argentina's Barter Network)",
+        "sources": [
+            "https://www.unsse.org/wp-content/uploads/2014/08/Gomez-paper.pdf",
+            "https://journals.openedition.org/remi/5101",
+            "https://www.scribd.com/document/21156291/The-RGT-Red-Global-de-Trueque",
+            "https://p2pfoundation.net/ranking/argentinas-barter-network-red-de-trueque/",
+            "https://www.economist.com/the-americas/2002/02/07/the-money-changers",
+            "https://www.socioeco.org/bdf_fiche-document-1506_en.html"
+        ],
+        "summary": "A massive grassroots informal economy adaptation in Argentina that utilized private paper vouchers called 'créditos' to facilitate the exchange of goods and services during the country's severe 2001-2002 financial crisis, involving millions of citizens.",
+        "category": [
+            "Economics",
+            "Social Innovation",
+            "Alternative Currency"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Argentina",
+            "region": "South America",
+            "lat": -32.0522527,
+            "lon": -52.1359692
+        },
+        "process": {
+            "how_it_works": "The system functioned through decentralized barter clubs or 'nodes' where participants used a community-issued currency (créditos) to trade home-produced items and services, bypassing the formal banking system and the scarce national Peso.",
+            "materials_used": [
+                "Créditos (private paper vouchers)",
+                "Home-produced goods",
+                "Professional labor",
+                "Repair services"
+            ],
+            "step_by_step": [
+                "Formation of local 'nodes' or barter clubs by community members.",
+                "Issuance of private paper currency (créditos) by the clubs to facilitate trade.",
+                "Members bring homemade goods (e.g., bread, clothing) or offer skills (e.g., repairs, tutoring) to the node.",
+                "Valuation of goods and services in créditos rather than the national currency.",
+                "Exchange of créditos for goods/services among members to maintain a basic standard of living."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of liquidity and access to formal markets for the unemployed and 'new poor' during a total economic collapse.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Red de Trueque is a socio-economic barter system utilizing paper vouchers for the exchange of goods and services. It does not involve hazardous chemicals, high-energy industrial processes, or volatile materials, posing no physical risk of fire, explosion, or toxicity."
+        },
+        "priority_score": 54,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "cb6ec7d0c7f378c43e796bdf185ac823",
+        "timestamp": "2026-03-23T13:53:07.257447",
+        "title": "Sardex Mutual Credit System",
+        "sources": [
+            "https://ideas.repec.org/p/pra/mprapa/64160.html",
+            "https://rethinkingeconomicsitalia.wordpress.com/2014/02/15/sardex-the-islander-currency/",
+            "https://www.resilience.org/stories/2015-10-21/sardex-the-future-of-money/",
+            "https://discover.ed.ac.uk/discovery/fulldisplay?docid=alma9924151325302466&context=L&vid=44UOE_INST:DSV",
+            "https://www.sardexpay.it/",
+            "https://www.cbsnews.com/news/sardex-sardinia-virtual-currency-no-cash/"
+        ],
+        "summary": "A business-to-business (B2B) mutual credit circuit that enables small and medium-sized enterprises to trade goods and services using a digital unit of account, bypassing the need for traditional bank liquidity and cash flow.",
+        "category": [
+            "Finance",
+            "Social Innovation",
+            "Economic Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Italy",
+            "region": "Sardinia",
+            "lat": 40.0912813,
+            "lon": 9.0305773
+        },
+        "process": {
+            "how_it_works": "Businesses trade within a closed network using a digital currency (Sardex) pegged to the Euro. It functions as a zero-sum mutual credit system where members can spend into a negative balance to acquire goods and services, later clearing that debt by selling their own excess capacity to other members.",
+            "materials_used": [
+                "Digital accounting platform",
+                "Network of participating SMEs",
+                "Mutual credit agreement framework"
+            ],
+            "step_by_step": [
+                "A business joins the Sardex circuit and undergoes a vetting process.",
+                "The business identifies 'excess capacity' such as unsold inventory or idle labor hours.",
+                "The business purchases necessary services or goods from other network members using Sardex credits.",
+                "The business earns credits back by providing its own goods or services to other members in the network.",
+                "Accounts are balanced over time without the use of traditional legal tender or interest rates."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Credit crunches and lack of liquidity that prevent SMEs from operating despite having productive capacity.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Sardex system is a digital financial innovation and mutual credit circuit. It does not involve any physical chemicals, energy production, or hazardous materials, posing no risk of fire, explosion, or toxicity. Its primary function is to facilitate economic transactions and liquidity among businesses."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "68c3f3cfcef8ec85ac50950ca41a81e7",
+        "timestamp": "2026-03-23T13:53:27.359112",
+        "title": "TEM (Topiki Enallaktiki Monada)",
+        "sources": [
+            "https://www.bbc.com/news/world-europe-17680900",
+            "https://debtjustice.org.uk/countries/greece",
+            "https://www.financialexpress.com/archive/battered-by-crisis-greeks-turn-to-barter-networks/854911/",
+            "https://www.theguardian.com/world/2013/jan/02/euro-greece-barter-tem-volos",
+            "https://www.reuters.com/article/idUSL5E8F84M7/",
+            "https://www.piie.com/microsites/greek-debt-crisis-no-easy-way-out"
+        ],
+        "summary": "A local alternative currency and barter network established in Volos, Greece, during the 2010 debt crisis. It allows residents to exchange goods and services using a digital credit system pegged to the Euro, bypassing the need for physical cash during periods of high unemployment and austerity.",
+        "category": [
+            "Alternative Currency",
+            "Social Economy",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Greece",
+            "region": "Volos",
+            "lat": 39.3624833,
+            "lon": 22.9401864
+        },
+        "process": {
+            "how_it_works": "Participants use an online platform to trade goods and services for TEM credits. One TEM is valued at one Euro, but the system operates entirely without physical currency, relying on a digital ledger of credits and debits.",
+            "materials_used": [
+                "Online database",
+                "Digital accounting software",
+                "Local goods and services"
+            ],
+            "step_by_step": [
+                "Participants register on the TEM online database",
+                "Users list the goods or services they are offering (e.g., medical care, produce, lessons)",
+                "Transactions are conducted between members, with the buyer's account debited and the seller's account credited in TEMs",
+                "Members use accumulated TEM credits to purchase other needs from within the network"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of liquidity and disposable income due to national debt crisis and austerity measures.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The TEM is a local alternative currency and barter network. It is a socio-economic innovation and does not involve any hazardous materials, chemical reactions, or energy production, posing no physical risk to the public or the environment."
+        },
+        "priority_score": 38,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "d518fb40db6860489c1d6b889fffec00",
+        "timestamp": "2026-03-23T13:53:51.833381",
+        "title": "Venezuelan Informal Barter Economy (Trueque)",
+        "sources": [
+            "https://www.theguardian.com/world/2019/mar/14/venezuela-hyperinflation-barter-dollars-reality",
+            "https://www.youtube.com/watch?v=L_v_6X_5x_o",
+            "https://www.bbc.com/news/world-latin-america-44125340",
+            "https://www.bbc.com/news/av/world-latin-america-47918514",
+            "https://www.reuters.com/article/us-venezuela-economy-barter-widerimage-idUSKCN1IP197",
+            "https://globalnews.ca/news/5365511/venezuela-economy-barter-system/"
+        ],
+        "summary": "In response to extreme hyperinflation and the collapse of the Bolivar, Venezuelan communities established informal bartering systems using commodities like coffee beans and fish as stable units of account to facilitate trade for essential goods and services.",
+        "category": [
+            "Economics",
+            "Social Innovation",
+            "Survival Strategy"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Venezuela",
+            "region": "Lara state and coastal regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Commodities with intrinsic value are used as a medium of exchange and unit of account, bypassing the devalued national currency and physical banknote shortages.",
+            "materials_used": [
+                "Coffee beans",
+                "Fish",
+                "Flour",
+                "Rice",
+                "Medicine",
+                "Agricultural machinery parts"
+            ],
+            "step_by_step": [
+                "National currency loses value, making cash transactions impossible.",
+                "Local communities identify abundant or stable commodities (e.g., coffee or fish) to serve as currency.",
+                "Informal exchange rates are established between commodities and essential services or goods.",
+                "Structured 'trueque' markets are organized where producers travel to exchange harvests.",
+                "Peer-to-peer swaps occur for daily needs like haircuts or medicine."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Ensures survival and access to basic goods in a broken monetary system where the national currency has failed.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The described innovation is a socio-economic adaptation involving the informal bartering of commodities and goods. It does not involve hazardous chemical reactions, energy production, or physical processes that pose risks of fire, explosion, or toxicity."
+        },
+        "priority_score": 54,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
