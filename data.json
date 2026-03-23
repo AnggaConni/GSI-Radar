@@ -5963,5 +5963,337 @@
         "priority_score": 58,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "37e04935b0b8e1d90acec4ca65adecfd",
+        "timestamp": "2026-03-23T12:56:46.754774",
+        "title": "BUAP Low-Cost Cell Phone Lens Microscopes",
+        "sources": [
+            "https://www.onepak.com/recycling-cell-phones-make-school-microscopes/",
+            "https://www.sciencedaily.com/releases/2016/06/160628114639.htm",
+            "https://www.buap.mx/"
+        ],
+        "summary": "Researchers and students at the Benemérita Universidad Autónoma de Puebla (BUAP) repurpose lenses from discarded cell phone cameras into high-magnification microscopes to provide affordable laboratory equipment for rural schools in Mexico.",
+        "category": [
+            "Education",
+            "Recycling",
+            "Scientific Equipment",
+            "Social Innovation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Mexico",
+            "region": "Puebla and Oaxaca",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Lenses salvaged from old cell phone cameras are mounted onto simple support structures to provide enough magnification to observe microorganisms and plant cells.",
+            "materials_used": [
+                "Discarded cell phone camera lenses",
+                "Wood",
+                "Acrylic"
+            ],
+            "step_by_step": [
+                "Salvage lenses from discarded cell phone cameras",
+                "Construct a support frame using wood and acrylic",
+                "Mount the salvaged lens onto the frame at the correct focal distance",
+                "Distribute to schools and conduct teacher training workshops for assembly and maintenance"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of budget and access to professional laboratory equipment in rural biology classrooms.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "physical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This project repurposes inert electronic components and common building materials like wood and acrylic to create educational tools. There are no chemical processes, high-voltage electricity, or hazardous materials involved. The primary risk is minor physical injury during the assembly of the wooden and acrylic frames, which is standard for basic craft and woodworking activities."
+        },
+        "priority_score": 48,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "38e9fe91b76e1cc7f29c67a3aae0f2fb",
+        "timestamp": "2026-03-23T12:57:02.783945",
+        "title": "RACHEL (Remote Area Community Hotspot for Education and Learning)",
+        "sources": [
+            "https://hundred.org/en/innovations/rachel-remote-area-community-hotspot-for-education-learning",
+            "https://solve.mit.edu/challenges/work-of-the-future/solutions/4173",
+            "https://en.wikipedia.org/wiki/World_Possible",
+            "https://worldpossible.org"
+        ],
+        "summary": "An offline server solution that repurposes older or unused computers and tablets into functional learning centers by providing access to massive digital educational repositories via a local Wi-Fi hotspot.",
+        "category": [
+            "Education",
+            "Information Technology",
+            "Sustainability"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Guatemala, Kenya, Tanzania",
+            "region": "Global South",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A Raspberry Pi or repurposed laptop acts as a local server and Wi-Fi hotspot, hosting a large database of educational content that can be accessed by any Wi-Fi-enabled device without an internet connection.",
+            "materials_used": [
+                "Raspberry Pi",
+                "Repurposed laptops",
+                "Tablets",
+                "Wi-Fi antennas",
+                "Storage drives"
+            ],
+            "step_by_step": [
+                "Repurpose an older laptop or configure a Raspberry Pi as a server.",
+                "Install the RACHEL software package and content repositories.",
+                "Load educational content including Wikipedia, Khan Academy, and Project Gutenberg onto the device.",
+                "Set up the device to broadcast a local Wi-Fi signal.",
+                "Connect student devices (tablets or computers) to the local hotspot to browse content via a web browser."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of internet connectivity and high cost of hardware in remote educational settings.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "electrical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "RACHEL utilizes standard, low-power consumer electronics like Raspberry Pis and repurposed laptops. The primary risks are limited to standard electrical safety and the management of older lithium-ion batteries in repurposed hardware, which do not pose a significant hazard in a supervised educational setting."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "a6565c03c68596180840f7c5e6e9b0b2",
+        "timestamp": "2026-03-23T12:57:21.437662",
+        "title": "The Turing Trust IT Lab Initiative",
+        "sources": [
+            "https://www.techbuyer.com/blog/techbuyer-donates-computers-to-it-schools-africa",
+            "https://turingtrust.co.uk",
+            "https://www.greenelement.co.uk/blog/refurbishing-it-equipment-turing-trust/"
+        ],
+        "summary": "The Turing Trust refurbishes donated second-hand computers from UK businesses to create sustainable IT labs in African schools, combining hardware provision with local maintenance training to reduce e-waste and bridge the digital divide.",
+        "category": [
+            "Education",
+            "Information Technology",
+            "Sustainability",
+            "E-waste Management"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Malawi",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The program collects redundant IT equipment from businesses, refurbishes the hardware, and installs it in schools while providing technical training to ensure the infrastructure is self-sustaining.",
+            "materials_used": [
+                "Second-hand computers",
+                "Laptops",
+                "Networking equipment",
+                "Spare parts for repair"
+            ],
+            "step_by_step": [
+                "Collection of used IT equipment from UK businesses",
+                "Data wiping and hardware refurbishment",
+                "Shipping and logistics to partner countries like Malawi",
+                "Setup of IT labs within educational institutions",
+                "Training of local students and teachers in computer maintenance and repair"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of digital literacy infrastructure in developing regions and the accumulation of electronic waste in developed nations.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire",
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks are associated with the handling and disposal of lithium-ion batteries found in laptops, which pose fire and explosion hazards if damaged or aged. Additionally, electronic waste contains toxic heavy metals and chemicals that can harm the environment if not processed correctly at the end of the device's lifecycle. However, as an established program focusing on maintenance training, these risks are generally managed through standard technical procedures."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "c77823b4cf93e1853c4eea807cdec91c",
+        "timestamp": "2026-03-23T12:57:41.059024",
+        "title": "ECO STEM Africa",
+        "sources": [
+            "https://ecostemafrica.org/",
+            "https://ecostemafrica.org.uk/reimagining-e-waste-as-a-resource-for-africas-stem-progress/",
+            "https://acetforafrica.org/acet/publications/research-reports/towards-a-circular-economy-e-waste-management-in-africa/"
+        ],
+        "summary": "A Nigerian initiative that repurposes components from discarded electronics into functional STEM tools like oscilloscopes and voltmeters to address the lack of laboratory equipment in schools while mitigating e-waste pollution.",
+        "category": [
+            "STEM Education",
+            "E-waste Recycling",
+            "Circular Economy",
+            "Educational Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Nigeria",
+            "region": "Africa",
+            "lat": 6.4556371,
+            "lon": 3.3832234
+        },
+        "process": {
+            "how_it_works": "Usable electronic components are salvaged from e-waste and reassembled into functional scientific instruments for school laboratories.",
+            "materials_used": [
+                "Processors",
+                "RAM modules",
+                "Screens",
+                "Discarded electronics",
+                "E-waste"
+            ],
+            "step_by_step": [
+                "Identify and collect discarded electronic devices from waste streams.",
+                "Disassemble devices to salvage functional components like processors, RAM, and screens.",
+                "Design circuitries for scientific instruments using the salvaged parts.",
+                "Involve students in the assembly of tools like oscilloscopes and voltmeters to provide hands-on engineering experience."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable laboratory equipment and environmental hazards caused by illegal e-waste dumping.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Toxic",
+                "Fire",
+                "Safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the project is innovative, repurposing e-waste involves handling components that may contain toxic substances like lead, mercury, and cadmium. The process of dismantling and soldering electronics poses risks of toxic fume inhalation and fire hazards from short circuits or improper power management. Grassroots assembly of scientific instruments requires strict safety protocols and oversight to ensure the tools are electrically safe for classroom use."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "cb38985796cce7c561e8a1781fb2f0a9",
+        "timestamp": "2026-03-23T12:58:03.754939",
+        "title": "Chiwala Provincial STEM School MakerLab E-waste Repurposing",
+        "sources": [
+            "https://africanofilter.org/e-waste-company-tackling-africas-computer-problem",
+            "https://www.youtube.com/watch?v=R9U0X8v_8iE"
+        ],
+        "summary": "Students at Chiwala Provincial STEM School in Zambia utilize a dedicated MakerLab to transform electronic waste into functional appliances, such as DC-powered refrigerators, as part of their practical physics and electronics curriculum.",
+        "category": [
+            "Education",
+            "Sustainability",
+            "Electronics",
+            "Waste Management"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Zambia",
+            "region": "Chiwala",
+            "lat": -15.3886707,
+            "lon": 28.30517
+        },
+        "process": {
+            "how_it_works": "Students salvage functional components from discarded electronics and reconfigure them into new devices using direct current (DC) power systems and practical engineering principles.",
+            "materials_used": [
+                "Electronic waste",
+                "Discarded electronic components",
+                "DC power sources",
+                "Salvaged wiring",
+                "Physics laboratory equipment"
+            ],
+            "step_by_step": [
+                "Collection of discarded electronic devices (e-waste) from the community.",
+                "Disassembly of 'dead' technology to identify salvageable parts.",
+                "Application of physics and electronics theory to design new appliance circuits.",
+                "Assembly of components into functional units like small refrigerators.",
+                "Testing the devices for operation using direct current (DC)."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces environmental impact of e-waste while providing practical engineering skills and affordable appliances.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Fire",
+                "Toxic",
+                "Environment",
+                "Electrical"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "Repurposing e-waste involves significant risks including exposure to heavy metals (lead, cadmium, mercury) and toxic flame retardants. The dismantling process can release hazardous substances, and the construction of cooling devices involves handling refrigerants which may be ozone-depleting or toxic if leaked. Furthermore, DIY electrical circuits using salvaged components pose a high risk of short circuits and fire hazards if not properly fused and insulated."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
