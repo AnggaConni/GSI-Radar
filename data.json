@@ -5627,5 +5627,341 @@
         "priority_score": 66,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "c3573daf2d0fc81a5583c9d08bcc26f9",
+        "timestamp": "2026-03-23T12:34:33.559754",
+        "title": "TECLA: 3D-Printed Raw Earth Housing",
+        "sources": [
+            "https://www.3dwasp.com/en/3d-printed-house-tecla/",
+            "https://eartharchitecture.org/tecla-house/",
+            "https://www.mcarchitects.it/project/tecla",
+            "https://en.wikipedia.org/wiki/Tecla_house",
+            "https://www.wallpaper.com/architecture/tecla-mario-cucinella-architects-wasp-3d-printed-house-italy"
+        ],
+        "summary": "TECLA is the world's first eco-sustainable housing prototype 3D-printed entirely from local raw earth. Developed through a collaboration between Mario Cucinella Architects and WASP, the project utilizes a '0km building' philosophy to create zero-waste, biodegradable homes using site-specific terrain.",
+        "category": [
+            "Sustainable Construction",
+            "3D Printing",
+            "Architecture",
+            "Eco-friendly Housing"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Italy",
+            "region": "Massa Lombarda",
+            "lat": 44.447386,
+            "lon": 11.8260915
+        },
+        "process": {
+            "how_it_works": "The Crane WASP system prints layers of a soil-based mixture in a double-dome shape, integrating structure, insulation, and cladding into one continuous process without the need for heavy transport or external materials.",
+            "materials_used": [
+                "Local soil",
+                "Water",
+                "Rice husks",
+                "Minimal binder (less than 5%)"
+            ],
+            "step_by_step": [
+                "Excavation and analysis of local terrain at the construction site",
+                "Mixing the raw earth with water, rice husks, and a small percentage of binder",
+                "Setting up the Crane WASP 3D printing system",
+                "Simultaneous printing of two domes using synchronized robotic arms",
+                "Layer-by-layer deposition of the mixture over approximately 200 hours"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High carbon footprint of traditional construction materials and the need for rapid, low-cost sustainable housing solutions.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "structural safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "TECLA utilizes natural, local materials such as soil and rice husks, which are non-toxic and non-combustible. The primary risk is limited to structural integrity and weather erosion over time, which is addressed by the double-dome design and minimal binder. It presents very low environmental or chemical hazards."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "b6184c2900e6e66173b2761276da2c34",
+        "timestamp": "2026-03-23T12:34:54.946255",
+        "title": "Conceptos Plásticos",
+        "sources": [
+            "https://conceptosplasticos.com/",
+            "https://www.forbes.com/sites/lauriewinkless/2016/07/21/these-houses-are-built-with-blocks-made-from-waste-plastic/",
+            "https://www.projectcensored.org/affordable-housing-built-in-days-with-recycled-plastic-bricks/",
+            "https://www.unicef.org/innovation/stories/plastic-bricks-schools-cotedivoire",
+            "https://www.designboom.com/architecture/conceptos-plasticos-houses-waste-plastic-blocks-colombia-02-09-2021/",
+            "https://thecitypaperbogota.com/features/conceptos-plasticos-living-in-lego/"
+        ],
+        "summary": "A Colombian social enterprise that converts plastic and rubber waste into interlocking construction bricks used to build affordable, durable, and sustainable housing and schools without the need for mortar or specialized labor.",
+        "category": [
+            "Construction",
+            "Sustainability",
+            "Waste Management",
+            "Social Housing"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Colombia",
+            "region": "Latin America",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Plastic and rubber waste are melted and molded into high-performance bricks that feature an interlocking design similar to LEGO pieces, allowing for rapid assembly without adhesives.",
+            "materials_used": [
+                "Plastic waste",
+                "Rubber waste"
+            ],
+            "step_by_step": [
+                "Collection of local plastic and rubber waste",
+                "Processing and shredding of the waste materials",
+                "Melting and molding the material into specific interlocking brick shapes",
+                "Transporting the lightweight bricks to the construction site",
+                "Manual assembly of the structure by stacking bricks without mortar"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the dual challenges of plastic pollution and the lack of affordable, disaster-resistant housing and educational infrastructure.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation uses recycled plastic and rubber, which are inherently flammable; however, the blocks are treated to be fire-retardant. The primary risk involves potential toxic off-gassing in the event of a fire. The structural safety is high due to earthquake resistance and modular interlocking, and the project is backed by international organizations like UNICEF."
+        },
+        "priority_score": 72,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "bce18c199a3475f9135aee3251b4f4b7",
+        "timestamp": "2026-03-23T12:35:15.462173",
+        "title": "Plastic Bottle Houses of Yelwa",
+        "sources": [
+            "https://inhabitat.com/africas-first-plastic-bottle-house-rises-in-nigeria/",
+            "https://www.goodnewsnetwork.org/nigerian-homes-built-from-thousands-of-plastic-bottles-12x-stronger-than-brick-and-earthquake-strong/",
+            "https://www.archdaily.com/606704/this-plastic-bottle-house-turns-trash-into-affordable-housing-in-nigeria",
+            "https://www.bbc.com/news/world-africa-14722179",
+            "https://www.aljazeera.com/features/2011/12/12/nigerias-plastic-bottle-house",
+            "https://www.thebrighterside.news/post/game-changing-earthquake-proof-homes-built-from-plastic-bottles"
+        ],
+        "summary": "An innovative construction technique developed by the Development Association for Renewable Energies (DARE) that uses sand-filled plastic bottles as bricks to create durable, affordable, and climate-resilient housing in Nigeria.",
+        "category": [
+            "Sustainable Construction",
+            "Waste Management",
+            "Affordable Housing"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nigeria",
+            "region": "Yelwa",
+            "lat": 10.4303159,
+            "lon": 7.4295568
+        },
+        "process": {
+            "how_it_works": "Plastic bottles are repurposed as bricks by filling them with sand, which provides high density and thermal mass. These 'bottle-bricks' are then stacked and cemented to form walls that are significantly stronger than traditional masonry.",
+            "materials_used": [
+                "Discarded plastic bottles",
+                "Dry sand",
+                "Local mud",
+                "Cement"
+            ],
+            "step_by_step": [
+                "Collect thousands of discarded plastic bottles",
+                "Fill each bottle completely with dry sand to create a solid 'brick'",
+                "Stack the bottles in horizontal layers to form walls",
+                "Bind the bottles together using a mortar made of local mud and cement",
+                "Use string to interlink the bottle necks for extra structural reinforcement",
+                "Finish the exterior with plaster for a smooth appearance"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigates plastic pollution by repurposing waste and addresses the housing deficit with low-cost, bulletproof, and thermally efficient shelters.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Structural Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation utilizes inert materials (sand and PET plastic) encased in mud and cement. The resulting structures are highly stable, fire-resistant, and provide superior structural integrity compared to traditional local building methods. The primary risks are standard construction-related physical hazards rather than chemical or energy-related dangers."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "e689409ea2ebe49d0f252b3cd1571fac",
+        "timestamp": "2026-03-23T12:35:39.357486",
+        "title": "MycoTile",
+        "sources": [
+            "https://www.verticalfarmdaily.com/article/9773413/kenya-turning-mycelium-waste-into-sustainable-building-materials/",
+            "https://www.intelligentliving.co/how-kenyas-mycelium-building-panels-protect-the-environment-while-cutting-housing-costs/",
+            "https://www.circle-economy.com/case-studies/mycotile-construction-materials-from-fungi",
+            "https://mycotile.com/",
+            "https://mycostories.com/mycotiles-mycelium-panels-tackle-kenyas-construction-and-climate-challenges/"
+        ],
+        "summary": "A Nairobi-based social enterprise producing carbon-negative building materials by growing fungal mycelium on agricultural waste, offering a fire-resistant and cost-effective alternative to traditional construction materials.",
+        "category": [
+            "Construction",
+            "Biotechnology",
+            "Circular Economy",
+            "Sustainable Materials"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "Nairobi",
+            "lat": -1.2890006,
+            "lon": 36.8172812
+        },
+        "process": {
+            "how_it_works": "Fungal mycelium is grown on agricultural waste, acting as a natural binder that consumes the waste to form a tough, fire-resistant material which is then heat-treated to stop growth.",
+            "materials_used": [
+                "Fungal mycelium",
+                "Sugarcane bagasse",
+                "Coffee husks",
+                "Maize cobs"
+            ],
+            "step_by_step": [
+                "Collect agricultural waste such as sugarcane bagasse, coffee husks, and maize cobs",
+                "Inoculate the waste with fungal mycelium",
+                "Allow the mycelium to grow and consume the waste, binding it together into a solid form",
+                "Heat-treat the material to stop the fungal growth process",
+                "Form the resulting material into panels for wall insulation, ceiling boards, or partitioning"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of imported construction materials, carbon emissions from traditional building methods, and agricultural waste management.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "biological"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The production process involves biological growth and thermal treatment of organic waste. While there is a minor risk of spore exposure or mold during the cultivation phase, the final heat-treated product is inert, non-toxic, and fire-resistant. The environmental impact is positive, and the safety risks are minimal compared to traditional chemical-based insulation or brick manufacturing."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "74e466001147ecb012bd96ff76154d92",
+        "timestamp": "2026-03-23T12:35:57.697260",
+        "title": "Compressed Stabilized Earth Blocks (CSEB) by Auroville Earth Institute",
+        "sources": [
+            "https://www.houzz.com.au/magazine/lessons-from-earth-architecture-in-auroville-india-stsetivw-vs~74878077",
+            "https://www.earth-auroville.com/compressed_stabilised_earth_blocks_en.php",
+            "https://www.earth-auroville.com/",
+            "https://www.grihaindia.org/sites/default/files/pdf/case-studies/AVEI-CSEB.pdf",
+            "https://www.auroville.org/page/auroville-earth-institute"
+        ],
+        "summary": "A high-quality, low-cost building technology that uses a manual press to create unfired bricks from local soil mixed with minimal cement, significantly reducing energy consumption and construction costs.",
+        "category": [
+            "Sustainable Construction",
+            "Green Building",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "India",
+            "region": "Auroville",
+            "lat": 12.0073927,
+            "lon": 79.8099471
+        },
+        "process": {
+            "how_it_works": "Local soil is stabilized with a small percentage of cement and compressed at high pressure using a manual press to create dense blocks that cure naturally, eliminating the need for energy-intensive kiln firing.",
+            "materials_used": [
+                "Local soil",
+                "Cement (typically 5%)",
+                "Water"
+            ],
+            "step_by_step": [
+                "Analyze and sieve local soil to ensure correct composition",
+                "Mix soil with approximately 5% cement and a small amount of water",
+                "Load the mixture into the Auram manual press mold",
+                "Compress the mixture using the manual lever to form a block",
+                "Stack and cure the blocks under plastic sheets for approximately 28 days"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High carbon footprint and energy use of traditional fired bricks, and the high cost of industrial building materials.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Physical Safety",
+                "Respiratory"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The technology is well-standardized and significantly safer than traditional brick manufacturing as it eliminates high-temperature firing and associated industrial hazards. Risks are minimal and limited to standard construction safety, such as manual handling of the press and inhalation of cement dust during the mixing phase, which can be mitigated with basic safety gear."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
