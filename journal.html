@@ -179,7 +179,7 @@ p{margin-bottom:13px;text-align:justify;}
 .orn{text-align:center;color:var(--accent);font-size:15pt;margin:22px 0 8px;letter-spacing:6px;}
 .pfooter{margin-top:30px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:8pt;color:var(--ink-faint);flex-wrap:wrap;gap:4px;}
 
-/* PRINT MODE - Putih Bersih */
+/* PRINT MODE - Putih Bersih & Anti Tumpang Tindih */
 @media print{
   @page{size:A4 portrait;margin:15mm;}
   body, .shell, .a4, html {background: #ffffff !important; color: #000000 !important;}
@@ -188,11 +188,15 @@ p{margin-bottom:13px;text-align:justify;}
   .a4 {width:100%; box-shadow:none; padding:0;}
   h2.st,h3,.figcap {page-break-after:avoid; break-after:avoid;}
   .fig,.sc,.kpi,.qbox, tr {page-break-inside:avoid; break-inside:avoid;}
-  .mapbox,.netbox {height:260px!important;}
-  .cb {height:220px!important;} .cb.tall {height:260px!important;}
+  
+  /* PERBAIKAN: Menghindari canvas tumpah saat print */
+  canvas { max-height: 100% !important; max-width: 100% !important; }
+  .cb { margin-bottom: 16px !important; } 
+  
   * {-webkit-print-color-adjust: exact; print-color-adjust: exact;}
   .fb {page-break-before:always; break-before:page;}
 }
+
 </style>
 </head>
 <body>
