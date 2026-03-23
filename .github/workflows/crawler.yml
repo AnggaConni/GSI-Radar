@@ -4,7 +4,7 @@ on:
   schedule:
     # Memeriksa setiap 2 hari. Script Python yang akan menentukan 
     # apakah hanya data.json yang dicrawl, atau sekalian resume.json
-    - cron: "0 0 */2 * *"
+    - cron: "0 0 */1 * *"
   workflow_dispatch: 
     inputs:
       run_type:
