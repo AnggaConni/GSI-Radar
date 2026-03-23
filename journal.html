@@ -324,65 +324,119 @@ p{margin-bottom:13px;text-align:justify;}
     <div id="gems-wrapper"></div>
 
 
-<h2 class="st fb" id="sec-method">8. Methodology &amp; Limitations</h2>
-    <div style="margin:14px 0;padding:12px 16px;border:1px solid var(--border);border-radius:4px;font-family:'DM Mono',monospace;background:var(--paper2);font-size:8.5pt;text-align:center;">
-      <div style="font-weight:600;margin-bottom:6px;">Figure 8. Computational Methodology Flow</div>
-      <div style="color:var(--ink-soft);">Discovery → Enrichment → Validation → Structuring → Scoring → Bulletin Output<br><span style="font-size:8pt;color:var(--ink-faint);">↺ Continuous iterative loop each quarterly cycle</span></div>
-    </div>
+<h2 class="st fb" id="sec-method">8. Methodology & Analytical Framework</h2>
     
-    <h3 class="sub">8.1 Discovery &amp; Data Collection</h3>
-    <p>Cultural and technical elements are identified via multilingual keyword-based search across global digital sources including community blogs, open knowledge platforms, NGO documentation, and public web content. Both formally documented and unregistered practices are captured.</p>
-    
-    <h3 class="sub">8.2 AI-Assisted Enrichment</h3>
-    <p>Collected data is processed through an AI language model to extract structured descriptions, classify elements, generate step-by-step process documentation, and score risk and priority dimensions. A low-temperature configuration ensures consistency and reproducibility.</p>
-    
-    <h3 class="sub">8.3 Priority &amp; Risk Scoring Engine</h3>
-    <p>To identify innovations with the highest scalable impact and lowest barriers to entry, the engine calculates a Priority Score (0–100) using a weighted, opposing-force algorithm. High impact and ease of replication act as positive drivers, while safety dependencies and inherent risks act as algorithmic penalties.</p>
-    
-    <div style="margin:18px 0; background:var(--paper2); border:1px solid var(--border); border-left:4px solid var(--accent2); border-radius:4px; padding:16px; font-family:'Montserrat',sans-serif;">
-      <div style="text-align:center; font-size:9pt; font-weight:700; color:var(--ink); margin-bottom:14px; letter-spacing:1px; text-transform:uppercase;">Priority Score Formulation</div>
-      
-      <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:center; font-size:9pt;">
-        <div style="background:var(--ink); color:var(--paper); padding:8px 12px; border-radius:4px; font-weight:700; box-shadow:var(--shadow);">Priority (0-100)</div>
-        <div style="font-weight:700; color:var(--ink-soft); font-size:12pt;">=</div>
-        
-        <div style="border:1.5px solid var(--accent2); background:rgba(15, 118, 110, 0.08); color:var(--accent2); padding:8px 12px; border-radius:4px; text-align:center;">
-          <div style="font-weight:700;">Impact</div>
-          <div style="font-size:7.5pt; font-family:'DM Mono',monospace; margin-top:2px;">Weight: +40%</div>
-        </div>
-        <div style="font-weight:700; color:var(--ink-soft); font-size:12pt;">+</div>
-        <div style="border:1.5px solid var(--accent2); background:rgba(15, 118, 110, 0.08); color:var(--accent2); padding:8px 12px; border-radius:4px; text-align:center;">
-          <div style="font-weight:700;">Replicability</div>
-          <div style="font-size:7.5pt; font-family:'DM Mono',monospace; margin-top:2px;">Weight: +20%</div>
-        </div>
-        
-        <div style="font-weight:700; color:var(--ink-soft); font-size:12pt;">-</div>
-        <div style="border:1.5px solid var(--accent); background:var(--accent-pale); color:var(--accent); padding:8px 12px; border-radius:4px; text-align:center;">
-          <div style="font-weight:700;">Safety Dep.</div>
-          <div style="font-size:7.5pt; font-family:'DM Mono',monospace; margin-top:2px;">Penalty: -10%</div>
-        </div>
-        <div style="font-weight:700; color:var(--ink-soft); font-size:12pt;">-</div>
-        <div style="border:1.5px solid var(--accent); background:var(--accent-pale); color:var(--accent); padding:8px 12px; border-radius:4px; text-align:center;">
-          <div style="font-weight:700;">Inherent Risk</div>
-          <div style="font-size:7.5pt; font-family:'DM Mono',monospace; margin-top:2px;">Penalty: -30%</div>
-        </div>
+    <!-- 8.1 PIPELINE FLOW -->
+    <div style="margin:14px 0;padding:20px;border:1px solid var(--border);border-radius:6px;background:var(--paper2);">
+      <div style="font-family:'Montserrat',sans-serif; font-size:9pt; font-weight:700; text-transform:uppercase; margin-bottom:15px; text-align:center; color:var(--accent);">
+        Figure 8. The 5-Layer Autonomous Intelligence Pipeline
       </div>
-      
-      <div style="margin-top:14px; font-family:'Crimson Pro',serif; font-size:10pt; color:var(--ink-soft); text-align:center; font-style:italic;">
-        *Note: Risk values are mathematically inverted before weighting. A high inherent risk score actively diminishes the final priority output.
+      <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:10px; text-align:center; font-family:'DM Mono',monospace; font-size:7.5pt;">
+        <div style="padding:10px; background:var(--paper); border:1px solid var(--border); border-radius:4px;">
+          <strong style="color:var(--accent2);">L1: VALIDATION</strong><br>Confidence Check (Min. 60%)
+        </div>
+        <div style="padding:10px; background:var(--paper); border:1px solid var(--border); border-radius:4px;">
+          <strong style="color:var(--accent2);">L2: EXTRACTION</strong><br>NLP Parametric Structuring
+        </div>
+        <div style="padding:10px; background:var(--paper); border:1px solid var(--border); border-radius:4px;">
+          <strong style="color:var(--accent2);">L3: RISK MGMT</strong><br>Safety Hazard Assessment
+        </div>
+        <div style="padding:10px; background:var(--paper); border:1px solid var(--border); border-radius:4px;">
+          <strong style="color:var(--accent2);">L4: LINEAGE</strong><br>Knowledge Origin Tracing
+        </div>
+        <div style="padding:10px; background:var(--paper); border:1px solid var(--border); border-radius:4px;">
+          <strong style="color:var(--accent2);">L5: SYNTHESIS</strong><br>Priority Index Calculation
+        </div>
       </div>
     </div>
 
-    <h3 class="sub">8.4 Scalability Architecture</h3>
-    <p>The bulletin is engineered for large datasets: the appendix table is paginated with configurable page size; the map uses Leaflet.markercluster (tested to 100k+ points); charts aggregate statistics rather than plotting individual points; the network is capped at top-N by priority; and full-dataset CSV export is always available regardless of the active filters.</p>
+    <h3 class="sub">8.1 Priority Scoring Engine (PSE) Logic</h3>
+    <p>The PSE v1.1 algorithm is engineered to provide a mathematical weight to innovations based on their scalability and safety profile. The final index (0-100) is determined by an <strong>opposing-force logic</strong> involving three primary variables:</p>
     
-    <h3 class="sub">8.5 Limitations</h3>
-    <ul style="padding-left:18px;margin-bottom:14px;font-size:10pt;">
-      <li style="margin-bottom:5px;"><strong>Source Reliability:</strong> Data from heterogeneous online sources may introduce inconsistencies.</li>
-      <li style="margin-bottom:5px;"><strong>No Field Validation:</strong> Findings are preliminary signals requiring verification.</li>
-      <li style="margin-bottom:5px;"><strong>Interpretive Constraints:</strong> AI-generated narratives may lack contextual depth for tacit knowledge.</li>
-      <li style="margin-bottom:5px;"><strong>Algorithmic Bias:</strong> Search engine indexing shapes which innovations are surfaced.</li>
-      <li style="margin-bottom:5px;"><strong>Digital Divide:</strong> Communities with low digital presence remain under-represented regardless of data volume.</li>
+    <div style="overflow-x:auto; margin-bottom:20px;">
+      <table class="jtable" style="font-size:8.5pt;">
+        <thead>
+          <tr style="background:var(--paper2);">
+            <th style="width:25%">Variable</th>
+            <th style="width:15%">Weight</th>
+            <th style="width:60%">Value Mapping (Parametric Scale 1-10)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ct">Impact Scale (I)</td>
+            <td class="cm">40%</td>
+            <td>High: 10 | Medium: 6 | Low: 2 (Quantifies problem-solving capacity)</td>
+          </tr>
+          <tr>
+            <td class="ct">Replicability (R)</td>
+            <td class="cm">20%</td>
+            <td>Easy: 10 | Medium: 5 | Hard: 2 (Based on material accessibility & complexity)</td>
+          </tr>
+          <tr>
+            <td class="ct">Safety Coefficient (10-S)</td>
+            <td class="cm">40%</td>
+            <td>Inverse of Risk Score (S). Higher inherent danger (S) creates a strategic penalty.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="background:var(--paper2); border-left:4px solid var(--accent); padding:15px; margin-bottom:20px;">
+      <div style="font-family:'DM Mono',monospace; font-size:10pt; font-weight:700; text-align:center;">
+        Formula: <span style="color:var(--accent);">PSE Index = [ (I × 0.4) + (R × 0.2) + ((10 - S) × 0.4) ] × 10</span>
+      </div>
+      <p style="font-size:8pt; margin-top:10px; font-style:italic; text-align:center;">
+        *Note: Innovations with extreme impact (I) but high inherent risk (S) are mathematically penalized, preventing institutional scaling of potentially lethal technologies.
+      </p>
+    </div>
+
+    <div style="margin-top:15px; padding:15px; border:1px solid var(--border); border-radius:6px; font-size:9pt; background:var(--paper);">
+    <strong style="color:var(--ink); text-transform:uppercase; font-size:8pt; display:block; margin-bottom:8px;">Data Provenance & Scoring Logic</strong>
+    <p style="margin-bottom:8px;">
+        <strong>1. How are raw scores generated?</strong> Values are derived via <em>Heuristic NLP Inference</em>. During Pass 2 & 3, the AI evaluates text descriptions against a strict internal rubric (e.g., "Standard Household Materials" = Replicability 10; "Specialized Industrial Materials" = Replicability 2).
+    </p>
+    <p style="margin-bottom:8px;">
+        <strong>2. Why these specific weights?</strong> The weights reflect a <em>Risk-Averse Strategic Framework</em>. Safety and Impact are weighted at 40% each to ensure the Radar filters out high-risk "backyard experiments" regardless of their ingenuity.
+    </p>
+    <p>
+        <strong>3. The "Inverse Risk" Penalty:</strong> By using <code>(10 - S)</code>, the algorithm ensures that the Risk Score acts as an <strong>algorithmic brake</strong>. A high Risk Score (S) mathematically prevents an innovation from achieving "Top Priority" status.
+    </p>
+</div>
+
+    <h3 class="sub">8.2 Classification Heuristics (Trigger Logic)</h3>
+    <p>Beyond linear scoring, the engine utilizes boolean conditional logic to categorize innovations for strategic filtering:</p>
+    
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-bottom:20px;">
+      <div style="background:rgba(29,78,216,.05); border:1px solid rgba(29,78,216,.2); padding:12px; border-radius:6px;">
+        <div style="font-weight:700; color:#1d4ed8; font-size:9pt; margin-bottom:5px;">💎 Hidden Gem Trigger</div>
+        <p style="font-size:8.5pt; line-height:1.4;">
+          <code>IF (Innovation_Level == 'grassroots') AND (Cost == 'low') AND (Impact >= 6)</code><br>
+          Identifies highly efficient, cost-effective independent inventions with low visibility.
+        </p>
+      </div>
+      <div style="background:rgba(220,38,38,.05); border:1px solid rgba(220,38,38,.2); padding:12px; border-radius:6px;">
+        <div style="font-weight:700; color:#dc2626; font-size:9pt; margin-bottom:5px;">⚠️ Critical Danger Flag</div>
+        <p style="font-size:8.5pt; line-height:1.4;">
+          <code>IF (Risk_Score >= 8) AND (Keywords IN ['fire', 'explosive', 'chemical', 'toxic'])</code><br>
+          Triggers an emergency intervention alarm due to high-hazard materials without safety protocols.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="sub">8.3 Knowledge Lineage Mapping</h3>
+    <p>The system traces the <strong>Knowledge Source</strong> (provenance) of technical insights to differentiate between various innovation pathways:</p>
+    <ul style="padding-left:18px; font-size:9.5pt; color:var(--ink-soft);">
+      <li style="margin-bottom:5px;"><strong>Traditional:</strong> Ancestral knowledge systems adapted to contemporary technical challenges.</li>
+      <li style="margin-bottom:5px;"><strong>Self-Taught:</strong> Pure empirical results from individual trial-and-error without formal technical background.</li>
+      <li style="margin-bottom:5px;"><strong>Adapted from Existing:</strong> Frugal engineering modifications of modern commercial technologies for localized needs.</li>
+    </ul>
+
+    <h3 class="sub">8.4 Limitations & Constraints</h3>
+    <ul style="padding-left:18px; margin-bottom:14px; font-size:9.5pt;">
+      <li style="margin-bottom:5px;"><strong>Data Latency:</strong> As the system relies on web-crawling, there is a temporal gap between on-the-ground discovery and radar indexing.</li>
+      <li style="margin-bottom:5px;"><strong>Interpretive constraints:</strong> AI-generated narratives may lack contextual depth for tacit, unrecorded communal knowledge.</li>
+      <li style="margin-bottom:5px;"><strong>Digital Shadow:</strong> Communities with zero digital footprint remain invisible to current crawling heuristics.</li>
     </ul>
 
 
