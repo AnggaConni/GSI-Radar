@@ -4603,5 +4603,349 @@
         "priority_score": 48,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "102a8797c1657d9623c64fe6b88b4920",
+        "timestamp": "2026-03-23T08:14:46.198597",
+        "title": "Integration of Ancestral Tracking and Drone Technology for Territorial Protection",
+        "sources": [
+            "https://wildlifedrones.net/modern-technology-and-indigenous-knowledge/",
+            "https://www.bbc.com",
+            "https://www.wwf.org.br",
+            "https://www.computer.org/publications/tech-news/research/intersection-traditional-knowledge-modern-tech",
+            "https://www.klc.org.au"
+        ],
+        "summary": "Indigenous communities in Australia and Brazil are combining traditional ecological knowledge and tracking skills with drone technology to monitor wildlife and combat illegal activities like deforestation in remote, inaccessible areas.",
+        "category": [
+            "Environmental Conservation",
+            "Indigenous Technology",
+            "Wildlife Monitoring",
+            "Land Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Australia and Brazil",
+            "region": "Western Australia and Brazilian Amazon",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Drones equipped with thermal imaging and GPS are used to survey vast areas, while traditional knowledge is used to interpret aerial data and identify specific signs of animal presence or human intrusion.",
+            "materials_used": [
+                "Drones",
+                "Thermal imaging cameras",
+                "GPS technology",
+                "Traditional tracking skills"
+            ],
+            "step_by_step": [
+                "Identify target areas based on traditional ecological knowledge and historical data",
+                "Deploy drones equipped with thermal sensors and GPS to cover inaccessible terrain",
+                "Capture high-resolution aerial imagery and digital evidence of wildlife or intruders",
+                "Analyze digital data alongside physical tracking signs (tracks, scat) found on the ground",
+                "Document findings to provide evidence for legal action or conservation planning"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Difficulty in monitoring vast, remote territories for illegal deforestation and protecting endangered species like the black-footed rock wallaby.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The integration of drone technology with traditional tracking is a low-risk innovation. The primary risk is not technical but situational, involving potential physical confrontations with illegal loggers or poachers when monitoring territory. The drones themselves pose minimal fire or toxic risk beyond standard lithium battery handling."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "09ad49c6fa7f26317c6c88fc41f462d3",
+        "timestamp": "2026-03-23T08:15:09.189437",
+        "title": "Restoration of Incan Andenes with Modern Drip Irrigation",
+        "sources": [
+            "https://the-past.com/feature/peru-using-past-technologies-to-solve-future-problems/",
+            "https://www.cusichacatrust.org/",
+            "https://www.computer.org/publications/tech-news/research/intersection-traditional-knowledge-modern-tech",
+            "https://www.smithsonianmag.com/history/farming-like-the-incas-7036328/"
+        ],
+        "summary": "This innovation rehabilitates ancient Incan stone-walled terraces (andenes) in the Peruvian Andes by integrating them with modern GIS mapping and drip irrigation technology to combat water scarcity and soil erosion.",
+        "category": [
+            "Sustainable Agriculture",
+            "Water Management",
+            "Climate Change Adaptation",
+            "Cultural Heritage Restoration"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Peru",
+            "region": "Andes",
+            "lat": -12.042622,
+            "lon": -75.1899082
+        },
+        "process": {
+            "how_it_works": "The system combines ancient soil-stabilization engineering with modern precision irrigation. Restored stone terraces prevent erosion and create favorable microclimates, while drip systems deliver water directly to crop roots, minimizing waste.",
+            "materials_used": [
+                "Stone",
+                "Soil",
+                "Drip irrigation tubing",
+                "GIS mapping software",
+                "Archaeological data"
+            ],
+            "step_by_step": [
+                "Identify and map ancient terrace sites using archaeological data and GIS technology.",
+                "Rehabilitate the physical stone-walled structures to stabilize the mountain slopes.",
+                "Install precision drip irrigation systems across the restored terraces.",
+                "Plant traditional high-altitude crops such as quinoa and native potatoes."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigates water stress caused by melting tropical glaciers and prevents soil erosion on steep agricultural slopes.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "formal_education",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation combines proven ancient civil engineering with low-impact modern irrigation. The primary risks are limited to structural stability during the restoration of stone walls, which is mitigated by the use of archaeological data and GIS mapping. It significantly reduces existing environmental risks like soil erosion and water scarcity."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "49ef8de380fff092af66363bdab777ef",
+        "timestamp": "2026-03-23T08:15:31.264795",
+        "title": "Māori Traditional Seed Banking and Cryopreservation",
+        "sources": [
+            "https://www.sciencelearn.org.nz/resources/3138-seed-banks-protecting-biodiversity",
+            "https://www.tetirawhakamataki.org/",
+            "https://www.resilience.org/stories/2021-03-08/7-indigenous-technologies-changing-landscapes/",
+            "https://www.rnz.co.nz/",
+            "https://www.ttw.nz/te-whakapapa-o-seed-banking/",
+            "https://www.massey.ac.nz/about/colleges-schools-and-institutes/college-of-sciences/new-zealand-indigenous-flora-seed-bank/"
+        ],
+        "summary": "A collaborative conservation model in New Zealand that integrates mātauranga Māori (traditional knowledge) with advanced cryopreservation. Māori researchers and communities use ancestral protocols to identify and harvest seeds from 'taonga' (treasured) trees, which are then preserved using modern drying and liquid nitrogen storage techniques to combat threats like myrtle rust.",
+        "category": [
+            "Conservation",
+            "Indigenous Knowledge",
+            "Biotechnology",
+            "Biodiversity"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "New Zealand",
+            "region": "Oceania",
+            "lat": -41.2906412,
+            "lon": 174.7814636
+        },
+        "process": {
+            "how_it_works": "The process blends traditional ecological calendars and ancestral selection methods with modern scientific seed banking. This ensures that the genetic diversity of plants is preserved while maintaining indigenous sovereignty over biological resources.",
+            "materials_used": [
+                "Native plant seeds",
+                "Liquid nitrogen",
+                "Cryogenic storage tanks",
+                "Seed drying equipment",
+                "Traditional ecological calendars (Maramataka)"
+            ],
+            "step_by_step": [
+                "Identify resilient 'taonga' (treasured) trees using ancestral knowledge and health assessments.",
+                "Harvest seeds according to traditional ecological calendars and protocols.",
+                "Transport seeds to a specialized facility like the New Zealand Indigenous Flora Seed Bank.",
+                "Process seeds using modern scientific methods, including controlled drying.",
+                "Store seeds in liquid nitrogen (cryopreservation) for long-term genetic preservation."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Loss of native plant species and genetic diversity due to fungal diseases like myrtle rust and climate change.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "high",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing",
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "cryogenic hazards",
+                "occupational safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation combines traditional ecological knowledge with established scientific methods for seed preservation. The primary physical risk involves the use of liquid nitrogen for cryopreservation, which can cause cold burns or act as an asphyxiant if mishandled. However, these risks are standard for seed bank facilities and are managed through existing laboratory safety protocols and PPE."
+        },
+        "priority_score": 36,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "77f35877c25167682b8dd19a10806b23",
+        "timestamp": "2026-03-23T08:15:52.737000",
+        "title": "Enhanced Bamboo Drip Irrigation System",
+        "sources": [
+            "https://www.cseindia.org/bamboo-drip-irrigation-2739",
+            "https://climatechange.academy/traditional-and-modern-water-harvesting-systems-for-sustainable-water-management/",
+            "https://www.icar.org.in/",
+            "https://megagriculture.gov.in/",
+            "https://www.icimod.org/solutions/enhancing-water-use-efficiency-and-applicability-of-traditional-bamboo-drip-irrigation-system/",
+            "https://www.downtoearth.org.in/news/agriculture/bamboo-drip-irrigation-7140"
+        ],
+        "summary": "A hybrid irrigation model that integrates 200-year-old Khasi and Jaintia bamboo drip techniques with modern hilltop rainwater harvesting ponds. This system uses gravity and bamboo networks to provide precision irrigation, enabling year-round cultivation of high-value crops in hilly terrains.",
+        "category": [
+            "Agriculture",
+            "Water Management",
+            "Traditional Knowledge"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "India",
+            "region": "Meghalaya",
+            "lat": 25.5379432,
+            "lon": 91.2999102
+        },
+        "process": {
+            "how_it_works": "Water is collected in modern hilltop ponds during the monsoon and then distributed via a gravity-fed network of split bamboo pipes. The flow rate at the plant site is controlled using woollen threads that act as wicks to ensure drop-by-drop delivery.",
+            "materials_used": [
+                "Bamboo poles",
+                "Woollen threads",
+                "Concrete or plastic storage tanks",
+                "Rainwater"
+            ],
+            "step_by_step": [
+                "Construct rainwater harvesting ponds or storage tanks at high elevations to capture monsoon runoff.",
+                "Install a primary channel using large-diameter split bamboo to transport water from the tank to the fields.",
+                "Connect secondary and tertiary bamboo pipes of progressively smaller diameters to distribute water to different sections of the farm.",
+                "Position the final bamboo pipe directly above the root zone of the target crop.",
+                "Insert woollen threads into the tip of the final bamboo pipe to regulate the water discharge into precise drips."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses seasonal water scarcity in hilly regions and allows for the cultivation of water-sensitive high-value crops like strawberries and tomatoes.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is based on traditional, sustainable practices using natural materials like bamboo and gravity-fed water. The primary risks are minimal and relate to the structural integrity of hilltop water storage ponds and potential soil erosion if water flow is not managed correctly. There are no chemical, explosive, or high-temperature hazards involved."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "8427c6804a783adba41d4c6ce6989c8b",
+        "timestamp": "2026-03-23T08:16:11.581185",
+        "title": "PolArctic: Integrating Inuit Traditional Knowledge with AI",
+        "sources": [
+            "https://arcticwwf.org/newsroom/the-circle/blending-indigenous-knowledge-and-artificial-intelligence-to-enable-adaptation/",
+            "https://www.polarcticllc.com/",
+            "https://www.oxfordinsights.com/blog/ai-for-climate-change-using-artificial-and-indigenous-intelligence-to-fight-climate-change",
+            "https://arcticeconomiccouncil.com/news/understanding-climate-change-through-a-digital-twin-of-the-arctic-ocean/"
+        ],
+        "summary": "PolArctic integrates Inuit ecological wisdom into AI and digital twin models of the Arctic Ocean to predict sustainable locations for mariculture, such as scallops and kelp, helping communities adapt to climate change.",
+        "category": [
+            "Artificial Intelligence",
+            "Marine Science",
+            "Indigenous Knowledge",
+            "Climate Adaptation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "USA",
+            "region": "Arctic Ocean",
+            "lat": 33.6663475,
+            "lon": -117.6911145
+        },
+        "process": {
+            "how_it_works": "Traditional ecological knowledge is digitized into data layers and processed by machine learning algorithms alongside satellite and bathymetric data to create predictive models for marine farming.",
+            "materials_used": [
+                "Artificial Intelligence software",
+                "Satellite remote sensing data",
+                "Bathymetry data",
+                "Oral history interview records"
+            ],
+            "step_by_step": [
+                "Interview Inuit elders and hunters regarding historical sea ice and animal patterns.",
+                "Digitize oral history into structured data layers for machine learning.",
+                "Integrate digitized traditional knowledge with satellite and bathymetric data.",
+                "Develop AI-driven digital twin models of the Arctic Ocean.",
+                "Identify optimal locations for sustainable mariculture of scallops and kelp."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Adapting subsistence and commercial fishing to rapid climate change in the Arctic by identifying new sustainable economic opportunities.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "high",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing",
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The PolArctic project is a digital modeling and data integration initiative combining traditional knowledge with AI. It involves no hazardous chemicals, high-energy systems, or physical dangers. The primary focus is on sustainable planning, which presents negligible risk to human safety or the environment."
+        },
+        "priority_score": 32,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
