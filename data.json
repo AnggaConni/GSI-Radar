@@ -3334,5 +3334,205 @@
         "priority_score": 46,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "ea73337440a7a3c018111d15c768a307",
+        "timestamp": "2026-03-23T04:52:09.548334",
+        "title": "Trashy Bags Africa",
+        "sources": [
+            "https://www.i-genius.org/trashy-bags-eco-friendly-recycled-plastic-bags-and-gifts-made-in-africa/",
+            "https://trashybagsafrica.com/",
+            "https://en.wikipedia.org/wiki/Trashy_Bags"
+        ],
+        "summary": "A social enterprise in Ghana that upcycles discarded plastic water and ice cream sachets into durable consumer goods, providing employment and reducing environmental pollution in West Africa.",
+        "category": [
+            "Upcycling",
+            "Waste Management",
+            "Circular Economy",
+            "Social Entrepreneurship"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Ghana",
+            "region": "Accra",
+            "lat": 5.5571096,
+            "lon": -0.2012376
+        },
+        "process": {
+            "how_it_works": "The enterprise transforms discarded plastic sachets into a durable material by cleaning and stitching them together, which is then used as a textile for manufacturing various accessories.",
+            "materials_used": [
+                "Plastic water sachets",
+                "Ice cream sachets",
+                "Thread",
+                "Zippers",
+                "Fabric linings"
+            ],
+            "step_by_step": [
+                "Collection of discarded plastic sachets from streets and lagoons",
+                "Thorough washing and disinfection of the plastic waste",
+                "Stitching the individual sachets together to form large sheets",
+                "Cutting the sheets according to product patterns",
+                "Sewing the sheets into finished goods like backpacks, laptop sleeves, and tote bags"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigates plastic pollution from 'pure water' sachets and addresses the lack of formal waste management while providing sustainable livelihoods for local women.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The enterprise focuses on mechanical upcycling through washing and stitching plastic sachets. The primary risk is the storage of large volumes of flammable plastic material. However, the process does not involve hazardous chemical synthesis, high-pressure systems, or toxic emissions, making it a low-risk industrial activity."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "e019385649e43869e70a1c105dffd5c7",
+        "timestamp": "2026-03-23T04:52:25.677518",
+        "title": "Gjenge Makers Sustainable Paving Bricks",
+        "sources": [
+            "https://atlasofthefuture.org/project/gjenge-makers/",
+            "https://www.gjenge.co.ke/",
+            "https://www.unep.org/news-and-stories/story/kenyan-entrepreneur-transforms-plastic-waste-paving-blocks",
+            "https://borgenproject.org/gjenge-makers-reduces-poverty-with-plastic-bricks/"
+        ],
+        "summary": "A Nairobi-based social enterprise that upcycles non-recyclable plastic waste into paving bricks that are significantly stronger than traditional concrete, while providing employment to marginalized communities.",
+        "category": [
+            "Waste Management",
+            "Construction",
+            "Upcycling",
+            "Social Enterprise"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya",
+            "region": "Nairobi",
+            "lat": -1.2890006,
+            "lon": 36.8172812
+        },
+        "process": {
+            "how_it_works": "Shredded plastic waste (LDPE and PP) acts as a binder when mixed with sand and heated, creating a composite material that is molded into high-strength bricks.",
+            "materials_used": [
+                "Low-density polyethylene (LDPE)",
+                "Polypropylene (PP)",
+                "Sand"
+            ],
+            "step_by_step": [
+                "Collection of 'non-recyclable' plastic waste",
+                "Shredding of plastic materials",
+                "Mixing shredded plastic with sand",
+                "Heating the mixture to create a malleable composite",
+                "Compressing the mixture into molds to form bricks"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Urban plastic waste crisis and the high cost/environmental impact of traditional concrete construction materials.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic fumes",
+                "Thermal burns"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The process involves heating polymers (LDPE and PP) to melting points, which creates a significant fire hazard and releases potentially toxic volatile organic compounds (VOCs). While the social and environmental impact is high, the industrial nature of melting plastic requires specialized ventilation, fume extraction, and personal protective equipment to prevent long-term respiratory issues and accidental burns for workers."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "a9885fb4e4c1273c045a7be54f0703af",
+        "timestamp": "2026-03-23T04:52:43.801041",
+        "title": "EcoPost Plastic Lumber",
+        "sources": [
+            "https://www.greeneconomycoalition.org/news-and-resources/turning-waste-plastic-into-sustainable-prosperity",
+            "https://www.ecopost.co.ke/",
+            "https://ecopost.co.ke/",
+            "https://unreasonablegroup.com/ventures/ecopost",
+            "https://www.unep.org/news-and-stories/story/kenyan-entrepreneur-turns-plastic-waste-lumber"
+        ],
+        "summary": "EcoPost is a Kenyan social enterprise that upcycles 100% plastic waste into aesthetic, durable plastic lumber used for fencing, outdoor furniture, and signage, serving as a direct substitute for timber to combat deforestation and plastic pollution.",
+        "category": [
+            "Waste Management",
+            "Circular Economy",
+            "Construction",
+            "Environmental Conservation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2686662,
+            "lon": 36.8161377
+        },
+        "process": {
+            "how_it_works": "The enterprise converts post-consumer plastic waste into durable plastic lumber through a recycling and molding process, creating a circular economy loop.",
+            "materials_used": [
+                "100% plastic waste",
+                "Post-consumer plastic"
+            ],
+            "step_by_step": [
+                "Waste collection by a network of youth and women",
+                "Sorting and cleaning of the collected plastic waste",
+                "Processing and melting the plastic into a moldable form",
+                "Extruding or molding the material into plastic lumber profiles",
+                "Fabrication into final products like fence posts and furniture"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Plastic pollution clogging sewers, carbon emissions from burning waste, deforestation, and local unemployment.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "fire hazard",
+                "toxic fumes",
+                "industrial safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The industrial process of melting and extruding 100% plastic waste carries inherent risks, including the release of toxic VOCs or dioxins if thermal controls fail. Large-scale storage of plastic waste and finished lumber presents a high fire hazard. While the social and environmental impact is positive, the manufacturing phase requires rigorous safety gear, ventilation systems, and fire suppression protocols."
+        },
+        "priority_score": 74,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
