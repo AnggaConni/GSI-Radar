@@ -6295,5 +6295,356 @@
         "priority_score": 46,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "6f5687ade5cfd1cd9e6080ddfa1c89b9",
+        "timestamp": "2026-03-23T13:00:29.561638",
+        "title": "Liter of Light",
+        "sources": [
+            "https://www.youtube.com/user/literoflight",
+            "https://en.wikipedia.org/wiki/Liter_of_Light",
+            "https://literoflight.org",
+            "https://world-habitat.org/world-habitat-awards/winners-and-finalists/liter-of-light/",
+            "https://unfccc.int/climate-action/momentum-for-change/lighthouse-activities/a-litre-of-light"
+        ],
+        "summary": "A sustainable, open-source lighting project that uses recycled plastic bottles to provide daytime and nighttime illumination to off-grid communities through solar refraction and simple electronics.",
+        "category": [
+            "Renewable Energy",
+            "Appropriate Technology",
+            "Sustainable Design"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Philippines",
+            "region": "Southeast Asia",
+            "lat": 10.2338947,
+            "lon": 123.7712438
+        },
+        "process": {
+            "how_it_works": "During the day, water inside a plastic bottle refracts sunlight 360 degrees to illuminate a room. At night, a solar-charged battery powers a small LED inside the same bottle.",
+            "materials_used": [
+                "1.5-liter plastic bottle",
+                "Water",
+                "Bleach",
+                "Corrugated metal roofing",
+                "Small solar panel",
+                "Simple circuit board",
+                "Rechargeable battery",
+                "1-watt LED"
+            ],
+            "step_by_step": [
+                "Fill a recycled plastic bottle with water and a small amount of bleach to prevent algae growth.",
+                "Cut a hole in a piece of corrugated metal and secure the bottle into it with sealant.",
+                "Install the metal sheet onto the roof of a house so the top of the bottle is exposed to the sun.",
+                "For the nighttime version, mount a small solar panel on the roof.",
+                "Connect the solar panel to a rechargeable battery and a circuit board that triggers an LED inside the bottle when it gets dark."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable and safe lighting in off-grid homes, reducing reliance on kerosene and expensive electricity.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation is generally low-risk but involves DIY electrical components and chemical handling. The use of bleach requires eye and skin protection during mixing. The nighttime system introduces rechargeable batteries and circuit boards, which pose a minor fire hazard if short-circuited or improperly managed. Structural integrity and waterproofing of the roof during installation are the primary physical safety concerns."
+        },
+        "priority_score": 72,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "077ea5b701017262d8e16ef0e9713a22",
+        "timestamp": "2026-03-23T13:00:50.738231",
+        "title": "Sumando Energías Solar Water Heaters",
+        "sources": [
+            "https://www.resilience.org/stories/2017-06-29/combining-energies/",
+            "https://www.sumandoenergias.org/",
+            "https://sumandoenergias.org/",
+            "https://www.borgenmagazine.com/sumando-energias-generates-waste-full-energy-argentina/"
+        ],
+        "summary": "An Argentinian NGO initiative that empowers marginalized communities to construct solar water heaters and lighting systems using discarded materials like soda cans, plastic bottles, and Tetra Pak cartons to provide renewable energy and hot water.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Circular Economy",
+            "Social Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Argentina",
+            "region": "Buenos Aires",
+            "lat": -34.6095579,
+            "lon": -58.3887904
+        },
+        "process": {
+            "how_it_works": "The system utilizes solar thermal principles where black-painted aluminum cans absorb solar radiation to heat water flowing through them. The assembly is insulated using recycled plastic and Tetra Pak to maintain temperature.",
+            "materials_used": [
+                "Soda cans",
+                "Plastic bottles",
+                "Tetra Pak cartons",
+                "Black paint",
+                "Adhesives",
+                "Piping"
+            ],
+            "step_by_step": [
+                "Collect and clean discarded soda cans, plastic bottles, and Tetra Pak cartons.",
+                "Paint the aluminum cans black to maximize heat absorption.",
+                "Connect the cans to form long tubes that serve as the water conduits.",
+                "Insert the tubes into plastic bottles to create a greenhouse effect for insulation.",
+                "Use Tetra Pak cartons to provide additional thermal insulation and structural backing.",
+                "Mount the finished solar collector on a rooftop at an angle to maximize sun exposure.",
+                "Connect the collector to a water storage tank and the household plumbing."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to hot water and affordable energy in marginalized communities without grid access.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "structural",
+                "fire",
+                "health"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "While this innovation promotes a circular economy and provides essential services, the use of improvised materials for energy infrastructure carries moderate risks. Key concerns include the structural load of water-filled collectors on potentially weak rooftops, the use of potentially flammable recycled insulation, and the risk of waterborne pathogens like Legionella if the system does not consistently reach pasteurization temperatures. However, as an NGO-led initiative, these risks are typically mitigated through community training and standardized construction methods."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "abe161f23bc167182949c303ea4e0b8d",
+        "timestamp": "2026-03-23T13:01:12.314103",
+        "title": "DIY Solar Panels from Salvaged Broken Cells",
+        "sources": [
+            "https://www.youtube.com/watch?v=adFGmOlDM-Y",
+            "https://www.instructables.com/Make-a-High-Powered-Solar-Panel-From-Broken-Solar-C/",
+            "https://www.youtube.com/watch?v=kurtscottage"
+        ],
+        "summary": "A grassroots innovation where individuals salvage discarded or cracked solar cells to build functional solar panels at a low cost, providing power for mobile devices and lighting in rural or developing regions.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "DIY Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Various",
+            "region": "Rural and developing regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Broken solar cell fragments are connected in series to reach specific voltage requirements and then sealed between glass and protective layers to create a weather-resistant panel.",
+            "materials_used": [
+                "Broken/cracked solar cells",
+                "Conductive glue",
+                "Soldering irons",
+                "Scrap window glass",
+                "Protective films",
+                "Silicone"
+            ],
+            "step_of_step": [
+                "Collect discarded or cosmetic-defect solar cells from manufacturers or waste streams.",
+                "Tab cell fragments together in series using conductive glue or soldering to achieve desired voltage (5V or 12V).",
+                "Arrange the connected fragments onto a substrate or scrap window glass.",
+                "Encapsulate the assembly using protective films or silicone to prevent moisture damage.",
+                "Seal the unit with a top layer of scrap glass for durability."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of commercial solar units and lack of access to electricity for mobile charging and lighting.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing",
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Fire hazard",
+                "Electrical safety",
+                "Physical injury"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While low voltage (5V-12V) reduces the risk of lethal shock, DIY assembly of cracked solar cells creates significant fire hazards due to 'hot spots' where electrical resistance increases at fracture points. The use of non-standard encapsulation materials like scrap glass and silicone may not provide adequate UV protection or thermal dissipation, leading to degradation or glass breakage. Additionally, without proper charge controllers, these panels can overcharge batteries, leading to further fire or explosion risks."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "57663c58be209644bb0c2892ce6ae7d0",
+        "timestamp": "2026-03-23T13:01:33.354903",
+        "title": "Second-life Solar Panel Repurposing for Rural Electrification",
+        "sources": [
+            "https://www.eib.org/en/stories/off-grid-solar-africa-benin",
+            "https://cleantechnica.com/2024/10/08/electrify-everything-eradicate-energy-poverty/",
+            "https://ases.org/upcycling-solar-panels/"
+        ],
+        "summary": "A growing trend where decommissioned solar panels from the United States and Europe are exported, refurbished, and sold in sub-Saharan Africa. These panels, which still maintain high efficiency, provide an affordable energy source for rural health clinics and small-scale irrigation systems.",
+        "category": [
+            "Renewable Energy",
+            "Circular Economy",
+            "Rural Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Cameroon, Benin",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Solar panels retired from utility-scale farms after 10–15 years (often still at 80% efficiency) are tested and repaired by local entrepreneurs and organizations to be sold at a fraction of the cost of new modules.",
+            "materials_used": [
+                "Decommissioned solar panels",
+                "Testing equipment",
+                "Repair tools",
+                "Water pumps",
+                "Electrical wiring"
+            ],
+            "step_by_step": [
+                "Decommissioning of solar panels from utility farms in the US and Europe",
+                "Export of modules to countries like Cameroon and Benin",
+                "Technical testing and quality assessment of panel efficiency",
+                "Repair and refurbishment of damaged units",
+                "Distribution and sale to rural clinics and small-scale farmers"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of new solar technology and lack of reliable electricity for healthcare and agriculture in rural areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic",
+                "Environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While repurposing solar panels supports rural electrification, it introduces risks including electrical fires from degraded or poorly repaired modules and environmental toxicity from heavy metals (like lead or cadmium) if panels break or are improperly disposed of. The lack of formal e-waste management infrastructure in these regions increases the risk of long-term environmental contamination."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "dce4dda3f7d429414ebb128a0d0c7990",
+        "timestamp": "2026-03-23T13:01:56.888729",
+        "title": "Barefoot College Solar Mamas Program",
+        "sources": [
+            "https://www.barefootcollege.org/",
+            "https://www.barefootcollege.org/barefoot-grandmothers-electrify-rural-communities/",
+            "https://www.irena.org/news/newsletter/2022/Jun/IRENA-Barefoot-College-partnership-leaves-rural-footprint-with-skilled-energy-champions",
+            "https://www.wipo.int/wipo_magazine/en/2009/04/article_0003.html"
+        ],
+        "summary": "A decentralized rural electrification model that trains illiterate and semi-literate women from remote villages to become solar engineers, enabling them to install, maintain, and manage solar lighting systems in their own communities.",
+        "category": [
+            "Renewable Energy",
+            "Women Empowerment",
+            "Rural Development",
+            "Education"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "India",
+            "region": "Rajasthan",
+            "lat": 26.8105777,
+            "lon": 73.7684549
+        },
+        "process": {
+            "how_it_works": "The program utilizes hands-on, visual training methods that bypass language and literacy barriers, allowing women to master complex solar engineering through color-coding and practical demonstration.",
+            "materials_used": [
+                "Solar panels",
+                "Batteries",
+                "LED lights",
+                "Circuit boards",
+                "Charge controllers",
+                "Soldering tools"
+            ],
+            "step_by_step": [
+                "Selection of semi-literate or illiterate women from remote, off-grid villages",
+                "Six-month residential training at Barefoot College using visual aids and practical exercises",
+                "Learning to assemble and repair solar lanterns and household lighting systems",
+                "Return to the home village with necessary solar components",
+                "Installation of solar units on community rooftops",
+                "Establishment of a local maintenance system funded by small community fees"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to electricity in remote areas and the exclusion of non-literate women from technical vocational training.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "While this is a highly successful social innovation, the assembly and maintenance of solar kits involve electrical circuits and battery storage (lead-acid or lithium-ion). Improper handling can lead to short circuits, fire hazards, or exposure to toxic battery chemicals. Additionally, decentralized solar projects face long-term environmental risks regarding the proper disposal of electronic waste and batteries in remote areas."
+        },
+        "priority_score": 66,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
