@@ -3733,5 +3733,202 @@
         "priority_score": 62,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "a199a8b260701b7acab5a1f8504550a0",
+        "timestamp": "2026-03-23T07:54:39.724658",
+        "title": "Ram Press Manual Oil Extractor",
+        "sources": [
+            "https://www.echocommunity.org",
+            "https://www.iied.org/local-agro-processing-sustainable-technology-sunflowerseed-oil-tanzania",
+            "https://www.fao.org/4/v4420e/V4420E08.htm",
+            "https://practicalaction.org"
+        ],
+        "summary": "A low-cost, manual oil extraction technology designed for village-level sunflower oil production, utilizing a piston-in-cage mechanism to press seeds without electricity.",
+        "category": [
+            "Agriculture",
+            "Food Processing",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Tanzania",
+            "region": "Arusha",
+            "lat": -3.3696827,
+            "lon": 36.6880794
+        },
+        "process": {
+            "how_it_works": "A long lever is pumped by hand to move a piston within a cage, compressing seeds against a restricted outlet to force oil out through small gaps.",
+            "materials_used": [
+                "Steel parts",
+                "Piston",
+                "Cage",
+                "Lever"
+            ],
+            "step_by_step": [
+                "Load sunflower seeds into the press cage",
+                "Manually pump the long lever to actuate the piston",
+                "Compress seeds against the restricted outlet",
+                "Collect the oil escaping through the cage gaps",
+                "Collect the extruded dry seed cake byproduct"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Enables rural farmers to process oil locally without electricity, increasing income and providing nutritious cold-pressed oil.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Mechanical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Ram Press is a manual, mechanical device that operates without electricity or hazardous chemicals. The primary risks are mechanical pinch points and physical strain from repetitive lever operation. It is considered a safe and low-risk technology for rural food production."
+        },
+        "priority_score": 52,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "438b19c8d58a0aea60f6fc8aed6bf348",
+        "timestamp": "2026-03-23T07:54:54.810338",
+        "title": "The Ghani (Traditional Oil Mill)",
+        "sources": [
+            "https://www.fao.org/3/v4420e/v4420e00.htm",
+            "https://paramparanaturals.com/the-traditional-art-of-making-oil-by-wood-press-method/",
+            "https://medium.com/@saurabh.yadav/small-oil-crisis-ghanis-village-level-extraction-units-find-themselves-on-the-wrong-side-of-modern-7e8c5d1e67e3"
+        ],
+        "summary": "A traditional village-level oil extraction system, also known as Chekku or Kolhu, that uses a mortar and pestle mechanism to produce nutrient-rich cold-pressed oil while supporting local agricultural economies.",
+        "category": [
+            "Agriculture",
+            "Food Processing",
+            "Traditional Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Rural areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A heavy wooden pestle rotates inside a fixed mortar, crushing oilseeds through slow friction to extract oil without generating high heat, thereby preserving natural properties.",
+            "materials_used": [
+                "Wooden or stone mortar",
+                "Wooden pestle",
+                "Oilseeds (sesame, mustard, or groundnuts)",
+                "Oxen or small electric motor"
+            ],
+            "step_by_step": [
+                "Fix a massive wooden or stone mortar into the ground.",
+                "Insert a heavy wooden pestle into the center of the mortar.",
+                "Add oilseeds into the cavity of the mortar.",
+                "Rotate the pestle slowly using animal power or an electric motor.",
+                "Allow the friction to crush the seeds against the mortar walls.",
+                "Collect the extracted cold-pressed oil from the outlet.",
+                "Remove the remaining high-protein oil cake for livestock feed."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Prevents the loss of antioxidants and medicinal properties caused by heat in industrial refining; provides local processing for farmers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Physical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Ghani is a traditional mechanical extraction method that operates at low speeds and temperatures. It avoids the use of volatile chemical solvents like hexane, which are common in industrial oil milling, thereby eliminating explosion and toxic chemical risks. The primary hazards are limited to physical entrapment in moving parts or risks associated with animal handling."
+        },
+        "priority_score": 42,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "fa2df681174ae7b90bb9f689b903c75e",
+        "timestamp": "2026-03-23T07:55:15.112975",
+        "title": "Auger Bit Oil Press",
+        "sources": [
+            "https://www.echocommunity.org",
+            "https://www.permaculturenews.org/2013/05/24/oil-extraction-at-home-and-on-the-farm/",
+            "https://www.echocommunity.org/resources/06536093-689e-4a6c-9494-013898436098"
+        ],
+        "summary": "A DIY screw-type oil expeller constructed from common hardware store items like an auger bit and water pipe, designed for small-scale oil extraction in remote areas without electricity.",
+        "category": [
+            "Agriculture",
+            "Food Processing",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Malawi",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A hand-cranked auger bit rotates inside a heavy-duty pipe, creating intense pressure as it forces seeds against a tapered spear point, which separates the oil from the seed cake.",
+            "materials_used": [
+                "1-inch masonry or wood auger bit",
+                "Heavy-duty water pipe",
+                "Hand crank",
+                "Tapered spear point",
+                "Metal frame"
+            ],
+            "step_by_step": [
+                "Secure a heavy-duty water pipe to a stable frame to serve as the housing.",
+                "Insert a standard 1-inch auger bit into the pipe.",
+                "Attach a hand-operated crank to the shank of the auger bit.",
+                "Install a tapered 'spear point' at the discharge end of the pipe to create back-pressure.",
+                "Feed seeds into the intake while turning the crank to compress them and extract oil through small holes or gaps in the housing."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to expensive commercial oil extraction machinery and electricity in remote rural areas.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Mechanical failure",
+                "Contamination"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The device relies on high mechanical pressure generated within DIY-welded components, which presents a risk of structural failure or projectile hazards if the pipe or welds burst. Furthermore, using standard hardware like galvanized pipes or industrial auger bits for food extraction introduces risks of heavy metal leaching (e.g., zinc, lead) or chemical contamination from industrial coatings into the consumable oil."
+        },
+        "priority_score": 34,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]

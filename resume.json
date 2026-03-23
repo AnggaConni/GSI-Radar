@@ -655,7 +655,7 @@
     },
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-03-23T07:38:02.597632",
             "period": "Q1 2026",
             "total_records_analyzed": 57
@@ -873,6 +873,234 @@
                 {
                     "source": "Formal",
                     "count": 10
+                }
+            ]
+        }
+    },
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-23T07:55:37.423548",
+            "period": "Q1 2026",
+            "total_records_analyzed": 60
+        },
+        "global_summary": {
+            "total_innovations": 51,
+            "grassroots_percentage": 49.02,
+            "institutional_percentage": 21.57,
+            "semi_formal_percentage": 29.41
+        },
+        "top_categories": [
+            {
+                "category": "Waste Management & Upcycling",
+                "count": 14,
+                "trend": "increasing"
+            },
+            {
+                "category": "Sustainable Agriculture",
+                "count": 12,
+                "trend": "stable"
+            },
+            {
+                "category": "Sanitation",
+                "count": 8,
+                "trend": "increasing"
+            },
+            {
+                "category": "Renewable Energy",
+                "count": 7,
+                "trend": "stable"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Sub-Saharan Africa",
+                "key_pattern": "Dominance of circular sanitation and post-harvest storage solutions (hermetic bags, metal silos).",
+                "risk_level": "high"
+            },
+            {
+                "region": "South Asia",
+                "key_pattern": "Grassroots electronics and low-cost renewable energy (biogas, FM transmitters).",
+                "risk_level": "high"
+            },
+            {
+                "region": "North America & Europe",
+                "key_pattern": "Industrial upcycling of complex composites (wind turbine blades) and DIY engine conversions.",
+                "risk_level": "medium"
+            },
+            {
+                "region": "Latin America",
+                "key_pattern": "Revival of traditional ecological knowledge (Chinampas, Milpa) for climate resilience.",
+                "risk_level": "low"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 18,
+            "critical_cases": 11,
+            "top_risk_types": [
+                "Pathogen exposure (Toxic)",
+                "Explosion (Pressure/Methane)",
+                "Fire (Combustible materials)",
+                "Chemical leaching (Toxic)"
+            ],
+            "emerging_risks": [
+                "Toxicity from scavenged plastic bottles in hydroponic food systems",
+                "Carbon monoxide poisoning from DIY wood-gas and biogas systems in residential areas",
+                "Structural failure of DIY-welded high-pressure oil presses"
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Circular Sanitation Loops",
+                "description": "Integration of human waste management with agricultural fertilizer production across Africa and Haiti.",
+                "regions": [
+                    "Haiti",
+                    "Uganda",
+                    "Kenya",
+                    "Ghana"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Repurposed Propulsion",
+                "description": "Modernizing or converting internal combustion engines for alternative fuels or improved efficiency.",
+                "regions": [
+                    "Kenya",
+                    "Germany",
+                    "USA",
+                    "Global (Online)"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Plastic-to-Infrastructure",
+                "description": "Converting PET and non-recyclable plastics into building materials like bricks, lumber, and greenhouses.",
+                "regions": [
+                    "Kenya",
+                    "Ghana",
+                    "Barbados",
+                    "Ireland",
+                    "Zimbabwe"
+                ],
+                "risk_level": "medium"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "The Milpa System",
+                "country": "Mexico/Guatemala",
+                "reason": "Ancient, zero-cost polyculture that maximizes biodiversity and soil health with near-zero risk."
+            },
+            {
+                "title": "Terra Preta",
+                "country": "Brazil",
+                "reason": "High-impact carbon sequestration and soil fertility method using locally produced biochar."
+            },
+            {
+                "title": "Raghav FM Transmitter",
+                "country": "India",
+                "reason": "Extreme low-cost ($1) communication tool for rural health and news dissemination."
+            },
+            {
+                "title": "Garlic-Based Pest Control",
+                "country": "Canada",
+                "reason": "Highly replicable, non-toxic alternative to synthetic pesticides using common ingredients."
+            },
+            {
+                "title": "William Kamkwamba's Windmill",
+                "country": "Malawi",
+                "reason": "Iconic proof-of-concept for decentralized energy using 100% salvaged scrap."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "training",
+                "target": "Grassroots Biogas and Humanure Operators",
+                "priority_level": "high",
+                "justification": "High risk of pathogen exposure and methane explosions in residential settings without standardized safety protocols."
+            },
+            {
+                "type": "research",
+                "target": "Upcycled Plastic Toxicity Testing",
+                "priority_level": "high",
+                "justification": "Innovations using scavenged PET for hydroponics or melting plastic for bricks lack data on chemical leaching and VOC emissions."
+            },
+            {
+                "type": "regulation",
+                "target": "DIY Engine Modernization Standards",
+                "priority_level": "medium",
+                "justification": "Custom ECUs and fuel systems (like Voltarent) show high impact but require certification to ensure road safety and emission compliance."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "shifting",
+            "observation": "There is a significant shift from purely traditional knowledge to 'Internet-enabled DIY' where formal engineering concepts (Arduino, CAD) are applied to salvaged materials."
+        },
+        "recommendations": [
+            "Develop and distribute 'Safety-First' open-source manuals for DIY biogas and composting toilets.",
+            "Establish regional testing hubs for upcycled building materials to certify structural integrity and non-toxicity.",
+            "Incentivize the adoption of traditional polyculture (Milpa/Chinampas) as a low-risk climate adaptation strategy.",
+            "Provide technical mentorship to grassroots electronics innovators to prevent regulatory interference and improve device safety.",
+            "Create a global database for 'scavenged material compatibility' to warn against using toxic industrial plastics in food-related innovations."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Africa",
+                    "count": 22
+                },
+                {
+                    "region": "Asia",
+                    "count": 8
+                },
+                {
+                    "region": "Americas",
+                    "count": 11
+                },
+                {
+                    "region": "Europe",
+                    "count": 6
+                },
+                {
+                    "region": "Global/Online",
+                    "count": 4
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "low",
+                    "count": 12
+                },
+                {
+                    "level": "medium",
+                    "count": 21
+                },
+                {
+                    "level": "high",
+                    "count": 18
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "traditional",
+                    "count": 9
+                },
+                {
+                    "source": "self-taught",
+                    "count": 11
+                },
+                {
+                    "source": "formal_education",
+                    "count": 10
+                },
+                {
+                    "source": "adapted_from_existing",
+                    "count": 18
+                },
+                {
+                    "source": "internet",
+                    "count": 3
                 }
             ]
         }
