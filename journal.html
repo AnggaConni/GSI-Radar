@@ -323,19 +323,59 @@ p{margin-bottom:13px;text-align:justify;}
     <p>Innovations with high replication potential yet low documentation visibility.</p>
     <div id="gems-wrapper"></div>
 
-    <h2 class="st fb" id="sec-method">8. Methodology &amp; Limitations</h2>
+
+<h2 class="st fb" id="sec-method">8. Methodology &amp; Limitations</h2>
     <div style="margin:14px 0;padding:12px 16px;border:1px solid var(--border);border-radius:4px;font-family:'DM Mono',monospace;background:var(--paper2);font-size:8.5pt;text-align:center;">
       <div style="font-weight:600;margin-bottom:6px;">Figure 8. Computational Methodology Flow</div>
       <div style="color:var(--ink-soft);">Discovery → Enrichment → Validation → Structuring → Scoring → Bulletin Output<br><span style="font-size:8pt;color:var(--ink-faint);">↺ Continuous iterative loop each quarterly cycle</span></div>
     </div>
+    
     <h3 class="sub">8.1 Discovery &amp; Data Collection</h3>
     <p>Cultural and technical elements are identified via multilingual keyword-based search across global digital sources including community blogs, open knowledge platforms, NGO documentation, and public web content. Both formally documented and unregistered practices are captured.</p>
+    
     <h3 class="sub">8.2 AI-Assisted Enrichment</h3>
     <p>Collected data is processed through an AI language model to extract structured descriptions, classify elements, generate step-by-step process documentation, and score risk and priority dimensions. A low-temperature configuration ensures consistency and reproducibility.</p>
-    <h3 class="sub">8.3 Risk Scoring Framework</h3>
-    <p>Scores (1–10) use a multi-factor rubric: toxic/biological hazard; fire/explosion potential; environmental contamination risk; safety equipment dependency; and innovation level (grassroots practices receive a higher baseline, reflecting reduced institutional oversight).</p>
+    
+    <h3 class="sub">8.3 Priority &amp; Risk Scoring Engine</h3>
+    <p>To identify innovations with the highest scalable impact and lowest barriers to entry, the engine calculates a Priority Score (0–100) using a weighted, opposing-force algorithm. High impact and ease of replication act as positive drivers, while safety dependencies and inherent risks act as algorithmic penalties.</p>
+    
+    <div style="margin:18px 0; background:var(--paper2); border:1px solid var(--border); border-left:4px solid var(--accent2); border-radius:4px; padding:16px; font-family:'Montserrat',sans-serif;">
+      <div style="text-align:center; font-size:9pt; font-weight:700; color:var(--ink); margin-bottom:14px; letter-spacing:1px; text-transform:uppercase;">Priority Score Formulation</div>
+      
+      <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:center; font-size:9pt;">
+        <div style="background:var(--ink); color:var(--paper); padding:8px 12px; border-radius:4px; font-weight:700; box-shadow:var(--shadow);">Priority (0-100)</div>
+        <div style="font-weight:700; color:var(--ink-soft); font-size:12pt;">=</div>
+        
+        <div style="border:1.5px solid var(--accent2); background:rgba(15, 118, 110, 0.08); color:var(--accent2); padding:8px 12px; border-radius:4px; text-align:center;">
+          <div style="font-weight:700;">Impact</div>
+          <div style="font-size:7.5pt; font-family:'DM Mono',monospace; margin-top:2px;">Weight: +40%</div>
+        </div>
+        <div style="font-weight:700; color:var(--ink-soft); font-size:12pt;">+</div>
+        <div style="border:1.5px solid var(--accent2); background:rgba(15, 118, 110, 0.08); color:var(--accent2); padding:8px 12px; border-radius:4px; text-align:center;">
+          <div style="font-weight:700;">Replicability</div>
+          <div style="font-size:7.5pt; font-family:'DM Mono',monospace; margin-top:2px;">Weight: +20%</div>
+        </div>
+        
+        <div style="font-weight:700; color:var(--ink-soft); font-size:12pt;">-</div>
+        <div style="border:1.5px solid var(--accent); background:var(--accent-pale); color:var(--accent); padding:8px 12px; border-radius:4px; text-align:center;">
+          <div style="font-weight:700;">Safety Dep.</div>
+          <div style="font-size:7.5pt; font-family:'DM Mono',monospace; margin-top:2px;">Penalty: -10%</div>
+        </div>
+        <div style="font-weight:700; color:var(--ink-soft); font-size:12pt;">-</div>
+        <div style="border:1.5px solid var(--accent); background:var(--accent-pale); color:var(--accent); padding:8px 12px; border-radius:4px; text-align:center;">
+          <div style="font-weight:700;">Inherent Risk</div>
+          <div style="font-size:7.5pt; font-family:'DM Mono',monospace; margin-top:2px;">Penalty: -30%</div>
+        </div>
+      </div>
+      
+      <div style="margin-top:14px; font-family:'Crimson Pro',serif; font-size:10pt; color:var(--ink-soft); text-align:center; font-style:italic;">
+        *Note: Risk values are mathematically inverted before weighting. A high inherent risk score actively diminishes the final priority output.
+      </div>
+    </div>
+
     <h3 class="sub">8.4 Scalability Architecture</h3>
     <p>The bulletin is engineered for large datasets: the appendix table is paginated with configurable page size; the map uses Leaflet.markercluster (tested to 100k+ points); charts aggregate statistics rather than plotting individual points; the network is capped at top-N by priority; and full-dataset CSV export is always available regardless of the active filters.</p>
+    
     <h3 class="sub">8.5 Limitations</h3>
     <ul style="padding-left:18px;margin-bottom:14px;font-size:10pt;">
       <li style="margin-bottom:5px;"><strong>Source Reliability:</strong> Data from heterogeneous online sources may introduce inconsistencies.</li>
@@ -344,6 +384,7 @@ p{margin-bottom:13px;text-align:justify;}
       <li style="margin-bottom:5px;"><strong>Algorithmic Bias:</strong> Search engine indexing shapes which innovations are surfaced.</li>
       <li style="margin-bottom:5px;"><strong>Digital Divide:</strong> Communities with low digital presence remain under-represented regardless of data volume.</li>
     </ul>
+
 
     <h2 class="st" id="sec-conc">9. Conclusion</h2>
     <p>This edition documents multiple community-driven practices spanning the globe and various technological domains. The data reveal a consistent pattern: high-impact, low-cost innovations exist in abundance at the grassroots level, yet many carry unaddressed safety risks and remain invisible to formal dissemination channels. Future editions will deepen geographic and thematic coverage, and track implementation status of innovations highlighted in previous quarters.</p>
