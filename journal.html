@@ -608,27 +608,51 @@ function renderCat(){
 
 function renderLvl(){if(!INNOVATIONS.length)return;try{const c={};INNOVATIONS.forEach(d=>{const l=d.innovation_level||'unknown';c[l]=(c[l]||0)+1;});const col={grassroots:'#9f1239','semi-formal':'#b45309',institutional:'#0f766e',unknown:'#94a3b8'};const labs=Object.keys(c);if(CH.lvl){CH.lvl.destroy();delete CH.lvl;}CH.lvl=new Chart(document.getElementById('levelChart').getContext('2d'),{type:'doughnut',data:{labels:labs,datasets:[{data:Object.values(c),backgroundColor:labs.map(l=>col[l]||'#aaa'),borderWidth:2,borderColor:document.documentElement.getAttribute('data-theme')==='dark'?'#22263a':'#faf8f3'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Innovation Level',font:{size:11}}}}});}catch(e){console.error("Error renderLvl", e);}}
 
-function renderReg(){
-    if(!INNOVATIONS.length)return;
-    try{
-        const r={};
-        INNOVATIONS.forEach(d=>{const x=getRegion(d.location?.country||'');r[x]=(r[x]||0)+1;});
-        const pal=['rgba(15,118,110,.7)','rgba(217,119,6,.7)','rgba(37,99,235,.7)','rgba(225,29,72,.7)','rgba(139,92,246,.7)','rgba(100,116,139,.7)'];
-        const labs=Object.keys(r);
-        if(CH.pol){CH.pol.destroy();delete CH.pol;}
-        CH.pol=new Chart(document.getElementById('polarChart').getContext('2d'),{
-            type:'pie', // CHANGED TO PIE
-            data:{
-                labels:labs,
-                datasets:[{data:Object.values(r),backgroundColor:pal.slice(0,labs.length),borderWidth:1,borderColor:document.documentElement.getAttribute('data-theme')==='dark'?'#22263a':'#faf8f3'}]
+function renderReg() {
+    if(!INNOVATIONS.length) return;
+    try {
+        const r = {};
+        // Hitung jumlah data per region
+        INNOVATIONS.forEach(d => {
+            const x = getRegion(d.location?.country || '');
+            r[x] = (r[x] || 0) + 1;
+        });
+
+        // Urutkan data otomatis dari yang terbesar ke terkecil
+        const sortedData = Object.entries(r).sort((a,b) => b[1] - a[1]);
+        const labs = sortedData.map(item => item[0]);
+        const vals = sortedData.map(item => item[1]);
+
+        if(CH.pol){ CH.pol.destroy(); delete CH.pol; }
+        
+        // Render Horizontal Bar Chart sebagai pengganti Pie Chart
+        CH.pol = new Chart(document.getElementById('polarChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: labs,
+                datasets: [{
+                    data: vals,
+                    backgroundColor: 'rgba(15,118,110,0.75)', // Menggunakan warna var(--accent2)
+                    borderRadius: 3
+                }]
             },
-            options:{
-                responsive:true,maintainAspectRatio:false,
-                // Legend diubah posisinya ke "bottom" agar tidak mengecilkan diagram pie
-                plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:9}}},title:{display:true,text:'Regional Distribution',font:{size:11}}}
+            options: {
+                indexAxis: 'y', // Memutar bar menjadi horizontal
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }, // Sembunyikan legend untuk menghemat tempat
+                    title: { display: true, text: 'Regional Distribution', font: { size: 11 } }
+                },
+                scales: {
+                    x: { beginAtZero: true, ticks: { stepSize: 1, font: { size: 9 } } },
+                    y: { ticks: { font: { size: 9 } } }
+                }
             }
         });
-    }catch(e){console.error("Error renderReg", e);}
+    } catch(e) {
+        console.error("Error renderReg", e);
+    }
 }
 
 function renderRisk(){
