@@ -18,6 +18,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
   
   <script>
@@ -61,6 +62,14 @@
     @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
     .animate-spin-slow { animation: spin-slow 12s linear infinite; }
     .pattern-grid { background-size:20px 20px; background-image: linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px); }
+
+    /* ── SPIDER Tab Styles ── */
+    #nexus-svg { touch-action: none; }
+    .nexus-link { transition: all 0.3s ease; stroke-linecap: round; }
+    .nexus-node { transition: all 0.3s ease; }
+    .nexus-node:hover { filter: drop-shadow(0 0 8px rgba(0,91,181,0.4)); }
+    @keyframes nexus-fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in { animation: nexus-fade-in 0.4s ease-out; }
 
     /* ── Resume Tab Styles ── */
     .resume-section-title { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 1rem; color: #1e293b; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 16px; }
@@ -146,6 +155,9 @@
       <button onclick="switchTab('map')" id="tab-map" class="tab-btn pb-3 text-sm font-medium text-slate-500 hover:text-unesco-blue flex items-center gap-2">
         <i class="ph-fill ph-map-trifold text-lg"></i> Global Map & Analytics
       </button>
+      <button onclick="switchTab('nexus')" id="tab-nexus" class="tab-btn pb-3 text-sm font-medium text-slate-500 hover:text-unesco-blue flex items-center gap-2">
+      <i class="ph-fill ph-share-network text-lg"></i> Innovation Nexus
+    </button>
       <button onclick="switchTab('resume')" id="tab-resume" class="tab-btn pb-3 text-sm font-medium text-slate-500 hover:text-unesco-blue flex items-center gap-2">
         <i class="ph-fill ph-chart-pie-slice text-lg"></i> Intelligence Resume
       </button>
@@ -227,7 +239,54 @@
     </div>
     </div>
 
-    <!-- TAB 3: INTELLIGENCE RESUME ───────────────────────────── -->
+    <!-- TAB 3: INNOVATION NEXUS (SPIDER GRAPH) -->
+<div id="view-nexus" class="hidden flex-col md:flex-row bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden h-[800px] relative">
+    <!-- Sidebar Panel (Kanan/Bawah) -->
+    <div id="nexus-sidebar" class="order-2 md:order-2 w-full md:w-[350px] border-t md:border-t-0 md:border-l border-slate-100 flex flex-col bg-slate-50/30 overflow-y-auto p-6">
+        <div id="nexus-sidebar-content">
+            <div class="mb-6">
+                <h2 class="text-xl font-black text-slate-800">Nexus Insight</h2>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Ecosystem Connections</p>
+            </div>
+            <div id="nexus-default-info" class="space-y-4">
+                <div class="bg-blue-600 rounded-2xl p-5 text-white shadow-lg shadow-blue-200">
+                    <p class="text-xs opacity-80 mb-1">Total Connections</p>
+                    <p id="nexus-count-links" class="text-3xl font-black">0</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase mb-2">Clustering Logic</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Garis (Edge) terbentuk jika dua inovasi berbagi minimal <span class="font-bold text-blue-600">2 kategori</span> yang sama.</p>
+                </div>
+            </div>
+            <div id="nexus-detail-info" class="hidden animate-fade-in">
+                <!-- Diisi via JS saat node diklik -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Canvas (Kiri/Atas) -->
+    <div class="order-1 md:order-1 flex-1 relative bg-[#fcfcfc] overflow-hidden cursor-grab active:cursor-grabbing" id="nexus-canvas-container">
+        <!-- Floating Controls -->
+        <div class="absolute top-4 left-4 z-10 flex flex-col gap-2">
+            <div class="bg-white/90 backdrop-blur p-2 rounded-xl shadow-xl border border-slate-100 flex items-center gap-2">
+                <input type="text" id="nexus-search" placeholder="Search tech..." class="text-xs border-none bg-slate-100 rounded-lg px-3 py-2 w-40 focus:ring-2 focus:ring-blue-500">
+                <select id="nexus-filter-threshold" class="text-[10px] font-bold border-none bg-slate-100 rounded-lg px-2 py-2">
+                    <option value="1">Min 1 Shared Category</option>
+                    <option value="2" selected>Min 2 Shared Categories</option>
+                    <option value="3">Min 3 Shared Categories</option>
+                </select>
+            </div>
+        </div>
+        <svg id="nexus-svg" class="w-full h-full">
+            <g id="nexus-viewport">
+                <g id="nexus-links-group"></g>
+                <g id="nexus-nodes-group"></g>
+            </g>
+        </svg>
+    </div>
+</div>
+ 
+    <!-- TAB 4: INTELLIGENCE RESUME ───────────────────────────── -->
     <div id="view-resume" class="flex-col gap-6 hidden">
 
       <!-- Report Selector Banner -->
@@ -339,7 +398,8 @@
       </div>
 
     </div>
-    <!-- END TAB 3 ──────────────────────────────────────────────── -->
+    <!-- END TAB 4 ──────────────────────────────────────────────── -->
+
 
   </main>
 
@@ -684,7 +744,7 @@
   //  TABS
   // ═══════════════════════════════════════════════════════
   function switchTab(tab) {
-    ['directory','map','resume'].forEach(t => {
+    ['directory','map','nexus','resume'].forEach(t => {
       document.getElementById(`tab-${t}`).classList.toggle('active', t === tab);
       const el = document.getElementById(`view-${t}`);
       if (t === tab) { el.classList.remove('hidden'); el.classList.add('flex'); }
@@ -694,6 +754,9 @@
     if (tab === 'map') {
       if (!map) { initMap(); drawMapElements(); renderGlobalCharts(); }
       else setTimeout(() => map.invalidateSize(), 100);
+    }
+    if (tab === 'nexus') {
+       initNexusMap(); // Panggil fungsi pembuat laba-laba
     }
     if (tab === 'resume') {
       const sel = document.getElementById('report-selector');
@@ -1399,6 +1462,154 @@ function renderCatChart(cats) {
   }
 
   window.onload = init;
+
+  // --- LOGIKA NEXUS MAP (VANILLA JS VERSION) ---
+let nexusTransform = { x: 0, y: 0, scale: 1 };
+let isNexusDragging = false;
+let nexusDragStart = { x: 0, y: 0 };
+
+function initNexusMap() {
+    const container = document.getElementById('nexus-canvas-container');
+    const svg = document.getElementById('nexus-svg');
+    const viewport = document.getElementById('nexus-viewport');
+    const threshold = parseInt(document.getElementById('nexus-filter-threshold').value);
+    
+    // 1. Ambil data (Maksimal 50)
+    const data = globalData.sort((a,b) => b.priority_score - a.priority_score).slice(0, 50);
+    
+    // 2. Beri posisi acak/melingkar awal jika tidak ada koordinat
+    data.forEach((d, i) => {
+        const angle = (i / data.length) * 2 * Math.PI;
+        const radius = 300;
+        d.nx = 500 + radius * Math.cos(angle);
+        d.ny = 400 + radius * Math.sin(angle);
+    });
+
+    // 3. Hitung Link berdasarkan Shared Categories
+    const links = [];
+    for (let i = 0; i < data.length; i++) {
+        for (let j = i + 1; j < data.length; j++) {
+            const cat1 = data[i].category || [];
+            const cat2 = data[j].category || [];
+            const shared = cat1.filter(c => cat2.includes(c));
+            
+            if (shared.length >= threshold) {
+                links.push({ source: data[i], target: data[j], common: shared });
+            }
+        }
+    }
+
+    // 4. Render
+    renderNexus(data, links);
+    document.getElementById('nexus-count-links').innerText = links.length;
+
+    // 5. Setup Pan & Zoom (Event Listeners)
+    svg.onmousedown = (e) => {
+        if(e.target.closest('.nexus-node')) return;
+        isNexusDragging = true;
+        nexusDragStart = { x: e.clientX - nexusTransform.x, y: e.clientY - nexusTransform.y };
+    };
+    window.onmousemove = (e) => {
+        if (!isNexusDragging) return;
+        nexusTransform.x = e.clientX - nexusDragStart.x;
+        nexusTransform.y = e.clientY - nexusDragStart.y;
+        updateNexusTransform();
+    };
+    window.onmouseup = () => isNexusDragging = false;
+    svg.onwheel = (e) => {
+        e.preventDefault();
+        const factor = e.deltaY > 0 ? 0.9 : 1.1;
+        nexusTransform.scale *= factor;
+        updateNexusTransform();
+    };
+    
+    document.getElementById('nexus-filter-threshold').onchange = initNexusMap;
+    document.getElementById('nexus-search').oninput = (e) => {
+        const term = e.target.value.toLowerCase();
+        document.querySelectorAll('.nexus-node').forEach(node => {
+            const label = node.getAttribute('data-label').toLowerCase();
+            node.style.opacity = label.includes(term) ? "1" : "0.1";
+        });
+    };
+}
+
+function renderNexus(nodes, links) {
+    const nodesGroup = document.getElementById('nexus-nodes-group');
+    const linksGroup = document.getElementById('nexus-links-group');
+    nodesGroup.innerHTML = '';
+    linksGroup.innerHTML = '';
+
+    // Render Garis
+    links.forEach(l => {
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", l.source.nx);
+        line.setAttribute("y1", l.source.ny);
+        line.setAttribute("x2", l.target.nx);
+        line.setAttribute("y2", l.target.ny);
+        line.setAttribute("stroke", "rgba(0, 91, 181, 0.2)"); // Biru transparan (UNESCO Blue)
+        line.setAttribute("stroke-width", "1.5");
+        line.setAttribute("class", "nexus-link opacity-40");
+        linksGroup.appendChild(line);
+    });
+
+    // Render Titik
+    nodes.forEach(n => {
+        const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        g.setAttribute("class", "nexus-node cursor-pointer");
+        g.setAttribute("data-label", n.title);
+        g.setAttribute("transform", `translate(${n.nx},${n.ny})`);
+        
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("r", "6");
+        circle.setAttribute("fill", n.innovation_level === 'grassroots' ? '#10b981' : '#005bb5');
+        
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.textContent = n.title.length > 20 ? n.title.substring(0,20)+'...' : n.title;
+        text.setAttribute("x", "12");
+        text.setAttribute("y", "4");
+        text.setAttribute("class", "text-[10px] font-bold fill-slate-700 pointer-events-none");
+
+        g.appendChild(circle);
+        g.appendChild(text);
+        
+        g.onclick = () => showNexusDetail(n);
+        nodesGroup.appendChild(g);
+    });
+}
+
+function updateNexusTransform() {
+    const viewport = document.getElementById('nexus-viewport');
+    viewport.setAttribute("transform", `translate(${nexusTransform.x},${nexusTransform.y}) scale(${nexusTransform.scale})`);
+}
+
+function showNexusDetail(n) {
+    const detail = document.getElementById('nexus-detail-info');
+    const def = document.getElementById('nexus-default-info');
+    def.classList.add('hidden');
+    detail.classList.remove('hidden');
+    
+    detail.innerHTML = `
+        <div class="p-5 bg-white rounded-2xl border border-blue-100 shadow-sm animate-fade-in">
+            <span class="text-[9px] font-black uppercase bg-blue-50 text-blue-600 px-2 py-1 rounded-md mb-2 inline-block">${n.innovation_level}</span>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">${n.title}</h3>
+            <p class="text-xs text-slate-500 mb-4">${n.summary.substring(0, 100)}...</p>
+            <div class="space-y-2">
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Shared Categories</p>
+                <div class="flex flex-wrap gap-1">
+                    ${n.category.map(c => `<span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-[10px]">${c}</span>`).join('')}
+                </div>
+            </div>
+            <button onclick="openModal('${n.id}')" class="w-full mt-6 bg-slate-900 text-white text-xs font-bold py-3 rounded-xl hover:bg-blue-600 transition-colors">View Full Detail</button>
+            <button onclick="resetNexusSidebar()" class="w-full mt-2 text-slate-400 text-[10px] font-bold py-2">Close Detail</button>
+        </div>
+    `;
+}
+
+function resetNexusSidebar() {
+    document.getElementById('nexus-detail-info').classList.add('hidden');
+    document.getElementById('nexus-default-info').classList.remove('hidden');
+}
+
   </script>
 </body>
 </html>
