@@ -7440,5 +7440,335 @@
         "priority_score": 68,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "47e497a37e41d35fb540764a820d3b4f",
+        "timestamp": "2026-03-23T14:07:49.881545",
+        "title": "BioLite HomeStove",
+        "sources": [
+            "https://www.bioliteenergy.com/pages/mission",
+            "https://borgenproject.org/biolite-homestove-safe-sustainable-energy/",
+            "https://www.businessinsider.com/biolite-homestove-for-developing-countries-2012-8",
+            "https://www.bioliteenergy.com/"
+        ],
+        "summary": "A high-tech, fan-assisted rocket stove designed for off-grid households that uses a thermoelectric generator to convert waste heat into electricity, powering an internal fan for cleaner combustion and providing USB charging capabilities.",
+        "category": [
+            "Clean Cooking",
+            "Renewable Energy",
+            "Sustainable Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "India, Uganda",
+            "region": "South Asia, East Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A patented thermoelectric generator (TEG) captures heat from the cooking fire and converts it into electricity. This electricity powers an internal fan that optimizes the air-to-fuel ratio, significantly improving combustion efficiency.",
+            "materials_used": [
+                "Thermoelectric generator",
+                "Internal fan",
+                "Metal combustion chamber",
+                "USB charging port",
+                "Insulated body"
+            ],
+            "step_by_step": [
+                "The user starts a fire inside the stove using biomass fuel.",
+                "The heat from the fire activates the internal thermoelectric generator.",
+                "The generator produces electricity, which powers an internal fan.",
+                "The fan blows air into the fire, increasing temperature and reducing smoke.",
+                "Excess electricity is made available through a 5V USB port for charging devices."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces indoor air pollution and toxic emissions by 90%, cuts fuel wood consumption by 50%, and provides a source of electricity for mobile phones in off-grid areas.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The BioLite HomeStove is an engineered consumer product designed specifically to reduce the risks associated with traditional open-fire cooking. While it involves biomass combustion, the design significantly mitigates toxic smoke inhalation and fire spread. The low-voltage thermoelectric system (5V) presents negligible electrical risk."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "ea5f7e832a8b8120607212ad75819db9",
+        "timestamp": "2026-03-23T14:08:06.658923",
+        "title": "EcoZoom Versa Rocket Stove",
+        "sources": [
+            "https://ecozoomstoves.com/products/ecozoom-versa",
+            "https://ecozoomstove.com/",
+            "https://www.engineeringforchange.org/solutions/product/ecozoom-jet/",
+            "https://www.backdoorsurvival.com/the-fantastic-ecozoom-versa-rocket-stove-reviewed/"
+        ],
+        "summary": "A highly durable and portable rocket stove designed for humanitarian and commercial use, utilizing an insulated vertical combustion chamber to significantly reduce fuel consumption and smoke emissions.",
+        "category": [
+            "Clean Cooking",
+            "Renewable Energy",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "USA",
+            "region": "Global",
+            "lat": 41.7173268,
+            "lon": -72.6475276
+        },
+        "process": {
+            "how_it_works": "The stove features a fully insulated vertical combustion chamber that forces gases to mix with flames, resulting in nearly complete combustion and efficient heat transfer.",
+            "materials_used": [
+                "Refractory metal liner",
+                "Ceramic insulation",
+                "Cast iron top",
+                "Stainless steel handles"
+            ],
+            "step_by_step": [
+                "Insert fuel (wood, dried biomass, or charcoal) into the combustion chamber",
+                "Ignite the fuel at the base of the chamber",
+                "Adjust the lower and middle doors to regulate airflow and heat intensity",
+                "Place cookware on the cast iron top for cooking",
+                "Feed small amounts of fuel as needed to maintain the fire"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces wood consumption by 60% and smoke emissions by 70% compared to traditional three-stone fires, addressing fuel poverty and indoor air pollution.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire hazard",
+                "toxic"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The EcoZoom Versa is a professionally engineered consumer product designed to improve safety over traditional open-fire cooking. While it involves combustion (fire hazard) and emits carbon monoxide (toxic risk if used in unventilated spaces), its insulated chamber and efficient combustion significantly reduce fuel consumption and smoke, making it safer than the alternatives it replaces."
+        },
+        "priority_score": 72,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "70600ae56915ff1dafab117bb4cdfc97",
+        "timestamp": "2026-03-23T14:08:24.623048",
+        "title": "Jikokoa Charcoal Stove",
+        "sources": [
+            "https://burnstoves.com/jikokoa/",
+            "https://www.burndesignlab.org/the-jikokoa-g3",
+            "https://www.goldstandard.org/projects/efficient-and-clean-cooking-stoves-households-kenya",
+            "https://burnstoves.com/"
+        ],
+        "summary": "The Jikokoa is a high-efficiency 'rocket-type' charcoal stove mass-produced in Kenya. It utilizes advanced materials and insulation to reduce charcoal consumption by over 50% and emissions by 60%, making clean cooking affordable for East African households.",
+        "category": [
+            "Clean Cooking",
+            "Sustainable Energy",
+            "Household Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2686662,
+            "lon": 36.8161377
+        },
+        "process": {
+            "how_it_works": "The stove applies rocket stove principles to charcoal by using a high-temperature alloy combustion chamber and ceramic wool insulation to maximize heat retention and combustion efficiency.",
+            "materials_used": [
+                "High-temperature alloy",
+                "Ceramic wool insulation",
+                "Metal casing"
+            ],
+            "step_by_step": [
+                "Charcoal is placed in the high-temperature alloy combustion chamber",
+                "The ceramic wool insulation prevents heat loss to the exterior of the stove",
+                "Optimized airflow allows the charcoal to burn more completely at higher temperatures",
+                "Heat is concentrated directly on the cooking surface, reducing the amount of fuel needed"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High fuel costs and respiratory health issues caused by inefficient traditional charcoal stoves.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire hazard",
+                "toxic"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "While the Jikokoa involves charcoal combustion, which inherently carries fire and carbon monoxide risks, its design significantly improves safety compared to traditional stoves. The use of ceramic wool insulation reduces exterior surface temperatures (preventing burns), and the increased efficiency reduces toxic emissions and fuel consumption. As a mass-produced, engineered product, it is a low-risk intervention for clean cooking."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "153d58d069ac37f8f915f17b3884abbb",
+        "timestamp": "2026-03-23T14:08:51.683037",
+        "title": "Envirofit G-3300 Rocket Stove",
+        "sources": [
+            "https://aprovecho.org/improving-stove-performance/",
+            "https://aprovecho.org/",
+            "https://envirofit.org/",
+            "https://www.cleancooking.org/binary-data/RESOURCE/file/000/000/188-1.pdf",
+            "https://envirofit.org/products/"
+        ],
+        "summary": "The Envirofit G-3300 is a mass-produced, fuel-efficient rocket stove designed for global development. It utilizes a patented ceramic combustion chamber to significantly reduce wood consumption and harmful emissions compared to traditional open-fire cooking methods.",
+        "category": [
+            "Clean Cooking",
+            "Energy Efficiency",
+            "Sustainable Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Global",
+            "region": "Developing Regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The stove uses a rocket stove design with a vertical chimney effect to ensure efficient air flow and high-temperature combustion. Its patented Carbortek ceramic chamber provides superior insulation, keeping heat concentrated on the cooking surface.",
+            "materials_used": [
+                "Carbortek ceramic",
+                "Metal housing",
+                "Insulation material",
+                "Pot support"
+            ],
+            "step_by_step": [
+                "Place the stove on a stable, flat surface.",
+                "Insert small pieces of dry wood into the combustion chamber through the fuel opening.",
+                "Light the wood using a small amount of kindling.",
+                "Wait for the Carbortek chamber to reach optimal temperature.",
+                "Place the cooking pot on the top grate and feed wood gradually as it burns."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces wood fuel consumption by 60% and toxic smoke emissions by 80%, addressing indoor air pollution and deforestation.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire hazard",
+                "toxic"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Envirofit G-3300 is a professionally engineered and mass-produced rocket stove. While it involves wood combustion which presents inherent fire and minor emission risks, it is specifically designed to significantly reduce these hazards compared to traditional open fires. The use of a patented ceramic combustion chamber enhances safety and efficiency, making it a low-risk innovation for its intended use case."
+        },
+        "priority_score": 72,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "75c8963ef223032259ebcb27027e475c",
+        "timestamp": "2026-03-23T14:09:10.187411",
+        "title": "DIY Quick Brick Rocket Stove",
+        "sources": [
+            "https://theprovidentprepper.org/how-to-build-a-fuel-efficient-rocket-stove-and-cook-your-food-on-it/",
+            "https://www.youtube.com/watch?v=P6ValmZe7Gk",
+            "https://cindyheathwrites.com/how-a-tiny-rocket-stove-can-help-save-the-world/"
+        ],
+        "summary": "An ultra-low-cost, mortar-free emergency cooking stove built from standard bricks in under 10 minutes, utilizing L-shape rocket stove geometry for high efficiency with minimal fuel.",
+        "category": [
+            "Cooking",
+            "Emergency Relief",
+            "Appropriate Technology",
+            "Survival"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "N/A",
+            "lat": -33.9359583,
+            "lon": 151.1661132
+        },
+        "process": {
+            "how_it_works": "The stove uses an L-shaped combustion chamber to create a natural draft. This draft pulls air through the horizontal fuel feed, resulting in high-temperature combustion and directing heat upward through a vertical chimney to the cooking surface.",
+            "materials_used": [
+                "16 to 24 standard bricks",
+                "Small sticks",
+                "Twigs",
+                "Orchard prunings"
+            ],
+            "step_by_step": [
+                "Clear a level, non-combustible surface for the base.",
+                "Lay a foundation of bricks to form the floor of the stove.",
+                "Arrange bricks to create a horizontal opening for fuel and air intake.",
+                "Stack remaining bricks vertically to form a chimney at the back of the horizontal intake.",
+                "Ensure the structure is stable without the use of mortar.",
+                "Place a pot or pan on top of the chimney opening for cooking."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a rapid, fuel-efficient cooking solution in disaster relief, refugee settings, and off-grid scenarios where commercial stoves and specialized tools are unavailable.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The rocket stove is a well-established design that improves combustion efficiency over open fires. However, the dry-stack nature of the bricks presents a risk of instability or collapse if bumped, and the use of biomass fuel generates carbon monoxide and particulate matter, necessitating outdoor use. The fire hazard is localized but requires standard precautions for open flames."
+        },
+        "priority_score": 76,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
