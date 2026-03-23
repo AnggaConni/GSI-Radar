@@ -7245,5 +7245,200 @@
         "priority_score": 54,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "f4ccc943d5c48a7ec733a2d91a453564",
+        "timestamp": "2026-03-23T14:04:31.761523",
+        "title": "Rope Pump",
+        "sources": [
+            "https://ropepumps.org/",
+            "https://www.rural-water-supply.net/en/technologies/rope-pump",
+            "https://akvo.org/akvopedia/rope-pump/"
+        ],
+        "summary": "A low-cost, high-efficiency water lifting device that uses a continuous loop of rope with plastic pistons to pull water through a PVC pipe, designed for local manufacturing and maintenance in developing regions.",
+        "category": [
+            "Water Management",
+            "Appropriate Technology",
+            "Agriculture"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nicaragua",
+            "region": "Central America",
+            "lat": 12.1040984,
+            "lon": -86.2567265
+        },
+        "process": {
+            "how_it_works": "A continuous loop of rope with attached plastic pistons is pulled through a PVC pipe; as the rope moves, the pistons create a seal that lifts water from the well to the surface.",
+            "materials_used": [
+                "Rope",
+                "Plastic pistons or washers",
+                "PVC pipe",
+                "Recycled car tires",
+                "Metal for hand-cranked wheel"
+            ],
+            "step_by_step": [
+                "A user turns a hand-cranked wheel made from recycled materials.",
+                "The rotation pulls a continuous loop of rope through a submerged PVC pipe.",
+                "Plastic pistons attached to the rope trap water inside the pipe.",
+                "The moving rope lifts the water column to the surface discharge point.",
+                "The rope returns to the bottom of the well to repeat the cycle."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and maintenance difficulty of imported piston pumps, limited access to water for irrigation/livestock, and prevalence of waterborne diseases.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "mechanical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Rope Pump is a human-powered mechanical device with minimal safety risks. The primary hazards are minor mechanical issues such as pinch points in the crank mechanism or rope breakage. It does not involve hazardous chemicals, high pressures, or combustible fuels, making it exceptionally safe for community use."
+        },
+        "priority_score": 68,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "86dc1dc8978496e9a46001f41703b675",
+        "timestamp": "2026-03-23T14:04:55.275133",
+        "title": "EMAS Pump and Manual Drilling System",
+        "sources": [
+            "https://www.ircwash.org/",
+            "https://emas-international.de/",
+            "https://akvo.org/"
+        ],
+        "summary": "A low-cost, DIY manual water pump and drilling system developed in Bolivia that allows rural households to access deep aquifers and pump water under pressure to elevated storage or household fixtures.",
+        "category": [
+            "Water & Sanitation",
+            "Appropriate Technology",
+            "Rural Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Bolivia",
+            "region": "South America",
+            "lat": -19.0358414,
+            "lon": -65.26444
+        },
+        "process": {
+            "how_it_works": "Uses a piston mechanism within PVC pipes with glass marbles acting as one-way check valves to create pressure for lifting and transporting water to elevated heights.",
+            "materials_used": [
+                "PVC pipes",
+                "PVC adapters",
+                "Glass marbles",
+                "Solvent cement"
+            ],
+            "step_by_step": [
+                "Drill a borehole using the manual jetting technique to reach aquifers up to 100 meters deep",
+                "Assemble the pump body using standard PVC pipes and adapters",
+                "Insert glass marbles into the valve seats to act as check valves",
+                "Install the piston and handle assembly into the PVC casing",
+                "Connect the pump outlet to household plumbing or elevated storage tanks"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable access to clean water and the inability to pump water to elevated household fixtures in remote rural areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Physical",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation uses inert materials like PVC and glass, posing minimal chemical risk. The primary risks are physical hazards associated with manual drilling up to 100 meters and potential groundwater contamination if wells are not properly lined or sealed. The model's focus on training local technicians mitigates these risks."
+        },
+        "priority_score": 56,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "4e87d6c9f85550b75cea8793eb2be331",
+        "timestamp": "2026-03-23T14:05:21.738209",
+        "title": "Treadle Pump",
+        "sources": [
+            "https://www.ideglobal.org",
+            "https://kickstart.org"
+        ],
+        "summary": "A human-powered suction pump designed for radical affordability, allowing smallholder farmers to irrigate land during dry seasons using a stepping motion to lift groundwater.",
+        "category": [
+            "Agriculture",
+            "Water Management",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Bangladesh",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The pump uses a rhythmic stepping motion, similar to a Stairmaster, to drive pistons that create suction and lift groundwater from depths of up to seven meters.",
+            "materials_used": [
+                "Metal cylinders",
+                "Bamboo or metal treadles",
+                "Pistons",
+                "Check valves",
+                "Rubber seals"
+            ],
+            "step_by_step": [
+                "The operator stands on two long poles known as treadles.",
+                "The operator performs a rhythmic stepping motion to shift weight between the treadles.",
+                "The motion drives pistons up and down inside the pump cylinders.",
+                "The resulting suction pulls groundwater through a pipe from the well.",
+                "Water is discharged into irrigation furrows or pipes to reach crops."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable irrigation for smallholder farmers, enabling year-round cultivation and poverty reduction.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "mechanical",
+                "ergonomic"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The treadle pump is a simple, human-powered mechanical device. It poses no risk of fire, explosion, or toxic exposure. The primary safety considerations are minor mechanical hazards such as pinching points and ergonomic strain from repetitive motion. It is an environmentally friendly alternative to fossil-fuel-powered pumps."
+        },
+        "priority_score": 68,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
