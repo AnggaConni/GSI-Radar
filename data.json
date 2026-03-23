@@ -4947,5 +4947,346 @@
         "priority_score": 32,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "cac37fb9ba666283aeb22df00fde9c5f",
+        "timestamp": "2026-03-23T08:17:18.057953",
+        "title": "Branched-drain Greywater Irrigation System",
+        "sources": [
+            "https://oasisdesign.net/greywater/branched-drain/",
+            "https://harvestingrainwater.com/greywater-harvesting/branched-drain-greywater-distribution-plumbing/",
+            "https://www.energyvanguard.com/blog/38249/How-to-Install-a-Branched-Drain-Greywater-System-in-a-Green-Home"
+        ],
+        "summary": "A passive, gravity-powered greywater system that distributes household wastewater through a branching network of PVC pipes to irrigate a 16-tree fruit orchard using mulch basins and shields.",
+        "category": [
+            "Water Conservation",
+            "Permaculture",
+            "Wastewater Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Georgia",
+            "lat": 32.3293809,
+            "lon": -83.1137366
+        },
+        "process": {
+            "how_it_works": "The system utilizes gravity to move greywater from the house through a series of splitting PVC pipes, distributing it evenly to multiple mulch-filled basins to irrigate trees without the need for pumps or electricity.",
+            "materials_used": [
+                "PVC pipes",
+                "Double ell fittings",
+                "Plastic buckets (for mulch shields)",
+                "Mulch",
+                "Fruit trees"
+            ],
+            "step_by_step": [
+                "Plumb greywater outlets from sinks and showers to a main exterior pipe.",
+                "Install a series of branching PVC pipes using double ell fittings to split the water flow equally.",
+                "Dig mulch basins at the base of fruit trees.",
+                "Install mulch shields (perforated buckets) at the pipe discharge points within the basins.",
+                "Fill basins with mulch to facilitate infiltration and prevent clogging."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Maintains agricultural productivity during multi-year droughts while reducing household freshwater consumption and wastewater load.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "biological",
+                "environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The system utilizes a well-established passive design (Art Ludwig's branched-drain) that minimizes risk by discharging greywater below the surface into mulch basins. Primary risks are biological (pathogens in greywater) and environmental (potential soil contamination from detergents). However, the lack of pressurized components, electricity, or chemical storage makes it relatively safe for residential use provided it is maintained to prevent clogging or surface pooling."
+        },
+        "priority_score": 30,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "361d02ce5fba1b15fa771c350794f67e",
+        "timestamp": "2026-03-23T08:17:46.285348",
+        "title": "Laundry-to-Landscape (L2L) Greywater System",
+        "sources": [
+            "https://thebolditalic.com/my-laundry-to-landscape-greywater-system-will-take-a-25-000-gallon-bite-out-of-the-drought-8902506cc73d",
+            "https://zerowastechef.com/2022/12/12/laundry-to-landscape-grey-water-system/"
+        ],
+        "summary": "A DIY greywater recycling system implemented by an East Bay resident to divert washing machine discharge for landscape irrigation, significantly reducing municipal water use during drought conditions.",
+        "category": [
+            "Water Conservation",
+            "Sustainable Living",
+            "Greywater Systems"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "East Bay, California",
+            "lat": 33.6811328,
+            "lon": -117.2592037
+        },
+        "process": {
+            "how_it_works": "The system utilizes the washing machine's internal pump to divert greywater through a three-way valve into a network of tubing that feeds mulch-filled basins near plant roots, providing natural filtration and irrigation.",
+            "materials_used": [
+                "three-way diverter valve",
+                "1-inch tubing",
+                "wood chips",
+                "mulch"
+            ],
+            "step_by_step": [
+                "Install a three-way diverter valve on the washing machine's internal drain line.",
+                "Connect 1-inch tubing to the valve to route water away from the sewer and toward the landscape.",
+                "Dig shallow pits (mulch basins) around the root zones of target plants and trees.",
+                "Fill the pits with wood chips to act as a biological filter and moisture retainer.",
+                "Direct the tubing into the mulch basins for distribution.",
+                "Periodically replenish mulch to maintain biological activity."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High municipal water consumption and landscape maintenance during historic drought conditions.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Environmental",
+                "Biological"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "Laundry-to-landscape systems are a recognized and legal greywater practice in California. Risks are generally low but include potential soil salinization or pH imbalance from detergents, and biological hazards if pathogens from soiled clothing (e.g., diapers) enter the landscape. Proper maintenance of mulch basins is necessary to prevent surface ponding and mosquito breeding."
+        },
+        "priority_score": 46,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "628dbf311450304b411cfc5b68eef0ec",
+        "timestamp": "2026-03-23T08:18:05.440077",
+        "title": "Multi-stage Reed Bed Greywater Recycling System",
+        "sources": [
+            "http://www.ecodiy.info/reedbed.html",
+            "https://ourpermaculturelife.com/diy-reedbed-for-treating-our-household-grey-water-for-under-500/"
+        ],
+        "summary": "A DIY greywater treatment system built by a UK homeowner using recycled materials and natural filtration to recycle household water from baths, sinks, and washing machines for garden use.",
+        "category": [
+            "Water Conservation",
+            "Sustainable Living",
+            "Waste Management",
+            "Permaculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "United Kingdom",
+            "region": "",
+            "lat": 54.7023545,
+            "lon": -3.2765753
+        },
+        "process": {
+            "how_it_works": "Greywater is mechanically filtered for debris and then biologically purified as it passes through a gravel-filled reed bed where aerobic bacteria on the plant roots break down organic matter and soaps.",
+            "materials_used": [
+                "Surge tank",
+                "Pan scourer",
+                "Pond liner",
+                "Large pebbles",
+                "Pea gravel",
+                "Phragmites (Common reeds)",
+                "Recycled concrete lumps",
+                "Old carpet"
+            ],
+            "step_by_step": [
+                "Divert greywater from bath, sink, and washing machine into a surge tank.",
+                "Filter the water through a pan scourer to remove lint and large debris.",
+                "Construct a 4-square-meter raised bed using recycled concrete and line it with old carpet and a pond liner.",
+                "Fill the bed with layers of large pebbles followed by pea gravel.",
+                "Plant Phragmites reeds into the gravel medium.",
+                "Allow the water to flow through the root zone where aerobic bacteria purify the liquid.",
+                "Direct the treated water to a garden pond or use it for irrigation."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces household freshwater demand and provides a sustainable method for treating wastewater without chemical intervention.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "biological",
+                "environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The system utilizes established ecological water treatment principles. However, greywater from washing machines and baths can contain pathogens and high nutrient loads. Risks include potential bacterial growth in the surge tank, mosquito breeding in stagnant areas, and the structural integrity of the DIY raised bed using loose concrete. The use of Phragmites is effective but requires management to prevent it from becoming invasive in the local environment.",
+            "safety_gear": [
+                "gloves",
+                "waterproof footwear"
+            ]
+        },
+        "priority_score": 34,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "f7069f46775c223ab574ada6bd035af1",
+        "timestamp": "2026-03-23T08:18:31.309384",
+        "title": "Portable Low-Cost Greywater Drip System",
+        "sources": [
+            "https://www.betterfarm.org/blog/2013/07/diy-simple-graywater-system.html",
+            "https://www.motherearthnews.com/diy/low-cost-garden-greywater-system-zb0z1306zpit/"
+        ],
+        "summary": "A renter-friendly, non-permanent greywater recycling system designed for arid climates that uses 5-gallon buckets and gravity-fed drip irrigation to repurpose dishwashing water for garden beds.",
+        "category": [
+            "Water Conservation",
+            "Sustainable Gardening",
+            "Greywater Recycling",
+            "DIY Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Northern Arizona",
+            "lat": 35.1830867,
+            "lon": -111.654961
+        },
+        "process": {
+            "how_it_works": "Greywater is manually collected and moved to a reservoir bucket where gravity feeds it through a drip-irrigation line to provide consistent moisture to plants without permanent plumbing.",
+            "materials_used": [
+                "5-gallon buckets",
+                "Drip-irrigation kit",
+                "Garden-hose-sized tap",
+                "Teflon tape",
+                "Washers",
+                "Raised garden beds"
+            ],
+            "step_by_step": [
+                "Collect greywater from dishwashing in a primary 5-gallon bucket.",
+                "Transfer the water into a second 'reservoir' bucket.",
+                "Install a garden-hose tap at the base of the reservoir bucket, sealing it with Teflon tape and washers.",
+                "Attach a commercial drip-irrigation line to the reservoir tap.",
+                "Position the irrigation lines across 2-foot-square raised garden beds.",
+                "Open the tap to allow gravity-fed water to reach the plant roots."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a way for renters to recycle water in arid climates without making permanent or illegal plumbing modifications.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "biological",
+                "environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The system is physically safe with no fire or explosion hazards. The primary risk is biological, as dishwater (often categorized as 'dark greywater') contains organic matter and food particles that can promote bacterial growth if stored for more than 24 hours. At a small scale of 5 gallons per day, the environmental impact is low, provided the user utilizes biodegradable soaps and avoids water contaminated by raw meat or heavy grease."
+        },
+        "priority_score": 40,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "14809bdce20ed4f7ccb6762a4e5b9f53",
+        "timestamp": "2026-03-23T08:18:49.792918",
+        "title": "Milkwood Tiny House Greywater System",
+        "sources": [
+            "https://www.milkwood.net/",
+            "https://livingtinyandgreen.com/reed-bed-filtration-system/",
+            "https://www.milkwood.net/2012/10/16/building-a-biological-diy-greywater-system-with-no-reedbeds/"
+        ],
+        "summary": "A gravity-fed greywater irrigation system designed for a tiny house that utilizes a two-tank settling and surge process to filter water for fruit trees, bypassing the need for complex reed beds.",
+        "category": [
+            "Permaculture",
+            "Water Management",
+            "Sustainable Living",
+            "Irrigation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Australia",
+            "region": "New South Wales",
+            "lat": -31.8759835,
+            "lon": 147.2869493
+        },
+        "process": {
+            "how_it_works": "Greywater from the bath and shower is directed into a primary settling tank where solids sink. As more water enters, the cleaner top layer overflows into a surge tank, which then uses gravity to push the water through driplines to irrigate downhill vegetation.",
+            "materials_used": [
+                "Settling tank",
+                "Surge tank",
+                "PVC plumbing pipes",
+                "Driplines",
+                "Fruit trees"
+            ],
+            "step_by_step": [
+                "Collect greywater from the bath and shower outlets.",
+                "Direct water into a main settling tank to allow particulates to sink over several days.",
+                "Allow cleaner, settled water to overflow into a secondary surge tank as new water enters.",
+                "Utilize gravity to distribute water from the surge tank through a network of driplines.",
+                "Position the driplines to irrigate a grove of fruit trees planted on a downhill slope."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces water waste in dry environments and simplifies greywater treatment by avoiding high-maintenance reed beds.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "Storing greywater for several days in a settling tank creates a risk of anaerobic decomposition and pathogen proliferation, such as E. coli or Legionella. While the gravity-fed design is simple, the lack of biological filtration (like reed beds) increases the risk of soil contamination or dripline clogging from biofilm. Regular maintenance and careful selection of biodegradable soaps are necessary to mitigate environmental and health risks."
+        },
+        "priority_score": 44,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
