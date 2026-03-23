@@ -4269,5 +4269,339 @@
         "priority_score": 56,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "fdf9a0e77da2d1e119ce5e5baf602f9e",
+        "timestamp": "2026-03-23T08:08:47.906034",
+        "title": "Greensphere Smokeless Charcoal Briquettes",
+        "sources": [
+            "https://www.fairplanet.org/story/cameroon-youths-turn-food-waste-into-eco-friendly-charcoal-briquettes/",
+            "https://habbiomass.com/circular-economy-in-action-turning-organic-waste-into-briquettes-and-pellets-for-a-greener-future/"
+        ],
+        "summary": "A youth-led initiative in Cameroon that converts agricultural and household food waste into eco-friendly, smokeless charcoal briquettes to combat deforestation and indoor air pollution.",
+        "category": [
+            "Waste Management",
+            "Renewable Energy",
+            "Circular Economy"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Cameroon",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Organic waste is carbonized into char, mixed with a natural binder, and molded into briquettes that burn cleanly without smoke.",
+            "materials_used": [
+                "plantain peelings",
+                "rice husks",
+                "maize stems",
+                "cassava starch",
+                "diluted molasses"
+            ],
+            "step_by_step": [
+                "Collect and dry organic food waste.",
+                "Carbonize the waste in a controlled environment to remove volatile compounds.",
+                "Grind the resulting char into a fine powder.",
+                "Mix the powder with a natural binder like cassava starch or molasses.",
+                "Press the mixture into molds.",
+                "Sun-dry the briquettes for several days."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Deforestation, indoor air pollution, and urban/agricultural waste accumulation.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic",
+                "Respiratory hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The carbonization process involves high heat and the release of volatile organic compounds and carbon monoxide, which pose fire and inhalation risks if not managed in well-ventilated, professional kilns. Additionally, grinding charcoal into a fine powder creates combustible dust and respiratory hazards for workers, requiring safety gear and standardized procedures."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "5284630d6f78acfee70a2ff80b201bd0",
+        "timestamp": "2026-03-23T08:09:06.020031",
+        "title": "Muchinga Skills Association Green Charcoal Project",
+        "sources": [
+            "https://climatesolutionsbythepeople.com/solutions/clean-green-charcoal-briquettes/"
+        ],
+        "summary": "The Muchinga Skills Association produces 'green charcoal' by converting agricultural waste like maize shells and cassava peelings into eco-friendly briquettes, providing a sustainable and affordable alternative to wood-based charcoal.",
+        "category": [
+            "Waste Management",
+            "Renewable Energy",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Zambia",
+            "region": "Nakonde district",
+            "lat": -9.466753,
+            "lon": 32.607758
+        },
+        "process": {
+            "how_it_works": "Agricultural waste is carbonized in kilns and then compressed into briquettes to create a long-burning fuel source that replaces traditional wood charcoal.",
+            "materials_used": [
+                "Maize shells",
+                "Cassava peelings",
+                "Locally manufactured kilns",
+                "Manual molding machines"
+            ],
+            "step_by_step": [
+                "Collection of maize shells and cassava peelings from local farmers",
+                "Carbonization of the waste materials in locally manufactured kilns",
+                "Processing the carbonized material into briquettes using manual molding machines"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of electricity, environmental degradation from traditional charcoal burning, and agricultural waste management.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic",
+                "Respiratory hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The carbonization process involves thermal decomposition of organic matter, which poses a fire hazard and releases carbon monoxide and volatile organic compounds. Locally manufactured kilns may lack standardized safety controls or adequate ventilation, increasing the risk of respiratory issues for workers. Proper safety gear and emission management are necessary."
+        },
+        "priority_score": 60,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "a735e87e7a6c25e233342f06042c3a7a",
+        "timestamp": "2026-03-23T08:09:23.035900",
+        "title": "Community-based Woody Waste Recycling for Fuel Briquettes",
+        "sources": [
+            "https://wasteaid.org/toolkit/how-to-transform-woody-waste-into-fuel-briquettes/",
+            "https://wasteaid.org",
+            "https://learn.tearfund.org/en/resources/footsteps/footsteps-101-110/footsteps-107/how-to-turn-woody-waste-into-charcoal-briquettes",
+            "https://womensinitiativegambia.org"
+        ],
+        "summary": "A community-led initiative in The Gambia that transforms agricultural waste—such as mango leaves and groundnut shells—into clean-burning charcoal briquettes, providing a sustainable alternative to traditional wood fuel and empowering local women through green entrepreneurship.",
+        "category": [
+            "Waste Management",
+            "Renewable Energy",
+            "Women Empowerment",
+            "Circular Economy"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "The Gambia",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Agricultural waste is converted into charcoal through carbonization and then bound into briquettes using a natural starch binder, creating a low-smoke fuel source.",
+            "materials_used": [
+                "mango leaves",
+                "groundnut shells",
+                "coconut husks",
+                "cassava flour",
+                "water",
+                "metal barrel"
+            ],
+            "step_by_step": [
+                "Collect locally abundant woody waste like mango leaves and peanut shells.",
+                "Carbonize the waste in a simple metal barrel with limited oxygen to create char.",
+                "Crush the carbonized char into a fine powder.",
+                "Prepare a binder by mixing cassava flour with water.",
+                "Mix the crushed char with the cassava binder.",
+                "Press the mixture into briquette shapes using a manual press.",
+                "Sun-dry the briquettes until they are hard and ready for use."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces deforestation and indoor air pollution while providing an affordable fuel source and income for women.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Respiratory hazard",
+                "Toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The carbonization process involves controlled burning in a metal barrel, which presents a fire hazard and releases carbon monoxide and particulate matter. Handling char dust during crushing poses respiratory risks, and the production environment requires proper ventilation and basic safety gear to prevent burns and long-term lung damage."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "70cee8295565989a794df2d44ccba65c",
+        "timestamp": "2026-03-23T08:09:40.810468",
+        "title": "Fuel from the Fields",
+        "sources": [
+            "https://ocw.mit.edu/courses/ec-701j-d-lab-1-development-fall-2009/resources/mitec_701jf09_charcoal/",
+            "https://d-lab.mit.edu/"
+        ],
+        "summary": "An initiative developed by MIT researchers to transform agricultural residues like sugarcane bagasse and corn cobs into charcoal briquettes, providing a sustainable alternative to wood charcoal to combat deforestation in rural Haiti.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Environmental Conservation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Haiti",
+            "region": "Rural",
+            "lat": 18.2301564,
+            "lon": -71.7745882
+        },
+        "process": {
+            "how_it_works": "Agricultural waste is carbonized in a portable metal kiln to create char, which is then mixed with a starch-based binder and formed into briquettes that burn similarly to wood charcoal.",
+            "materials_used": [
+                "Sugarcane bagasse",
+                "Corn cobs",
+                "Low-cost metal kiln",
+                "Mashed tubers",
+                "Starch"
+            ],
+            "step_by_step": [
+                "Collect agricultural waste such as sugarcane bagasse or corn cobs.",
+                "Carbonize the waste material in a low-cost metal kiln for approximately two hours.",
+                "Crush the resulting char into a fine powder.",
+                "Prepare a binder using a porridge made from mashed tubers or starch.",
+                "Mix the char and binder together and press the mixture into briquettes."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigates severe deforestation caused by wood charcoal production and provides a use for discarded agricultural waste.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The carbonization process involves high temperatures and the production of carbon monoxide and particulate matter, posing fire and respiratory risks. While the technology is designed for low-resource settings, users require training on kiln operation and smoke management to ensure safety."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "9f5e4fbca1dd006fcfae88355402f4e2",
+        "timestamp": "2026-03-23T08:10:07.607618",
+        "title": "DIY Paper and Organic Waste Briquettes",
+        "sources": [
+            "https://www.wikihow.com/Make-Briquettes",
+            "https://www.instructables.com/Alternative-Mixed-Media-Sun-Dried-Paper-Briquette/"
+        ],
+        "summary": "A sustainable household method for converting paper waste and organic debris into combustible fuel blocks. By pulping scrap paper to use as a natural binder and mixing it with dry fillers like sawdust or leaves, users can create slow-burning heat sources for cooking or heating.",
+        "category": [
+            "Waste Management",
+            "Renewable Energy",
+            "DIY"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Not specified",
+            "region": "Global",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Scrap paper is broken down into a pulp where its natural cellulose acts as a binding agent. This pulp is combined with dry organic materials to increase energy density, then compressed and dried to form solid fuel bricks.",
+            "materials_used": [
+                "Scrap paper",
+                "Cardboard",
+                "Water",
+                "Pine needles",
+                "Sawdust",
+                "Fallen leaves",
+                "Wood shavings"
+            ],
+            "step_by_step": [
+                "Shred scrap paper and cardboard into small pieces.",
+                "Soak the shredded paper in water for several days until it decomposes into a pulp.",
+                "Mix the wet pulp with dry organic fillers such as leaves or sawdust.",
+                "Compress the mixture into small blocks using a manual briquette press or by hand.",
+                "Sun-dry the compressed blocks until all moisture is removed."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Diverts household paper and organic waste from landfills while providing an affordable, slow-burning fuel source.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 5,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The creation of fuel briquettes involves handling and storing large quantities of combustible materials, which increases fire risk. Additionally, burning household paper waste such as flyers and mail can release toxic chemicals from synthetic inks, dyes, and plastic coatings into the air, posing respiratory risks if used in poorly ventilated areas."
+        },
+        "priority_score": 48,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
