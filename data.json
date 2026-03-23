@@ -6646,5 +6646,337 @@
         "priority_score": 66,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "ae076df76326ceedd5a9a47c049384b6",
+        "timestamp": "2026-03-23T13:26:18.554594",
+        "title": "Uru-Eu-Wau-Wau Indigenous Drone Monitoring",
+        "sources": [
+            "https://www.wwf.org.br",
+            "https://wildlifedrones.net/old-meets-new-how-modern-technology-and-indigenous-knowledge-are-supporting-wildlife-conservation/",
+            "https://www.worldwildlife.org/stories/how-one-indigenous-community-uses-high-tech-tools-to-defend-its-territory",
+            "https://www.kaninde.org.br",
+            "https://www.itu.int/hub/2021/08/indigenous-led-tech-solutions-for-a-better-planet/"
+        ],
+        "summary": "The Uru-Eu-Wau-Wau indigenous community in the Brazilian Amazon utilizes high-resolution drones and digital monitoring tools to document illegal logging and land-grabbing, providing evidence to authorities while minimizing physical risk to land defenders.",
+        "category": [
+            "Environmental Protection",
+            "Indigenous Rights",
+            "Conservation Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Brazil",
+            "region": "Amazon",
+            "lat": 0.4824403,
+            "lon": -50.4716523
+        },
+        "process": {
+            "how_it_works": "Community members use drones to conduct aerial surveillance of remote rainforest areas, capturing GPS-tagged visual evidence of environmental crimes to be used in legal reports.",
+            "materials_used": [
+                "High-resolution drones",
+                "Smartphones",
+                "Camera traps",
+                "GPS software"
+            ],
+            "step_by_step": [
+                "Community members undergo technical training in drone operation and data collection.",
+                "Surveillance teams identify remote areas at risk of illegal encroachment.",
+                "Drones are launched to capture high-resolution photos and videos of deforestation or illegal camps.",
+                "Collected data is tagged with precise GPS coordinates to verify the location of crimes.",
+                "The evidence is compiled into formal reports and submitted to federal law enforcement agencies."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Illegal logging and land-grabbing on indigenous lands; safety risks associated with patrolling remote areas against armed invaders.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Safety",
+                "Environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is not from the technology itself, which consists of standard consumer electronics, but from the high-conflict environment involving armed illegal loggers. While drones allow for safer distance monitoring, there remains a risk of physical retaliation if operators are discovered. Additionally, the disposal of lithium-ion batteries in a sensitive rainforest ecosystem poses a minor environmental risk."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "63fa0d75ea560a995d585b6aed98d20c",
+        "timestamp": "2026-03-23T13:26:36.255632",
+        "title": "SIKU: The Indigenous Knowledge Social Network",
+        "sources": [
+            "https://www.bbc.com/news/technology-50606132",
+            "https://siku.org",
+            "https://www.itu.int/hub/2021/08/indigenous-led-tech-solutions-for-a-better-planet/",
+            "https://www.theguardian.com/world/2020/jan/10/siku-app-inuit-canada-climate-change-sea-ice"
+        ],
+        "summary": "A mobile app and social platform that integrates traditional Inuit ecological knowledge with modern satellite imagery and real-time sensor data to help hunters navigate unpredictable sea ice safely.",
+        "category": [
+            "Climate Change Adaptation",
+            "Information Technology",
+            "Indigenous Knowledge",
+            "Safety"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Canada",
+            "region": "Arctic",
+            "lat": 74.0,
+            "lon": -93.5
+        },
+        "process": {
+            "how_it_works": "The platform combines community-driven observations with scientific data. Hunters use sensors to measure ice thickness, which is then uploaded to a central map alongside satellite feeds and elder-provided historical knowledge.",
+            "materials_used": [
+                "Mobile smartphones",
+                "Satellite imagery data",
+                "Ice thickness sensors",
+                "GPS technology",
+                "Cloud-based database"
+            ],
+            "step_by_step": [
+                "Hunters deploy stationary or mobile sensors to measure sea ice thickness in real-time.",
+                "Data is uploaded to the SIKU app via mobile or satellite connection.",
+                "Community members and elders input traditional knowledge, such as local names for ice features and historical weather patterns.",
+                "The app integrates these inputs with live satellite imagery and weather forecasts.",
+                "Users access the platform to identify safe hunting routes and monitor environmental changes."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Unpredictable and dangerous sea ice conditions caused by climate change that threaten the safety and food security of Arctic communities.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "physical safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The SIKU app is a safety-enhancing tool that reduces the inherent risks of Arctic navigation. While the environment is high-risk, the technology itself is low-risk and designed to improve physical safety by providing real-time data. The only minor risk is potential over-reliance on technology in extreme conditions where hardware failure is possible."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "8c64a5578c0ebbabc496cc3f6fef8020",
+        "timestamp": "2026-03-23T13:26:58.571095",
+        "title": "Nagapattinam Community-Led Early Warning System",
+        "sources": [
+            "https://www.undp.org",
+            "https://pubadmin.institute/community-based-disaster-management-examples/",
+            "https://www.thehindu.com"
+        ],
+        "summary": "A grassroots disaster preparedness initiative in Nagapattinam, India, that integrates traditional maritime ecological knowledge with modern communication technology to provide timely cyclone and tsunami alerts to remote fishing hamlets.",
+        "category": [
+            "Disaster Risk Reduction",
+            "Climate Adaptation",
+            "Indigenous Knowledge"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Nagapattinam, Tamil Nadu",
+            "lat": 10.6026203,
+            "lon": 79.7619348
+        },
+        "process": {
+            "how_it_works": "Local fishermen monitor environmental indicators and broadcast warnings through a hybrid network of VHF radios and mobile phones to reach areas where official government signals may be delayed.",
+            "materials_used": [
+                "VHF Radios",
+                "Mobile Phones",
+                "Traditional Maritime Knowledge"
+            ],
+            "step_by_step": [
+                "Observation of environmental cues such as wave frequency, wind direction, and cloud formations by trained fishermen.",
+                "Validation of observations based on traditional maritime expertise.",
+                "Initial broadcast of warnings via VHF radio networks to boats at sea and coastal stations.",
+                "Secondary dissemination of alerts through mobile phone groups to remote inland hamlets.",
+                "Execution of community-led evacuation procedures based on the early alerts."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Delayed or inaccessible official disaster warnings in remote coastal communities.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a community-based communication and observation system for disaster preparedness. It involves no hazardous chemicals, high-energy physical processes, or environmental threats. It utilizes standard communication technology (VHF radios, mobile phones) and traditional knowledge to enhance public safety and reduce risk during natural disasters."
+        },
+        "priority_score": 38,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "d1cd33f7147ffaac3a897050d8e2ef41",
+        "timestamp": "2026-03-23T13:27:20.300640",
+        "title": "AI-Driven Weather Forecasting and SMS Advisory for Nepalese Farmers",
+        "sources": [
+            "https://www.wfp.org/",
+            "https://www.undp.org/nepal",
+            "https://www.unep.org/news-and-stories/story/how-technology-helping-communities-across-globe-adapt-climate-change",
+            "https://adaptationataltitude.org/solutions/how-technology-is-helping-communities-across-the-globe-adapt-to-climate-change"
+        ],
+        "summary": "A UN-led initiative in rural Nepal utilizes AI to analyze 30 years of historical weather data and satellite imagery to provide smallholder farmers with hyper-local forecasts and actionable agricultural advice via automated SMS alerts.",
+        "category": [
+            "Agriculture",
+            "Artificial Intelligence",
+            "Climate Adaptation",
+            "Information Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nepal",
+            "region": "Rainas and Sarlahi",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses machine learning to process decades of meteorological records alongside real-time satellite data to predict weather patterns at a local level, which are then translated into farming guidance.",
+            "materials_used": [
+                "Historical weather data",
+                "Satellite inputs",
+                "AI/Machine learning algorithms",
+                "SMS delivery infrastructure",
+                "Mobile phones"
+            ],
+            "step_by_step": [
+                "Aggregate over 30 years of historical weather records for the region.",
+                "Integrate real-time satellite data to monitor current atmospheric conditions.",
+                "Process datasets using AI to generate hyper-local weather forecasts.",
+                "Convert technical forecasts into actionable agricultural advice (sowing, irrigation, harvesting).",
+                "Translate advice into local languages.",
+                "Distribute automated SMS alerts to registered smallholder farmers."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigates crop loss and agricultural uncertainty caused by climate change for smallholder farmers who lack access to industrial-scale predictive tools.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a digital information service utilizing AI and SMS for weather forecasting. It does not involve any hazardous chemicals, high-energy physical processes, or mechanical dangers. The primary risk is limited to data accuracy, which does not present a physical safety hazard to the farmers or the environment."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "8d8a4e0a154c771a0b8495f29837ae14",
+        "timestamp": "2026-03-23T13:27:38.758476",
+        "title": "Fukuoka Community IoT Monitoring Network for Dementia Care",
+        "sources": [
+            "https://www.weforum.org/publications/smart-at-scale-cities-to-watch-25-case-studies/",
+            "https://www.city.fukuoka.lg.jp/"
+        ],
+        "summary": "A collaborative technological adaptation in Fukuoka, Japan, that utilizes an IoT sensor network and Bluetooth beacons to monitor elderly residents with dementia, allowing them to age in place while ensuring their safety through a volunteer-based alert system.",
+        "category": [
+            "Healthcare",
+            "IoT",
+            "Smart City",
+            "Social Innovation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Japan",
+            "region": "Fukuoka",
+            "lat": 33.6251241,
+            "lon": 130.6180016
+        },
+        "process": {
+            "how_it_works": "The system uses a network of Bluetooth beacons and IoT sensors placed in local businesses and public spaces to track residents wearing small tags. When a resident wanders, the network triggers alerts to a mobile app used by community volunteers.",
+            "materials_used": [
+                "Bluetooth beacons",
+                "IoT sensors",
+                "Integrated tracking tags",
+                "Mobile application"
+            ],
+            "step_by_step": [
+                "Equip elderly residents with small integrated Bluetooth tags.",
+                "Install IoT sensors and beacons in local shops, public spaces, and residential areas.",
+                "Establish a 'community watch' network of volunteers and shopkeepers via a dedicated mobile app.",
+                "Monitor resident movement; if a resident wanders outside a safe zone, the sensors detect the tag.",
+                "Send real-time alerts to the mobile app of nearby volunteers to assist the resident."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces the burden on isolated families and improves the safety of elderly residents with dementia who wander, enabling them to stay in familiar neighborhoods.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "privacy",
+                "data security"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation uses low-power IoT sensors and Bluetooth beacons, which present negligible physical risks such as fire or explosion. The primary concerns are digital, focusing on the privacy of vulnerable individuals and the security of the tracking data, rather than physical safety hazards."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
