@@ -879,7 +879,7 @@
     },
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-03-23T07:55:37.423548",
             "period": "Q1 2026",
             "total_records_analyzed": 60
@@ -1100,6 +1100,216 @@
                 },
                 {
                     "source": "internet",
+                    "count": 3
+                }
+            ]
+        }
+    },
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-23T08:31:41.640115",
+            "period": "Q1 2026",
+            "total_records_analyzed": 85
+        },
+        "global_summary": {
+            "total_innovations": 60,
+            "grassroots_percentage": 58,
+            "institutional_percentage": 22,
+            "semi_formal_percentage": 20
+        },
+        "top_categories": [
+            {
+                "category": "Waste Management & Upcycling",
+                "count": 18,
+                "trend": "increasing"
+            },
+            {
+                "category": "Sustainable Agriculture",
+                "count": 14,
+                "trend": "stable"
+            },
+            {
+                "category": "Water & Sanitation",
+                "count": 12,
+                "trend": "stable"
+            },
+            {
+                "category": "Renewable Energy",
+                "count": 9,
+                "trend": "increasing"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "East Africa (Kenya, Malawi, Uganda)",
+                "key_pattern": "Grassroots engine modernization and DIY energy generation using salvaged electronic waste.",
+                "risk_level": "high"
+            },
+            {
+                "region": "Mesoamerica & Amazon Basin",
+                "key_pattern": "Revitalization of ancient agricultural systems (Milpa, Chinampa, Terra Preta) for climate resilience.",
+                "risk_level": "low"
+            },
+            {
+                "region": "Global North (USA, Europe)",
+                "key_pattern": "Industrial upcycling of composite materials (wind blades) and residential greywater harvesting.",
+                "risk_level": "medium"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 18,
+            "critical_cases": 9,
+            "top_risk_types": [
+                "Fire/Explosion (DIY Energy/Engines)",
+                "Biological/Pathogen (Circular Sanitation)",
+                "Toxic Emissions (Plastic Melting/Wood Gasification)"
+            ],
+            "emerging_risks": [
+                "DIY Electronic Fuel Injection (EFI) software bugs causing engine fires",
+                "Explosion hazards from non-pressure-rated IBC tanks in home biogas systems",
+                "Toxic leaching from scavenged chemical bottles used in hydroponics"
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Waste-to-Infrastructure",
+                "description": "Repurposing PET bottles, wind turbine blades, and plastic sachets into durable building materials and public furniture.",
+                "regions": [
+                    "Nigeria",
+                    "Guatemala",
+                    "Kenya",
+                    "Netherlands",
+                    "USA"
+                ],
+                "risk_level": "medium"
+            },
+            {
+                "pattern_name": "Analog-to-Digital Retrofitting",
+                "description": "Using microcontrollers (Arduino) and custom ECUs to modernize vintage mechanical engines for fuel efficiency.",
+                "regions": [
+                    "Kenya"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Circular Sanitation Loops",
+                "description": "Container-based and composting toilet systems that convert human waste into agricultural-grade fertilizer.",
+                "regions": [
+                    "Haiti",
+                    "Uganda",
+                    "Ghana",
+                    "USA"
+                ],
+                "risk_level": "high"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "Chinampa System",
+                "country": "Mexico",
+                "reason": "Ancient high-yield floating garden technology with 7 harvests per year; highly scalable for modern wetland agriculture."
+            },
+            {
+                "title": "Raghav FM",
+                "country": "India",
+                "reason": "Functional FM transmitter built for under $1 using salvaged parts; demonstrates ultra-low-cost community communication."
+            },
+            {
+                "title": "Bangla-Pesa",
+                "country": "Kenya",
+                "reason": "Mutual credit system using physical vouchers to maintain trade during national currency liquidity crises."
+            },
+            {
+                "title": "Terra Preta",
+                "country": "Brazil",
+                "reason": "Traditional biochar-based soil enrichment that enables permanent agriculture in nutrient-poor tropical soils while sequestering carbon."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "training",
+                "target": "Household Biogas Operators",
+                "priority_level": "high",
+                "justification": "Multiple grassroots biogas systems (IBC-based) lack pressure-relief valves and H2S filtration, posing explosion and toxicity risks."
+            },
+            {
+                "type": "regulation",
+                "target": "DIY Automotive Retrofitting",
+                "priority_level": "medium",
+                "justification": "Custom ECU and wood-gas conversions are spreading via the internet without standardized safety testing for high-pressure fuel lines."
+            },
+            {
+                "type": "research",
+                "target": "Traditional Knowledge AI Integration",
+                "priority_level": "low",
+                "justification": "Opportunities exist to scale PolArctic-style models that use AI to validate and map indigenous ecological observations for climate adaptation."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "shifting",
+            "observation": "Innovation is moving away from purely traditional methods toward 'Internet-enabled adaptation' where global DIY designs (e.g., e-NABLE, SODIS) are localized using salvaged materials."
+        },
+        "recommendations": [
+            "Develop standardized 'Safety Kits' (valves, filters, PPE) for grassroots biogas and charcoal briquette producers.",
+            "Formalize 3D printing prosthetic hubs by linking grassroots networks (e-NABLE) with institutional healthcare providers for fitting oversight.",
+            "Promote the 'Sand Dam' model as a primary climate adaptation strategy for arid regions due to its low risk and high water-storage capacity.",
+            "Implement 'Food-Grade Certification' for upcycled plastic innovations (hydroponics/storage) to prevent chemical leaching into the food chain.",
+            "Establish a legal framework for 'Social Currencies' to support economic resilience in informal settlements during financial volatility."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Africa",
+                    "count": 28
+                },
+                {
+                    "region": "Americas",
+                    "count": 18
+                },
+                {
+                    "region": "Asia",
+                    "count": 9
+                },
+                {
+                    "region": "Europe/Oceania",
+                    "count": 5
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "low",
+                    "count": 15
+                },
+                {
+                    "level": "medium",
+                    "count": 27
+                },
+                {
+                    "level": "high",
+                    "count": 18
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "Adapted from Existing",
+                    "count": 26
+                },
+                {
+                    "source": "Traditional",
+                    "count": 12
+                },
+                {
+                    "source": "Formal Education",
+                    "count": 10
+                },
+                {
+                    "source": "Self-Taught",
+                    "count": 9
+                },
+                {
+                    "source": "Internet",
                     "count": 3
                 }
             ]

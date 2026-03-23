@@ -5288,5 +5288,344 @@
         "priority_score": 44,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "ae5dba22ffcb36aeaa4a9f2ce710c24a",
+        "timestamp": "2026-03-23T08:30:00.720550",
+        "title": "Warka Water tower",
+        "sources": [
+            "https://www.archdaily.com/946573/warka-water-and-arturo-vittori-create-integrated-village-for-the-rainforest-community-in-cameroon",
+            "https://www.archdaily.com/505200/warka-water-tower-an-alternative-water-source-for-ethiopia",
+            "https://www.smithsonianmag.com/innovation/this-tower-pulls-drinking-water-out-of-thin-air-180950399/",
+            "https://www.warkawater.org/",
+            "https://wdo.org/designing-for-accessible-clean-water-and-sanitation/",
+            "https://brightvibes.com/warka-water-towers-an-alternative-fresh-water-source-for-rural-populations/",
+            "https://www.vittori-lab.com/projects/warka-water/"
+        ],
+        "summary": "An innovative atmospheric water harvester that uses a passive bamboo structure and specialized mesh to collect dew, fog, and rainwater for remote communities in Ethiopia and Cameroon.",
+        "category": [
+            "Water Harvesting",
+            "Sustainable Architecture",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Ethiopia",
+            "region": "East Africa",
+            "lat": 9.0155364,
+            "lon": 38.7278224
+        },
+        "process": {
+            "how_it_works": "The tower utilizes a passive system where a specialized polyester mesh captures moisture from the air through condensation (dew and fog) and directs it into a collection tank using gravity.",
+            "materials_used": [
+                "Bamboo",
+                "Polyester mesh",
+                "Rope",
+                "Sustainable local materials"
+            ],
+            "step_by_step": [
+                "Construct a 10-meter tall lightweight bamboo frame.",
+                "Suspend a specialized polyester mesh inside the frame.",
+                "Position the tower in an area with high atmospheric moisture or fog.",
+                "Allow moisture to condense on the mesh and drip down into a central reservoir.",
+                "Collect the filtered potable water from the base of the tower."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides clean potable water in remote regions where groundwater is inaccessible and traditional drilling is too expensive or lacks electricity.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "formal_education",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety gear"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Warka Water tower is a passive, low-tech structure utilizing sustainable materials like bamboo and mesh. It presents minimal risks as it operates without electricity, chemicals, or high-pressure systems. The primary safety considerations are structural stability during construction at height and ensuring the hygiene of the collected water to prevent bacterial growth."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "ba178c3133ad1248edf725a1f8c5bcdb",
+        "timestamp": "2026-03-23T08:30:21.931947",
+        "title": "Sand Dams",
+        "sources": [
+            "https://www.excellentdevelopment.com/what-is-a-sand-dam",
+            "https://thewaterproject.org/sand-dams",
+            "https://thewaterproject.org/community/projects/kenya/new-sand-dam-and-well-project-in-kenya-16086",
+            "https://www.excellentdevelopment.com/"
+        ],
+        "summary": "A community-led climate-smart innovation that uses reinforced concrete walls across seasonal riverbeds to trap sand and store millions of liters of water underground in artificial aquifers.",
+        "category": [
+            "Water Management",
+            "Climate Adaptation",
+            "Agriculture",
+            "Sustainability"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Arid and semi-arid regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A concrete wall is built across a seasonal river. During rainy seasons, the wall traps sand and silt. Water is stored in the spaces between the sand particles, creating an underground reservoir that is protected from evaporation and contamination.",
+            "materials_used": [
+                "Reinforced concrete",
+                "Rocks",
+                "Water",
+                "Sand",
+                "Silt"
+            ],
+            "step_by_step": [
+                "Mobilize a local Self-Help Group to provide labor and gather local materials.",
+                "Identify a suitable site across a seasonal riverbed.",
+                "Construct a reinforced concrete wall across the riverbed.",
+                "Allow seasonal rains to wash sand and silt against the dam wall.",
+                "Wait for the sand to accumulate and saturate with water, forming an artificial aquifer.",
+                "Dig shallow wells nearby to access the naturally filtered, stored water."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Water scarcity, evaporation of surface water, water contamination, and food insecurity during multi-year droughts.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Structural failure",
+                "Environmental impact"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Sand dams are a low-risk, passive water harvesting technology. The primary risks are related to standard construction safety during the building phase and potential structural failure if the concrete wall is not properly engineered. Environmental risks are minimal as they are designed to recharge local aquifers without significantly depleting downstream flow compared to traditional surface dams."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "0c17a59a4b9f5ff0b37fc92e8bc0731a",
+        "timestamp": "2026-03-23T08:30:42.645247",
+        "title": "EMAS (Escuela Móvil de Agua y Saneamiento) System",
+        "sources": [
+            "https://digitalcommons.usf.edu/etd/4533/",
+            "https://emas-international.org/",
+            "https://fedfedfed.com/how-one-man-is-making-village-wells-safe-across-sierra-leone/",
+            "https://rwsn.blog/2022/11/04/the-emas-wash-technologies-experiences-achievements-and-future-goals/",
+            "https://akvopedia.org/wiki/EMAS_pump",
+            "https://www.giw2017.org/innovation/emas-water-supply-schemes"
+        ],
+        "summary": "A self-supply water innovation from Bolivia that enables households to manually drill deep boreholes and construct low-cost pumps using local materials like PVC and recycled tires, reducing dependency on large-scale government infrastructure.",
+        "category": [
+            "Water & Sanitation",
+            "Appropriate Technology",
+            "Rural Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Bolivia",
+            "region": "Latin America",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A hybrid manual drilling technique combines percussion, jetting, and rotation to reach groundwater up to 100 meters deep, paired with a piston pump made from non-proprietary materials.",
+            "materials_used": [
+                "PVC pipes",
+                "glass marbles",
+                "used tires"
+            ],
+            "step_by_step": [
+                "Manual drilling of boreholes using a combination of percussion, jetting, and rotation",
+                "Construction of the EMAS pump using PVC pipes and glass marbles for valves",
+                "Assembly of the pump handle and structure using recycled materials like tires",
+                "Installation of the pump into the borehole",
+                "Ongoing maintenance and repair by local technicians or family members"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable, privately owned water solutions for rural populations and high costs of heavy drilling machinery.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Physical Injury",
+                "Environmental Contamination"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation is generally safe but carries physical risks associated with manual labor and heavy lifting during deep borehole drilling. There is also a moderate environmental risk of groundwater contamination if wells are not properly sited away from latrines or if the borehole is not correctly sealed against surface runoff. The use of PVC and recycled materials is low-risk, though food-grade materials are preferred for drinking water."
+        },
+        "priority_score": 66,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "4f99448e6e5ff1837794a3cf38c60b5a",
+        "timestamp": "2026-03-23T08:30:58.958968",
+        "title": "Modern Rope Pump",
+        "sources": [
+            "https://akvo.org/akvopedia/wiki/Rope_pump",
+            "https://www.ijert.org/design-and-fabrication-of-rope-pump",
+            "https://skat-foundation.ch/wp-content/uploads/2022/03/RWSN-Field-Note-2022-1-History-and-current-status-of-the-rope-pump-in-Nicaragua.pdf",
+            "https://www.smartcentregroup.com/wp-content/uploads/2018/06/130.000-Rope-pumps-worldwide-25-years-ex.pdf",
+            "https://transforminternational.org/2016/11/rope-pump/",
+            "https://www.practica.org/technologies/rope-pump/"
+        ],
+        "summary": "A low-cost adaptation of ancient chain-pump technology that uses PVC pipes, rope, and recycled rubber washers to lift water. It is designed for local manufacturing and maintenance, significantly improving rural water access and household income.",
+        "category": [
+            "Water & Sanitation",
+            "Agriculture",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Nicaragua",
+            "region": "Central America",
+            "lat": 12.1040984,
+            "lon": -86.2567265
+        },
+        "process": {
+            "how_it_works": "A continuous loop of rope with attached rubber washers is pulled through a PVC pipe, trapping and lifting water to the surface with high efficiency.",
+            "materials_used": [
+                "PVC pipes",
+                "Rope",
+                "Rubber washers",
+                "Recycled tires"
+            ],
+            "step_by_step": [
+                "Attach rubber washers (made from recycled tires) to a continuous loop of rope at regular intervals.",
+                "Thread the rope loop through a PVC pipe that reaches down into the water source.",
+                "Loop the rope over a hand-cranked drive wheel at the surface.",
+                "Turn the wheel to pull the washers upward through the pipe, creating a vacuum that lifts water to the outlet."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a high-capacity, affordable water lifting solution that can be repaired locally, reducing reliance on expensive imported piston pumps.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "mechanical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Rope Pump is a low-risk mechanical innovation using inert materials like PVC and rubber. The primary risks are limited to minor mechanical injuries (e.g., fingers caught in the pulley) and potential groundwater contamination if the wellhead is not properly sealed. It does not involve hazardous chemicals or high-energy systems."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "753a27eeb86e9e8d515dee9221ef5c1f",
+        "timestamp": "2026-03-23T08:31:19.854979",
+        "title": "The Village Drill",
+        "sources": [
+            "https://wholives.org/the-village-drill/",
+            "https://villagedrill.com/how-it-works/",
+            "https://www.lonestardrills.com/blog/water-well-drilling-methods/",
+            "https://www.freemaninstitute.com/villagedrill.htm"
+        ],
+        "summary": "A human-powered mechanical drilling rig designed to reach deep, clean aquifers up to 80 meters underground, providing a low-cost alternative to expensive, fuel-dependent mechanized drilling.",
+        "category": [
+            "Water & Sanitation",
+            "Mechanical Engineering",
+            "Social Entrepreneurship"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Various",
+            "region": "Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The rig uses a manual 'roundabout' motion where a team of people rotates the mechanism to drive a drill bit into the earth.",
+            "materials_used": [
+                "Mechanical drill rig components",
+                "Drill bit",
+                "Steel piping",
+                "Manual labor"
+            ],
+            "step_by_step": [
+                "Assemble a team of 4 to 5 operators.",
+                "Set up the drill rig over the identified water source location.",
+                "Engage the manual roundabout motion to rotate the drill bit.",
+                "Gradually drive the bit into the ground, reaching depths up to 80 meters.",
+                "Extract the drill and install a well casing to access the clean aquifer."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and fuel dependency of traditional drilling which prevents access to clean deep-water aquifers in developing regions.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Safety gear",
+                "Physical injury"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks are mechanical and physical in nature, involving heavy equipment, moving parts, and manual labor. There are no significant chemical, fire, or explosion hazards. Risks can be mitigated through standard safety gear (helmets, boots, gloves) and proper operator training.",
+            "innovation_assessment": "High social and mechanical innovation by providing a low-cost, fuel-independent solution for clean water access."
+        },
+        "priority_score": 66,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
