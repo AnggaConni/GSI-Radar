@@ -7770,5 +7770,209 @@
         "priority_score": 76,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "8cebd2e86c8771e721d540f771da1999",
+        "timestamp": "2026-03-24T00:36:46.554195",
+        "title": "We Care Solar Suitcase",
+        "sources": [
+            "https://wecaresolar.org/2025-update/",
+            "https://womengenderclimate.org/gfa/light-every-birth-solar-suitcases-for-maternal-health-care/",
+            "https://gga.org/solar-in-a-suitcase/",
+            "https://www.unicef.org",
+            "https://wecaresolar.org",
+            "https://www.who.int",
+            "https://wecaresolar.org/solar-suitcase/"
+        ],
+        "summary": "A compact, rugged, and portable solar electric system designed to provide reliable lighting and power for essential medical devices in off-grid rural health clinics, particularly for maternal and neonatal care.",
+        "category": [
+            "Healthcare",
+            "Renewable Energy",
+            "Maternal Health"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Multiple",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system captures solar energy through high-efficiency panels, stores it in a lithium ferrous phosphate battery housed within a portable suitcase, and distributes power to LED lights and medical equipment.",
+            "materials_used": [
+                "High-efficiency solar panels",
+                "Lithium ferrous phosphate battery",
+                "LED medical lights",
+                "Headlamps",
+                "Fetal Doppler",
+                "Ruggedized suitcase enclosure"
+            ],
+            "step_by_step": [
+                "Install high-efficiency solar panels on the roof of the medical facility.",
+                "Connect the solar panels to the Solar Suitcase unit.",
+                "Allow the internal lithium battery to charge via solar energy.",
+                "Connect LED lights to the suitcase's power ports for overhead illumination.",
+                "Plug in medical devices like fetal Dopplers or charge headlamps for mobile use."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the danger of performing nighttime surgeries and childbirth by candlelight or kerosene lanterns in clinics without grid electricity.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Electrical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Solar Suitcase is a professionally engineered medical device designed to replace high-risk lighting sources like kerosene. It utilizes Lithium Ferrous Phosphate (LiFePO4) batteries, which are significantly more stable and less prone to thermal runaway or fire than standard lithium-ion batteries. The system is low-voltage and designed for use by non-technical staff in rugged environments, making it a very low-risk innovation."
+        },
+        "priority_score": 68,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "f9e4d89401582c79d1493780b0adbc22",
+        "timestamp": "2026-03-24T00:37:07.267901",
+        "title": "AuREUS (Aurora Renewable Energy & UV Sequestration)",
+        "sources": [
+            "https://materialfuture.com/aureus-solar-panels-plant-waste/",
+            "https://www.thecooldown.com/green-tech/aureus-solar-panels-food-waste-carvey-ehren-maigue/",
+            "https://www.jamesdysonaward.org/en-PH/2020/project/aureus-aurora-renewable-energy-uv-sequestration/",
+            "https://www.borgenproject.org/aureus-solar-panels/"
+        ],
+        "summary": "A material technology that upcycles agricultural waste into solar-harvesting panels. It uses luminescent particles to capture UV light and convert it into visible light for electricity generation, even without direct sunlight.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Sustainable Materials"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Philippines",
+            "region": "Southeast Asia",
+            "lat": 10.2338947,
+            "lon": 123.7712438
+        },
+        "process": {
+            "how_it_works": "Luminescent particles from fruit and vegetable waste are suspended in a resin substrate. These particles absorb ultraviolet (UV) light and re-emit it as visible light, which is then captured by photovoltaic cells located at the edges of the panel.",
+            "materials_used": [
+                "Agricultural waste (fruits and vegetables)",
+                "Resin substrate",
+                "Photovoltaic cells"
+            ],
+            "step_by_step": [
+                "Extract luminescent particles from discarded or typhoon-damaged crops",
+                "Suspend the extracted particles within a resin substrate",
+                "Mold the resin into panels designed for vertical or window installation",
+                "Integrate conventional photovoltaic cells along the edges of the panel to capture re-emitted light"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses agricultural waste management and the limitations of traditional solar panels that require direct sunlight and horizontal space.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Electrical hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "AuREUS utilizes organic luminescent particles derived from agricultural waste, which are inherently low-toxicity. The primary risks involve the flammability of the resin substrate and the electrical components associated with the photovoltaic cells. These are standard risks for building materials and solar installations, manageable through existing safety standards and building codes."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "a55493d2cf0d7e3322f0186c77896e74",
+        "timestamp": "2026-03-24T00:37:28.034400",
+        "title": "Solar Cow",
+        "sources": [
+            "https://solve.mit.edu/challenges/learning-for-girls/solutions/25298",
+            "https://www.thejakartapost.com/life/2020/11/09/yolk-launches-solar-cow-to-provide-energy-access-to-rural-children.html",
+            "https://www.korea.net/NewsFocus/Sci-Tech/view?articleId=199124",
+            "https://yolkstation.com/",
+            "https://yolkstation.com/solar-cow/"
+        ],
+        "summary": "An innovative rural electrification initiative that links energy access with educational incentives by providing students with portable power banks that charge at school-based solar stations.",
+        "category": [
+            "Renewable Energy",
+            "Education",
+            "Social Innovation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya, Tanzania",
+            "region": "East Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A cow-shaped solar charging station is installed at a school. Students plug in portable power banks during the day and take them home at night to power household devices, creating an incentive for school attendance.",
+            "materials_used": [
+                "Solar panels",
+                "Portable power banks (Solar Milk)",
+                "Charging station structure (Solar Cow)",
+                "Battery cells",
+                "Charging circuitry"
+            ],
+            "step_by_step": [
+                "Install a cow-shaped solar charging station at a local school.",
+                "Distribute 'Solar Milk' portable power banks to students.",
+                "Students plug their power banks into the 'cow' station upon arriving at school.",
+                "The batteries charge via solar energy while the children attend classes.",
+                "Students collect their fully charged power banks at the end of the school day.",
+                "Families use the stored energy at home for lighting and mobile device charging."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Low school attendance due to child labor and lack of affordable electricity in rural areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire Hazard",
+                "Environmental Hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk involves the distribution of portable lithium-ion batteries ('Solar Milk') to children in hot, rural environments. If the batteries are damaged, low-quality, or subjected to extreme heat, they pose a fire or thermal runaway hazard. Additionally, the project introduces electronic waste into regions that may lack formal recycling infrastructure for battery disposal. However, as a professionally developed startup initiative, it carries lower risk than grassroots chemical or energy experiments."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
