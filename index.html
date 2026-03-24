@@ -1618,9 +1618,10 @@ function renderCatChart(cats) {
 
       const container = document.getElementById('canvas-container');
       
-      // Auto Zoom based on data size (Zoom out if showing hundreds of items)
+      // Auto Zoom based on data size
       const dataSize = nexusNodesData.length;
-      nTransform.scale = dataSize > 100 ? 0.3 : 0.8;
+      // Jika data lebih dari 20, zoom out ke 0.35 agar pas di layar
+      nTransform.scale = dataSize > 20 ? 0.35 : 0.7;
       
       const rect = container.getBoundingClientRect();
       nTransform.x = (rect.width / 2) - (1000 * nTransform.scale);
@@ -1665,7 +1666,7 @@ function renderCatChart(cats) {
       const resetView = () => {
           nSelectedNode = null; nSearchTerm = ''; document.getElementById('searchInput').value = '';
           const currentSize = nexusNodesData.length;
-          nTransform.scale = currentSize > 100 ? 0.3 : 0.8;
+          nTransform.scale = currentSize > 20 ? 0.35 : 0.7;
           const r = container.getBoundingClientRect();
           nTransform.x = (r.width / 2) - (1000 * nTransform.scale); nTransform.y = (r.height / 2) - (1000 * nTransform.scale);
           applyNexusTransform(); updateNexusUI();
