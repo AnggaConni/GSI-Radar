@@ -245,39 +245,56 @@
     </div>
 
     <!-- TAB 3: INNOVATION NEXUS (SPIDER GRAPH) -->
-<div id="view-nexus" class="hidden relative w-full h-[800px] flex-col md:flex-row bg-[#fcfcfc] rounded-2xl border border-slate-200 shadow-sm overflow-hidden text-slate-800">
+<div id="view-nexus" class="hidden relative w-full h-[800px] flex-col md:flex-row bg-[#fcfcfc] rounded-2xl border border-slate-200 shadow-sm overflow-hidden text-slate-800 transition-all duration-300">
         
-        <div class="absolute top-6 left-6 z-50 flex flex-col gap-3 pointer-events-none">
-            <div class="bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-slate-100 w-72 pointer-events-auto">
-                <div class="flex items-center gap-2 mb-4">
-                    <div class="p-2 bg-blue-600 rounded-lg text-white">
-                        <i data-lucide="zap" class="w-[18px] h-[18px]"></i>
+        <div class="absolute top-4 left-4 z-50 flex flex-col gap-2 pointer-events-none">
+            <div class="bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-slate-100 w-64 sm:w-72 pointer-events-auto flex flex-col gap-3">
+                
+                <div class="flex items-center gap-2.5">
+                    <div class="p-1.5 bg-blue-600 rounded-lg text-white shrink-0 shadow-sm">
+                        <i data-lucide="zap" class="w-4 h-4"></i>
                     </div>
                     <div>
-                        <h1 class="text-lg font-black text-slate-800 leading-tight">Innovation Dive</h1>
-                        <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Tech Nexus Map</p>
+                        <h1 class="text-base font-black text-slate-800 leading-none mb-1">Innovation Dive</h1>
+                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest leading-none">Tech Nexus Map</p>
                     </div>
                 </div>
-                <div class="relative mb-4">
-                    <i data-lucide="search" class="absolute left-3 top-2.5 w-4 h-4 text-slate-400"></i>
-                    <input type="text" id="searchInput" placeholder="Cari inovasi..." class="w-full bg-slate-50 border-none rounded-xl py-2 pl-9 pr-4 text-sm focus:ring-2 focus:ring-blue-500/20 focus:outline-none">
+                
+                <div class="relative w-full">
+                    <i data-lucide="search" class="absolute left-2.5 top-2 w-3.5 h-3.5 text-slate-400"></i>
+                    <input type="text" id="searchInput" placeholder="Search Innovations..." class="w-full bg-slate-50 border border-slate-100 rounded-xl py-1.5 pl-8 pr-3 text-xs focus:ring-2 focus:ring-blue-500/20 focus:outline-none placeholder-slate-400 font-medium">
                 </div>
-                <div class="flex justify-between items-center bg-slate-50 p-2 rounded-xl border border-slate-100">
-                    <button id="btnZoomIn" class="p-2 hover:bg-white rounded-lg transition-all text-slate-600"><i data-lucide="zoom-in" class="w-[18px] h-[18px]"></i></button>
-                    <button id="btnZoomOut" class="p-2 hover:bg-white rounded-lg transition-all text-slate-600"><i data-lucide="zoom-out" class="w-[18px] h-[18px]"></i></button>
+
+                <div class="relative w-full">
+                    <i data-lucide="globe" class="absolute left-2.5 top-2 w-3.5 h-3.5 text-blue-500"></i>
+                    <select id="nexus-view-filter" class="w-full bg-slate-50 border border-slate-100 rounded-xl py-1.5 pl-8 pr-8 text-xs focus:ring-2 focus:ring-blue-500/20 focus:outline-none text-slate-700 font-bold cursor-pointer appearance-none">
+                        <option value="top50" selected>Top 50 Priority</option>
+                        <option value="all">Show All Network</option>
+                        <optgroup label="Thematic Sectors" id="nexus-theme-options"></optgroup>
+                    </select>
+                    <i data-lucide="chevron-down" class="absolute right-2.5 top-2 w-3.5 h-3.5 text-slate-400 pointer-events-none"></i>
+                </div>
+
+                <div class="flex justify-between items-center bg-slate-50 p-1.5 rounded-xl border border-slate-100">
+                    <div class="flex items-center gap-1">
+                        <button id="btnZoomIn" class="p-1.5 hover:bg-white rounded-lg transition-all text-slate-600" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+                        <button id="btnZoomOut" class="p-1.5 hover:bg-white rounded-lg transition-all text-slate-600" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+                        <button id="btnReset" class="p-1.5 hover:bg-white rounded-lg transition-all text-slate-600" title="Reset View"><i data-lucide="refresh-cw" class="w-3 h-3"></i></button>
+                    </div>
                     <div class="h-4 w-[1px] bg-slate-200"></div>
-                    <button id="btnReset" class="p-2 hover:bg-white rounded-lg transition-all text-slate-600"><i data-lucide="maximize" class="w-[18px] h-[18px]"></i></button>
+                    <button id="btnFullscreen" class="p-1.5 hover:bg-white rounded-lg transition-all text-slate-600" title="Toggle Fullscreen"><i data-lucide="maximize" id="fullscreenIcon" class="w-4 h-4"></i></button>
                 </div>
+
             </div>
         </div>
 
-        <div id="canvas-container" class="flex-1 relative cursor-grab touch-none overflow-hidden">
+        <div id="canvas-container" class="flex-1 relative cursor-grab touch-none overflow-hidden bg-white">
             <svg id="main-svg" class="w-full h-full">
                 <g id="graph-wrapper"></g>
             </svg>
         </div>
 
-        <div id="right-panel" class="w-full md:w-[400px] bg-white border-l border-slate-100 shadow-2xl z-[60] flex flex-col h-full overflow-hidden absolute md:relative right-0 bottom-0 transform transition-transform duration-300 md:translate-x-0 translate-y-full md:translate-y-0">
+        <div id="right-panel" class="w-full md:w-[350px] lg:w-[400px] bg-white border-l border-slate-100 shadow-2xl z-[60] flex flex-col h-full overflow-hidden absolute md:relative right-0 bottom-0 transform transition-transform duration-300 md:translate-x-0 translate-y-full md:translate-y-0">
             </div>
 
     </div>
@@ -1459,43 +1476,42 @@ function renderCatChart(cats) {
 
   window.onload = init;
 
-  // --- LOGIKA NEXUS MAP (DYNAMIC + FALLBACK) ---
+  // --- LOGIKA NEXUS MAP (DYNAMIC + FALLBACK + FILTERS) ---
   
-  // 1. DUMMY DATA (Fallback Mode)
-  // Perhatikan: Kita ubah 'const' menjadi 'let' agar bisa ditimpa oleh data asli
+  // 1. DUMMY DATA (Fallback Mode - Fully Translated to English)
   let nexusCategories = {
-      AI: { id: 'AI', name: 'Kecerdasan Buatan', color: '#0ea5e9', bg: '#f0f9ff', count: 42 },
-      BIO: { id: 'BIO', name: 'Bioteknologi', color: '#10b981', bg: '#ecfdf5', count: 28 },
-      QTM: { id: 'QTM', name: 'Kuantum', color: '#8b5cf6', bg: '#f5f3ff', count: 15 },
-      IOT: { id: 'IOT', name: 'IoT & Robotik', color: '#f59e0b', bg: '#fffbeb', count: 34 },
-      ENG: { id: 'ENG', name: 'Energi Bersih', color: '#06b6d4', bg: '#ecfeff', count: 22 },
+      AI: { id: 'AI', name: 'Artificial Intelligence', color: '#0ea5e9', bg: '#f0f9ff', count: 42 },
+      BIO: { id: 'BIO', name: 'Biotechnology', color: '#10b981', bg: '#ecfdf5', count: 28 },
+      QTM: { id: 'QTM', name: 'Quantum Tech', color: '#8b5cf6', bg: '#f5f3ff', count: 15 },
+      IOT: { id: 'IOT', name: 'IoT & Robotics', color: '#f59e0b', bg: '#fffbeb', count: 34 },
+      ENG: { id: 'ENG', name: 'Clean Energy', color: '#06b6d4', bg: '#ecfeff', count: 22 },
   };
 
   let nexusNodesData = [
-      { id: 'n1', label: 'Machine Learning', category: 'AI', x: 1000, y: 1000, desc: 'Sistem yang belajar dari pola data.' },
-      { id: 'n2', label: 'Neural Networks', category: 'AI', x: 850, y: 800, desc: 'Arsitektur komputasi terinspirasi otak manusia.' },
-      { id: 'n3', label: 'Natural Language', category: 'AI', x: 1200, y: 850, desc: 'Pemrosesan bahasa manusia oleh komputer.' },
-      { id: 'n4', label: 'CRISPR Tech', category: 'BIO', x: 700, y: 1150, desc: 'Teknologi edit genetik presisi.' },
-      { id: 'n5', label: 'Bio-Informatics', category: 'BIO', x: 800, y: 1050, desc: 'Analisis data biologis skala besar.' },
-      { id: 'n6', label: 'Quantum Processor', category: 'QTM', x: 1300, y: 1100, desc: 'Unit pemrosesan berbasis qubit.' },
-      { id: 'n7', label: 'Smart Sensors', category: 'IOT', x: 1150, y: 1300, desc: 'Sensor cerdas untuk pengumpulan data real-time.' },
-      { id: 'n8', label: 'Edge AI', category: 'IOT', x: 1350, y: 1250, desc: 'AI yang berjalan langsung di perangkat lokal.' },
-      { id: 'n9', label: 'Fusion Power', category: 'ENG', x: 600, y: 900, desc: 'Energi nuklir bersih masa depan.' },
-      { id: 'n10', label: 'Solid-State Battery', category: 'ENG', x: 750, y: 700, desc: 'Penyimpanan energi densitas tinggi.' },
+      { id: 'n1', label: 'Machine Learning', category: 'AI', x: 1000, y: 1000, desc: 'Systems that learn from data patterns.' },
+      { id: 'n2', label: 'Neural Networks', category: 'AI', x: 850, y: 800, desc: 'Computing architecture inspired by human brains.' },
+      { id: 'n3', label: 'Natural Language', category: 'AI', x: 1200, y: 850, desc: 'Human language processing by computers.' },
+      { id: 'n4', label: 'CRISPR Tech', category: 'BIO', x: 700, y: 1150, desc: 'Precision genetic editing technology.' },
+      { id: 'n5', label: 'Bio-Informatics', category: 'BIO', x: 800, y: 1050, desc: 'Large-scale biological data analysis.' },
+      { id: 'n6', label: 'Quantum Processor', category: 'QTM', x: 1300, y: 1100, desc: 'Qubit-based processing units.' },
+      { id: 'n7', label: 'Smart Sensors', category: 'IOT', x: 1150, y: 1300, desc: 'Smart sensors for real-time data collection.' },
+      { id: 'n8', label: 'Edge AI', category: 'IOT', x: 1350, y: 1250, desc: 'AI running directly on local devices.' },
+      { id: 'n9', label: 'Fusion Power', category: 'ENG', x: 600, y: 900, desc: 'Clean nuclear energy of the future.' },
+      { id: 'n10', label: 'Solid-State Battery', category: 'ENG', x: 750, y: 700, desc: 'High-density energy storage.' },
   ];
 
   let nexusLinksData = [
-      { source: 'n1', target: 'n2', label: 'Algoritma Inti' },
-      { source: 'n1', target: 'n3', label: 'Data Pelatihan' },
-      { source: 'n1', target: 'n5', label: 'Analisis Genom' },
-      { source: 'n2', target: 'n4', label: 'Prediksi Protein' },
-      { source: 'n1', target: 'n6', label: 'Akselerasi' },
-      { source: 'n6', target: 'n8', label: 'Komputasi Cepat' },
-      { source: 'n7', target: 'n8', label: 'Aliran Data' },
-      { source: 'n3', target: 'n7', label: 'Interface Suara' },
-      { source: 'n9', target: 'n10', label: 'Sistem Grid' },
-      { source: 'n1', target: 'n10', label: 'Optimasi Material' },
-      { source: 'n5', target: 'n4', label: 'Sekuensing DNA' },
+      { source: 'n1', target: 'n2', label: 'Core Algorithms' },
+      { source: 'n1', target: 'n3', label: 'Training Data' },
+      { source: 'n1', target: 'n5', label: 'Genome Analysis' },
+      { source: 'n2', target: 'n4', label: 'Protein Prediction' },
+      { source: 'n1', target: 'n6', label: 'Acceleration' },
+      { source: 'n6', target: 'n8', label: 'Fast Computing' },
+      { source: 'n7', target: 'n8', label: 'Data Stream' },
+      { source: 'n3', target: 'n7', label: 'Voice Interface' },
+      { source: 'n9', target: 'n10', label: 'Grid System' },
+      { source: 'n1', target: 'n10', label: 'Material Optimization' },
+      { source: 'n5', target: 'n4', label: 'DNA Sequencing' },
   ];
 
   // Variables State
@@ -1505,24 +1521,35 @@ function renderCatChart(cats) {
   let nHoveredNode = null, nHoveredLink = null, nSelectedNode = null, nSearchTerm = '';
   let isNexusMapInitialized = false;
 
-  // 2. FUNGSI GENERATOR DATA DINAMIS DARI GLOBAL DATA
-  function generateDynamicNexusData() {
-      // Cek apakah data asli ada. Jika tidak, tetap gunakan Dummy Data.
+  // 2. FUNGSI GENERATOR DATA DINAMIS DENGAN FILTER
+  function generateDynamicNexusData(filterMode = 'top50') {
       if (typeof globalData === 'undefined' || globalData.length === 0) {
-          console.log("Nexus: Global Data kosong. Menggunakan Fallback Dummy Data.");
+          console.log("Nexus: Global Data is empty. Using Fallback Dummy Data.");
           return; 
       }
 
-      console.log("Nexus: Global Data ditemukan! Membangun ekosistem secara dinamis...");
-      
-      // Ambil maksimal 40 data teratas berdasarkan skor prioritas agar kanvas tidak lag
-      const topData = [...globalData].sort((a,b) => (b.priority_score||0) - (a.priority_score||0)).slice(0, 40);
+      // Populate Thematic Dropdown Once
+      const themeOptGroup = document.getElementById('nexus-theme-options');
+      if (themeOptGroup && themeOptGroup.children.length === 0) {
+          const themes = new Set();
+          globalData.forEach(item => (item.category || []).forEach(c => themes.add(c)));
+          themeOptGroup.innerHTML = Array.from(themes).sort().map(t => `<option value="theme_${t}">📍 ${t}</option>`).join('');
+      }
+
+      // Filter Logic
+      let workingData = [...globalData];
+      if (filterMode === 'top50') {
+          workingData = workingData.sort((a,b) => (b.priority_score||0) - (a.priority_score||0)).slice(0, 50);
+      } else if (filterMode.startsWith('theme_')) {
+          const targetTheme = filterMode.replace('theme_', '');
+          workingData = workingData.filter(item => (item.category || []).includes(targetTheme));
+      }
+      // if 'all', keep all workingData
       
       const dynCategories = {};
       const dynNodes = [];
       const dynLinks = [];
       
-      // Palet warna otomatis untuk kategori baru
       const palette = [
           { color: '#0ea5e9', bg: '#f0f9ff' }, { color: '#10b981', bg: '#ecfdf5' },
           { color: '#8b5cf6', bg: '#f5f3ff' }, { color: '#f59e0b', bg: '#fffbeb' },
@@ -1530,9 +1557,11 @@ function renderCatChart(cats) {
           { color: '#eab308', bg: '#fefce8' }, { color: '#14b8a6', bg: '#f0fdfa' }
       ];
 
-      // A. Build Nodes & Categories
-      topData.forEach((item, index) => {
-          // Ambil kategori pertama sebagai kategori utama
+      // A. Build Nodes
+      // Dynamic Radius: Increase circle size if there are hundreds of nodes to prevent overlapping
+      const dynamicRadius = Math.max(350, workingData.length * 15); 
+
+      workingData.forEach((item, index) => {
           let mainCat = (item.category && item.category.length > 0) ? item.category[0] : 'General';
           
           if (!dynCategories[mainCat]) {
@@ -1541,11 +1570,9 @@ function renderCatChart(cats) {
           }
           dynCategories[mainCat].count++;
 
-          // Rumus Circular Layout (Menyusun titik melingkar secara rapi)
-          const angle = (index / topData.length) * 2 * Math.PI;
-          const radius = 350; // Jarak sebaran
-          const x = 1000 + radius * Math.cos(angle);
-          const y = 1000 + radius * Math.sin(angle);
+          const angle = (index / workingData.length) * 2 * Math.PI;
+          const x = 1000 + dynamicRadius * Math.cos(angle);
+          const y = 1000 + dynamicRadius * Math.sin(angle);
 
           dynNodes.push({
               id: item.id,
@@ -1555,17 +1582,14 @@ function renderCatChart(cats) {
               allCategories: item.category || [],
               x: x,
               y: y,
-              desc: item.summary || 'Tidak ada ringkasan.'
+              desc: item.summary || 'No summary available.'
           });
       });
 
-      // Hitung persentase untuk Sidebar
-      const totalDynNodes = dynNodes.length;
-      Object.values(dynCategories).forEach(c => {
-          c.count = Math.round((c.count / totalDynNodes) * 100); 
-      });
+      const totalDynNodes = dynNodes.length || 1;
+      Object.values(dynCategories).forEach(c => c.count = Math.round((c.count / totalDynNodes) * 100));
 
-      // B. Build Links (Hubungkan jika punya minimal 1 kategori yang sama)
+      // B. Build Links
       for (let i = 0; i < dynNodes.length; i++) {
           for (let j = i + 1; j < dynNodes.length; j++) {
               const shared = dynNodes[i].allCategories.filter(c => dynNodes[j].allCategories.includes(c));
@@ -1573,13 +1597,12 @@ function renderCatChart(cats) {
                   dynLinks.push({
                       source: dynNodes[i].id,
                       target: dynNodes[j].id,
-                      label: shared[0] // Label garis menggunakan nama kategori yang sama
+                      label: shared[0] 
                   });
               }
           }
       }
 
-      // Timpa dummy data dengan data dinamis!
       nexusCategories = dynCategories;
       nexusNodesData = dynNodes;
       nexusLinksData = dynLinks;
@@ -1589,19 +1612,24 @@ function renderCatChart(cats) {
   function initNexusMap() {
       if (isNexusMapInitialized) return; 
 
-      // Panggil Generator Dinamis sebelum render!
-      generateDynamicNexusData();
+      // Init with default filter
+      const defaultFilter = document.getElementById('nexus-view-filter').value;
+      generateDynamicNexusData(defaultFilter);
 
       const container = document.getElementById('canvas-container');
-      const rect = container.getBoundingClientRect();
       
-      // Pusatkan pandangan ke koordinat 1000,1000
+      // Auto Zoom based on data size (Zoom out if showing hundreds of items)
+      const dataSize = nexusNodesData.length;
+      nTransform.scale = dataSize > 100 ? 0.3 : 0.8;
+      
+      const rect = container.getBoundingClientRect();
       nTransform.x = (rect.width / 2) - (1000 * nTransform.scale);
       nTransform.y = (rect.height / 2) - (1000 * nTransform.scale);
+      
       applyNexusTransform();
       updateNexusUI();
 
-      // Pan & Zoom Listeners
+      // Interactions
       container.addEventListener('mousedown', (e) => {
           if (e.button !== 0) return;
           nIsDragging = true;
@@ -1621,7 +1649,7 @@ function renderCatChart(cats) {
       container.addEventListener('wheel', (e) => {
           e.preventDefault();
           const scaleFactor = e.deltaY > 0 ? 0.9 : 1.1;
-          let newScale = Math.min(Math.max(nTransform.scale * scaleFactor, 0.2), 3);
+          let newScale = Math.min(Math.max(nTransform.scale * scaleFactor, 0.1), 3);
           const r = container.getBoundingClientRect();
           const mouseX = e.clientX - r.left, mouseY = e.clientY - r.top;
           nTransform.x = mouseX - (mouseX - nTransform.x) * (newScale / nTransform.scale);
@@ -1630,15 +1658,60 @@ function renderCatChart(cats) {
           applyNexusTransform();
       });
 
-      // Kontrol Tombol UI
+      // UI Controls
       document.getElementById('btnZoomIn').onclick = () => { nTransform.scale = Math.min(nTransform.scale * 1.2, 3); applyNexusTransform(); };
-      document.getElementById('btnZoomOut').onclick = () => { nTransform.scale = Math.max(nTransform.scale * 0.8, 0.2); applyNexusTransform(); };
-      document.getElementById('btnReset').onclick = () => {
+      document.getElementById('btnZoomOut').onclick = () => { nTransform.scale = Math.max(nTransform.scale * 0.8, 0.1); applyNexusTransform(); };
+      
+      const resetView = () => {
           nSelectedNode = null; nSearchTerm = ''; document.getElementById('searchInput').value = '';
+          const currentSize = nexusNodesData.length;
+          nTransform.scale = currentSize > 100 ? 0.3 : 0.8;
           const r = container.getBoundingClientRect();
-          nTransform.x = (r.width / 2) - (1000 * 0.8); nTransform.y = (r.height / 2) - (1000 * 0.8); nTransform.scale = 0.8;
+          nTransform.x = (r.width / 2) - (1000 * nTransform.scale); nTransform.y = (r.height / 2) - (1000 * nTransform.scale);
           applyNexusTransform(); updateNexusUI();
       };
+      document.getElementById('btnReset').onclick = resetView;
+
+      // === LOGIKA FULLSCREEN BARU ===
+      const viewNexusContainer = document.getElementById('view-nexus');
+      const fullscreenIcon = document.getElementById('fullscreenIcon');
+
+      document.getElementById('btnFullscreen').onclick = () => {
+          if (!document.fullscreenElement) {
+              // Masuk Fullscreen
+              if (viewNexusContainer.requestFullscreen) {
+                  viewNexusContainer.requestFullscreen();
+              } else if (viewNexusContainer.webkitRequestFullscreen) { /* Safari */
+                  viewNexusContainer.webkitRequestFullscreen();
+              }
+          } else {
+              // Keluar Fullscreen
+              if (document.exitFullscreen) {
+                  document.exitFullscreen();
+              } else if (document.webkitExitFullscreen) { /* Safari */
+                  document.webkitExitFullscreen();
+              }
+          }
+      };
+
+      // Listener ketika status Fullscreen berubah (untuk ganti icon & border)
+      document.addEventListener('fullscreenchange', () => {
+          if (document.fullscreenElement) {
+              fullscreenIcon.setAttribute('data-lucide', 'minimize'); // Ganti icon jadi minimize
+              viewNexusContainer.classList.remove('rounded-2xl', 'border'); // Hilangkan border melengkung
+          } else {
+              fullscreenIcon.setAttribute('data-lucide', 'maximize'); // Kembalikan icon
+              viewNexusContainer.classList.add('rounded-2xl', 'border'); 
+          }
+          if(window.lucide) window.lucide.createIcons(); // Re-render icon
+      });
+      // ==============================
+
+      // Select Dropdown Filter Logic
+      document.getElementById('nexus-view-filter').addEventListener('change', (e) => {
+          generateDynamicNexusData(e.target.value);
+          resetView(); // Re-center map after changing data
+      });
 
       document.getElementById('searchInput').addEventListener('input', (e) => { nSearchTerm = e.target.value; updateNexusUI(); });
       container.addEventListener('click', () => {
@@ -1661,7 +1734,6 @@ function renderCatChart(cats) {
       if(window.lucide) window.lucide.createIcons();
   }
 
-  // Interaksi Node/Link
   window.handleNodeHover = (id) => { if (nHoveredNode !== id) { nHoveredNode = id; renderNexusGraph(); } };
   window.handleNodeLeave = () => { nHoveredNode = null; renderNexusGraph(); };
   window.handleNodeClick = (e, id) => {
@@ -1695,7 +1767,7 @@ function renderCatChart(cats) {
       nexusLinksData.forEach(link => {
           const s = nexusNodesData.find(n => n.id === link.source);
           const t = nexusNodesData.find(n => n.id === link.target);
-          if(!s || !t) return; // Safegaurd data korup
+          if(!s || !t) return;
           
           const linkId = `${link.source}-${link.target}`;
           const isActive = activeLinks.has(linkId);
@@ -1762,14 +1834,14 @@ function renderCatChart(cats) {
               return `
                   <div class="group flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-blue-600 transition-all cursor-pointer" onclick="handleNodeClick(event, '${targetId}')">
                       <div>
-                          <p class="text-[10px] font-bold text-slate-400 uppercase group-hover:text-blue-200">Kategori Sama: ${l.label}</p>
+                          <p class="text-[10px] font-bold text-slate-400 uppercase group-hover:text-blue-200">Shared Category: ${l.label}</p>
                           <p class="font-bold text-slate-700 group-hover:text-white line-clamp-1">${linkedNode.fullTitle || linkedNode.label}</p>
                       </div>
                       <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform shadow-sm shrink-0">
                           <i data-lucide="zap" class="w-3.5 h-3.5 fill-current"></i>
                       </div>
                   </div>`;
-          }).join('') || '<p class="text-xs text-slate-400 italic">Inovasi ini belum memiliki koneksi yang kuat dengan inovasi lain.</p>';
+          }).join('') || '<p class="text-xs text-slate-400 italic">This innovation currently has no strong structural links.</p>';
 
           htmlContent = `
               <div class="p-8 h-full flex flex-col overflow-y-auto no-scrollbar relative">
@@ -1782,16 +1854,15 @@ function renderCatChart(cats) {
                   <p class="text-slate-500 leading-relaxed text-sm mb-8">${selectedNodeData.desc}</p>
                   
                   <button onclick="openModal('${selectedNodeData.id}')" class="w-full mb-8 bg-slate-900 text-white text-xs font-bold py-3.5 rounded-xl hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
-                      <i data-lucide="file-text" class="w-4 h-4"></i> Buka Full Report
+                      <i data-lucide="file-text" class="w-4 h-4"></i> Open Full Report
                   </button>
 
                   <div class="space-y-6">
-                      <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2">Koneksi Ekosistem</h3>
+                      <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2">Active Ecosystem Links</h3>
                       <div class="grid gap-3">${linksHtml}</div>
                   </div>
               </div>`;
       } else {
-          // GLOBAL DASHBOARD MODE
           let categoryHtml = Object.values(nexusCategories)
               .sort((a,b) => b.count - a.count)
               .map(cat => `
@@ -1800,7 +1871,6 @@ function renderCatChart(cats) {
                   <div class="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden"><div class="h-full rounded-full" style="width: ${cat.count}%; background-color: ${cat.color}"></div></div>
               </div>`).join('');
 
-          // Ambil 3 inovasi acak untuk Trending Now (jika dari globalData)
           let trendingHtml = '';
           if (nexusNodesData.length > 3) {
              trendingHtml = nexusNodesData.slice(0,3).map(item => `
@@ -1809,7 +1879,7 @@ function renderCatChart(cats) {
                          <div class="w-1.5 h-6 rounded-full shrink-0" style="background-color: ${nexusCategories[item.category].color}"></div>
                          <span class="text-sm font-bold text-slate-700 truncate">${item.label}</span>
                      </div>
-                     <span class="text-[10px] font-black text-blue-500 shrink-0 ml-2">Lihat</span>
+                     <span class="text-[10px] font-black text-blue-500 shrink-0 ml-2">View</span>
                  </div>
              `).join('');
           }
@@ -1822,7 +1892,7 @@ function renderCatChart(cats) {
                       <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Ecosystem Overview</p>
                   </div>
                   <div class="grid grid-cols-2 gap-4 mb-8">
-                      <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100"><i data-lucide="activity" class="text-blue-500 mb-2 w-5 h-5"></i><p class="text-[10px] font-bold text-slate-400 uppercase">Total Inovasi</p><p class="text-xl font-black text-slate-800">${nexusNodesData.length}</p></div>
+                      <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100"><i data-lucide="activity" class="text-blue-500 mb-2 w-5 h-5"></i><p class="text-[10px] font-bold text-slate-400 uppercase">Total Nodes</p><p class="text-xl font-black text-slate-800">${nexusNodesData.length}</p></div>
                       <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100"><i data-lucide="share-2" class="text-emerald-500 mb-2 w-5 h-5"></i><p class="text-[10px] font-bold text-slate-400 uppercase">Total Links</p><p class="text-xl font-black text-slate-800">${nexusLinksData.length}</p></div>
                   </div>
                   <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 mb-8">
@@ -1832,7 +1902,7 @@ function renderCatChart(cats) {
                   <div class="space-y-4">
                       <div class="flex items-center gap-2 mb-2 text-slate-800">
                           <i data-lucide="trending-up" class="w-[18px] h-[18px]"></i>
-                          <h3 class="text-xs font-black uppercase tracking-widest">Sorotan Radar</h3>
+                          <h3 class="text-xs font-black uppercase tracking-widest">Radar Highlights</h3>
                       </div>
                       ${trendingHtml}
                   </div>
