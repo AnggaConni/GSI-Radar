@@ -606,7 +606,7 @@ Priority scores and risk assessments are AI-generated heuristics, not certified 
 
 ## 📄 License
 
-MIT License — see [LICENSE](LICENSE) for full terms.
+AGPL License — see [LICENSE](LICENSE) for full terms.
 
 ---
 
