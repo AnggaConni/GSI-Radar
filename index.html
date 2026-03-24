@@ -70,6 +70,11 @@
     .nexus-node:hover { filter: drop-shadow(0 0 8px rgba(0,91,181,0.4)); }
     @keyframes nexus-fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     .animate-fade-in { animation: nexus-fade-in 0.4s ease-out; }
+    /* --- CSS BARU UNTUK NEXUS TAB --- */
+    .touch-none { touch-action: none; }
+    .transition-svg { transition: all 0.3s ease-in-out; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
     /* ── Resume Tab Styles ── */
     .resume-section-title { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 1rem; color: #1e293b; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 16px; }
@@ -240,51 +245,42 @@
     </div>
 
     <!-- TAB 3: INNOVATION NEXUS (SPIDER GRAPH) -->
-<div id="view-nexus" class="hidden flex-col md:flex-row bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden h-[800px] relative">
-    <!-- Sidebar Panel (Kanan/Bawah) -->
-    <div id="nexus-sidebar" class="order-2 md:order-2 w-full md:w-[350px] border-t md:border-t-0 md:border-l border-slate-100 flex flex-col bg-slate-50/30 overflow-y-auto p-6">
-        <div id="nexus-sidebar-content">
-            <div class="mb-6">
-                <h2 class="text-xl font-black text-slate-800">Nexus Insight</h2>
-                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Ecosystem Connections</p>
-            </div>
-            <div id="nexus-default-info" class="space-y-4">
-                <div class="bg-blue-600 rounded-2xl p-5 text-white shadow-lg shadow-blue-200">
-                    <p class="text-xs opacity-80 mb-1">Total Connections</p>
-                    <p id="nexus-count-links" class="text-3xl font-black">0</p>
+<div id="view-nexus" class="hidden relative w-full h-[800px] flex-col md:flex-row bg-[#fcfcfc] rounded-2xl border border-slate-200 shadow-sm overflow-hidden text-slate-800">
+        
+        <div class="absolute top-6 left-6 z-50 flex flex-col gap-3 pointer-events-none">
+            <div class="bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-slate-100 w-72 pointer-events-auto">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="p-2 bg-blue-600 rounded-lg text-white">
+                        <i data-lucide="zap" class="w-[18px] h-[18px]"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-black text-slate-800 leading-tight">Innovation Dive</h1>
+                        <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Tech Nexus Map</p>
+                    </div>
                 </div>
-                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
-                    <p class="text-[10px] font-bold text-slate-400 uppercase mb-2">Clustering Logic</p>
-                    <p class="text-xs text-slate-600 leading-relaxed">Garis (Edge) terbentuk jika dua inovasi berbagi minimal <span class="font-bold text-blue-600">2 kategori</span> yang sama.</p>
+                <div class="relative mb-4">
+                    <i data-lucide="search" class="absolute left-3 top-2.5 w-4 h-4 text-slate-400"></i>
+                    <input type="text" id="searchInput" placeholder="Cari inovasi..." class="w-full bg-slate-50 border-none rounded-xl py-2 pl-9 pr-4 text-sm focus:ring-2 focus:ring-blue-500/20 focus:outline-none">
                 </div>
-            </div>
-            <div id="nexus-detail-info" class="hidden animate-fade-in">
-                <!-- Diisi via JS saat node diklik -->
+                <div class="flex justify-between items-center bg-slate-50 p-2 rounded-xl border border-slate-100">
+                    <button id="btnZoomIn" class="p-2 hover:bg-white rounded-lg transition-all text-slate-600"><i data-lucide="zoom-in" class="w-[18px] h-[18px]"></i></button>
+                    <button id="btnZoomOut" class="p-2 hover:bg-white rounded-lg transition-all text-slate-600"><i data-lucide="zoom-out" class="w-[18px] h-[18px]"></i></button>
+                    <div class="h-4 w-[1px] bg-slate-200"></div>
+                    <button id="btnReset" class="p-2 hover:bg-white rounded-lg transition-all text-slate-600"><i data-lucide="maximize" class="w-[18px] h-[18px]"></i></button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Map Canvas (Kiri/Atas) -->
-    <div class="order-1 md:order-1 flex-1 relative bg-[#fcfcfc] overflow-hidden cursor-grab active:cursor-grabbing" id="nexus-canvas-container">
-        <!-- Floating Controls -->
-        <div class="absolute top-4 left-4 z-10 flex flex-col gap-2">
-            <div class="bg-white/90 backdrop-blur p-2 rounded-xl shadow-xl border border-slate-100 flex items-center gap-2">
-                <input type="text" id="nexus-search" placeholder="Search tech..." class="text-xs border-none bg-slate-100 rounded-lg px-3 py-2 w-40 focus:ring-2 focus:ring-blue-500">
-                <select id="nexus-filter-threshold" class="text-[10px] font-bold border-none bg-slate-100 rounded-lg px-2 py-2">
-                    <option value="1">Min 1 Shared Category</option>
-                    <option value="2" selected>Min 2 Shared Categories</option>
-                    <option value="3">Min 3 Shared Categories</option>
-                </select>
-            </div>
+        <div id="canvas-container" class="flex-1 relative cursor-grab touch-none overflow-hidden">
+            <svg id="main-svg" class="w-full h-full">
+                <g id="graph-wrapper"></g>
+            </svg>
         </div>
-        <svg id="nexus-svg" class="w-full h-full">
-            <g id="nexus-viewport">
-                <g id="nexus-links-group"></g>
-                <g id="nexus-nodes-group"></g>
-            </g>
-        </svg>
+
+        <div id="right-panel" class="w-full md:w-[400px] bg-white border-l border-slate-100 shadow-2xl z-[60] flex flex-col h-full overflow-hidden absolute md:relative right-0 bottom-0 transform transition-transform duration-300 md:translate-x-0 translate-y-full md:translate-y-0">
+            </div>
+
     </div>
-</div>
  
     <!-- TAB 4: INTELLIGENCE RESUME ───────────────────────────── -->
     <div id="view-resume" class="flex-col gap-6 hidden">
@@ -1463,152 +1459,387 @@ function renderCatChart(cats) {
 
   window.onload = init;
 
-  // --- LOGIKA NEXUS MAP (VANILLA JS VERSION) ---
-let nexusTransform = { x: 0, y: 0, scale: 1 };
-let isNexusDragging = false;
-let nexusDragStart = { x: 0, y: 0 };
+  // --- LOGIKA NEXUS MAP (DYNAMIC + FALLBACK) ---
+  
+  // 1. DUMMY DATA (Fallback Mode)
+  // Perhatikan: Kita ubah 'const' menjadi 'let' agar bisa ditimpa oleh data asli
+  let nexusCategories = {
+      AI: { id: 'AI', name: 'Kecerdasan Buatan', color: '#0ea5e9', bg: '#f0f9ff', count: 42 },
+      BIO: { id: 'BIO', name: 'Bioteknologi', color: '#10b981', bg: '#ecfdf5', count: 28 },
+      QTM: { id: 'QTM', name: 'Kuantum', color: '#8b5cf6', bg: '#f5f3ff', count: 15 },
+      IOT: { id: 'IOT', name: 'IoT & Robotik', color: '#f59e0b', bg: '#fffbeb', count: 34 },
+      ENG: { id: 'ENG', name: 'Energi Bersih', color: '#06b6d4', bg: '#ecfeff', count: 22 },
+  };
 
-function initNexusMap() {
-    const container = document.getElementById('nexus-canvas-container');
-    const svg = document.getElementById('nexus-svg');
-    const viewport = document.getElementById('nexus-viewport');
-    const threshold = parseInt(document.getElementById('nexus-filter-threshold').value);
-    
-    // 1. Ambil data (Maksimal 50)
-    const data = globalData.sort((a,b) => b.priority_score - a.priority_score).slice(0, 50);
-    
-    // 2. Beri posisi acak/melingkar awal jika tidak ada koordinat
-    data.forEach((d, i) => {
-        const angle = (i / data.length) * 2 * Math.PI;
-        const radius = 300;
-        d.nx = 500 + radius * Math.cos(angle);
-        d.ny = 400 + radius * Math.sin(angle);
-    });
+  let nexusNodesData = [
+      { id: 'n1', label: 'Machine Learning', category: 'AI', x: 1000, y: 1000, desc: 'Sistem yang belajar dari pola data.' },
+      { id: 'n2', label: 'Neural Networks', category: 'AI', x: 850, y: 800, desc: 'Arsitektur komputasi terinspirasi otak manusia.' },
+      { id: 'n3', label: 'Natural Language', category: 'AI', x: 1200, y: 850, desc: 'Pemrosesan bahasa manusia oleh komputer.' },
+      { id: 'n4', label: 'CRISPR Tech', category: 'BIO', x: 700, y: 1150, desc: 'Teknologi edit genetik presisi.' },
+      { id: 'n5', label: 'Bio-Informatics', category: 'BIO', x: 800, y: 1050, desc: 'Analisis data biologis skala besar.' },
+      { id: 'n6', label: 'Quantum Processor', category: 'QTM', x: 1300, y: 1100, desc: 'Unit pemrosesan berbasis qubit.' },
+      { id: 'n7', label: 'Smart Sensors', category: 'IOT', x: 1150, y: 1300, desc: 'Sensor cerdas untuk pengumpulan data real-time.' },
+      { id: 'n8', label: 'Edge AI', category: 'IOT', x: 1350, y: 1250, desc: 'AI yang berjalan langsung di perangkat lokal.' },
+      { id: 'n9', label: 'Fusion Power', category: 'ENG', x: 600, y: 900, desc: 'Energi nuklir bersih masa depan.' },
+      { id: 'n10', label: 'Solid-State Battery', category: 'ENG', x: 750, y: 700, desc: 'Penyimpanan energi densitas tinggi.' },
+  ];
 
-    // 3. Hitung Link berdasarkan Shared Categories
-    const links = [];
-    for (let i = 0; i < data.length; i++) {
-        for (let j = i + 1; j < data.length; j++) {
-            const cat1 = data[i].category || [];
-            const cat2 = data[j].category || [];
-            const shared = cat1.filter(c => cat2.includes(c));
-            
-            if (shared.length >= threshold) {
-                links.push({ source: data[i], target: data[j], common: shared });
-            }
-        }
-    }
+  let nexusLinksData = [
+      { source: 'n1', target: 'n2', label: 'Algoritma Inti' },
+      { source: 'n1', target: 'n3', label: 'Data Pelatihan' },
+      { source: 'n1', target: 'n5', label: 'Analisis Genom' },
+      { source: 'n2', target: 'n4', label: 'Prediksi Protein' },
+      { source: 'n1', target: 'n6', label: 'Akselerasi' },
+      { source: 'n6', target: 'n8', label: 'Komputasi Cepat' },
+      { source: 'n7', target: 'n8', label: 'Aliran Data' },
+      { source: 'n3', target: 'n7', label: 'Interface Suara' },
+      { source: 'n9', target: 'n10', label: 'Sistem Grid' },
+      { source: 'n1', target: 'n10', label: 'Optimasi Material' },
+      { source: 'n5', target: 'n4', label: 'Sekuensing DNA' },
+  ];
 
-    // 4. Render
-    renderNexus(data, links);
-    document.getElementById('nexus-count-links').innerText = links.length;
+  // Variables State
+  let nTransform = { x: 0, y: 0, scale: 0.8 };
+  let nIsDragging = false;
+  let nDragStart = { x: 0, y: 0 };
+  let nHoveredNode = null, nHoveredLink = null, nSelectedNode = null, nSearchTerm = '';
+  let isNexusMapInitialized = false;
 
-    // 5. Setup Pan & Zoom (Event Listeners)
-    svg.onmousedown = (e) => {
-        if(e.target.closest('.nexus-node')) return;
-        isNexusDragging = true;
-        nexusDragStart = { x: e.clientX - nexusTransform.x, y: e.clientY - nexusTransform.y };
-    };
-    window.onmousemove = (e) => {
-        if (!isNexusDragging) return;
-        nexusTransform.x = e.clientX - nexusDragStart.x;
-        nexusTransform.y = e.clientY - nexusDragStart.y;
-        updateNexusTransform();
-    };
-    window.onmouseup = () => isNexusDragging = false;
-    svg.onwheel = (e) => {
-        e.preventDefault();
-        const factor = e.deltaY > 0 ? 0.9 : 1.1;
-        nexusTransform.scale *= factor;
-        updateNexusTransform();
-    };
-    
-    document.getElementById('nexus-filter-threshold').onchange = initNexusMap;
-    document.getElementById('nexus-search').oninput = (e) => {
-        const term = e.target.value.toLowerCase();
-        document.querySelectorAll('.nexus-node').forEach(node => {
-            const label = node.getAttribute('data-label').toLowerCase();
-            node.style.opacity = label.includes(term) ? "1" : "0.1";
-        });
-    };
-}
+  // 2. FUNGSI GENERATOR DATA DINAMIS DARI GLOBAL DATA
+  function generateDynamicNexusData() {
+      // Cek apakah data asli ada. Jika tidak, tetap gunakan Dummy Data.
+      if (typeof globalData === 'undefined' || globalData.length === 0) {
+          console.log("Nexus: Global Data kosong. Menggunakan Fallback Dummy Data.");
+          return; 
+      }
 
-function renderNexus(nodes, links) {
-    const nodesGroup = document.getElementById('nexus-nodes-group');
-    const linksGroup = document.getElementById('nexus-links-group');
-    nodesGroup.innerHTML = '';
-    linksGroup.innerHTML = '';
+      console.log("Nexus: Global Data ditemukan! Membangun ekosistem secara dinamis...");
+      
+      // Ambil maksimal 40 data teratas berdasarkan skor prioritas agar kanvas tidak lag
+      const topData = [...globalData].sort((a,b) => (b.priority_score||0) - (a.priority_score||0)).slice(0, 40);
+      
+      const dynCategories = {};
+      const dynNodes = [];
+      const dynLinks = [];
+      
+      // Palet warna otomatis untuk kategori baru
+      const palette = [
+          { color: '#0ea5e9', bg: '#f0f9ff' }, { color: '#10b981', bg: '#ecfdf5' },
+          { color: '#8b5cf6', bg: '#f5f3ff' }, { color: '#f59e0b', bg: '#fffbeb' },
+          { color: '#06b6d4', bg: '#ecfeff' }, { color: '#ec4899', bg: '#fdf2f8' },
+          { color: '#eab308', bg: '#fefce8' }, { color: '#14b8a6', bg: '#f0fdfa' }
+      ];
 
-    // Render Garis
-    links.forEach(l => {
-        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("x1", l.source.nx);
-        line.setAttribute("y1", l.source.ny);
-        line.setAttribute("x2", l.target.nx);
-        line.setAttribute("y2", l.target.ny);
-        line.setAttribute("stroke", "rgba(0, 91, 181, 0.2)"); // Biru transparan (UNESCO Blue)
-        line.setAttribute("stroke-width", "1.5");
-        line.setAttribute("class", "nexus-link opacity-40");
-        linksGroup.appendChild(line);
-    });
+      // A. Build Nodes & Categories
+      topData.forEach((item, index) => {
+          // Ambil kategori pertama sebagai kategori utama
+          let mainCat = (item.category && item.category.length > 0) ? item.category[0] : 'General';
+          
+          if (!dynCategories[mainCat]) {
+              let theme = palette[Object.keys(dynCategories).length % palette.length];
+              dynCategories[mainCat] = { id: mainCat, name: mainCat, color: theme.color, bg: theme.bg, count: 0 };
+          }
+          dynCategories[mainCat].count++;
 
-    // Render Titik
-    nodes.forEach(n => {
-        const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-        g.setAttribute("class", "nexus-node cursor-pointer");
-        g.setAttribute("data-label", n.title);
-        g.setAttribute("transform", `translate(${n.nx},${n.ny})`);
-        
-        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        circle.setAttribute("r", "6");
-        circle.setAttribute("fill", n.innovation_level === 'grassroots' ? '#10b981' : '#005bb5');
-        
-        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        text.textContent = n.title.length > 20 ? n.title.substring(0,20)+'...' : n.title;
-        text.setAttribute("x", "12");
-        text.setAttribute("y", "4");
-        text.setAttribute("class", "text-[10px] font-bold fill-slate-700 pointer-events-none");
+          // Rumus Circular Layout (Menyusun titik melingkar secara rapi)
+          const angle = (index / topData.length) * 2 * Math.PI;
+          const radius = 350; // Jarak sebaran
+          const x = 1000 + radius * Math.cos(angle);
+          const y = 1000 + radius * Math.sin(angle);
 
-        g.appendChild(circle);
-        g.appendChild(text);
-        
-        g.onclick = () => showNexusDetail(n);
-        nodesGroup.appendChild(g);
-    });
-}
+          dynNodes.push({
+              id: item.id,
+              label: item.title.length > 22 ? item.title.substring(0, 22) + '...' : item.title,
+              fullTitle: item.title,
+              category: mainCat,
+              allCategories: item.category || [],
+              x: x,
+              y: y,
+              desc: item.summary || 'Tidak ada ringkasan.'
+          });
+      });
 
-function updateNexusTransform() {
-    const viewport = document.getElementById('nexus-viewport');
-    viewport.setAttribute("transform", `translate(${nexusTransform.x},${nexusTransform.y}) scale(${nexusTransform.scale})`);
-}
+      // Hitung persentase untuk Sidebar
+      const totalDynNodes = dynNodes.length;
+      Object.values(dynCategories).forEach(c => {
+          c.count = Math.round((c.count / totalDynNodes) * 100); 
+      });
 
-function showNexusDetail(n) {
-    const detail = document.getElementById('nexus-detail-info');
-    const def = document.getElementById('nexus-default-info');
-    def.classList.add('hidden');
-    detail.classList.remove('hidden');
-    
-    detail.innerHTML = `
-        <div class="p-5 bg-white rounded-2xl border border-blue-100 shadow-sm animate-fade-in">
-            <span class="text-[9px] font-black uppercase bg-blue-50 text-blue-600 px-2 py-1 rounded-md mb-2 inline-block">${n.innovation_level}</span>
-            <h3 class="text-lg font-bold text-slate-800 mb-2">${n.title}</h3>
-            <p class="text-xs text-slate-500 mb-4">${n.summary.substring(0, 100)}...</p>
-            <div class="space-y-2">
-                <p class="text-[10px] font-bold text-slate-400 uppercase">Shared Categories</p>
-                <div class="flex flex-wrap gap-1">
-                    ${n.category.map(c => `<span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-[10px]">${c}</span>`).join('')}
-                </div>
-            </div>
-            <button onclick="openModal('${n.id}')" class="w-full mt-6 bg-slate-900 text-white text-xs font-bold py-3 rounded-xl hover:bg-blue-600 transition-colors">View Full Detail</button>
-            <button onclick="resetNexusSidebar()" class="w-full mt-2 text-slate-400 text-[10px] font-bold py-2">Close Detail</button>
-        </div>
-    `;
-}
+      // B. Build Links (Hubungkan jika punya minimal 1 kategori yang sama)
+      for (let i = 0; i < dynNodes.length; i++) {
+          for (let j = i + 1; j < dynNodes.length; j++) {
+              const shared = dynNodes[i].allCategories.filter(c => dynNodes[j].allCategories.includes(c));
+              if (shared.length >= 1) {
+                  dynLinks.push({
+                      source: dynNodes[i].id,
+                      target: dynNodes[j].id,
+                      label: shared[0] // Label garis menggunakan nama kategori yang sama
+                  });
+              }
+          }
+      }
 
-function resetNexusSidebar() {
-    document.getElementById('nexus-detail-info').classList.add('hidden');
-    document.getElementById('nexus-default-info').classList.remove('hidden');
-}
+      // Timpa dummy data dengan data dinamis!
+      nexusCategories = dynCategories;
+      nexusNodesData = dynNodes;
+      nexusLinksData = dynLinks;
+  }
+
+  // 3. INISIALISASI
+  function initNexusMap() {
+      if (isNexusMapInitialized) return; 
+
+      // Panggil Generator Dinamis sebelum render!
+      generateDynamicNexusData();
+
+      const container = document.getElementById('canvas-container');
+      const rect = container.getBoundingClientRect();
+      
+      // Pusatkan pandangan ke koordinat 1000,1000
+      nTransform.x = (rect.width / 2) - (1000 * nTransform.scale);
+      nTransform.y = (rect.height / 2) - (1000 * nTransform.scale);
+      applyNexusTransform();
+      updateNexusUI();
+
+      // Pan & Zoom Listeners
+      container.addEventListener('mousedown', (e) => {
+          if (e.button !== 0) return;
+          nIsDragging = true;
+          container.classList.replace('cursor-grab', 'cursor-grabbing');
+          nDragStart = { x: e.clientX - nTransform.x, y: e.clientY - nTransform.y };
+      });
+      window.addEventListener('mousemove', (e) => {
+          if (!nIsDragging) return;
+          nTransform.x = e.clientX - nDragStart.x;
+          nTransform.y = e.clientY - nDragStart.y;
+          applyNexusTransform();
+      });
+      window.addEventListener('mouseup', () => {
+          nIsDragging = false;
+          container.classList.replace('cursor-grabbing', 'cursor-grab');
+      });
+      container.addEventListener('wheel', (e) => {
+          e.preventDefault();
+          const scaleFactor = e.deltaY > 0 ? 0.9 : 1.1;
+          let newScale = Math.min(Math.max(nTransform.scale * scaleFactor, 0.2), 3);
+          const r = container.getBoundingClientRect();
+          const mouseX = e.clientX - r.left, mouseY = e.clientY - r.top;
+          nTransform.x = mouseX - (mouseX - nTransform.x) * (newScale / nTransform.scale);
+          nTransform.y = mouseY - (mouseY - nTransform.y) * (newScale / nTransform.scale);
+          nTransform.scale = newScale;
+          applyNexusTransform();
+      });
+
+      // Kontrol Tombol UI
+      document.getElementById('btnZoomIn').onclick = () => { nTransform.scale = Math.min(nTransform.scale * 1.2, 3); applyNexusTransform(); };
+      document.getElementById('btnZoomOut').onclick = () => { nTransform.scale = Math.max(nTransform.scale * 0.8, 0.2); applyNexusTransform(); };
+      document.getElementById('btnReset').onclick = () => {
+          nSelectedNode = null; nSearchTerm = ''; document.getElementById('searchInput').value = '';
+          const r = container.getBoundingClientRect();
+          nTransform.x = (r.width / 2) - (1000 * 0.8); nTransform.y = (r.height / 2) - (1000 * 0.8); nTransform.scale = 0.8;
+          applyNexusTransform(); updateNexusUI();
+      };
+
+      document.getElementById('searchInput').addEventListener('input', (e) => { nSearchTerm = e.target.value; updateNexusUI(); });
+      container.addEventListener('click', () => {
+          if (nSelectedNode) {
+              nSelectedNode = null; updateNexusUI();
+              document.getElementById('right-panel').classList.add('translate-y-full');
+          }
+      });
+
+      isNexusMapInitialized = true;
+  }
+
+  function applyNexusTransform() {
+      document.getElementById('graph-wrapper').setAttribute('transform', `translate(${nTransform.x}, ${nTransform.y}) scale(${nTransform.scale})`);
+  }
+
+  function updateNexusUI() {
+      renderNexusGraph();
+      renderNexusSidebar();
+      if(window.lucide) window.lucide.createIcons();
+  }
+
+  // Interaksi Node/Link
+  window.handleNodeHover = (id) => { if (nHoveredNode !== id) { nHoveredNode = id; renderNexusGraph(); } };
+  window.handleNodeLeave = () => { nHoveredNode = null; renderNexusGraph(); };
+  window.handleNodeClick = (e, id) => {
+      e.stopPropagation();
+      nSelectedNode = nSelectedNode === id ? null : id;
+      updateNexusUI();
+      if(nSelectedNode) document.getElementById('right-panel').classList.remove('translate-y-full');
+  };
+  window.handleLinkHover = (id) => { if (nHoveredLink !== id) { nHoveredLink = id; renderNexusGraph(); } };
+  window.handleLinkLeave = () => { nHoveredLink = null; renderNexusGraph(); };
+
+  // 4. RENDER VISUALISASI SVG
+  function renderNexusGraph() {
+      let activeNodes = new Set(), activeLinks = new Set();
+      let currentHighlight = nSelectedNode || nHoveredNode;
+
+      if (currentHighlight) {
+          activeNodes.add(currentHighlight);
+          nexusLinksData.forEach(link => {
+              if (link.source === currentHighlight || link.target === currentHighlight) {
+                  activeNodes.add(link.source); activeNodes.add(link.target); activeLinks.add(`${link.source}-${link.target}`);
+              }
+          });
+      }
+      if (nHoveredLink) {
+          const parts = nHoveredLink.split('-');
+          activeNodes.add(parts[0]); activeNodes.add(parts[1]); activeLinks.add(nHoveredLink);
+      }
+
+      let svgContent = '';
+      nexusLinksData.forEach(link => {
+          const s = nexusNodesData.find(n => n.id === link.source);
+          const t = nexusNodesData.find(n => n.id === link.target);
+          if(!s || !t) return; // Safegaurd data korup
+          
+          const linkId = `${link.source}-${link.target}`;
+          const isActive = activeLinks.has(linkId);
+          const isDimmed = (currentHighlight || nHoveredLink) && !isActive;
+
+          const midX = (s.x + t.x) / 2, midY = (s.y + t.y) / 2;
+          const dx = t.x - s.x, dy = t.y - s.y, dist = Math.sqrt(dx*dx + dy*dy);
+          const offset = dist * 0.15, cx = midX + (dy/dist)*offset, cy = midY - (dx/dist)*offset;
+          const dPath = `M ${s.x} ${s.y} Q ${cx} ${cy} ${t.x} ${t.y}`;
+
+          let strokeColor = isActive ? '#3b82f6' : (isDimmed ? '#e2e8f0' : '#cbd5e1');
+          let strokeWidth = isActive ? '3' : (isDimmed ? '1' : '1.5');
+          let opacity = isActive ? '1' : (isDimmed ? '0.2' : '0.6');
+          let dropShadow = isActive ? 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.5))' : 'none';
+          let textColorClass = isActive ? 'fill-blue-600 opacity-100' : (isDimmed ? 'opacity-0' : 'fill-slate-400 opacity-100');
+
+          svgContent += `
+              <g class="transition-svg">
+                  <path d="${dPath}" fill="none" stroke="transparent" stroke-width="20" class="cursor-pointer pointer-events-auto" onmouseover="handleLinkHover('${linkId}')" onmouseout="handleLinkLeave()"></path>
+                  <path id="path-${linkId}" d="${dPath}" fill="none" stroke="${strokeColor}" stroke-width="${strokeWidth}" opacity="${opacity}" style="filter: ${dropShadow};" class="transition-svg pointer-events-none"></path>
+                  <text class="text-[10px] font-medium transition-svg pointer-events-none ${textColorClass}">
+                      <textPath href="#path-${linkId}" startOffset="50%" text-anchor="middle">${link.label}</textPath>
+                  </text>
+              </g>`;
+      });
+
+      nexusNodesData.forEach(node => {
+          const cat = nexusCategories[node.category];
+          if(!cat) return;
+          const isTarget = currentHighlight === node.id;
+          const isActive = activeNodes.has(node.id);
+          const isDimmed = (currentHighlight || nHoveredLink) && !isActive;
+          
+          if (nSearchTerm && !(node.fullTitle || node.label).toLowerCase().includes(nSearchTerm.toLowerCase())) return;
+
+          const opacity = isDimmed ? '0.2' : '1';
+          const tw = node.label.length * 8 + 40, th = 32;
+
+          svgContent += `
+              <g transform="translate(${node.x}, ${node.y})" class="cursor-pointer transition-svg pointer-events-auto" style="opacity: ${opacity};" onmouseover="handleNodeHover('${node.id}')" onmouseout="handleNodeLeave()" onclick="handleNodeClick(event, '${node.id}')">
+                  <circle r="${isTarget ? 8 : 4}" fill="${cat.color}" class="transition-svg"></circle>
+                  <g transform="translate(15, -16)">
+                      <rect width="${tw}" height="${th}" rx="${th/2}" fill="white" stroke="${isTarget ? cat.color : '#e2e8f0'}" stroke-width="${isTarget ? 3 : 1}" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));" class="transition-svg"></rect>
+                      <rect width="${tw}" height="${th}" rx="${th/2}" fill="${isTarget ? cat.color : cat.bg}" opacity="${isTarget ? 1 : 0.8}" class="transition-svg"></rect>
+                      <text x="${tw/2}" y="${th/2 + 1}" text-anchor="middle" dominant-baseline="middle" class="text-[12px] font-bold select-none transition-svg" fill="${isTarget ? 'white' : '#334155'}">${node.label}</text>
+                  </g>
+              </g>`;
+      });
+
+      document.getElementById('graph-wrapper').innerHTML = svgContent;
+  }
+
+  // 5. RENDER SIDEBAR
+  function renderNexusSidebar() {
+      const selectedNodeData = nSelectedNode ? nexusNodesData.find(n => n.id === nSelectedNode) : null;
+      let htmlContent = '';
+
+      if (selectedNodeData) {
+          const cat = nexusCategories[selectedNodeData.category];
+          const connectedLinks = nexusLinksData.filter(l => l.source === nSelectedNode || l.target === nSelectedNode);
+          let linksHtml = connectedLinks.map(l => {
+              const targetId = l.source === nSelectedNode ? l.target : l.source;
+              const linkedNode = nexusNodesData.find(n => n.id === targetId);
+              return `
+                  <div class="group flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-blue-600 transition-all cursor-pointer" onclick="handleNodeClick(event, '${targetId}')">
+                      <div>
+                          <p class="text-[10px] font-bold text-slate-400 uppercase group-hover:text-blue-200">Kategori Sama: ${l.label}</p>
+                          <p class="font-bold text-slate-700 group-hover:text-white line-clamp-1">${linkedNode.fullTitle || linkedNode.label}</p>
+                      </div>
+                      <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform shadow-sm shrink-0">
+                          <i data-lucide="zap" class="w-3.5 h-3.5 fill-current"></i>
+                      </div>
+                  </div>`;
+          }).join('') || '<p class="text-xs text-slate-400 italic">Inovasi ini belum memiliki koneksi yang kuat dengan inovasi lain.</p>';
+
+          htmlContent = `
+              <div class="p-8 h-full flex flex-col overflow-y-auto no-scrollbar relative">
+                  <div class="w-full flex justify-center pb-4 md:hidden" onclick="window.handleNodeClick(event, '${nSelectedNode}')"><div class="w-12 h-1.5 bg-slate-200 rounded-full"></div></div>
+                  <div class="flex justify-between items-start mb-6">
+                      <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full" style="background-color: ${cat.bg}; color: ${cat.color}">${cat.name}</span>
+                      <button onclick="window.handleNodeClick(event, '${nSelectedNode}')" class="text-slate-400 hover:text-slate-800 transition-colors hidden md:block"><i data-lucide="x" class="w-6 h-6"></i></button>
+                  </div>
+                  <h2 class="text-2xl font-black text-slate-800 mb-4 leading-tight">${selectedNodeData.fullTitle || selectedNodeData.label}</h2>
+                  <p class="text-slate-500 leading-relaxed text-sm mb-8">${selectedNodeData.desc}</p>
+                  
+                  <button onclick="openModal('${selectedNodeData.id}')" class="w-full mb-8 bg-slate-900 text-white text-xs font-bold py-3.5 rounded-xl hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
+                      <i data-lucide="file-text" class="w-4 h-4"></i> Buka Full Report
+                  </button>
+
+                  <div class="space-y-6">
+                      <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2">Koneksi Ekosistem</h3>
+                      <div class="grid gap-3">${linksHtml}</div>
+                  </div>
+              </div>`;
+      } else {
+          // GLOBAL DASHBOARD MODE
+          let categoryHtml = Object.values(nexusCategories)
+              .sort((a,b) => b.count - a.count)
+              .map(cat => `
+              <div class="space-y-1">
+                  <div class="flex justify-between text-[10px] font-bold uppercase tracking-tighter"><span class="text-slate-500 truncate pr-2">${cat.name}</span><span style="color: ${cat.color}">${cat.count}%</span></div>
+                  <div class="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden"><div class="h-full rounded-full" style="width: ${cat.count}%; background-color: ${cat.color}"></div></div>
+              </div>`).join('');
+
+          // Ambil 3 inovasi acak untuk Trending Now (jika dari globalData)
+          let trendingHtml = '';
+          if (nexusNodesData.length > 3) {
+             trendingHtml = nexusNodesData.slice(0,3).map(item => `
+                 <div class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-100 shadow-sm cursor-pointer hover:border-blue-300 transition-colors" onclick="handleNodeClick(event, '${item.id}')">
+                     <div class="flex items-center gap-3 overflow-hidden">
+                         <div class="w-1.5 h-6 rounded-full shrink-0" style="background-color: ${nexusCategories[item.category].color}"></div>
+                         <span class="text-sm font-bold text-slate-700 truncate">${item.label}</span>
+                     </div>
+                     <span class="text-[10px] font-black text-blue-500 shrink-0 ml-2">Lihat</span>
+                 </div>
+             `).join('');
+          }
+
+          htmlContent = `
+              <div class="p-8 h-full flex flex-col overflow-y-auto no-scrollbar bg-slate-50/30 relative">
+                  <div class="w-full flex justify-center pb-4 md:hidden"><div class="w-12 h-1.5 bg-slate-200 rounded-full"></div></div>
+                  <div class="mb-8">
+                      <h2 class="text-2xl font-black text-slate-800 mb-1">Global Insight</h2>
+                      <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Ecosystem Overview</p>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4 mb-8">
+                      <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100"><i data-lucide="activity" class="text-blue-500 mb-2 w-5 h-5"></i><p class="text-[10px] font-bold text-slate-400 uppercase">Total Inovasi</p><p class="text-xl font-black text-slate-800">${nexusNodesData.length}</p></div>
+                      <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100"><i data-lucide="share-2" class="text-emerald-500 mb-2 w-5 h-5"></i><p class="text-[10px] font-bold text-slate-400 uppercase">Total Links</p><p class="text-xl font-black text-slate-800">${nexusLinksData.length}</p></div>
+                  </div>
+                  <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 mb-8">
+                      <div class="flex items-center justify-between mb-4"><h3 class="text-xs font-black text-slate-800 uppercase tracking-widest">Top Categories</h3><i data-lucide="bar-chart-3" class="w-4 h-4 text-slate-400"></i></div>
+                      <div class="space-y-4">${categoryHtml}</div>
+                  </div>
+                  <div class="space-y-4">
+                      <div class="flex items-center gap-2 mb-2 text-slate-800">
+                          <i data-lucide="trending-up" class="w-[18px] h-[18px]"></i>
+                          <h3 class="text-xs font-black uppercase tracking-widest">Sorotan Radar</h3>
+                      </div>
+                      ${trendingHtml}
+                  </div>
+              </div>`;
+      }
+      document.getElementById('right-panel').innerHTML = htmlContent;
+  }
 
   </script>
 </body>
