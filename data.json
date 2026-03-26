@@ -7974,5 +7974,340 @@
         "priority_score": 50,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "ba7b64c06559c493fbac019d2cc8181c",
+        "timestamp": "2026-03-26T01:57:46.115148",
+        "title": "Drone-Assisted Monitoring of Black-Footed Rock Wallabies",
+        "sources": [
+            "https://wildlifedrones.net/modern-technology-and-indigenous-knowledge/",
+            "https://www.itu.int/hub/2021/08/indigenous-led-tech-solutions-for-a-better-planet/"
+        ],
+        "summary": "The Nyikina Mangala Rangers in Western Australia are enhancing traditional ecological tracking methods by using drones equipped with thermal imaging cameras to monitor endangered black-footed rock wallabies in rugged and dangerous terrains.",
+        "category": [
+            "Wildlife Conservation",
+            "Indigenous Technology",
+            "Remote Sensing"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Australia",
+            "region": "Western Australia",
+            "lat": -25.2303005,
+            "lon": 121.0187246
+        },
+        "process": {
+            "how_it_works": "Traditional tracking knowledge is used to identify general habitats, while thermal-equipped drones provide high-resolution aerial data to detect heat signatures of animals in inaccessible areas.",
+            "materials_used": [
+                "Drones",
+                "Thermal imaging cameras",
+                "Camera traps"
+            ],
+            "step_by_step": [
+                "Identify animal presence through traditional tracking of footprints and scat",
+                "Deploy drones with thermal sensors to survey cliffs and wetlands",
+                "Analyze thermal data to pinpoint animal locations",
+                "Use aerial insights to place camera traps more effectively",
+                "Compile census data for species monitoring"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces physical risks to rangers from crocodiles and steep terrain while increasing the efficiency and accuracy of endangered species monitoring.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation utilizes standard drone technology to enhance traditional tracking methods. While lithium-ion batteries pose a minor fire hazard if damaged, the use of drones significantly reduces the physical safety risks to rangers who previously had to navigate crocodile-inhabited wetlands and steep cliffs. The technology is well-established and the application is for conservation purposes."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "fd440fb3a0dacdf9da19d78b49c6315b",
+        "timestamp": "2026-03-26T01:58:06.049170",
+        "title": "Data-Driven Cultural Burning",
+        "sources": [
+            "https://www.resilience.org/stories/2021-03-08/7-indigenous-technologies-changing-landscapes/",
+            "https://modis.gsfc.nasa.gov/",
+            "https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/v1-vnp14imgt",
+            "https://www.ibama.gov.br/prevfogo",
+            "https://www.nativeland.info/news/new-data-tools-for-fire-stewardship-on-native-lands/",
+            "https://www.esri.com/about/newsroom/blog/brazil-indigenous-fire-management-prevfogo/"
+        ],
+        "summary": "The integration of ancient indigenous 'cool burn' techniques with modern satellite imagery and mobile applications to proactively manage forest fuels and prevent catastrophic wildfires.",
+        "category": [
+            "Environmental Management",
+            "Indigenous Knowledge",
+            "Disaster Risk Reduction",
+            "GIS Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Australia and Brazil",
+            "region": "Various indigenous territories",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Indigenous fire brigades use real-time satellite data to monitor thermal activity and fuel accumulation. This data is cross-referenced with traditional knowledge of seasonal cycles to conduct low-intensity burns that clear underbrush without reaching the forest canopy.",
+            "materials_used": [
+                "Sisfogo mobile application",
+                "VIIRS satellite data",
+                "MODIS satellite data",
+                "GIS software",
+                "Traditional fire-starting tools"
+            ],
+            "step_by_step": [
+                "Monitor fuel load and thermal activity via VIIRS and MODIS satellite data",
+                "Input field observations into the Sisfogo app for real-time mapping",
+                "Analyze plant biology and seasonal cycles to determine the 'cool burn' window",
+                "Execute low-intensity controlled burns to clear undergrowth",
+                "Monitor the area to ensure the fire does not crown or damage the canopy"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Prevention of high-intensity catastrophic wildfires and restoration of local biodiversity.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "While the practice involves intentional fire, it is a controlled management strategy designed to reduce the risk of catastrophic wildfires. The integration of modern GIS and satellite monitoring (VIIRS/MODIS) provides significant safety oversight and precision, though fire always carries inherent risks to the immediate environment and personnel."
+        },
+        "priority_score": 66,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "fa9bca77a33c9ea6e30dc2fb17697ce0",
+        "timestamp": "2026-03-26T01:58:26.259940",
+        "title": "SIKU: Sea Ice Knowledge and Safety Platform",
+        "sources": [
+            "https://arcticeider.com",
+            "https://siku.org/about",
+            "https://siku.org",
+            "https://www.itu.int/hub/2021/08/indigenous-led-tech-solutions-for-a-better-planet/"
+        ],
+        "summary": "A hybrid safety platform that combines traditional Inuit knowledge (Inuit Qaujimajatuqangit) with modern technology, including IoT sensors, satellite imagery, and community-sourced reports, to help hunters navigate increasingly unpredictable sea ice caused by climate change.",
+        "category": [
+            "Climate Change Adaptation",
+            "Indigenous Knowledge",
+            "IoT",
+            "Mobile Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Canada",
+            "region": "Arctic / Inuit Nunangat",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The platform integrates real-time data from stationary and mobile ice sensors with satellite imagery and community reports into a mobile app, complementing traditional physical probing methods.",
+            "materials_used": [
+                "IoT ice sensors",
+                "Mobile smartphones",
+                "Snowmobiles",
+                "Satellite imagery",
+                "Harpoons (traditional probes)"
+            ],
+            "step_by_step": [
+                "Stationary sensors are placed in the ice to monitor thickness and snow cover.",
+                "Mobile sensors are towed behind snowmobiles to gather data during transit.",
+                "Hunters perform traditional visual and physical assessments using harpoons.",
+                "Sensor data and community observations are uploaded to the SIKU mobile app.",
+                "Satellite imagery is layered with local data to provide a comprehensive safety map.",
+                "Hunters use the integrated real-time data to make informed decisions about safe travel routes."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigates the risks of thinning and unpredictable sea ice for subsistence hunters due to climate change.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "environmental",
+                "safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a safety-enhancing platform that integrates IoT data with traditional knowledge to reduce the risk of accidents on thinning sea ice. The primary risks are environmental, which the technology aims to mitigate. Minor technical risks include potential sensor failure or battery depletion in extreme cold, but the overall impact is a significant improvement in safety for subsistence activities."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "68af4329129bdee81d20fc2a2a63a5fb",
+        "timestamp": "2026-03-26T01:58:46.235333",
+        "title": "Integration of Modern Laboratory Analysis in Traditional Chinese Medicine (TCM)",
+        "sources": [
+            "https://fullscript.com/blog/essential-lab-tests-for-acupuncturists",
+            "https://www.sgs.com/en/news/2012/05/chinese-medicine-testing-applying-modern-science-to-tradition"
+        ],
+        "summary": "TCM practitioners are modernizing ancient diagnostic frameworks by incorporating laboratory tests such as CBC and thyroid panels to validate traditional energetic patterns with objective physiological data, leading to more precise and safe treatments.",
+        "category": [
+            "Healthcare",
+            "Integrative Medicine",
+            "Biotechnology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "China",
+            "region": "Global",
+            "lat": 29.5619093,
+            "lon": 106.5741998
+        },
+        "process": {
+            "how_it_works": "Traditional diagnostic methods like pulse readings and energetic pattern identification are cross-referenced with modern clinical laboratory results to establish objective baselines and validate treatment efficacy.",
+            "materials_used": [
+                "Complete Blood Count (CBC) tests",
+                "Thyroid panels",
+                "Metabolic profiles",
+                "Traditional herbal remedies",
+                "Acupuncture equipment"
+            ],
+            "step_by_step": [
+                "Perform traditional TCM diagnosis focusing on energetic patterns and pulse readings.",
+                "Order modern laboratory tests including CBC, thyroid, and metabolic panels.",
+                "Cross-reference traditional findings (e.g., Qi deficiency) with objective lab results (e.g., iron-deficiency anemia).",
+                "Tailor traditional herbal or acupuncture treatments based on the integrated physiological data.",
+                "Use follow-up laboratory analysis to measure treatment efficacy and adjust protocols."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of objective baseline data in traditional medicine and the need for evidence-based validation of ancient diagnostic frameworks.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Medical Misinterpretation"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Integrating objective laboratory data into traditional diagnostic frameworks significantly enhances patient safety by providing measurable baselines and reducing the risk of misdiagnosing serious physiological conditions. The primary risk involves the potential for practitioners to interpret medical data outside their formal scope of clinical training, but the overall innovation represents a shift toward safer, evidence-based care."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "4db50af75b9b1718fe125986d05ce3bd",
+        "timestamp": "2026-03-26T01:59:07.540267",
+        "title": "Modernized Incan Terracing with Precision Irrigation",
+        "sources": [
+            "https://www.smithsonianmag.com/innovation/farming-like-incas-180947627/",
+            "https://www.bbc.com/travel/article/20200318-the-ancient-peruvian-farming-technique-making-a-comeback",
+            "https://www.greenly.co.in/how-ancient-water-conservation-techniques-can-be-modified-and-applied-in-current-trends/",
+            "https://www.computer.org/publications/tech-news/research/intersection-of-traditional-knowledge-and-modern-tech"
+        ],
+        "summary": "A hybrid agricultural system in the Andes that combines ancient Incan stone terracing with modern drip irrigation and soil moisture sensors. This synergy enhances water efficiency, prevents soil erosion, and uses data-driven insights to optimize crop yields in the face of climate change.",
+        "category": [
+            "Agriculture",
+            "Water Management",
+            "Climate Resilience"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Peru",
+            "region": "Andes",
+            "lat": -12.042622,
+            "lon": -75.1899082
+        },
+        "process": {
+            "how_it_works": "The system utilizes the structural benefits of traditional terraces for erosion control and microclimate management, while modern sensors and drip lines provide precise water delivery and real-time soil health monitoring.",
+            "materials_used": [
+                "Stone",
+                "Soil",
+                "Drip irrigation tubing",
+                "Soil moisture sensors",
+                "Data monitoring software"
+            ],
+            "step_by_step": [
+                "Restore or construct traditional stone terraces to manage slope stability and microclimates.",
+                "Install drip irrigation infrastructure across the terrace levels.",
+                "Place soil moisture sensors within the root zones of the crops.",
+                "Monitor sensor data to determine exact water requirements.",
+                "Deliver water directly to plants to minimize waste and optimize crop rotation based on soil health data."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Water scarcity, soil erosion, and unpredictable climate patterns in high-altitude farming.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation combines stable, time-tested traditional infrastructure with low-impact modern AgTech. The use of drip irrigation and soil sensors presents negligible physical or chemical risks. The only minor environmental consideration is the management of electronic waste and plastic piping, but the overall impact is highly positive for water conservation and soil stability."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
