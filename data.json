@@ -10733,5 +10733,346 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "1224f7b985649ed1fa066fc49ccb80bd",
+        "timestamp": "2026-03-27T12:00:05.542324",
+        "title": "Sack Gardening in Kibera",
+        "sources": [
+            "https://www.solidarites.org",
+            "https://borgenproject.org/urban-vertical-farming-in-nairobi-fighting-poverty-in-kenya/",
+            "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2025.1654777/full",
+            "https://www.verticalfarmdaily.com/article/9754321/kenya-using-vertical-growing-to-aid-informal-settlement-food-supplies/",
+            "https://una.city/nbs/nairobi/kiberas-vertical-farms",
+            "https://www.nys.go.ke"
+        ],
+        "summary": "A vertical farming technique developed in the Kibera slum of Nairobi where residents use burlap or plastic sacks filled with soil and organic waste to grow vegetables in extremely limited spaces, addressing food insecurity and land scarcity.",
+        "category": [
+            "Urban Agriculture",
+            "Food Security",
+            "Vertical Farming"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Nairobi (Kibera)",
+            "lat": -1.3346463,
+            "lon": 36.7683315
+        },
+        "process": {
+            "how_it_works": "It utilizes vertical space by planting crops in the sides and top of a soil-filled sack, allowing for high-density vegetable production in a very small footprint.",
+            "materials_used": [
+                "Burlap sacks",
+                "Plastic sacks",
+                "Soil",
+                "Organic waste",
+                "Seeds (kale, spinach, onions)"
+            ],
+            "step_by_step": [
+                "Fill large burlap or plastic sacks with a mixture of soil and organic waste.",
+                "Poke holes in the sides of the sacks at regular intervals.",
+                "Plant seedlings or seeds into the holes on the sides and into the top of the sack.",
+                "Position the sacks in narrow alleyways, along fences, or in small courtyards.",
+                "Water the sack from the top, allowing moisture to filter down through the soil to all plants."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Extreme food insecurity and the total lack of arable land in dense informal settlements.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Sack gardening is a safe and low-risk agricultural practice. The primary risks are minimal and relate to potential soil contamination from urban pollutants or the handling of organic waste without gloves. There are no chemical, fire, or explosion hazards associated with this innovation."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "abfcc730c68b01958a0570634e41834c",
+        "timestamp": "2026-03-27T12:00:24.258998",
+        "title": "Awesome Blossoms Project",
+        "sources": [
+            "https://www.fawco.org/global-issues/target-program/environment/awesome-blossoms-building-sustainable-life-in-nairobis-slums-through-hydroponic-farming",
+            "https://womengenderclimate.org/gfa-winner/awesome-blossoms-scaling-hydroponic-farming-through-land-ownership-in-kenya/"
+        ],
+        "summary": "A social enterprise in the Mathare slum that utilizes vertical hydroponic farming to empower women and youth, providing food security and funding for girls' education while using 80% less water than traditional agriculture.",
+        "category": [
+            "Urban Agriculture",
+            "Hydroponics",
+            "Social Entrepreneurship",
+            "Women's Empowerment",
+            "Climate Resilience"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Mathare slum, Nairobi",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The project uses vertical hydroponic systems to grow organic vegetables in urban environments like rooftops and schoolyards, requiring minimal water and no soil.",
+            "materials_used": [
+                "Vertical hydroponic systems",
+                "Water",
+                "Organic seeds",
+                "Rooftops",
+                "Schoolyards"
+            ],
+            "step_by_step": [
+                "Identify and prepare urban spaces such as rooftops or schoolyards",
+                "Install vertical hydroponic farming structures",
+                "Recruit and train local women and youth in hydroponic techniques and financial literacy",
+                "Cultivate and harvest organic vegetables using water-efficient methods",
+                "Distribute produce to the local community and school lunch programs",
+                "Reinvest profits into educational programs for girls"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses food insecurity, water scarcity in drought-prone regions, and economic barriers for women and youth in urban slums.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Structural Safety",
+                "Water Management"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project utilizes standard hydroponic farming techniques which are inherently low-risk. The primary concerns are the structural load-bearing capacity of rooftops in informal settlements and the safe management of water and nutrient solutions to prevent localized flooding or electrical hazards, both of which are manageable through the project's existing training and oversight programs."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "fad31aab8cc0db84d22d93ca406327be",
+        "timestamp": "2026-03-27T12:00:45.593598",
+        "title": "Low-cost Vertical Greening Prototypes from Recycled PET Bottles",
+        "sources": [
+            "https://academic.oup.com/jue/article/8/1/juac023/6726485",
+            "https://www.urbanet.info/vertical-gardens-combat-climate-change-within-african-cities/"
+        ],
+        "summary": "A sustainable green infrastructure project in Lagos informal settlements that repurposes discarded PET plastic bottles into vertical garden planters to mitigate urban heat and reduce plastic waste in drainage systems.",
+        "category": [
+            "Sustainability",
+            "Urban Planning",
+            "Waste Management",
+            "Climate Adaptation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nigeria",
+            "region": "Lagos",
+            "lat": 6.4550575,
+            "lon": 3.3941795
+        },
+        "process": {
+            "how_it_works": "Recycled PET bottles are repurposed as planters and mounted on vertical structures to create a cooling vegetation layer on building exteriors, reducing wall temperatures through natural shading and evapotranspiration.",
+            "materials_used": [
+                "Recycled PET plastic bottles",
+                "Timber lattices",
+                "HDPE pipes",
+                "Plants"
+            ],
+            "step_by_step": [
+                "Collect discarded PET plastic bottles from the community",
+                "Clean and repurpose the bottles into functional planters",
+                "Construct a support frame using timber lattices or HDPE pipes",
+                "Mount the bottle planters onto the support frame",
+                "Install the vertical wall on the exterior of housing units",
+                "Plant and maintain vegetation within the bottle units"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigates the urban heat island effect by lowering wall temperatures by up to 10°C and reduces plastic waste that causes drainage blockages and flooding.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing",
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation uses PET bottles, HDPE pipes, and timber lattices, all of which are flammable materials. In dense informal settlements, attaching these to the exterior of housing units increases the fire load and potential for rapid fire spread between structures. While the cooling and waste management benefits are significant, the fire risk in high-density areas warrants caution."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "5068b504a358a75fb25cb829f52a03e1",
+        "timestamp": "2026-03-27T12:01:10.807594",
+        "title": "Home Sweet Home (Lar Doce Lar) Vertical Gardens",
+        "sources": [
+            "https://gshow.globo.com/programas/caldeirao-com-mion/",
+            "https://www.rosenbaum.com.br/",
+            "https://www.thursd.com/articles/brazilian-homes-get-a-colorful-makeover-with-a-vertical-garden",
+            "https://www.goodnewsnetwork.org/gray-slums-of-brazil-turn-green-with-rooftop-garden-project-in-full-bloom/"
+        ],
+        "summary": "A collaborative social design project that utilizes recycled plastic bottles to create vertical gardens in cramped urban favelas, allowing residents to grow food and herbs in narrow walkways.",
+        "category": [
+            "Sustainable Design",
+            "Urban Farming",
+            "Upcycling",
+            "Social Innovation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Brazil",
+            "region": "Urban Favelas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Plastic soda bottles are repurposed into hanging planters and suspended in vertical columns to maximize growing space in narrow corridors.",
+            "materials_used": [
+                "Recycled plastic soda bottles (PET)",
+                "String or wire",
+                "Washers",
+                "Soil",
+                "Seeds or seedlings (herbs, spices, medicinal plants)"
+            ],
+            "step_by_step": [
+                "Collect and clean empty plastic soda bottles.",
+                "Cut a rectangular opening in the side of each bottle to serve as the planting area.",
+                "Punch two holes at the bottom and two at the top of each bottle for the suspension lines.",
+                "Thread the bottles together vertically using wire or string, securing each bottle's position with washers or knots.",
+                "Fill the bottles with soil and plant the desired herbs or spices.",
+                "Hang the vertical columns on exterior walls or along narrow walkways."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of green space and gardening area in dense low-income housing; food insecurity; air quality; plastic waste management.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Environmental",
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project uses recycled PET bottles and organic matter for gardening, which presents minimal inherent risk. Potential hazards are limited to structural failure of the hanging systems if not properly secured, or environmental risks such as mosquito breeding if drainage is inadequate. It is a low-tech, low-energy innovation suitable for residential use."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "c812dca3a742f23bdc9eb23cb8493938",
+        "timestamp": "2026-03-27T12:01:32.197020",
+        "title": "Vertical Gardens in MtshiniWam Re-blocking Project",
+        "sources": [
+            "https://sdinet.org/2012/10/re-blocking-in-mtshini-wam/",
+            "https://digital.wpi.edu/show/9019s520z",
+            "https://academic.oup.com/jue/article/8/1/juac023/6726485",
+            "https://www.isandla.org.za/"
+        ],
+        "summary": "Integration of vertical gardening systems into densified informal housing structures in Cape Town to maintain food security and green space during spatial restructuring (re-blocking). The project utilizes shack walls to provide socio-ecological infrastructure in high-density environments.",
+        "category": [
+            "Urban Agriculture",
+            "Social Infrastructure",
+            "Disaster Risk Reduction",
+            "Sustainable Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "South Africa",
+            "region": "Cape Town, MtshiniWam",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system utilizes the vertical exterior surfaces of newly positioned shacks to grow food and herbs, compensating for the loss of ground-level garden space caused by the densification required for fire-safe pathways.",
+            "materials_used": [
+                "Recycled containers",
+                "Simple shelving units",
+                "Soil",
+                "Vegetable seeds",
+                "Herbs",
+                "Brackets or fasteners"
+            ],
+            "step_by_step": [
+                "Identify suitable shack walls during the re-blocking layout phase",
+                "Install simple shelving or mounting brackets onto the shack siding",
+                "Prepare recycled containers with drainage and soil",
+                "Plant vegetables and herbs suitable for vertical growth",
+                "Conduct community training sessions on maintenance and irrigation",
+                "Establish a routine for harvesting and replanting"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Loss of green space and food production areas during urban densification; high fire risk; psychological stress in high-density settlements.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Environmental",
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a low-tech urban agriculture project. Potential risks are minimal, primarily involving the structural stability of shelving attached to informal housing and the potential for recycled containers to leach chemicals if not properly sourced. The project is integrated into a larger safety initiative (re-blocking) designed to reduce fire hazards and improve emergency access."
+        },
+        "priority_score": 52,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]

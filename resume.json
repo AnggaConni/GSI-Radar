@@ -1,0 +1,242 @@
+[
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-27T12:01:55.149124",
+            "period": "Q1 2026",
+            "total_records_analyzed": 166
+        },
+        "global_summary": {
+            "total_innovations": 166,
+            "grassroots_percentage": 44.58,
+            "institutional_percentage": 30.72,
+            "semi_formal_percentage": 24.7
+        },
+        "top_categories": [
+            {
+                "category": "Waste Management & Upcycling",
+                "count": 24,
+                "trend": "increasing"
+            },
+            {
+                "category": "Sustainable Agriculture & Food Security",
+                "count": 18,
+                "trend": "stable"
+            },
+            {
+                "category": "Renewable Energy & Biogas",
+                "count": 15,
+                "trend": "increasing"
+            },
+            {
+                "category": "Water & Sanitation",
+                "count": 14,
+                "trend": "stable"
+            },
+            {
+                "category": "Healthcare & Diagnostics",
+                "count": 11,
+                "trend": "increasing"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Southeast Asia (Indonesia/Philippines)",
+                "key_pattern": "Integration of maritime technology with seaweed-based circular economy and disaster resilience.",
+                "risk_level": "low"
+            },
+            {
+                "region": "East Africa (Kenya/Uganda/Tanzania)",
+                "key_pattern": "Frugal engineering focusing on automotive modernization, e-waste repurposing, and decentralized energy.",
+                "risk_level": "high"
+            },
+            {
+                "region": "Latin America (Haiti/Colombia/Argentina)",
+                "key_pattern": "Social innovation through alternative currencies and plastic-waste-to-housing initiatives.",
+                "risk_level": "medium"
+            },
+            {
+                "region": "Oceania (Australia/New Zealand)",
+                "key_pattern": "Hybridization of Indigenous Traditional Knowledge (ITK) with AI, Drones, and Cryopreservation.",
+                "risk_level": "low"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 11,
+            "critical_cases": 11,
+            "top_risk_types": [
+                "Fire Hazard",
+                "Explosion",
+                "Toxic Fumes",
+                "Pathogen Exposure"
+            ],
+            "emerging_risks": [
+                "DIY modifications to internal combustion engines (ECU/Fuel systems) without safety certification.",
+                "Methane accumulation in unpressurized scrap-built biogas digesters.",
+                "Toxic off-gassing from melting non-standardized plastic waste for construction.",
+                "Heavy metal leaching from e-waste components repurposed into classroom tools."
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Waste-to-Infrastructure",
+                "description": "Repurposing PET bottles, wind turbine blades, and plastic sachets into schools, furniture, and paving bricks.",
+                "regions": [
+                    "Nigeria",
+                    "Guatemala",
+                    "Kenya",
+                    "Netherlands",
+                    "USA"
+                ],
+                "risk_level": "medium"
+            },
+            {
+                "pattern_name": "Frugal Medical Diagnostics",
+                "description": "Using paper, string, and salvaged lenses to create high-speed centrifuges and microscopes for off-grid clinics.",
+                "regions": [
+                    "USA",
+                    "India",
+                    "Mexico"
+                ],
+                "risk_level": "low"
+            },
+            {
+                "pattern_name": "Alternative Economic Resilience",
+                "description": "Grassroots barter networks and mutual credit systems emerging as survival mechanisms during financial collapse.",
+                "regions": [
+                    "Argentina",
+                    "Greece",
+                    "Venezuela",
+                    "Italy"
+                ],
+                "risk_level": "low"
+            },
+            {
+                "pattern_name": "Hybrid Indigenous Tech",
+                "description": "Combining ancestral land management and tracking with AI, IoT, and satellite data.",
+                "regions": [
+                    "Brazil",
+                    "Australia",
+                    "Canada",
+                    "Peru"
+                ],
+                "risk_level": "low"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "Paperfuge",
+                "country": "Global (Origin USA)",
+                "reason": "Achieves 125,000 RPM using only paper and string; revolutionary for off-grid blood diagnostics."
+            },
+            {
+                "title": "Sack Gardening",
+                "country": "Kenya",
+                "reason": "Zero-footprint vertical farming in dense slums; highly scalable for urban food deserts."
+            },
+            {
+                "title": "Bank Sampah",
+                "country": "Indonesia",
+                "reason": "Converts sorted waste into a formal banking currency, driving both sanitation and financial inclusion."
+            },
+            {
+                "title": "Raghav FM",
+                "country": "India",
+                "reason": "A functional radio station built for less than $1 using scrap; vital for rural information dissemination."
+            },
+            {
+                "title": "Milpa System",
+                "country": "Mexico/Guatemala",
+                "reason": "Ancient polyculture that remains one of the most sustainable and nutritionally complete farming methods."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "regulation",
+                "target": "DIY Automotive & Energy Systems",
+                "priority_level": "high",
+                "justification": "Innovations like the Voltarent ECU and DIY Biogas plants show high impact but pose lethal fire/explosion risks without standardized safety valves or testing."
+            },
+            {
+                "type": "funding",
+                "target": "Seaweed & Mycelium Materials",
+                "priority_level": "medium",
+                "justification": "Institutional bioplastic and construction projects in Indonesia and Kenya are ready for scale but require capital for industrial extrusion equipment."
+            },
+            {
+                "type": "training",
+                "target": "E-waste Repurposing Safety",
+                "priority_level": "high",
+                "justification": "STEM initiatives using e-waste in Nigeria and Zambia risk exposing students to lead and mercury without proper dismantling protocols."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "shifting",
+            "observation": "There is a rapid shift from 'purely traditional' knowledge to 'hybrid' models where ancestral practices (terracing, tracking, fire management) are augmented by IoT, AI, and Drones."
+        },
+        "recommendations": [
+            "Establish a 'Frugal Safety Certification' for grassroots energy projects to provide low-cost safety valves and flame arrestors.",
+            "Integrate barter network protocols into disaster management frameworks for economic resilience during currency volatility.",
+            "Standardize the '0km building' philosophy seen in 3D earth printing (TECLA) for rapid humanitarian housing.",
+            "Create a global repository for 'Open Source Prosthetics' to unify e-NABLE and Victoria Hand Project efforts.",
+            "Incentivize the repurposing of industrial composite waste (wind blades) through urban infrastructure tax credits."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Africa",
+                    "count": 34
+                },
+                {
+                    "region": "Asia",
+                    "count": 22
+                },
+                {
+                    "region": "Americas",
+                    "count": 21
+                },
+                {
+                    "region": "Europe",
+                    "count": 10
+                },
+                {
+                    "region": "Oceania",
+                    "count": 5
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "High",
+                    "count": 11
+                },
+                {
+                    "level": "Medium",
+                    "count": 57
+                },
+                {
+                    "level": "Low",
+                    "count": 98
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "Adapted from Existing",
+                    "count": 42
+                },
+                {
+                    "source": "Traditional",
+                    "count": 22
+                },
+                {
+                    "source": "Formal Education",
+                    "count": 18
+                },
+                {
+                    "source": "Self-Taught",
+                    "count": 10
+                }
+            ]
+        }
+    }
+]
