@@ -177,10 +177,18 @@
         </div>
         <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
 
+          <div class="flex flex-col sm:flex-row flex-wrap gap-3 w-full md:w-auto">
+
             <!-- TAMBAHAN BARU: FILTER NEGARA -->
           <select id="filter-country" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
             <option value="all">All Countries</option>
           </select>
+
+          <!-- TAMBAHAN BARU: FILTER KATEGORI -->
+          <select id="filter-category" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
+            <option value="all">All Categories</option>
+          </select>
+
           <select id="filter-level" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
             <option value="all">All Innovation Levels</option>
             <option value="grassroots">Grassroots</option>
@@ -198,6 +206,7 @@
             <option value="newest">Newest First</option>
             <option value="oldest">Oldest First</option>
           </select>
+          </div>
         </div>
       </div>
       <div id="inventory-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
@@ -429,6 +438,8 @@
           <div class="flex items-center gap-2 mb-1 flex-wrap" id="modal-badges"></div>
           <h3 class="font-serif font-bold text-xl sm:text-2xl text-slate-900 pr-4 leading-tight" id="modal-title">Element Name</h3>
           <p class="text-xs sm:text-sm text-slate-500 mt-1 flex items-center gap-1"><i class="ph-fill ph-map-pin"></i> <span id="modal-location">Location</span></p>
+          <!-- TAMBAHAN BARU: WADAH KATEGORI DI MODAL -->
+          <div id="modal-categories" class="flex flex-wrap gap-1.5 mt-3"></div>
         </div>
         <div class="flex items-center gap-2 shrink-0">
           <button onclick="printCardPDF()" class="text-slate-500 hover:text-unesco-blue transition-colors bg-white border border-slate-200 shadow-sm hover:shadow p-2 rounded-full" title="Export PDF"><i class="ph ph-printer text-lg sm:text-xl"></i></button>
@@ -741,6 +752,23 @@
   });
 }
 
+function populateCategoryFilter() {
+    const select = document.getElementById('filter-category');
+    // Gabungkan semua array kategori dari seluruh data, ambil yang unik, lalu urutkan A-Z
+    const allCategories = globalData.reduce((acc, item) => {
+      if (item.category && Array.isArray(item.category)) acc.push(...item.category);
+      return acc;
+    }, []);
+    const uniqueCategories = [...new Set(allCategories)].sort();
+    
+    uniqueCategories.forEach(cat => {
+      const option = document.createElement('option');
+      option.value = cat;
+      option.textContent = cat;
+      select.appendChild(option);
+    });
+  }
+
   // ═══════════════════════════════════════════════════════
   //  INIT
   // ═══════════════════════════════════════════════════════
@@ -768,6 +796,7 @@
     globalData.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
     renderStats();
     populateCountryFilter(); 
+    populateCategoryFilter();
     setupFilters();
     applyFilters();
     
@@ -937,20 +966,22 @@
   function changePageSize(size) { itemsPerPage = parseInt(size,10); currentPage = 1; renderGrid(filteredData); }
   
   function setupFilters() {
-    ['filter-level', 'filter-risk', 'sort-order', 'filter-country'].forEach(id => document.getElementById(id).addEventListener('change', () => { currentPage=1; applyFilters(); }));
+    ['filter-level', 'filter-risk', 'sort-order', 'filter-country', 'filter-category'].forEach(id => document.getElementById(id).addEventListener('change', () => { currentPage=1; applyFilters(); }));
   }
   
 function applyFilters() {
     const level = document.getElementById('filter-level').value;
     const risk = document.getElementById('filter-risk').value;
     const sort = document.getElementById('sort-order').value;
-    const country = document.getElementById('filter-country').value; 
+    const country = document.getElementById('filter-country').value;
+    const category = document.getElementById('filter-category').value; 
 
     // TAMBAHKAN BARIS INI: Ambil semua data sebelum di-filter
     let res = [...globalData];
 
     // Sekarang lakukan proses filter
     if (country !== 'all') res = res.filter(i => i.location?.country === country);
+    if (category !== 'all') res = res.filter(i => i.category && i.category.includes(category));
     if (level !== 'all') res = res.filter(i => i.innovation_level === level);
     if (risk !== 'all') res = res.filter(i => { 
       const s = i.risk_assessment?.risk_score||0; 
@@ -1008,6 +1039,10 @@ function applyFilters() {
     document.getElementById('modal-badges').innerHTML = bHtml;
     document.getElementById('modal-title').innerText = item.title;
     document.getElementById('modal-location').innerText = `${item.location?.country||'Global'} (${item.location?.region||'-'})`;
+    const categories = item.category ||[];
+    document.getElementById('modal-categories').innerHTML = categories.length 
+        ? categories.map(c => `<span class="bg-blue-50 text-unesco-blue border border-blue-100 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider shadow-sm">${c}</span>`).join('') 
+        : '<span class="text-xs text-slate-400 italic">No category</span>';
     document.getElementById('modal-summary').innerText = item.summary || '-';
     document.getElementById('modal-impact').innerText = item.impact?.problem_solved || '-';
     const origins = item.origin?.knowledge_source || [];
