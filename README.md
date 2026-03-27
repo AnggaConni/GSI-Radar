@@ -8,7 +8,6 @@
 [![GitHub Actions](https://img.shields.io/badge/Automated-GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/features/actions)
 [![Powered by Gemini](https://img.shields.io/badge/AI-Gemini_2.5_Flash-4285F4?style=flat-square&logo=google&logoColor=white)](https://aistudio.google.com)
 [![Live on GitHub Pages](https://img.shields.io/badge/Dashboard-GitHub_Pages-222222?style=flat-square&logo=github&logoColor=white)](https://pages.github.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Data Updated](https://img.shields.io/badge/Data_Interval-Every_2_Days-00ffcc?style=flat-square)](#-schedule--automation)
 
 *Built for those who innovate quietly — before the world notices.*
