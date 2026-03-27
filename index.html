@@ -176,6 +176,11 @@
           <span class="font-semibold text-sm">Refine Results</span>
         </div>
         <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+
+            <!-- TAMBAHAN BARU: FILTER NEGARA -->
+          <select id="filter-country" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
+            <option value="all">All Countries</option>
+          </select>
           <select id="filter-level" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
             <option value="all">All Innovation Levels</option>
             <option value="grassroots">Grassroots</option>
@@ -721,6 +726,22 @@
   let resumeCharts = {};
 
   // ═══════════════════════════════════════════════════════
+  //  Country Filter Population
+  // ═══════════════════════════════════════════════════════
+    function populateCountryFilter() {
+  const select = document.getElementById('filter-country');
+  // Ambil semua nama negara yang unik dari data, buang yang kosong, lalu urutkan sesuai abjad A-Z
+  const countries =[...new Set(globalData.map(item => item.location?.country).filter(Boolean))].sort();
+  
+  countries.forEach(country => {
+    const option = document.createElement('option');
+    option.value = country;
+    option.textContent = country;
+    select.appendChild(option);
+  });
+}
+
+  // ═══════════════════════════════════════════════════════
   //  INIT
   // ═══════════════════════════════════════════════════════
   // Tambahkan variabel global baru di bagian atas state
@@ -746,6 +767,7 @@
 
     globalData.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
     renderStats();
+    populateCountryFilter(); 
     setupFilters();
     applyFilters();
     
@@ -913,19 +935,37 @@
   }
   function changePage(dir) { currentPage += dir; renderGrid(filteredData); document.getElementById('view-directory').scrollIntoView({behavior:'smooth',block:'start'}); }
   function changePageSize(size) { itemsPerPage = parseInt(size,10); currentPage = 1; renderGrid(filteredData); }
+  
   function setupFilters() {
-    ['filter-level','filter-risk','sort-order'].forEach(id => document.getElementById(id).addEventListener('change', () => { currentPage=1; applyFilters(); }));
+    ['filter-level', 'filter-risk', 'sort-order', 'filter-country'].forEach(id => document.getElementById(id).addEventListener('change', () => { currentPage=1; applyFilters(); }));
   }
-  function applyFilters() {
+  
+function applyFilters() {
     const level = document.getElementById('filter-level').value;
     const risk = document.getElementById('filter-risk').value;
     const sort = document.getElementById('sort-order').value;
+    const country = document.getElementById('filter-country').value; 
+
+    // TAMBAHKAN BARIS INI: Ambil semua data sebelum di-filter
     let res = [...globalData];
-    if(level !== 'all') res = res.filter(i => i.innovation_level === level);
-    if(risk !== 'all') res = res.filter(i => { const s = i.risk_assessment?.risk_score||0; if(risk==='high') return s>=8; if(risk==='medium') return s>=4&&s<=7; if(risk==='low') return s<=3; return true; });
+
+    // Sekarang lakukan proses filter
+    if (country !== 'all') res = res.filter(i => i.location?.country === country);
+    if (level !== 'all') res = res.filter(i => i.innovation_level === level);
+    if (risk !== 'all') res = res.filter(i => { 
+      const s = i.risk_assessment?.risk_score||0; 
+      if(risk==='high') return s>=8; 
+      if(risk==='medium') return s>=4&&s<=7; 
+      if(risk==='low') return s<=3; 
+      return true; 
+    });
+
+    // Logika pengurutan (Sorting)
     if(sort==='newest') res.sort((a,b) => new Date(b.timestamp)-new Date(a.timestamp));
     if(sort==='oldest') res.sort((a,b) => new Date(a.timestamp)-new Date(b.timestamp));
     if(sort==='priority') res.sort((a,b) => (b.priority_score||0)-(a.priority_score||0));
+    
+    // Terapkan ke tampilan
     filteredData = res;
     renderGrid(filteredData);
     if(map) { drawMapElements(); renderGlobalCharts(); }
