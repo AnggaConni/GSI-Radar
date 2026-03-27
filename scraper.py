@@ -588,8 +588,24 @@ def generate_intelligence_report(api_key, database):
     new_report = call_gemini_with_retry(api_key, prompt, sys_prompt, expect_json=True)
 
     if new_report:
-        # ✅ PAKSA jumlah record agar sesuai dengan kenyataan di database
-        new_report["report_metadata"]["total_records_analyzed"] = len(database)
+        total_records = len(database)
+        
+        # 1. Hitung manual dengan Python agar 100% akurat
+        grass_count = sum(1 for x in database if x.get("innovation_level") == "grassroots")
+        semi_count = sum(1 for x in database if x.get("innovation_level") == "semi-formal")
+        inst_count = sum(1 for x in database if x.get("innovation_level") == "institutional")
+
+        # 2. Paksa (override) hasil halusinasi matematika AI
+        new_report["report_metadata"]["total_records_analyzed"] = total_records
+        
+        if "global_summary" not in new_report:
+            new_report["global_summary"] = {}
+            
+        new_report["global_summary"]["total_innovations"] = total_records
+        new_report["global_summary"]["grassroots_percentage"] = round((grass_count / total_records) * 100, 2) if total_records > 0 else 0
+        new_report["global_summary"]["semi_formal_percentage"] = round((semi_count / total_records) * 100, 2) if total_records > 0 else 0
+        new_report["global_summary"]["institutional_percentage"] = round((inst_count / total_records) * 100, 2) if total_records > 0 else 0
+
         new_report["report_metadata"]["generated_at"] = datetime.now().isoformat()
         new_report["report_metadata"]["period"] = quarter
         
