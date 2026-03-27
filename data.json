@@ -10400,5 +10400,338 @@
         "priority_score": 70,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "3231c5b6de7c8d9eb4801d25cceabd86",
+        "timestamp": "2026-03-27T10:36:30.466667",
+        "title": "Paperfuge",
+        "sources": [
+            "https://prakashlab.stanford.edu/",
+            "https://prakashlab.stanford.edu/paperfuge",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5444388/",
+            "https://physicsworld.com/a/ultra-low-cost-hand-powered-centrifuge-is-inspired-by-whirligig-toy/",
+            "https://www.nature.com/articles/s41551-016-0009"
+        ],
+        "summary": "An ultra-low-cost, hand-powered centrifuge made of paper and string that can reach speeds of 125,000 rpm, designed for medical diagnostics in resource-limited settings.",
+        "category": [
+            "Medical Devices",
+            "Diagnostics",
+            "Frugal Innovation",
+            "Global Health"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "USA",
+            "region": "California",
+            "lat": 36.7014631,
+            "lon": -118.755997
+        },
+        "process": {
+            "how_it_works": "It utilizes the mechanics of a whirligig toy, where a central disc is spun by pulling and releasing strings threaded through its center, converting linear motion into high-speed rotation.",
+            "materials_used": [
+                "Paper",
+                "String",
+                "Plastic capillary tubes",
+                "Adhesive tape",
+                "Wood or plastic for handles"
+            ],
+            "step_by_step": [
+                "Load the biological sample into small plastic capillary tubes.",
+                "Seal the tubes to prevent leakage during rotation.",
+                "Secure the tubes onto the circular paper disc using adhesive.",
+                "Thread the string through the two holes in the center of the disc.",
+                "Hold the handles and pull the strings outward and then relax them rhythmically to initiate and maintain high-speed spinning."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Enables blood separation and disease diagnosis in off-grid, rural clinics where expensive, electricity-dependent centrifuges are unavailable.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing",
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "biological",
+                "mechanical"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The device operates at extremely high rotational speeds (125,000 rpm), which poses a mechanical risk if the sample tubes or the paper structure fail. Additionally, because it is used to process infectious blood samples (malaria, etc.), any leakage or breakage during operation presents a significant biohazard risk to the user. However, as a validated medical tool for resource-poor settings, the risks are managed through design and intended use protocols."
+        },
+        "priority_score": 76,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "7301d7f58d014ea838959963e147b8bb",
+        "timestamp": "2026-03-27T10:36:59.438421",
+        "title": "Pumani Bubble CPAP (bCPAP)",
+        "sources": [
+            "https://www.who.int/news-room/feature-stories/detail/pumani-bubble-cpap-a-lifeline-for-newborns-in-malawi",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6751639/",
+            "https://www.hadleighhealthtechnologies.com/pumani-bubble-cpap",
+            "https://autm.net/about-tech-transfer/better-world-project/bwp-stories/pumani-bubble-cpap",
+            "https://www.unicef.org/innovation/stories/pumani-bubble-cpap",
+            "https://www.rice360.rice.edu/pumani-bubble-cpap"
+        ],
+        "summary": "A low-cost, rugged respiratory support device designed for newborns with respiratory distress syndrome in low-resource settings, utilizing simple components like aquarium pumps to provide therapeutic air pressure.",
+        "category": [
+            "Healthcare",
+            "Medical Technology",
+            "Neonatal Care"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Malawi",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The device uses aquarium pumps to deliver a continuous flow of air and oxygen to a newborn, while a water column serves as a pressure regulator to ensure the lungs remain open.",
+            "materials_used": [
+                "Aquarium pumps",
+                "Water column",
+                "Plastic tubing",
+                "Nasal prongs",
+                "Air-oxygen blender"
+            ],
+            "step_by_step": [
+                "The aquarium pumps generate a steady flow of air.",
+                "The air is blended with oxygen to reach the required concentration.",
+                "The pressurized air is delivered to the infant through nasal prongs.",
+                "The expiratory tube is submerged in a water column, where the depth of the water determines the pressure level (bubble CPAP principle).",
+                "The bubbling action provides oscillations that help with gas exchange in the infant's lungs."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High neonatal mortality due to respiratory distress syndrome in hospitals where traditional $6,000 CPAP machines are unaffordable or too fragile to maintain.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Pumani bCPAP is a validated medical device designed for low-resource settings. While it involves patient care, the physical risks such as fire, explosion, or toxic exposure are extremely low. The primary risks are clinical (e.g., proper training for healthcare staff and maintenance), but the device has been proven safe and effective in large-scale national rollouts."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "54f34a243c80cdbd51eb20a5ad6e9445",
+        "timestamp": "2026-03-27T10:37:18.016651",
+        "title": "Foldscope",
+        "sources": [
+            "https://www.foldscope.com/",
+            "https://prakashlab.stanford.edu",
+            "https://www.foldscope.com",
+            "https://www.researchgate.net/publication/342934443_Foldscope_Microscope_An_Inexpensive_Tool_for_Screening_Various_Biological_Samples",
+            "https://www.mddionline.com/news/foldscope-little-microscope-could",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4601445/"
+        ],
+        "summary": "An ultra-affordable, origami-based optical microscope made from paper and a single lens, designed to provide high-resolution diagnostics and science education in resource-limited environments.",
+        "category": [
+            "Medical Diagnostics",
+            "Frugal Science",
+            "Education",
+            "Microscopy"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "India",
+            "region": "Rural areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "It utilizes origami-based folding principles to align a single spherical lens with a sample, providing over 2,000x magnification and sub-micron resolution without external power.",
+            "materials_used": [
+                "Flat sheet of paper",
+                "Spherical lens"
+            ],
+            "step_by_step": [
+                "Start with a flat sheet of pre-cut paper",
+                "Fold the paper according to origami instructions to create the microscope body",
+                "Insert and align the single spherical lens",
+                "Complete assembly in under 10 minutes"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable and durable diagnostic tools for identifying blood-borne pathogens and parasites in remote or low-resource areas.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "biological"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Foldscope is a passive, non-electronic optical tool made of paper and a lens. It poses no inherent fire, explosion, or chemical risk. The only potential risk involves the handling of biological specimens (pathogens) by the operator, which is a procedural risk rather than a risk inherent to the innovation's design or materials."
+        },
+        "priority_score": 64,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "cdf42866f9c101350376ac8c12913886",
+        "timestamp": "2026-03-27T10:37:38.588546",
+        "title": "EzeCheck",
+        "sources": [
+            "https://mashelkarfoundation.org/ezecheck/",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11617121/",
+            "https://ezerx.in/ezecheck",
+            "https://ezerx.in/",
+            "https://samridhimpact.com/ezerx-health-tech-private-limited/"
+        ],
+        "summary": "A non-invasive, portable, and blood-free hemoglobinometer that uses absorbent spectrometry to measure hemoglobin levels via a finger-clip sensor, designed for rapid and affordable anemia screening in rural areas.",
+        "category": [
+            "Healthcare",
+            "Medical Technology",
+            "Diagnostics"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "India",
+            "region": "Multiple states",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The device utilizes absorbent spectrometry to measure hemoglobin concentration through the skin using a finger-clip sensor, transmitting data via IoT for instant results.",
+            "materials_used": [
+                "Finger-clip sensor",
+                "Spectrometry module",
+                "IoT-enabled hardware",
+                "Rechargeable battery"
+            ],
+            "step_by_step": [
+                "The patient's finger is placed inside the clip sensor.",
+                "The device uses light-based spectrometry to analyze blood components without a puncture.",
+                "Data is processed by the internal software or synced via IoT.",
+                "Results are provided in less than one minute."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the need for needles and sterile lab environments for anemia screening, reducing costs and overcoming the fear of invasive testing in rural populations.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "EzeCheck is a non-invasive medical device that eliminates the physical risks associated with traditional blood testing, such as needle-stick injuries, infections, and biohazardous waste. The primary risks are minimal, involving standard lithium-ion battery safety and electronic waste management. It is a high-safety innovation for public health screening."
+        },
+        "priority_score": 68,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "6b250954f12f8fefd52946355cc73df6",
+        "timestamp": "2026-03-27T10:38:02.947876",
+        "title": "mChip (Mobile Microfluidic Chip)",
+        "sources": [
+            "https://en.wikipedia.org/wiki/MChip",
+            "https://engineering.columbia.edu/",
+            "https://www.columbia.edu/content/news/portable-diagnostic-tool-saving-rural-lives",
+            "https://www.nature.com/articles/nm.2408",
+            "https://www.voanews.com/a/new-portable-device-diagnoses-hiv-syphilis-126588283/167667.html"
+        ],
+        "summary": "A credit-card-sized diagnostic tool that uses microfluidics to perform complex laboratory-grade blood tests like ELISA for HIV and syphilis in remote, resource-limited settings.",
+        "category": [
+            "Healthcare",
+            "Biotechnology",
+            "Diagnostics"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Rwanda",
+            "region": "East Africa",
+            "lat": 8.9965187,
+            "lon": 38.7780476
+        },
+        "process": {
+            "how_it_works": "The device replicates the Enzyme-Linked Immunosorbent Assay (ELISA) on a microscale using microfluidics to detect specific antibodies or antigens in a blood sample.",
+            "materials_used": [
+                "Disposable plastic chip",
+                "Microfluidic reagents",
+                "Battery-powered handheld reader"
+            ],
+            "step_by_step": [
+                "Collect a single drop of blood from a patient's finger prick.",
+                "Apply the blood sample to the inlet of the disposable mChip.",
+                "Insert the chip into the battery-powered handheld reader device.",
+                "Wait 15 minutes for the microfluidic channels to process the sample and reagents.",
+                "Read the diagnostic results directly from the handheld device."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the need for expensive laboratory infrastructure and long travel distances for diagnostic testing, allowing for immediate treatment of HIV and syphilis.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Biohazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The mChip is a professionally developed medical diagnostic tool from an academic institution. The primary risk involves the handling of human blood samples (biohazard), which is standard for clinical diagnostics. The microfluidic design uses minute quantities of reagents, minimizing chemical exposure, and the device is engineered for safe use in low-resource settings."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
