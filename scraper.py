@@ -1,6 +1,6 @@
 """
 =======================================================================
-  INNOVATION RADAR v1.1 — Global Intelligence Engine
+  INNOVATION RADAR v1.3 — Global Intelligence Engine
   AI Engine : Google Gemini 2.5 Flash
   Mode      : Multi-Schedule Tracker (Data = 2 Days, Resume = 3 Months)
   Feature   : Append-Only DB, Smart Execution, Independent Force Crawl
@@ -608,6 +608,29 @@ def generate_intelligence_report(api_key, database):
 
         new_report["report_metadata"]["generated_at"] = datetime.now().isoformat()
         new_report["report_metadata"]["period"] = quarter
+
+        # ==========================================
+        # PERBAIKAN 2: PAKSA HITUNGAN RISK ANALYSIS
+        # ==========================================
+        high_risk_count = sum(1 for x in database if x.get("risk_assessment", {}).get("risk_score", 0) >= 8)
+        medium_risk_count = sum(1 for x in database if 4 <= x.get("risk_assessment", {}).get("risk_score", 0) <= 7)
+        low_risk_count = sum(1 for x in database if x.get("risk_assessment", {}).get("risk_score", 0) <= 3)
+        critical_count = sum(1 for x in database if x.get("critical_flag") == True)
+
+        # Timpa angka di panel atas Risk Analysis
+        if "risk_analysis" not in new_report:
+            new_report["risk_analysis"] = {}
+        new_report["risk_analysis"]["high_risk_cases"] = high_risk_count
+        new_report["risk_analysis"]["critical_cases"] = critical_count
+
+        # Timpa angka di diagram batang (Bar Chart)
+        if "charts" not in new_report:
+            new_report["charts"] = {}
+        new_report["charts"]["risk_distribution"] =[
+            {"level": "High", "count": high_risk_count},
+            {"level": "Medium", "count": medium_risk_count},
+            {"level": "Low", "count": low_risk_count}
+        ]
         
         # Load data lama
         resume_db = load_json_file(RESUME_FILE, [])
