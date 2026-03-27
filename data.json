@@ -8314,12 +8314,12 @@
         "id": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c",
         "timestamp": "2026-03-27T15:20:00.000000",
         "title": "Biopore Infiltration Holes (Lubang Resapan Biopori)",
-        "sources":[
+        "sources": [
             "https://en.wikipedia.org/wiki/Biopore_infiltration_hole",
             "https://www.biopori.com/"
         ],
         "summary": "A simple and ecologically sound method developed in Indonesia to prevent flooding and produce compost. It involves digging narrow, cylindrical holes into the soil, filling them with organic waste to feed soil fauna, which in turn creates interconnected biopores that dramatically increase the soil's water absorption capacity.",
-        "category":[
+        "category": [
             "Water Management",
             "Waste Management",
             "Disaster Risk Reduction",
@@ -8334,12 +8334,12 @@
         },
         "process": {
             "how_it_works": "A cylindrical hole (10-30 cm diameter, ~100 cm deep) is dug and filled with organic waste. The waste nourishes earthworms and other soil fauna, which burrow into the surrounding soil, creating 'biopores'. These micro-tunnels rapidly channel rainwater into the aquifer, reducing surface runoff and mitigating floods.",
-            "materials_used":[
+            "materials_used": [
                 "Manual soil auger (bor tanah)",
                 "Organic waste (leaves, food scraps)",
                 "PVC pipe offcut or wire mesh (for casing the top)"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Select a location where rainwater naturally flows or pools.",
                 "Use a manual soil auger to drill a vertical hole 10-30 cm in diameter and about 100 cm deep (do not exceed the water table).",
                 "Reinforce the top 10 cm of the hole with cement or a short piece of PVC pipe to prevent the walls from collapsing.",
@@ -8357,14 +8357,14 @@
             "difficulty": "easy"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education",
                 "adapted_from_existing"
             ]
         },
         "risk_assessment": {
             "risk_score": 1,
-            "risk_type":[
+            "risk_type": [
                 "none"
             ],
             "safety_level": "high",
@@ -8379,12 +8379,12 @@
         "id": "e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0",
         "timestamp": "2026-03-27T15:20:00.000000",
         "title": "Bank Sampah (Waste Banks)",
-        "sources":[
+        "sources": [
             "https://www.worldbank.org/en/news/feature/2021/04/16/indonesia-s-waste-banks-turn-trash-into-cash",
             "https://zerowastecities.org/waste-banks-in-indonesia/"
         ],
         "summary": "A community-based solid waste management system originating in Indonesia where residents deposit sorted, non-organic waste (plastic, paper, metal) into a local 'bank'. The deposited waste is weighed and assigned a monetary value, which is saved in the resident's bank account, promoting a circular economy and reducing landfill reliance.",
-        "category":[
+        "category": [
             "Waste Management",
             "Circular Economy",
             "Community Development",
@@ -8399,13 +8399,13 @@
         },
         "process": {
             "how_it_works": "The system operates like a regular commercial bank, but the 'currency' is sorted recyclable waste. Residents open an account, deposit sorted trash, and the bank staff weigh it and credit the account based on current market rates for recyclables. The bank then sells the aggregated waste in bulk to recycling factories.",
-            "materials_used":[
+            "materials_used": [
                 "Weighing scales",
                 "Ledger books or basic accounting software",
                 "Storage sacks/bins",
                 "Sorted household waste (plastics, paper, glass, metal)"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "A community establishes a local waste bank committee and secures a collection point.",
                 "Residents separate their recyclable waste at home (cleaning and categorizing it).",
                 "On designated days, residents bring their sorted waste to the waste bank.",
@@ -8424,14 +8424,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "traditional",
                 "self-taught"
             ]
         },
         "risk_assessment": {
             "risk_score": 2,
-            "risk_type":[
+            "risk_type": [
                 "Biological",
                 "Occupational"
             ],
@@ -8447,12 +8447,12 @@
         "id": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6",
         "timestamp": "2026-03-27T15:23:00.000000",
         "title": "Arisan (Rotating Savings and Credit Association)",
-        "sources":[
+        "sources": [
             "https://www.worldbank.org/en/news/feature/2010/05/18/indonesia-arisan",
             "https://en.wikipedia.org/wiki/Arisan"
         ],
         "summary": "A deeply rooted traditional grassroots financial system in Indonesia. It functions as a microfinance and social safety net mechanism where a group of people gather regularly, contribute a fixed amount of money, and use a lottery system to award the pooled money to one member each turn until everyone has received the pot.",
-        "category":[
+        "category": [
             "Finance",
             "Social Innovation",
             "Community Development",
@@ -8467,12 +8467,12 @@
         },
         "process": {
             "how_it_works": "A community group (often women in a neighborhood) agrees to meet monthly. Each member contributes a set amount of cash. A lottery is drawn, and the winner takes the entire pot. The winner must continue contributing in subsequent months until every member has won exactly once, completing the cycle.",
-            "materials_used":[
+            "materials_used": [
                 "Notebook or ledger for record-keeping",
                 "Cash contributions",
                 "Small pieces of paper and a glass (for the lottery draw)"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Form a group of trusted individuals (e.g., 10 neighborhood women).",
                 "Agree on a monthly contribution amount (e.g., Rp 100,000) and meeting schedule.",
                 "At the meeting, collect the money to form a total pot (e.g., Rp 1,000,000).",
@@ -8491,7 +8491,7 @@
             "difficulty": "easy"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "traditional"
             ]
         },
@@ -8512,12 +8512,12 @@
         "id": "c9d8e7f6a5b4c3d2e1f0a9b8c7d6e5f4",
         "timestamp": "2026-03-27T15:23:00.000000",
         "title": "Subak Traditional Irrigation System",
-        "sources":[
+        "sources": [
             "https://whc.unesco.org/en/list/1194/",
             "https://www.fao.org/giahs/giahsaroundtheworld/designated-sites/asia-and-the-pacific/bali-subak-system/en/"
         ],
         "summary": "An ancient, egalitarian cooperative water management system in Bali, Indonesia. Rooted in the Tri Hita Karana philosophy, the Subak system manages the ecological, social, and spiritual sharing of water across terraced rice fields through a network of canals, weirs, and water temples.",
-        "category":[
+        "category": [
             "Agriculture",
             "Water Management",
             "Traditional Knowledge",
@@ -8532,13 +8532,13 @@
         },
         "process": {
             "how_it_works": "Water from volcanic lakes and rivers is channeled through a complex network of dams and canals. Instead of being controlled by a central government, water allocation is managed democratically by Subak cooperatives (groups of farmers) meeting at water temples. Planting schedules are synchronized to manage pests ecologically and optimize water use.",
-            "materials_used":[
+            "materials_used": [
                 "Bamboo pipes",
                 "Natural stone weirs",
                 "Mud canals",
                 "Traditional wooden plows"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Farmers in a specific watershed form a 'Subak' cooperative.",
                 "The Subak leader (Pekaseh) coordinates with other Subaks at regional water temples.",
                 "Water flows from the mountain crater lakes, through rivers, and is diverted by simple weirs into canals.",
@@ -8562,7 +8562,7 @@
         },
         "risk_assessment": {
             "risk_score": 1,
-            "risk_type":[
+            "risk_type": [
                 "none"
             ],
             "safety_level": "high",
@@ -8577,12 +8577,12 @@
         "id": "1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p",
         "timestamp": "2026-03-27T15:23:00.000000",
         "title": "Community-Managed Micro-Hydro Power (PLTMH)",
-        "sources":[
+        "sources": [
             "https://www.undp.org/indonesia/projects/micro-hydro-power-plants",
             "https://ibeka.or.id/en/what-we-do/"
         ],
         "summary": "A decentralized renewable energy innovation championed by organizations like IBEKA in Indonesia. It involves building off-grid, run-of-river micro-hydro turbines in remote villages. The key innovation is the social engineering: the power plant is owned, operated, and maintained by a village cooperative, with profits used for community development.",
-        "category":[
+        "category": [
             "Renewable Energy",
             "Rural Development",
             "Community Empowerment",
@@ -8597,14 +8597,14 @@
         },
         "process": {
             "how_it_works": "A small portion of river water is diverted through a channel and dropped via a penstock pipe to spin a turbine. This generates up to 100kW of electricity without damming the river. A village cooperative is trained to manage the technical maintenance and collect monthly tariffs from residents.",
-            "materials_used":[
+            "materials_used": [
                 "Micro-hydro turbine (Crossflow or Pelton)",
                 "Generator",
                 "Penstock pipe (steel or PVC)",
                 "Electronic Load Controller (ELC)",
                 "Local masonry for the powerhouse and intake"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Identify a rural river with adequate flow and 'head' (vertical drop).",
                 "Conduct community meetings to establish a cooperative and ensure local buy-in.",
                 "Build a small intake weir to divert a portion of the water into a settling basin.",
@@ -8623,14 +8623,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "adapted_from_existing",
                 "formal_education"
             ]
         },
         "risk_assessment": {
             "risk_score": 4,
-            "risk_type":[
+            "risk_type": [
                 "Electrical",
                 "Mechanical"
             ],
@@ -8646,12 +8646,12 @@
         "id": "d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9",
         "timestamp": "2026-03-27T15:30:00.000000",
         "title": "BRIN Seaweed-Based Bioplastics (Bioplastik Rumput Laut)",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://en.tempo.co/read/1423853/lipi-develops-seaweed-based-bioplastic-to-reduce-waste"
         ],
         "summary": "An eco-friendly alternative to single-use plastics developed by Indonesia's National Research and Innovation Agency (BRIN). It utilizes abundant red seaweed (Eucheuma cottonii) to create biodegradable packaging that dissolves in warm water and naturally decomposes in soil, addressing marine plastic pollution while boosting the local seaweed farming economy.",
-        "category":[
+        "category": [
             "Materials Science",
             "Waste Management",
             "Sustainability",
@@ -8666,13 +8666,13 @@
         },
         "process": {
             "how_it_works": "Carrageenan is extracted from red seaweed and mixed with natural plasticizers (like glycerol). The mixture undergoes a heating and casting process to form thin, transparent films. These films behave like conventional plastic but are completely biodegradable and even edible.",
-            "materials_used":[
+            "materials_used": [
                 "Red seaweed (Eucheuma cottonii)",
                 "Glycerol (plasticizer)",
                 "Water",
                 "Laboratory casting and extrusion equipment"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Harvest and clean red seaweed from local coastal farmers.",
                 "Extract carrageenan (a natural polysaccharide) from the seaweed.",
                 "Mix the carrageenan with water and natural plasticizers to improve flexibility.",
@@ -8696,7 +8696,7 @@
         },
         "risk_assessment": {
             "risk_score": 2,
-            "risk_type":[
+            "risk_type": [
                 "occupational"
             ],
             "safety_level": "high",
@@ -8711,12 +8711,12 @@
         "id": "b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7",
         "timestamp": "2026-03-27T15:30:00.000000",
         "title": "Ina-CBT (Cable-Based Tsunameter) Early Warning System",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://en.antaranews.com/news/162812/bppt-completes-installation-of-tsunami-early-warning-system-in-sunda-strait"
         ],
         "summary": "Developed by BRIN (formerly BPPT) to overcome the frequent vandalism and high maintenance costs of surface tsunami buoys. Ina-CBT lays fiber optic cables with integrated ocean-bottom pressure sensors deep across the seafloor to detect seismic anomalies and tsunami waves in real-time, providing highly reliable early warnings to coastal communities.",
-        "category":[
+        "category": [
             "Disaster Risk Reduction",
             "Telecommunications",
             "Oceanography",
@@ -8726,18 +8726,18 @@
         "location": {
             "country": "Indonesia",
             "region": "Sunda Strait / Mentawai Megathrust",
-            "lat": -6.1000,
+            "lat": -6.1,
             "lon": 105.4233
         },
         "process": {
             "how_it_works": "Instead of floating buoys transmitting via satellite, Ina-CBT relies on Ocean Bottom Pressure (OBP) sensors hardwired into undersea submarine fiber optic cables. When an earthquake triggers a tsunami, the change in water column pressure is instantly detected and transmitted at the speed of light to the onshore BMKG warning center.",
-            "materials_used":[
+            "materials_used": [
                 "Submarine fiber optic cables",
                 "Ocean Bottom Pressure (OBP) sensors",
                 "Cable laying ships",
                 "Onshore data receiver stations (Landing Stations)"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Identify high-risk tectonic fault lines and tsunami generation zones (e.g., Sunda Strait).",
                 "Deploy specialized ships to lay armored fiber optic cables across the ocean floor.",
                 "Integrate highly sensitive pressure sensors along the cable at specific depths.",
@@ -8755,7 +8755,7 @@
             "difficulty": "hard"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education",
                 "adapted_from_existing"
             ]
@@ -8778,12 +8778,12 @@
         "id": "a0b1c2d3e4f5g6h7i8j9k0l1m2n3o4p5",
         "timestamp": "2026-03-27T15:30:00.000000",
         "title": "Purula (Seaweed-Based Anti-Stunting Sprinkle)",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://en.antaranews.com/news/158542/lipi-develops-seaweed-based-food-sprinkle-to-prevent-stunting"
         ],
         "summary": "A targeted nutritional intervention product developed by BRIN researchers to combat child stunting and anemia. Purula is a dietary sprinkle made from hydrolyzed seaweed fortified with iron and essential vitamins, designed to be easily mixed into daily meals for toddlers and pregnant women without altering the taste.",
-        "category":[
+        "category": [
             "Healthcare",
             "Food Security",
             "Nutrition",
@@ -8798,13 +8798,13 @@
         },
         "process": {
             "how_it_works": "Seaweed is processed into a peptide powder that highly enhances iron absorption in the human body. It is packaged in small, affordable sachets that mothers can sprinkle over rice, porridge, or soup to ensure children receive the micronutrients required for optimal brain and physical development.",
-            "materials_used":[
+            "materials_used": [
                 "Seaweed (Caulerpa racemosa or similar species)",
                 "Iron fortificants",
                 "Vitamins",
                 "Laboratory hydrolysis equipment"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Extract proteins and peptides from locally sourced edible seaweed.",
                 "Process the extract into a fine powder using enzymatic hydrolysis to make the nutrients highly bioavailable.",
                 "Fortify the seaweed powder with iron and other essential micronutrients.",
@@ -8843,12 +8843,12 @@
         "id": "1z2y3x4w5v6u7t8s9r0q1p2o3n4m5l6k",
         "timestamp": "2026-03-27T15:45:00.000000",
         "title": "Sidenuk: Nuclear-Irradiated Superior Rice Varieties",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://www.iaea.org/newscenter/news/indonesia-uses-nuclear-technology-to-develop-new-rice-varieties"
         ],
         "summary": "Developed by the National Nuclear Energy Agency (now integrated into BRIN), 'Sidenuk' (Si Dedengkat Nuklir) is a superior rice variety created through peaceful nuclear technology. By exposing local seeds to safe gamma-ray irradiation, scientists induce beneficial genetic mutations, resulting in rice that is highly resistant to pests, adapts to climate change, and yields significantly larger harvests.",
-        "category":[
+        "category": [
             "Agriculture",
             "Biotechnology",
             "Food Security",
@@ -8863,13 +8863,13 @@
         },
         "process": {
             "how_it_works": "The process uses mutation breeding rather than genetic modification (GMO). Seeds are exposed to a specific, controlled dose of gamma radiation. This accelerates the natural mutation process. The irradiated seeds are then planted, and researchers select the offspring that exhibit desirable traits, such as shorter harvest times, stronger stems, and resistance to brown planthoppers.",
-            "materials_used":[
+            "materials_used": [
                 "Local rice seeds",
                 "Gamma-ray irradiator facility (Cobalt-60 source)",
                 "Agricultural testing fields",
                 "Laboratory selection equipment"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Select high-quality local rice seeds with specific weaknesses (e.g., susceptible to pests).",
                 "Expose the seeds to controlled gamma-ray irradiation in a specialized nuclear facility.",
                 "Plant the irradiated seeds in a controlled greenhouse environment.",
@@ -8888,13 +8888,13 @@
             "difficulty": "hard"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education"
             ]
         },
         "risk_assessment": {
             "risk_score": 3,
-            "risk_type":[
+            "risk_type": [
                 "nuclear",
                 "occupational"
             ],
@@ -8910,13 +8910,13 @@
         "id": "a9b8c7d6e5f4g3h2i1j0k9l8m7n6o5p4",
         "timestamp": "2026-03-27T15:45:00.000000",
         "title": "N219 Nurtanio Passenger Aircraft",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://www.indonesian-aerospace.com/aircraft/detail/18_n219",
             "https://en.wikipedia.org/wiki/Dirgantara_Indonesia_N-219"
         ],
         "summary": "A 19-seater twin-engine turboprop aircraft designed collaboratively by LAPAN (now part of BRIN) and PT Dirgantara Indonesia (PTDI). The N219 is specifically engineered for Short Take-Off and Landing (STOL) on unpaved, extremely short runways, addressing the severe logistical isolation of mountainous regions like Papua and remote archipelagos.",
-        "category":[
+        "category": [
             "Aerospace",
             "Transportation",
             "Rural Connectivity",
@@ -8931,13 +8931,13 @@
         },
         "process": {
             "how_it_works": "The aircraft uses a high-wing configuration, unpressurized cabin (to save weight and maintenance costs), and a fixed tricycle landing gear capable of absorbing heavy shocks. Its aerodynamics are optimized to maintain lift at very low speeds, allowing it to take off and land on dirt or grass airstrips shorter than 600 meters in deep valleys.",
-            "materials_used":[
+            "materials_used": [
                 "Aerospace-grade aluminum alloys",
                 "Pratt & Whitney PT6A-42 turboprop engines",
                 "Garmin G1000 glass cockpit avionics",
                 "Fixed landing gear system"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Conduct extensive aerodynamic analysis and computational fluid dynamics (CFD) by BRIN engineers.",
                 "Design a high-wing, unpressurized fuselage optimized for maximum internal cargo/passenger volume.",
                 "Manufacture components domestically at PTDI facilities.",
@@ -8955,13 +8955,13 @@
             "difficulty": "hard"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education"
             ]
         },
         "risk_assessment": {
             "risk_score": 4,
-            "risk_type":[
+            "risk_type": [
                 "aviation",
                 "manufacturing"
             ],
@@ -8977,12 +8977,12 @@
         "id": "q1w2e3r4t5y6u7i8o9p0a1s2d3f4g5h6",
         "timestamp": "2026-03-27T15:45:00.000000",
         "title": "SIPALAGA (Peatland Water Monitoring System)",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://sipalaga.brg.go.id/"
         ],
         "summary": "SIPALAGA is an Internet of Things (IoT) based telemetry system developed by BPPT (now BRIN) in collaboration with the Peatland Restoration Agency (BRG). It deploys thousands of sensors across Indonesian peatlands to monitor groundwater levels in real-time, providing an early warning system to prevent catastrophic forest fires caused by over-drained, dry peat.",
-        "category":[
+        "category": [
             "Environmental Conservation",
             "Disaster Risk Reduction",
             "Internet of Things (IoT)",
@@ -8997,14 +8997,14 @@
         },
         "process": {
             "how_it_works": "The system relies on robust, solar-powered sensor nodes physically inserted deep into remote peat soils. These sensors continuously measure the depth of the groundwater. If the water level drops below a critical threshold (making the highly carbon-rich peat flammable), the sensor transmits an alert via cellular or satellite networks to a central command center, prompting immediate rewetting interventions.",
-            "materials_used":[
+            "materials_used": [
                 "Ultrasonic or pressure-based water level sensors",
                 "Solar panels and deep-cycle batteries",
                 "Telemetry data loggers (GSM/Satellite)",
                 "PVC and metal protective casings",
                 "Central server and dashboard software"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Identify high-risk, degraded peatland zones prone to forest fires.",
                 "Deploy technicians to drill and install the sensor pipes deep into the peat layers.",
                 "Mount the solar panels, battery, and telemetry transmission unit above ground.",
@@ -9022,14 +9022,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education",
                 "adapted_from_existing"
             ]
         },
         "risk_assessment": {
             "risk_score": 1,
-            "risk_type":[
+            "risk_type": [
                 "none"
             ],
             "safety_level": "high",
@@ -9044,13 +9044,13 @@
         "id": "e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6",
         "timestamp": "2026-03-27T15:55:00.000000",
         "title": "LAPAN-A Series Equatorial Micro-Satellites",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://en.wikipedia.org/wiki/LAPAN-A2",
             "https://www.thejakartapost.com/news/2015/09/28/lapan-a2-satellite-ready-launch-india.html"
         ],
         "summary": "A series of indigenous micro-satellites developed by LAPAN (now integrated into BRIN). Designed specifically for an equatorial orbit, these satellites pass over Indonesia multiple times a day. They are equipped with Automatic Identification System (AIS) receivers to track maritime traffic and combat illegal fishing, as well as high-resolution cameras for disaster monitoring and agricultural mapping.",
-        "category":[
+        "category": [
             "Aerospace",
             "Maritime Security",
             "Earth Observation",
@@ -9065,14 +9065,14 @@
         },
         "process": {
             "how_it_works": "The micro-satellites (weighing around 70-130 kg) are launched into a Low Earth Orbit (LEO) near the equator. As they orbit, their onboard AIS receivers intercept VHF radio signals broadcasted by ships. This data is downlinked to earth stations in Indonesia, allowing authorities to detect unregistered or suspicious vessels operating in the archipelago's Exclusive Economic Zone (EEZ).",
-            "materials_used":[
+            "materials_used": [
                 "Space-grade aluminum structure",
                 "Solar panels and lithium-ion batteries",
                 "Automatic Identification System (AIS) receivers",
                 "High-resolution multispectral cameras",
                 "S-band and UHF/VHF communication antennas"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Design and assemble the satellite bus and payload domestically at BRIN's satellite technology center.",
                 "Conduct extreme environmental testing (thermal vacuum, vibration) to ensure space-readiness.",
                 "Transport the satellite to a partner launch facility (e.g., ISRO in India).",
@@ -9091,14 +9091,14 @@
             "difficulty": "hard"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education",
                 "adapted_from_existing"
             ]
         },
         "risk_assessment": {
             "risk_score": 3,
-            "risk_type":[
+            "risk_type": [
                 "aerospace"
             ],
             "safety_level": "high",
@@ -9113,13 +9113,13 @@
         "id": "u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2",
         "timestamp": "2026-03-27T15:55:00.000000",
         "title": "InaVac (Merah Putih) Vaccine & Biomedical Platform",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://en.antaranews.com/news/258421/bpom-issues-eua-for-indigenously-developed-inavac-vaccine",
             "https://www.who.int"
         ],
         "summary": "A homegrown biomedical platform initiated by the Eijkman Institute and Universitas Airlangga (supported by BRIN). Originally accelerated to produce the InaVac COVID-19 vaccine using an inactivated virus methodology, this platform establishes a vital national infrastructure to independently research, test, and mass-produce vaccines for future tropical disease outbreaks without relying on imported pharmaceuticals.",
-        "category":[
+        "category": [
             "Healthcare",
             "Biotechnology",
             "Public Health",
@@ -9130,18 +9130,18 @@
             "country": "Indonesia",
             "region": "Jakarta / Surabaya",
             "lat": -6.1983,
-            "lon": 106.8450
+            "lon": 106.845
         },
         "process": {
             "how_it_works": "Researchers isolate the target virus from local patient samples, cultivate it in large quantities in a highly secure laboratory, and then chemically inactivate (kill) the virus. The dead virus is formulated with an adjuvant to create a vaccine. When injected, the human immune system safely learns to recognize and attack the pathogen without causing the disease.",
-            "materials_used":[
+            "materials_used": [
                 "Viral seed strains (isolated from local populations)",
                 "Vero cell cultures (for viral replication)",
                 "Beta-propiolactone (for viral inactivation)",
                 "Aluminum hydroxide (adjuvant)",
                 "Biosafety Level 3 (BSL-3) laboratory facilities"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Isolate the specific viral strain affecting the Indonesian population.",
                 "Replicate the virus in a controlled BSL-3 laboratory using cell cultures.",
                 "Inactivate the virus using chemical agents so it cannot replicate or cause illness.",
@@ -9161,13 +9161,13 @@
             "difficulty": "hard"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education"
             ]
         },
         "risk_assessment": {
             "risk_score": 2,
-            "risk_type":[
+            "risk_type": [
                 "biological",
                 "occupational"
             ],
@@ -9183,13 +9183,13 @@
         "id": "k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8",
         "timestamp": "2026-03-27T15:55:00.000000",
         "title": "BRIN Black Soldier Fly (BSF) Bioconversion System",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://cifor.org",
             "https://en.antaranews.com/news/170562/brin-highlights-black-soldier-fly-potential-for-waste-management"
         ],
         "summary": "An optimized mass-rearing technology for the Black Soldier Fly (Hermetia illucens) developed by BRIN's biological researchers. It rapidly bioconverts municipal organic waste into high-quality protein biomass (maggots) for poultry and aquaculture feed, establishing a highly profitable and sustainable circular economy while drastically reducing landfill volume.",
-        "category":[
+        "category": [
             "Waste Management",
             "Circular Economy",
             "Agriculture",
@@ -9199,19 +9199,19 @@
         "location": {
             "country": "Indonesia",
             "region": "Cibinong, West Java",
-            "lat": -6.4900,
+            "lat": -6.49,
             "lon": 106.8491
         },
         "process": {
             "how_it_works": "Municipal organic waste (food scraps, agricultural residue) is shredded and fed to BSF larvae. The voracious larvae consume the waste, reducing its volume by up to 80% in just two weeks while accumulating high levels of protein and fat. The mature larvae are then harvested as animal feed, and their residue (frass) is used as premium organic fertilizer.",
-            "materials_used":[
+            "materials_used": [
                 "Black Soldier Fly (Hermetia illucens) breeding colonies",
                 "Municipal or agricultural organic waste",
                 "Biopond trays (rearing containers)",
                 "Mating cages with controlled lighting and humidity",
                 "Shredding machines (for waste preparation)"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Maintain adult BSF colonies in controlled mating cages to produce eggs.",
                 "Incubate the eggs until they hatch into neonate larvae.",
                 "Collect municipal organic waste, remove plastics/metals, and shred the organic matter to increase surface area.",
@@ -9231,14 +9231,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education",
                 "adapted_from_existing"
             ]
         },
         "risk_assessment": {
             "risk_score": 2,
-            "risk_type":[
+            "risk_type": [
                 "biological"
             ],
             "safety_level": "high",
@@ -9253,13 +9253,13 @@
         "id": "8a9b0c1d2e3f4g5h6i7j8k9l0m1n2o3p",
         "timestamp": "2026-03-27T16:15:00.000000",
         "title": "TMC (Teknologi Modifikasi Cuaca) - Weather Modification Technology",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://en.antaranews.com/news/275337/brin-conducts-weather-modification-to-anticipate-extreme-weather",
             "https://wmo.int/"
         ],
         "summary": "An institutional cloud-seeding and weather modification program managed by BRIN. It strategically intervenes in atmospheric conditions to either induce rainfall to combat massive forest fires and fill depleting reservoirs during droughts, or to redistribute cloud formations to prevent catastrophic urban flooding in megacities like Jakarta.",
-        "category":[
+        "category": [
             "Disaster Risk Reduction",
             "Meteorology",
             "Climate Adaptation",
@@ -9274,14 +9274,14 @@
         },
         "process": {
             "how_it_works": "Meteorologists analyze radar and satellite data to identify potential rain-bearing clouds. Specially modified aircraft fly directly into or above these clouds to disperse hygroscopic seeding agents (like fine salt/NaCl or localized flares). These particles act as condensation nuclei, accelerating the formation of large water droplets that fall as rain before the clouds reach flood-prone areas, or directing them over active forest fires.",
-            "materials_used":[
+            "materials_used": [
                 "C-212 Aviocar or CN-295 modified aircraft",
                 "Hygroscopic salt (NaCl powder)",
                 "Cloud-seeding flares",
                 "Weather radar and satellite data",
                 "Atmospheric modeling software"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Analyze atmospheric data to identify target cumulus clouds.",
                 "Calculate wind trajectory to determine where the induced rain will fall.",
                 "Load seeding agents (NaCl powder or flares) into the modified aircraft.",
@@ -9299,14 +9299,14 @@
             "difficulty": "hard"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education",
                 "adapted_from_existing"
             ]
         },
         "risk_assessment": {
             "risk_score": 4,
-            "risk_type":[
+            "risk_type": [
                 "aviation",
                 "environmental"
             ],
@@ -9322,13 +9322,13 @@
         "id": "q2w3e4r5t6y7u8i9o0p1a2s3d4f5g6h7",
         "timestamp": "2026-03-27T16:15:00.000000",
         "title": "PUNA Wulung Medium-Altitude Long-Endurance UAV",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://en.wikipedia.org/wiki/PUNA_Wulung",
             "https://www.janes.com/defence-news"
         ],
         "summary": "An indigenous Unmanned Aerial Vehicle (UAV/Drone) developed by BRIN (formerly BPPT) and manufactured by PT Dirgantara Indonesia. PUNA Wulung is designed for long-endurance intelligence, surveillance, and reconnaissance (ISR) missions, patrolling Indonesia's vast borders, detecting illegal logging, and mapping disaster zones without risking human pilots.",
-        "category":[
+        "category": [
             "Aerospace",
             "Remote Sensing",
             "Defense & Security",
@@ -9343,14 +9343,14 @@
         },
         "process": {
             "how_it_works": "The UAV is built with lightweight composite materials and is controlled via a Ground Control Station (GCS). It flies at medium altitudes for several hours autonomously or via remote piloting. It carries modular payloads such as high-resolution optical cameras, infrared sensors, or synthetic aperture radar (SAR) to beam real-time video and data back to headquarters.",
-            "materials_used":[
+            "materials_used": [
                 "Carbon fiber composite airframe",
                 "Piston engine (pusher configuration)",
                 "Electro-optical/Infrared (EO/IR) camera payload",
                 "Ground Control Station (GCS)",
                 "Line-of-sight telemetry datalink"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Design and mold the carbon fiber airframe to ensure a low radar signature and high fuel efficiency.",
                 "Integrate the flight control system (autopilot) and secure communication datalinks.",
                 "Install specific payloads (e.g., thermal cameras for detecting forest fires or illegal fishing boats at night).",
@@ -9368,13 +9368,13 @@
             "difficulty": "hard"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education"
             ]
         },
         "risk_assessment": {
             "risk_score": 3,
-            "risk_type":[
+            "risk_type": [
                 "aerospace",
                 "security"
             ],
@@ -9390,13 +9390,13 @@
         "id": "z1x2c3v4b5n6m7l8k9j0h1g2f3d4s5a6",
         "timestamp": "2026-03-27T16:15:00.000000",
         "title": "BRIN High Damping Rubber Bearing (HDRB) for Seismic Isolation",
-        "sources":[
+        "sources": [
             "https://brin.go.id",
             "https://pu.go.id",
             "https://www.irsg.com/"
         ],
         "summary": "A sophisticated civil engineering innovation developed by BRIN to protect critical infrastructure from massive earthquakes. The HDRB is a base isolation device made from alternating layers of Indonesian natural rubber and steel plates. Installed between a building's foundation and its superstructure, it acts as a giant shock absorber, decoupling the building from the violent ground shaking of an earthquake.",
-        "category":[
+        "category": [
             "Civil Engineering",
             "Disaster Risk Reduction",
             "Materials Science",
@@ -9411,13 +9411,13 @@
         },
         "process": {
             "how_it_works": "Instead of rigidly anchoring a building to the ground, the building rests on these rubber bearings. When an earthquake strikes, the ground moves violently, but the flexible natural rubber stretches and deforms, absorbing the seismic energy. The steel plates maintain the vertical load-bearing strength. This drastically reduces the swaying motion felt inside the building, preventing structural collapse.",
-            "materials_used":[
+            "materials_used": [
                 "Locally sourced natural rubber (high damping compound)",
                 "Steel shims (plates)",
                 "Vulcanization presses",
                 "Protective outer rubber cover"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Formulate a specific high-damping natural rubber compound using local Indonesian rubber resources.",
                 "Prepare thin, high-strength steel circular plates.",
                 "Stack alternating layers of raw rubber compound and steel plates.",
@@ -9436,14 +9436,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "formal_education",
                 "adapted_from_existing"
             ]
         },
         "risk_assessment": {
             "risk_score": 1,
-            "risk_type":[
+            "risk_type": [
                 "structural safety"
             ],
             "safety_level": "high",
@@ -9458,13 +9458,13 @@
         "id": "m1n2o3p4q5r6s7t8u9v0w1x2y3z4a5b6",
         "timestamp": "2026-03-27T16:30:00.000000",
         "title": "Wanamina (Silvofishery) Integrated Coastal Farming",
-        "sources":[
+        "sources": [
             "https://www.fao.org/fishery/en/aquaculture",
             "https://www.wetlands.org/casestudy/building-with-nature-in-indonesia/",
             "https://mangroveactionproject.org/silvofishery/"
         ],
         "summary": "A traditional grassroots aquaculture method in Indonesia, known locally as 'Wanamina'. It integrates mangrove forestry with brackish-water aquaculture (tambak). Instead of clearing mangrove forests to build shrimp or milkfish ponds, traditional fishers plant mangroves inside and along the dikes of the ponds, creating a symbiotic ecosystem that boosts fish yields and prevents coastal erosion.",
-        "category":[
+        "category": [
             "Sustainable Agriculture",
             "Coastal Conservation",
             "Aquaculture",
@@ -9479,13 +9479,13 @@
         },
         "process": {
             "how_it_works": "Mangrove trees provide shade, reducing water temperature fluctuations. Their root systems stabilize the earthen dikes, preventing collapse during high tides. The leaf litter from the mangroves falls into the pond, decomposing to naturally feed phytoplankton and zooplankton, which in turn becomes a free, organic food source for the farmed fish and shrimp.",
-            "materials_used":[
+            "materials_used": [
                 "Mangrove seedlings (Rhizophora or Avicennia species)",
                 "Traditional mud dikes",
                 "Bamboo sluice gates",
                 "Milkfish and shrimp seeds"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Design a traditional earthen pond (tambak) with wide dikes.",
                 "Plant mangrove seedlings along the inner and outer perimeters of the dikes, covering about 40-50% of the total pond area.",
                 "Install a bamboo sluice gate to allow tidal water exchange while keeping farmed fish inside.",
@@ -9503,14 +9503,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "traditional",
                 "self-taught"
             ]
         },
         "risk_assessment": {
             "risk_score": 1,
-            "risk_type":[
+            "risk_type": [
                 "none"
             ],
             "safety_level": "high",
@@ -9525,12 +9525,12 @@
         "id": "c1d2e3f4g5h6i7j8k9l0m1n2o3p4q5r6",
         "timestamp": "2026-03-27T16:30:00.000000",
         "title": "Sirup Bogem (Mangrove Apple) Eco-Gastronomy",
-        "sources":[
+        "sources": [
             "https://www.mongabay.co.id",
             "https://www.thejakartapost.com/news/2016/08/10/wonorejo-mangrove-syrup-empowers-surabayas-coastal-women.html"
         ],
         "summary": "A grassroots circular economy initiative pioneered by coastal women's cooperatives in Surabaya. They forage and upcycle the fruit of the 'Bogem' mangrove tree (Sonneratia caseolaris) into commercial products like syrup, jams, and candies. This provides a direct, sustainable income stream that incentivizes the local community to actively protect the mangrove forests from illegal logging and land reclamation.",
-        "category":[
+        "category": [
             "Food Processing",
             "Women Empowerment",
             "Circular Economy",
@@ -9545,7 +9545,7 @@
         },
         "process": {
             "how_it_works": "The sour, vitamin C-rich fruit of the Sonneratia caseolaris drops naturally into the mud. Local women forage these ripe fruits, extract the fleshy pulp, and boil it with natural sweeteners to create a highly nutritious, tangy syrup that is bottled and sold locally and online.",
-            "materials_used":[
+            "materials_used": [
                 "Ripe Bogem mangrove fruits (Sonneratia caseolaris)",
                 "Cane sugar or palm sugar",
                 "Water",
@@ -9553,7 +9553,7 @@
                 "Glass bottles",
                 "Cooking pots"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Forage for ripe, fallen Bogem fruits in the mangrove forest (without damaging the trees).",
                 "Wash the fruits thoroughly to remove mud and saline water.",
                 "Peel the fruits and separate the seeds from the fleshy pulp.",
@@ -9572,14 +9572,14 @@
             "difficulty": "easy"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "traditional",
                 "self-taught"
             ]
         },
         "risk_assessment": {
             "risk_score": 2,
-            "risk_type":[
+            "risk_type": [
                 "occupational",
                 "food safety"
             ],
@@ -9595,12 +9595,12 @@
         "id": "t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6",
         "timestamp": "2026-03-27T16:30:00.000000",
         "title": "Eco-Batik using Mangrove Natural Dyes",
-        "sources":[
+        "sources": [
             "https://www.wri.org/news",
             "https://en.tempo.co/read/1039868/tarakan-mangrove-batik-a-sustainable-fashion-statement"
         ],
         "summary": "A sustainable fashion innovation by traditional Indonesian batik artisans. To combat the severe river pollution caused by toxic synthetic textile dyes, these artisans utilize fallen mangrove propagules, dead leaves, and bark to create rich, natural organic dyes. This practice monetizes mangrove waste and promotes eco-friendly textile production.",
-        "category":[
+        "category": [
             "Sustainable Fashion",
             "Waste Management",
             "Traditional Knowledge",
@@ -9615,14 +9615,14 @@
         },
         "process": {
             "how_it_works": "Tannins naturally present in mangrove bark and fallen propagules (Rhizophora species) are extracted through boiling. This produces a strong, natural dye that yields deep earthy colors (browns, reds, and blacks). The dyed fabric is then fixed using natural mordants like alum or limestone, entirely avoiding heavy metals.",
-            "materials_used":[
+            "materials_used": [
                 "Dried mangrove propagules and fallen bark (Rhizophora spp.)",
                 "Cotton or silk fabric",
                 "Hot water vats",
                 "Natural mordants (alum, limestone, or iron water)",
                 "Traditional canting tool and beeswax"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Scavenge the mangrove forest floor for dead bark, fallen leaves, and dried propagules (no live cutting allowed).",
                 "Chop the gathered mangrove waste into small pieces.",
                 "Boil the pieces in a large vat of water for several hours to extract the natural tannins and colorants.",
@@ -9641,14 +9641,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "traditional",
                 "adapted_from_existing"
             ]
         },
         "risk_assessment": {
             "risk_score": 2,
-            "risk_type":[
+            "risk_type": [
                 "occupational"
             ],
             "safety_level": "high",
@@ -9663,12 +9663,12 @@
         "id": "b1a2m3b4o5o6d7a8m9s0e1d2i3m4e5n6",
         "timestamp": "2026-03-27T16:45:00.000000",
         "title": "Permeable Bamboo Dams for Mangrove Regeneration",
-        "sources":[
+        "sources": [
             "https://www.wetlands.org/casestudy/building-with-nature-in-indonesia/",
             "https://www.ecoshape.org/en/projects/building-with-nature-indonesia/"
         ],
         "summary": "A highly successful grassroots coastal engineering method adopted by villagers in Demak, Central Java. Instead of futilely planting mangrove seedlings in deep, eroded waters, communities build semi-permeable fences using bamboo and brushwood. These dams dampen wave energy and trap suspended sediment, naturally recreating the muddy coastal shelf required for mangroves to recolonize on their own.",
-        "category":[
+        "category": [
             "Coastal Engineering",
             "Disaster Risk Reduction",
             "Nature-based Solutions",
@@ -9683,12 +9683,12 @@
         },
         "process": {
             "how_it_works": "The bamboo structures act as a filter, not a solid wall. High tides pass through the brushwood, but the wave energy is dissipated. When the water retreats, the fine mud and sediment carried by the tide get trapped behind the fence. Over several years, the mud level rises above the high-tide mark, allowing native mangrove seeds floating in the water to naturally take root and grow.",
-            "materials_used":[
+            "materials_used": [
                 "Bamboo poles",
                 "Brushwood and twigs",
                 "Nylon ropes or natural fiber bindings"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Community identifies coastal areas suffering from severe erosion where mangroves have disappeared.",
                 "Villagers drive long, sturdy bamboo poles deep into the seabed in two parallel rows.",
                 "Fill the gap between the two rows of bamboo with tightly packed brushwood, branches, and twigs.",
@@ -9706,14 +9706,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "traditional",
                 "adapted_from_existing"
             ]
         },
         "risk_assessment": {
             "risk_score": 2,
-            "risk_type":[
+            "risk_type": [
                 "physical labor"
             ],
             "safety_level": "high",
@@ -9728,12 +9728,12 @@
         "id": "f1l2o3u4r5m6a7n8g9r0o1v2e3f4o5o6",
         "timestamp": "2026-03-27T16:45:00.000000",
         "title": "Lindur Mangrove Fruit Flour (Gluten-Free Alternative)",
-        "sources":[
+        "sources": [
             "https://www.mongabay.co.id",
             "https://www.cifor.org"
         ],
         "summary": "Coastal women's cooperatives in regions like Muara Gembong forage the fruit of the Bruguiera gymnorhiza (Lindur) mangrove and process it into a highly nutritious, gluten-free flour. This grassroots innovation enhances local food security and provides a financial incentive to preserve the mangrove forests.",
-        "category":[
+        "category": [
             "Food Security",
             "Women Empowerment",
             "Traditional Knowledge",
@@ -9748,14 +9748,14 @@
         },
         "process": {
             "how_it_works": "The Lindur fruit contains high levels of carbohydrates and energy but also toxic tannins and hydrogen cyanide (HCN) when raw. The women use traditional repetitive boiling, soaking, and wood ash treatments to leach out the toxins. The detoxified fruit is then dried and milled into a versatile flour used for cakes, noodles, and traditional snacks.",
-            "materials_used":[
+            "materials_used": [
                 "Mature Lindur fruits (Bruguiera gymnorhiza)",
                 "Wood ash (for neutralizing toxins)",
                 "Fresh water",
                 "Sun-drying racks",
                 "Manual or mechanical flour mill"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Forage for mature, naturally dropped Lindur fruits from the mangrove forest.",
                 "Peel the fruits and boil them repeatedly (often up to 3 times) to soften the flesh and begin extracting tannins.",
                 "Soak the boiled fruits in water mixed with a small amount of wood ash for 24-48 hours to neutralize remaining tannins and HCN.",
@@ -9773,14 +9773,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "traditional",
                 "self-taught"
             ]
         },
         "risk_assessment": {
             "risk_score": 4,
-            "risk_type":[
+            "risk_type": [
                 "toxicity (if improperly prepared)"
             ],
             "safety_level": "medium",
@@ -9795,12 +9795,12 @@
         "id": "e1c2o3t4o5u6r7i8s9m0z1e2r3o4w5a6",
         "timestamp": "2026-03-27T16:45:00.000000",
         "title": "Zero-Waste Community Mangrove Ecotourism (Pokdarwis CMC)",
-        "sources":[
+        "sources": [
             "https://cmctigawarna.com/",
             "https://www.wri-indonesia.org"
         ],
         "summary": "A radical grassroots ecotourism initiative at Clungup Mangrove Conservation (CMC) Tiga Warna, Malang. Youth groups transformed an illegally logged mangrove forest into a strict, community-managed reserve. The innovation is their zero-waste protocol: tourists must declare every piece of plastic they bring, and must leave with the exact same amount or face heavy fines. The funds are used to patrol and replant the ecosystem.",
-        "category":[
+        "category": [
             "Ecotourism",
             "Waste Management",
             "Community Conservation",
@@ -9811,17 +9811,17 @@
             "country": "Indonesia",
             "region": "Malang, East Java",
             "lat": -8.4395,
-            "lon": 112.6780
+            "lon": 112.678
         },
         "process": {
             "how_it_works": "The community formed a 'Pokdarwis' (Tourism Awareness Group). They instituted a strict daily carrying capacity limit (e.g., max 100 visitors) to prevent ecosystem degradation. A mandatory 'bag check' system is implemented at the entrance. Every single plastic bottle, wrapper, or tissue is counted on a checklist. Upon exit, the checklist is verified. Missing items result in a fine (e.g., Rp 100,000 per item). This forces tourists to become mindful stewards of the mangrove.",
-            "materials_used":[
+            "materials_used": [
                 "Visitor checklist forms",
                 "Pen and paper for inventory",
                 "Community patrols",
                 "Mangrove seedlings for reforestation"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "The community group identifies degraded mangrove areas and begins replanting.",
                 "Establish a strict carrying capacity limit for daily tourist entry.",
                 "At the entrance gate, a community warden checks every tourist's bag.",
@@ -9841,13 +9841,13 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "self-taught"
             ]
         },
         "risk_assessment": {
             "risk_score": 1,
-            "risk_type":[
+            "risk_type": [
                 "none"
             ],
             "safety_level": "high",
@@ -9862,12 +9862,12 @@
         "id": "k9l8m7n6o5p4q3r2s1t0u1v2w3x4y5z6",
         "timestamp": "2026-03-27T17:15:00.000000",
         "title": "Apartemen Kepiting (Vertical Mud Crab Farming)",
-        "sources":[
+        "sources": [
             "https://www.mongabay.co.id/2021/04/18/apartemen-kepiting-inovasi-budidaya-ramah-lingkungan-di-hutan-mangrove/",
             "https://kkp.go.id"
         ],
         "summary": "A highly space-efficient, grassroots aquaculture innovation developed by coastal fishers in regions like Tarakan and Balikpapan. Instead of clearing massive tracts of mangrove forest to dig crab ponds, fishers use stacked, perforated plastic boxes (crab apartments) placed directly in the tidal creeks of intact mangrove forests to cultivate premium mud crabs.",
-        "category":[
+        "category": [
             "Aquaculture",
             "Coastal Conservation",
             "Circular Economy",
@@ -9882,14 +9882,14 @@
         },
         "process": {
             "how_it_works": "Mud crabs (Scylla serrata) are highly cannibalistic. By placing one crab per plastic box and stacking the boxes vertically on floating bamboo rafts or wooden frames within a tidal mangrove creek, fishers eliminate cannibalism, maximize space, and utilize the natural tidal flow to flush away waste and maintain water quality.",
-            "materials_used":[
+            "materials_used": [
                 "Perforated plastic boxes (crab boxes)",
                 "Bamboo or wooden frames",
                 "Nylon ropes",
                 "Trash fish or small snails (for feed)",
                 "Juvenile mud crabs"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Construct a wooden or bamboo frame along the edge of a tidal mangrove creek.",
                 "Prepare perforated plastic boxes designed to allow water flow but prevent crab escape.",
                 "Place one juvenile or recently molted mud crab into each box.",
@@ -9907,14 +9907,14 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "adapted_from_existing",
                 "self-taught"
             ]
         },
         "risk_assessment": {
             "risk_score": 2,
-            "risk_type":[
+            "risk_type": [
                 "occupational"
             ],
             "safety_level": "high",
@@ -9929,12 +9929,12 @@
         "id": "z9y8x7w6v5u4t3s2r1q0p9o8n7m6l5k4",
         "timestamp": "2026-03-27T17:15:00.000000",
         "title": "Kopi Jeruju (Mangrove Associate Herbal Coffee)",
-        "sources":[
+        "sources": [
             "https://www.mongabay.co.id",
             "https://www.cifor.org/knowledge/publication/7707/"
         ],
         "summary": "Coastal women's groups in Java have innovated a way to produce a caffeine-free, herbal coffee substitute using the seeds and leaves of Acanthus ilicifolius (Jeruju), a spiny shrub that grows as a mangrove associate. This creates a valuable non-timber forest product (NTFP) that boosts the local economy.",
-        "category":[
+        "category": [
             "Food Security",
             "Women Empowerment",
             "Traditional Knowledge",
@@ -9949,14 +9949,14 @@
         },
         "process": {
             "how_it_works": "The Jeruju plant is abundant in mangrove understories but often considered a thorny nuisance. Women forage the mature seeds and leaves, wash them to remove salinity, and undergo a traditional process of sun-drying and dry-roasting in clay pans to neutralize mild toxins and enhance the aroma, resulting in a healthy herbal drink.",
-            "materials_used":[
+            "materials_used": [
                 "Mature Jeruju seeds and leaves (Acanthus ilicifolius)",
                 "Fresh water",
                 "Clay roasting pans (wajan tanah liat)",
                 "Firewood",
                 "Manual grinder or mortar and pestle"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Forage for mature Jeruju seeds and healthy leaves in the mangrove understory.",
                 "Wash the harvested materials thoroughly to remove mud and excess salt.",
                 "Chop the leaves and sun-dry the seeds and leaves for several days until completely dehydrated.",
@@ -9974,14 +9974,14 @@
             "difficulty": "easy"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "traditional",
                 "self-taught"
             ]
         },
         "risk_assessment": {
             "risk_score": 2,
-            "risk_type":[
+            "risk_type": [
                 "food safety",
                 "occupational"
             ],
@@ -9997,13 +9997,13 @@
         "id": "j1h2g3f4d5s6a7p8o9i0u1y2t3r4e5w6",
         "timestamp": "2026-03-27T17:15:00.000000",
         "title": "Gula Semut Nipah (Nypa Palm Sugar Extraction)",
-        "sources":[
+        "sources": [
             "https://www.thejakartapost.com",
             "https://www.tropenbos.org/news/sweet_success_for_nypa_palm_sugar_in_indonesia",
             "https://borneo.or.id/"
         ],
         "summary": "A grassroots agroforestry innovation practiced by coastal communities in Kalimantan and Sumatra. They tap the sap of the Nypa fruticans (Nipah palm), a true mangrove species, to produce high-value granulated brown sugar (gula semut). This lucrative non-timber product provides a strong economic defense against the conversion of Nipah forests into oil palm plantations.",
-        "category":[
+        "category": [
             "Agroforestry",
             "Coastal Conservation",
             "Food Processing",
@@ -10018,14 +10018,14 @@
         },
         "process": {
             "how_it_works": "The Nipah palm grows naturally in the brackish waters of mangrove estuaries. Farmers massage the fruit stalk for several weeks to stimulate sap flow. Once cut, the stalk drips sweet sap into bamboo containers. This sap is then boiled for hours until it crystallizes into premium granulated sugar, which has a lower glycemic index than cane sugar.",
-            "materials_used":[
+            "materials_used": [
                 "Nipah palm fruit stalks (Nypa fruticans)",
                 "Bamboo collection tubes",
                 "Large boiling woks",
                 "Wood fire",
                 "Wooden stirring paddles"
             ],
-            "step_by_step":[
+            "step_by_step": [
                 "Locate a mature Nipah palm in the mangrove forest and identify a healthy fruit stalk.",
                 "Gently bend and massage the stalk daily for 2-3 weeks to encourage sap accumulation.",
                 "Cut the fruit head off the stalk and attach a clean bamboo tube to collect the dripping sap overnight.",
@@ -10045,13 +10045,13 @@
             "difficulty": "medium"
         },
         "origin": {
-            "knowledge_source":[
+            "knowledge_source": [
                 "traditional"
             ]
         },
         "risk_assessment": {
             "risk_score": 3,
-            "risk_type":[
+            "risk_type": [
                 "fire hazard",
                 "occupational"
             ],
@@ -10061,6 +10061,344 @@
         },
         "priority_score": 70,
         "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "f5d12ff36ed7f066040ace276c55e771",
+        "timestamp": "2026-03-27T08:38:07.531364",
+        "title": "Affordable Mini Biogas Plant from Scrap",
+        "sources": [
+            "https://www.instructables.com/Biogas-at-Home-Cheap-and-Easy/"
+        ],
+        "summary": "Developed by 14-year-old Sahas Chitlange in India, this innovation is a low-cost biogas system made from recycled plastic containers that converts cow dung into methane gas for cooking and liquid fertilizer.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "",
+            "lat": 22.3511148,
+            "lon": 78.6677428
+        },
+        "process": {
+            "how_it_works": "The system uses anaerobic digestion where organic matter is broken down by bacteria in the absence of oxygen to produce methane gas, which is then captured in an inverted bucket acting as a gas holder.",
+            "materials_used": [
+                "50-liter plastic tank",
+                "20-liter paint bucket",
+                "Scrap materials",
+                "Cow dung",
+                "Water"
+            ],
+            "step_by_step": [
+                "Set up a 50-liter plastic tank to act as the primary digester unit.",
+                "Install a 20-liter paint bucket in an inverted position to serve as a gas holder.",
+                "Mix 5kg of fresh cow dung with water to create a consistent slurry.",
+                "Feed the slurry into the digester tank.",
+                "Wait for the anaerobic process to generate methane, which collects in the inverted bucket.",
+                "Connect the gas holder to a Bunsen burner or stove for use."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides an extremely low-cost source of cooking fuel and waste management for households with limited resources.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Fire",
+                "Explosion",
+                "Toxic",
+                "Pathogens"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "While the project is a commendable low-cost innovation, storing flammable methane in improvised scrap containers like paint buckets presents significant risks. The system lacks professional safety components such as pressure relief valves, flame arrestors, and gas leak monitoring. Methane is highly explosive when mixed with air, and biogas often contains toxic hydrogen sulfide (H2S). Additionally, handling animal waste carries a risk of exposure to pathogens without proper protective gear."
+        },
+        "priority_score": 56,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "fe8f40dfe422040a3eb5b15f40e68b0e",
+        "timestamp": "2026-03-27T08:38:26.913067",
+        "title": "ECHO Inverted Drum Biogas System",
+        "sources": [
+            "https://www.youtube.com/watch?v=A8f9-S_9p0A",
+            "https://www.echocommunity.org"
+        ],
+        "summary": "A low-cost, appropriate technology biogas digester designed for small-scale farmers that uses an inverted drum mechanism to store and pressurize methane gas produced from cow manure for household cooking.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "Developing regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Anaerobic digestion of manure in a tank produces biogas, which is captured in an inverted drum floating in water. The drum rises as it fills, and external pressure is applied to push the gas through hoses to a stove.",
+            "materials_used": [
+                "Large barrel",
+                "Smaller metal drum",
+                "Water",
+                "Cow manure",
+                "Digester tank",
+                "Piping/Hose",
+                "Old inner tube strap",
+                "Kitchen stove"
+            ],
+            "step_by_step": [
+                "Mix cow manure with water to create a sludge and feed it into a digester tank.",
+                "Connect the digester tank to the storage system using airtight piping.",
+                "Place a smaller metal drum upside down inside a larger barrel filled with water to create a gas seal.",
+                "Allow the biogas produced in the digester to flow into the inverted drum, causing it to rise.",
+                "Wrap an old inner tube strap around the drum or place weights on top to create the necessary pressure.",
+                "Open the valve to allow pressurized gas to flow through a hose to the kitchen stove."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable, clean cooking fuel and inefficient animal waste management for small-scale farmers.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "fire",
+                "explosion",
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While this is a proven appropriate technology, it involves the production and storage of methane, which is highly flammable and explosive when mixed with air. The use of metal drums is susceptible to corrosion from hydrogen sulfide (a toxic byproduct of biogas), which can lead to structural failure and gas leaks. Additionally, DIY pressure mechanisms like inner tube straps lack precision, and without proper flame arrestors or pressure relief valves, there is a moderate risk of flash-back or containment breach."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "df0d59d511e988c212c04a413cfc9564",
+        "timestamp": "2026-03-27T08:38:59.082078",
+        "title": "Small-Scale Polyethylene (PE) Tank Biogas System",
+        "sources": [
+            "https://www.ijstr.org/final-print/feb2021/Applicative-Biogas-Plant-For-Processing-Cow-Dung-In-The-Small-Scale-Livestock-Farming.pdf"
+        ],
+        "summary": "A low-cost biogas production method used by rural Indonesian farmers that utilizes 3,000-liter polyethylene tanks buried underground to convert cow manure into cooking fuel and high-quality organic fertilizer.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Indonesia",
+            "region": "Rural Indonesia",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses anaerobic digestion where methanogenic bacteria break down animal waste in a sealed, temperature-controlled environment to produce methane gas and nutrient-rich slurry.",
+            "materials_used": [
+                "3,000-liter polyethylene (PE) tank",
+                "Cow dung",
+                "Piping for gas transport",
+                "Kitchen stoves"
+            ],
+            "step_by_step": [
+                "Bury a 3,000-liter PE tank upside down in the ground to ensure a constant temperature.",
+                "Install an inlet for feeding manure and an outlet for the residual slurry.",
+                "Feed the digester with approximately 25kg of cow dung daily from 2-3 cattle.",
+                "Allow methanogenic bacteria to process the waste, generating 96-104 liters of biogas per hour.",
+                "Channel the gas to kitchen stoves and harvest the residual slurry for use as organic fertilizer."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High costs of cooking fuel and chemical fertilizers, and mismanagement of livestock waste.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "fire hazard",
+                "explosion",
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The production and storage of biogas (primarily methane) in modified polyethylene tanks present significant risks of fire and explosion if leaks occur or if pressure is not managed correctly. Biogas also contains hydrogen sulfide, which is toxic, and carbon dioxide, which can be an asphyxiant. While the system is innovative for waste management, the grassroots nature of the construction requires standardized safety valves and leak detection to prevent accidents."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "f65405383dba97178c371b35a2c16dc8",
+        "timestamp": "2026-03-27T08:39:26.824855",
+        "title": "Household-scale Biogas Digesters",
+        "sources": [
+            "https://www.cleancooking.alliance.org",
+            "https://www.youtube.com/watch?v=YpL_X-Q_7O0",
+            "https://sistema.bio/",
+            "https://snv.org/project/kenya-biogas-programme"
+        ],
+        "summary": "Kenyan dairy farmers are adopting flexible bag and fixed-dome biogas digesters to convert cow manure into clean methane gas for cooking and nutrient-rich bio-slurry for fertilizer, reducing reliance on firewood and improving indoor air quality.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Agriculture",
+            "Clean Cooking"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2686662,
+            "lon": 36.8161377
+        },
+        "process": {
+            "how_it_works": "The system uses anaerobic digestion to break down animal waste in an oxygen-free environment, producing methane gas as a byproduct for energy and bio-slurry for soil enhancement.",
+            "materials_used": [
+                "Cow manure",
+                "Water",
+                "Flexible bag-style digester",
+                "Fixed-dome structure",
+                "Piping",
+                "Biogas stove"
+            ],
+            "step_by_step": [
+                "Collect fresh manure from dairy cows.",
+                "Mix the manure with water to create a consistent slurry.",
+                "Feed the slurry into the inlet of the airtight digester.",
+                "Allow anaerobic bacteria to ferment the waste, releasing methane gas.",
+                "Capture the gas in the top of the digester and pipe it to the household stove.",
+                "Collect the discharged bio-slurry from the outlet to use as organic fertilizer."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces indoor air pollution from wood smoke, decreases deforestation, saves time on firewood collection, and provides organic fertilizer.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "explosion",
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "Biogas systems produce methane, which is highly flammable and poses an explosion risk if leaks occur in confined spaces. Additionally, biogas contains trace amounts of hydrogen sulfide, which is toxic. While the household-scale application is generally safe with proper training and ventilation, the grassroots nature of maintenance and the handling of biological waste (pathogens) require consistent adherence to safety protocols."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "ee9c4ddea3915f4714613b42fb6d2ef0",
+        "timestamp": "2026-03-27T08:39:45.948326",
+        "title": "Household Biodigesters in Cambodia",
+        "sources": [
+            "https://www.youtube.com/watch?v=pS6mS_v79G4"
+        ],
+        "summary": "Social entrepreneurs and local villagers in Cambodia collaborate to install household biodigesters that convert cow manure and green waste into cooking gas and organic fertilizer, promoting energy independence and sustainable farming.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Cambodia",
+            "region": "Rural villages",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system acts as a 'mechanical stomach' where bacteria decompose organic matter in an anaerobic (oxygen-free) environment to produce biogas.",
+            "materials_used": [
+                "Cow manure",
+                "Green waste",
+                "Biodigester unit",
+                "Bacteria"
+            ],
+            "step_by_step": [
+                "Collect cow manure and green waste from the household and farm.",
+                "Feed the organic waste into the airtight biodigester unit.",
+                "Allow bacteria to break down the matter in an oxygen-free environment.",
+                "Capture the resulting biogas for use in cooking as a replacement for wood or LPG.",
+                "Harvest the digestate byproduct for use as organic fertilizer on crops."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Deforestation, high cost of fuel (LPG/wood), and low agricultural productivity.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 5,
+            "risk_type": [
+                "fire hazard",
+                "explosion",
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "Biogas systems produce methane, which is highly flammable and potentially explosive if leaks occur in enclosed spaces. Additionally, the anaerobic process can produce hydrogen sulfide, a toxic gas, and methane itself acts as an asphyxiant. While the technology is established, decentralized grassroots implementation requires rigorous safety training, pressure monitoring, and maintenance to mitigate risks."
+        },
+        "priority_score": 70,
+        "hidden_gem": false,
         "critical_flag": false
     }
 ]
