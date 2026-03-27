@@ -170,45 +170,54 @@
 
     <!-- TAB 1: DIRECTORY VIEW -->
     <div id="view-directory" class="flex flex-col gap-6 block">
-      <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-        <div class="flex items-center gap-2 text-slate-800">
-          <i class="ph ph-funnel text-xl text-unesco-blue"></i>
-          <span class="font-semibold text-sm">Refine Results</span>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
 
-          <div class="flex flex-col sm:flex-row flex-wrap gap-3 w-full md:w-auto">
-
-            <!-- TAMBAHAN BARU: FILTER NEGARA -->
-          <select id="filter-country" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
-            <option value="all">All Countries</option>
-          </select>
-
-          <!-- TAMBAHAN BARU: FILTER KATEGORI -->
-          <select id="filter-category" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
-            <option value="all">All Categories</option>
-          </select>
-
-          <select id="filter-level" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
-            <option value="all">All Innovation Levels</option>
-            <option value="grassroots">Grassroots</option>
-            <option value="semi-formal">Semi-Formal</option>
-            <option value="institutional">Institutional</option>
-          </select>
-          <select id="filter-risk" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
-            <option value="all">All Risk Levels</option>
-            <option value="high">High Risk (Score ≥ 8)</option>
-            <option value="medium">Medium Risk (Score 4-7)</option>
-            <option value="low">Low Risk (Score ≤ 3)</option>
-          </select>
-          <select id="sort-order" class="w-full sm:w-auto bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue">
-            <option value="priority">Highest Priority Score</option>
-            <option value="newest">Newest First</option>
-            <option value="oldest">Oldest First</option>
-          </select>
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+        
+        <!-- BARIS 1: FILTER -->
+        <div class="p-4 border-b border-slate-100 flex flex-col lg:flex-row lg:items-center gap-4">
+          <div class="flex items-center gap-2 text-slate-800 shrink-0 lg:w-32">
+            <i class="ph-fill ph-funnel text-xl text-unesco-blue"></i>
+            <span class="font-semibold text-sm">Filter Data</span>
+          </div>
+          <div class="flex flex-col sm:flex-row flex-wrap gap-3 w-full">
+            <select id="filter-country" class="flex-1 min-w-[140px] bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue focus:ring-1 focus:ring-unesco-blue transition-all">
+              <option value="all">All Countries</option>
+            </select>
+            <select id="filter-category" class="flex-1 min-w-[140px] bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue focus:ring-1 focus:ring-unesco-blue transition-all">
+              <option value="all">All Categories</option>
+            </select>
+            <select id="filter-level" class="flex-1 min-w-[140px] bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue focus:ring-1 focus:ring-unesco-blue transition-all">
+              <option value="all">All Innovation Levels</option>
+              <option value="grassroots">Grassroots</option>
+              <option value="semi-formal">Semi-Formal</option>
+              <option value="institutional">Institutional</option>
+            </select>
+            <select id="filter-risk" class="flex-1 min-w-[140px] bg-slate-50 border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue focus:ring-1 focus:ring-unesco-blue transition-all">
+              <option value="all">All Risk Levels</option>
+              <option value="high">High Risk (Score ≥ 8)</option>
+              <option value="medium">Medium Risk (Score 4-7)</option>
+              <option value="low">Low Risk (Score ≤ 3)</option>
+            </select>
           </div>
         </div>
+
+        <!-- BARIS 2: SORTING -->
+        <div class="p-3 px-4 bg-slate-50 flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="flex items-center gap-2 text-slate-600 shrink-0 lg:w-32">
+            <i class="ph-fill ph-sort-ascending text-xl"></i>
+            <span class="font-semibold text-sm">Sort By</span>
+          </div>
+          <div class="flex w-full sm:w-auto">
+            <select id="sort-order" class="w-full sm:w-64 bg-white border border-slate-200 text-sm rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-unesco-blue focus:ring-1 focus:ring-unesco-blue shadow-sm cursor-pointer transition-all">
+              <option value="priority">Highest Priority Score</option>
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+            </select>
+          </div>
+        </div>
+
       </div>
+
       <div id="inventory-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       <div id="pagination-container" class="w-full flex flex-col md:flex-row items-center justify-between gap-4 pt-4 pb-8 hidden">
         <div class="flex items-center gap-2 w-full md:w-auto justify-center md:justify-start bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
