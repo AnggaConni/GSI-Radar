@@ -11074,5 +11074,343 @@
         "priority_score": 52,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "08a87f8a23ea0b57e40ea543c057e52c",
+        "timestamp": "2026-03-30T02:03:22.248775",
+        "title": "Humanure Composting System",
+        "sources": [
+            "https://oceansewagealliance.org/meet-the-humanure-toilet-it-recycles-poop-to-grow-more-food-and-stops-sewage-pollution/",
+            "https://humanurehandbook.com/",
+            "https://www.lowimpact.org/posts/an-example-of-joe-jenkins-humanure-composting-toilet-system-used-successfully-for-9-years",
+            "https://humanurehandbook.com",
+            "https://www.milkwood.net/2012/08/17/building-a-jenkins-style-lovable-loo-for-the-tinyhouse/"
+        ],
+        "summary": "A low-cost, DIY composting toilet method that uses thermophilic composting to transform human waste into nutrient-rich soil using sawdust and a simple bucket system.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Sustainable Living"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Pennsylvania",
+            "lat": 40.9699889,
+            "lon": -77.7278831
+        },
+        "process": {
+            "how_it_works": "The system uses a dry toilet to collect waste, which is then covered with carbon-rich material to facilitate thermophilic composting in an outdoor bin, destroying pathogens through heat.",
+            "materials_used": [
+                "5-gallon plastic bucket",
+                "Wooden box (Lovable Loo)",
+                "Sawdust",
+                "Peat moss",
+                "Outdoor composting bin (Humanure Hacienda)"
+            ],
+            "step_by_step": [
+                "Deposit waste into a 5-gallon bucket housed in a wooden box",
+                "Cover each deposit with a layer of sawdust or peat moss to manage moisture and odor",
+                "Empty the bucket into a dedicated outdoor composting bin once full",
+                "Monitor the bin to ensure thermophilic (hot) composting occurs to kill pathogens",
+                "Allow the material to cure into nutrient-rich soil"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a low-cost sanitation solution that eliminates water use and recycles nutrients back into the soil.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The primary risk is biological; if the composting process fails to reach and maintain thermophilic temperatures (above 131°F), pathogens and parasites can survive in the final product. There is also an environmental risk of groundwater contamination if the outdoor bins are not properly sited or lined to prevent leachate runoff."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "355da9fe6bdde6498ee0df4823f0e268",
+        "timestamp": "2026-03-30T02:03:45.670059",
+        "title": "Arborloo",
+        "sources": [
+            "https://reforestation.me/low-cost-arborloo-offers-ethiopians-health-and-agriculture-benefits/",
+            "https://en.wikipedia.org/wiki/Arborloo",
+            "https://akvopedia.org/wiki/Arborloo",
+            "https://www.susana.org/en/knowledge-hub/resources-and-publications/library/details/1146",
+            "https://www.medbox.org/document/promoting-ecological-sanitation-in-ethiopia-through-the-arborloo-latrine",
+            "https://www.sleigh-munoz.co.uk/arborloos"
+        ],
+        "summary": "A simple, low-cost composting toilet system designed for rural sanitation where a portable structure is moved between shallow pits, eventually creating a nutrient-rich site for planting fruit or medicinal trees.",
+        "category": [
+            "Sanitation",
+            "Sustainable Agriculture",
+            "Waste Management"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Zimbabwe",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses a shallow pit to collect waste which is mixed with soil and ash to facilitate composting; once the pit is full, it is covered and used as a fertile planting site for trees.",
+            "materials_used": [
+                "Concrete slab",
+                "Local building materials (wood/thatch)",
+                "Soil",
+                "Wood ash"
+            ],
+            "step_by_step": [
+                "Dig a shallow pit approximately 1 meter deep",
+                "Place a portable concrete slab and a privacy superstructure over the pit",
+                "Add a cup of soil and wood ash after each use to deter flies and aid composting",
+                "Move the slab and superstructure to a new site when the pit is nearly full",
+                "Cover the old pit with a layer of topsoil",
+                "Plant a fruit or medicinal tree in the nutrient-rich humus"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of safe sanitation and poor soil fertility in rural developing regions.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological, involving potential exposure to pathogens in human waste. While the design improves sanitation over open defecation, improper siting could lead to groundwater contamination. The use of soil and wood ash effectively manages odors and flies, and the shallow pit depth encourages aerobic decomposition, reducing methane explosion risks common in deeper pits."
+        },
+        "priority_score": 56,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "549032d3dd14afe2a4a930549f256f0b",
+        "timestamp": "2026-03-30T02:04:11.838058",
+        "title": "EkoLakay Container-Based Sanitation (CBS)",
+        "sources": [
+            "https://foodtank.com/news/2013/12/ecosan-toilets-transform-human-waste-into-compost-in-haiti/",
+            "https://unfccc.int/climate-action/momentum-for-change/planetary-health/composting-waste-treatment-haiti",
+            "https://www.oursoil.org/",
+            "https://www.oursoil.org",
+            "https://www.biocycle.net/composting-anchors-sanitation-access-in-haiti/"
+        ],
+        "summary": "A circular economy sanitation model in Haiti that provides households with urine-diverting dry toilets and converts collected human waste into nutrient-rich organic compost for agriculture and reforestation.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Circular Economy",
+            "Agriculture"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Haiti",
+            "region": "Cap-Haïtien",
+            "lat": 19.7595236,
+            "lon": -72.2008068
+        },
+        "process": {
+            "how_it_works": "The system uses urine-diverting dry toilets (UDDTs) to separate waste at the source, followed by a centralized thermophilic composting process that treats solids to WHO standards.",
+            "materials_used": [
+                "Locally manufactured UDDTs",
+                "15-gallon drums",
+                "Sugarcane bagasse"
+            ],
+            "step_by_step": [
+                "Install locally manufactured UDDTs in households to separate liquid and solid waste",
+                "Collect solid waste in 15-gallon drums",
+                "Transport drums to a centralized composting facility",
+                "Mix the solid waste with sugarcane bagasse, a local rum production byproduct",
+                "Perform a six-month thermophilic composting process to eliminate pathogens",
+                "Sell the resulting organic compost to local farmers for soil improvement"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of safe sanitation infrastructure, environmental pollution, and declining soil fertility.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Biological hazard",
+                "Pathogens"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk involves the handling and processing of human excreta, which contains dangerous pathogens. However, the use of urine-diverting dry toilets and adherence to WHO-standard thermophilic composting processes significantly mitigates these risks. While the material is hazardous, the established management protocols and the use of carbon-rich bulking agents like bagasse make the process relatively safe when safety gear and temperature monitoring are utilized."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "692913f681dbb48f929844c1305f1aea",
+        "timestamp": "2026-03-30T02:04:30.951270",
+        "title": "GiveLove Humanure Composting Toilets",
+        "sources": [
+            "https://www.youtube.com/watch?v=f-B-S_6jC0k",
+            "https://www.givelove.org/",
+            "https://givelovecanada.org/method/",
+            "https://www.givelove.org"
+        ],
+        "summary": "A DIY humanure composting system implemented by the NGO GiveLove to provide safe sanitation, protect water sources from contamination, and generate nutrient-rich compost for community gardens in high-need rural areas and refugee camps.",
+        "category": [
+            "Sanitation",
+            "Sustainable Agriculture",
+            "Environmental Protection",
+            "Water Management"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya, Uganda, Haiti",
+            "region": "East Africa and Caribbean",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses dry toilets to collect human waste in recycled containers, which is then mixed with carbon-rich materials and processed through thermophilic 'hot composting' to eliminate pathogens.",
+            "materials_used": [
+                "Recycled containers",
+                "Sawdust",
+                "Dry grass",
+                "Compost bins",
+                "Local carbon materials"
+            ],
+            "step_by_step": [
+                "Local technicians are trained to build and manage the dry toilet systems.",
+                "Dry toilets are installed using recycled containers to collect waste.",
+                "Users add carbon materials like sawdust or dry grass after each use to manage moisture and odor.",
+                "Collected waste is moved to managed composting bins.",
+                "The waste undergoes a 'hot composting' process where high temperatures ensure the destruction of pathogens.",
+                "The finished safe compost is applied to community gardens to improve soil health and food security."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Prevents water table contamination from failing pit latrines and provides a sanitation solution in water-scarce environments.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk involves the handling of human waste and the potential for pathogen survival (e.g., E. coli, parasites) if the 'hot composting' process fails to reach or maintain required temperatures. While the project uses managed bins and training to mitigate these risks, the DIY nature in high-need areas requires strict adherence to hygiene protocols and safety gear to prevent disease transmission and localized environmental contamination."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "2394d601bd4e80c81b9ab9c3659f353c",
+        "timestamp": "2026-03-30T02:04:54.861289",
+        "title": "DIY Urine-Diverting Dry Composting Toilets",
+        "sources": [
+            "https://www.re-alliance.org/publications",
+            "https://www.youtube.com/watch?v=o0v-qN6B-M0",
+            "https://yiceuganda.org/"
+        ],
+        "summary": "A dual-purpose sanitation and agricultural system implemented in Nakivale Refugee Camp that uses urine-diverting dry toilets to produce liquid nitrogen-rich fertilizer and solid compost, helping refugees overcome soil depletion and waste management challenges.",
+        "category": [
+            "Sanitation",
+            "Agriculture",
+            "Waste Management"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda",
+            "region": "Nakivale Refugee Camp",
+            "lat": -0.8008303,
+            "lon": 30.9249274
+        },
+        "process": {
+            "how_it_works": "The system separates human waste at the source. Urine is collected separately for dilution and use as liquid fertilizer, while solids are collected in barrels and mixed with carbon-rich materials to create compost, preventing ground pollution and odor.",
+            "materials_used": [
+                "Recycled plastic barrels",
+                "Wood ash",
+                "Sawdust"
+            ],
+            "step_by_step": [
+                "Install a urine-diverting toilet structure over collection chambers.",
+                "Divert urine into separate containers for dilution and immediate use as nitrogen-rich fertilizer.",
+                "Collect solid waste in recycled plastic barrels used as collection chambers.",
+                "Add wood ash and sawdust to the solids to facilitate the composting process and manage moisture.",
+                "Apply the resulting compost and liquid fertilizer to kitchen gardens to improve soil quality."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Sanitation issues and poor soil quality in refugee camp environments with limited land allocation.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The primary risk involves the handling of human excreta in a high-density refugee camp. If the composting process for solids is incomplete or if urine is not properly aged/diluted, there is a significant risk of spreading pathogens such as E. coli, cholera, or parasites. The DIY nature of the collection chambers increases the potential for leaks into groundwater, and the use of the resulting fertilizer on food crops requires strict adherence to safety protocols to prevent disease transmission."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
