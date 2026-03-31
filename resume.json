@@ -1,0 +1,227 @@
+[
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-03-31T10:58:45.679328",
+            "period": "Q1 2026",
+            "total_records_analyzed": 175
+        },
+        "global_summary": {
+            "total_innovations": 175,
+            "grassroots_percentage": 42.86,
+            "institutional_percentage": 30.86,
+            "semi_formal_percentage": 26.29
+        },
+        "top_categories": [
+            {
+                "category": "Waste Management & Upcycling",
+                "count": 24,
+                "trend": "increasing"
+            },
+            {
+                "category": "Sustainable Agriculture",
+                "count": 21,
+                "trend": "stable"
+            },
+            {
+                "category": "Renewable Energy",
+                "count": 18,
+                "trend": "increasing"
+            },
+            {
+                "category": "Water & Sanitation",
+                "count": 17,
+                "trend": "stable"
+            },
+            {
+                "category": "Healthcare & Diagnostics",
+                "count": 12,
+                "trend": "increasing"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "East Africa (Kenya, Uganda, Malawi)",
+                "key_pattern": "Dominance of DIY energy and mechanical repurposing (Biogas, Engine ECUs, Windmills).",
+                "risk_level": "high"
+            },
+            {
+                "region": "Southeast Asia (Indonesia, Philippines)",
+                "key_pattern": "Sophisticated institutional-grassroots hybrids in marine conservation and circular economy (Waste Banks, Seaweed Bioplastics).",
+                "risk_level": "low"
+            },
+            {
+                "region": "Latin America (Haiti, Colombia, Brazil)",
+                "key_pattern": "Focus on resilient infrastructure and circular sanitation (Plastic bricks, Container-based toilets).",
+                "risk_level": "medium"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 11,
+            "critical_cases": 11,
+            "top_risk_types": [
+                "Explosion (Methane/Compressed Air)",
+                "Biological (Pathogen exposure in DIY sanitation)",
+                "Toxic Fumes (Plastic melting/E-waste)",
+                "Fire (DIY Electronics/Battery storage)"
+            ],
+            "emerging_risks": [
+                "Thermal runaway in repurposed lithium batteries for rural lighting.",
+                "Groundwater contamination from unlined DIY composting pits.",
+                "Respiratory damage from unregulated plastic-to-brick melting operations."
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Circular Sanitation",
+                "description": "Transforming human waste into agricultural fertilizer via thermophilic composting.",
+                "regions": [
+                    "Haiti",
+                    "Uganda",
+                    "USA",
+                    "Kenya"
+                ],
+                "risk_level": "medium"
+            },
+            {
+                "pattern_name": "Plastic-to-Infrastructure",
+                "description": "Repurposing PET bottles and sachets into housing, schools, and paving blocks.",
+                "regions": [
+                    "Nigeria",
+                    "Ghana",
+                    "Colombia",
+                    "Guatemala"
+                ],
+                "risk_level": "medium"
+            },
+            {
+                "pattern_name": "Indigenous-Tech Hybrids",
+                "description": "Integrating traditional ecological knowledge with AI, Drones, and IoT.",
+                "regions": [
+                    "Brazil",
+                    "Australia",
+                    "Canada",
+                    "New Zealand"
+                ],
+                "risk_level": "low"
+            },
+            {
+                "pattern_name": "Frugal Diagnostics",
+                "description": "Hand-powered or paper-based medical tools for off-grid clinics.",
+                "regions": [
+                    "Global",
+                    "India",
+                    "USA"
+                ],
+                "risk_level": "low"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "Paperfuge",
+                "country": "USA",
+                "reason": "Achieves 125,000 RPM using string and paper; replaces $1,000+ equipment for pennies."
+            },
+            {
+                "title": "Sack Gardening",
+                "country": "Kenya",
+                "reason": "Enables high-density food production in slums with zero arable land."
+            },
+            {
+                "title": "Raghav FM",
+                "country": "India",
+                "reason": "Functional community radio transmitter built for under $1 using scrap."
+            },
+            {
+                "title": "Liter of Light",
+                "country": "Philippines",
+                "reason": "Zero-carbon daytime lighting using water refraction in PET bottles."
+            },
+            {
+                "title": "Milpa System",
+                "country": "Mexico",
+                "reason": "Ancient polyculture that maintains soil fertility without synthetic inputs for centuries."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "regulation",
+                "target": "DIY Biogas Systems",
+                "priority_level": "high",
+                "justification": "High explosion risk in residential areas; needs standardized pressure relief valves."
+            },
+            {
+                "type": "training",
+                "target": "Plastic Upcycling Enterprises",
+                "priority_level": "medium",
+                "justification": "Workers exposed to toxic VOCs during melting; requires fume extraction education."
+            },
+            {
+                "type": "funding",
+                "target": "Frugal Diagnostic Tools",
+                "priority_level": "high",
+                "justification": "High impact on neonatal and maternal mortality with minimal capital requirement."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "Adapted from existing",
+            "trend": "shifting",
+            "observation": "Knowledge is evolving from purely 'Traditional' or 'Self-taught' toward 'Hybrid' models where grassroots actors adopt high-tech sensors (IoT/Drones) to validate ancestral practices."
+        },
+        "recommendations": [
+            "Develop 'Safety-in-a-Box' kits for DIY energy innovators (fuses, valves, masks).",
+            "Incentivize 'Waste Bank' models globally to formalize informal recycling sectors.",
+            "Establish a global 'Frugal Tech' certification to fast-track medical device adoption.",
+            "Protect Indigenous data sovereignty in AI-hybrid conservation projects.",
+            "Scale 'Circular Sanitation' by linking urban waste to rural fertilizer markets."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Africa",
+                    "count": 42
+                },
+                {
+                    "region": "Asia",
+                    "count": 31
+                },
+                {
+                    "region": "Americas",
+                    "count": 22
+                },
+                {
+                    "region": "Europe/Oceania",
+                    "count": 8
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "High",
+                    "count": 11
+                },
+                {
+                    "level": "Medium",
+                    "count": 62
+                },
+                {
+                    "level": "Low",
+                    "count": 102
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "Traditional",
+                    "count": 28
+                },
+                {
+                    "source": "Adapted",
+                    "count": 41
+                },
+                {
+                    "source": "Formal",
+                    "count": 34
+                }
+            ]
+        }
+    }
+]

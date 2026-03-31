@@ -11412,5 +11412,276 @@
         "priority_score": 58,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "677e38a121b74511537d42c0dddc7203",
+        "timestamp": "2026-03-31T10:57:25.482615",
+        "title": "Baptist Method Manual Drilling",
+        "sources": [
+            "https://en.wikipedia.org/wiki/Baptist_well_drilling",
+            "https://waterforallinternational.org/",
+            "https://akvopedia.org/wiki/Sludging_-_Baptist_method",
+            "https://www.rural-water-supply.net/en/implementation/baptist-drilling"
+        ],
+        "summary": "A manual borehole drilling technique that combines sludging and percussion methods, allowing rural communities to construct deep-borehole wells up to 100 meters deep using simple materials and human power instead of heavy machinery.",
+        "category": [
+            "Water & Sanitation",
+            "Appropriate Technology",
+            "Community Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Bolivia",
+            "region": "South America",
+            "lat": -19.0358414,
+            "lon": -65.26444
+        },
+        "process": {
+            "how_it_works": "It uses a hybrid percussion-sludging technique where a drill stem with a foot valve acts as a pump. As the stem is manually lifted and dropped, the valve forces mud and drill cuttings up through the hollow stem to the surface.",
+            "materials_used": [
+                "PVC pipe",
+                "Steel drill bit",
+                "Wooden or bamboo derrick",
+                "Rope",
+                "Pulley",
+                "Foot valve"
+            ],
+            "step_by_step": [
+                "Erect a simple derrick made of wood or bamboo over the drilling site.",
+                "Assemble a drill stem using PVC pipe tipped with a steel bit containing a foot valve.",
+                "Set up a rope-and-pulley system to allow a team to lift and drop the drill stem manually.",
+                "Reciprocate the drill stem to break through soil and rock while the foot valve pumps debris out of the hole.",
+                "Add additional lengths of PVC pipe to the drill stem as the depth increases.",
+                "Once the aquifer is reached, remove the drill stem and install the permanent well casing and pump."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and logistical difficulty of accessing mechanized drilling equipment in remote or impoverished areas.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Physical injury",
+                "Structural failure",
+                "Environmental contamination"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The Baptist method is a low-tech manual drilling technique. The primary risks are physical, including ergonomic strain, injury from falling equipment or derrick collapse, and rope failure during the manual lifting process. There is also a moderate environmental risk regarding groundwater contamination if the well is not properly sealed or if it penetrates multiple aquifers without adequate casing. However, it avoids the chemical and explosive risks associated with mechanized drilling."
+        },
+        "priority_score": 66,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "0da625e164b253c6a941e3f3096f6c8b",
+        "timestamp": "2026-03-31T10:57:44.037390",
+        "title": "Smart Handpumps",
+        "sources": [
+            "https://www.rural-water-supply.net/en/topics/smart-handpumps",
+            "https://fundifix.org/",
+            "https://www.ox.ac.uk/research/smart-handpumps",
+            "https://www.unicef.org/innovation/stories/smart-handpumps",
+            "https://www.smithschool.ox.ac.uk/research/water/smart-handpumps"
+        ],
+        "summary": "A frugal innovation that integrates mobile technology with traditional handpumps to monitor usage and detect mechanical failures in real-time using accelerometers and SMS data transmission.",
+        "category": [
+            "Water & Sanitation",
+            "IoT",
+            "Infrastructure",
+            "Frugal Innovation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A Waterpoint Data Transmitter (WDT) attached to the pump handle uses an accelerometer to monitor movement, transmitting usage data via SMS to a central database for maintenance alerts.",
+            "materials_used": [
+                "Waterpoint Data Transmitter (WDT)",
+                "Accelerometer",
+                "SMS/GSM module",
+                "Existing handpump"
+            ],
+            "step_by_step": [
+                "Attach the WDT device to the handle of an existing handpump.",
+                "The accelerometer records the vibration and movement of the handle during use.",
+                "The device processes the movement patterns to estimate water flow and identify mechanical irregularities.",
+                "Real-time usage data is transmitted via SMS to a central database.",
+                "Maintenance providers are alerted to failures immediately, allowing for rapid repair dispatch."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces handpump downtime from an average of 30 days to less than 3 days by shifting from a reactive 'break-fix' model to data-driven maintenance.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a low-power IoT monitoring device using standard accelerometers and SMS technology. It involves no hazardous chemicals, high-energy systems, or pressurized components, and it significantly improves public health by ensuring consistent access to clean water."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "47fde4d750f210381d7b06d0919367fc",
+        "timestamp": "2026-03-31T10:58:06.662649",
+        "title": "Zimbabwe Bush Pump",
+        "sources": [
+            "https://www.rwsn.ch/en/pumps/bush-pump",
+            "https://www.rural-water-supply.net/en/implementation/bush-pump",
+            "https://en.wikipedia.org/wiki/Bush_pump",
+            "https://www.clean-water-for-laymen.com/zimbabwe-bush-pumps.html",
+            "https://akvo.org/akvopedia/wiki/Zimbabwe_Bush_Pump"
+        ],
+        "summary": "A robust, lever-action handpump designed for heavy-duty community use, featuring a unique hardwood block mechanism that allows for local maintenance and repair. It is an open-source design that has become a national standard in Zimbabwe for its adaptability and durability.",
+        "category": [
+            "Water & Sanitation",
+            "Appropriate Technology",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Zimbabwe",
+            "region": "Harare",
+            "lat": -17.8567035,
+            "lon": 31.0601584
+        },
+        "process": {
+            "how_it_works": "A lever-action mechanism uses a large hardwood block as a bearing to facilitate the pumping of water. The pump body is bolted directly to the well casing to ensure stability during heavy use.",
+            "materials_used": [
+                "Hardwood block",
+                "Steel bolts",
+                "Common plumbing parts",
+                "Well casing"
+            ],
+            "step_by_step": [
+                "The pump base is bolted directly onto the well casing for maximum stability.",
+                "A hardwood block is fitted to act as both the lever mechanism and the bearing.",
+                "Standard plumbing components are used for the internal rising main and cylinder.",
+                "The pump is operated by hand via the lever to draw water from the well.",
+                "Maintenance is performed by community members who can replace the wooden block or repair plumbing parts using local tools."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a reliable, locally maintainable water source for rural communities, overcoming the failure of complex imported pump systems.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "mechanical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Zimbabwe Bush Pump is a proven, low-risk mechanical technology designed for community water access. The primary risks are limited to minor mechanical injuries such as pinch points during operation or maintenance. While the 'jerry-rigged' nature of local repairs could theoretically introduce non-food-grade materials into the water supply, the overall public health benefit of providing reliable water significantly outweighs these minor technical risks."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "992b114bd43fb641d2d049f677c1c42c",
+        "timestamp": "2026-03-31T10:58:24.023667",
+        "title": "Marion Medical Mission (MMM) Shallow Well Community-Partnership Model",
+        "sources": [
+            "https://www.mmmwater.org/",
+            "https://www.watertownfirstpres.org/protected-shallow-wells",
+            "https://www.mmmwater.org",
+            "https://clubrunner.ca/somerset-hills/stories/marion-medical-mission-shallow-well-program"
+        ],
+        "summary": "A highly cost-effective 'self-help' model for shallow well installation that combines external technical components with local labor and materials to ensure community ownership and sustainability.",
+        "category": [
+            "Water & Sanitation",
+            "Community Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Malawi, Tanzania, Zambia",
+            "region": "East Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The organization provides specialized technical parts while the community enters into a 'self-help' contract to provide all labor and locally available materials, ensuring the well is viewed as community property.",
+            "materials_used": [
+                "PVC pipes",
+                "Steel pump head",
+                "Cement",
+                "Sand",
+                "Stone",
+                "Handmade fired bricks"
+            ],
+            "step_by_step": [
+                "Community enters a self-help contract with MMM",
+                "Villagers manually dig the shallow well",
+                "Villagers gather local sand and stone",
+                "Villagers manufacture bricks and fire them in local village kilns",
+                "MMM provides technical components including PVC pipes, steel pump heads, and cement",
+                "The well is lined with the locally made bricks and the pump is installed"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to safe, clean drinking water in rural areas due to high costs of traditional well-drilling.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Environmental",
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is primarily a social and logistical process for implementing standard shallow well technology. Physical risks are limited to standard construction hazards such as manual digging and the use of village kilns for brick-making. The environmental impact is low, though shallow wells require monitoring for seasonal recharge and surface contamination. The model is well-established and focuses on sustainable community ownership."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
