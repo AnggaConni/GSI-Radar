@@ -11683,5 +11683,209 @@
         "priority_score": 58,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "afc46d5d47faa727be9901272f8b330e",
+        "timestamp": "2026-04-02T11:45:13.064341",
+        "title": "Bicycle-trailer ambulances for rural healthcare",
+        "sources": [
+            "https://bicyclescreatechange.com",
+            "https://www.bicycling.com",
+            "https://fabio.or.ug",
+            "https://www.gtkp.com",
+            "https://www.aljazeera.com",
+            "https://www.transaid.org"
+        ],
+        "summary": "A low-cost emergency transport solution using bicycles and custom-built trailers to navigate narrow, unpaved paths in rural Uganda and Zambia, primarily used to reduce maternal mortality by bridging the transport gap to health centers.",
+        "category": [
+            "Healthcare",
+            "Transportation",
+            "Rural Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda and Zambia",
+            "region": "East and Southern Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A standard bicycle is used to pull a lightweight, custom-engineered metal trailer that allows a patient to lie in a reclining position while being shielded from the elements.",
+            "materials_used": [
+                "Standard bicycle",
+                "Lightweight metal frame",
+                "Padded stretcher",
+                "Weather-resistant canopy"
+            ],
+            "step_by_step": [
+                "Fabrication of a lightweight metal trailer frame designed for stability on rough terrain.",
+                "Attachment of a padded stretcher and a protective canopy to the trailer.",
+                "Coupling the trailer to a standard bicycle via a flexible hitch.",
+                "Deployment to village health teams who are trained in maintenance and operation.",
+                "Transporting patients from remote households to formal medical facilities via narrow footpaths."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High maternal mortality and lack of emergency transport in areas inaccessible by motorized vehicles.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This is a low-tech mechanical innovation using standard materials. The primary risks are physical, such as mechanical failure or tipping on uneven terrain, but these are minimal compared to the life-saving benefits. There are no chemical, explosive, or environmental hazards involved."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "5b209fd75516e3793f49c74d8c8af429",
+        "timestamp": "2026-04-02T11:45:39.337230",
+        "title": "Motorcycle Sidecar Ambulance (eRanger / Okoa)",
+        "sources": [
+            "https://www.fanamc.com",
+            "https://www.eranger.com/",
+            "https://www.unicef.org",
+            "https://www.autodesk.com",
+            "https://borgenproject.org",
+            "https://www.unicef.org/india/",
+            "https://www.theokoaproject.org/"
+        ],
+        "summary": "A motorized innovation designed to navigate rugged, off-road terrain to provide emergency medical transport. It consists of a motorcycle with a specialized sidecar stretcher equipped with a roll cage and shock-absorbing suspension, primarily used for maternal health and reaching remote tribal communities.",
+        "category": [
+            "Healthcare",
+            "Transportation",
+            "Emergency Services",
+            "Maternal Health"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "India, Tanzania, South Africa",
+            "region": "Chhattisgarh",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system utilizes a motorcycle's mobility to reach areas inaccessible by four-wheeled vehicles. A side-carriage is attached to the bike, specifically engineered to act as a stable stretcher for patients while maintaining balance on uneven ground.",
+            "materials_used": [
+                "Motorcycle",
+                "Side-carriage stretcher",
+                "Roll cage",
+                "Specialized suspension system",
+                "Universal attachment hardware"
+            ],
+            "step_by_step": [
+                "Identify a standard local motorcycle for the base vehicle.",
+                "Attach a specialized sidecar frame using a universal or custom mounting system.",
+                "Install a stretcher within the side-carriage frame.",
+                "Fit a roll cage and specialized suspension to protect the patient from shocks and accidents.",
+                "Deploy the unit to remote regions or dense forests for emergency response."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of emergency medical transportation in rugged, off-road, and forested areas where traditional ambulances cannot navigate.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Mechanical",
+                "Physical safety",
+                "Traffic safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation is a mechanical transport solution rather than a chemical or high-energy hazard. The primary risks involve vehicle stability, center-of-gravity shifts due to the sidecar, and the physical safety of the patient during off-road transit. While there is a risk of accidents on rugged terrain, the use of roll cages and specialized suspensions mitigates these dangers, and the programs are managed by established humanitarian organizations.",
+            "innovation_assessment": "High social impact innovation addressing rural healthcare gaps through mechanical adaptation of existing transport."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "3377aa2f3654bba9c858bdd5667beb62",
+        "timestamp": "2026-04-02T11:46:03.827406",
+        "title": "Ox-cart Ambulances",
+        "sources": [
+            "https://www.malawiproject.org",
+            "https://www.designindaba.com",
+            "https://www.wordpress.com"
+        ],
+        "summary": "In remote and impoverished regions of Malawi and Chad, traditional ox-carts are repurposed as improvised ambulances to transport critically ill patients to medical facilities when motorized vehicles are unavailable or roads are impassable.",
+        "category": [
+            "Healthcare",
+            "Transportation",
+            "Emergency Services"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Malawi, Chad",
+            "region": "Dono-Manga",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Traditional agricultural carts are converted into patient transport vehicles by adding soft lining to provide a stable, mobile platform capable of navigating difficult terrain.",
+            "materials_used": [
+                "Ox-cart",
+                "Blankets",
+                "Mattresses",
+                "Oxen"
+            ],
+            "step_by_step": [
+                "Repurpose a traditional agricultural ox-cart for medical use.",
+                "Line the cart bed with blankets or mattresses to provide cushioning for the patient.",
+                "Position the patient on the stable platform.",
+                "Use oxen to pull the cart through muddy or remote terrain to reach health centers like the Jordan Health Center."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of motorized emergency transport and impassable road conditions in remote areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While ox-carts provide a vital transport solution in impassable terrain, the primary risks include significant delays in medical treatment for time-sensitive emergencies and the lack of patient stabilization equipment or sanitation. The 'intervention' needed is not to stop the practice, but to provide better medical infrastructure and faster transport alternatives."
+        },
+        "priority_score": 60,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
