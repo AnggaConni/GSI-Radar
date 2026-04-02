@@ -18,9 +18,6 @@ on:
           - 'force_resume'  # Hanya men-generate resume.json baru secara paksa
           - 'force_both'    # Mencari data sekaligus men-generate resume
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   run-scraper-and-ai:
     runs-on: ubuntu-latest
@@ -69,3 +66,10 @@ jobs:
             git commit -m "🤖 Auto-update: Synchronized Radar Data & Resumes [skip ci]"
             git push
           fi
+
+      - name: Keep repo alive
+        run: |
+          echo "Last run: $(date)" > .heartbeat
+          git add .heartbeat
+          git commit -m "💓 keep alive" || echo "No changes"
+          git push || echo "Nothing to push"
