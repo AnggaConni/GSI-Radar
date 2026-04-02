@@ -11887,5 +11887,195 @@
         "priority_score": 60,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "d997c67978a8180349e7f3890032b976",
+        "timestamp": "2026-04-02T11:56:42.611817",
+        "title": "Traditional Ash-based Seed Preservation",
+        "sources": [],
+        "summary": "A traditional agricultural practice using wood or cow dung ash as a natural desiccant and pesticide to protect stored seeds from pests and moisture-induced rot.",
+        "category": [
+            "Agriculture",
+            "Traditional Knowledge",
+            "Pest Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India, China",
+            "region": "Bundelkhand (India), Africa, Ancient China",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The alkaline nature of the ash dehydrates pest larvae and interferes with their movement, while its desiccant properties absorb residual moisture to prevent fungal growth.",
+            "materials_used": [
+                "Wood ash",
+                "Cow dung ash",
+                "Earthen pots",
+                "Seeds"
+            ],
+            "step_by_step": [
+                "Thoroughly sun-dry the seeds to reduce initial moisture.",
+                "Mix the seeds with fine wood or cow dung ash.",
+                "Place the mixture into earthen pots.",
+                "Fill the top quarter of the pot entirely with ash to create a protective barrier.",
+                "Perform periodic sun-drying cycles every six months to maintain seed viability."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Storage pests (weevils and beetles), fungal growth, and seed rot in traditional farming.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Respiratory irritation",
+                "Skin irritation"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This is a traditional, low-risk agricultural practice using natural materials. The primary safety concerns are minor: inhalation of fine ash particles (respiratory irritation) and potential skin dryness or irritation from the alkaline nature of the wood or dung ash. It is environmentally sustainable and poses no fire or explosion hazards."
+        },
+        "priority_score": 52,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "04a06fbfba10623151397fd124afa6a3",
+        "timestamp": "2026-04-02T11:57:05.977777",
+        "title": "Khatti (or Khassa) Traditional Underground Grain Storage",
+        "sources": [],
+        "summary": "A traditional underground storage technique used in semi-arid regions of India to preserve large quantities of grain and seeds. By creating an airtight, anaerobic environment, it prevents pest infestation and maintains seed viability for over a year.",
+        "category": [
+            "Agriculture",
+            "Food Preservation",
+            "Traditional Knowledge"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Uttar Pradesh and Rajasthan",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The storage pit creates an airtight, anaerobic environment. The lack of oxygen prevents pests from surviving and slows the metabolic rate of the seeds, ensuring long-term preservation.",
+            "materials_used": [
+                "Wheat straw",
+                "Palash (Butea monosperma) leaves",
+                "Stone slab",
+                "Wooden plank",
+                "Mud",
+                "Cow dung"
+            ],
+            "step_by_step": [
+                "Dig a pit approximately 10 to 15 feet deep in the ground.",
+                "Line the interior with thick layers of wheat straw and Palash leaves to provide insulation and moisture protection.",
+                "Fill the pit with the grain or seeds to be stored.",
+                "Seal the top of the pit using a stone slab or wooden plank.",
+                "Apply a plaster mixture of mud and cow dung over the top to ensure the pit is completely airtight."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Pest infestation and grain spoilage during long-term storage in semi-arid climates.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Asphyxiation",
+                "Confined Space"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While effective for grain preservation, the creation of an airtight, anaerobic environment in a 10-15 foot deep pit poses a significant asphyxiation risk to anyone entering the space. Accumulated carbon dioxide or depleted oxygen levels can be fatal upon opening or entry. Traditional methods often lack modern gas detection or ventilation protocols for confined spaces."
+        },
+        "priority_score": 60,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "f0f2387506bee33d624aa8bcf47a25d0",
+        "timestamp": "2026-04-02T11:57:23.520542",
+        "title": "Ancestral Puebloan Clay Seed Pots",
+        "sources": [
+            "https://www.nps.gov/meve/learn/historyculture/index.htm",
+            "https://www.crowcanyon.org/",
+            "https://americanindian.si.edu/"
+        ],
+        "summary": "Specialized ceramic vessels developed by Indigenous communities in the American Southwest for the long-term preservation of seeds. These pots utilize a narrow-neck design, porous clay, and natural sealants to protect agricultural stores from pests and moisture in arid environments.",
+        "category": [
+            "Agriculture",
+            "Food Preservation",
+            "Indigenous Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "American Southwest",
+            "lat": 34.1004643,
+            "lon": -118.205806
+        },
+        "process": {
+            "how_it_works": "The vessel's narrow opening minimizes exposure, while the porous clay allows for slight air exchange to prevent rot. Seals made of stone and resin create an airtight barrier against rodents and humidity.",
+            "materials_used": [
+                "Clay",
+                "Stone plugs",
+                "Natural resins",
+                "Water"
+            ],
+            "step_by_step": [
+                "Shape local clay into a vessel with a wide body and a very narrow neck.",
+                "Fire the ceramic to a specific temperature to maintain slight porosity.",
+                "Fill the vessel with dried seeds.",
+                "Insert a fitted stone or clay plug into the opening.",
+                "Apply natural resins around the plug to create a hermetic seal.",
+                "Store in a dry, stable environment or bury for long-term preservation.",
+                "Break or unseal the pot during the planting season to release the seeds."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Loss of agricultural biodiversity and food security due to seed spoilage, moisture, and rodent predation in harsh desert climates.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This is a traditional, low-tech method of seed preservation using natural, inert materials like clay and stone. It involves no hazardous chemicals, high-energy systems, or flammable substances. The process is environmentally sustainable and poses no threat to human safety."
+        },
+        "priority_score": 38,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
