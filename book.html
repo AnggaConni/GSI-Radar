@@ -99,7 +99,7 @@
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
-        /* --- PRINT STYLES --- */
+        /* --- PRINT STYLES FOR ALL PAGES --- */
         @media print {
             @page {
                 size: A4;
@@ -111,56 +111,76 @@
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
-            nav, .no-print {
+            /* Sembunyikan elemen UI Aplikasi */
+            nav, .no-print, #book-wrapper {
                 display: none !important;
             }
             main {
                 padding: 0 !important;
                 margin: 0 !important;
-                display: block !important;
             }
-            #book-wrapper {
+            /* Tampilkan wrapper cetak khusus */
+            #print-wrapper {
                 display: block !important;
-                max-width: 100% !important;
-                width: 100% !important;
-                gap: 0 !important;
+                width: 100%;
+                background: white;
             }
-            .a4-page {
-                width: 100% !important;
-                max-width: 100% !important;
-                height: 100vh !important;
-                aspect-ratio: auto !important;
-                box-shadow: none !important;
-                border-radius: 0 !important;
-                page-break-after: always !important;
-                break-after: page !important;
-                overflow: hidden !important;
-                display: block !important;
-                transform: none !important;
+            .print-page {
+                page-break-after: always;
+                break-after: page;
+                width: 210mm;
+                height: 297mm;
+                max-height: 297mm;
+                box-sizing: border-box;
+                padding: 15mm;
+                overflow: hidden;
+                position: relative;
+                background: white !important;
             }
-            /* Sembunyikan efek bayangan jilid saat dicetak */
-            .binding-left, .binding-right { display: none !important; }
+            .print-page * {
+                color: black !important;
+            }
+            /* Override tailwind dark mode colors for print */
+            .print-page .bg-slate-800, .print-page .bg-slate-900 { background-color: #f8fafc !important; border: 1px solid #e2e8f0; }
+            .print-page .text-white { color: #0f172a !important; }
+            .print-page .text-slate-300, .print-page .text-slate-400 { color: #475569 !important; }
             
-            /* Paksa dark mode elements menjadi terang untuk cetak (opsional) */
-            .dark .a4-page { background: white !important; color: black !important; }
+            /* Sizing Khusus Peta & Chart di Print agar tidak terpotong */
+            .print-page .leaflet-target { height: 160px !important; border: 1px solid #cbd5e1 !important; }
+            .print-page .echarts-target { height: 220px !important; }
         }
     </style>
 </head>
 <body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans antialiased min-h-screen flex flex-col">
 
+    <!-- Print Loading Overlay -->
+    <div id="print-loading" class="fixed inset-0 bg-slate-900/90 z-[9999] hidden flex-col items-center justify-center text-white backdrop-blur-sm">
+        <i data-lucide="loader-2" class="w-12 h-12 animate-spin mb-4 text-blue-400"></i>
+        <h2 class="text-2xl font-bold mb-2">Menyiapkan Dokumen PDF...</h2>
+        <p class="text-slate-300 text-center max-w-md">Membangun semua halaman, peta, dan grafik ke dalam memori.<br/>Mohon tunggu sebentar...</p>
+    </div>
+
+    <!-- Container Khusus Untuk Print Semua Halaman -->
+    <div id="print-wrapper" class="hidden"></div>
+
     <!-- Navbar & Controls -->
-    <nav class="fixed top-0 w-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50 transition-colors no-print">
+    <nav class="fixed top-0 w-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50 transition-colors no-print shadow-sm">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-3">
                 <i data-lucide="book-open" class="text-blue-600 dark:text-blue-400 w-6 h-6"></i>
-                <span class="font-bold text-lg tracking-tight hidden sm:block">Intelligence Radar Book</span>
+                <span class="font-bold text-lg tracking-tight hidden sm:block">Intelligence Book</span>
+                
+                <!-- Navigation Dropdown -->
+                <select id="toc-dropdown" onchange="jumpToPage(this.value)" class="ml-2 text-xs border rounded p-1.5 min-w-[140px] max-w-[150px] md:max-w-[200px] truncate bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 outline-none text-slate-700 dark:text-slate-200 cursor-pointer hover:border-blue-400 transition-colors shadow-inner">
+                    <option value="" disabled selected>Menyiapkan Daftar Isi...</option>
+                </select>
             </div>
             
             <div class="flex items-center gap-2 sm:gap-4">
-                <span id="page-indicator" class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 font-mono hidden sm:inline-block">Page 1 / ?</span>
+                <span id="page-indicator" class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 font-mono hidden md:inline-block w-24 text-right">Page 1 / ?</span>
                 
-                <!-- Print Button -->
-                <button onclick="printCurrentView()" class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-all flex items-center gap-2 border border-indigo-200 dark:border-indigo-800" title="Cetak Spread Saat Ini PDF">
+                <!-- Print All Button -->
+                <button onclick="printAllAsPDF()" class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-all flex items-center gap-2 border border-indigo-200 dark:border-indigo-800" title="Cetak Seluruh Buku ke PDF">
                     <i data-lucide="printer" class="w-4 h-4"></i>
                     <span class="text-xs font-bold uppercase hidden md:inline-block">Cetak PDF</span>
                 </button>
@@ -182,7 +202,7 @@
     </nav>
 
     <!-- Main Book Container -->
-    <main class="flex-grow flex items-center justify-center p-4 sm:p-8 pt-24 pb-12 w-full">
+    <main class="flex-grow flex items-center justify-center p-4 sm:p-8 pt-24 pb-12 w-full no-print">
         
         <!-- Book Wrapper -->
         <div id="book-wrapper" class="relative flex w-full max-w-6xl justify-center items-stretch perspective-1000 gap-0 sm:gap-1 lg:gap-0">
@@ -207,32 +227,31 @@
 
     </main>
 
-    <!-- Fallback Data & Logic -->
+    <!-- App Logic -->
     <script>
-        // --- Fallback Data based on User's Snippets ---
+        // --- Fallback Data ---
         const fallbackData = [
             {
                 "id": "807ae0f4e918c227cd45f558d186cb17",
                 "source_url": "https://humanurehandbook.com/",
                 "title": "The Humanure Handbook Sawdust Toilet System",
                 "summary": "A simple, low-cost DIY composting toilet system popularized by Joseph Jenkins, utilizing a 5-gallon bucket within a wooden box, where dry organic material like sawdust is added after each use.",
-                "category": ["Composting Toilet", "Sustainable Sanitation", "DIY", "Off-grid Living"],
+                "category": ["Composting Toilet", "Sustainable Sanitation"],
                 "innovation_level": "grassroots",
                 "hidden_gem": true,
                 "location": { "country": "USA", "region": "Global", "lat": 41.1534, "lon": -80.0842 },
                 "process": { 
                     "how_it_works": [
-                        "Build or acquire a wooden box housing a 5-gallon bucket with a toilet seat.",
-                        "Add a base layer of dry organic material (sawdust, peat moss) inside the bucket.",
-                        "After each use, cover the waste completely with more dry material to absorb moisture and control odors.",
-                        "Once full, transfer the bucket contents to an outdoor thermophilic compost pile.",
-                        "Allow compost to mature over 1-2 years to ensure pathogen breakdown."
+                        "Build or acquire a wooden box housing a 5-gallon bucket.",
+                        "Add a base layer of dry organic material.",
+                        "Cover waste completely to control odors.",
+                        "Transfer to thermophilic compost pile."
                     ]
                 },
-                "impact": { "problem_solved": "Poor sanitation and water wastage in rural/off-grid areas.", "scale": "high" },
+                "impact": { "problem_solved": "Poor sanitation in off-grid areas.", "scale": "high" },
                 "replicability": { "cost_level": "low", "difficulty": "medium" },
                 "origin": { "knowledge_source": ["traditional", "self-taught"] },
-                "risk_assessment": { "risk_score": 3, "risk_type": ["biological", "pathogen"], "safety_level": "medium", "explanation": "Biological risk if compost pile does not reach required thermophilic temperatures to eliminate pathogens. Safe handling requires discipline." },
+                "risk_assessment": { "risk_score": 3, "risk_type": ["biological"], "safety_level": "medium", "explanation": "Biological risk if compost does not reach thermophilic temperatures." },
                 "priority_score": 70
             },
             {
@@ -240,94 +259,84 @@
                 "source_url": "https://example.com/nipah-sugar",
                 "title": "Pengolahan Gula Aren Tradisional Nipah",
                 "summary": "Metode penyadapan dan pemasakan nira dari pohon Nipah pesisir menjadi gula aren premium yang memberdayakan komunitas lokal, mengurangi ketergantungan pada pembalakan mangrove.",
-                "category": ["Sustainable Agriculture", "Local Economy", "Forestry", "Traditional Knowledge"],
+                "category": ["Sustainable Agriculture", "Local Economy"],
                 "innovation_level": "semi-formal",
                 "hidden_gem": true,
                 "location": { "country": "Indonesia", "region": "Sumatera", "lat": -0.7893, "lon": 113.9213 },
                 "process": { 
                     "how_it_works": [
                         "Cut mature Nypa fruticans flower stalks.",
-                        "Massage and tap the stalk twice daily to collect sap in bamboo or plastic containers.",
-                        "Boil the collected sap over an open wood fire for several hours.",
-                        "As the liquid evaporates, the sap thickens and crystallizes into a solid paste.",
-                        "Crush and sift the cooled paste to produce fine, granulated brown sugar (gula semut)."
+                        "Boil the collected sap over open wood fire.",
+                        "Crush and sift the cooled paste to produce granulated brown sugar."
                     ]
                 },
-                "impact": { "problem_solved": "Rampant conversion of vital coastal Nipah forests into plantations and extreme poverty among coastal farmers.", "scale": "high" },
+                "impact": { "problem_solved": "Conversion of coastal forests and extreme poverty.", "scale": "high" },
                 "replicability": { "cost_level": "medium", "difficulty": "high" },
                 "origin": { "knowledge_source": ["traditional"] },
-                "risk_assessment": { "risk_score": 6, "risk_type": ["fire hazard", "occupational"], "safety_level": "medium", "explanation": "The primary risk is the fire hazard associated with boiling large vats of sap over open wood fires for long periods, leading to potential burns and smoke inhalation." },
+                "risk_assessment": { "risk_score": 6, "risk_type": ["fire hazard"], "safety_level": "medium", "explanation": "Fire hazard from boiling large vats of sap over open wood fires." },
                 "priority_score": 85
             },
             {
                 "id": "mock_3",
-                "source_url": "https://example.com/anaerobic-silo",
                 "title": "Airtight Underground Grain Silo",
-                "summary": "Sistem penyimpanan biji-bijian bawah tanah kedap udara yang diadaptasi dari metode tradisional untuk mencegah pembusukan dan hama tanpa pestisida.",
-                "category": ["Agriculture", "Food Preservation", "Traditional Knowledge"],
+                "summary": "Sistem penyimpanan biji-bijian bawah tanah kedap udara untuk mencegah pembusukan dan hama tanpa pestisida.",
+                "category": ["Agriculture", "Food Preservation"],
                 "innovation_level": "grassroots",
                 "hidden_gem": false,
                 "location": { "country": "India", "region": "Punjab", "lat": 30.9009, "lon": 75.8572 },
                 "process": { 
                     "how_it_works": [
-                        "Gali lubang sedalam 10-15 kaki di tanah yang kering.",
-                        "Lining dinding dengan tanah liat campur jerami dan biarkan mengering.",
-                        "Masukkan biji-bijian yang sudah dikeringkan sempurna ke dalam lubang.",
-                        "Tutup bagian atas rapat-rapat dengan kayu dan lumpur untuk menciptakan lingkungan anaerobik."
+                        "Gali lubang sedalam 10-15 kaki.",
+                        "Lining dinding dengan tanah liat.",
+                        "Tutup rapat untuk menciptakan lingkungan anaerobik."
                     ]
                 },
-                "impact": { "problem_solved": "Kehilangan panen pasca-panen akibat hama dan kelembapan, serta mengurangi ketergantungan pada pestisida kimia.", "scale": "medium" },
+                "impact": { "problem_solved": "Kehilangan panen pasca-panen akibat hama.", "scale": "medium" },
                 "replicability": { "cost_level": "low", "difficulty": "medium" },
-                "origin": { "knowledge_source": ["traditional", "adapted from existing"] },
-                "risk_assessment": { "risk_score": 8, "risk_type": ["asphyxiation", "confined space"], "safety_level": "low", "explanation": "While effective for grain preservation, the creation of an airtight, anaerobic environment in a 10-15 foot deep pit poses a significant asphyxiation risk to anyone entering the space. Accumulated carbon dioxide or depleted oxygen levels can be fatal upon opening or entry." },
+                "origin": { "knowledge_source": ["traditional"] },
+                "risk_assessment": { "risk_score": 8, "risk_type": ["asphyxiation", "confined space"], "safety_level": "low", "explanation": "Asphyxiation risk due to accumulated carbon dioxide in pit." },
                 "priority_score": 60
             }
         ];
 
         const fallbackResume = [{
-            "report_metadata": { "period": "Q1 2026", "total_records_analyzed": 33 },
             "global_summary": { "total_innovations": 32, "grassroots_percentage": 56.25, "institutional_percentage": 25.0, "semi_formal_percentage": 18.75 },
             "top_categories": [
                 { "category": "Sustainable Agriculture", "count": 12 },
-                { "category": "Waste Management & Upcycling", "count": 10 },
-                { "category": "Renewable Energy & Biogas", "count": 6 },
+                { "category": "Waste Management", "count": 10 },
                 { "category": "Sanitation", "count": 4 }
             ],
             "risk_distribution": [
                 { "level": "low", "count": 15 },
                 { "level": "medium", "count": 27 },
                 { "level": "high", "count": 18 }
-            ],
-            "knowledge_source_trend": [
-                { "source": "Adapted from Existing", "count": 26 },
-                { "source": "Traditional", "count": 12 },
-                { "source": "Formal Education", "count": 10 }
             ]
         }];
 
         const fallbackReport = `# Global Innovation Intelligence Report
-**Period:** Q1 2026 | **Generated:** 2026-03-22
+**Period:** Q1 2026
 ---
 ## 🌍 Executive Summary
 Out of tracked innovations, grassroots solutions dominate with **56.25%**, demonstrating remarkable resilience from local communities adapting to global challenges.
 
 ## ⚠️ Emerging Risks
-- **High-Risk Cases:** 18 | **Critical:** 2
-- **Top Risks:** toxic, environment, fire hazard.
+- **High-Risk Cases:** 18
 - Most risks stem from unstandardized equipment modification or confined spaces in traditional setups.
 
 ## 💎 Hidden Gems
-- **The Humanure Handbook Sawdust Toilet System** (Sustainable Sanitation)
+- **Sawdust Toilet System** (Sustainable Sanitation)
 - **Pengolahan Gula Aren Nipah** (Coastal Economic Empowerment)
 
 ---
-*Report auto-generated by Innovation Radar AI Framework v9.1.*`;
+*Report auto-generated by Innovation Radar AI.*`;
 
         // --- State Variables ---
         let currentPageIndex = 0; 
         let isMobile = window.innerWidth < 768;
         let mapInstances = {};
         let chartInstances = {};
+        let printMapInstances = {};
+        let printChartInstances = {};
         let globalDataArr = []; 
         let precompiled = { reportHtml: "", resumeHtml: "" };
         const TOTAL_STATIC_PAGES = 4;
@@ -342,7 +351,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 const newIsMobile = window.innerWidth < 768;
                 if (newIsMobile !== isMobile) {
                     isMobile = newIsMobile;
-                    if (!isMobile && currentPageIndex % 2 !== 0) {
+                    if (!isMobile && currentPageIndex % 2 !== 0 && currentPageIndex > 0) {
                         currentPageIndex--;
                     }
                     renderBook();
@@ -361,51 +370,84 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 if (reqReport.ok) finalReport = await reqReport.text();
                 if (reqResume.ok) finalResume = await reqResume.json();
                 if (reqData.ok) globalDataArr = await reqData.json();
-                
             } catch (e) {
-                console.warn("Using fallback data. Local fetch failed, likely due to CORS.", e);
+                console.warn("Using fallback data. Local fetch failed.", e);
             }
 
-            // Precompile static HTML parts (Report & Resume)
             precompiled.reportHtml = marked.parse(finalReport);
             precompiled.resumeHtml = buildResumeHtml(finalResume);
             
-            if (isMobile) {
-                currentPageIndex = 1; 
-            }
+            buildDropdownMenu();
+
+            if (isMobile) currentPageIndex = 1; 
             
             renderBook();
         }
 
-        // --- DYNAMIC PAGINATION ENGINE ---
-        // Alih-alih merender semua ke array, kita membuat HTML HANYA untuk halaman yang diminta.
-        // Sangat cepat meski data mencapai 10.000++.
+        // --- DROPDOWN NAVIGATION ---
+        function buildDropdownMenu() {
+            const dropdown = document.getElementById('toc-dropdown');
+            let html = `<option value="" disabled selected>Daftar Isi...</option>
+                        <option value="1">Sampul Depan</option>
+                        <option value="2">Laporan Eksekutif</option>
+                        <option value="3">Metrik Global</option>`;
+            
+            // Kelompokkan berdasarkan Negara
+            let grouped = {};
+            globalDataArr.forEach((item, idx) => {
+                let country = item.location?.country || 'Lainnya';
+                if(!grouped[country]) grouped[country] = [];
+                grouped[country].push({ title: item.title, idx: idx });
+            });
 
+            for(let country in grouped) {
+                html += `<optgroup label="📍 ${country}">`;
+                grouped[country].forEach(item => {
+                    // Halaman peta (genap) untuk elemen ini
+                    let pageIdx = TOTAL_STATIC_PAGES + (item.idx * 2);
+                    html += `<option value="${pageIdx}">${item.title}</option>`;
+                });
+                html += `</optgroup>`;
+            }
+            dropdown.innerHTML = html;
+        }
+
+        function jumpToPage(val) {
+            if(!val) return;
+            currentPageIndex = parseInt(val);
+            if (!isMobile && currentPageIndex % 2 !== 0 && currentPageIndex > 0) {
+                currentPageIndex--;
+            }
+            renderBook();
+            // Reset dropdown to text
+            document.getElementById('toc-dropdown').selectedIndex = 0;
+        }
+
+        // --- DYNAMIC PAGINATION ENGINE ---
         function getTotalPages() {
             return TOTAL_STATIC_PAGES + (globalDataArr.length * 2);
         }
 
-        function getPageHtml(index) {
+        function getPageHtml(index, isPrint = false) {
             if (index < 0 || index >= getTotalPages()) return '';
 
-            // Halaman Statis
-            if (index === 0) return buildBlankPage();
-            if (index === 1) return buildCoverPage();
-            if (index === 2) return buildReportPage();
-            if (index === 3) return buildResumeLayout();
+            if (index === 0) return buildBlankPage(isPrint);
+            if (index === 1) return buildCoverPage(isPrint);
+            if (index === 2) return buildReportPage(isPrint);
+            if (index === 3) return buildResumeLayout(isPrint);
 
-            // Halaman Dinamis (Elemen Data)
             let dataIndex = Math.floor((index - TOTAL_STATIC_PAGES) / 2);
             let item = globalDataArr[dataIndex];
             
             if (!item) return `<div class="flex items-center justify-center h-full"><p class="text-slate-400">Data End</p></div>`;
 
             let isLeftPage = (index % 2 === 0);
-            return isLeftPage ? buildElementMapPage(item, dataIndex) : buildElementChartPage(item, dataIndex);
+            return isLeftPage ? buildElementMapPage(item, dataIndex, isPrint) : buildElementChartPage(item, dataIndex, isPrint);
         }
 
         // --- HTML Builders ---
-        function buildBlankPage() {
+        function buildBlankPage(isPrint) {
+            if(isPrint) return ''; // Skip blank page for printing
             return `
                 <div class="flex flex-col items-center justify-center h-full opacity-40">
                     <i data-lucide="shield-check" class="w-12 h-12 mb-4 text-slate-300 dark:text-slate-600"></i>
@@ -414,7 +456,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             `;
         }
 
-        function buildCoverPage() {
+        function buildCoverPage(isPrint) {
             return `
                 <div class="flex flex-col items-center justify-center h-full text-center space-y-6">
                     <div class="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center shadow-lg shadow-blue-500/30">
@@ -428,7 +470,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             `;
         }
 
-        function buildReportPage() {
+        function buildReportPage(isPrint) {
             return `
                 <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
                     <div class="flex items-center gap-2 mb-6 text-blue-600 dark:text-blue-400 pb-4 border-b border-slate-200 dark:border-slate-700">
@@ -489,7 +531,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             `;
         }
 
-        function buildResumeLayout() {
+        function buildResumeLayout(isPrint) {
             return `
                 <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
                     <div class="flex items-center gap-2 mb-6 text-emerald-600 dark:text-emerald-400 pb-4 border-b border-slate-200 dark:border-slate-700">
@@ -501,8 +543,9 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             `;
         }
 
-        function buildElementMapPage(item, index) {
-            const mapId = `map-${item.id || index}`;
+        function buildElementMapPage(item, index, isPrint) {
+            const mapSuffix = isPrint ? '-print' : '';
+            const mapId = `map-${item.id || index}${mapSuffix}`;
             const lat = item.location?.lat || 0;
             const lon = item.location?.lon || 0;
             
@@ -512,21 +555,21 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
 
             return `
                 <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
-                    <div class="mb-4">
+                    <div class="mb-4 flex-shrink-0">
                         <div class="flex flex-wrap gap-2 mb-3">
                             ${levelBadge} ${gemBadge}
                         </div>
-                        <h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight mb-2">${item.title}</h2>
+                        <h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight mb-2 line-clamp-2">${item.title}</h2>
                         <div class="flex flex-wrap gap-1.5 mb-2">
                             ${badges}
                         </div>
                     </div>
                     
                     <div class="w-full h-36 md:h-44 flex-shrink-0 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden mb-4 border border-slate-200 dark:border-slate-700 relative z-0">
-                        <div id="${mapId}" class="w-full h-full leaflet-target" data-lat="${lat}" data-lon="${lon}"></div>
+                        <div id="${mapId}" class="w-full h-full ${isPrint ? 'print-leaflet-target' : 'leaflet-target'}" data-lat="${lat}" data-lon="${lon}"></div>
                     </div>
 
-                    <div class="flex flex-col gap-3 flex-grow">
+                    <div class="flex flex-col gap-3 flex-grow min-h-0">
                         <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
                             <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-2">
                                 <i data-lucide="git-merge" class="w-4 h-4 text-indigo-500"></i> Nexus & Linkages
@@ -567,14 +610,13 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="h-8"></div>
                 </div>
             `;
         }
 
-        function buildElementChartPage(item, index) {
-            const chartId = `chart-${item.id || index}`;
+        function buildElementChartPage(item, index, isPrint) {
+            const chartSuffix = isPrint ? '-print' : '';
+            const chartId = `chart-${item.id || index}${chartSuffix}`;
             
             let rRisk = (item.risk_assessment?.risk_score || 0) * 10; 
             let rCost = item.replicability?.cost_level === 'low' ? 20 : (item.replicability?.cost_level === 'medium' ? 50 : 90);
@@ -585,7 +627,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             if (item.process) {
                 let steps = Array.isArray(item.process) ? item.process : (Array.isArray(item.process.how_it_works) ? item.process.how_it_works : null);
                 if (steps) {
-                    processHtml = `<ul class="list-decimal pl-4 space-y-1.5 text-xs text-slate-700 dark:text-slate-300">` + 
+                    processHtml = `<ul class="list-decimal pl-4 space-y-1 text-xs text-slate-700 dark:text-slate-300">` + 
                         steps.map(p => `<li>${p}</li>`).join('') + `</ul>`;
                 } else if (item.process.how_it_works) {
                     processHtml = `<p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${item.process.how_it_works}</p>`;
@@ -599,16 +641,16 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
 
             return `
                 <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
-                    <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase border-b border-slate-200 dark:border-slate-700 pb-2 mb-3 flex items-center gap-2 sticky top-0 bg-book-paper dark:bg-book-darkPaper z-10 pt-1">
+                    <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase border-b border-slate-200 dark:border-slate-700 pb-2 mb-3 flex items-center gap-2 flex-shrink-0">
                         <i data-lucide="cpu" class="w-4 h-4 text-slate-400"></i> Operation & Analysis
                     </h3>
                     
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mb-5 leading-relaxed bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700 italic shadow-inner">
+                    <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700 italic shadow-inner flex-shrink-0">
                         "${item.summary}"
                     </p>
 
-                    <div class="w-full h-48 mb-6 flex-shrink-0 relative z-0">
-                        <div id="${chartId}" class="w-full h-full echarts-target" 
+                    <div class="w-full h-40 mb-5 flex-shrink-0 relative z-0">
+                        <div id="${chartId}" class="w-full h-full ${isPrint ? 'print-echarts-target' : 'echarts-target'}" 
                             data-title="${item.title}"
                             data-prio="${item.priority_score || 0}"
                             data-risk="${rRisk}"
@@ -618,16 +660,16 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                         </div>
                     </div>
 
-                    <div class="space-y-6">
+                    <div class="space-y-4 flex-grow min-h-0">
                         <div>
                             <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-2 flex items-center gap-2"><i data-lucide="list-tree" class="w-4 h-4 text-blue-500"></i> Process & Methodology</h4>
-                            <div class="bg-slate-50 dark:bg-slate-800/30 p-3.5 rounded-lg border border-slate-100 dark:border-slate-700">
+                            <div class="bg-slate-50 dark:bg-slate-800/30 p-3 rounded-lg border border-slate-100 dark:border-slate-700">
                                 ${processHtml}
                             </div>
                         </div>
 
                         <div class="border-l-4 border-emerald-500 pl-3 py-1">
-                            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-xs mb-1.5 uppercase">
+                            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-xs mb-1 uppercase">
                                 <i data-lucide="target" class="w-4 h-4"></i> Impact Target &mdash; 
                                 <span class="bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300 px-1.5 py-0.5 rounded shadow-sm">${item.impact?.scale || 'N/A'} SCALE</span>
                             </div>
@@ -635,10 +677,10 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                         </div>
 
                         <div>
-                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-1"><i data-lucide="shield-alert" class="w-4 h-4 text-red-500"></i> Risk Assessment</h4>
+                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-2 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-1"><i data-lucide="shield-alert" class="w-4 h-4 text-red-500"></i> Risk Assessment</h4>
                             
                             <div class="border-l-[3px] ${riskBorderColor} pl-3 py-0.5">
-                                <div class="flex flex-wrap items-center gap-1.5 ${riskTextColor} font-bold text-sm mb-1.5">
+                                <div class="flex flex-wrap items-center gap-1.5 ${riskTextColor} font-bold text-sm mb-1">
                                     <span>${riskScoreNum}/10</span> 
                                     ${riskTypesStr ? `<span class="text-slate-300 dark:text-slate-600">&bull;</span> ${riskTypesStr}` : ''}
                                 </div>
@@ -646,14 +688,11 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="h-8"></div>
                 </div>
             `;
         }
 
-
-        // --- Navigation Logic ---
+        // --- Navigation Control ---
         function updateIndicator() {
             let total = getTotalPages();
             let currentDisplay = isMobile ? currentPageIndex : (Math.floor(currentPageIndex / 2) * 2);
@@ -663,7 +702,6 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 if (currentDisplay === 0) displayString = "Cover Page";
                 else displayString = `Spread ${Math.floor(currentDisplay/2)} (${currentDisplay}-${currentDisplay+1})`;
             }
-
             document.getElementById('page-indicator').innerText = displayString;
         }
 
@@ -679,108 +717,143 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             const step = isMobile ? 1 : 2;
             if (currentPageIndex - step >= 0) {
                 currentPageIndex -= step;
-                if (isMobile && currentPageIndex === 0) {
-                    currentPageIndex = 1;
-                }
+                if (isMobile && currentPageIndex === 0) currentPageIndex = 1;
                 renderBook();
             }
         }
 
-        // --- Rendering Logic ---
+        // --- View Rendering ---
         function renderBook() {
             const leftEl = document.getElementById('content-left');
             const rightEl = document.getElementById('content-right');
 
-            cleanupInstances();
+            cleanupInstances(mapInstances, chartInstances);
 
             if (isMobile) {
-                rightEl.innerHTML = getPageHtml(currentPageIndex) || '';
+                rightEl.innerHTML = getPageHtml(currentPageIndex, false) || '';
                 leftEl.innerHTML = '';
             } else {
                 const leftIndex = Math.floor(currentPageIndex / 2) * 2;
-                leftEl.innerHTML = getPageHtml(leftIndex) || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
-                rightEl.innerHTML = getPageHtml(leftIndex + 1) || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
+                leftEl.innerHTML = getPageHtml(leftIndex, false) || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
+                rightEl.innerHTML = getPageHtml(leftIndex + 1, false) || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
             }
 
             lucide.createIcons();
             
+            // Perbaikan untuk Peta Tak Terlihat (Invisible Map Bug)
+            // Render ulang kontainer setelah masuk ke DOM dengan jeda bertahap
             setTimeout(() => {
-                initVisibleMaps();
-                initVisibleCharts();
-            }, 100);
+                initVisualizations('.leaflet-target', '.echarts-target', mapInstances, chartInstances);
+            }, 50);
+            
+            setTimeout(() => {
+                for (let id in mapInstances) {
+                    if(mapInstances[id]) mapInstances[id].invalidateSize();
+                }
+            }, 300);
 
             updateIndicator();
         }
 
-        // --- Print Logic ---
-        function printCurrentView() {
-            // Karena data bisa ribuan, sistem akan mencetak halaman (Spread) yang tampil di layar.
-            // Memaksa render ribuan Leaflet/ECharts akan membuat browser crash.
-            window.print();
-        }
+        // --- PRINT ENGINE (ALL PAGES) ---
+        async function printAllAsPDF() {
+            const loading = document.getElementById('print-loading');
+            const printWrapper = document.getElementById('print-wrapper');
+            
+            // Tampilkan layar loading
+            loading.classList.remove('hidden');
+            loading.classList.add('flex');
+            await new Promise(r => setTimeout(r, 100)); // Biarkan UI memuat overlay
 
-        // Resize observer untuk print
-        window.addEventListener("beforeprint", () => {
-            // Beri tahu ECharts untuk resize menyesuaikan kertas A4
-            for (let id in chartInstances) {
-                if(chartInstances[id]) chartInstances[id].resize();
+            try {
+                let fullHtml = '';
+                let total = getTotalPages();
+                
+                // Rakit seluruh HTML ke dalam div print
+                for(let i = 0; i < total; i++) {
+                    if(i === 0) continue; // Lewati blank page
+                    fullHtml += `
+                        <div class="print-page">
+                            ${getPageHtml(i, true)}
+                        </div>
+                    `;
+                }
+                
+                printWrapper.innerHTML = fullHtml;
+                lucide.createIcons();
+
+                // Bersihkan cache print sebelumnya
+                cleanupInstances(printMapInstances, printChartInstances);
+
+                // Inisialisasi map dan grafik di div print
+                initVisualizations('.print-leaflet-target', '.print-echarts-target', printMapInstances, printChartInstances);
+
+                // Beri waktu sistem untuk mengunduh ubin peta (tiles) dan merender canvas ECharts
+                await new Promise(r => setTimeout(r, 1500));
+                
+                // Pastikan ukuran peta disesuaikan
+                for (let id in printMapInstances) {
+                    if(printMapInstances[id]) printMapInstances[id].invalidateSize();
+                }
+
+                // Panggil dialog Print Browser
+                window.print();
+
+            } catch(e) {
+                console.error("Gagal membuat PDF", e);
+                alert("Terjadi kesalahan saat menyusun PDF. Data mungkin terlalu besar.");
+            } finally {
+                // Bersihkan memori dan sembunyikan loading
+                printWrapper.innerHTML = ''; 
+                cleanupInstances(printMapInstances, printChartInstances);
+                loading.classList.add('hidden');
+                loading.classList.remove('flex');
             }
-            // Beri tahu Leaflet untuk memastikan ubinnya dimuat
-            for (let id in mapInstances) {
-                if(mapInstances[id]) mapInstances[id].invalidateSize();
-            }
-        });
+        }
 
 
         // --- Visualizations Initialization ---
-        function cleanupInstances() {
-            for (let id in mapInstances) {
-                if(mapInstances[id]) {
-                    mapInstances[id].remove();
-                    delete mapInstances[id];
+        function cleanupInstances(mapsObj, chartsObj) {
+            for (let id in mapsObj) {
+                if(mapsObj[id]) {
+                    mapsObj[id].remove();
+                    delete mapsObj[id];
                 }
             }
-            for (let id in chartInstances) {
-                if(chartInstances[id] && !chartInstances[id].isDisposed()) {
-                    chartInstances[id].dispose();
-                    delete chartInstances[id];
+            for (let id in chartsObj) {
+                if(chartsObj[id] && !chartsObj[id].isDisposed()) {
+                    chartsObj[id].dispose();
+                    delete chartsObj[id];
                 }
             }
         }
 
-        function initVisibleMaps() {
-            const targets = document.querySelectorAll('.leaflet-target');
-            // Optimalisasi: Untuk data ribuan, map context (titik background abu2) dibatasi 
-            // pengambilannya max 200 sampel agar peta tetap ringan saat berganti halaman.
-            const sampleBgDots = globalDataArr.length > 200 ? globalDataArr.slice(0, 200) : globalDataArr;
+        function initVisualizations(mapClass, chartClass, mapsObj, chartsObj) {
+            const mapTargets = document.querySelectorAll(mapClass);
+            // Untuk performa cetak, batasi sampel titik sebaran global hingga 100 data
+            const sampleBgDots = globalDataArr.length > 100 ? globalDataArr.slice(0, 100) : globalDataArr;
+            const isDark = document.documentElement.classList.contains('dark') && mapClass === '.leaflet-target'; // Saat print selalu terang
 
-            targets.forEach(el => {
+            mapTargets.forEach(el => {
                 const id = el.id;
                 const currentLat = parseFloat(el.getAttribute('data-lat'));
                 const currentLon = parseFloat(el.getAttribute('data-lon'));
                 
-                if (id && !mapInstances[id]) {
+                if (id && !mapsObj[id]) {
                     const map = L.map(id, { zoomControl: false, scrollWheelZoom: false }).setView([currentLat, currentLon], 4);
                     
-                    const isDark = document.documentElement.classList.contains('dark');
                     const tileUrl = isDark 
                         ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
                         : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
 
-                    L.tileLayer(tileUrl, {
-                        attribution: '&copy; OpenStreetMap contributors'
-                    }).addTo(map);
+                    L.tileLayer(tileUrl, { attribution: '&copy; OpenStreetMap' }).addTo(map);
 
                     sampleBgDots.forEach(item => {
                         const lat = item.location?.lat;
                         const lon = item.location?.lon;
                         if(lat !== undefined && lon !== undefined && (lat !== currentLat || lon !== currentLon)) {
                             L.circleMarker([lat, lon], {
-                                radius: 3,
-                                color: isDark ? '#475569' : '#cbd5e1',
-                                fillColor: isDark ? '#475569' : '#cbd5e1',
-                                fillOpacity: 0.8,
-                                weight: 1
+                                radius: 3, color: isDark ? '#475569' : '#cbd5e1', fillColor: isDark ? '#475569' : '#cbd5e1', fillOpacity: 0.8, weight: 1
                             }).addTo(map);
                         }
                     });
@@ -789,19 +862,15 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                     const customIcon = L.divIcon({ className: 'custom-div-icon', html: markerHtml, iconSize: [16, 16], iconAnchor: [8, 8] });
                     L.marker([currentLat, currentLon], {icon: customIcon, zIndexOffset: 1000}).addTo(map);
 
-                    mapInstances[id] = map;
-                    setTimeout(() => { map.invalidateSize(); }, 50);
+                    mapsObj[id] = map;
                 }
             });
-        }
 
-        function initVisibleCharts() {
-            const targets = document.querySelectorAll('.echarts-target');
-            targets.forEach(el => {
+            const chartTargets = document.querySelectorAll(chartClass);
+            chartTargets.forEach(el => {
                 const id = el.id;
-                if (id && !chartInstances[id]) {
+                if (id && !chartsObj[id]) {
                     const myChart = echarts.init(el);
-                    const isDark = document.documentElement.classList.contains('dark');
                     const textColor = isDark ? '#cbd5e1' : '#475569';
                     
                     const prio = parseFloat(el.getAttribute('data-prio'));
@@ -810,7 +879,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                     const diff = parseFloat(el.getAttribute('data-diff'));
                     const impact = parseFloat(el.getAttribute('data-impact'));
 
-                    const option = {
+                    myChart.setOption({
                         backgroundColor: 'transparent',
                         radar: {
                             indicator: [
@@ -824,33 +893,22 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                             center: ['50%', '55%'],
                             splitNumber: 4,
                             axisName: { color: textColor, fontSize: 10, fontWeight: 'bold' },
-                            splitArea: {
-                                areaStyle: { color: isDark ? ['#1e293b', '#0f172a'] : ['#f8fafc', '#f1f5f9'] }
-                            },
-                            splitLine: {
-                                lineStyle: { color: isDark ? '#334155' : '#e2e8f0' }
-                            },
-                            axisLine: {
-                                lineStyle: { color: isDark ? '#334155' : '#e2e8f0' }
-                            }
+                            splitArea: { areaStyle: { color: isDark ? ['#1e293b', '#0f172a'] : ['#f8fafc', '#f1f5f9'] } },
+                            splitLine: { lineStyle: { color: isDark ? '#334155' : '#e2e8f0' } },
+                            axisLine: { lineStyle: { color: isDark ? '#334155' : '#e2e8f0' } }
                         },
                         series: [{
                             type: 'radar',
-                            data: [
-                                {
-                                    value: [prio, impact, risk, cost, diff],
-                                    name: 'Metrics',
-                                    itemStyle: { color: '#3b82f6' },
-                                    areaStyle: { color: 'rgba(59, 130, 246, 0.3)' },
-                                    lineStyle: { width: 2 }
-                                }
-                            ]
+                            data: [{
+                                value: [prio, impact, risk, cost, diff],
+                                name: 'Metrics',
+                                itemStyle: { color: '#3b82f6' },
+                                areaStyle: { color: 'rgba(59, 130, 246, 0.3)' },
+                                lineStyle: { width: 2 }
+                            }]
                         }]
-                    };
-                    
-                    myChart.setOption(option);
-                    chartInstances[id] = myChart;
-                    setTimeout(() => { myChart.resize(); }, 50);
+                    });
+                    chartsObj[id] = myChart;
                 }
             });
         }
