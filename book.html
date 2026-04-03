@@ -18,391 +18,300 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        book: {
-                            paper: '#fcfcfc',
-                            darkPaper: '#1e293b',
-                            cover: '#0f172a',
-                        }
-                    },
-                    boxShadow: {
-                        'book-left': '-10px 10px 30px rgba(0,0,0,0.1), inset -2px 0 10px rgba(0,0,0,0.05)',
-                        'book-right': '10px 10px 30px rgba(0,0,0,0.1), inset 2px 0 10px rgba(0,0,0,0.05)',
-                        'book-mobile': '0 10px 30px rgba(0,0,0,0.1)',
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
-        .a4-page {
-            aspect-ratio: 1 / 1.414;
-            overflow-y: auto;
-            overflow-x: hidden;
-            scrollbar-width: thin;
-        }
+        .a4-page { aspect-ratio: 1 / 1.414; overflow-y: auto; scrollbar-width: thin; }
         .a4-page::-webkit-scrollbar { width: 4px; }
-        .a4-page::-webkit-scrollbar-track { background: transparent; }
-        .a4-page::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 10px; }
-        .dark .a4-page::-webkit-scrollbar-thumb { background-color: #475569; }
-
-        .binding-left {
-            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%);
-        }
-        .dark .binding-left {
-            background: linear-gradient(to right, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%);
-        }
-        .binding-right {
-            background: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%);
-        }
-        .dark .binding-right {
-            background: linear-gradient(to left, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%);
-        }
-
-        .prose h1 { font-size: 1.875rem; font-weight: 800; margin-bottom: 1rem; color: #0f172a; }
-        .prose h2 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; }
-        .prose p { margin-bottom: 1rem; line-height: 1.6; }
-        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
-        .dark .prose h1, .dark .prose h2 { color: #f8fafc; border-color: #334155; }
-        .dark .prose p, .dark .prose li { color: #cbd5e1; }
-
+        .binding-left { background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%); }
+        .binding-right { background: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%); }
+        .dark .binding-left, .dark .binding-right { background: linear-gradient(to right, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%); }
         @media print {
             @page { size: A4; margin: 0; }
-            body { background: white !important; color: black !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            body { background: white !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
             nav, .no-print, #book-wrapper, #filter-bar { display: none !important; }
-            main { padding: 0 !important; margin: 0 !important; }
-            #print-wrapper { display: block !important; width: 100%; background: white; }
-            .print-page {
-                page-break-after: always; break-after: page;
-                width: 210mm; height: 296mm; box-sizing: border-box;
-                padding: 12mm 15mm; overflow: hidden;
-                background: white !important; display: flex; flex-direction: column;
-            }
-            .print-page * { color: black !important; }
-            .print-page .bg-slate-800, .print-page .bg-slate-900 { background-color: #f8fafc !important; border: 1px solid #e2e8f0; }
-            .print-page .text-white { color: #0f172a !important; }
-            .print-page .flex-grow { flex-grow: 1 !important; flex-shrink: 0 !important; }
-            .print-leaflet-target { height: 180px !important; border: 1px solid #cbd5e1 !important; border-radius: 8px; width: 100%; display: block; }
-            .print-echarts-target { height: 240px !important; width: 100%; display: block; }
-            .print-page .overflow-y-auto { overflow: visible !important; }
+            .print-page { page-break-after: always; width: 210mm; height: 296mm; padding: 12mm; background: white; }
+            .print-leaflet-target { height: 180px !important; }
+            .print-echarts-target { height: 220px !important; }
         }
     </style>
 </head>
-<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors">
 
+    <!-- Loading & Print overlay -->
     <div id="print-loading" class="fixed inset-0 bg-slate-900/90 z-[9999] hidden flex-col items-center justify-center text-white backdrop-blur-sm">
         <i data-lucide="loader-2" class="w-12 h-12 animate-spin mb-4 text-blue-400"></i>
-        <h2 class="text-2xl font-bold mb-2">Menyiapkan Dokumen PDF...</h2>
-        <p class="text-slate-300 text-center max-w-md">Membangun halaman, merender peta & grafik...</p>
+        <h2 class="text-2xl font-bold">Menyiapkan PDF...</h2>
     </div>
-
     <div id="print-wrapper" class="hidden"></div>
 
-    <!-- Navbar & Filter -->
-    <nav class="fixed top-0 w-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50 no-print shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex flex-wrap items-center justify-between gap-2">
-            <div class="flex items-center gap-3">
-                <i data-lucide="book-open" class="text-blue-600 dark:text-blue-400 w-6 h-6"></i>
-                <span class="font-bold text-lg tracking-tight hidden sm:block">Intelligence Book</span>
-                <select id="toc-dropdown" class="text-xs border rounded p-1.5 min-w-[140px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 outline-none cursor-pointer">
-                    <option value="" disabled selected>Daftar Isi...</option>
-                </select>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b z-50 no-print shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-2 flex-wrap">
+            <div class="flex items-center gap-2">
+                <i data-lucide="book-open" class="text-blue-600 w-6 h-6"></i>
+                <span class="font-bold hidden sm:inline">Innovation Book</span>
+                <select id="toc-dropdown" class="text-xs border rounded p-1.5 bg-slate-50 dark:bg-slate-900"></select>
             </div>
-            
-            <div class="flex items-center gap-2 sm:gap-4 flex-wrap">
-                <span id="page-indicator" class="text-xs font-medium text-slate-500 dark:text-slate-400 font-mono hidden md:inline-block w-24 text-right">Page 1 / ?</span>
-                
-                <button onclick="printAllAsPDF()" class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 transition-all flex items-center gap-2 border border-indigo-200 dark:border-indigo-800">
-                    <i data-lucide="printer" class="w-4 h-4"></i>
-                    <span class="text-xs font-bold uppercase hidden md:inline-block">Cetak PDF</span>
+            <div class="flex items-center gap-2">
+                <span id="page-indicator" class="text-xs font-mono hidden md:inline-block w-24">Page 1</span>
+                <button onclick="printAllAsPDF()" class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 flex items-center gap-1">
+                    <i data-lucide="printer" class="w-4 h-4"></i> <span class="text-xs hidden sm:inline">Cetak PDF</span>
                 </button>
-
-                <div class="flex bg-slate-100 dark:bg-slate-900 rounded-lg p-1">
-                    <button onclick="prevPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
-                    <button onclick="nextPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                <div class="flex bg-slate-100 dark:bg-slate-900 rounded-lg">
+                    <button onclick="prevPage()" class="p-2 rounded-l"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                    <button onclick="nextPage()" class="p-2 rounded-r"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
                 </div>
-
-                <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">
-                    <i data-lucide="moon" id="theme-icon" class="w-5 h-5"></i>
-                </button>
+                <button onclick="toggleTheme()" class="p-2 rounded-full"><i data-lucide="moon" id="theme-icon" class="w-5 h-5"></i></button>
             </div>
         </div>
-        <!-- Filter Bar -->
-        <div id="filter-bar" class="px-4 pb-2 pt-1 flex flex-wrap gap-2 items-center border-t border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80">
-            <input type="text" id="search-title" placeholder="Cari judul..." class="text-xs p-1.5 rounded border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 w-36 md:w-48">
-            <select id="filter-category" multiple size="1" class="text-xs p-1.5 rounded border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 w-36 md:w-48">
-                <option value="">Semua Kategori</option>
-            </select>
-            <select id="filter-country" multiple size="1" class="text-xs p-1.5 rounded border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 w-36 md:w-48">
-                <option value="">Semua Negara</option>
-            </select>
-            <button id="reset-filter" class="text-xs px-2 py-1.5 bg-slate-200 dark:bg-slate-700 rounded hover:bg-slate-300 transition">Reset</button>
-            <span id="filter-count" class="text-xs text-slate-500 ml-auto">0 inovasi</span>
+        <!-- Filter bar -->
+        <div id="filter-bar" class="px-4 pb-2 pt-1 flex flex-wrap gap-2 border-t">
+            <input type="text" id="search-title" placeholder="Cari judul..." class="text-xs p-1 rounded border">
+            <select id="filter-category" class="text-xs p-1 rounded border"><option value="">Semua Kategori</option></select>
+            <select id="filter-country" class="text-xs p-1 rounded border"><option value="">Semua Negara</option></select>
+            <button id="reset-filter" class="text-xs px-2 py-1 bg-slate-200 rounded">Reset</button>
+            <span id="filter-count" class="text-xs text-slate-500 ml-auto"></span>
         </div>
     </nav>
 
-    <main class="flex-grow flex items-center justify-center p-4 sm:p-8 pt-28 pb-12 w-full no-print">
-        <div id="book-wrapper" class="relative flex w-full max-w-6xl justify-center items-stretch gap-0 sm:gap-1">
-            <div id="page-left" class="hidden md:block w-1/2 bg-book-paper dark:bg-book-darkPaper shadow-book-left rounded-l-md relative a4-page">
-                <div class="absolute inset-y-0 right-0 w-12 binding-left pointer-events-none z-10"></div>
-                <div class="p-8 lg:p-12 h-full flex flex-col relative" id="content-left"></div>
+    <main class="flex-grow flex items-center justify-center p-4 pt-28 pb-12 no-print">
+        <div id="book-wrapper" class="relative flex w-full max-w-6xl justify-center gap-0 sm:gap-1">
+            <div id="page-left" class="hidden md:block w-1/2 bg-white dark:bg-slate-800 shadow-book-left rounded-l-md relative a4-page">
+                <div class="absolute inset-y-0 right-0 w-12 binding-left pointer-events-none"></div>
+                <div class="p-6 lg:p-8 h-full flex flex-col" id="content-left"></div>
             </div>
-            <div id="page-right" class="w-full md:w-1/2 max-w-md md:max-w-none bg-book-paper dark:bg-book-darkPaper shadow-book-mobile md:shadow-book-right rounded-md md:rounded-l-none md:rounded-r-md relative a4-page">
-                <div class="hidden md:block absolute inset-y-0 left-0 w-12 binding-right pointer-events-none z-10"></div>
-                <div class="p-6 sm:p-8 lg:p-12 h-full flex flex-col relative" id="content-right"></div>
+            <div id="page-right" class="w-full md:w-1/2 bg-white dark:bg-slate-800 shadow-md md:shadow-book-right rounded-md md:rounded-l-none relative a4-page">
+                <div class="absolute inset-y-0 left-0 w-12 binding-right pointer-events-none md:block hidden"></div>
+                <div class="p-6 lg:p-8 h-full flex flex-col" id="content-right"></div>
             </div>
         </div>
     </main>
 
     <script>
-        // --- State Variables ---
-        let allInnovations = [];      // original data.json
-        let resumeData = null;        // resume.json (ambil terbaru)
+        // ======================== GLOBAL STATE ========================
+        let allInnovations = [];
         let filteredInnovations = [];
-        let currentPageIndex = 0;
+        let resumeData = null;
+        let currentPage = 0;
         let isMobile = window.innerWidth < 768;
-        let mapInstances = {};
-        let chartInstances = {};
-        let printMapInst = {}, printChartInst = {};
-        const TOTAL_STATIC_PAGES = 4;  // cover, report, metrics, (blank) di kiri? kita pakai 3 halaman statis + 1 kosong opsional
-        
-        // Helper: ambil negara string
-        function getCountryString(loc) {
-            if (!loc) return 'Lainnya';
+        let mapInstances = {}, chartInstances = {};
+        let printMaps = {}, printCharts = {};
+        const STATIC_PAGES = 3; // cover, report, metrics
+
+        // Helper: ambil negara (bisa string atau array)
+        function getCountry(loc) {
+            if (!loc) return 'Unknown';
             if (typeof loc.country === 'string') return loc.country.split(';')[0].trim();
             if (Array.isArray(loc.country)) return loc.country[0];
-            return 'Lainnya';
+            return 'Unknown';
         }
 
-        // Filter logic
-        function applyFilters() {
-            const searchTerm = document.getElementById('search-title')?.value.toLowerCase() || '';
-            const selectedCategory = document.getElementById('filter-category')?.value || '';
-            const selectedCountry = document.getElementById('filter-country')?.value || '';
-            
-            filteredInnovations = allInnovations.filter(inn => {
-                if (searchTerm && !inn.title.toLowerCase().includes(searchTerm)) return false;
-                if (selectedCategory && !(inn.category || []).some(cat => cat === selectedCategory)) return false;
-                if (selectedCountry && getCountryString(inn.location) !== selectedCountry) return false;
-                return true;
-            });
-            document.getElementById('filter-count').innerText = `${filteredInnovations.length} inovasi`;
-            // Reset halaman
-            currentPageIndex = isMobile ? 1 : 0;
-            renderBook();
-            rebuildDropdown();
-        }
-
-        function rebuildDropdown() {
-            const dropdown = document.getElementById('toc-dropdown');
-            let html = `<option value="" disabled selected>Daftar Isi...</option>
-                        <option value="1">Sampul Depan</option>
-                        <option value="2">Laporan Eksekutif</option>
-                        <option value="3">Metrik Global</option>`;
-            let grouped = {};
-            filteredInnovations.forEach((item, idx) => {
-                let country = getCountryString(item.location);
-                if(!grouped[country]) grouped[country] = [];
-                grouped[country].push({ title: item.title, idx: idx });
-            });
-            for(let country in grouped) {
-                html += `<optgroup label="📍 ${country}">`;
-                grouped[country].forEach(item => {
-                    let pageIdx = TOTAL_STATIC_PAGES + (item.idx * 2);
-                    html += `<option value="${pageIdx}">${item.title}</option>`;
-                });
-                html += `</optgroup>`;
-            }
-            dropdown.innerHTML = html;
-        }
-
-        // --- Load JSON & Build dynamic report ---
+        // ======================== LOAD DATA ========================
         async function loadData() {
             try {
                 const [dataRes, resumeRes] = await Promise.all([
                     fetch('data.json'),
                     fetch('resume.json')
                 ]);
-                if (!dataRes.ok) throw new Error('data.json gagal dimuat');
-                if (!resumeRes.ok) throw new Error('resume.json gagal dimuat');
+                if (!dataRes.ok) throw new Error('data.json 404');
+                if (!resumeRes.ok) throw new Error('resume.json 404');
                 allInnovations = await dataRes.json();
                 const resumeArr = await resumeRes.json();
-                resumeData = resumeArr[resumeArr.length - 1]; // ambil snapshot terbaru
+                resumeData = resumeArr[resumeArr.length - 1];
                 filteredInnovations = [...allInnovations];
-                document.getElementById('filter-count').innerText = `${filteredInnovations.length} inovasi`;
                 
-                // populate filter options
-                const categoriesSet = new Set();
-                const countriesSet = new Set();
+                // Populate filter dropdowns
+                const cats = new Set();
+                const countries = new Set();
                 allInnovations.forEach(inn => {
-                    (inn.category || []).forEach(c => categoriesSet.add(c));
-                    countriesSet.add(getCountryString(inn.location));
+                    (inn.category || []).forEach(c => cats.add(c));
+                    countries.add(getCountry(inn.location));
                 });
                 const catSelect = document.getElementById('filter-category');
-                catSelect.innerHTML = '<option value="">Semua Kategori</option>' + Array.from(categoriesSet).map(c => `<option value="${c}">${c}</option>`).join('');
+                catSelect.innerHTML = '<option value="">Semua Kategori</option>' + Array.from(cats).map(c => `<option>${c}</option>`).join('');
                 const countrySelect = document.getElementById('filter-country');
-                countrySelect.innerHTML = '<option value="">Semua Negara</option>' + Array.from(countriesSet).map(c => `<option value="${c}">${c}</option>`).join('');
+                countrySelect.innerHTML = '<option value="">Semua Negara</option>' + Array.from(countries).map(c => `<option>${c}</option>`).join('');
                 
-                rebuildDropdown();
+                document.getElementById('filter-count').innerText = `${filteredInnovations.length} inovasi`;
+                rebuildTOC();
                 renderBook();
             } catch(e) {
                 console.error(e);
-                document.getElementById('content-right').innerHTML = `<div class="p-4 text-red-500">Gagal memuat data. Pastikan data.json dan resume.json tersedia.</div>`;
+                document.getElementById('content-right').innerHTML = `<div class="text-red-500 p-4">Gagal memuat data. Pastikan data.json dan resume.json tersedia.</div>`;
             }
         }
 
-        // Generate report HTML from data & resume
-        function buildDynamicReportHtml() {
+        // ======================== DYNAMIC REPORT (dari resume & data) ========================
+        function buildReportHtml() {
             if (!resumeData) return '<p>Memuat laporan...</p>';
             const summary = resumeData.global_summary || {};
             const total = allInnovations.length;
             const grassroots = summary.grassroots_percentage || 0;
-            const categories = (resumeData.top_categories || []).slice(0,5);
+            const topCats = (resumeData.top_categories || []).slice(0,5);
             const risks = (resumeData.risk_distribution || []);
             const hidden = allInnovations.filter(i => i.hidden_gem === true).slice(0,4);
             return `
-                <div class="prose dark:prose-invert max-w-none text-sm">
+                <div class="prose prose-sm dark:prose-invert max-w-none">
                     <h1>Laporan Intelijen Inovasi</h1>
                     <p><strong>Periode:</strong> ${resumeData.report_metadata?.period || 'Q1 2026'} | <strong>Total Inovasi:</strong> ${total}</p>
-                    <p>Inovasi tingkat <strong>Grassroots</strong> mendominasi dengan <strong>${grassroots}%</strong>, menunjukkan ketangguhan komunitas lokal dalam beradaptasi.</p>
+                    <p>Inovasi tingkat <strong>Grassroots</strong> mencapai <strong>${grassroots}%</strong>, menunjukkan adaptasi komunitas lokal yang kuat.</p>
                     <h2>📊 Kategori Teratas</h2>
-                    <ul>${categories.map(c => `<li><strong>${c.category}</strong> — ${c.count} inovasi</li>`).join('')}</ul>
+                    <ul>${topCats.map(c => `<li><strong>${c.category}</strong> — ${c.count} inovasi</li>`).join('')}</ul>
                     <h2>⚠️ Distribusi Risiko</h2>
                     <ul>${risks.map(r => `<li>${r.level.toUpperCase()}: ${r.count} kasus</li>`).join('')}</ul>
                     <h2>💎 Hidden Gems</h2>
-                    <ul>${hidden.map(h => `<li><strong>${h.title}</strong> — ${h.location?.country || 'Global'}</li>`).join('')}</ul>
-                    <p><em>Laporan dihasilkan secara dinamis dari data.json dan resume.json.</em></p>
+                    <ul>${hidden.map(h => `<li><strong>${h.title}</strong> — ${getCountry(h.location)}</li>`).join('')}</ul>
                 </div>
             `;
         }
 
-        function buildResumeMetricsHtml() {
-            if (!resumeData) return '<p>Memuat metrik...</p>';
+        function buildMetricsHtml() {
+            if (!resumeData) return '<p>Loading...</p>';
             const summary = resumeData.global_summary || {};
             const cats = (resumeData.top_categories || []).slice(0,6);
             const risks = (resumeData.risk_distribution || []);
             return `
-                <div class="space-y-5">
+                <div class="space-y-4">
                     <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl text-center"><p class="text-[10px] uppercase font-bold">Total Inovasi</p><p class="text-2xl font-black">${summary.total_innovations || allInnovations.length}</p></div>
-                        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl text-center"><p class="text-[10px] uppercase font-bold">Grassroots</p><p class="text-2xl font-black text-emerald-500">${summary.grassroots_percentage || 0}%</p></div>
+                        <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl text-center"><p class="text-[10px] uppercase font-bold">Total Inovasi</p><p class="text-2xl font-black">${summary.total_innovations || allInnovations.length}</p></div>
+                        <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl text-center"><p class="text-[10px] uppercase font-bold">Grassroots</p><p class="text-2xl font-black text-emerald-500">${summary.grassroots_percentage || 0}%</p></div>
                     </div>
-                    <div><h4 class="text-xs font-bold uppercase mb-2 border-b pb-1">Top Kategori</h4>${cats.map(c => `<div class="flex justify-between text-sm mb-1"><span>${c.category}</span><span class="font-bold">${c.count}</span></div>`).join('')}</div>
-                    <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl"><h4 class="text-xs font-bold uppercase mb-2">Distribusi Risiko</h4>${risks.map(r => `<div class="flex justify-between text-sm"><span class="capitalize">${r.level}</span><span>${r.count}</span></div>`).join('')}</div>
+                    <div><h4 class="text-xs font-bold uppercase border-b pb-1">Kategori Teratas</h4>${cats.map(c => `<div class="flex justify-between text-sm"><span>${c.category}</span><span class="font-bold">${c.count}</span></div>`).join('')}</div>
+                    <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl"><h4 class="text-xs font-bold uppercase">Distribusi Risiko</h4>${risks.map(r => `<div class="flex justify-between text-sm"><span class="capitalize">${r.level}</span><span>${r.count}</span></div>`).join('')}</div>
                 </div>
             `;
         }
 
-        // Page builders (similar to original, but using filteredInnovations)
+        // ======================== PAGE BUILDERS (menampilkan semua data) ========================
         function getTotalPages() {
-            return TOTAL_STATIC_PAGES + (filteredInnovations.length * 2);
+            return STATIC_PAGES + (filteredInnovations.length * 2);
         }
 
-        function getPageHtml(index, isPrint = false) {
-            if (index < 0 || index >= getTotalPages()) return '';
-            if (index === 0) return buildCoverPage(isPrint);
-            if (index === 1) return `<div class="flex flex-col h-full overflow-y-auto pr-2"><div class="prose dark:prose-invert max-w-none">${buildDynamicReportHtml()}</div></div>`;
-            if (index === 2) return `<div class="flex flex-col h-full overflow-y-auto pr-2">${buildResumeMetricsHtml()}</div>`;
-            if (index === 3 && isMobile) return buildBlankPage(isPrint); // optional blank
-            
-            let dataIndex = Math.floor((index - TOTAL_STATIC_PAGES) / 2);
-            let item = filteredInnovations[dataIndex];
-            if (!item) return `<div class="flex items-center justify-center h-full"><p class="text-slate-400">Tidak ada data</p></div>`;
-            let isLeftPage = (index % 2 === 0);
-            return isLeftPage ? buildElementMapPage(item, dataIndex, isPrint) : buildElementChartPage(item, dataIndex, isPrint);
+        function buildCover() {
+            return `<div class="flex flex-col items-center justify-center h-full text-center space-y-6"><div class="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center"><i data-lucide="globe-2" class="text-white w-12 h-12"></i></div><h1 class="text-4xl font-black uppercase">Innovation<br/>Intelligence</h1><div class="w-16 h-1 bg-blue-500 rounded-full"></div><p class="text-slate-500 text-sm">Digital Briefing Book</p><p class="text-xs text-slate-400 mt-auto pt-12">Vol. 1 — 2026</p></div>`;
         }
 
-        function buildCoverPage(isPrint) {
-            return `<div class="flex flex-col items-center justify-center h-full text-center space-y-6"><div class="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center"><i data-lucide="globe-2" class="text-white w-12 h-12"></i></div><h1 class="text-4xl font-black uppercase tracking-wider">Innovation<br/>Intelligence<br/>Radar</h1><div class="w-16 h-1 bg-blue-500 rounded-full"></div><p class="text-slate-500 font-mono text-sm">Digital Briefing Book</p><p class="text-xs text-slate-400 mt-auto pt-12">Vol. 1 — 2026</p></div>`;
-        }
-        function buildBlankPage(isPrint) { return `<div class="flex flex-col items-center justify-center h-full opacity-40"><i data-lucide="book-dashed" class="w-12 h-12 mb-4"></i><p class="text-xs text-center">Halaman kosong</p></div>`; }
-
-        function buildElementMapPage(item, idx, isPrint) {
+        // Halaman kiri (Ringkasan + Peta + Metadata)
+        function buildLeftPage(item, idx, isPrint) {
             const mapId = `map-${idx}-${isPrint ? 'print' : 'screen'}`;
             const lat = item.location?.lat || 0;
-            const lon = item.location?.lon || 0;
-            const badges = (item.category || []).map(c => `<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-[10px] font-medium">${c}</span>`).join('');
-            const levelBadge = `<span class="px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 rounded text-[10px] font-bold uppercase">${item.innovation_level || 'grassroots'}</span>`;
-            const gemBadge = item.hidden_gem ? `<span class="px-2 py-1 bg-amber-100 text-amber-700 rounded flex items-center gap-1 text-[10px]"><i data-lucide="gem" class="w-3 h-3"></i> Hidden Gem</span>` : '';
+            const lng = item.location?.lon || 0;
+            const level = item.innovation_level || 'grassroots';
+            const isGem = item.hidden_gem === true;
+            const country = getCountry(item.location);
+            const region = item.location?.region || '';
+            const categories = (item.category || []).map(c => `<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">${c}</span>`).join('');
+            const knowledge = (item.origin?.knowledge_source || []).join(', ');
+            const impactProblem = item.impact?.problem_solved || 'Tidak ada data';
+            const impactScale = item.impact?.scale || 'N/A';
+            
             return `
-                <div class="flex flex-col h-full overflow-y-auto pr-1">
-                    <div class="flex flex-wrap gap-2 mb-3">${levelBadge} ${gemBadge}</div>
-                    <h2 class="text-xl font-bold mb-2">${item.title}</h2>
-                    <div class="flex flex-wrap gap-1 mb-3">${badges}</div>
-                    <div id="${mapId}" class="w-full h-40 rounded-xl bg-slate-200 dark:bg-slate-800 mb-4 border relative z-0" data-lat="${lat}" data-lon="${lon}"></div>
-                    <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl text-xs space-y-2">
-                        <div><strong>Sumber Pengetahuan:</strong> ${(item.origin?.knowledge_source || []).join(', ') || '-'}</div>
-                        <div><strong>Lokasi:</strong> ${item.location?.region || '-'}, ${getCountryString(item.location)}</div>
-                        <div><strong>Biaya:</strong> ${item.replicability?.cost_level || 'N/A'} | <strong>Kesulitan:</strong> ${item.replicability?.difficulty || 'N/A'}</div>
-                        ${item.source_url ? `<div><a href="${item.source_url}" target="_blank" class="text-blue-600 break-all">🔗 Sumber</a></div>` : ''}
+                <div class="flex flex-col h-full overflow-y-auto pr-2 space-y-4">
+                    <!-- Header -->
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300 rounded text-[10px] font-bold uppercase">${level}</span>
+                        ${isGem ? '<span class="px-2 py-1 bg-amber-100 text-amber-800 rounded flex items-center gap-1 text-[10px]"><i data-lucide="gem" class="w-3 h-3"></i> GEM</span>' : ''}
                     </div>
-                </div>
-            `;
-        }
-        function buildElementChartPage(item, idx, isPrint) {
-            const chartId = `chart-${idx}-${isPrint ? 'print' : 'screen'}`;
-            const riskScore = item.risk_assessment?.risk_score || 0;
-            const riskTypes = (item.risk_assessment?.risk_type || []).join(', ');
-            const processText = item.process?.how_it_works || (item.process?.step_by_step ? item.process.step_by_step.slice(0,3).join('; ') : 'Tidak ada data proses');
-            return `
-                <div class="flex flex-col h-full overflow-y-auto pr-1">
-                    <h3 class="text-sm font-bold uppercase border-b pb-1 mb-2">Analisis & Risiko</h3>
-                    <p class="text-xs italic mb-3 bg-slate-50 dark:bg-slate-800 p-2 rounded">${item.summary || ''}</p>
-                    <div id="${chartId}" class="w-full h-44 mb-3 echarts-target" data-prio="${item.priority_score||0}" data-risk="${riskScore*10}" data-impact="${item.impact?.scale === 'high' ? 90 : 50}" data-cost="${item.replicability?.cost_level === 'low' ? 20 : 70}" data-diff="${item.replicability?.difficulty === 'easy' ? 20 : 70}"></div>
-                    <div class="border-l-4 border-red-400 pl-2 text-xs"><strong>Skor Risiko:</strong> ${riskScore}/10<br/>${riskTypes ? `Jenis: ${riskTypes}` : ''}<br/>${item.risk_assessment?.explanation || ''}</div>
-                    <div class="mt-2 text-xs"><strong>Proses:</strong> ${processText.substring(0,150)}...</div>
+                    <h2 class="text-xl font-bold leading-tight">${item.title}</h2>
+                    <p class="text-xs text-slate-500">${country}${region ? ', ' + region : ''}</p>
+                    <div class="flex flex-wrap gap-1">${categories}</div>
+                    
+                    <!-- Radar Chart ditempatkan di halaman kiri (opsional, biar konsisten) -->
+                    <div id="radar-${mapId}" class="w-full h-44 echarts-target" data-prio="${item.priority_score||0}" data-risk="${(item.risk_assessment?.risk_score||0)*10}" data-impact="${item.impact?.scale === 'high' ? 90 : 60}" data-cost="${item.replicability?.cost_level === 'low' ? 20 : (item.replicability?.cost_level === 'medium' ? 60 : 90)}" data-diff="${item.replicability?.difficulty === 'easy' ? 20 : (item.replicability?.difficulty === 'medium' ? 60 : 90)}"></div>
+                    
+                    <!-- Risk Assessment -->
+                    <div class="border-l-4 ${(item.risk_assessment?.risk_score||0)>=7 ? 'border-red-500' : 'border-amber-500'} pl-3">
+                        <div class="flex items-center gap-2"><span class="font-bold text-lg">${item.risk_assessment?.risk_score || 0}/10</span> <span class="text-xs text-slate-500">${(item.risk_assessment?.risk_type || []).join(' • ')}</span></div>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">${item.risk_assessment?.explanation || 'Tidak ada penjelasan risiko.'}</p>
+                    </div>
+                    
+                    <!-- Executive Summary -->
+                    <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
+                        <h4 class="text-xs font-bold uppercase mb-1">Executive Summary</h4>
+                        <p class="text-xs">${item.summary || 'Ringkasan tidak tersedia.'}</p>
+                    </div>
+                    
+                    <!-- Knowledge Lineage & Impact -->
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div><strong>Knowledge Lineage</strong><br/>${knowledge || '-'}</div>
+                        <div><strong>Impact Target</strong><br/>${impactProblem.substring(0,80)}${impactProblem.length>80?'…':''}</div>
+                    </div>
+                    
+                    <!-- Map -->
+                    <div id="${mapId}" class="w-full h-36 rounded-lg bg-slate-200 dark:bg-slate-700" data-lat="${lat}" data-lon="${lng}"></div>
                 </div>
             `;
         }
 
-        // Render & Navigation
+        // Halaman kanan (Proses, Materials, Step-by-step)
+        function buildRightPage(item, idx, isPrint) {
+            const processHow = item.process?.how_it_works || (item.process?.step_by_step ? item.process.step_by_step.join(' ') : 'Tidak ada deskripsi proses.');
+            const materials = item.process?.materials_used || [];
+            const steps = item.process?.step_by_step || [];
+            
+            return `
+                <div class="flex flex-col h-full overflow-y-auto pl-1 space-y-4">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase border-b pb-1 flex items-center gap-1"><i data-lucide="git-pull-request" class="w-4 h-4"></i> Process & Methodology</h3>
+                        <p class="text-xs mt-2">${processHow}</p>
+                    </div>
+                    ${materials.length ? `
+                    <div>
+                        <h3 class="text-sm font-bold uppercase border-b pb-1 flex items-center gap-1"><i data-lucide="package" class="w-4 h-4"></i> Materials</h3>
+                        <ul class="list-disc pl-4 text-xs mt-1">${materials.map(m => `<li>${m}</li>`).join('')}</ul>
+                    </div>
+                    ` : ''}
+                    ${steps.length ? `
+                    <div>
+                        <h3 class="text-sm font-bold uppercase border-b pb-1 flex items-center gap-1"><i data-lucide="list" class="w-4 h-4"></i> Step-by-Step</h3>
+                        <ol class="list-decimal pl-4 text-xs space-y-1 mt-1">${steps.map(s => `<li>${s}</li>`).join('')}</ol>
+                    </div>
+                    ` : ''}
+                    <!-- Replicability -->
+                    <div class="bg-slate-50 dark:bg-slate-800/50 p-2 rounded-lg text-xs">
+                        <strong>Replicability:</strong> Cost ${item.replicability?.cost_level || 'N/A'} • Difficulty ${item.replicability?.difficulty || 'N/A'}
+                    </div>
+                    ${item.source_url ? `<div class="text-xs"><a href="${item.source_url}" target="_blank" class="text-blue-600">🔗 Sumber asli</a></div>` : ''}
+                </div>
+            `;
+        }
+
+        function getPageHtml(pageIndex, isPrint = false) {
+            if (pageIndex < 0 || pageIndex >= getTotalPages()) return '';
+            if (pageIndex === 0) return buildCover();
+            if (pageIndex === 1) return `<div class="h-full overflow-y-auto">${buildReportHtml()}</div>`;
+            if (pageIndex === 2) return `<div class="h-full overflow-y-auto">${buildMetricsHtml()}</div>`;
+            
+            const dataIdx = Math.floor((pageIndex - STATIC_PAGES) / 2);
+            const item = filteredInnovations[dataIdx];
+            if (!item) return '<div class="text-center p-4">Tidak ada data</div>';
+            
+            const isLeft = (pageIndex % 2 === 0);
+            return isLeft ? buildLeftPage(item, dataIdx, isPrint) : buildRightPage(item, dataIdx, isPrint);
+        }
+
+        // ======================== RENDER & NAVIGASI ========================
         function renderBook() {
-            const leftEl = document.getElementById('content-left');
-            const rightEl = document.getElementById('content-right');
+            const leftDiv = document.getElementById('content-left');
+            const rightDiv = document.getElementById('content-right');
             if (isMobile) {
-                rightEl.innerHTML = getPageHtml(currentPageIndex, false) || '';
-                leftEl.innerHTML = '';
+                rightDiv.innerHTML = getPageHtml(currentPage, false);
+                leftDiv.innerHTML = '';
             } else {
-                const leftIndex = Math.floor(currentPageIndex / 2) * 2;
-                leftEl.innerHTML = getPageHtml(leftIndex, false) || '<div class="flex items-center justify-center h-full"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
-                rightEl.innerHTML = getPageHtml(leftIndex + 1, false) || '<div class="flex items-center justify-center h-full"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
+                const leftIndex = Math.floor(currentPage / 2) * 2;
+                leftDiv.innerHTML = getPageHtml(leftIndex, false);
+                rightDiv.innerHTML = getPageHtml(leftIndex + 1, false);
             }
             lucide.createIcons();
             setTimeout(() => {
-                initVisualizations('.leaflet-target', '.echarts-target', mapInstances, chartInstances, false);
+                initVisualizations('.echarts-target', '.leaflet-target', false);
             }, 50);
             updateIndicator();
         }
-        function updateIndicator() {
-            const total = getTotalPages();
-            let display = isMobile ? currentPageIndex : (Math.floor(currentPageIndex/2)*2);
-            document.getElementById('page-indicator').innerText = `Halaman ${display} / ${total-1}`;
-        }
-        function nextPage() { let step = isMobile ? 1 : 2; if (currentPageIndex + step < getTotalPages()) { currentPageIndex += step; renderBook(); } }
-        function prevPage() { let step = isMobile ? 1 : 2; if (currentPageIndex - step >= 0) { currentPageIndex -= step; if (isMobile && currentPageIndex === 0) currentPageIndex = 1; renderBook(); } }
-        function jumpToPage(val) { if(!val) return; currentPageIndex = parseInt(val); if (!isMobile && currentPageIndex % 2 !== 0) currentPageIndex--; renderBook(); document.getElementById('toc-dropdown').selectedIndex = 0; }
 
-        // Visualizations init
-        function initVisualizations(mapClass, chartClass, mapsObj, chartsObj, isPrint) {
-            document.querySelectorAll(mapClass).forEach(el => {
-                const id = el.id;
-                const lat = parseFloat(el.dataset.lat), lon = parseFloat(el.dataset.lon);
-                if (id && !mapsObj[id] && !isNaN(lat)) {
-                    const map = L.map(id, { zoomControl: false, scrollWheelZoom: false }).setView([lat, lon], 5);
-                    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map);
-                    L.marker([lat, lon], { icon: L.divIcon({ html: '<div class="w-3 h-3 bg-blue-500 rounded-full border border-white"></div>', iconSize: [12,12] }) }).addTo(map);
-                    mapsObj[id] = map;
-                }
-            });
-            document.querySelectorAll(chartClass).forEach(el => {
-                const id = el.id;
-                if (id && !chartsObj[id]) {
+        function initVisualizations(chartSel, mapSel, isPrint) {
+            // Charts
+            document.querySelectorAll(chartSel).forEach(el => {
+                if (el.id && !chartInstances[el.id]) {
                     const chart = echarts.init(el);
                     const prio = parseFloat(el.dataset.prio) || 50;
                     const risk = parseFloat(el.dataset.risk) || 50;
@@ -410,57 +319,156 @@
                     const cost = parseFloat(el.dataset.cost) || 50;
                     const diff = parseFloat(el.dataset.diff) || 50;
                     chart.setOption({
-                        radar: { indicator: [{name:'Priority',max:100},{name:'Impact',max:100},{name:'Risk',max:100},{name:'Cost',max:100},{name:'Difficulty',max:100}], radius:'60%', center:['50%','55%'], axisName: { fontSize:9 } },
-                        series: [{ type:'radar', data: [{ value: [prio, impact, risk, cost, diff], areaStyle: { color: 'rgba(59,130,246,0.3)' }, lineStyle: { width:2 }, itemStyle: { color:'#3b82f6' } }] }]
+                        radar: {
+                            indicator: [
+                                { name: 'Priority', max: 100 },
+                                { name: 'Impact', max: 100 },
+                                { name: 'Risk', max: 100 },
+                                { name: 'Cost', max: 100 },
+                                { name: 'Difficulty', max: 100 }
+                            ],
+                            radius: '65%',
+                            center: ['50%', '55%'],
+                            axisName: { fontSize: 9 }
+                        },
+                        series: [{
+                            type: 'radar',
+                            data: [{ value: [prio, impact, risk, cost, diff], areaStyle: { color: 'rgba(59,130,246,0.3)' }, lineStyle: { width: 2 }, itemStyle: { color: '#3b82f6' } }]
+                        }]
                     });
-                    chartsObj[id] = chart;
+                    chartInstances[el.id] = chart;
+                }
+            });
+            // Maps
+            document.querySelectorAll(mapSel).forEach(el => {
+                if (el.id && !mapInstances[el.id]) {
+                    const lat = parseFloat(el.dataset.lat);
+                    const lon = parseFloat(el.dataset.lon);
+                    if (!isNaN(lat) && !isNaN(lon)) {
+                        const map = L.map(el.id, { zoomControl: false, scrollWheelZoom: false }).setView([lat, lon], 5);
+                        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+                        L.marker([lat, lon], { icon: L.divIcon({ html: '<div class="w-3 h-3 bg-blue-500 rounded-full border border-white"></div>', iconSize: [12,12] }) }).addTo(map);
+                        mapInstances[el.id] = map;
+                    }
                 }
             });
         }
 
+        function updateIndicator() {
+            const total = getTotalPages();
+            let display = isMobile ? currentPage : (Math.floor(currentPage/2)*2);
+            document.getElementById('page-indicator').innerText = `Halaman ${display+1} / ${total-1}`;
+        }
+        function nextPage() { let step = isMobile ? 1 : 2; if (currentPage + step < getTotalPages()) { currentPage += step; renderBook(); } }
+        function prevPage() { let step = isMobile ? 1 : 2; if (currentPage - step >= 0) { currentPage -= step; if (isMobile && currentPage === 0) currentPage = 1; renderBook(); } }
+        function jumpToPage(val) { currentPage = parseInt(val); if (!isMobile && currentPage % 2 !== 0) currentPage--; renderBook(); }
+
+        function rebuildTOC() {
+            const dropdown = document.getElementById('toc-dropdown');
+            let html = `<option value="" disabled selected>Daftar Isi</option><option value="0">Sampul Depan</option><option value="1">Laporan Eksekutif</option><option value="2">Metrik Global</option>`;
+            let grouped = {};
+            filteredInnovations.forEach((item, idx) => {
+                let country = getCountry(item.location);
+                if (!grouped[country]) grouped[country] = [];
+                grouped[country].push({ title: item.title, page: STATIC_PAGES + (idx * 2) });
+            });
+            for (let country in grouped) {
+                html += `<optgroup label="📍 ${country}">`;
+                grouped[country].forEach(g => { html += `<option value="${g.page}">${g.title}</option>`; });
+                html += `</optgroup>`;
+            }
+            dropdown.innerHTML = html;
+            dropdown.onchange = (e) => jumpToPage(e.target.value);
+        }
+
+        // Filter logic
+        function applyFilters() {
+            const search = document.getElementById('search-title').value.toLowerCase();
+            const category = document.getElementById('filter-category').value;
+            const country = document.getElementById('filter-country').value;
+            filteredInnovations = allInnovations.filter(inn => {
+                if (search && !inn.title.toLowerCase().includes(search)) return false;
+                if (category && !(inn.category || []).includes(category)) return false;
+                if (country && getCountry(inn.location) !== country) return false;
+                return true;
+            });
+            document.getElementById('filter-count').innerText = `${filteredInnovations.length} inovasi`;
+            currentPage = isMobile ? 1 : 0;
+            rebuildTOC();
+            renderBook();
+        }
+
+        // Print all
         async function printAllAsPDF() {
             const loading = document.getElementById('print-loading');
-            const printWrapper = document.getElementById('print-wrapper');
-            loading.classList.remove('hidden'); loading.classList.add('flex');
+            const wrapper = document.getElementById('print-wrapper');
+            loading.classList.remove('hidden');
             await new Promise(r => setTimeout(r, 100));
-            let fullHtml = '';
-            for(let i=0; i<getTotalPages(); i++) {
-                if(i===0) continue;
-                fullHtml += `<div class="print-page">${getPageHtml(i, true)}</div>`;
+            let full = '';
+            for (let i = 0; i < getTotalPages(); i++) {
+                if (i === 0) continue;
+                full += `<div class="print-page">${getPageHtml(i, true)}</div>`;
             }
-            printWrapper.innerHTML = fullHtml;
-            lucide.createIcons();
-            initVisualizations('.print-leaflet-target', '.print-echarts-target', printMapInst, printChartInst, true);
+            wrapper.innerHTML = full;
+            // Re-init charts & maps for print
+            const printCharts = {}, printMaps = {};
+            document.querySelectorAll('.print-page .echarts-target').forEach(el => {
+                const chart = echarts.init(el);
+                const prio = parseFloat(el.dataset.prio)||50;
+                const risk = parseFloat(el.dataset.risk)||50;
+                const impact = parseFloat(el.dataset.impact)||50;
+                const cost = parseFloat(el.dataset.cost)||50;
+                const diff = parseFloat(el.dataset.diff)||50;
+                chart.setOption({ radar: { indicator: [{name:'Priority'},{name:'Impact'},{name:'Risk'},{name:'Cost'},{name:'Difficulty'}], radius:'60%' }, series: [{ type:'radar', data: [{ value: [prio, impact, risk, cost, diff] }] }] });
+                printCharts[el.id] = chart;
+            });
+            document.querySelectorAll('.print-page .leaflet-target').forEach(el => {
+                const lat = parseFloat(el.dataset.lat), lon = parseFloat(el.dataset.lon);
+                if (!isNaN(lat)) {
+                    const map = L.map(el.id, { zoomControl: false }).setView([lat, lon], 5);
+                    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);
+                    L.marker([lat, lon]).addTo(map);
+                    printMaps[el.id] = map;
+                }
+            });
             await new Promise(r => setTimeout(r, 1500));
             window.print();
-            printWrapper.innerHTML = '';
-            loading.classList.add('hidden'); loading.classList.remove('flex');
+            wrapper.innerHTML = '';
+            loading.classList.add('hidden');
         }
 
         function toggleTheme() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark'); localStorage.theme = 'light';
-                document.getElementById('theme-icon').setAttribute('data-lucide', 'moon');
-            } else {
-                document.documentElement.classList.add('dark'); localStorage.theme = 'dark';
-                document.getElementById('theme-icon').setAttribute('data-lucide', 'sun');
-            }
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.theme = isDark ? 'dark' : 'light';
+            document.getElementById('theme-icon').setAttribute('data-lucide', isDark ? 'sun' : 'moon');
             lucide.createIcons();
             renderBook();
         }
         function checkTheme() {
-            if (localStorage.theme === 'dark') { document.documentElement.classList.add('dark'); document.getElementById('theme-icon').setAttribute('data-lucide', 'sun'); }
-            else { document.documentElement.classList.remove('dark'); document.getElementById('theme-icon').setAttribute('data-lucide', 'moon'); }
+            if (localStorage.theme === 'dark') document.documentElement.classList.add('dark');
+            else document.documentElement.classList.remove('dark');
+            document.getElementById('theme-icon').setAttribute('data-lucide', document.documentElement.classList.contains('dark') ? 'sun' : 'moon');
         }
 
         // Event listeners
-        window.addEventListener('resize', () => { let newMobile = window.innerWidth < 768; if (newMobile !== isMobile) { isMobile = newMobile; if (!isMobile && currentPageIndex%2!==0 && currentPageIndex>0) currentPageIndex--; renderBook(); } });
-        document.getElementById('search-title')?.addEventListener('input', () => applyFilters());
-        document.getElementById('filter-category')?.addEventListener('change', () => applyFilters());
-        document.getElementById('filter-country')?.addEventListener('change', () => applyFilters());
-        document.getElementById('reset-filter')?.addEventListener('click', () => { document.getElementById('search-title').value = ''; document.getElementById('filter-category').value = ''; document.getElementById('filter-country').value = ''; applyFilters(); });
-        document.getElementById('toc-dropdown')?.addEventListener('change', (e) => jumpToPage(e.target.value));
-        
+        window.addEventListener('resize', () => {
+            let newMobile = window.innerWidth < 768;
+            if (newMobile !== isMobile) {
+                isMobile = newMobile;
+                if (!isMobile && currentPage % 2 !== 0 && currentPage > 0) currentPage--;
+                renderBook();
+            }
+        });
+        document.getElementById('search-title')?.addEventListener('input', applyFilters);
+        document.getElementById('filter-category')?.addEventListener('change', applyFilters);
+        document.getElementById('filter-country')?.addEventListener('change', applyFilters);
+        document.getElementById('reset-filter')?.addEventListener('click', () => {
+            document.getElementById('search-title').value = '';
+            document.getElementById('filter-category').value = '';
+            document.getElementById('filter-country').value = '';
+            applyFilters();
+        });
+
         checkTheme();
         loadData();
     </script>
