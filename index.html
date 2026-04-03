@@ -139,9 +139,17 @@
         <button onclick="exportToXML()" class="text-slate-600 hover:text-unesco-blue bg-white border border-slate-200 hover:border-unesco-blue transition-all flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-md shadow-sm" title="Export DCMI">
           <i class="ph ph-export text-lg"></i> <span class="hidden md:inline">Export DCMI</span>
         </button>
+
+        <a href="book.html" target="_blank" class="bg-blue-600 text-white hover:bg-blue-700 glow-blue transition-all flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-md shadow-lg" title="Print Book">
+            <i data-lucide="book-open" class="w-4 h-4"></i> 
+            <span class="hidden md:inline">Book Print</span>
+        </a>
+
         <button onclick="window.open('journal.html', '_blank')" class="bg-unesco-blue text-white hover:bg-unesco-hover glow-blue transition-all flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-md shadow-lg" title="Open Innovation Journal">
           <i class="ph ph-books text-lg"></i> <span class="hidden md:inline">Journal View</span>
         </button>
+
+
       </div>
     </div>
   </header>
@@ -811,6 +819,7 @@ function populateCategoryFilter() {
     
     // Pastikan fungsi ini sekarang membaca dari globalResume
     populateReportSelector(); 
+    lucide.createIcons();
   }
 
   // ═══════════════════════════════════════════════════════
@@ -1074,6 +1083,7 @@ function applyFilters() {
     const wrapper = document.getElementById('modal-content-wrapper');
     modal.classList.remove('hidden'); void modal.offsetWidth; modal.classList.remove('opacity-0'); wrapper.classList.remove('scale-95');
     setTimeout(() => renderItemRadarChart(item), 300);
+    lucide.createIcons();
   }
 
   function renderItemRadarChart(item) {
