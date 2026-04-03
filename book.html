@@ -15,310 +15,972 @@
     <!-- ECharts -->
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     
+    <!-- Marked.js (Markdown Parser) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        book: {
+                            paper: '#fcfcfc',
+                            darkPaper: '#1e293b',
+                            cover: '#0f172a',
+                        }
+                    },
+                    boxShadow: {
+                        'book-left': '-10px 10px 30px rgba(0,0,0,0.1), inset -2px 0 10px rgba(0,0,0,0.05)',
+                        'book-right': '10px 10px 30px rgba(0,0,0,0.1), inset 2px 0 10px rgba(0,0,0,0.05)',
+                        'book-mobile': '0 10px 30px rgba(0,0,0,0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        .a4-page { aspect-ratio: 1 / 1.414; overflow-y: auto; scrollbar-width: thin; }
-        .a4-page::-webkit-scrollbar { width: 4px; }
-        .binding-left { background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%); }
-        .binding-right { background: linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%); }
-        .dark .binding-left, .dark .binding-right { background: linear-gradient(to right, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%); }
+        /* A4 Aspect Ratio 1 : 1.414 */
+        .a4-page {
+            aspect-ratio: 1 / 1.414;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            background-color: var(--tw-bg-opacity, 1);
+        }
+        
+        .a4-page::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .a4-page::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .a4-page::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .dark .a4-page::-webkit-scrollbar-thumb {
+            background-color: #475569;
+        }
+
+        /* Book Binding Effect */
+        .binding-left {
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%);
+        }
+        .dark .binding-left {
+            background: linear-gradient(to right, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%);
+        }
+        
+        .binding-right {
+            background: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%);
+        }
+        .dark .binding-right {
+            background: linear-gradient(to left, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%);
+        }
+
+        /* Markdown Styles */
+        .prose h1 { font-size: 1.875rem; font-weight: 800; margin-bottom: 1rem; color: #0f172a; }
+        .prose h2 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; color: #1e293b; }
+        .prose p { margin-bottom: 1rem; line-height: 1.6; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .prose li { margin-bottom: 0.25rem; }
+        
+        .dark .prose h1, .dark .prose h2 { color: #f8fafc; border-color: #334155; }
+        .dark .prose p, .dark .prose li { color: #cbd5e1; }
+        
+        .page-transition {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        /* --- PRINT STYLES FOR ALL PAGES --- */
         @media print {
-            @page { size: A4; margin: 0; }
-            body { background: white !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-            nav, .no-print, #book-wrapper, #filter-bar { display: none !important; }
-            .print-page { page-break-after: always; width: 210mm; height: 296mm; padding: 12mm; background: white; }
-            .print-leaflet-target { height: 180px !important; }
-            .print-echarts-target { height: 220px !important; }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                overflow: visible !important;
+            }
+            /* Sembunyikan elemen UI Aplikasi saat print */
+            nav, .no-print, #book-wrapper {
+                display: none !important;
+            }
+            main {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            /* Tampilkan wrapper cetak khusus secara absolute */
+            #print-wrapper {
+                display: block !important;
+                width: 100%;
+                background: white;
+                position: absolute;
+                top: 0; left: 0; right: 0;
+            }
+            .print-page {
+                page-break-after: always !important;
+                break-after: page !important;
+                width: 210mm !important;
+                height: 297mm !important; 
+                box-sizing: border-box !important;
+                padding: 15mm !important;
+                overflow: hidden !important;
+                position: relative;
+                background: white !important;
+                /* Gunakan block daripada flex untuk mencegah layout squish saat diprint */
+                display: block !important; 
+            }
+            
+            /* Reset Colors & Typography for Print */
+            .print-page * { color: black !important; }
+            .print-page .bg-slate-800, .print-page .bg-slate-900 { background-color: #f8fafc !important; border: 1px solid #e2e8f0 !important; }
+            .print-page .text-white { color: #0f172a !important; }
+            .print-page .text-slate-300, .print-page .text-slate-400 { color: #475569 !important; }
+            
+            /* Mematikan flex-col yang bertabrakan di kertas */
+            .print-page .flex-col { display: block !important; }
+            .print-page .flex-grow { flex-grow: 0 !important; height: auto !important; }
+            .print-page .mt-auto { margin-top: 1rem !important; }
+            .print-page .overflow-y-auto { overflow: visible !important; height: auto !important; }
+
+            /* Sizing Khusus Peta & Chart di Print */
+            .print-page .print-leaflet-target { height: 180px !important; border: 1px solid #cbd5e1 !important; border-radius: 8px; width: 100%; display: block; margin-bottom: 1rem; }
+            .print-page .print-echarts-target { height: 240px !important; width: 100%; display: block; margin-bottom: 1rem; }
+        }
+
+        /* Input File Styles */
+        input[type="file"]::file-selector-button {
+            border: 1px solid #cbd5e1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem;
+            background-color: #f8fafc;
+            color: #334155;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+        .dark input[type="file"]::file-selector-button {
+            border-color: #475569;
+            background-color: #1e293b;
+            color: #cbd5e1;
+        }
+        input[type="file"]::file-selector-button:hover {
+            background-color: #e2e8f0;
+        }
+        .dark input[type="file"]::file-selector-button:hover {
+            background-color: #334155;
         }
     </style>
 </head>
-<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors">
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans antialiased min-h-screen flex flex-col">
 
-    <!-- Loading & Print overlay -->
-    <div id="print-loading" class="fixed inset-0 bg-slate-900/90 z-[9999] hidden flex-col items-center justify-center text-white backdrop-blur-sm">
-        <i data-lucide="loader-2" class="w-12 h-12 animate-spin mb-4 text-blue-400"></i>
-        <h2 class="text-2xl font-bold">Menyiapkan PDF...</h2>
-    </div>
-    <div id="print-wrapper" class="hidden"></div>
-
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b z-50 no-print shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-2 flex-wrap">
-            <div class="flex items-center gap-2">
-                <i data-lucide="book-open" class="text-blue-600 w-6 h-6"></i>
-                <span class="font-bold hidden sm:inline">Innovation Book</span>
-                <select id="toc-dropdown" class="text-xs border rounded p-1.5 bg-slate-50 dark:bg-slate-900"></select>
+    <!-- Manual Data Upload Modal (Muncul jika fetch diblokir) -->
+    <div id="data-upload-modal" class="fixed inset-0 bg-slate-900/90 z-[10000] hidden flex-col items-center justify-center p-4 backdrop-blur-md">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-lg w-full p-6 sm:p-8 border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center gap-3 mb-6 text-blue-600 dark:text-blue-400">
+                <i data-lucide="folder-open" class="w-8 h-8"></i>
+                <h2 class="text-xl font-bold text-slate-800 dark:text-white">Pemuat Data Lokal</h2>
             </div>
-            <div class="flex items-center gap-2">
-                <span id="page-indicator" class="text-xs font-mono hidden md:inline-block w-24">Page 1</span>
-                <button onclick="printAllAsPDF()" class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 flex items-center gap-1">
-                    <i data-lucide="printer" class="w-4 h-4"></i> <span class="text-xs hidden sm:inline">Cetak PDF</span>
-                </button>
-                <div class="flex bg-slate-100 dark:bg-slate-900 rounded-lg">
-                    <button onclick="prevPage()" class="p-2 rounded-l"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
-                    <button onclick="nextPage()" class="p-2 rounded-r"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                Sistem tidak dapat membaca file secara otomatis (biasanya terjadi jika file HTML dibuka langsung dari *folder* komputer tanpa *web server*). <br/><strong>Silakan masukkan file Anda secara manual untuk melanjutkan.</strong>
+            </p>
+            
+            <div class="space-y-4 mb-8">
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">1. Pilih data.json (Wajib)</label>
+                    <input type="file" id="upload-data" accept=".json" class="w-full text-sm text-slate-500 dark:text-slate-400">
                 </div>
-                <button onclick="toggleTheme()" class="p-2 rounded-full"><i data-lucide="moon" id="theme-icon" class="w-5 h-5"></i></button>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">2. Pilih resume.json (Wajib)</label>
+                    <input type="file" id="upload-resume" accept=".json" class="w-full text-sm text-slate-500 dark:text-slate-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">3. Pilih report.md (Opsional)</label>
+                    <input type="file" id="upload-report" accept=".md,.txt" class="w-full text-sm text-slate-500 dark:text-slate-400">
+                </div>
             </div>
+
+            <button onclick="processLocalUploads()" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-colors flex items-center justify-center gap-2">
+                <i data-lucide="play" class="w-4 h-4"></i> Susun Buku Sekarang
+            </button>
         </div>
-        <!-- Filter bar -->
-        <div id="filter-bar" class="px-4 pb-2 pt-1 flex flex-wrap gap-2 border-t">
-            <input type="text" id="search-title" placeholder="Cari judul..." class="text-xs p-1 rounded border">
-            <select id="filter-category" class="text-xs p-1 rounded border"><option value="">Semua Kategori</option></select>
-            <select id="filter-country" class="text-xs p-1 rounded border"><option value="">Semua Negara</option></select>
-            <button id="reset-filter" class="text-xs px-2 py-1 bg-slate-200 rounded">Reset</button>
-            <span id="filter-count" class="text-xs text-slate-500 ml-auto"></span>
+    </div>
+
+    <!-- Print Loading Overlay -->
+    <div id="print-loading" class="fixed inset-0 bg-slate-900/95 z-[9999] hidden flex-col items-center justify-center text-white backdrop-blur-sm">
+        <i data-lucide="loader-2" class="w-12 h-12 animate-spin mb-4 text-blue-400"></i>
+        <h2 class="text-2xl font-bold mb-2">Menyiapkan Dokumen PDF...</h2>
+        <p class="text-slate-300 text-center max-w-md">Membangun struktur A4, meload peta geospasial,<br/>dan merender grafik secara presisi. Mohon tunggu...</p>
+    </div>
+
+    <!-- Container Khusus Untuk Print Semua Halaman -->
+    <div id="print-wrapper" class="hidden absolute top-0 left-0 w-full bg-white z-0 opacity-0 print:opacity-100 print:relative"></div>
+
+    <!-- Navbar & Controls -->
+    <nav id="main-nav" class="fixed top-0 w-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50 transition-colors no-print shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <i data-lucide="book-open" class="text-blue-600 dark:text-blue-400 w-6 h-6"></i>
+                <span class="font-bold text-lg tracking-tight hidden sm:block">Intelligence Book</span>
+                
+                <!-- Navigation Dropdown -->
+                <select id="toc-dropdown" onchange="jumpToPage(this.value)" class="ml-2 text-xs border rounded p-1.5 min-w-[140px] max-w-[150px] md:max-w-[200px] truncate bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 outline-none text-slate-700 dark:text-slate-200 cursor-pointer hover:border-blue-400 transition-colors shadow-inner">
+                    <option value="" disabled selected>Daftar Isi...</option>
+                </select>
+            </div>
+            
+            <div class="flex items-center gap-2 sm:gap-4">
+                <span id="page-indicator" class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 font-mono hidden md:inline-block w-24 text-right">Page 1 / ?</span>
+                
+                <!-- Print All Button -->
+                <button onclick="printAllAsPDF()" class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-all flex items-center gap-2 border border-indigo-200 dark:border-indigo-800" title="Cetak Seluruh Buku ke PDF">
+                    <i data-lucide="printer" class="w-4 h-4"></i>
+                    <span class="text-xs font-bold uppercase hidden md:inline-block">Cetak PDF</span>
+                </button>
+
+                <div class="flex bg-slate-100 dark:bg-slate-900 rounded-lg p-1">
+                    <button onclick="prevPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 shadow-sm transition-all" title="Halaman Sebelumnya">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="nextPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 shadow-sm transition-all" title="Halaman Selanjutnya">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-all text-slate-600 dark:text-slate-300">
+                    <i data-lucide="moon" id="theme-icon" class="w-5 h-5"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <main class="flex-grow flex items-center justify-center p-4 pt-28 pb-12 no-print">
-        <div id="book-wrapper" class="relative flex w-full max-w-6xl justify-center gap-0 sm:gap-1">
-            <div id="page-left" class="hidden md:block w-1/2 bg-white dark:bg-slate-800 shadow-book-left rounded-l-md relative a4-page">
-                <div class="absolute inset-y-0 right-0 w-12 binding-left pointer-events-none"></div>
-                <div class="p-6 lg:p-8 h-full flex flex-col" id="content-left"></div>
+    <!-- Main Book Container -->
+    <main id="main-content" class="flex-grow flex items-center justify-center p-4 sm:p-8 pt-24 pb-12 w-full no-print hidden">
+        <div id="book-wrapper" class="relative flex w-full max-w-6xl justify-center items-stretch perspective-1000 gap-0 sm:gap-1 lg:gap-0">
+            <!-- Left Page -->
+            <div id="page-left" class="hidden md:block w-1/2 bg-book-paper dark:bg-book-darkPaper shadow-book-left rounded-l-md relative a4-page page-transition transform origin-right">
+                <div class="absolute inset-y-0 right-0 w-12 binding-left pointer-events-none z-10"></div>
+                <div class="p-8 lg:p-12 h-full flex flex-col relative" id="content-left"></div>
             </div>
-            <div id="page-right" class="w-full md:w-1/2 bg-white dark:bg-slate-800 shadow-md md:shadow-book-right rounded-md md:rounded-l-none relative a4-page">
-                <div class="absolute inset-y-0 left-0 w-12 binding-right pointer-events-none md:block hidden"></div>
-                <div class="p-6 lg:p-8 h-full flex flex-col" id="content-right"></div>
+            <!-- Right Page -->
+            <div id="page-right" class="w-full md:w-1/2 max-w-md md:max-w-none bg-book-paper dark:bg-book-darkPaper shadow-book-mobile md:shadow-book-right rounded-md md:rounded-l-none md:rounded-r-md relative a4-page page-transition transform origin-left">
+                <div class="hidden md:block absolute inset-y-0 left-0 w-12 binding-right pointer-events-none z-10"></div>
+                <div class="p-6 sm:p-8 lg:p-12 h-full flex flex-col relative" id="content-right"></div>
             </div>
         </div>
     </main>
 
     <script>
-        // ======================== GLOBAL STATE ========================
-        let allInnovations = [];
-        let filteredInnovations = [];
-        let resumeData = null;
-        let currentPage = 0;
+        // --- Default Fallback Data (Jika Tidak Ada File Sama Sekali) ---
+        const fallbackData = []; // Will be populated by fetch or file upload
+        const fallbackResume = [{"global_summary": {"total_innovations": 0, "grassroots_percentage": 0}}];
+        const fallbackReport = `# Data Belum Dimuat\nSilakan pastikan file Anda terbaca dengan baik.`;
+
+        // --- State Variables ---
+        let currentPageIndex = 0; 
         let isMobile = window.innerWidth < 768;
-        let mapInstances = {}, chartInstances = {};
-        let printMaps = {}, printCharts = {};
-        const STATIC_PAGES = 3; // cover, report, metrics
+        let mapInstances = {};
+        let chartInstances = {};
+        let printMapInstances = {};
+        let printChartInstances = {};
+        let globalDataArr = []; 
+        let precompiled = { reportHtml: "", resumeHtml: "" };
+        const TOTAL_STATIC_PAGES = 4;
 
-        // Helper: ambil negara (bisa string atau array)
-        function getCountry(loc) {
-            if (!loc) return 'Unknown';
-            if (typeof loc.country === 'string') return loc.country.split(';')[0].trim();
-            if (Array.isArray(loc.country)) return loc.country[0];
-            return 'Unknown';
-        }
+        // --- Core Application Logic ---
 
-        // ======================== LOAD DATA ========================
-        async function loadData() {
-            try {
-                const [dataRes, resumeRes] = await Promise.all([
-                    fetch('data.json'),
-                    fetch('resume.json')
-                ]);
-                if (!dataRes.ok) throw new Error('data.json 404');
-                if (!resumeRes.ok) throw new Error('resume.json 404');
-                allInnovations = await dataRes.json();
-                const resumeArr = await resumeRes.json();
-                resumeData = resumeArr[resumeArr.length - 1];
-                filteredInnovations = [...allInnovations];
-                
-                // Populate filter dropdowns
-                const cats = new Set();
-                const countries = new Set();
-                allInnovations.forEach(inn => {
-                    (inn.category || []).forEach(c => cats.add(c));
-                    countries.add(getCountry(inn.location));
-                });
-                const catSelect = document.getElementById('filter-category');
-                catSelect.innerHTML = '<option value="">Semua Kategori</option>' + Array.from(cats).map(c => `<option>${c}</option>`).join('');
-                const countrySelect = document.getElementById('filter-country');
-                countrySelect.innerHTML = '<option value="">Semua Negara</option>' + Array.from(countries).map(c => `<option>${c}</option>`).join('');
-                
-                document.getElementById('filter-count').innerText = `${filteredInnovations.length} inovasi`;
-                rebuildTOC();
-                renderBook();
-            } catch(e) {
-                console.error(e);
-                document.getElementById('content-right').innerHTML = `<div class="text-red-500 p-4">Gagal memuat data. Pastikan data.json dan resume.json tersedia.</div>`;
-            }
-        }
-
-        // ======================== DYNAMIC REPORT (dari resume & data) ========================
-        function buildReportHtml() {
-            if (!resumeData) return '<p>Memuat laporan...</p>';
-            const summary = resumeData.global_summary || {};
-            const total = allInnovations.length;
-            const grassroots = summary.grassroots_percentage || 0;
-            const topCats = (resumeData.top_categories || []).slice(0,5);
-            const risks = (resumeData.risk_distribution || []);
-            const hidden = allInnovations.filter(i => i.hidden_gem === true).slice(0,4);
-            return `
-                <div class="prose prose-sm dark:prose-invert max-w-none">
-                    <h1>Laporan Intelijen Inovasi</h1>
-                    <p><strong>Periode:</strong> ${resumeData.report_metadata?.period || 'Q1 2026'} | <strong>Total Inovasi:</strong> ${total}</p>
-                    <p>Inovasi tingkat <strong>Grassroots</strong> mencapai <strong>${grassroots}%</strong>, menunjukkan adaptasi komunitas lokal yang kuat.</p>
-                    <h2>📊 Kategori Teratas</h2>
-                    <ul>${topCats.map(c => `<li><strong>${c.category}</strong> — ${c.count} inovasi</li>`).join('')}</ul>
-                    <h2>⚠️ Distribusi Risiko</h2>
-                    <ul>${risks.map(r => `<li>${r.level.toUpperCase()}: ${r.count} kasus</li>`).join('')}</ul>
-                    <h2>💎 Hidden Gems</h2>
-                    <ul>${hidden.map(h => `<li><strong>${h.title}</strong> — ${getCountry(h.location)}</li>`).join('')}</ul>
-                </div>
-            `;
-        }
-
-        function buildMetricsHtml() {
-            if (!resumeData) return '<p>Loading...</p>';
-            const summary = resumeData.global_summary || {};
-            const cats = (resumeData.top_categories || []).slice(0,6);
-            const risks = (resumeData.risk_distribution || []);
-            return `
-                <div class="space-y-4">
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl text-center"><p class="text-[10px] uppercase font-bold">Total Inovasi</p><p class="text-2xl font-black">${summary.total_innovations || allInnovations.length}</p></div>
-                        <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl text-center"><p class="text-[10px] uppercase font-bold">Grassroots</p><p class="text-2xl font-black text-emerald-500">${summary.grassroots_percentage || 0}%</p></div>
-                    </div>
-                    <div><h4 class="text-xs font-bold uppercase border-b pb-1">Kategori Teratas</h4>${cats.map(c => `<div class="flex justify-between text-sm"><span>${c.category}</span><span class="font-bold">${c.count}</span></div>`).join('')}</div>
-                    <div class="bg-slate-100 dark:bg-slate-800 p-3 rounded-xl"><h4 class="text-xs font-bold uppercase">Distribusi Risiko</h4>${risks.map(r => `<div class="flex justify-between text-sm"><span class="capitalize">${r.level}</span><span>${r.count}</span></div>`).join('')}</div>
-                </div>
-            `;
-        }
-
-        // ======================== PAGE BUILDERS (menampilkan semua data) ========================
-        function getTotalPages() {
-            return STATIC_PAGES + (filteredInnovations.length * 2);
-        }
-
-        function buildCover() {
-            return `<div class="flex flex-col items-center justify-center h-full text-center space-y-6"><div class="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center"><i data-lucide="globe-2" class="text-white w-12 h-12"></i></div><h1 class="text-4xl font-black uppercase">Innovation<br/>Intelligence</h1><div class="w-16 h-1 bg-blue-500 rounded-full"></div><p class="text-slate-500 text-sm">Digital Briefing Book</p><p class="text-xs text-slate-400 mt-auto pt-12">Vol. 1 — 2026</p></div>`;
-        }
-
-        // Halaman kiri (Ringkasan + Peta + Metadata)
-        function buildLeftPage(item, idx, isPrint) {
-            const mapId = `map-${idx}-${isPrint ? 'print' : 'screen'}`;
-            const lat = item.location?.lat || 0;
-            const lng = item.location?.lon || 0;
-            const level = item.innovation_level || 'grassroots';
-            const isGem = item.hidden_gem === true;
-            const country = getCountry(item.location);
-            const region = item.location?.region || '';
-            const categories = (item.category || []).map(c => `<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-medium">${c}</span>`).join('');
-            const knowledge = (item.origin?.knowledge_source || []).join(', ');
-            const impactProblem = item.impact?.problem_solved || 'Tidak ada data';
-            const impactScale = item.impact?.scale || 'N/A';
-            
-            return `
-                <div class="flex flex-col h-full overflow-y-auto pr-2 space-y-4">
-                    <!-- Header -->
-                    <div class="flex flex-wrap gap-2 items-center">
-                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300 rounded text-[10px] font-bold uppercase">${level}</span>
-                        ${isGem ? '<span class="px-2 py-1 bg-amber-100 text-amber-800 rounded flex items-center gap-1 text-[10px]"><i data-lucide="gem" class="w-3 h-3"></i> GEM</span>' : ''}
-                    </div>
-                    <h2 class="text-xl font-bold leading-tight">${item.title}</h2>
-                    <p class="text-xs text-slate-500">${country}${region ? ', ' + region : ''}</p>
-                    <div class="flex flex-wrap gap-1">${categories}</div>
-                    
-                    <!-- Radar Chart ditempatkan di halaman kiri (opsional, biar konsisten) -->
-                    <div id="radar-${mapId}" class="w-full h-44 echarts-target" data-prio="${item.priority_score||0}" data-risk="${(item.risk_assessment?.risk_score||0)*10}" data-impact="${item.impact?.scale === 'high' ? 90 : 60}" data-cost="${item.replicability?.cost_level === 'low' ? 20 : (item.replicability?.cost_level === 'medium' ? 60 : 90)}" data-diff="${item.replicability?.difficulty === 'easy' ? 20 : (item.replicability?.difficulty === 'medium' ? 60 : 90)}"></div>
-                    
-                    <!-- Risk Assessment -->
-                    <div class="border-l-4 ${(item.risk_assessment?.risk_score||0)>=7 ? 'border-red-500' : 'border-amber-500'} pl-3">
-                        <div class="flex items-center gap-2"><span class="font-bold text-lg">${item.risk_assessment?.risk_score || 0}/10</span> <span class="text-xs text-slate-500">${(item.risk_assessment?.risk_type || []).join(' • ')}</span></div>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">${item.risk_assessment?.explanation || 'Tidak ada penjelasan risiko.'}</p>
-                    </div>
-                    
-                    <!-- Executive Summary -->
-                    <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
-                        <h4 class="text-xs font-bold uppercase mb-1">Executive Summary</h4>
-                        <p class="text-xs">${item.summary || 'Ringkasan tidak tersedia.'}</p>
-                    </div>
-                    
-                    <!-- Knowledge Lineage & Impact -->
-                    <div class="grid grid-cols-2 gap-2 text-xs">
-                        <div><strong>Knowledge Lineage</strong><br/>${knowledge || '-'}</div>
-                        <div><strong>Impact Target</strong><br/>${impactProblem.substring(0,80)}${impactProblem.length>80?'…':''}</div>
-                    </div>
-                    
-                    <!-- Map -->
-                    <div id="${mapId}" class="w-full h-36 rounded-lg bg-slate-200 dark:bg-slate-700" data-lat="${lat}" data-lon="${lng}"></div>
-                </div>
-            `;
-        }
-
-        // Halaman kanan (Proses, Materials, Step-by-step)
-        function buildRightPage(item, idx, isPrint) {
-            const processHow = item.process?.how_it_works || (item.process?.step_by_step ? item.process.step_by_step.join(' ') : 'Tidak ada deskripsi proses.');
-            const materials = item.process?.materials_used || [];
-            const steps = item.process?.step_by_step || [];
-            
-            return `
-                <div class="flex flex-col h-full overflow-y-auto pl-1 space-y-4">
-                    <div>
-                        <h3 class="text-sm font-bold uppercase border-b pb-1 flex items-center gap-1"><i data-lucide="git-pull-request" class="w-4 h-4"></i> Process & Methodology</h3>
-                        <p class="text-xs mt-2">${processHow}</p>
-                    </div>
-                    ${materials.length ? `
-                    <div>
-                        <h3 class="text-sm font-bold uppercase border-b pb-1 flex items-center gap-1"><i data-lucide="package" class="w-4 h-4"></i> Materials</h3>
-                        <ul class="list-disc pl-4 text-xs mt-1">${materials.map(m => `<li>${m}</li>`).join('')}</ul>
-                    </div>
-                    ` : ''}
-                    ${steps.length ? `
-                    <div>
-                        <h3 class="text-sm font-bold uppercase border-b pb-1 flex items-center gap-1"><i data-lucide="list" class="w-4 h-4"></i> Step-by-Step</h3>
-                        <ol class="list-decimal pl-4 text-xs space-y-1 mt-1">${steps.map(s => `<li>${s}</li>`).join('')}</ol>
-                    </div>
-                    ` : ''}
-                    <!-- Replicability -->
-                    <div class="bg-slate-50 dark:bg-slate-800/50 p-2 rounded-lg text-xs">
-                        <strong>Replicability:</strong> Cost ${item.replicability?.cost_level || 'N/A'} • Difficulty ${item.replicability?.difficulty || 'N/A'}
-                    </div>
-                    ${item.source_url ? `<div class="text-xs"><a href="${item.source_url}" target="_blank" class="text-blue-600">🔗 Sumber asli</a></div>` : ''}
-                </div>
-            `;
-        }
-
-        function getPageHtml(pageIndex, isPrint = false) {
-            if (pageIndex < 0 || pageIndex >= getTotalPages()) return '';
-            if (pageIndex === 0) return buildCover();
-            if (pageIndex === 1) return `<div class="h-full overflow-y-auto">${buildReportHtml()}</div>`;
-            if (pageIndex === 2) return `<div class="h-full overflow-y-auto">${buildMetricsHtml()}</div>`;
-            
-            const dataIdx = Math.floor((pageIndex - STATIC_PAGES) / 2);
-            const item = filteredInnovations[dataIdx];
-            if (!item) return '<div class="text-center p-4">Tidak ada data</div>';
-            
-            const isLeft = (pageIndex % 2 === 0);
-            return isLeft ? buildLeftPage(item, dataIdx, isPrint) : buildRightPage(item, dataIdx, isPrint);
-        }
-
-        // ======================== RENDER & NAVIGASI ========================
-        function renderBook() {
-            const leftDiv = document.getElementById('content-left');
-            const rightDiv = document.getElementById('content-right');
-            if (isMobile) {
-                rightDiv.innerHTML = getPageHtml(currentPage, false);
-                leftDiv.innerHTML = '';
-            } else {
-                const leftIndex = Math.floor(currentPage / 2) * 2;
-                leftDiv.innerHTML = getPageHtml(leftIndex, false);
-                rightDiv.innerHTML = getPageHtml(leftIndex + 1, false);
-            }
+        async function initApp() {
             lucide.createIcons();
+            checkTheme();
+            
+            window.addEventListener('resize', () => {
+                const newIsMobile = window.innerWidth < 768;
+                if (newIsMobile !== isMobile) {
+                    isMobile = newIsMobile;
+                    if (!isMobile && currentPageIndex % 2 !== 0 && currentPageIndex > 0) {
+                        currentPageIndex--;
+                    }
+                    if(globalDataArr.length > 0) renderBook();
+                }
+            });
+
+            // Coba Ambil Data Otomatis (Fetch)
+            let fetchSuccess = false;
+            try {
+                const [reqReport, reqResume, reqData] = await Promise.all([
+                    fetch('report.md').catch(()=>null), 
+                    fetch('resume.json').catch(()=>null), 
+                    fetch('data.json').catch(()=>null)
+                ]);
+
+                if (reqData && reqData.ok && reqResume && reqResume.ok) {
+                    let rpt = reqReport && reqReport.ok ? await reqReport.text() : fallbackReport;
+                    let rsm = await reqResume.json();
+                    let dta = await reqData.json();
+                    
+                    startBookEngine(rpt, rsm, dta);
+                    fetchSuccess = true;
+                }
+            } catch (e) {
+                console.warn("Fetch failed.", e);
+            }
+
+            // Jika diblokir CORS, Tampilkan Modal Upload
+            if (!fetchSuccess) {
+                document.getElementById('data-upload-modal').classList.remove('hidden');
+                document.getElementById('data-upload-modal').classList.add('flex');
+            }
+        }
+
+        // --- LOCAL FILE UPLOAD LOGIC ---
+        async function processLocalUploads() {
+            const dataFile = document.getElementById('upload-data').files[0];
+            const resumeFile = document.getElementById('upload-resume').files[0];
+            const reportFile = document.getElementById('upload-report').files[0];
+
+            if (!dataFile || !resumeFile) {
+                alert("Mohon pilih file data.json dan resume.json terlebih dahulu!");
+                return;
+            }
+
+            try {
+                const readAsText = (file) => new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = e => resolve(e.target.result);
+                    reader.onerror = e => reject(e);
+                    reader.readAsText(file);
+                });
+
+                const dataContent = await readAsText(dataFile);
+                const resumeContent = await readAsText(resumeFile);
+                const reportContent = reportFile ? await readAsText(reportFile) : fallbackReport;
+
+                const parsedData = JSON.parse(dataContent);
+                const parsedResume = JSON.parse(resumeContent);
+
+                // Tutup modal dan mulai engine
+                document.getElementById('data-upload-modal').classList.add('hidden');
+                document.getElementById('data-upload-modal').classList.remove('flex');
+                
+                startBookEngine(reportContent, parsedResume, parsedData);
+
+            } catch (error) {
+                alert("Terjadi kesalahan saat membaca file JSON. Pastikan format file benar.\nDetail: " + error.message);
+            }
+        }
+
+        // --- START BOOK ENGINE ---
+        function startBookEngine(reportStr, resumeObj, dataArr) {
+            document.getElementById('main-content').classList.remove('hidden');
+            
+            globalDataArr = dataArr;
+            precompiled.reportHtml = marked.parse(reportStr);
+            precompiled.resumeHtml = buildResumeHtml(resumeObj);
+            
+            buildDropdownMenu();
+
+            if (isMobile) currentPageIndex = 1; 
+            
+            renderBook();
+        }
+
+        function buildDropdownMenu() {
+            const dropdown = document.getElementById('toc-dropdown');
+            let html = `<option value="" disabled selected>Daftar Isi...</option>
+                        <option value="1">Sampul Depan</option>
+                        <option value="2">Laporan Eksekutif</option>
+                        <option value="3">Metrik Global</option>`;
+            
+            let grouped = {};
+            globalDataArr.forEach((item, idx) => {
+                let country = item.location?.country || 'Lainnya';
+                if(!grouped[country]) grouped[country] = [];
+                grouped[country].push({ title: item.title, idx: idx });
+            });
+
+            for(let country in grouped) {
+                html += `<optgroup label="📍 ${country}">`;
+                grouped[country].forEach(item => {
+                    let pageIdx = TOTAL_STATIC_PAGES + (item.idx * 2);
+                    html += `<option value="${pageIdx}">${item.title}</option>`;
+                });
+                html += `</optgroup>`;
+            }
+            dropdown.innerHTML = html;
+        }
+
+        function jumpToPage(val) {
+            if(!val) return;
+            currentPageIndex = parseInt(val);
+            if (!isMobile && currentPageIndex % 2 !== 0 && currentPageIndex > 0) {
+                currentPageIndex--;
+            }
+            renderBook();
+            document.getElementById('toc-dropdown').selectedIndex = 0;
+        }
+
+        function getTotalPages() {
+            return TOTAL_STATIC_PAGES + (globalDataArr.length * 2);
+        }
+
+        function getPageHtml(index, isPrint = false) {
+            if (index < 0 || index >= getTotalPages()) return '';
+
+            if (index === 0) return buildBlankPage(isPrint);
+            if (index === 1) return buildCoverPage(isPrint);
+            if (index === 2) return buildReportPage(isPrint);
+            if (index === 3) return buildResumeLayout(isPrint);
+
+            let dataIndex = Math.floor((index - TOTAL_STATIC_PAGES) / 2);
+            let item = globalDataArr[dataIndex];
+            
+            if (!item) return `<div class="flex items-center justify-center h-full"><p class="text-slate-400">Data End</p></div>`;
+
+            let isLeftPage = (index % 2 === 0);
+            return isLeftPage ? buildElementMapPage(item, dataIndex, isPrint) : buildElementChartPage(item, dataIndex, isPrint);
+        }
+
+        // --- HTML Builders ---
+        function buildBlankPage(isPrint) {
+            if(isPrint) return ''; 
+            return `
+                <div class="flex flex-col items-center justify-center h-full opacity-40">
+                    <i data-lucide="shield-check" class="w-12 h-12 mb-4 text-slate-300 dark:text-slate-600"></i>
+                    <p class="text-[10px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center px-8">Halaman ini sengaja<br/>dikosongkan</p>
+                </div>
+            `;
+        }
+
+        function buildCoverPage(isPrint) {
+            return `
+                <div class="flex flex-col items-center justify-center h-full text-center space-y-6">
+                    <div class="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center shadow-lg shadow-blue-500/30 mx-auto">
+                        <i data-lucide="globe-2" class="text-white w-12 h-12"></i>
+                    </div>
+                    <h1 class="text-4xl font-black text-slate-800 dark:text-white uppercase tracking-wider mt-6">Innovation<br/>Intelligence<br/>Radar</h1>
+                    <div class="w-16 h-1 bg-blue-500 rounded-full my-6 mx-auto"></div>
+                    <p class="text-slate-500 dark:text-slate-400 font-mono text-sm uppercase tracking-widest">Digital Briefing Book</p>
+                    <p class="text-xs text-slate-400 mt-12 pt-12">Vol. 1 &mdash; 2026</p>
+                </div>
+            `;
+        }
+
+        function buildReportPage(isPrint) {
+            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
+            return `
+                <div class="${scrollClass}">
+                    <div class="flex items-center gap-2 mb-6 text-blue-600 dark:text-blue-400 pb-4 border-b border-slate-200 dark:border-slate-700">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                        <h3 class="font-bold uppercase tracking-widest text-xs">Executive Report</h3>
+                    </div>
+                    <div class="prose dark:prose-invert max-w-none text-sm">
+                        ${precompiled.reportHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        function buildResumeHtml(resumeJson) {
+            const resume = Array.isArray(resumeJson) ? resumeJson[0] : resumeJson;
+            let catsHtml = (resume.top_categories || []).map(c => `
+                <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-lg mb-2 border border-slate-100 dark:border-slate-700">
+                    <span class="text-xs font-medium truncate pr-4 text-slate-700 dark:text-slate-300">${c.category}</span>
+                    <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-bold">${c.count}</span>
+                </div>
+            `).join('');
+
+            let riskDistHtml = (resume.risk_distribution || []).map(r => {
+                let color = r.level === 'high' ? 'bg-red-500' : (r.level === 'medium' ? 'bg-amber-500' : 'bg-emerald-500');
+                let maxRisk = Math.max(...(resume.risk_distribution || []).map(x=>x.count), 60);
+                return `
+                <div class="flex items-center justify-between text-xs mb-1.5">
+                    <span class="capitalize text-slate-600 dark:text-slate-400 w-16">${r.level}</span>
+                    <div class="flex-1 mx-2 h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div class="h-full ${color}" style="width: ${(r.count/maxRisk)*100}%"></div>
+                    </div>
+                    <span class="font-bold text-slate-800 dark:text-slate-200 w-6 text-right">${r.count}</span>
+                </div>`;
+            }).join('');
+
+            return `
+                <div class="space-y-6">
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Nodes</p>
+                            <p class="text-2xl font-black text-slate-800 dark:text-white">${resume.global_summary?.total_innovations || 0}</p>
+                        </div>
+                        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Grassroots</p>
+                            <p class="text-2xl font-black text-emerald-500">${resume.global_summary?.grassroots_percentage || 0}%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-[10px] font-bold text-slate-400 uppercase mb-3 border-b border-slate-200 dark:border-slate-700 pb-1">Top Categories</h4>
+                        ${catsHtml}
+                    </div>
+
+                    <div class="bg-slate-50 dark:bg-slate-800/30 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mt-6">
+                        <h4 class="text-[10px] font-bold text-slate-500 uppercase mb-3 flex items-center gap-1"><i data-lucide="shield-alert" class="w-3 h-3"></i> Risk Distribution</h4>
+                        ${riskDistHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        function buildResumeLayout(isPrint) {
+            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
+            return `
+                <div class="${scrollClass}">
+                    <div class="flex items-center gap-2 mb-6 text-emerald-600 dark:text-emerald-400 pb-4 border-b border-slate-200 dark:border-slate-700">
+                        <i data-lucide="pie-chart" class="w-5 h-5"></i>
+                        <h3 class="font-bold uppercase tracking-widest text-xs">Global Metrics</h3>
+                    </div>
+                    ${precompiled.resumeHtml}
+                </div>
+            `;
+        }
+
+        function buildElementMapPage(item, index, isPrint) {
+            const mapSuffix = isPrint ? '-print' : '';
+            const mapId = `map-${item.id || index}${mapSuffix}`;
+            
+            // Pengamanan koordinat agar Leaflet tidak crash dengan (parseFloat + OR 0)
+            const lat = parseFloat(item.location?.lat) || 0;
+            const lon = parseFloat(item.location?.lon) || 0;
+            
+            const badges = (item.category || []).map(c => `<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-[10px] font-medium border border-slate-200 dark:border-slate-700 whitespace-nowrap inline-block mt-1">${c}</span>`).join('');
+            const levelBadge = `<span class="px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300 rounded text-[10px] font-bold border border-indigo-200 dark:border-indigo-800 uppercase inline-flex items-center gap-1 mt-1"><i data-lucide="network" class="w-3 h-3"></i> ${item.innovation_level || 'Unknown Level'}</span>`;
+            const gemBadge = item.hidden_gem ? `<span class="px-2 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 rounded inline-flex items-center gap-1 text-[10px] font-bold border border-amber-200 dark:border-amber-800 mt-1"><i data-lucide="gem" class="w-3 h-3"></i> Hidden Gem</span>` : '';
+
+            if(isPrint) {
+                return `
+                    <div class="mb-4">
+                        <div class="mb-2">${levelBadge} ${gemBadge}</div>
+                        <h2 class="text-2xl font-bold text-slate-900 leading-tight mb-2">${item.title}</h2>
+                        <div class="mb-4">${badges}</div>
+                    </div>
+                    
+                    <div class="w-full rounded-xl bg-slate-200 overflow-hidden mb-6 border border-slate-200 relative z-0 print-leaflet-target" id="${mapId}" data-lat="${lat}" data-lon="${lon}" style="height: 180px;"></div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-4">
+                        <h4 class="text-xs font-bold text-slate-800 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 pb-2">
+                            <i data-lucide="git-merge" class="w-4 h-4 text-indigo-500"></i> Nexus & Linkages
+                        </h4>
+                        <div class="grid grid-cols-2 gap-3 text-xs text-slate-600">
+                            <div><strong class="text-slate-800 block mb-0.5">Source Knowledge:</strong> <span class="capitalize">${(item.origin?.knowledge_source || []).join(', ') || '-'}</span></div>
+                            <div><strong class="text-slate-800 block mb-0.5">Geography Origin:</strong> ${item.location?.region || '-'}, ${item.location?.country || '-'}</div>
+                            <div class="col-span-2">
+                                <strong class="text-slate-800 block mb-0.5">Reference Link:</strong> 
+                                ${item.source_url ? `${item.source_url}` : 'No public link available'}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <h4 class="text-xs font-bold text-slate-800 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 pb-2">
+                            <i data-lucide="copy" class="w-4 h-4 text-emerald-500"></i> Replicability & Deployment
+                        </h4>
+                        <div class="grid grid-cols-2 gap-4 text-xs">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-white rounded-lg border border-slate-200"><i data-lucide="circle-dollar-sign" class="w-4 h-4 text-slate-500"></i></div>
+                                <div><p class="text-[10px] text-slate-500 uppercase font-bold">Cost Level</p><p class="font-bold text-slate-800 capitalize">${item.replicability?.cost_level || 'N/A'}</p></div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-white rounded-lg border border-slate-200"><i data-lucide="hammer" class="w-4 h-4 text-slate-500"></i></div>
+                                <div><p class="text-[10px] text-slate-500 uppercase font-bold">Difficulty</p><p class="font-bold text-slate-800 capitalize">${item.replicability?.difficulty || 'N/A'}</p></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            return `
+                <div class="flex flex-col overflow-y-auto scrollbar-thin pr-2 h-full">
+                    <div class="mb-4 flex-shrink-0">
+                        <div class="flex flex-wrap gap-2 mb-3">${levelBadge} ${gemBadge}</div>
+                        <h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight mb-2 line-clamp-2">${item.title}</h2>
+                        <div class="flex flex-wrap gap-1.5 mb-2">${badges}</div>
+                    </div>
+                    
+                    <div class="w-full h-36 md:h-44 flex-shrink-0 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden mb-4 border border-slate-200 dark:border-slate-700 relative z-0">
+                        <div id="${mapId}" class="w-full h-full leaflet-target" data-lat="${lat}" data-lon="${lon}"></div>
+                    </div>
+
+                    <div class="flex flex-col gap-3 flex-grow min-h-0">
+                        <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-2">
+                                <i data-lucide="git-merge" class="w-4 h-4 text-indigo-500"></i> Nexus & Linkages
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-600 dark:text-slate-400">
+                                <div><strong class="text-slate-800 dark:text-slate-300 block mb-0.5">Source Knowledge:</strong> <span class="capitalize">${(item.origin?.knowledge_source || []).join(', ') || '-'}</span></div>
+                                <div><strong class="text-slate-800 dark:text-slate-300 block mb-0.5">Geography Origin:</strong> ${item.location?.region || '-'}, ${item.location?.country || '-'}</div>
+                                <div class="md:col-span-2">
+                                    <strong class="text-slate-800 dark:text-slate-300 block mb-0.5">Reference Link:</strong> 
+                                    ${item.source_url ? `<a href="${item.source_url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline break-all inline-flex items-center gap-1"><i data-lucide="external-link" class="w-3 h-3"></i> ${item.source_url}</a>` : 'No public link available'}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mt-auto">
+                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-2">
+                                <i data-lucide="copy" class="w-4 h-4 text-emerald-500"></i> Replicability & Deployment
+                            </h4>
+                            <div class="grid grid-cols-2 gap-4 text-xs">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm border border-slate-100 dark:border-slate-600"><i data-lucide="circle-dollar-sign" class="w-4 h-4 text-slate-500"></i></div>
+                                    <div><p class="text-[10px] text-slate-400 uppercase font-bold">Cost Level</p><p class="font-medium text-slate-700 dark:text-slate-300 capitalize">${item.replicability?.cost_level || 'N/A'}</p></div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm border border-slate-100 dark:border-slate-600"><i data-lucide="hammer" class="w-4 h-4 text-slate-500"></i></div>
+                                    <div><p class="text-[10px] text-slate-400 uppercase font-bold">Difficulty</p><p class="font-medium text-slate-700 dark:text-slate-300 capitalize">${item.replicability?.difficulty || 'N/A'}</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function buildElementChartPage(item, index, isPrint) {
+            const chartSuffix = isPrint ? '-print' : '';
+            const chartId = `chart-${item.id || index}${chartSuffix}`;
+            
+            let rRisk = (item.risk_assessment?.risk_score || 0) * 10; 
+            let rCost = item.replicability?.cost_level === 'low' ? 20 : (item.replicability?.cost_level === 'medium' ? 50 : 90);
+            let rDiff = item.replicability?.difficulty === 'low' ? 20 : (item.replicability?.difficulty === 'medium' ? 50 : 90);
+            let rImpact = item.impact?.scale === 'high' ? 90 : (item.impact?.scale === 'medium' ? 60 : 30);
+            
+            let processHtml = '<p class="text-xs text-slate-500 italic">No process data.</p>';
+            if (item.process) {
+                let steps = Array.isArray(item.process) ? item.process : (Array.isArray(item.process.how_it_works) ? item.process.how_it_works : null);
+                if (typeof steps === 'string') {
+                    // Beberapa JSON memformat "how_it_works" sebagai string panjang alih-alih array
+                    processHtml = `<p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${steps}</p>`;
+                } else if (steps) {
+                    processHtml = `<ul class="list-decimal pl-4 space-y-1 text-xs text-slate-700 dark:text-slate-300">` + 
+                        steps.map(p => `<li>${p}</li>`).join('') + `</ul>`;
+                }
+            }
+
+            let riskScoreNum = item.risk_assessment?.risk_score || 0;
+            let riskTypesStr = (item.risk_assessment?.risk_type || []).map(t => `<span class="capitalize">${t}</span>`).join(' <span class="text-slate-400">&bull;</span> ');
+            let riskBorderColor = riskScoreNum >= 7 ? 'border-red-600' : (riskScoreNum >= 4 ? 'border-amber-500' : 'border-blue-500');
+            let riskTextColor = riskScoreNum >= 7 ? 'text-red-600 dark:text-red-400' : (riskScoreNum >= 4 ? 'text-amber-600 dark:text-amber-400' : 'text-blue-600 dark:text-blue-400');
+
+            if (isPrint) {
+                return `
+                    <h3 class="text-sm font-bold text-slate-800 uppercase border-b border-slate-200 pb-2 mb-3 flex items-center gap-2">
+                        <i data-lucide="cpu" class="w-4 h-4 text-slate-500"></i> Operation & Analysis
+                    </h3>
+                    
+                    <p class="text-xs text-slate-700 mb-4 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-200 italic">
+                        "${item.summary}"
+                    </p>
+
+                    <div id="${chartId}" class="w-full print-echarts-target mb-6" data-title="${item.title}" data-prio="${item.priority_score || 0}" data-risk="${rRisk}" data-cost="${rCost}" data-diff="${rDiff}" data-impact="${rImpact}" style="height: 240px;"></div>
+
+                    <div class="mb-4">
+                        <h4 class="text-xs font-bold text-slate-800 uppercase mb-2 flex items-center gap-2"><i data-lucide="list-tree" class="w-4 h-4 text-blue-500"></i> Process & Methodology</h4>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">${processHtml}</div>
+                    </div>
+
+                    <div class="border-l-4 border-emerald-500 pl-3 py-1 mb-4">
+                        <div class="flex items-center gap-2 text-emerald-700 font-bold text-xs mb-1 uppercase">
+                            <i data-lucide="target" class="w-4 h-4"></i> Impact Target &mdash; <span class="bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded shadow-sm">${item.impact?.scale || 'N/A'} SCALE</span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed">${item.impact?.problem_solved || 'No impact data recorded.'}</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-800 uppercase mb-2 flex items-center gap-2 border-b border-slate-200 pb-1"><i data-lucide="shield-alert" class="w-4 h-4 text-red-500"></i> Risk Assessment</h4>
+                        <div class="border-l-[3px] ${riskBorderColor} pl-3 py-0.5">
+                            <div class="flex flex-wrap items-center gap-1.5 font-bold text-sm mb-1 ${riskTextColor}">
+                                <span>${riskScoreNum}/10</span> ${riskTypesStr ? `<span class="text-slate-400">&bull;</span> ${riskTypesStr}` : ''}
+                            </div>
+                            <p class="text-xs text-slate-700 leading-relaxed">${item.risk_assessment?.explanation || 'No risk data available.'}</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            return `
+                <div class="flex flex-col overflow-y-auto scrollbar-thin pr-2 h-full">
+                    <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase border-b border-slate-200 dark:border-slate-700 pb-2 mb-3 flex items-center gap-2 flex-shrink-0">
+                        <i data-lucide="cpu" class="w-4 h-4 text-slate-400"></i> Operation & Analysis
+                    </h3>
+                    
+                    <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700 italic shadow-inner flex-shrink-0">
+                        "${item.summary}"
+                    </p>
+
+                    <div class="w-full h-40 mb-5 flex-shrink-0 relative z-0">
+                        <div id="${chartId}" class="w-full h-full echarts-target" 
+                            data-title="${item.title}"
+                            data-prio="${item.priority_score || 0}"
+                            data-risk="${rRisk}"
+                            data-cost="${rCost}"
+                            data-diff="${rDiff}"
+                            data-impact="${rImpact}">
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 flex-grow min-h-0">
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-2 flex items-center gap-2"><i data-lucide="list-tree" class="w-4 h-4 text-blue-500"></i> Process & Methodology</h4>
+                            <div class="bg-slate-50 dark:bg-slate-800/30 p-3 rounded-lg border border-slate-100 dark:border-slate-700">
+                                ${processHtml}
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-emerald-500 pl-3 py-1">
+                            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-xs mb-1 uppercase">
+                                <i data-lucide="target" class="w-4 h-4"></i> Impact Target &mdash; 
+                                <span class="bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300 px-1.5 py-0.5 rounded shadow-sm">${item.impact?.scale || 'N/A'} SCALE</span>
+                            </div>
+                            <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${item.impact?.problem_solved || 'No impact data recorded.'}</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-2 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-1"><i data-lucide="shield-alert" class="w-4 h-4 text-red-500"></i> Risk Assessment</h4>
+                            
+                            <div class="border-l-[3px] ${riskBorderColor} pl-3 py-0.5">
+                                <div class="flex flex-wrap items-center gap-1.5 ${riskTextColor} font-bold text-sm mb-1">
+                                    <span>${riskScoreNum}/10</span> 
+                                    ${riskTypesStr ? `<span class="text-slate-300 dark:text-slate-600">&bull;</span> ${riskTypesStr}` : ''}
+                                </div>
+                                <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${item.risk_assessment?.explanation || 'No risk data available.'}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // --- Navigation Control ---
+        function updateIndicator() {
+            let total = getTotalPages();
+            let currentDisplay = isMobile ? currentPageIndex : (Math.floor(currentPageIndex / 2) * 2);
+            let displayString = `Page ${currentDisplay} of ${total-1}`;
+            
+            if (!isMobile) {
+                if (currentDisplay === 0) displayString = "Cover Page";
+                else displayString = `Spread ${Math.floor(currentDisplay/2)} (${currentDisplay}-${currentDisplay+1})`;
+            }
+            document.getElementById('page-indicator').innerText = displayString;
+        }
+
+        function nextPage() {
+            const step = isMobile ? 1 : 2;
+            if (currentPageIndex + step < getTotalPages()) {
+                currentPageIndex += step;
+                renderBook();
+            }
+        }
+
+        function prevPage() {
+            const step = isMobile ? 1 : 2;
+            if (currentPageIndex - step >= 0) {
+                currentPageIndex -= step;
+                if (isMobile && currentPageIndex === 0) currentPageIndex = 1;
+                renderBook();
+            }
+        }
+
+        // --- View Rendering ---
+        function renderBook() {
+            const leftEl = document.getElementById('content-left');
+            const rightEl = document.getElementById('content-right');
+
+            cleanupInstances(mapInstances, chartInstances);
+
+            if (isMobile) {
+                rightEl.innerHTML = getPageHtml(currentPageIndex, false) || '';
+                leftEl.innerHTML = '';
+            } else {
+                const leftIndex = Math.floor(currentPageIndex / 2) * 2;
+                leftEl.innerHTML = getPageHtml(leftIndex, false) || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
+                rightEl.innerHTML = getPageHtml(leftIndex + 1, false) || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
+            }
+
+            lucide.createIcons();
+            
             setTimeout(() => {
-                initVisualizations('.echarts-target', '.leaflet-target', false);
+                initVisualizations('.leaflet-target', '.echarts-target', mapInstances, chartInstances, false);
             }, 50);
+            
+            setTimeout(() => {
+                for (let id in mapInstances) {
+                    if(mapInstances[id]) mapInstances[id].invalidateSize();
+                }
+            }, 300);
+
             updateIndicator();
         }
 
-        function initVisualizations(chartSel, mapSel, isPrint) {
-            // Charts
-            document.querySelectorAll(chartSel).forEach(el => {
-                if (el.id && !chartInstances[el.id]) {
-                    const chart = echarts.init(el);
-                    const prio = parseFloat(el.dataset.prio) || 50;
-                    const risk = parseFloat(el.dataset.risk) || 50;
-                    const impact = parseFloat(el.dataset.impact) || 50;
-                    const cost = parseFloat(el.dataset.cost) || 50;
-                    const diff = parseFloat(el.dataset.diff) || 50;
-                    chart.setOption({
+        // --- PRINT ENGINE (ALL PAGES - FIXED) ---
+        async function printAllAsPDF() {
+            const loading = document.getElementById('print-loading');
+            const printWrapper = document.getElementById('print-wrapper');
+            const mainNav = document.getElementById('main-nav');
+            const mainContent = document.getElementById('main-content');
+            
+            loading.classList.remove('hidden');
+            loading.classList.add('flex');
+            
+            // 1. Sembunyikan UI dan tampilkan wrapper secara aktual ke layar
+            // Ini agar Echarts/Leaflet mengenali lebar layar dan bisa merender kanvas
+            mainNav.style.display = 'none';
+            mainContent.style.display = 'none';
+            printWrapper.classList.remove('hidden');
+            printWrapper.classList.add('block');
+            
+            await new Promise(r => setTimeout(r, 100)); // Overlay muat
+
+            try {
+                let fullHtml = '';
+                let total = getTotalPages();
+                
+                for(let i = 0; i < total; i++) {
+                    if(i === 0) continue; // Skip halaman kosong
+                    fullHtml += `
+                        <div class="print-page">
+                            ${getPageHtml(i, true)}
+                        </div>
+                    `;
+                }
+                
+                printWrapper.innerHTML = fullHtml;
+                lucide.createIcons();
+
+                cleanupInstances(printMapInstances, printChartInstances);
+
+                // Init tanpa animasi (isPrint = true)
+                initVisualizations('.print-leaflet-target', '.print-echarts-target', printMapInstances, printChartInstances, true);
+
+                // Paksa Echarts resize & Leaflet Invalidate
+                for (let id in printChartInstances) {
+                    if(printChartInstances[id]) printChartInstances[id].resize();
+                }
+                for (let id in printMapInstances) {
+                    if(printMapInstances[id]) printMapInstances[id].invalidateSize();
+                }
+
+                // 2. Beri waktu tunggu LEBIH LAMA (2.5 detik) agar tiles Peta diunduh sepenuhnya
+                // dan canvas Echarts di-paint oleh browser sebelum window.print() "membekukan" memori
+                await new Promise(r => setTimeout(r, 2500));
+                
+                window.print();
+
+            } catch(e) {
+                console.error("Gagal membuat PDF", e);
+                alert("Terjadi kesalahan saat menyusun PDF.");
+            } finally {
+                // 3. Kembalikan semua UI ke awal
+                printWrapper.innerHTML = ''; 
+                printWrapper.classList.remove('block');
+                printWrapper.classList.add('hidden');
+                mainNav.style.display = '';
+                mainContent.style.display = '';
+                cleanupInstances(printMapInstances, printChartInstances);
+                loading.classList.add('hidden');
+                loading.classList.remove('flex');
+            }
+        }
+
+        // --- Visualizations Initialization ---
+        function cleanupInstances(mapsObj, chartsObj) {
+            for (let id in mapsObj) {
+                if(mapsObj[id]) {
+                    mapsObj[id].remove();
+                    delete mapsObj[id];
+                }
+            }
+            for (let id in chartsObj) {
+                if(chartsObj[id] && !chartsObj[id].isDisposed()) {
+                    chartsObj[id].dispose();
+                    delete chartsObj[id];
+                }
+            }
+        }
+
+        function initVisualizations(mapClass, chartClass, mapsObj, chartsObj, isPrint) {
+            const mapTargets = document.querySelectorAll(mapClass);
+            const sampleBgDots = globalDataArr.length > 100 ? globalDataArr.slice(0, 100) : globalDataArr;
+            const isDark = document.documentElement.classList.contains('dark') && !isPrint; // Saat print paksa light
+
+            mapTargets.forEach(el => {
+                const id = el.id;
+                
+                // FIXED: Memastikan nilai koordinat tidak menjadi NaN
+                const rawLat = parseFloat(el.getAttribute('data-lat'));
+                const rawLon = parseFloat(el.getAttribute('data-lon'));
+                const currentLat = isNaN(rawLat) ? 0 : rawLat;
+                const currentLon = isNaN(rawLon) ? 0 : rawLon;
+                
+                if (id && !mapsObj[id]) {
+                    // Nonaktifkan animasi zoom untuk mode Print agar instant
+                    const mapOptions = isPrint ? 
+                        { zoomControl: false, scrollWheelZoom: false, fadeAnimation: false, zoomAnimation: false, markerZoomAnimation: false } : 
+                        { zoomControl: false, scrollWheelZoom: false };
+
+                    const map = L.map(id, mapOptions).setView([currentLat, currentLon], 4);
+                    
+                    const tileUrl = isDark 
+                        ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+                        : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+
+                    L.tileLayer(tileUrl, { attribution: '&copy; OpenStreetMap' }).addTo(map);
+
+                    sampleBgDots.forEach(item => {
+                        // FIXED: Periksa koordinat untuk dot di latar belakang juga
+                        const lat = parseFloat(item.location?.lat);
+                        const lon = parseFloat(item.location?.lon);
+                        
+                        if(!isNaN(lat) && !isNaN(lon) && (lat !== currentLat || lon !== currentLon)) {
+                            L.circleMarker([lat, lon], {
+                                radius: 3, color: isDark ? '#475569' : '#cbd5e1', fillColor: isDark ? '#475569' : '#cbd5e1', fillOpacity: 0.8, weight: 1
+                            }).addTo(map);
+                        }
+                    });
+
+                    const markerHtml = `<div class="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-[0_0_10px_rgba(59,130,246,0.8)] ${isPrint ? '' : 'animate-pulse'}"></div>`;
+                    const customIcon = L.divIcon({ className: 'custom-div-icon', html: markerHtml, iconSize: [16, 16], iconAnchor: [8, 8] });
+                    L.marker([currentLat, currentLon], {icon: customIcon, zIndexOffset: 1000}).addTo(map);
+
+                    mapsObj[id] = map;
+                }
+            });
+
+            const chartTargets = document.querySelectorAll(chartClass);
+            chartTargets.forEach(el => {
+                const id = el.id;
+                if (id && !chartsObj[id]) {
+                    const myChart = echarts.init(el);
+                    const textColor = isDark ? '#cbd5e1' : '#475569';
+                    
+                    const prio = parseFloat(el.getAttribute('data-prio'));
+                    const risk = parseFloat(el.getAttribute('data-risk'));
+                    const cost = parseFloat(el.getAttribute('data-cost'));
+                    const diff = parseFloat(el.getAttribute('data-diff'));
+                    const impact = parseFloat(el.getAttribute('data-impact'));
+
+                    myChart.setOption({
+                        animation: !isPrint, // Matikan animasi di mode print agar tidak kosong
+                        backgroundColor: 'transparent',
                         radar: {
                             indicator: [
                                 { name: 'Priority', max: 100 },
@@ -327,150 +989,57 @@
                                 { name: 'Cost', max: 100 },
                                 { name: 'Difficulty', max: 100 }
                             ],
-                            radius: '65%',
+                            radius: '60%',
                             center: ['50%', '55%'],
-                            axisName: { fontSize: 9 }
+                            splitNumber: 4,
+                            axisName: { color: textColor, fontSize: 10, fontWeight: 'bold' },
+                            splitArea: { areaStyle: { color: isDark ? ['#1e293b', '#0f172a'] : ['#f8fafc', '#f1f5f9'] } },
+                            splitLine: { lineStyle: { color: isDark ? '#334155' : '#e2e8f0' } },
+                            axisLine: { lineStyle: { color: isDark ? '#334155' : '#e2e8f0' } }
                         },
                         series: [{
                             type: 'radar',
-                            data: [{ value: [prio, impact, risk, cost, diff], areaStyle: { color: 'rgba(59,130,246,0.3)' }, lineStyle: { width: 2 }, itemStyle: { color: '#3b82f6' } }]
+                            data: [{
+                                value: [prio, impact, risk, cost, diff],
+                                name: 'Metrics',
+                                itemStyle: { color: '#3b82f6' },
+                                areaStyle: { color: 'rgba(59, 130, 246, 0.3)' },
+                                lineStyle: { width: 2 }
+                            }]
                         }]
                     });
-                    chartInstances[el.id] = chart;
-                }
-            });
-            // Maps
-            document.querySelectorAll(mapSel).forEach(el => {
-                if (el.id && !mapInstances[el.id]) {
-                    const lat = parseFloat(el.dataset.lat);
-                    const lon = parseFloat(el.dataset.lon);
-                    if (!isNaN(lat) && !isNaN(lon)) {
-                        const map = L.map(el.id, { zoomControl: false, scrollWheelZoom: false }).setView([lat, lon], 5);
-                        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap' }).addTo(map);
-                        L.marker([lat, lon], { icon: L.divIcon({ html: '<div class="w-3 h-3 bg-blue-500 rounded-full border border-white"></div>', iconSize: [12,12] }) }).addTo(map);
-                        mapInstances[el.id] = map;
-                    }
+                    chartsObj[id] = myChart;
                 }
             });
         }
 
-        function updateIndicator() {
-            const total = getTotalPages();
-            let display = isMobile ? currentPage : (Math.floor(currentPage/2)*2);
-            document.getElementById('page-indicator').innerText = `Halaman ${display+1} / ${total-1}`;
-        }
-        function nextPage() { let step = isMobile ? 1 : 2; if (currentPage + step < getTotalPages()) { currentPage += step; renderBook(); } }
-        function prevPage() { let step = isMobile ? 1 : 2; if (currentPage - step >= 0) { currentPage -= step; if (isMobile && currentPage === 0) currentPage = 1; renderBook(); } }
-        function jumpToPage(val) { currentPage = parseInt(val); if (!isMobile && currentPage % 2 !== 0) currentPage--; renderBook(); }
-
-        function rebuildTOC() {
-            const dropdown = document.getElementById('toc-dropdown');
-            let html = `<option value="" disabled selected>Daftar Isi</option><option value="0">Sampul Depan</option><option value="1">Laporan Eksekutif</option><option value="2">Metrik Global</option>`;
-            let grouped = {};
-            filteredInnovations.forEach((item, idx) => {
-                let country = getCountry(item.location);
-                if (!grouped[country]) grouped[country] = [];
-                grouped[country].push({ title: item.title, page: STATIC_PAGES + (idx * 2) });
-            });
-            for (let country in grouped) {
-                html += `<optgroup label="📍 ${country}">`;
-                grouped[country].forEach(g => { html += `<option value="${g.page}">${g.title}</option>`; });
-                html += `</optgroup>`;
+        // --- Theme Management ---
+        function checkTheme() {
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.getElementById('theme-icon').setAttribute('data-lucide', 'sun');
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.getElementById('theme-icon').setAttribute('data-lucide', 'moon');
             }
-            dropdown.innerHTML = html;
-            dropdown.onchange = (e) => jumpToPage(e.target.value);
-        }
-
-        // Filter logic
-        function applyFilters() {
-            const search = document.getElementById('search-title').value.toLowerCase();
-            const category = document.getElementById('filter-category').value;
-            const country = document.getElementById('filter-country').value;
-            filteredInnovations = allInnovations.filter(inn => {
-                if (search && !inn.title.toLowerCase().includes(search)) return false;
-                if (category && !(inn.category || []).includes(category)) return false;
-                if (country && getCountry(inn.location) !== country) return false;
-                return true;
-            });
-            document.getElementById('filter-count').innerText = `${filteredInnovations.length} inovasi`;
-            currentPage = isMobile ? 1 : 0;
-            rebuildTOC();
-            renderBook();
-        }
-
-        // Print all
-        async function printAllAsPDF() {
-            const loading = document.getElementById('print-loading');
-            const wrapper = document.getElementById('print-wrapper');
-            loading.classList.remove('hidden');
-            await new Promise(r => setTimeout(r, 100));
-            let full = '';
-            for (let i = 0; i < getTotalPages(); i++) {
-                if (i === 0) continue;
-                full += `<div class="print-page">${getPageHtml(i, true)}</div>`;
-            }
-            wrapper.innerHTML = full;
-            // Re-init charts & maps for print
-            const printCharts = {}, printMaps = {};
-            document.querySelectorAll('.print-page .echarts-target').forEach(el => {
-                const chart = echarts.init(el);
-                const prio = parseFloat(el.dataset.prio)||50;
-                const risk = parseFloat(el.dataset.risk)||50;
-                const impact = parseFloat(el.dataset.impact)||50;
-                const cost = parseFloat(el.dataset.cost)||50;
-                const diff = parseFloat(el.dataset.diff)||50;
-                chart.setOption({ radar: { indicator: [{name:'Priority'},{name:'Impact'},{name:'Risk'},{name:'Cost'},{name:'Difficulty'}], radius:'60%' }, series: [{ type:'radar', data: [{ value: [prio, impact, risk, cost, diff] }] }] });
-                printCharts[el.id] = chart;
-            });
-            document.querySelectorAll('.print-page .leaflet-target').forEach(el => {
-                const lat = parseFloat(el.dataset.lat), lon = parseFloat(el.dataset.lon);
-                if (!isNaN(lat)) {
-                    const map = L.map(el.id, { zoomControl: false }).setView([lat, lon], 5);
-                    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);
-                    L.marker([lat, lon]).addTo(map);
-                    printMaps[el.id] = map;
-                }
-            });
-            await new Promise(r => setTimeout(r, 1500));
-            window.print();
-            wrapper.innerHTML = '';
-            loading.classList.add('hidden');
         }
 
         function toggleTheme() {
-            const isDark = document.documentElement.classList.toggle('dark');
-            localStorage.theme = isDark ? 'dark' : 'light';
-            document.getElementById('theme-icon').setAttribute('data-lucide', isDark ? 'sun' : 'moon');
-            lucide.createIcons();
-            renderBook();
-        }
-        function checkTheme() {
-            if (localStorage.theme === 'dark') document.documentElement.classList.add('dark');
-            else document.documentElement.classList.remove('dark');
-            document.getElementById('theme-icon').setAttribute('data-lucide', document.documentElement.classList.contains('dark') ? 'sun' : 'moon');
-        }
-
-        // Event listeners
-        window.addEventListener('resize', () => {
-            let newMobile = window.innerWidth < 768;
-            if (newMobile !== isMobile) {
-                isMobile = newMobile;
-                if (!isMobile && currentPage % 2 !== 0 && currentPage > 0) currentPage--;
-                renderBook();
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                document.getElementById('theme-icon').setAttribute('data-lucide', 'moon');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                document.getElementById('theme-icon').setAttribute('data-lucide', 'sun');
             }
-        });
-        document.getElementById('search-title')?.addEventListener('input', applyFilters);
-        document.getElementById('filter-category')?.addEventListener('change', applyFilters);
-        document.getElementById('filter-country')?.addEventListener('change', applyFilters);
-        document.getElementById('reset-filter')?.addEventListener('click', () => {
-            document.getElementById('search-title').value = '';
-            document.getElementById('filter-category').value = '';
-            document.getElementById('filter-country').value = '';
-            applyFilters();
-        });
+            lucide.createIcons();
+            if(globalDataArr.length > 0) renderBook(); 
+        }
 
-        checkTheme();
-        loadData();
+        document.addEventListener('DOMContentLoaded', initApp);
+
     </script>
 </body>
 </html>
