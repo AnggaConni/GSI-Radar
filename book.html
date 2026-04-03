@@ -15,9 +15,6 @@
     <!-- ECharts -->
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     
-    <!-- Marked.js (Markdown Parser) -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -44,40 +41,23 @@
     </script>
 
     <style>
-        /* A4 Aspect Ratio 1 : 1.414 */
         .a4-page {
             aspect-ratio: 1 / 1.414;
             overflow-y: auto;
             overflow-x: hidden;
             scrollbar-width: thin;
-            background-color: var(--tw-bg-opacity, 1);
         }
-        
-        .a4-page::-webkit-scrollbar {
-            width: 4px;
-        }
-        
-        .a4-page::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        .a4-page::-webkit-scrollbar-thumb {
-            background-color: #cbd5e1;
-            border-radius: 10px;
-        }
+        .a4-page::-webkit-scrollbar { width: 4px; }
+        .a4-page::-webkit-scrollbar-track { background: transparent; }
+        .a4-page::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 10px; }
+        .dark .a4-page::-webkit-scrollbar-thumb { background-color: #475569; }
 
-        .dark .a4-page::-webkit-scrollbar-thumb {
-            background-color: #475569;
-        }
-
-        /* Book Binding Effect */
         .binding-left {
             background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%);
         }
         .dark .binding-left {
             background: linear-gradient(to right, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%);
         }
-        
         .binding-right {
             background: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%);
         }
@@ -85,138 +65,95 @@
             background: linear-gradient(to left, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%);
         }
 
-        /* Markdown Styles */
         .prose h1 { font-size: 1.875rem; font-weight: 800; margin-bottom: 1rem; color: #0f172a; }
-        .prose h2 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; color: #1e293b; }
+        .prose h2 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; }
         .prose p { margin-bottom: 1rem; line-height: 1.6; }
         .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
-        .prose li { margin-bottom: 0.25rem; }
-        
         .dark .prose h1, .dark .prose h2 { color: #f8fafc; border-color: #334155; }
         .dark .prose p, .dark .prose li { color: #cbd5e1; }
-        
-        .page-transition {
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
 
-        /* --- PRINT STYLES FOR ALL PAGES --- */
         @media print {
-            @page {
-                size: A4;
-                margin: 0;
-            }
-            body {
-                background: white !important;
-                color: black !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
-            nav, .no-print, #book-wrapper {
-                display: none !important;
-            }
-            main {
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-            #print-wrapper {
-                display: block !important;
-                width: 100%;
-                background: white;
-            }
+            @page { size: A4; margin: 0; }
+            body { background: white !important; color: black !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            nav, .no-print, #book-wrapper, #filter-bar { display: none !important; }
+            main { padding: 0 !important; margin: 0 !important; }
+            #print-wrapper { display: block !important; width: 100%; background: white; }
             .print-page {
-                page-break-after: always;
-                break-after: page;
-                width: 210mm;
-                height: 296mm; /* Slightly less than 297 to avoid blank pages */
-                max-height: 296mm;
-                box-sizing: border-box;
-                padding: 12mm 15mm;
-                overflow: hidden;
-                position: relative;
-                background: white !important;
-                display: flex;
-                flex-direction: column;
+                page-break-after: always; break-after: page;
+                width: 210mm; height: 296mm; box-sizing: border-box;
+                padding: 12mm 15mm; overflow: hidden;
+                background: white !important; display: flex; flex-direction: column;
             }
-            /* Reset Colors for Print */
             .print-page * { color: black !important; }
             .print-page .bg-slate-800, .print-page .bg-slate-900 { background-color: #f8fafc !important; border: 1px solid #e2e8f0; }
             .print-page .text-white { color: #0f172a !important; }
-            .print-page .text-slate-300, .print-page .text-slate-400 { color: #475569 !important; }
-            
-            /* Prevent Flex squish on print */
             .print-page .flex-grow { flex-grow: 1 !important; flex-shrink: 0 !important; }
-            .print-page .flex-shrink-0 { flex-shrink: 0 !important; }
-            
-            /* Print Chart & Map Heights */
-            .print-page .print-leaflet-target { height: 180px !important; border: 1px solid #cbd5e1 !important; border-radius: 8px; width: 100%; display: block; }
-            .print-page .print-echarts-target { height: 240px !important; width: 100%; display: block; }
-
-            /* Fix Overlap issues by preventing scroll CSS */
+            .print-leaflet-target { height: 180px !important; border: 1px solid #cbd5e1 !important; border-radius: 8px; width: 100%; display: block; }
+            .print-echarts-target { height: 240px !important; width: 100%; display: block; }
             .print-page .overflow-y-auto { overflow: visible !important; }
-            .print-page .h-full { height: auto !important; max-height: 100% !important; }
         }
     </style>
 </head>
-<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors font-sans antialiased min-h-screen flex flex-col">
 
-    <!-- Print Loading Overlay -->
     <div id="print-loading" class="fixed inset-0 bg-slate-900/90 z-[9999] hidden flex-col items-center justify-center text-white backdrop-blur-sm">
         <i data-lucide="loader-2" class="w-12 h-12 animate-spin mb-4 text-blue-400"></i>
         <h2 class="text-2xl font-bold mb-2">Menyiapkan Dokumen PDF...</h2>
-        <p class="text-slate-300 text-center max-w-md">Membangun semua halaman, menonaktifkan animasi,<br/>dan menyesuaikan tata letak untuk A4...</p>
+        <p class="text-slate-300 text-center max-w-md">Membangun halaman, merender peta & grafik...</p>
     </div>
 
-    <!-- Container Khusus Untuk Print Semua Halaman -->
     <div id="print-wrapper" class="hidden"></div>
 
-    <!-- Navbar & Controls -->
-    <nav class="fixed top-0 w-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50 transition-colors no-print shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <!-- Navbar & Filter -->
+    <nav class="fixed top-0 w-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50 no-print shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-3">
                 <i data-lucide="book-open" class="text-blue-600 dark:text-blue-400 w-6 h-6"></i>
                 <span class="font-bold text-lg tracking-tight hidden sm:block">Intelligence Book</span>
-                
-                <!-- Navigation Dropdown -->
-                <select id="toc-dropdown" onchange="jumpToPage(this.value)" class="ml-2 text-xs border rounded p-1.5 min-w-[140px] max-w-[150px] md:max-w-[200px] truncate bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 outline-none text-slate-700 dark:text-slate-200 cursor-pointer hover:border-blue-400 transition-colors shadow-inner">
+                <select id="toc-dropdown" class="text-xs border rounded p-1.5 min-w-[140px] bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 outline-none cursor-pointer">
                     <option value="" disabled selected>Daftar Isi...</option>
                 </select>
             </div>
             
-            <div class="flex items-center gap-2 sm:gap-4">
-                <span id="page-indicator" class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 font-mono hidden md:inline-block w-24 text-right">Page 1 / ?</span>
+            <div class="flex items-center gap-2 sm:gap-4 flex-wrap">
+                <span id="page-indicator" class="text-xs font-medium text-slate-500 dark:text-slate-400 font-mono hidden md:inline-block w-24 text-right">Page 1 / ?</span>
                 
-                <!-- Print All Button -->
-                <button onclick="printAllAsPDF()" class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-all flex items-center gap-2 border border-indigo-200 dark:border-indigo-800" title="Cetak Seluruh Buku ke PDF">
+                <button onclick="printAllAsPDF()" class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 transition-all flex items-center gap-2 border border-indigo-200 dark:border-indigo-800">
                     <i data-lucide="printer" class="w-4 h-4"></i>
                     <span class="text-xs font-bold uppercase hidden md:inline-block">Cetak PDF</span>
                 </button>
 
                 <div class="flex bg-slate-100 dark:bg-slate-900 rounded-lg p-1">
-                    <button onclick="prevPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 shadow-sm transition-all" title="Halaman Sebelumnya">
-                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
-                    </button>
-                    <button onclick="nextPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 shadow-sm transition-all" title="Halaman Selanjutnya">
-                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
-                    </button>
+                    <button onclick="prevPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 transition-all"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                    <button onclick="nextPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 transition-all"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
                 </div>
 
-                <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-all text-slate-600 dark:text-slate-300">
+                <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-all">
                     <i data-lucide="moon" id="theme-icon" class="w-5 h-5"></i>
                 </button>
             </div>
         </div>
+        <!-- Filter Bar -->
+        <div id="filter-bar" class="px-4 pb-2 pt-1 flex flex-wrap gap-2 items-center border-t border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80">
+            <input type="text" id="search-title" placeholder="Cari judul..." class="text-xs p-1.5 rounded border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 w-36 md:w-48">
+            <select id="filter-category" multiple size="1" class="text-xs p-1.5 rounded border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 w-36 md:w-48">
+                <option value="">Semua Kategori</option>
+            </select>
+            <select id="filter-country" multiple size="1" class="text-xs p-1.5 rounded border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 w-36 md:w-48">
+                <option value="">Semua Negara</option>
+            </select>
+            <button id="reset-filter" class="text-xs px-2 py-1.5 bg-slate-200 dark:bg-slate-700 rounded hover:bg-slate-300 transition">Reset</button>
+            <span id="filter-count" class="text-xs text-slate-500 ml-auto">0 inovasi</span>
+        </div>
     </nav>
 
-    <!-- Main Book Container -->
-    <main class="flex-grow flex items-center justify-center p-4 sm:p-8 pt-24 pb-12 w-full no-print">
-        <div id="book-wrapper" class="relative flex w-full max-w-6xl justify-center items-stretch perspective-1000 gap-0 sm:gap-1 lg:gap-0">
-            <!-- Left Page -->
-            <div id="page-left" class="hidden md:block w-1/2 bg-book-paper dark:bg-book-darkPaper shadow-book-left rounded-l-md relative a4-page page-transition transform origin-right">
+    <main class="flex-grow flex items-center justify-center p-4 sm:p-8 pt-28 pb-12 w-full no-print">
+        <div id="book-wrapper" class="relative flex w-full max-w-6xl justify-center items-stretch gap-0 sm:gap-1">
+            <div id="page-left" class="hidden md:block w-1/2 bg-book-paper dark:bg-book-darkPaper shadow-book-left rounded-l-md relative a4-page">
                 <div class="absolute inset-y-0 right-0 w-12 binding-left pointer-events-none z-10"></div>
                 <div class="p-8 lg:p-12 h-full flex flex-col relative" id="content-left"></div>
             </div>
-            <!-- Right Page -->
-            <div id="page-right" class="w-full md:w-1/2 max-w-md md:max-w-none bg-book-paper dark:bg-book-darkPaper shadow-book-mobile md:shadow-book-right rounded-md md:rounded-l-none md:rounded-r-md relative a4-page page-transition transform origin-left">
+            <div id="page-right" class="w-full md:w-1/2 max-w-md md:max-w-none bg-book-paper dark:bg-book-darkPaper shadow-book-mobile md:shadow-book-right rounded-md md:rounded-l-none md:rounded-r-md relative a4-page">
                 <div class="hidden md:block absolute inset-y-0 left-0 w-12 binding-right pointer-events-none z-10"></div>
                 <div class="p-6 sm:p-8 lg:p-12 h-full flex flex-col relative" id="content-right"></div>
             </div>
@@ -224,175 +161,56 @@
     </main>
 
     <script>
-        // --- Fallback Data ---
-        const fallbackData = [
-            {
-                "id": "807ae0f4e918c227cd45f558d186cb17",
-                "source_url": "https://humanurehandbook.com/",
-                "title": "The Humanure Handbook Sawdust Toilet System",
-                "summary": "A simple, low-cost DIY composting toilet system popularized by Joseph Jenkins, utilizing a 5-gallon bucket within a wooden box, where dry organic material like sawdust is added after each use.",
-                "category": ["Composting Toilet", "Sustainable Sanitation"],
-                "innovation_level": "grassroots",
-                "hidden_gem": true,
-                "location": { "country": "USA", "region": "Global", "lat": 41.1534, "lon": -80.0842 },
-                "process": { 
-                    "how_it_works": [
-                        "Build or acquire a wooden box housing a 5-gallon bucket.",
-                        "Add a base layer of dry organic material.",
-                        "Cover waste completely to control odors.",
-                        "Transfer to thermophilic compost pile."
-                    ]
-                },
-                "impact": { "problem_solved": "Poor sanitation in off-grid areas.", "scale": "high" },
-                "replicability": { "cost_level": "low", "difficulty": "medium" },
-                "origin": { "knowledge_source": ["traditional", "self-taught"] },
-                "risk_assessment": { "risk_score": 3, "risk_type": ["biological"], "safety_level": "medium", "explanation": "Biological risk if compost does not reach thermophilic temperatures." },
-                "priority_score": 70
-            },
-            {
-                "id": "mock_2",
-                "source_url": "https://example.com/nipah-sugar",
-                "title": "Pengolahan Gula Aren Tradisional Nipah",
-                "summary": "Metode penyadapan dan pemasakan nira dari pohon Nipah pesisir menjadi gula aren premium yang memberdayakan komunitas lokal, mengurangi ketergantungan pada pembalakan mangrove.",
-                "category": ["Sustainable Agriculture", "Local Economy"],
-                "innovation_level": "semi-formal",
-                "hidden_gem": true,
-                "location": { "country": "Indonesia", "region": "Sumatera", "lat": -0.7893, "lon": 113.9213 },
-                "process": { 
-                    "how_it_works": [
-                        "Cut mature Nypa fruticans flower stalks.",
-                        "Boil the collected sap over open wood fire.",
-                        "Crush and sift the cooled paste to produce granulated brown sugar."
-                    ]
-                },
-                "impact": { "problem_solved": "Conversion of coastal forests and extreme poverty.", "scale": "high" },
-                "replicability": { "cost_level": "medium", "difficulty": "high" },
-                "origin": { "knowledge_source": ["traditional"] },
-                "risk_assessment": { "risk_score": 6, "risk_type": ["fire hazard"], "safety_level": "medium", "explanation": "Fire hazard from boiling large vats of sap over open wood fires." },
-                "priority_score": 85
-            },
-            {
-                "id": "mock_3",
-                "title": "Airtight Underground Grain Silo",
-                "summary": "Sistem penyimpanan biji-bijian bawah tanah kedap udara untuk mencegah pembusukan dan hama tanpa pestisida.",
-                "category": ["Agriculture", "Food Preservation"],
-                "innovation_level": "grassroots",
-                "hidden_gem": false,
-                "location": { "country": "India", "region": "Punjab", "lat": 30.9009, "lon": 75.8572 },
-                "process": { 
-                    "how_it_works": [
-                        "Gali lubang sedalam 10-15 kaki.",
-                        "Lining dinding dengan tanah liat.",
-                        "Tutup rapat untuk menciptakan lingkungan anaerobik."
-                    ]
-                },
-                "impact": { "problem_solved": "Kehilangan panen pasca-panen akibat hama.", "scale": "medium" },
-                "replicability": { "cost_level": "low", "difficulty": "medium" },
-                "origin": { "knowledge_source": ["traditional"] },
-                "risk_assessment": { "risk_score": 8, "risk_type": ["asphyxiation", "confined space"], "safety_level": "low", "explanation": "Asphyxiation risk due to accumulated carbon dioxide in pit." },
-                "priority_score": 60
-            }
-        ];
-
-        const fallbackResume = [{
-            "global_summary": { "total_innovations": 32, "grassroots_percentage": 56.25, "institutional_percentage": 25.0, "semi_formal_percentage": 18.75 },
-            "top_categories": [
-                { "category": "Sustainable Agriculture", "count": 12 },
-                { "category": "Waste Management", "count": 10 },
-                { "category": "Sanitation", "count": 4 }
-            ],
-            "risk_distribution": [
-                { "level": "low", "count": 15 },
-                { "level": "medium", "count": 27 },
-                { "level": "high", "count": 18 }
-            ]
-        }];
-
-        const fallbackReport = `# Global Innovation Intelligence Report
-**Period:** Q1 2026
----
-## 🌍 Executive Summary
-Out of tracked innovations, grassroots solutions dominate with **56.25%**, demonstrating remarkable resilience from local communities adapting to global challenges.
-
-## ⚠️ Emerging Risks
-- **High-Risk Cases:** 18
-- Most risks stem from unstandardized equipment modification or confined spaces in traditional setups.
-
-## 💎 Hidden Gems
-- **Sawdust Toilet System** (Sustainable Sanitation)
-- **Pengolahan Gula Aren Nipah** (Coastal Economic Empowerment)
-
----
-*Report auto-generated by Innovation Radar AI.*`;
-
         // --- State Variables ---
-        let currentPageIndex = 0; 
+        let allInnovations = [];      // original data.json
+        let resumeData = null;        // resume.json (ambil terbaru)
+        let filteredInnovations = [];
+        let currentPageIndex = 0;
         let isMobile = window.innerWidth < 768;
         let mapInstances = {};
         let chartInstances = {};
-        let printMapInstances = {};
-        let printChartInstances = {};
-        let globalDataArr = []; 
-        let precompiled = { reportHtml: "", resumeHtml: "" };
-        const TOTAL_STATIC_PAGES = 4;
-
-        // --- Core Application Logic ---
-
-        async function initApp() {
-            lucide.createIcons();
-            checkTheme();
-            
-            window.addEventListener('resize', () => {
-                const newIsMobile = window.innerWidth < 768;
-                if (newIsMobile !== isMobile) {
-                    isMobile = newIsMobile;
-                    if (!isMobile && currentPageIndex % 2 !== 0 && currentPageIndex > 0) {
-                        currentPageIndex--;
-                    }
-                    renderBook();
-                }
-            });
-
-            let finalReport = fallbackReport;
-            let finalResume = fallbackResume;
-            globalDataArr = fallbackData;
-
-            try {
-                const [reqReport, reqResume, reqData] = await Promise.all([
-                    fetch('report.md'), fetch('resume.json'), fetch('data.json')
-                ]);
-
-                if (reqReport.ok) finalReport = await reqReport.text();
-                if (reqResume.ok) finalResume = await reqResume.json();
-                if (reqData.ok) globalDataArr = await reqData.json();
-            } catch (e) {
-                console.warn("Using fallback data. Local fetch failed.", e);
-            }
-
-            precompiled.reportHtml = marked.parse(finalReport);
-            precompiled.resumeHtml = buildResumeHtml(finalResume);
-            
-            buildDropdownMenu();
-
-            if (isMobile) currentPageIndex = 1; 
-            
-            renderBook();
+        let printMapInst = {}, printChartInst = {};
+        const TOTAL_STATIC_PAGES = 4;  // cover, report, metrics, (blank) di kiri? kita pakai 3 halaman statis + 1 kosong opsional
+        
+        // Helper: ambil negara string
+        function getCountryString(loc) {
+            if (!loc) return 'Lainnya';
+            if (typeof loc.country === 'string') return loc.country.split(';')[0].trim();
+            if (Array.isArray(loc.country)) return loc.country[0];
+            return 'Lainnya';
         }
 
-        function buildDropdownMenu() {
+        // Filter logic
+        function applyFilters() {
+            const searchTerm = document.getElementById('search-title')?.value.toLowerCase() || '';
+            const selectedCategory = document.getElementById('filter-category')?.value || '';
+            const selectedCountry = document.getElementById('filter-country')?.value || '';
+            
+            filteredInnovations = allInnovations.filter(inn => {
+                if (searchTerm && !inn.title.toLowerCase().includes(searchTerm)) return false;
+                if (selectedCategory && !(inn.category || []).some(cat => cat === selectedCategory)) return false;
+                if (selectedCountry && getCountryString(inn.location) !== selectedCountry) return false;
+                return true;
+            });
+            document.getElementById('filter-count').innerText = `${filteredInnovations.length} inovasi`;
+            // Reset halaman
+            currentPageIndex = isMobile ? 1 : 0;
+            renderBook();
+            rebuildDropdown();
+        }
+
+        function rebuildDropdown() {
             const dropdown = document.getElementById('toc-dropdown');
             let html = `<option value="" disabled selected>Daftar Isi...</option>
                         <option value="1">Sampul Depan</option>
                         <option value="2">Laporan Eksekutif</option>
                         <option value="3">Metrik Global</option>`;
-            
             let grouped = {};
-            globalDataArr.forEach((item, idx) => {
-                let country = item.location?.country || 'Lainnya';
+            filteredInnovations.forEach((item, idx) => {
+                let country = getCountryString(item.location);
                 if(!grouped[country]) grouped[country] = [];
                 grouped[country].push({ title: item.title, idx: idx });
             });
-
             for(let country in grouped) {
                 html += `<optgroup label="📍 ${country}">`;
                 grouped[country].forEach(item => {
@@ -404,536 +222,247 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             dropdown.innerHTML = html;
         }
 
-        function jumpToPage(val) {
-            if(!val) return;
-            currentPageIndex = parseInt(val);
-            if (!isMobile && currentPageIndex % 2 !== 0 && currentPageIndex > 0) {
-                currentPageIndex--;
+        // --- Load JSON & Build dynamic report ---
+        async function loadData() {
+            try {
+                const [dataRes, resumeRes] = await Promise.all([
+                    fetch('data.json'),
+                    fetch('resume.json')
+                ]);
+                if (!dataRes.ok) throw new Error('data.json gagal dimuat');
+                if (!resumeRes.ok) throw new Error('resume.json gagal dimuat');
+                allInnovations = await dataRes.json();
+                const resumeArr = await resumeRes.json();
+                resumeData = resumeArr[resumeArr.length - 1]; // ambil snapshot terbaru
+                filteredInnovations = [...allInnovations];
+                document.getElementById('filter-count').innerText = `${filteredInnovations.length} inovasi`;
+                
+                // populate filter options
+                const categoriesSet = new Set();
+                const countriesSet = new Set();
+                allInnovations.forEach(inn => {
+                    (inn.category || []).forEach(c => categoriesSet.add(c));
+                    countriesSet.add(getCountryString(inn.location));
+                });
+                const catSelect = document.getElementById('filter-category');
+                catSelect.innerHTML = '<option value="">Semua Kategori</option>' + Array.from(categoriesSet).map(c => `<option value="${c}">${c}</option>`).join('');
+                const countrySelect = document.getElementById('filter-country');
+                countrySelect.innerHTML = '<option value="">Semua Negara</option>' + Array.from(countriesSet).map(c => `<option value="${c}">${c}</option>`).join('');
+                
+                rebuildDropdown();
+                renderBook();
+            } catch(e) {
+                console.error(e);
+                document.getElementById('content-right').innerHTML = `<div class="p-4 text-red-500">Gagal memuat data. Pastikan data.json dan resume.json tersedia.</div>`;
             }
-            renderBook();
-            document.getElementById('toc-dropdown').selectedIndex = 0;
         }
 
+        // Generate report HTML from data & resume
+        function buildDynamicReportHtml() {
+            if (!resumeData) return '<p>Memuat laporan...</p>';
+            const summary = resumeData.global_summary || {};
+            const total = allInnovations.length;
+            const grassroots = summary.grassroots_percentage || 0;
+            const categories = (resumeData.top_categories || []).slice(0,5);
+            const risks = (resumeData.risk_distribution || []);
+            const hidden = allInnovations.filter(i => i.hidden_gem === true).slice(0,4);
+            return `
+                <div class="prose dark:prose-invert max-w-none text-sm">
+                    <h1>Laporan Intelijen Inovasi</h1>
+                    <p><strong>Periode:</strong> ${resumeData.report_metadata?.period || 'Q1 2026'} | <strong>Total Inovasi:</strong> ${total}</p>
+                    <p>Inovasi tingkat <strong>Grassroots</strong> mendominasi dengan <strong>${grassroots}%</strong>, menunjukkan ketangguhan komunitas lokal dalam beradaptasi.</p>
+                    <h2>📊 Kategori Teratas</h2>
+                    <ul>${categories.map(c => `<li><strong>${c.category}</strong> — ${c.count} inovasi</li>`).join('')}</ul>
+                    <h2>⚠️ Distribusi Risiko</h2>
+                    <ul>${risks.map(r => `<li>${r.level.toUpperCase()}: ${r.count} kasus</li>`).join('')}</ul>
+                    <h2>💎 Hidden Gems</h2>
+                    <ul>${hidden.map(h => `<li><strong>${h.title}</strong> — ${h.location?.country || 'Global'}</li>`).join('')}</ul>
+                    <p><em>Laporan dihasilkan secara dinamis dari data.json dan resume.json.</em></p>
+                </div>
+            `;
+        }
+
+        function buildResumeMetricsHtml() {
+            if (!resumeData) return '<p>Memuat metrik...</p>';
+            const summary = resumeData.global_summary || {};
+            const cats = (resumeData.top_categories || []).slice(0,6);
+            const risks = (resumeData.risk_distribution || []);
+            return `
+                <div class="space-y-5">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl text-center"><p class="text-[10px] uppercase font-bold">Total Inovasi</p><p class="text-2xl font-black">${summary.total_innovations || allInnovations.length}</p></div>
+                        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl text-center"><p class="text-[10px] uppercase font-bold">Grassroots</p><p class="text-2xl font-black text-emerald-500">${summary.grassroots_percentage || 0}%</p></div>
+                    </div>
+                    <div><h4 class="text-xs font-bold uppercase mb-2 border-b pb-1">Top Kategori</h4>${cats.map(c => `<div class="flex justify-between text-sm mb-1"><span>${c.category}</span><span class="font-bold">${c.count}</span></div>`).join('')}</div>
+                    <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl"><h4 class="text-xs font-bold uppercase mb-2">Distribusi Risiko</h4>${risks.map(r => `<div class="flex justify-between text-sm"><span class="capitalize">${r.level}</span><span>${r.count}</span></div>`).join('')}</div>
+                </div>
+            `;
+        }
+
+        // Page builders (similar to original, but using filteredInnovations)
         function getTotalPages() {
-            return TOTAL_STATIC_PAGES + (globalDataArr.length * 2);
+            return TOTAL_STATIC_PAGES + (filteredInnovations.length * 2);
         }
 
         function getPageHtml(index, isPrint = false) {
             if (index < 0 || index >= getTotalPages()) return '';
-
-            if (index === 0) return buildBlankPage(isPrint);
-            if (index === 1) return buildCoverPage(isPrint);
-            if (index === 2) return buildReportPage(isPrint);
-            if (index === 3) return buildResumeLayout(isPrint);
-
-            let dataIndex = Math.floor((index - TOTAL_STATIC_PAGES) / 2);
-            let item = globalDataArr[dataIndex];
+            if (index === 0) return buildCoverPage(isPrint);
+            if (index === 1) return `<div class="flex flex-col h-full overflow-y-auto pr-2"><div class="prose dark:prose-invert max-w-none">${buildDynamicReportHtml()}</div></div>`;
+            if (index === 2) return `<div class="flex flex-col h-full overflow-y-auto pr-2">${buildResumeMetricsHtml()}</div>`;
+            if (index === 3 && isMobile) return buildBlankPage(isPrint); // optional blank
             
-            if (!item) return `<div class="flex items-center justify-center h-full"><p class="text-slate-400">Data End</p></div>`;
-
+            let dataIndex = Math.floor((index - TOTAL_STATIC_PAGES) / 2);
+            let item = filteredInnovations[dataIndex];
+            if (!item) return `<div class="flex items-center justify-center h-full"><p class="text-slate-400">Tidak ada data</p></div>`;
             let isLeftPage = (index % 2 === 0);
             return isLeftPage ? buildElementMapPage(item, dataIndex, isPrint) : buildElementChartPage(item, dataIndex, isPrint);
         }
 
-        // --- HTML Builders ---
-        function buildBlankPage(isPrint) {
-            if(isPrint) return ''; 
-            return `
-                <div class="flex flex-col items-center justify-center h-full opacity-40">
-                    <i data-lucide="shield-check" class="w-12 h-12 mb-4 text-slate-300 dark:text-slate-600"></i>
-                    <p class="text-[10px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center px-8">Halaman ini sengaja<br/>dikosongkan</p>
-                </div>
-            `;
-        }
-
         function buildCoverPage(isPrint) {
-            return `
-                <div class="flex flex-col items-center justify-center h-full text-center space-y-6">
-                    <div class="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                        <i data-lucide="globe-2" class="text-white w-12 h-12"></i>
-                    </div>
-                    <h1 class="text-4xl font-black text-slate-800 dark:text-white uppercase tracking-wider">Innovation<br/>Intelligence<br/>Radar</h1>
-                    <div class="w-16 h-1 bg-blue-500 rounded-full my-4"></div>
-                    <p class="text-slate-500 dark:text-slate-400 font-mono text-sm uppercase tracking-widest">Digital Briefing Book</p>
-                    <p class="text-xs text-slate-400 mt-auto pt-12">Vol. 1 &mdash; 2026</p>
-                </div>
-            `;
+            return `<div class="flex flex-col items-center justify-center h-full text-center space-y-6"><div class="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center"><i data-lucide="globe-2" class="text-white w-12 h-12"></i></div><h1 class="text-4xl font-black uppercase tracking-wider">Innovation<br/>Intelligence<br/>Radar</h1><div class="w-16 h-1 bg-blue-500 rounded-full"></div><p class="text-slate-500 font-mono text-sm">Digital Briefing Book</p><p class="text-xs text-slate-400 mt-auto pt-12">Vol. 1 — 2026</p></div>`;
         }
+        function buildBlankPage(isPrint) { return `<div class="flex flex-col items-center justify-center h-full opacity-40"><i data-lucide="book-dashed" class="w-12 h-12 mb-4"></i><p class="text-xs text-center">Halaman kosong</p></div>`; }
 
-        function buildReportPage(isPrint) {
-            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
-            return `
-                <div class="flex flex-col ${scrollClass}">
-                    <div class="flex items-center gap-2 mb-6 text-blue-600 dark:text-blue-400 pb-4 border-b border-slate-200 dark:border-slate-700">
-                        <i data-lucide="file-text" class="w-5 h-5"></i>
-                        <h3 class="font-bold uppercase tracking-widest text-xs">Executive Report</h3>
-                    </div>
-                    <div class="prose dark:prose-invert max-w-none flex-grow text-sm">
-                        ${precompiled.reportHtml}
-                    </div>
-                </div>
-            `;
-        }
-
-        function buildResumeHtml(resumeJson) {
-            const resume = Array.isArray(resumeJson) ? resumeJson[0] : resumeJson;
-            let catsHtml = (resume.top_categories || []).map(c => `
-                <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-lg mb-2 border border-slate-100 dark:border-slate-700">
-                    <span class="text-xs font-medium truncate pr-4 text-slate-700 dark:text-slate-300">${c.category}</span>
-                    <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-bold">${c.count}</span>
-                </div>
-            `).join('');
-
-            let riskDistHtml = (resume.risk_distribution || []).map(r => {
-                let color = r.level === 'high' ? 'bg-red-500' : (r.level === 'medium' ? 'bg-amber-500' : 'bg-emerald-500');
-                return `
-                <div class="flex items-center justify-between text-xs mb-1.5">
-                    <span class="capitalize text-slate-600 dark:text-slate-400 w-16">${r.level}</span>
-                    <div class="flex-1 mx-2 h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                        <div class="h-full ${color}" style="width: ${(r.count/60)*100}%"></div>
-                    </div>
-                    <span class="font-bold text-slate-800 dark:text-slate-200 w-6 text-right">${r.count}</span>
-                </div>`;
-            }).join('');
-
-            return `
-                <div class="space-y-6">
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
-                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Nodes</p>
-                            <p class="text-2xl font-black text-slate-800 dark:text-white">${resume.global_summary?.total_innovations || 0}</p>
-                        </div>
-                        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
-                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Grassroots</p>
-                            <p class="text-2xl font-black text-emerald-500">${resume.global_summary?.grassroots_percentage || 0}%</p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h4 class="text-[10px] font-bold text-slate-400 uppercase mb-3 border-b border-slate-200 dark:border-slate-700 pb-1">Top Categories</h4>
-                        ${catsHtml}
-                    </div>
-
-                    <div class="bg-slate-50 dark:bg-slate-800/30 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h4 class="text-[10px] font-bold text-slate-500 uppercase mb-3 flex items-center gap-1"><i data-lucide="shield-alert" class="w-3 h-3"></i> Risk Distribution</h4>
-                        ${riskDistHtml}
-                    </div>
-                </div>
-            `;
-        }
-
-        function buildResumeLayout(isPrint) {
-            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
-            return `
-                <div class="flex flex-col ${scrollClass}">
-                    <div class="flex items-center gap-2 mb-6 text-emerald-600 dark:text-emerald-400 pb-4 border-b border-slate-200 dark:border-slate-700 flex-shrink-0">
-                        <i data-lucide="pie-chart" class="w-5 h-5"></i>
-                        <h3 class="font-bold uppercase tracking-widest text-xs">Global Metrics</h3>
-                    </div>
-                    ${precompiled.resumeHtml}
-                </div>
-            `;
-        }
-
-        function buildElementMapPage(item, index, isPrint) {
-            const mapSuffix = isPrint ? '-print' : '';
-            const mapId = `map-${item.id || index}${mapSuffix}`;
+        function buildElementMapPage(item, idx, isPrint) {
+            const mapId = `map-${idx}-${isPrint ? 'print' : 'screen'}`;
             const lat = item.location?.lat || 0;
             const lon = item.location?.lon || 0;
-            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
-            
-            const badges = (item.category || []).map(c => `<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-[10px] font-medium border border-slate-200 dark:border-slate-700 whitespace-nowrap">${c}</span>`).join('');
-            const levelBadge = `<span class="px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300 rounded text-[10px] font-bold border border-indigo-200 dark:border-indigo-800 uppercase flex items-center gap-1"><i data-lucide="network" class="w-3 h-3"></i> ${item.innovation_level || 'Unknown Level'}</span>`;
-            const gemBadge = item.hidden_gem ? `<span class="px-2 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 rounded flex items-center gap-1 text-[10px] font-bold border border-amber-200 dark:border-amber-800"><i data-lucide="gem" class="w-3 h-3"></i> Hidden Gem</span>` : '';
-
+            const badges = (item.category || []).map(c => `<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-[10px] font-medium">${c}</span>`).join('');
+            const levelBadge = `<span class="px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 rounded text-[10px] font-bold uppercase">${item.innovation_level || 'grassroots'}</span>`;
+            const gemBadge = item.hidden_gem ? `<span class="px-2 py-1 bg-amber-100 text-amber-700 rounded flex items-center gap-1 text-[10px]"><i data-lucide="gem" class="w-3 h-3"></i> Hidden Gem</span>` : '';
             return `
-                <div class="flex flex-col ${scrollClass}">
-                    <div class="mb-4 flex-shrink-0">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            ${levelBadge} ${gemBadge}
-                        </div>
-                        <h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight mb-2 line-clamp-2">${item.title}</h2>
-                        <div class="flex flex-wrap gap-1.5 mb-2">
-                            ${badges}
-                        </div>
-                    </div>
-                    
-                    <div class="w-full ${isPrint ? 'h-[180px]' : 'h-36 md:h-44'} flex-shrink-0 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden mb-4 border border-slate-200 dark:border-slate-700 relative z-0">
-                        <div id="${mapId}" class="w-full h-full ${isPrint ? 'print-leaflet-target' : 'leaflet-target'}" data-lat="${lat}" data-lon="${lon}"></div>
-                    </div>
-
-                    <div class="flex flex-col gap-3 flex-grow min-h-0">
-                        <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
-                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-2">
-                                <i data-lucide="git-merge" class="w-4 h-4 text-indigo-500"></i> Nexus & Linkages
-                            </h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-600 dark:text-slate-400">
-                                <div><strong class="text-slate-800 dark:text-slate-300 block mb-0.5">Source Knowledge:</strong> <span class="capitalize">${(item.origin?.knowledge_source || []).join(', ') || '-'}</span></div>
-                                <div><strong class="text-slate-800 dark:text-slate-300 block mb-0.5">Geography Origin:</strong> ${item.location?.region || '-'}, ${item.location?.country || '-'}</div>
-                                <div class="md:col-span-2">
-                                    <strong class="text-slate-800 dark:text-slate-300 block mb-0.5">Reference Link:</strong> 
-                                    ${item.source_url ? `<a href="${item.source_url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline break-all inline-flex items-center gap-1"><i data-lucide="external-link" class="w-3 h-3"></i> ${item.source_url}</a>` : 'No public link available'}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mt-auto">
-                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-2">
-                                <i data-lucide="copy" class="w-4 h-4 text-emerald-500"></i> Replicability & Deployment
-                            </h4>
-                            <div class="grid grid-cols-2 gap-4 text-xs">
-                                <div class="flex items-center gap-3">
-                                    <div class="p-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm border border-slate-100 dark:border-slate-600">
-                                        <i data-lucide="circle-dollar-sign" class="w-4 h-4 text-slate-500"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-[10px] text-slate-400 uppercase font-bold">Cost Level</p>
-                                        <p class="font-medium text-slate-700 dark:text-slate-300 capitalize">${item.replicability?.cost_level || 'N/A'}</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <div class="p-2 bg-white dark:bg-slate-700 rounded-lg shadow-sm border border-slate-100 dark:border-slate-600">
-                                        <i data-lucide="hammer" class="w-4 h-4 text-slate-500"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-[10px] text-slate-400 uppercase font-bold">Difficulty</p>
-                                        <p class="font-medium text-slate-700 dark:text-slate-300 capitalize">${item.replicability?.difficulty || 'N/A'}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="flex flex-col h-full overflow-y-auto pr-1">
+                    <div class="flex flex-wrap gap-2 mb-3">${levelBadge} ${gemBadge}</div>
+                    <h2 class="text-xl font-bold mb-2">${item.title}</h2>
+                    <div class="flex flex-wrap gap-1 mb-3">${badges}</div>
+                    <div id="${mapId}" class="w-full h-40 rounded-xl bg-slate-200 dark:bg-slate-800 mb-4 border relative z-0" data-lat="${lat}" data-lon="${lon}"></div>
+                    <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl text-xs space-y-2">
+                        <div><strong>Sumber Pengetahuan:</strong> ${(item.origin?.knowledge_source || []).join(', ') || '-'}</div>
+                        <div><strong>Lokasi:</strong> ${item.location?.region || '-'}, ${getCountryString(item.location)}</div>
+                        <div><strong>Biaya:</strong> ${item.replicability?.cost_level || 'N/A'} | <strong>Kesulitan:</strong> ${item.replicability?.difficulty || 'N/A'}</div>
+                        ${item.source_url ? `<div><a href="${item.source_url}" target="_blank" class="text-blue-600 break-all">🔗 Sumber</a></div>` : ''}
                     </div>
                 </div>
             `;
         }
-
-        function buildElementChartPage(item, index, isPrint) {
-            const chartSuffix = isPrint ? '-print' : '';
-            const chartId = `chart-${item.id || index}${chartSuffix}`;
-            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
-            
-            let rRisk = (item.risk_assessment?.risk_score || 0) * 10; 
-            let rCost = item.replicability?.cost_level === 'low' ? 20 : (item.replicability?.cost_level === 'medium' ? 50 : 90);
-            let rDiff = item.replicability?.difficulty === 'low' ? 20 : (item.replicability?.difficulty === 'medium' ? 50 : 90);
-            let rImpact = item.impact?.scale === 'high' ? 90 : (item.impact?.scale === 'medium' ? 60 : 30);
-            
-            let processHtml = '<p class="text-xs text-slate-500 italic">No process data.</p>';
-            if (item.process) {
-                let steps = Array.isArray(item.process) ? item.process : (Array.isArray(item.process.how_it_works) ? item.process.how_it_works : null);
-                if (steps) {
-                    processHtml = `<ul class="list-decimal pl-4 space-y-1 text-xs text-slate-700 dark:text-slate-300">` + 
-                        steps.map(p => `<li>${p}</li>`).join('') + `</ul>`;
-                } else if (item.process.how_it_works) {
-                    processHtml = `<p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${item.process.how_it_works}</p>`;
-                }
-            }
-
-            let riskScoreNum = item.risk_assessment?.risk_score || 0;
-            let riskTypesStr = (item.risk_assessment?.risk_type || []).map(t => `<span class="capitalize">${t}</span>`).join(' <span class="text-slate-400">&bull;</span> ');
-            let riskBorderColor = riskScoreNum >= 7 ? 'border-red-600' : (riskScoreNum >= 4 ? 'border-amber-500' : 'border-blue-500');
-            let riskTextColor = riskScoreNum >= 7 ? 'text-red-600 dark:text-red-400' : (riskScoreNum >= 4 ? 'text-amber-600 dark:text-amber-400' : 'text-blue-600 dark:text-blue-400');
-
+        function buildElementChartPage(item, idx, isPrint) {
+            const chartId = `chart-${idx}-${isPrint ? 'print' : 'screen'}`;
+            const riskScore = item.risk_assessment?.risk_score || 0;
+            const riskTypes = (item.risk_assessment?.risk_type || []).join(', ');
+            const processText = item.process?.how_it_works || (item.process?.step_by_step ? item.process.step_by_step.slice(0,3).join('; ') : 'Tidak ada data proses');
             return `
-                <div class="flex flex-col ${scrollClass}">
-                    <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase border-b border-slate-200 dark:border-slate-700 pb-2 mb-3 flex items-center gap-2 flex-shrink-0">
-                        <i data-lucide="cpu" class="w-4 h-4 text-slate-400"></i> Operation & Analysis
-                    </h3>
-                    
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mb-4 leading-relaxed bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700 italic shadow-inner flex-shrink-0">
-                        "${item.summary}"
-                    </p>
-
-                    <div class="w-full ${isPrint ? 'h-[220px]' : 'h-40'} mb-5 flex-shrink-0 relative z-0">
-                        <div id="${chartId}" class="w-full h-full ${isPrint ? 'print-echarts-target' : 'echarts-target'}" 
-                            data-title="${item.title}"
-                            data-prio="${item.priority_score || 0}"
-                            data-risk="${rRisk}"
-                            data-cost="${rCost}"
-                            data-diff="${rDiff}"
-                            data-impact="${rImpact}">
-                        </div>
-                    </div>
-
-                    <div class="space-y-4 flex-grow min-h-0">
-                        <div>
-                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-2 flex items-center gap-2"><i data-lucide="list-tree" class="w-4 h-4 text-blue-500"></i> Process & Methodology</h4>
-                            <div class="bg-slate-50 dark:bg-slate-800/30 p-3 rounded-lg border border-slate-100 dark:border-slate-700">
-                                ${processHtml}
-                            </div>
-                        </div>
-
-                        <div class="border-l-4 border-emerald-500 pl-3 py-1">
-                            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-xs mb-1 uppercase">
-                                <i data-lucide="target" class="w-4 h-4"></i> Impact Target &mdash; 
-                                <span class="bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300 px-1.5 py-0.5 rounded shadow-sm">${item.impact?.scale || 'N/A'} SCALE</span>
-                            </div>
-                            <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${item.impact?.problem_solved || 'No impact data recorded.'}</p>
-                        </div>
-
-                        <div>
-                            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-2 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-1"><i data-lucide="shield-alert" class="w-4 h-4 text-red-500"></i> Risk Assessment</h4>
-                            
-                            <div class="border-l-[3px] ${riskBorderColor} pl-3 py-0.5">
-                                <div class="flex flex-wrap items-center gap-1.5 ${riskTextColor} font-bold text-sm mb-1">
-                                    <span>${riskScoreNum}/10</span> 
-                                    ${riskTypesStr ? `<span class="text-slate-300 dark:text-slate-600">&bull;</span> ${riskTypesStr}` : ''}
-                                </div>
-                                <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${item.risk_assessment?.explanation || 'No risk data available.'}</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex flex-col h-full overflow-y-auto pr-1">
+                    <h3 class="text-sm font-bold uppercase border-b pb-1 mb-2">Analisis & Risiko</h3>
+                    <p class="text-xs italic mb-3 bg-slate-50 dark:bg-slate-800 p-2 rounded">${item.summary || ''}</p>
+                    <div id="${chartId}" class="w-full h-44 mb-3 echarts-target" data-prio="${item.priority_score||0}" data-risk="${riskScore*10}" data-impact="${item.impact?.scale === 'high' ? 90 : 50}" data-cost="${item.replicability?.cost_level === 'low' ? 20 : 70}" data-diff="${item.replicability?.difficulty === 'easy' ? 20 : 70}"></div>
+                    <div class="border-l-4 border-red-400 pl-2 text-xs"><strong>Skor Risiko:</strong> ${riskScore}/10<br/>${riskTypes ? `Jenis: ${riskTypes}` : ''}<br/>${item.risk_assessment?.explanation || ''}</div>
+                    <div class="mt-2 text-xs"><strong>Proses:</strong> ${processText.substring(0,150)}...</div>
                 </div>
             `;
         }
 
-        // --- Navigation Control ---
-        function updateIndicator() {
-            let total = getTotalPages();
-            let currentDisplay = isMobile ? currentPageIndex : (Math.floor(currentPageIndex / 2) * 2);
-            let displayString = `Page ${currentDisplay} of ${total-1}`;
-            
-            if (!isMobile) {
-                if (currentDisplay === 0) displayString = "Cover Page";
-                else displayString = `Spread ${Math.floor(currentDisplay/2)} (${currentDisplay}-${currentDisplay+1})`;
-            }
-            document.getElementById('page-indicator').innerText = displayString;
-        }
-
-        function nextPage() {
-            const step = isMobile ? 1 : 2;
-            if (currentPageIndex + step < getTotalPages()) {
-                currentPageIndex += step;
-                renderBook();
-            }
-        }
-
-        function prevPage() {
-            const step = isMobile ? 1 : 2;
-            if (currentPageIndex - step >= 0) {
-                currentPageIndex -= step;
-                if (isMobile && currentPageIndex === 0) currentPageIndex = 1;
-                renderBook();
-            }
-        }
-
-        // --- View Rendering ---
+        // Render & Navigation
         function renderBook() {
             const leftEl = document.getElementById('content-left');
             const rightEl = document.getElementById('content-right');
-
-            cleanupInstances(mapInstances, chartInstances);
-
             if (isMobile) {
                 rightEl.innerHTML = getPageHtml(currentPageIndex, false) || '';
                 leftEl.innerHTML = '';
             } else {
                 const leftIndex = Math.floor(currentPageIndex / 2) * 2;
-                leftEl.innerHTML = getPageHtml(leftIndex, false) || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
-                rightEl.innerHTML = getPageHtml(leftIndex + 1, false) || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
+                leftEl.innerHTML = getPageHtml(leftIndex, false) || '<div class="flex items-center justify-center h-full"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
+                rightEl.innerHTML = getPageHtml(leftIndex + 1, false) || '<div class="flex items-center justify-center h-full"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
             }
-
             lucide.createIcons();
-            
             setTimeout(() => {
                 initVisualizations('.leaflet-target', '.echarts-target', mapInstances, chartInstances, false);
             }, 50);
-            
-            setTimeout(() => {
-                for (let id in mapInstances) {
-                    if(mapInstances[id]) mapInstances[id].invalidateSize();
-                }
-            }, 300);
-
             updateIndicator();
         }
-
-        // --- PRINT ENGINE (ALL PAGES FIX) ---
-        async function printAllAsPDF() {
-            const loading = document.getElementById('print-loading');
-            const printWrapper = document.getElementById('print-wrapper');
-            
-            loading.classList.remove('hidden');
-            loading.classList.add('flex');
-            await new Promise(r => setTimeout(r, 100)); // Overlay muat
-
-            try {
-                let fullHtml = '';
-                let total = getTotalPages();
-                
-                for(let i = 0; i < total; i++) {
-                    if(i === 0) continue; // Skip halaman kosong
-                    fullHtml += `
-                        <div class="print-page">
-                            ${getPageHtml(i, true)}
-                        </div>
-                    `;
-                }
-                
-                printWrapper.innerHTML = fullHtml;
-                lucide.createIcons();
-
-                cleanupInstances(printMapInstances, printChartInstances);
-
-                // Init tanpa animasi
-                initVisualizations('.print-leaflet-target', '.print-echarts-target', printMapInstances, printChartInstances, true);
-
-                // Paksa Echarts resize & Leaflet Invalidate setelah render DOM pertama
-                for (let id in printChartInstances) {
-                    if(printChartInstances[id]) printChartInstances[id].resize();
-                }
-                for (let id in printMapInstances) {
-                    if(printMapInstances[id]) printMapInstances[id].invalidateSize();
-                }
-
-                // Beri waktu 2 detik agar Tile Maps termuat secara utuh
-                await new Promise(r => setTimeout(r, 2000));
-                
-                window.print();
-
-            } catch(e) {
-                console.error("Gagal membuat PDF", e);
-                alert("Terjadi kesalahan saat menyusun PDF.");
-            } finally {
-                printWrapper.innerHTML = ''; 
-                cleanupInstances(printMapInstances, printChartInstances);
-                loading.classList.add('hidden');
-                loading.classList.remove('flex');
-            }
+        function updateIndicator() {
+            const total = getTotalPages();
+            let display = isMobile ? currentPageIndex : (Math.floor(currentPageIndex/2)*2);
+            document.getElementById('page-indicator').innerText = `Halaman ${display} / ${total-1}`;
         }
+        function nextPage() { let step = isMobile ? 1 : 2; if (currentPageIndex + step < getTotalPages()) { currentPageIndex += step; renderBook(); } }
+        function prevPage() { let step = isMobile ? 1 : 2; if (currentPageIndex - step >= 0) { currentPageIndex -= step; if (isMobile && currentPageIndex === 0) currentPageIndex = 1; renderBook(); } }
+        function jumpToPage(val) { if(!val) return; currentPageIndex = parseInt(val); if (!isMobile && currentPageIndex % 2 !== 0) currentPageIndex--; renderBook(); document.getElementById('toc-dropdown').selectedIndex = 0; }
 
-        // --- Visualizations Initialization ---
-        function cleanupInstances(mapsObj, chartsObj) {
-            for (let id in mapsObj) {
-                if(mapsObj[id]) {
-                    mapsObj[id].remove();
-                    delete mapsObj[id];
-                }
-            }
-            for (let id in chartsObj) {
-                if(chartsObj[id] && !chartsObj[id].isDisposed()) {
-                    chartsObj[id].dispose();
-                    delete chartsObj[id];
-                }
-            }
-        }
-
+        // Visualizations init
         function initVisualizations(mapClass, chartClass, mapsObj, chartsObj, isPrint) {
-            const mapTargets = document.querySelectorAll(mapClass);
-            const sampleBgDots = globalDataArr.length > 100 ? globalDataArr.slice(0, 100) : globalDataArr;
-            const isDark = document.documentElement.classList.contains('dark') && !isPrint; // Saat print paksa light
-
-            mapTargets.forEach(el => {
+            document.querySelectorAll(mapClass).forEach(el => {
                 const id = el.id;
-                const currentLat = parseFloat(el.getAttribute('data-lat'));
-                const currentLon = parseFloat(el.getAttribute('data-lon'));
-                
-                if (id && !mapsObj[id]) {
-                    // Nonaktifkan animasi zoom untuk mode Print agar instant
-                    const mapOptions = isPrint ? 
-                        { zoomControl: false, scrollWheelZoom: false, fadeAnimation: false, zoomAnimation: false, markerZoomAnimation: false } : 
-                        { zoomControl: false, scrollWheelZoom: false };
-
-                    const map = L.map(id, mapOptions).setView([currentLat, currentLon], 4);
-                    
-                    const tileUrl = isDark 
-                        ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-                        : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
-
-                    L.tileLayer(tileUrl, { attribution: '&copy; OpenStreetMap' }).addTo(map);
-
-                    sampleBgDots.forEach(item => {
-                        const lat = item.location?.lat;
-                        const lon = item.location?.lon;
-                        if(lat !== undefined && lon !== undefined && (lat !== currentLat || lon !== currentLon)) {
-                            L.circleMarker([lat, lon], {
-                                radius: 3, color: isDark ? '#475569' : '#cbd5e1', fillColor: isDark ? '#475569' : '#cbd5e1', fillOpacity: 0.8, weight: 1
-                            }).addTo(map);
-                        }
-                    });
-
-                    const markerHtml = `<div class="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-[0_0_10px_rgba(59,130,246,0.8)] ${isPrint ? '' : 'animate-pulse'}"></div>`;
-                    const customIcon = L.divIcon({ className: 'custom-div-icon', html: markerHtml, iconSize: [16, 16], iconAnchor: [8, 8] });
-                    L.marker([currentLat, currentLon], {icon: customIcon, zIndexOffset: 1000}).addTo(map);
-
+                const lat = parseFloat(el.dataset.lat), lon = parseFloat(el.dataset.lon);
+                if (id && !mapsObj[id] && !isNaN(lat)) {
+                    const map = L.map(id, { zoomControl: false, scrollWheelZoom: false }).setView([lat, lon], 5);
+                    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map);
+                    L.marker([lat, lon], { icon: L.divIcon({ html: '<div class="w-3 h-3 bg-blue-500 rounded-full border border-white"></div>', iconSize: [12,12] }) }).addTo(map);
                     mapsObj[id] = map;
                 }
             });
-
-            const chartTargets = document.querySelectorAll(chartClass);
-            chartTargets.forEach(el => {
+            document.querySelectorAll(chartClass).forEach(el => {
                 const id = el.id;
                 if (id && !chartsObj[id]) {
-                    const myChart = echarts.init(el);
-                    const textColor = isDark ? '#cbd5e1' : '#475569';
-                    
-                    const prio = parseFloat(el.getAttribute('data-prio'));
-                    const risk = parseFloat(el.getAttribute('data-risk'));
-                    const cost = parseFloat(el.getAttribute('data-cost'));
-                    const diff = parseFloat(el.getAttribute('data-diff'));
-                    const impact = parseFloat(el.getAttribute('data-impact'));
-
-                    myChart.setOption({
-                        animation: !isPrint, // Matikan animasi di mode print agar tidak kosong
-                        backgroundColor: 'transparent',
-                        radar: {
-                            indicator: [
-                                { name: 'Priority', max: 100 },
-                                { name: 'Impact', max: 100 },
-                                { name: 'Risk', max: 100 },
-                                { name: 'Cost', max: 100 },
-                                { name: 'Difficulty', max: 100 }
-                            ],
-                            radius: '60%',
-                            center: ['50%', '55%'],
-                            splitNumber: 4,
-                            axisName: { color: textColor, fontSize: 10, fontWeight: 'bold' },
-                            splitArea: { areaStyle: { color: isDark ? ['#1e293b', '#0f172a'] : ['#f8fafc', '#f1f5f9'] } },
-                            splitLine: { lineStyle: { color: isDark ? '#334155' : '#e2e8f0' } },
-                            axisLine: { lineStyle: { color: isDark ? '#334155' : '#e2e8f0' } }
-                        },
-                        series: [{
-                            type: 'radar',
-                            data: [{
-                                value: [prio, impact, risk, cost, diff],
-                                name: 'Metrics',
-                                itemStyle: { color: '#3b82f6' },
-                                areaStyle: { color: 'rgba(59, 130, 246, 0.3)' },
-                                lineStyle: { width: 2 }
-                            }]
-                        }]
+                    const chart = echarts.init(el);
+                    const prio = parseFloat(el.dataset.prio) || 50;
+                    const risk = parseFloat(el.dataset.risk) || 50;
+                    const impact = parseFloat(el.dataset.impact) || 50;
+                    const cost = parseFloat(el.dataset.cost) || 50;
+                    const diff = parseFloat(el.dataset.diff) || 50;
+                    chart.setOption({
+                        radar: { indicator: [{name:'Priority',max:100},{name:'Impact',max:100},{name:'Risk',max:100},{name:'Cost',max:100},{name:'Difficulty',max:100}], radius:'60%', center:['50%','55%'], axisName: { fontSize:9 } },
+                        series: [{ type:'radar', data: [{ value: [prio, impact, risk, cost, diff], areaStyle: { color: 'rgba(59,130,246,0.3)' }, lineStyle: { width:2 }, itemStyle: { color:'#3b82f6' } }] }]
                     });
-                    chartsObj[id] = myChart;
+                    chartsObj[id] = chart;
                 }
             });
         }
 
-        // --- Theme Management ---
-        function checkTheme() {
-            if (localStorage.theme === 'dark') {
-                document.documentElement.classList.add('dark');
-                document.getElementById('theme-icon').setAttribute('data-lucide', 'sun');
-            } else {
-                document.documentElement.classList.remove('dark');
-                document.getElementById('theme-icon').setAttribute('data-lucide', 'moon');
+        async function printAllAsPDF() {
+            const loading = document.getElementById('print-loading');
+            const printWrapper = document.getElementById('print-wrapper');
+            loading.classList.remove('hidden'); loading.classList.add('flex');
+            await new Promise(r => setTimeout(r, 100));
+            let fullHtml = '';
+            for(let i=0; i<getTotalPages(); i++) {
+                if(i===0) continue;
+                fullHtml += `<div class="print-page">${getPageHtml(i, true)}</div>`;
             }
+            printWrapper.innerHTML = fullHtml;
+            lucide.createIcons();
+            initVisualizations('.print-leaflet-target', '.print-echarts-target', printMapInst, printChartInst, true);
+            await new Promise(r => setTimeout(r, 1500));
+            window.print();
+            printWrapper.innerHTML = '';
+            loading.classList.add('hidden'); loading.classList.remove('flex');
         }
 
         function toggleTheme() {
             if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.theme = 'light';
+                document.documentElement.classList.remove('dark'); localStorage.theme = 'light';
                 document.getElementById('theme-icon').setAttribute('data-lucide', 'moon');
             } else {
-                document.documentElement.classList.add('dark');
-                localStorage.theme = 'dark';
+                document.documentElement.classList.add('dark'); localStorage.theme = 'dark';
                 document.getElementById('theme-icon').setAttribute('data-lucide', 'sun');
             }
             lucide.createIcons();
-            renderBook(); 
+            renderBook();
+        }
+        function checkTheme() {
+            if (localStorage.theme === 'dark') { document.documentElement.classList.add('dark'); document.getElementById('theme-icon').setAttribute('data-lucide', 'sun'); }
+            else { document.documentElement.classList.remove('dark'); document.getElementById('theme-icon').setAttribute('data-lucide', 'moon'); }
         }
 
-        document.addEventListener('DOMContentLoaded', initApp);
-
+        // Event listeners
+        window.addEventListener('resize', () => { let newMobile = window.innerWidth < 768; if (newMobile !== isMobile) { isMobile = newMobile; if (!isMobile && currentPageIndex%2!==0 && currentPageIndex>0) currentPageIndex--; renderBook(); } });
+        document.getElementById('search-title')?.addEventListener('input', () => applyFilters());
+        document.getElementById('filter-category')?.addEventListener('change', () => applyFilters());
+        document.getElementById('filter-country')?.addEventListener('change', () => applyFilters());
+        document.getElementById('reset-filter')?.addEventListener('click', () => { document.getElementById('search-title').value = ''; document.getElementById('filter-category').value = ''; document.getElementById('filter-country').value = ''; applyFilters(); });
+        document.getElementById('toc-dropdown')?.addEventListener('change', (e) => jumpToPage(e.target.value));
+        
+        checkTheme();
+        loadData();
     </script>
 </body>
 </html>
