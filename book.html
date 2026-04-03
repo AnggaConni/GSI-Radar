@@ -136,13 +136,17 @@
             .print-leaflet-target { 
                 border: 2px solid #e2e8f0 !important; 
                 border-radius: 12px !important; 
-                width: 100%; 
+                width: 100% !important; 
+                max-width: 100% !important;
                 display: block; 
+                box-sizing: border-box !important;
                 box-shadow: 0 1px 2px rgba(0,0,0,0.05);
             }
             .print-echarts-target { 
-                width: 100%; 
+                width: 100% !important; 
+                max-width: 100% !important;
                 display: block; 
+                box-sizing: border-box !important;
             }
         }
 
@@ -881,7 +885,11 @@
             
             mainNav.style.display = 'none';
             mainContent.style.display = 'none';
-            printWrapper.className = 'w-full bg-white relative block';
+            
+            // KUNCI PERBAIKAN: Batasi lebar wrapper secara fisik menyamai area cetak kertas A4
+            // Kertas A4 = 210mm. Margin Kiri-Kanan (20mm + 20mm) = 40mm. Area bersih = 170mm.
+            printWrapper.className = 'bg-white relative block mx-auto';
+            printWrapper.style.width = '170mm'; 
             
             await new Promise(r => setTimeout(r, 100)); 
 
@@ -928,6 +936,7 @@
                 
                 const finishPrint = () => {
                     printWrapper.innerHTML = ''; 
+                    printWrapper.style.width = ''; // Reset lebar kembali normal setelah print
                     printWrapper.className = 'hidden absolute top-0 left-0 w-full bg-white z-0 opacity-0 print:opacity-100 print:relative';
                     mainNav.style.display = '';
                     mainContent.style.display = '';
