@@ -160,58 +160,73 @@
         const fallbackData = [
             {
                 "id": "807ae0f4e918c227cd45f558d186cb17",
+                "source_url": "https://humanurehandbook.com/",
                 "title": "The Humanure Handbook Sawdust Toilet System",
-                "summary": "A simple, low-cost DIY composting toilet system utilizing a 5-gallon bucket within a wooden box, where dry organic material like sawdust is added after each use. Full buckets are emptied into an outdoor thermophilic compost pile.",
+                "summary": "A simple, low-cost DIY composting toilet system popularized by Joseph Jenkins, utilizing a 5-gallon bucket within a wooden box, where dry organic material like sawdust is added after each use.",
                 "category": ["Composting Toilet", "Sustainable Sanitation", "DIY", "Off-grid Living"],
                 "innovation_level": "grassroots",
+                "hidden_gem": true,
                 "location": { "country": "USA", "region": "Global", "lat": 41.1534, "lon": -80.0842 },
-                "process": { "how_it_works": "The system uses a 5-gallon bucket housed within a wooden box. After each use, dry organic material is added to cover waste, absorb moisture, control odors, and initiate composting." },
+                "process": { 
+                    "how_it_works": [
+                        "Build or acquire a wooden box housing a 5-gallon bucket with a toilet seat.",
+                        "Add a base layer of dry organic material (sawdust, peat moss) inside the bucket.",
+                        "After each use, cover the waste completely with more dry material to absorb moisture and control odors.",
+                        "Once full, transfer the bucket contents to an outdoor thermophilic compost pile.",
+                        "Allow compost to mature over 1-2 years to ensure pathogen breakdown."
+                    ]
+                },
                 "impact": { "problem_solved": "Poor sanitation and water wastage in rural/off-grid areas.", "scale": "high" },
                 "replicability": { "cost_level": "low", "difficulty": "medium" },
                 "origin": { "knowledge_source": ["traditional", "self-taught"] },
-                "risk_assessment": { "risk_score": 3, "risk_type": ["biological"], "safety_level": "medium", "explanation": "Biological risk if compost pile does not reach required thermophilic temperatures to eliminate pathogens." },
+                "risk_assessment": { "risk_score": 3, "risk_type": ["biological", "pathogen"], "safety_level": "medium", "explanation": "Biological risk if compost pile does not reach required thermophilic temperatures to eliminate pathogens. Safe handling requires discipline." },
                 "priority_score": 70
             },
             {
                 "id": "mock_2",
+                "source_url": "https://example.com/nipah-sugar",
                 "title": "Pengolahan Gula Aren Tradisional Nipah",
                 "summary": "Metode penyadapan dan pemasakan nira dari pohon Nipah pesisir menjadi gula aren premium yang memberdayakan komunitas lokal, mengurangi ketergantungan pada pembalakan mangrove.",
-                "category": ["Sustainable Agriculture", "Local Economy", "Forestry"],
+                "category": ["Sustainable Agriculture", "Local Economy", "Forestry", "Traditional Knowledge"],
                 "innovation_level": "semi-formal",
+                "hidden_gem": true,
                 "location": { "country": "Indonesia", "region": "Sumatera", "lat": -0.7893, "lon": 113.9213 },
-                "process": { "how_it_works": "Penyadapan dilakukan di area pasang surut. Nira direbus menggunakan kayu bakar selama berjam-jam hingga mengkristal menjadi gula semut (granulated brown sugar)." },
+                "process": { 
+                    "how_it_works": [
+                        "Cut mature Nypa fruticans flower stalks.",
+                        "Massage and tap the stalk twice daily to collect sap in bamboo or plastic containers.",
+                        "Boil the collected sap over an open wood fire for several hours.",
+                        "As the liquid evaporates, the sap thickens and crystallizes into a solid paste.",
+                        "Crush and sift the cooled paste to produce fine, granulated brown sugar (gula semut)."
+                    ]
+                },
                 "impact": { "problem_solved": "Rampant conversion of vital coastal Nipah forests into plantations and extreme poverty among coastal farmers.", "scale": "high" },
                 "replicability": { "cost_level": "medium", "difficulty": "high" },
                 "origin": { "knowledge_source": ["traditional"] },
-                "risk_assessment": { "risk_score": 6, "risk_type": ["fire hazard", "occupational"], "safety_level": "medium", "explanation": "The primary risk is the fire hazard associated with boiling large vats of sap over open wood fires for long periods." },
+                "risk_assessment": { "risk_score": 6, "risk_type": ["fire hazard", "occupational"], "safety_level": "medium", "explanation": "The primary risk is the fire hazard associated with boiling large vats of sap over open wood fires for long periods, leading to potential burns and smoke inhalation." },
                 "priority_score": 85
             },
             {
                 "id": "mock_3",
-                "title": "Biogas Digester dari Limbah Tahu",
-                "summary": "Pemanfaatan limbah cair industri tahu (whey) sebagai bahan baku digester biogas skala rumah tangga untuk menghasilkan energi memasak.",
-                "category": ["Renewable Energy", "Waste Management", "Circular Economy"],
+                "source_url": "https://example.com/anaerobic-silo",
+                "title": "Airtight Underground Grain Silo",
+                "summary": "Sistem penyimpanan biji-bijian bawah tanah kedap udara yang diadaptasi dari metode tradisional untuk mencegah pembusukan dan hama tanpa pestisida.",
+                "category": ["Agriculture", "Food Preservation", "Traditional Knowledge"],
                 "innovation_level": "grassroots",
-                "location": { "country": "Indonesia", "region": "Jawa Barat", "lat": -6.9147, "lon": 107.6098 },
-                "process": { "how_it_works": "Limbah cair difermentasi secara anaerobik di dalam tangki kedap udara berbahan plastik atau beton, menghasilkan gas metana yang disalurkan ke kompor." },
-                "impact": { "problem_solved": "Pencemaran sungai akibat pembuangan limbah cair tahu dan ketergantungan pada gas LPG bersubsidi.", "scale": "medium" },
-                "replicability": { "cost_level": "medium", "difficulty": "medium" },
-                "origin": { "knowledge_source": ["adapted from existing", "internet"] },
-                "risk_assessment": { "risk_score": 4, "risk_type": ["gas leak"], "safety_level": "high", "explanation": "Risiko kebocoran gas metana ringan jika pipa tidak terpasang dengan baik, namun tekanannya relatif rendah." },
-                "priority_score": 75
-            },
-            {
-                "id": "mock_4",
-                "title": "Solar Powered Desalination Box",
-                "summary": "Kotak purifikasi air bertenaga surya sederhana yang memisahkan garam dari air laut menggunakan kondensasi pasif.",
-                "category": ["Clean Water", "Solar Tech"],
-                "innovation_level": "institutional",
-                "location": { "country": "Kenya", "region": "Mombasa", "lat": -4.0435, "lon": 39.6682 },
-                "process": { "how_it_works": "Air laut dipanaskan oleh matahari melalui kaca, menguap, lalu mengembun pada permukaan miring dan menetes ke wadah pengumpul air tawar." },
-                "impact": { "problem_solved": "Kelangkaan air minum bersih di daerah pesisir yang terisolasi.", "scale": "medium" },
-                "replicability": { "cost_level": "high", "difficulty": "low" },
-                "origin": { "knowledge_source": ["formal education"] },
-                "risk_assessment": { "risk_score": 1, "risk_type": ["operational"], "safety_level": "high", "explanation": "Sangat aman. Risiko hanya terkait kegagalan material kaca yang pecah." },
+                "hidden_gem": false,
+                "location": { "country": "India", "region": "Punjab", "lat": 30.9009, "lon": 75.8572 },
+                "process": { 
+                    "how_it_works": [
+                        "Gali lubang sedalam 10-15 kaki di tanah yang kering.",
+                        "Lining dinding dengan tanah liat campur jerami dan biarkan mengering.",
+                        "Masukkan biji-bijian yang sudah dikeringkan sempurna ke dalam lubang.",
+                        "Tutup bagian atas rapat-rapat dengan kayu dan lumpur untuk menciptakan lingkungan anaerobik."
+                    ]
+                },
+                "impact": { "problem_solved": "Kehilangan panen pasca-panen akibat hama dan kelembapan, serta mengurangi ketergantungan pada pestisida kimia.", "scale": "medium" },
+                "replicability": { "cost_level": "low", "difficulty": "medium" },
+                "origin": { "knowledge_source": ["traditional", "adapted from existing"] },
+                "risk_assessment": { "risk_score": 8, "risk_type": ["asphyxiation", "confined space"], "safety_level": "low", "explanation": "While effective for grain preservation, the creation of an airtight, anaerobic environment in a 10-15 foot deep pit poses a significant asphyxiation risk to anyone entering the space. Accumulated carbon dioxide or depleted oxygen levels can be fatal upon opening or entry." },
                 "priority_score": 60
             }
         ];
@@ -221,8 +236,19 @@
             "global_summary": { "total_innovations": 32, "grassroots_percentage": 56.25, "institutional_percentage": 25.0, "semi_formal_percentage": 18.75 },
             "top_categories": [
                 { "category": "Sustainable Agriculture", "count": 12 },
-                { "category": "Waste Management", "count": 10 },
-                { "category": "Renewable Energy", "count": 6 }
+                { "category": "Waste Management & Upcycling", "count": 10 },
+                { "category": "Renewable Energy & Biogas", "count": 6 },
+                { "category": "Sanitation", "count": 4 }
+            ],
+            "risk_distribution": [
+                { "level": "low", "count": 15 },
+                { "level": "medium", "count": 27 },
+                { "level": "high", "count": 18 }
+            ],
+            "knowledge_source_trend": [
+                { "source": "Adapted from Existing", "count": 26 },
+                { "source": "Traditional", "count": 12 },
+                { "source": "Formal Education", "count": 10 }
             ]
         }];
 
@@ -233,8 +259,9 @@
 Out of tracked innovations, grassroots solutions dominate with **56.25%**, demonstrating remarkable resilience from local communities adapting to global challenges.
 
 ## ⚠️ Emerging Risks
+- **High-Risk Cases:** 18 | **Critical:** 2
 - **Top Risks:** toxic, environment, fire hazard.
-- Most risks stem from unstandardized equipment modification or prolonged exposure to hazards in informal settings.
+- Most risks stem from unstandardized equipment modification or confined spaces in traditional setups.
 
 ## 💎 Hidden Gems
 - **The Humanure Handbook Sawdust Toilet System** (Sustainable Sanitation)
@@ -245,11 +272,11 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
 
         // --- State Variables ---
         let pages = [];
-        let currentPageIndex = 0; // Index in the pages array
+        let currentPageIndex = 0; 
         let isMobile = window.innerWidth < 768;
         let mapInstances = {};
         let chartInstances = {};
-        let globalDataArr = []; // To store all data for context dots on map
+        let globalDataArr = []; 
 
         // --- Core Application Logic ---
 
@@ -257,12 +284,10 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             lucide.createIcons();
             checkTheme();
             
-            // Handle Resize for Mobile/Desktop layout switching
             window.addEventListener('resize', () => {
                 const newIsMobile = window.innerWidth < 768;
                 if (newIsMobile !== isMobile) {
                     isMobile = newIsMobile;
-                    // Adjust page index to maintain correct spread view
                     if (!isMobile && currentPageIndex % 2 !== 0) {
                         currentPageIndex--;
                     }
@@ -270,13 +295,11 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 }
             });
 
-            // Load Data
             let finalReport = fallbackReport;
             let finalResume = fallbackResume;
             globalDataArr = fallbackData;
 
             try {
-                // Try fetching real files
                 const [reqReport, reqResume, reqData] = await Promise.all([
                     fetch('report.md'), fetch('resume.json'), fetch('data.json')
                 ]);
@@ -291,7 +314,6 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
 
             buildPages(finalReport, finalResume, globalDataArr);
             
-            // In mobile, skip the Blank Page (index 0) and start directly at Cover (index 1)
             if (isMobile) {
                 currentPageIndex = 1; 
             }
@@ -303,7 +325,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
         function buildPages(reportStr, resumeJson, dataArr) {
             pages = [];
 
-            // Page 0: Blank Page (Ensures Map is always on the Left side for even indices)
+            // Page 0: Blank Page
             pages.push({
                 type: 'blank',
                 html: `
@@ -335,7 +357,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             pages.push({
                 type: 'report',
                 html: `
-                    <div class="flex flex-col h-full">
+                    <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
                         <div class="flex items-center gap-2 mb-6 text-blue-600 dark:text-blue-400 pb-4 border-b border-slate-200 dark:border-slate-700">
                             <i data-lucide="file-text" class="w-5 h-5"></i>
                             <h3 class="font-bold uppercase tracking-widest text-xs">Executive Report</h3>
@@ -349,36 +371,53 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
 
             // Page 3: Resume (Charts)
             const resume = Array.isArray(resumeJson) ? resumeJson[0] : resumeJson;
-            let catsHtml = resume.top_categories.map(c => `
-                <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg mb-2 text-sm border border-slate-100 dark:border-slate-700">
-                    <span class="font-medium truncate pr-4">${c.category}</span>
-                    <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 px-2 py-1 rounded font-bold">${c.count}</span>
+            let catsHtml = (resume.top_categories || []).map(c => `
+                <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-lg mb-2 border border-slate-100 dark:border-slate-700">
+                    <span class="text-xs font-medium truncate pr-4 text-slate-700 dark:text-slate-300">${c.category}</span>
+                    <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-bold">${c.count}</span>
                 </div>
             `).join('');
+
+            let riskDistHtml = (resume.risk_distribution || []).map(r => {
+                let color = r.level === 'high' ? 'bg-red-500' : (r.level === 'medium' ? 'bg-amber-500' : 'bg-emerald-500');
+                return `
+                <div class="flex items-center justify-between text-xs mb-1.5">
+                    <span class="capitalize text-slate-600 dark:text-slate-400 w-16">${r.level}</span>
+                    <div class="flex-1 mx-2 h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div class="h-full ${color}" style="width: ${(r.count/60)*100}%"></div>
+                    </div>
+                    <span class="font-bold text-slate-800 dark:text-slate-200 w-6 text-right">${r.count}</span>
+                </div>`;
+            }).join('');
 
             pages.push({
                 type: 'resume',
                 html: `
-                    <div class="flex flex-col h-full">
+                    <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
                         <div class="flex items-center gap-2 mb-6 text-emerald-600 dark:text-emerald-400 pb-4 border-b border-slate-200 dark:border-slate-700">
                             <i data-lucide="pie-chart" class="w-5 h-5"></i>
                             <h3 class="font-bold uppercase tracking-widest text-xs">Global Metrics</h3>
                         </div>
                         <div class="space-y-6">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
                                     <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Nodes</p>
-                                    <p class="text-3xl font-black text-slate-800 dark:text-white">${resume.global_summary.total_innovations}</p>
+                                    <p class="text-2xl font-black text-slate-800 dark:text-white">${resume.global_summary?.total_innovations || 0}</p>
                                 </div>
-                                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
+                                <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
                                     <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Grassroots</p>
-                                    <p class="text-3xl font-black text-emerald-500">${resume.global_summary.grassroots_percentage}%</p>
+                                    <p class="text-2xl font-black text-emerald-500">${resume.global_summary?.grassroots_percentage || 0}%</p>
                                 </div>
                             </div>
                             
                             <div>
-                                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Top Categories</h4>
+                                <h4 class="text-[10px] font-bold text-slate-400 uppercase mb-3 border-b border-slate-200 dark:border-slate-700 pb-1">Top Categories</h4>
                                 ${catsHtml}
+                            </div>
+
+                            <div class="bg-slate-50 dark:bg-slate-800/30 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+                                <h4 class="text-[10px] font-bold text-slate-500 uppercase mb-3 flex items-center gap-1"><i data-lucide="shield-alert" class="w-3 h-3"></i> Risk Distribution</h4>
+                                ${riskDistHtml}
                             </div>
                         </div>
                     </div>
@@ -391,34 +430,46 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 const chartId = `chart-${item.id || index}`;
                 const lat = item.location?.lat || 0;
                 const lon = item.location?.lon || 0;
+                
+                // Badges & Labels
                 const badges = (item.category || []).map(c => `<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-[10px] font-medium border border-slate-200 dark:border-slate-700 whitespace-nowrap">${c}</span>`).join('');
+                const levelBadge = `<span class="px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300 rounded text-[10px] font-bold border border-indigo-200 dark:border-indigo-800 uppercase flex items-center gap-1"><i data-lucide="network" class="w-3 h-3"></i> ${item.innovation_level || 'Unknown Level'}</span>`;
+                const gemBadge = item.hidden_gem ? `<span class="px-2 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 rounded flex items-center gap-1 text-[10px] font-bold border border-amber-200 dark:border-amber-800"><i data-lucide="gem" class="w-3 h-3"></i> Hidden Gem</span>` : '';
 
-                // Element Page 1: Map & Linkage (Even Index -> Left Page)
+                // Element Page 1: Map & Linkage (Left Page)
                 pages.push({
                     type: 'element-1',
                     id: item.id,
                     html: `
                         <div class="flex flex-col h-full">
                             <div class="mb-4">
-                                <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-2">
-                                    <i data-lucide="layers" class="w-4 h-4"></i>
-                                    <span class="text-[10px] font-bold uppercase tracking-widest">${item.innovation_level || 'Innovation'}</span>
+                                <div class="flex flex-wrap gap-2 mb-3">
+                                    ${levelBadge} ${gemBadge}
                                 </div>
                                 <h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight mb-2">${item.title}</h2>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
+                                <div class="flex flex-wrap gap-1.5 mb-2">
                                     ${badges}
                                 </div>
                             </div>
                             
                             <!-- Leaflet Map Container -->
-                            <div class="w-full h-48 md:h-64 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden mb-6 border border-slate-200 dark:border-slate-700 relative z-0">
+                            <div class="w-full flex-grow rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden mb-4 border border-slate-200 dark:border-slate-700 relative z-0 min-h-[150px]">
                                 <div id="${mapId}" class="w-full h-full leaflet-target" data-lat="${lat}" data-lon="${lon}"></div>
                             </div>
 
-                            <div class="mt-auto bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-900/50">
-                                <h4 class="text-xs font-bold text-indigo-800 dark:text-indigo-300 uppercase mb-2 flex items-center gap-2"><i data-lucide="link-2" class="w-4 h-4"></i> Linkages & Origin</h4>
-                                <p class="text-sm text-slate-700 dark:text-slate-300"><strong>Source:</strong> ${(item.origin?.knowledge_source || []).join(', ') || 'Unknown'}</p>
-                                <p class="text-sm text-slate-700 dark:text-slate-300 mt-1"><strong>Geography:</strong> ${item.location?.region || '-'}, ${item.location?.country || '-'}</p>
+                            <!-- Nexus & Linkages positioned BELOW map -->
+                            <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex-shrink-0">
+                                <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-2">
+                                    <i data-lucide="git-merge" class="w-4 h-4 text-indigo-500"></i> Nexus & Linkages
+                                </h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-600 dark:text-slate-400">
+                                    <div><strong class="text-slate-800 dark:text-slate-300 block mb-0.5">Source Knowledge:</strong> <span class="capitalize">${(item.origin?.knowledge_source || []).join(', ') || '-'}</span></div>
+                                    <div><strong class="text-slate-800 dark:text-slate-300 block mb-0.5">Geography Origin:</strong> ${item.location?.region || '-'}, ${item.location?.country || '-'}</div>
+                                    <div class="md:col-span-2">
+                                        <strong class="text-slate-800 dark:text-slate-300 block mb-0.5">Reference Link:</strong> 
+                                        ${item.source_url ? `<a href="${item.source_url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline break-all inline-flex items-center gap-1"><i data-lucide="external-link" class="w-3 h-3"></i> ${item.source_url}</a>` : 'No public link available'}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     `,
@@ -427,27 +478,45 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                     lon: lon
                 });
 
-                // Element Page 2: Details & Chart (Odd Index -> Right Page)
+                // Element Page 2: Details, Process & Risk (Right Page)
                 let rRisk = (item.risk_assessment?.risk_score || 0) * 10; 
                 let rCost = item.replicability?.cost_level === 'low' ? 20 : (item.replicability?.cost_level === 'medium' ? 50 : 90);
                 let rDiff = item.replicability?.difficulty === 'low' ? 20 : (item.replicability?.difficulty === 'medium' ? 50 : 90);
                 let rImpact = item.impact?.scale === 'high' ? 90 : (item.impact?.scale === 'medium' ? 60 : 30);
                 
+                // Construct Process HTML
+                let processHtml = '<p class="text-xs text-slate-500 italic">No process data.</p>';
+                if (item.process) {
+                    let steps = Array.isArray(item.process) ? item.process : (Array.isArray(item.process.how_it_works) ? item.process.how_it_works : null);
+                    if (steps) {
+                        processHtml = `<ul class="list-decimal pl-4 space-y-1.5 text-xs text-slate-700 dark:text-slate-300">` + 
+                            steps.map(p => `<li>${p}</li>`).join('') + `</ul>`;
+                    } else if (item.process.how_it_works) {
+                        processHtml = `<p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${item.process.how_it_works}</p>`;
+                    }
+                }
+
+                // Construct Risk HTML matching requested format "4/10 Asphyxiation • Confined Space"
+                let riskScoreNum = item.risk_assessment?.risk_score || 0;
+                let riskTypesStr = (item.risk_assessment?.risk_type || []).map(t => `<span class="capitalize">${t}</span>`).join(' <span class="text-slate-400">&bull;</span> ');
+                let riskBorderColor = riskScoreNum >= 7 ? 'border-red-600' : (riskScoreNum >= 4 ? 'border-amber-500' : 'border-blue-500');
+                let riskTextColor = riskScoreNum >= 7 ? 'text-red-600 dark:text-red-400' : (riskScoreNum >= 4 ? 'text-amber-600 dark:text-amber-400' : 'text-blue-600 dark:text-blue-400');
+
                 pages.push({
                     type: 'element-2',
                     id: item.id,
                     html: `
-                        <div class="flex flex-col h-full">
-                            <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase border-b border-slate-200 dark:border-slate-700 pb-2 mb-4 flex items-center gap-2">
+                        <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
+                            <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase border-b border-slate-200 dark:border-slate-700 pb-2 mb-3 flex items-center gap-2 sticky top-0 bg-book-paper dark:bg-book-darkPaper z-10">
                                 <i data-lucide="cpu" class="w-4 h-4 text-slate-400"></i> Operation & Analysis
                             </h3>
                             
-                            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700 overflow-y-auto max-h-24 md:max-h-32 scrollbar-thin">
-                                ${item.summary}
+                            <p class="text-xs text-slate-600 dark:text-slate-300 mb-5 leading-relaxed bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700 italic shadow-inner">
+                                "${item.summary}"
                             </p>
 
                             <!-- ECharts Container -->
-                            <div class="w-full h-48 md:h-56 mb-4 flex-grow-0 relative z-0">
+                            <div class="w-full h-48 mb-6 flex-shrink-0 relative z-0">
                                 <div id="${chartId}" class="w-full h-full echarts-target" 
                                     data-title="${item.title}"
                                     data-prio="${item.priority_score || 0}"
@@ -458,16 +527,39 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                                 </div>
                             </div>
 
-                            <div class="mt-auto grid grid-cols-2 gap-3">
-                                <div class="bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-900/30">
-                                    <p class="text-[10px] uppercase font-bold text-red-600 dark:text-red-400 mb-1">Risk Assesment</p>
-                                    <p class="text-xs text-slate-700 dark:text-slate-300 line-clamp-3 md:line-clamp-4" title="${item.risk_assessment?.explanation || 'No data'}">${item.risk_assessment?.explanation || 'No data'}</p>
+                            <div class="space-y-6">
+                                <!-- Process & Methodology -->
+                                <div>
+                                    <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-2 flex items-center gap-2"><i data-lucide="list-tree" class="w-4 h-4 text-blue-500"></i> Process & Methodology</h4>
+                                    <div class="bg-slate-50 dark:bg-slate-800/30 p-3.5 rounded-lg border border-slate-100 dark:border-slate-700">
+                                        ${processHtml}
+                                    </div>
                                 </div>
-                                <div class="bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-900/30">
-                                    <p class="text-[10px] uppercase font-bold text-emerald-600 dark:text-emerald-400 mb-1">Impact Solved</p>
-                                    <p class="text-xs text-slate-700 dark:text-slate-300 line-clamp-3 md:line-clamp-4" title="${item.impact?.problem_solved || 'No data'}">${item.impact?.problem_solved || 'No data'}</p>
+
+                                <!-- Impact Target -->
+                                <div class="border-l-4 border-emerald-500 pl-3 py-1">
+                                    <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-xs mb-1.5 uppercase">
+                                        <i data-lucide="target" class="w-4 h-4"></i> Impact Target &mdash; 
+                                        <span class="bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300 px-1.5 py-0.5 rounded shadow-sm">${item.impact?.scale || 'N/A'} SCALE</span>
+                                    </div>
+                                    <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${item.impact?.problem_solved || 'No impact data recorded.'}</p>
+                                </div>
+
+                                <!-- Risk Assessment -->
+                                <div>
+                                    <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase mb-3 flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-1"><i data-lucide="shield-alert" class="w-4 h-4 text-red-500"></i> Risk Assessment</h4>
+                                    
+                                    <div class="border-l-[3px] ${riskBorderColor} pl-3 py-0.5">
+                                        <div class="flex flex-wrap items-center gap-1.5 ${riskTextColor} font-bold text-sm mb-1.5">
+                                            <span>${riskScoreNum}/10</span> 
+                                            ${riskTypesStr ? `<span class="text-slate-300 dark:text-slate-600">&bull;</span> ${riskTypesStr}` : ''}
+                                        </div>
+                                        <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${item.risk_assessment?.explanation || 'No risk data available.'}</p>
+                                    </div>
                                 </div>
                             </div>
+                            
+                            <div class="h-8"></div> <!-- Bottom padding for scroll -->
                         </div>
                     `,
                     chartId: chartId
@@ -479,12 +571,10 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
 
         // --- Navigation Logic ---
         function updateIndicator() {
-            // Adjust calculation based on the blank page logic
             let currentDisplay = isMobile ? currentPageIndex : (Math.floor(currentPageIndex / 2) * 2);
             let displayString = `Page ${currentDisplay}`;
             
             if (!isMobile) {
-                // If desktop, show spread like "Spread 1-2"
                 if (currentDisplay === 0) displayString = "Cover Page";
                 else displayString = `Page ${currentDisplay}-${currentDisplay+1}`;
             }
@@ -504,7 +594,6 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             const step = isMobile ? 1 : 2;
             if (currentPageIndex - step >= 0) {
                 currentPageIndex -= step;
-                // In mobile, we don't want to go back to page 0 (Blank)
                 if (isMobile && currentPageIndex === 0) {
                     currentPageIndex = 1;
                 }
@@ -517,25 +606,19 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             const leftEl = document.getElementById('content-left');
             const rightEl = document.getElementById('content-right');
 
-            // Cleanup old instances to prevent memory leaks and rendering bugs
             cleanupInstances();
 
             if (isMobile) {
-                // Mobile: Show 1 page in the right container
                 rightEl.innerHTML = pages[currentPageIndex]?.html || '';
                 leftEl.innerHTML = '';
             } else {
-                // Desktop: Show 2 pages. Ensure left is even index.
                 const leftIndex = Math.floor(currentPageIndex / 2) * 2;
                 leftEl.innerHTML = pages[leftIndex]?.html || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
                 rightEl.innerHTML = pages[leftIndex + 1]?.html || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
             }
 
-            // Re-initialize icons
             lucide.createIcons();
             
-            // Give DOM a tiny moment to render before injecting Canvas/Maps to ensure accurate dimensions
-            // This is required to solve the "data hilang saat membalik" (rendering issue)
             setTimeout(() => {
                 initVisibleMaps();
                 initVisibleCharts();
@@ -547,14 +630,12 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
         // --- Visualizations Initialization ---
         
         function cleanupInstances() {
-            // Destroy all maps
             for (let id in mapInstances) {
                 if(mapInstances[id]) {
                     mapInstances[id].remove();
                     delete mapInstances[id];
                 }
             }
-            // Destroy all charts
             for (let id in chartInstances) {
                 if(chartInstances[id] && !chartInstances[id].isDisposed()) {
                     chartInstances[id].dispose();
@@ -571,10 +652,8 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 const currentLon = parseFloat(el.getAttribute('data-lon'));
                 
                 if (id && !mapInstances[id]) {
-                    // Initialize Leaflet
                     const map = L.map(id, { zoomControl: false }).setView([currentLat, currentLon], 4);
                     
-                    // Dark theme map tiles or Light 
                     const isDark = document.documentElement.classList.contains('dark');
                     const tileUrl = isDark 
                         ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
@@ -584,7 +663,6 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                         attribution: '&copy; OpenStreetMap contributors'
                     }).addTo(map);
 
-                    // Add all other data points as contextual background dots
                     globalDataArr.forEach(item => {
                         const lat = item.location?.lat;
                         const lon = item.location?.lon;
@@ -599,14 +677,11 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                         }
                     });
 
-                    // Add highlighted pulse marker for the CURRENT item
                     const markerHtml = `<div class="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-[0_0_10px_rgba(59,130,246,0.8)] animate-pulse"></div>`;
                     const customIcon = L.divIcon({ className: 'custom-div-icon', html: markerHtml, iconSize: [16, 16], iconAnchor: [8, 8] });
                     L.marker([currentLat, currentLon], {icon: customIcon, zIndexOffset: 1000}).addTo(map);
 
                     mapInstances[id] = map;
-
-                    // Fix size rendering issue when changing pages
                     setTimeout(() => { map.invalidateSize(); }, 50);
                 }
             });
@@ -667,8 +742,6 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                     
                     myChart.setOption(option);
                     chartInstances[id] = myChart;
-                    
-                    // Force resize just to be safe
                     setTimeout(() => { myChart.resize(); }, 50);
                 }
             });
@@ -696,10 +769,9 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 document.getElementById('theme-icon').setAttribute('data-lucide', 'sun');
             }
             lucide.createIcons();
-            renderBook(); // Re-render to update map tiles and chart colors
+            renderBook(); 
         }
 
-        // Initialize
         document.addEventListener('DOMContentLoaded', initApp);
 
     </script>
