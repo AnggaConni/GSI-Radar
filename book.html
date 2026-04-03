@@ -111,7 +111,6 @@
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
-            /* Sembunyikan elemen UI Aplikasi */
             nav, .no-print, #book-wrapper {
                 display: none !important;
             }
@@ -119,7 +118,6 @@
                 padding: 0 !important;
                 margin: 0 !important;
             }
-            /* Tampilkan wrapper cetak khusus */
             #print-wrapper {
                 display: block !important;
                 width: 100%;
@@ -129,25 +127,33 @@
                 page-break-after: always;
                 break-after: page;
                 width: 210mm;
-                height: 297mm;
-                max-height: 297mm;
+                height: 296mm; /* Slightly less than 297 to avoid blank pages */
+                max-height: 296mm;
                 box-sizing: border-box;
-                padding: 15mm;
+                padding: 12mm 15mm;
                 overflow: hidden;
                 position: relative;
                 background: white !important;
+                display: flex;
+                flex-direction: column;
             }
-            .print-page * {
-                color: black !important;
-            }
-            /* Override tailwind dark mode colors for print */
+            /* Reset Colors for Print */
+            .print-page * { color: black !important; }
             .print-page .bg-slate-800, .print-page .bg-slate-900 { background-color: #f8fafc !important; border: 1px solid #e2e8f0; }
             .print-page .text-white { color: #0f172a !important; }
             .print-page .text-slate-300, .print-page .text-slate-400 { color: #475569 !important; }
             
-            /* Sizing Khusus Peta & Chart di Print agar tidak terpotong */
-            .print-page .leaflet-target { height: 160px !important; border: 1px solid #cbd5e1 !important; }
-            .print-page .echarts-target { height: 220px !important; }
+            /* Prevent Flex squish on print */
+            .print-page .flex-grow { flex-grow: 1 !important; flex-shrink: 0 !important; }
+            .print-page .flex-shrink-0 { flex-shrink: 0 !important; }
+            
+            /* Print Chart & Map Heights */
+            .print-page .print-leaflet-target { height: 180px !important; border: 1px solid #cbd5e1 !important; border-radius: 8px; width: 100%; display: block; }
+            .print-page .print-echarts-target { height: 240px !important; width: 100%; display: block; }
+
+            /* Fix Overlap issues by preventing scroll CSS */
+            .print-page .overflow-y-auto { overflow: visible !important; }
+            .print-page .h-full { height: auto !important; max-height: 100% !important; }
         }
     </style>
 </head>
@@ -157,7 +163,7 @@
     <div id="print-loading" class="fixed inset-0 bg-slate-900/90 z-[9999] hidden flex-col items-center justify-center text-white backdrop-blur-sm">
         <i data-lucide="loader-2" class="w-12 h-12 animate-spin mb-4 text-blue-400"></i>
         <h2 class="text-2xl font-bold mb-2">Menyiapkan Dokumen PDF...</h2>
-        <p class="text-slate-300 text-center max-w-md">Membangun semua halaman, peta, dan grafik ke dalam memori.<br/>Mohon tunggu sebentar...</p>
+        <p class="text-slate-300 text-center max-w-md">Membangun semua halaman, menonaktifkan animasi,<br/>dan menyesuaikan tata letak untuk A4...</p>
     </div>
 
     <!-- Container Khusus Untuk Print Semua Halaman -->
@@ -172,7 +178,7 @@
                 
                 <!-- Navigation Dropdown -->
                 <select id="toc-dropdown" onchange="jumpToPage(this.value)" class="ml-2 text-xs border rounded p-1.5 min-w-[140px] max-w-[150px] md:max-w-[200px] truncate bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 outline-none text-slate-700 dark:text-slate-200 cursor-pointer hover:border-blue-400 transition-colors shadow-inner">
-                    <option value="" disabled selected>Menyiapkan Daftar Isi...</option>
+                    <option value="" disabled selected>Daftar Isi...</option>
                 </select>
             </div>
             
@@ -203,31 +209,20 @@
 
     <!-- Main Book Container -->
     <main class="flex-grow flex items-center justify-center p-4 sm:p-8 pt-24 pb-12 w-full no-print">
-        
-        <!-- Book Wrapper -->
         <div id="book-wrapper" class="relative flex w-full max-w-6xl justify-center items-stretch perspective-1000 gap-0 sm:gap-1 lg:gap-0">
-            
-            <!-- Left Page (Hidden on Mobile) -->
+            <!-- Left Page -->
             <div id="page-left" class="hidden md:block w-1/2 bg-book-paper dark:bg-book-darkPaper shadow-book-left rounded-l-md relative a4-page page-transition transform origin-right">
                 <div class="absolute inset-y-0 right-0 w-12 binding-left pointer-events-none z-10"></div>
-                <div class="p-8 lg:p-12 h-full flex flex-col relative" id="content-left">
-                    <!-- Content injected here -->
-                </div>
+                <div class="p-8 lg:p-12 h-full flex flex-col relative" id="content-left"></div>
             </div>
-
-            <!-- Right Page (Or Single Mobile Page) -->
+            <!-- Right Page -->
             <div id="page-right" class="w-full md:w-1/2 max-w-md md:max-w-none bg-book-paper dark:bg-book-darkPaper shadow-book-mobile md:shadow-book-right rounded-md md:rounded-l-none md:rounded-r-md relative a4-page page-transition transform origin-left">
                 <div class="hidden md:block absolute inset-y-0 left-0 w-12 binding-right pointer-events-none z-10"></div>
-                <div class="p-6 sm:p-8 lg:p-12 h-full flex flex-col relative" id="content-right">
-                    <!-- Content injected here -->
-                </div>
+                <div class="p-6 sm:p-8 lg:p-12 h-full flex flex-col relative" id="content-right"></div>
             </div>
-
         </div>
-
     </main>
 
-    <!-- App Logic -->
     <script>
         // --- Fallback Data ---
         const fallbackData = [
@@ -384,7 +379,6 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             renderBook();
         }
 
-        // --- DROPDOWN NAVIGATION ---
         function buildDropdownMenu() {
             const dropdown = document.getElementById('toc-dropdown');
             let html = `<option value="" disabled selected>Daftar Isi...</option>
@@ -392,7 +386,6 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                         <option value="2">Laporan Eksekutif</option>
                         <option value="3">Metrik Global</option>`;
             
-            // Kelompokkan berdasarkan Negara
             let grouped = {};
             globalDataArr.forEach((item, idx) => {
                 let country = item.location?.country || 'Lainnya';
@@ -403,7 +396,6 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             for(let country in grouped) {
                 html += `<optgroup label="📍 ${country}">`;
                 grouped[country].forEach(item => {
-                    // Halaman peta (genap) untuk elemen ini
                     let pageIdx = TOTAL_STATIC_PAGES + (item.idx * 2);
                     html += `<option value="${pageIdx}">${item.title}</option>`;
                 });
@@ -419,11 +411,9 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 currentPageIndex--;
             }
             renderBook();
-            // Reset dropdown to text
             document.getElementById('toc-dropdown').selectedIndex = 0;
         }
 
-        // --- DYNAMIC PAGINATION ENGINE ---
         function getTotalPages() {
             return TOTAL_STATIC_PAGES + (globalDataArr.length * 2);
         }
@@ -447,7 +437,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
 
         // --- HTML Builders ---
         function buildBlankPage(isPrint) {
-            if(isPrint) return ''; // Skip blank page for printing
+            if(isPrint) return ''; 
             return `
                 <div class="flex flex-col items-center justify-center h-full opacity-40">
                     <i data-lucide="shield-check" class="w-12 h-12 mb-4 text-slate-300 dark:text-slate-600"></i>
@@ -471,8 +461,9 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
         }
 
         function buildReportPage(isPrint) {
+            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
             return `
-                <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
+                <div class="flex flex-col ${scrollClass}">
                     <div class="flex items-center gap-2 mb-6 text-blue-600 dark:text-blue-400 pb-4 border-b border-slate-200 dark:border-slate-700">
                         <i data-lucide="file-text" class="w-5 h-5"></i>
                         <h3 class="font-bold uppercase tracking-widest text-xs">Executive Report</h3>
@@ -532,9 +523,10 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
         }
 
         function buildResumeLayout(isPrint) {
+            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
             return `
-                <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
-                    <div class="flex items-center gap-2 mb-6 text-emerald-600 dark:text-emerald-400 pb-4 border-b border-slate-200 dark:border-slate-700">
+                <div class="flex flex-col ${scrollClass}">
+                    <div class="flex items-center gap-2 mb-6 text-emerald-600 dark:text-emerald-400 pb-4 border-b border-slate-200 dark:border-slate-700 flex-shrink-0">
                         <i data-lucide="pie-chart" class="w-5 h-5"></i>
                         <h3 class="font-bold uppercase tracking-widest text-xs">Global Metrics</h3>
                     </div>
@@ -548,13 +540,14 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             const mapId = `map-${item.id || index}${mapSuffix}`;
             const lat = item.location?.lat || 0;
             const lon = item.location?.lon || 0;
+            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
             
             const badges = (item.category || []).map(c => `<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-[10px] font-medium border border-slate-200 dark:border-slate-700 whitespace-nowrap">${c}</span>`).join('');
             const levelBadge = `<span class="px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300 rounded text-[10px] font-bold border border-indigo-200 dark:border-indigo-800 uppercase flex items-center gap-1"><i data-lucide="network" class="w-3 h-3"></i> ${item.innovation_level || 'Unknown Level'}</span>`;
             const gemBadge = item.hidden_gem ? `<span class="px-2 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 rounded flex items-center gap-1 text-[10px] font-bold border border-amber-200 dark:border-amber-800"><i data-lucide="gem" class="w-3 h-3"></i> Hidden Gem</span>` : '';
 
             return `
-                <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
+                <div class="flex flex-col ${scrollClass}">
                     <div class="mb-4 flex-shrink-0">
                         <div class="flex flex-wrap gap-2 mb-3">
                             ${levelBadge} ${gemBadge}
@@ -565,7 +558,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                         </div>
                     </div>
                     
-                    <div class="w-full h-36 md:h-44 flex-shrink-0 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden mb-4 border border-slate-200 dark:border-slate-700 relative z-0">
+                    <div class="w-full ${isPrint ? 'h-[180px]' : 'h-36 md:h-44'} flex-shrink-0 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden mb-4 border border-slate-200 dark:border-slate-700 relative z-0">
                         <div id="${mapId}" class="w-full h-full ${isPrint ? 'print-leaflet-target' : 'leaflet-target'}" data-lat="${lat}" data-lon="${lon}"></div>
                     </div>
 
@@ -617,6 +610,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
         function buildElementChartPage(item, index, isPrint) {
             const chartSuffix = isPrint ? '-print' : '';
             const chartId = `chart-${item.id || index}${chartSuffix}`;
+            const scrollClass = isPrint ? 'overflow-visible' : 'overflow-y-auto scrollbar-thin pr-2 h-full';
             
             let rRisk = (item.risk_assessment?.risk_score || 0) * 10; 
             let rCost = item.replicability?.cost_level === 'low' ? 20 : (item.replicability?.cost_level === 'medium' ? 50 : 90);
@@ -640,7 +634,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             let riskTextColor = riskScoreNum >= 7 ? 'text-red-600 dark:text-red-400' : (riskScoreNum >= 4 ? 'text-amber-600 dark:text-amber-400' : 'text-blue-600 dark:text-blue-400');
 
             return `
-                <div class="flex flex-col h-full overflow-y-auto scrollbar-thin pr-2">
+                <div class="flex flex-col ${scrollClass}">
                     <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase border-b border-slate-200 dark:border-slate-700 pb-2 mb-3 flex items-center gap-2 flex-shrink-0">
                         <i data-lucide="cpu" class="w-4 h-4 text-slate-400"></i> Operation & Analysis
                     </h3>
@@ -649,7 +643,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                         "${item.summary}"
                     </p>
 
-                    <div class="w-full h-40 mb-5 flex-shrink-0 relative z-0">
+                    <div class="w-full ${isPrint ? 'h-[220px]' : 'h-40'} mb-5 flex-shrink-0 relative z-0">
                         <div id="${chartId}" class="w-full h-full ${isPrint ? 'print-echarts-target' : 'echarts-target'}" 
                             data-title="${item.title}"
                             data-prio="${item.priority_score || 0}"
@@ -740,10 +734,8 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
 
             lucide.createIcons();
             
-            // Perbaikan untuk Peta Tak Terlihat (Invisible Map Bug)
-            // Render ulang kontainer setelah masuk ke DOM dengan jeda bertahap
             setTimeout(() => {
-                initVisualizations('.leaflet-target', '.echarts-target', mapInstances, chartInstances);
+                initVisualizations('.leaflet-target', '.echarts-target', mapInstances, chartInstances, false);
             }, 50);
             
             setTimeout(() => {
@@ -755,23 +747,21 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             updateIndicator();
         }
 
-        // --- PRINT ENGINE (ALL PAGES) ---
+        // --- PRINT ENGINE (ALL PAGES FIX) ---
         async function printAllAsPDF() {
             const loading = document.getElementById('print-loading');
             const printWrapper = document.getElementById('print-wrapper');
             
-            // Tampilkan layar loading
             loading.classList.remove('hidden');
             loading.classList.add('flex');
-            await new Promise(r => setTimeout(r, 100)); // Biarkan UI memuat overlay
+            await new Promise(r => setTimeout(r, 100)); // Overlay muat
 
             try {
                 let fullHtml = '';
                 let total = getTotalPages();
                 
-                // Rakit seluruh HTML ke dalam div print
                 for(let i = 0; i < total; i++) {
-                    if(i === 0) continue; // Lewati blank page
+                    if(i === 0) continue; // Skip halaman kosong
                     fullHtml += `
                         <div class="print-page">
                             ${getPageHtml(i, true)}
@@ -782,35 +772,34 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 printWrapper.innerHTML = fullHtml;
                 lucide.createIcons();
 
-                // Bersihkan cache print sebelumnya
                 cleanupInstances(printMapInstances, printChartInstances);
 
-                // Inisialisasi map dan grafik di div print
-                initVisualizations('.print-leaflet-target', '.print-echarts-target', printMapInstances, printChartInstances);
+                // Init tanpa animasi
+                initVisualizations('.print-leaflet-target', '.print-echarts-target', printMapInstances, printChartInstances, true);
 
-                // Beri waktu sistem untuk mengunduh ubin peta (tiles) dan merender canvas ECharts
-                await new Promise(r => setTimeout(r, 1500));
-                
-                // Pastikan ukuran peta disesuaikan
+                // Paksa Echarts resize & Leaflet Invalidate setelah render DOM pertama
+                for (let id in printChartInstances) {
+                    if(printChartInstances[id]) printChartInstances[id].resize();
+                }
                 for (let id in printMapInstances) {
                     if(printMapInstances[id]) printMapInstances[id].invalidateSize();
                 }
 
-                // Panggil dialog Print Browser
+                // Beri waktu 2 detik agar Tile Maps termuat secara utuh
+                await new Promise(r => setTimeout(r, 2000));
+                
                 window.print();
 
             } catch(e) {
                 console.error("Gagal membuat PDF", e);
-                alert("Terjadi kesalahan saat menyusun PDF. Data mungkin terlalu besar.");
+                alert("Terjadi kesalahan saat menyusun PDF.");
             } finally {
-                // Bersihkan memori dan sembunyikan loading
                 printWrapper.innerHTML = ''; 
                 cleanupInstances(printMapInstances, printChartInstances);
                 loading.classList.add('hidden');
                 loading.classList.remove('flex');
             }
         }
-
 
         // --- Visualizations Initialization ---
         function cleanupInstances(mapsObj, chartsObj) {
@@ -828,11 +817,10 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
             }
         }
 
-        function initVisualizations(mapClass, chartClass, mapsObj, chartsObj) {
+        function initVisualizations(mapClass, chartClass, mapsObj, chartsObj, isPrint) {
             const mapTargets = document.querySelectorAll(mapClass);
-            // Untuk performa cetak, batasi sampel titik sebaran global hingga 100 data
             const sampleBgDots = globalDataArr.length > 100 ? globalDataArr.slice(0, 100) : globalDataArr;
-            const isDark = document.documentElement.classList.contains('dark') && mapClass === '.leaflet-target'; // Saat print selalu terang
+            const isDark = document.documentElement.classList.contains('dark') && !isPrint; // Saat print paksa light
 
             mapTargets.forEach(el => {
                 const id = el.id;
@@ -840,7 +828,12 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                 const currentLon = parseFloat(el.getAttribute('data-lon'));
                 
                 if (id && !mapsObj[id]) {
-                    const map = L.map(id, { zoomControl: false, scrollWheelZoom: false }).setView([currentLat, currentLon], 4);
+                    // Nonaktifkan animasi zoom untuk mode Print agar instant
+                    const mapOptions = isPrint ? 
+                        { zoomControl: false, scrollWheelZoom: false, fadeAnimation: false, zoomAnimation: false, markerZoomAnimation: false } : 
+                        { zoomControl: false, scrollWheelZoom: false };
+
+                    const map = L.map(id, mapOptions).setView([currentLat, currentLon], 4);
                     
                     const tileUrl = isDark 
                         ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
@@ -858,7 +851,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                         }
                     });
 
-                    const markerHtml = `<div class="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-[0_0_10px_rgba(59,130,246,0.8)] animate-pulse"></div>`;
+                    const markerHtml = `<div class="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-[0_0_10px_rgba(59,130,246,0.8)] ${isPrint ? '' : 'animate-pulse'}"></div>`;
                     const customIcon = L.divIcon({ className: 'custom-div-icon', html: markerHtml, iconSize: [16, 16], iconAnchor: [8, 8] });
                     L.marker([currentLat, currentLon], {icon: customIcon, zIndexOffset: 1000}).addTo(map);
 
@@ -880,6 +873,7 @@ Out of tracked innovations, grassroots solutions dominate with **56.25%**, demon
                     const impact = parseFloat(el.getAttribute('data-impact'));
 
                     myChart.setOption({
+                        animation: !isPrint, // Matikan animasi di mode print agar tidak kosong
                         backgroundColor: 'transparent',
                         radar: {
                             indicator: [
