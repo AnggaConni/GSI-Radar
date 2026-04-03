@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Innovation Intelligence Book</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    
+    <!-- Marked.js (Markdown Parser) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        book: {
+                            paper: '#fcfcfc',
+                            darkPaper: '#1e293b',
+                            cover: '#0f172a',
+                        }
+                    },
+                    boxShadow: {
+                        'book-left': '-10px 10px 30px rgba(0,0,0,0.1), inset -2px 0 10px rgba(0,0,0,0.05)',
+                        'book-right': '10px 10px 30px rgba(0,0,0,0.1), inset 2px 0 10px rgba(0,0,0,0.05)',
+                        'book-mobile': '0 10px 30px rgba(0,0,0,0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* A4 Aspect Ratio 1 : 1.414 */
+        .a4-page {
+            aspect-ratio: 1 / 1.414;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+        }
+        
+        .a4-page::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .a4-page::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .a4-page::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .dark .a4-page::-webkit-scrollbar-thumb {
+            background-color: #475569;
+        }
+
+        /* Book Binding Effect */
+        .binding-left {
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%);
+        }
+        .dark .binding-left {
+            background: linear-gradient(to right, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%);
+        }
+        
+        .binding-right {
+            background: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(0,0,0,0.05) 90%, rgba(0,0,0,0.1) 100%);
+        }
+        .dark .binding-right {
+            background: linear-gradient(to left, rgba(30,41,59,0) 0%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.4) 100%);
+        }
+
+        /* Markdown Styles */
+        .prose h1 { font-size: 1.875rem; font-weight: 800; margin-bottom: 1rem; color: #0f172a; }
+        .prose h2 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; color: #1e293b; }
+        .prose p { margin-bottom: 1rem; line-height: 1.6; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .prose li { margin-bottom: 0.25rem; }
+        
+        .dark .prose h1, .dark .prose h2 { color: #f8fafc; border-color: #334155; }
+        .dark .prose p, .dark .prose li { color: #cbd5e1; }
+        
+        .page-transition {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Navbar & Controls -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i data-lucide="book-open" class="text-blue-600 dark:text-blue-400 w-6 h-6"></i>
+                <span class="font-bold text-lg tracking-tight hidden sm:block">Intelligence Radar Book</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <span id="page-indicator" class="text-sm font-medium text-slate-500 dark:text-slate-400 font-mono">Page 1 / ?</span>
+                
+                <div class="flex bg-slate-100 dark:bg-slate-900 rounded-lg p-1">
+                    <button onclick="prevPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 shadow-sm transition-all" title="Halaman Sebelumnya">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="nextPage()" class="p-2 rounded hover:bg-white dark:hover:bg-slate-700 shadow-sm transition-all" title="Halaman Selanjutnya">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-all text-slate-600 dark:text-slate-300">
+                    <i data-lucide="moon" id="theme-icon" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Book Container -->
+    <main class="flex-grow flex items-center justify-center p-4 sm:p-8 pt-24 pb-12 w-full">
+        
+        <!-- Book Wrapper -->
+        <div id="book-wrapper" class="relative flex w-full max-w-6xl justify-center items-stretch perspective-1000 gap-0 sm:gap-1 lg:gap-0">
+            
+            <!-- Left Page (Hidden on Mobile) -->
+            <div id="page-left" class="hidden md:block w-1/2 bg-book-paper dark:bg-book-darkPaper shadow-book-left rounded-l-md relative a4-page page-transition transform origin-right">
+                <div class="absolute inset-y-0 right-0 w-12 binding-left pointer-events-none z-10"></div>
+                <div class="p-8 lg:p-12 h-full flex flex-col relative" id="content-left">
+                    <!-- Content injected here -->
+                </div>
+            </div>
+
+            <!-- Right Page (Or Single Mobile Page) -->
+            <div id="page-right" class="w-full md:w-1/2 max-w-md md:max-w-none bg-book-paper dark:bg-book-darkPaper shadow-book-mobile md:shadow-book-right rounded-md md:rounded-l-none md:rounded-r-md relative a4-page page-transition transform origin-left">
+                <div class="hidden md:block absolute inset-y-0 left-0 w-12 binding-right pointer-events-none z-10"></div>
+                <div class="p-6 sm:p-8 lg:p-12 h-full flex flex-col relative" id="content-right">
+                    <!-- Content injected here -->
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Fallback Data & Logic -->
+    <script>
+        // --- Fallback Data based on User's Snippets ---
+        const fallbackData = [
+            {
+                "id": "807ae0f4e918c227cd45f558d186cb17",
+                "title": "The Humanure Handbook Sawdust Toilet System",
+                "summary": "A simple, low-cost DIY composting toilet system utilizing a 5-gallon bucket within a wooden box, where dry organic material like sawdust is added after each use. Full buckets are emptied into an outdoor thermophilic compost pile.",
+                "category": ["Composting Toilet", "Sustainable Sanitation", "DIY", "Off-grid Living"],
+                "innovation_level": "grassroots",
+                "location": { "country": "USA", "region": "Global", "lat": 41.1534, "lon": -80.0842 },
+                "process": { "how_it_works": "The system uses a 5-gallon bucket housed within a wooden box. After each use, dry organic material is added to cover waste, absorb moisture, control odors, and initiate composting." },
+                "impact": { "problem_solved": "Poor sanitation and water wastage in rural/off-grid areas.", "scale": "high" },
+                "replicability": { "cost_level": "low", "difficulty": "medium" },
+                "origin": { "knowledge_source": ["traditional", "self-taught"] },
+                "risk_assessment": { "risk_score": 3, "risk_type": ["biological"], "safety_level": "medium", "explanation": "Biological risk if compost pile does not reach required thermophilic temperatures to eliminate pathogens." },
+                "priority_score": 70
+            },
+            {
+                "id": "mock_2",
+                "title": "Pengolahan Gula Aren Tradisional Nipah",
+                "summary": "Metode penyadapan dan pemasakan nira dari pohon Nipah pesisir menjadi gula aren premium yang memberdayakan komunitas lokal, mengurangi ketergantungan pada pembalakan mangrove.",
+                "category": ["Sustainable Agriculture", "Local Economy", "Forestry"],
+                "innovation_level": "semi-formal",
+                "location": { "country": "Indonesia", "region": "Sumatera", "lat": -0.7893, "lon": 113.9213 },
+                "process": { "how_it_works": "Penyadapan dilakukan di area pasang surut. Nira direbus menggunakan kayu bakar selama berjam-jam hingga mengkristal menjadi gula semut (granulated brown sugar)." },
+                "impact": { "problem_solved": "Rampant conversion of vital coastal Nipah forests into plantations and extreme poverty among coastal farmers.", "scale": "high" },
+                "replicability": { "cost_level": "medium", "difficulty": "high" },
+                "origin": { "knowledge_source": ["traditional"] },
+                "risk_assessment": { "risk_score": 6, "risk_type": ["fire hazard", "occupational"], "safety_level": "medium", "explanation": "The primary risk is the fire hazard associated with boiling large vats of sap over open wood fires for long periods." },
+                "priority_score": 85
+            },
+            {
+                "id": "mock_3",
+                "title": "Biogas Digester dari Limbah Tahu",
+                "summary": "Pemanfaatan limbah cair industri tahu (whey) sebagai bahan baku digester biogas skala rumah tangga untuk menghasilkan energi memasak.",
+                "category": ["Renewable Energy", "Waste Management", "Circular Economy"],
+                "innovation_level": "grassroots",
+                "location": { "country": "Indonesia", "region": "Jawa Barat", "lat": -6.9147, "lon": 107.6098 },
+                "process": { "how_it_works": "Limbah cair difermentasi secara anaerobik di dalam tangki kedap udara berbahan plastik atau beton, menghasilkan gas metana yang disalurkan ke kompor." },
+                "impact": { "problem_solved": "Pencemaran sungai akibat pembuangan limbah cair tahu dan ketergantungan pada gas LPG bersubsidi.", "scale": "medium" },
+                "replicability": { "cost_level": "medium", "difficulty": "medium" },
+                "origin": { "knowledge_source": ["adapted from existing", "internet"] },
+                "risk_assessment": { "risk_score": 4, "risk_type": ["gas leak"], "safety_level": "high", "explanation": "Risiko kebocoran gas metana ringan jika pipa tidak terpasang dengan baik, namun tekanannya relatif rendah." },
+                "priority_score": 75
+            },
+            {
+                "id": "mock_4",
+                "title": "Solar Powered Desalination Box",
+                "summary": "Kotak purifikasi air bertenaga surya sederhana yang memisahkan garam dari air laut menggunakan kondensasi pasif.",
+                "category": ["Clean Water", "Solar Tech"],
+                "innovation_level": "institutional",
+                "location": { "country": "Kenya", "region": "Mombasa", "lat": -4.0435, "lon": 39.6682 },
+                "process": { "how_it_works": "Air laut dipanaskan oleh matahari melalui kaca, menguap, lalu mengembun pada permukaan miring dan menetes ke wadah pengumpul air tawar." },
+                "impact": { "problem_solved": "Kelangkaan air minum bersih di daerah pesisir yang terisolasi.", "scale": "medium" },
+                "replicability": { "cost_level": "high", "difficulty": "low" },
+                "origin": { "knowledge_source": ["formal education"] },
+                "risk_assessment": { "risk_score": 1, "risk_type": ["operational"], "safety_level": "high", "explanation": "Sangat aman. Risiko hanya terkait kegagalan material kaca yang pecah." },
+                "priority_score": 60
+            }
+        ];
+
+        const fallbackResume = [{
+            "report_metadata": { "period": "Q1 2026", "total_records_analyzed": 33 },
+            "global_summary": { "total_innovations": 32, "grassroots_percentage": 56.25, "institutional_percentage": 25.0, "semi_formal_percentage": 18.75 },
+            "top_categories": [
+                { "category": "Sustainable Agriculture", "count": 12 },
+                { "category": "Waste Management", "count": 10 },
+                { "category": "Renewable Energy", "count": 6 }
+            ]
+        }];
+
+        const fallbackReport = `# Global Innovation Intelligence Report
+**Period:** Q1 2026 | **Generated:** 2026-03-22
+---
+## 🌍 Executive Summary
+Out of tracked innovations, grassroots solutions dominate with **56.25%**, demonstrating remarkable resilience from local communities adapting to global challenges.
+
+## ⚠️ Emerging Risks
+- **Top Risks:** toxic, environment, fire hazard.
+- Most risks stem from unstandardized equipment modification or prolonged exposure to hazards in informal settings.
+
+## 💎 Hidden Gems
+- **The Humanure Handbook Sawdust Toilet System** (Sustainable Sanitation)
+- **Pengolahan Gula Aren Nipah** (Coastal Economic Empowerment)
+
+---
+*Report auto-generated by Innovation Radar AI Framework v9.1.*`;
+
+        // --- State Variables ---
+        let pages = [];
+        let currentPageIndex = 0; // Index in the pages array
+        let isMobile = window.innerWidth < 768;
+        let mapInstances = {};
+        let chartInstances = {};
+        let globalDataArr = []; // To store all data for context dots on map
+
+        // --- Core Application Logic ---
+
+        async function initApp() {
+            lucide.createIcons();
+            checkTheme();
+            
+            // Handle Resize for Mobile/Desktop layout switching
+            window.addEventListener('resize', () => {
+                const newIsMobile = window.innerWidth < 768;
+                if (newIsMobile !== isMobile) {
+                    isMobile = newIsMobile;
+                    // Adjust page index to maintain correct spread view
+                    if (!isMobile && currentPageIndex % 2 !== 0) {
+                        currentPageIndex--;
+                    }
+                    renderBook();
+                }
+            });
+
+            // Load Data
+            let finalReport = fallbackReport;
+            let finalResume = fallbackResume;
+            globalDataArr = fallbackData;
+
+            try {
+                // Try fetching real files
+                const [reqReport, reqResume, reqData] = await Promise.all([
+                    fetch('report.md'), fetch('resume.json'), fetch('data.json')
+                ]);
+
+                if (reqReport.ok) finalReport = await reqReport.text();
+                if (reqResume.ok) finalResume = await reqResume.json();
+                if (reqData.ok) globalDataArr = await reqData.json();
+                
+            } catch (e) {
+                console.warn("Using fallback data. Local fetch failed, likely due to CORS.", e);
+            }
+
+            buildPages(finalReport, finalResume, globalDataArr);
+            
+            // In mobile, skip the Blank Page (index 0) and start directly at Cover (index 1)
+            if (isMobile) {
+                currentPageIndex = 1; 
+            }
+            
+            renderBook();
+        }
+
+        // --- Page Building Logic ---
+        function buildPages(reportStr, resumeJson, dataArr) {
+            pages = [];
+
+            // Page 0: Blank Page (Ensures Map is always on the Left side for even indices)
+            pages.push({
+                type: 'blank',
+                html: `
+                    <div class="flex flex-col items-center justify-center h-full opacity-40">
+                        <i data-lucide="shield-check" class="w-12 h-12 mb-4 text-slate-300 dark:text-slate-600"></i>
+                        <p class="text-[10px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center px-8">Halaman ini sengaja<br/>dikosongkan</p>
+                    </div>
+                `
+            });
+
+            // Page 1: Cover
+            pages.push({
+                type: 'cover',
+                html: `
+                    <div class="flex flex-col items-center justify-center h-full text-center space-y-6">
+                        <div class="w-24 h-24 bg-blue-600 rounded-3xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                            <i data-lucide="globe-2" class="text-white w-12 h-12"></i>
+                        </div>
+                        <h1 class="text-4xl font-black text-slate-800 dark:text-white uppercase tracking-wider">Innovation<br/>Intelligence<br/>Radar</h1>
+                        <div class="w-16 h-1 bg-blue-500 rounded-full my-4"></div>
+                        <p class="text-slate-500 dark:text-slate-400 font-mono text-sm uppercase tracking-widest">Digital Briefing Book</p>
+                        <p class="text-xs text-slate-400 mt-auto pt-12">Vol. 1 &mdash; 2026</p>
+                    </div>
+                `
+            });
+
+            // Page 2: Report
+            const parsedReport = marked.parse(reportStr);
+            pages.push({
+                type: 'report',
+                html: `
+                    <div class="flex flex-col h-full">
+                        <div class="flex items-center gap-2 mb-6 text-blue-600 dark:text-blue-400 pb-4 border-b border-slate-200 dark:border-slate-700">
+                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                            <h3 class="font-bold uppercase tracking-widest text-xs">Executive Report</h3>
+                        </div>
+                        <div class="prose dark:prose-invert max-w-none flex-grow text-sm">
+                            ${parsedReport}
+                        </div>
+                    </div>
+                `
+            });
+
+            // Page 3: Resume (Charts)
+            const resume = Array.isArray(resumeJson) ? resumeJson[0] : resumeJson;
+            let catsHtml = resume.top_categories.map(c => `
+                <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg mb-2 text-sm border border-slate-100 dark:border-slate-700">
+                    <span class="font-medium truncate pr-4">${c.category}</span>
+                    <span class="bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 px-2 py-1 rounded font-bold">${c.count}</span>
+                </div>
+            `).join('');
+
+            pages.push({
+                type: 'resume',
+                html: `
+                    <div class="flex flex-col h-full">
+                        <div class="flex items-center gap-2 mb-6 text-emerald-600 dark:text-emerald-400 pb-4 border-b border-slate-200 dark:border-slate-700">
+                            <i data-lucide="pie-chart" class="w-5 h-5"></i>
+                            <h3 class="font-bold uppercase tracking-widest text-xs">Global Metrics</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
+                                    <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Nodes</p>
+                                    <p class="text-3xl font-black text-slate-800 dark:text-white">${resume.global_summary.total_innovations}</p>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 text-center">
+                                    <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Grassroots</p>
+                                    <p class="text-3xl font-black text-emerald-500">${resume.global_summary.grassroots_percentage}%</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Top Categories</h4>
+                                ${catsHtml}
+                            </div>
+                        </div>
+                    </div>
+                `
+            });
+
+            // Section 2: Data Elements (2 Pages each)
+            dataArr.forEach((item, index) => {
+                const mapId = `map-${item.id || index}`;
+                const chartId = `chart-${item.id || index}`;
+                const lat = item.location?.lat || 0;
+                const lon = item.location?.lon || 0;
+                const badges = (item.category || []).map(c => `<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded text-[10px] font-medium border border-slate-200 dark:border-slate-700 whitespace-nowrap">${c}</span>`).join('');
+
+                // Element Page 1: Map & Linkage (Even Index -> Left Page)
+                pages.push({
+                    type: 'element-1',
+                    id: item.id,
+                    html: `
+                        <div class="flex flex-col h-full">
+                            <div class="mb-4">
+                                <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-2">
+                                    <i data-lucide="layers" class="w-4 h-4"></i>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest">${item.innovation_level || 'Innovation'}</span>
+                                </div>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight mb-2">${item.title}</h2>
+                                <div class="flex flex-wrap gap-1.5 mb-4">
+                                    ${badges}
+                                </div>
+                            </div>
+                            
+                            <!-- Leaflet Map Container -->
+                            <div class="w-full h-48 md:h-64 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden mb-6 border border-slate-200 dark:border-slate-700 relative z-0">
+                                <div id="${mapId}" class="w-full h-full leaflet-target" data-lat="${lat}" data-lon="${lon}"></div>
+                            </div>
+
+                            <div class="mt-auto bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-xl border border-indigo-100 dark:border-indigo-900/50">
+                                <h4 class="text-xs font-bold text-indigo-800 dark:text-indigo-300 uppercase mb-2 flex items-center gap-2"><i data-lucide="link-2" class="w-4 h-4"></i> Linkages & Origin</h4>
+                                <p class="text-sm text-slate-700 dark:text-slate-300"><strong>Source:</strong> ${(item.origin?.knowledge_source || []).join(', ') || 'Unknown'}</p>
+                                <p class="text-sm text-slate-700 dark:text-slate-300 mt-1"><strong>Geography:</strong> ${item.location?.region || '-'}, ${item.location?.country || '-'}</p>
+                            </div>
+                        </div>
+                    `,
+                    mapId: mapId,
+                    lat: lat,
+                    lon: lon
+                });
+
+                // Element Page 2: Details & Chart (Odd Index -> Right Page)
+                let rRisk = (item.risk_assessment?.risk_score || 0) * 10; 
+                let rCost = item.replicability?.cost_level === 'low' ? 20 : (item.replicability?.cost_level === 'medium' ? 50 : 90);
+                let rDiff = item.replicability?.difficulty === 'low' ? 20 : (item.replicability?.difficulty === 'medium' ? 50 : 90);
+                let rImpact = item.impact?.scale === 'high' ? 90 : (item.impact?.scale === 'medium' ? 60 : 30);
+                
+                pages.push({
+                    type: 'element-2',
+                    id: item.id,
+                    html: `
+                        <div class="flex flex-col h-full">
+                            <h3 class="text-sm font-bold text-slate-800 dark:text-white uppercase border-b border-slate-200 dark:border-slate-700 pb-2 mb-4 flex items-center gap-2">
+                                <i data-lucide="cpu" class="w-4 h-4 text-slate-400"></i> Operation & Analysis
+                            </h3>
+                            
+                            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700 overflow-y-auto max-h-24 md:max-h-32 scrollbar-thin">
+                                ${item.summary}
+                            </p>
+
+                            <!-- ECharts Container -->
+                            <div class="w-full h-48 md:h-56 mb-4 flex-grow-0 relative z-0">
+                                <div id="${chartId}" class="w-full h-full echarts-target" 
+                                    data-title="${item.title}"
+                                    data-prio="${item.priority_score || 0}"
+                                    data-risk="${rRisk}"
+                                    data-cost="${rCost}"
+                                    data-diff="${rDiff}"
+                                    data-impact="${rImpact}">
+                                </div>
+                            </div>
+
+                            <div class="mt-auto grid grid-cols-2 gap-3">
+                                <div class="bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-900/30">
+                                    <p class="text-[10px] uppercase font-bold text-red-600 dark:text-red-400 mb-1">Risk Assesment</p>
+                                    <p class="text-xs text-slate-700 dark:text-slate-300 line-clamp-3 md:line-clamp-4" title="${item.risk_assessment?.explanation || 'No data'}">${item.risk_assessment?.explanation || 'No data'}</p>
+                                </div>
+                                <div class="bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-900/30">
+                                    <p class="text-[10px] uppercase font-bold text-emerald-600 dark:text-emerald-400 mb-1">Impact Solved</p>
+                                    <p class="text-xs text-slate-700 dark:text-slate-300 line-clamp-3 md:line-clamp-4" title="${item.impact?.problem_solved || 'No data'}">${item.impact?.problem_solved || 'No data'}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    chartId: chartId
+                });
+            });
+
+            lucide.createIcons();
+        }
+
+        // --- Navigation Logic ---
+        function updateIndicator() {
+            // Adjust calculation based on the blank page logic
+            let currentDisplay = isMobile ? currentPageIndex : (Math.floor(currentPageIndex / 2) * 2);
+            let displayString = `Page ${currentDisplay}`;
+            
+            if (!isMobile) {
+                // If desktop, show spread like "Spread 1-2"
+                if (currentDisplay === 0) displayString = "Cover Page";
+                else displayString = `Page ${currentDisplay}-${currentDisplay+1}`;
+            }
+
+            document.getElementById('page-indicator').innerText = displayString;
+        }
+
+        function nextPage() {
+            const step = isMobile ? 1 : 2;
+            if (currentPageIndex + step < pages.length) {
+                currentPageIndex += step;
+                renderBook();
+            }
+        }
+
+        function prevPage() {
+            const step = isMobile ? 1 : 2;
+            if (currentPageIndex - step >= 0) {
+                currentPageIndex -= step;
+                // In mobile, we don't want to go back to page 0 (Blank)
+                if (isMobile && currentPageIndex === 0) {
+                    currentPageIndex = 1;
+                }
+                renderBook();
+            }
+        }
+
+        // --- Rendering Logic ---
+        function renderBook() {
+            const leftEl = document.getElementById('content-left');
+            const rightEl = document.getElementById('content-right');
+
+            // Cleanup old instances to prevent memory leaks and rendering bugs
+            cleanupInstances();
+
+            if (isMobile) {
+                // Mobile: Show 1 page in the right container
+                rightEl.innerHTML = pages[currentPageIndex]?.html || '';
+                leftEl.innerHTML = '';
+            } else {
+                // Desktop: Show 2 pages. Ensure left is even index.
+                const leftIndex = Math.floor(currentPageIndex / 2) * 2;
+                leftEl.innerHTML = pages[leftIndex]?.html || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
+                rightEl.innerHTML = pages[leftIndex + 1]?.html || '<div class="flex items-center justify-center h-full text-slate-300"><i data-lucide="book-dashed" class="w-16 h-16 opacity-20"></i></div>';
+            }
+
+            // Re-initialize icons
+            lucide.createIcons();
+            
+            // Give DOM a tiny moment to render before injecting Canvas/Maps to ensure accurate dimensions
+            // This is required to solve the "data hilang saat membalik" (rendering issue)
+            setTimeout(() => {
+                initVisibleMaps();
+                initVisibleCharts();
+            }, 100);
+
+            updateIndicator();
+        }
+
+        // --- Visualizations Initialization ---
+        
+        function cleanupInstances() {
+            // Destroy all maps
+            for (let id in mapInstances) {
+                if(mapInstances[id]) {
+                    mapInstances[id].remove();
+                    delete mapInstances[id];
+                }
+            }
+            // Destroy all charts
+            for (let id in chartInstances) {
+                if(chartInstances[id] && !chartInstances[id].isDisposed()) {
+                    chartInstances[id].dispose();
+                    delete chartInstances[id];
+                }
+            }
+        }
+
+        function initVisibleMaps() {
+            const targets = document.querySelectorAll('.leaflet-target');
+            targets.forEach(el => {
+                const id = el.id;
+                const currentLat = parseFloat(el.getAttribute('data-lat'));
+                const currentLon = parseFloat(el.getAttribute('data-lon'));
+                
+                if (id && !mapInstances[id]) {
+                    // Initialize Leaflet
+                    const map = L.map(id, { zoomControl: false }).setView([currentLat, currentLon], 4);
+                    
+                    // Dark theme map tiles or Light 
+                    const isDark = document.documentElement.classList.contains('dark');
+                    const tileUrl = isDark 
+                        ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+                        : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+
+                    L.tileLayer(tileUrl, {
+                        attribution: '&copy; OpenStreetMap contributors'
+                    }).addTo(map);
+
+                    // Add all other data points as contextual background dots
+                    globalDataArr.forEach(item => {
+                        const lat = item.location?.lat;
+                        const lon = item.location?.lon;
+                        if(lat !== undefined && lon !== undefined && (lat !== currentLat || lon !== currentLon)) {
+                            L.circleMarker([lat, lon], {
+                                radius: 4,
+                                color: isDark ? '#475569' : '#cbd5e1',
+                                fillColor: isDark ? '#475569' : '#cbd5e1',
+                                fillOpacity: 0.8,
+                                weight: 1
+                            }).addTo(map);
+                        }
+                    });
+
+                    // Add highlighted pulse marker for the CURRENT item
+                    const markerHtml = `<div class="w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-[0_0_10px_rgba(59,130,246,0.8)] animate-pulse"></div>`;
+                    const customIcon = L.divIcon({ className: 'custom-div-icon', html: markerHtml, iconSize: [16, 16], iconAnchor: [8, 8] });
+                    L.marker([currentLat, currentLon], {icon: customIcon, zIndexOffset: 1000}).addTo(map);
+
+                    mapInstances[id] = map;
+
+                    // Fix size rendering issue when changing pages
+                    setTimeout(() => { map.invalidateSize(); }, 50);
+                }
+            });
+        }
+
+        function initVisibleCharts() {
+            const targets = document.querySelectorAll('.echarts-target');
+            targets.forEach(el => {
+                const id = el.id;
+                if (id && !chartInstances[id]) {
+                    const myChart = echarts.init(el);
+                    const isDark = document.documentElement.classList.contains('dark');
+                    const textColor = isDark ? '#cbd5e1' : '#475569';
+                    
+                    const prio = parseFloat(el.getAttribute('data-prio'));
+                    const risk = parseFloat(el.getAttribute('data-risk'));
+                    const cost = parseFloat(el.getAttribute('data-cost'));
+                    const diff = parseFloat(el.getAttribute('data-diff'));
+                    const impact = parseFloat(el.getAttribute('data-impact'));
+
+                    const option = {
+                        backgroundColor: 'transparent',
+                        radar: {
+                            indicator: [
+                                { name: 'Priority', max: 100 },
+                                { name: 'Impact', max: 100 },
+                                { name: 'Risk', max: 100 },
+                                { name: 'Cost', max: 100 },
+                                { name: 'Difficulty', max: 100 }
+                            ],
+                            radius: '60%',
+                            center: ['50%', '55%'],
+                            splitNumber: 4,
+                            axisName: { color: textColor, fontSize: 10, fontWeight: 'bold' },
+                            splitArea: {
+                                areaStyle: { color: isDark ? ['#1e293b', '#0f172a'] : ['#f8fafc', '#f1f5f9'] }
+                            },
+                            splitLine: {
+                                lineStyle: { color: isDark ? '#334155' : '#e2e8f0' }
+                            },
+                            axisLine: {
+                                lineStyle: { color: isDark ? '#334155' : '#e2e8f0' }
+                            }
+                        },
+                        series: [{
+                            type: 'radar',
+                            data: [
+                                {
+                                    value: [prio, impact, risk, cost, diff],
+                                    name: 'Metrics',
+                                    itemStyle: { color: '#3b82f6' },
+                                    areaStyle: { color: 'rgba(59, 130, 246, 0.3)' },
+                                    lineStyle: { width: 2 }
+                                }
+                            ]
+                        }]
+                    };
+                    
+                    myChart.setOption(option);
+                    chartInstances[id] = myChart;
+                    
+                    // Force resize just to be safe
+                    setTimeout(() => { myChart.resize(); }, 50);
+                }
+            });
+        }
+
+        // --- Theme Management ---
+        function checkTheme() {
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.getElementById('theme-icon').setAttribute('data-lucide', 'sun');
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.getElementById('theme-icon').setAttribute('data-lucide', 'moon');
+            }
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                document.getElementById('theme-icon').setAttribute('data-lucide', 'moon');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                document.getElementById('theme-icon').setAttribute('data-lucide', 'sun');
+            }
+            lucide.createIcons();
+            renderBook(); // Re-render to update map tiles and chart colors
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', initApp);
+
+    </script>
+</body>
+</html>
