@@ -12077,5 +12077,201 @@
         "priority_score": 38,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "143a78fa4e91e27ac1ce49cbd35cddc1",
+        "timestamp": "2026-04-05T02:02:44.722645",
+        "title": "Repurposed School Bike Racks for Cargo Bikes",
+        "sources": [
+            "https://www.youthenroute.ca/",
+            "https://youthenroute.ca/how-to-re-work-old-bike-racks-to-make-them-functional-again/"
+        ],
+        "summary": "A collaborative project in Calgary between the non-profit Youth En Route and fabricator Keith Simmons to retrofit outdated 1950s-style 'toast rack' bike stands with steel hoops and chains, making them compatible with modern cargo bikes and U-locks.",
+        "category": [
+            "Transportation",
+            "Infrastructure",
+            "Upcycling"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Canada",
+            "region": "Calgary, Alberta",
+            "lat": 51.0456064,
+            "lon": -114.057541
+        },
+        "process": {
+            "how_it_works": "The modification transforms vertical-post racks into secure parking by welding horizontal steel hoops that provide leaning support for large frames and chains that allow U-locks to reach the bike frame.",
+            "materials_used": [
+                "24-inch diameter steel hoops",
+                "Grade 30 chain lengths",
+                "Existing 1950s-style toast racks",
+                "Welding materials"
+            ],
+            "step_by_step": [
+                "Identify outdated or non-functional school bike racks scheduled for disposal",
+                "Fabricate 24-inch diameter steel hoops to serve as support structures",
+                "Weld the steel hoops onto the existing vertical posts of the 'toast rack'",
+                "Attach Grade 30 chain lengths to provide flexible locking points for U-locks",
+                "Install the modified racks at school locations to support utilitarian cycling"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Incompatibility of vintage bike racks with modern cargo bikes and U-locks, and the waste of existing steel infrastructure.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project involves standard professional metal fabrication and welding to repurpose existing steel infrastructure. While welding involves high heat and potential fire hazards during the process, it is being performed by a professional fabricator. The final product is a non-reactive, static steel structure that poses minimal risk to the public or the environment."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "a6048b9200a8370ec21c22a553a0b11d",
+        "timestamp": "2026-04-05T02:03:04.166466",
+        "title": "Ti Cycles Custom Cargo Bike Modifications",
+        "sources": [
+            "https://www.ticycles.com/",
+            "https://www.ticycles.com/store/rack-custom-steel",
+            "https://www.ticycles.com/services-overview"
+        ],
+        "summary": "Ti Cycles Fabrication specializes in custom-welded steel and titanium cargo modifications, transforming standard bikes into heavy-duty haulers through bespoke frame-integrated racks and internal wiring.",
+        "category": [
+            "Cycling",
+            "Transportation",
+            "Manufacturing",
+            "Custom Fabrication"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "USA",
+            "region": "Portland, Oregon",
+            "lat": 45.5202471,
+            "lon": -122.674194
+        },
+        "process": {
+            "how_it_works": "Bespoke racks are TIG-welded directly onto a customer's specific bike frame and fork for maximum strength and precision, allowing for integrated cargo solutions that standard bolt-on racks cannot match.",
+            "materials_used": [
+                "Steel tubing",
+                "Titanium tubing",
+                "TIG welding rods",
+                "Dynamo wiring"
+            ],
+            "step_by_step": [
+                "Customer provides the specific bike frame and fork to the fabricator",
+                "Design of bespoke cargo platform or racks based on frame geometry and intended load",
+                "Precision TIG welding of racks and lowrider bars directly onto the frame",
+                "Routing of internal dynamo wiring for integrated lighting systems",
+                "Final finishing and alignment checks to ensure structural integrity"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Converts standard touring or commuting bikes into heavy-duty hauling machines capable of carrying significant loads without the instability of bolt-on accessories.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "high",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic fumes"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The fabrication process involves TIG welding of steel and titanium, which carries inherent risks of fire from sparks and respiratory hazards from metal fumes. However, these are standard industrial risks for a professional fabrication shop and are manageable with proper ventilation, PPE, and workshop safety protocols."
+        },
+        "priority_score": 24,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "415021ceb71553774ea1489a1a4d5e7e",
+        "timestamp": "2026-04-05T02:03:26.865024",
+        "title": "Bilenky Cycle Works Cargo Retrofit Service",
+        "sources": [
+            "https://www.bilenky.com/",
+            "https://www.bilenky.com/cargo-delivery",
+            "https://www.bilenky.com/steel-repairs"
+        ],
+        "summary": "A professional modification service that transforms standard or vintage steel bicycle frames into heavy-duty cargo and delivery vehicles through specialized brazing and welding techniques.",
+        "category": [
+            "Transportation",
+            "Upcycling",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "USA",
+            "region": "Philadelphia, Pennsylvania",
+            "lat": 39.9527237,
+            "lon": -75.1635262
+        },
+        "process": {
+            "how_it_works": "The service uses structural brazing and welding to reinforce existing steel frames, allowing them to withstand the higher stresses of cargo transport and integrate modern safety components.",
+            "materials_used": [
+                "Steel bicycle frames",
+                "Heavy-duty rack mounts",
+                "Replacement down tubes",
+                "Disc brake tabs",
+                "Brazing filler",
+                "Welding rods"
+            ],
+            "step_by_step": [
+                "Evaluation of the existing steel frame for structural suitability",
+                "Removal of original down tubes if replacement is required for higher stress capacity",
+                "Brazing of heavy-duty rack mounts onto the seat stays",
+                "Precision welding of disc brake tabs to the frame or fork for improved stopping power",
+                "Professional reinforcement of critical stress points to handle heavy delivery loads"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Enables the repurposing of standard bicycles into specialized utility vehicles, providing a sustainable alternative to purchasing new purpose-built cargo bikes.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Structural Failure",
+                "Fire Hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "While welding and brazing involve inherent fire hazards and modifying bicycle frames for heavy cargo use introduces risks of structural failure, Bilenky Cycle Works is a professional entity with specialized expertise in steel frame construction. The use of traditional, proven metallurgical techniques by experienced professionals significantly mitigates the risks compared to grassroots or DIY modifications. The primary safety concern is ensuring the modified frame can handle the increased dynamic loads and braking forces of cargo transport."
+        },
+        "priority_score": 24,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
