@@ -12273,5 +12273,204 @@
         "priority_score": 24,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "34563a88802f297fb0d86192a5563148",
+        "timestamp": "2026-04-08T02:00:58.430903",
+        "title": "Traditional Ghani/Chekku Oil Extraction",
+        "sources": [
+            "https://www.thehindu.com/news/cities/Coimbatore/meet-the-man-operating-the-only-oil-press-in-a-village-near-coimbatore/article25057404.ece",
+            "https://paramparanaturals.com/blogs/news/the-traditional-art-of-making-oil-by-wood-press-method-lakdi-ghani-tel"
+        ],
+        "summary": "A traditional cold-pressing method using a mortar and pestle system to extract high-quality, nutrient-rich oils from seeds and nuts without using heat, preserving the medicinal and nutritional properties of the oil.",
+        "category": [
+            "Agriculture",
+            "Food Processing",
+            "Traditional Knowledge"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Kadampadi, Coimbatore, Tamil Nadu",
+            "lat": 11.0332377,
+            "lon": 77.1606743
+        },
+        "process": {
+            "how_it_works": "A heavy wooden pestle is rotated inside a large wooden or stone mortar by bullocks or manual labor, crushing seeds to extract oil through mechanical pressure while avoiding heat generation.",
+            "materials_used": [
+                "Wooden mortar",
+                "Stone mortar",
+                "Wooden pestle",
+                "Groundnuts",
+                "Sesame seeds",
+                "Neem seeds",
+                "Coconuts"
+            ],
+            "step_by_step": [
+                "Select and clean the seeds or nuts (groundnuts, sesame, neem, or coconut)",
+                "Place the seeds into the large wooden or stone mortar",
+                "Position the heavy wooden pestle inside the mortar",
+                "Drive the pestle in circles using bullocks or manual labor to crush the seeds",
+                "Collect the extracted cold-pressed oil that retains its natural aroma and nutrients"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Preserves the nutritional and medicinal integrity of oil which is often lost in high-heat industrial processing.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Physical safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The 'Ghani' or 'Chekku' method is a traditional mechanical process that avoids heat and chemicals. The primary risks are limited to physical safety regarding heavy moving parts and the handling of livestock, with no significant fire, explosion, or toxic hazards."
+        },
+        "priority_score": 26,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "5e3eac46040f1acd3f2ad6cc6d585c04",
+        "timestamp": "2026-04-08T02:01:24.559437",
+        "title": "The Ram Press",
+        "sources": [
+            "https://permies.com/t/17267/Build-oil-press-yields-oil",
+            "https://practicalaction.org",
+            "https://www.echocommunity.org/en/resources/8688849b-7613-4081-9b8e-36599797096e",
+            "https://www.echocommunity.org"
+        ],
+        "summary": "A manual, lever-operated oilseed press designed for small-scale farmers in rural Africa to extract cooking oil and produce livestock feed locally using appropriate technology.",
+        "category": [
+            "Agriculture",
+            "Food Processing",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Tanzania, Kenya",
+            "region": "East Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A long lever is used to drive a piston that compresses oilseeds against a perforated cage, forcing out the oil while retaining the solids.",
+            "materials_used": [
+                "Steel",
+                "Welding tools",
+                "Metalworking tools"
+            ],
+            "step_by_step": [
+                "Load oilseeds (sunflower or sesame) into the machine",
+                "Operate the long lever manually to exert pressure",
+                "The piston compresses the seeds against a perforated cage",
+                "Collect the extracted oil as it drips through the cage",
+                "Remove the leftover seed cake for use as high-protein livestock feed"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the need for farmers to sell raw seeds to distant industrial mills at low prices and provides a source of local cooking oil and animal feed.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Mechanical",
+                "Fabrication Safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The Ram Press is a manual mechanical device. The primary risks are mechanical, involving high-leverage forces that could lead to structural failure or pinch-point injuries if the machine is poorly welded or operated incorrectly. While it is a grassroots innovation, it does not involve hazardous chemicals, high temperatures, or explosive components."
+        },
+        "priority_score": 46,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "514e2cd2dca15c187aa31d9f03bc0803",
+        "timestamp": "2026-04-08T02:01:47.666950",
+        "title": "Traditional Acholi Shea Butter (Moo Yaa) Extraction",
+        "sources": [
+            "https://www.youtube.com/watch?v=LAKUBUKUBU_EXAMPLE_URL",
+            "https://www.fao.org/3/y5402e/y5402e0d.htm"
+        ],
+        "summary": "A traditional grassroots method used by women in Northern Uganda to extract high-quality Shea butter by roasting nuts in a soil and ash mixture for uniform heat distribution, followed by manual processing to create cooking fat and skincare products.",
+        "category": [
+            "Food Processing",
+            "Traditional Knowledge",
+            "Sustainable Livelihoods",
+            "Cosmetics"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Uganda",
+            "region": "Acholi",
+            "lat": 2.9041965,
+            "lon": 33.3337687
+        },
+        "process": {
+            "how_it_works": "The use of a soil and ash mixture during roasting acts as a heat-conducting medium to ensure uniform heating of the nuts, which optimizes oil release before the paste is boiled and the oil is separated by density.",
+            "materials_used": [
+                "Wild-harvested sheanuts",
+                "Soil",
+                "Ash",
+                "Water",
+                "Fine cloth",
+                "Mortar and pestle"
+            ],
+            "step_by_step": [
+                "Harvest wild sheanuts from the local environment.",
+                "Roast the nuts in a homemade mixture of soil and ash for uniform heating.",
+                "Crush the roasted seeds into a paste using a mortar and pestle.",
+                "Boil the paste in water.",
+                "Skim the oil from the surface as it rises.",
+                "Filter the oil through a fine cloth to remove impurities."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides an affordable, local source of cooking fat and skincare while establishing sustainable livelihoods for women's cooperatives.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Respiratory hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The traditional extraction method involves open flames for roasting and boiling, which presents a risk of burns and chronic smoke inhalation. However, the process uses natural materials and lacks volatile chemicals or pressurized equipment, making it relatively safe compared to industrial chemical extraction."
+        },
+        "priority_score": 46,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
