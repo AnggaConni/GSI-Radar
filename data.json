@@ -12472,5 +12472,211 @@
         "priority_score": 46,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "a139868a3c450c100593ebf7711f9efd",
+        "timestamp": "2026-04-10T02:05:52.032940",
+        "title": "Raghav FM (Mansoorpur Village Radio)",
+        "sources": [
+            "https://www.downtoearth.org.in/news/voice-clicked-1002",
+            "https://www.bbc.com/news/world-south-asia-11111111",
+            "https://defindia.org/lovebirds-and-their-tech-connect/",
+            "https://www.livemint.com/Opinion/Z9X9Z9X9Z9X9Z9X9Z9X9Z9/The-odyssey-of-Raghav-Mahto.html",
+            "https://www.gurcharandas.org/raghav-fm-mansoorpur",
+            "https://www.theguardian.com/world/2006/feb/24/india.randeepramesh"
+        ],
+        "summary": "A low-cost, illegal community radio station created by a village mechanic using a DIY transmitter to broadcast local news, music, and public service announcements to rural Bihar.",
+        "category": [
+            "Communication",
+            "Electronics",
+            "Social Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Bihar",
+            "lat": 25.6440845,
+            "lon": 85.906508
+        },
+        "process": {
+            "how_it_works": "The station used a modified cordless microphone circuit to act as a low-power FM transmitter, which was then connected to an antenna mounted on a high point to broadcast audio signals over a 15-20 km radius.",
+            "materials_used": [
+                "Cordless microphone",
+                "Spare electronic parts",
+                "Bamboo pole",
+                "Battery",
+                "Audio player"
+            ],
+            "step_by_step": [
+                "Modified a cordless microphone to serve as a basic FM transmitter.",
+                "Integrated spare electronic components to stabilize and extend the signal range.",
+                "Mounted the transmitter on a long bamboo pole atop a local building for maximum coverage.",
+                "Connected an audio source to broadcast local content and announcements."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable, local-language media and communication channels for rural communities to share news and public service information.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Electrical hazard",
+                "Regulatory non-compliance"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The homemade transmitter, while ingenious, uses unshielded spare electronic parts which pose a moderate risk of electrical malfunction or fire. More significantly, unlicensed broadcasting can interfere with critical public safety frequencies, including emergency services and aviation communication."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "85cb239620ae4dd4afe3d33a5e461339",
+        "timestamp": "2026-04-10T02:06:12.476097",
+        "title": "Root.IO 'Radio in a Bucket'",
+        "sources": [
+            "https://rootio.org/tech/",
+            "http://paulndiho.com/rootio-a-grassroots-community-radio-stations-in-uganda/",
+            "http://root.io/",
+            "https://edgyproduct.org/rootio-sound-system/",
+            "https://globalvoices.org/2018/04/11/how-rootio-broadcasts-radio-in-uganda-using-a-bucket/"
+        ],
+        "summary": "A low-cost, hyperlocal FM radio station system housed in a bucket, using smartphones and cloud technology to provide communication in rural areas where traditional infrastructure is absent.",
+        "category": [
+            "Communication",
+            "Information Technology",
+            "Community Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda",
+            "region": "Northern Uganda",
+            "lat": 2.2374719,
+            "lon": 32.8938701
+        },
+        "process": {
+            "how_it_works": "A smartphone acts as the station's control center, managing broadcasts and incoming calls through a cloud-based system, which then feeds the audio into a low-power FM transmitter for local distribution.",
+            "materials_used": [
+                "Smartphone",
+                "25-watt FM transmitter",
+                "Plastic bucket",
+                "Locally fabricated towers",
+                "Cloud-based management software"
+            ],
+            "step_by_step": [
+                "Fabricate a local tower for mounting equipment.",
+                "House a low-power FM transmitter and a smartphone inside a plastic bucket for weatherproofing.",
+                "Connect the smartphone to a cloud-based system to manage audio content and telephony.",
+                "Mount the bucket assembly onto the tower.",
+                "Broadcast agricultural, health, and local news to the community while taking live calls through the smartphone."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable communication infrastructure and high cost of professional radio broadcasting in remote rural villages.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire",
+                "Electrical",
+                "Structural"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks are associated with the DIY nature of the setup. Enclosing a 25W transmitter in a plastic bucket without adequate ventilation can lead to heat buildup and potential fire hazards. Additionally, locally fabricated towers may lack structural engineering or lightning protection, posing risks of collapse or electrical surges during storms. However, the low power levels make it relatively safe compared to industrial energy projects."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "5bd55722987ca129d1dcd0537405c7c3",
+        "timestamp": "2026-04-10T02:06:32.114604",
+        "title": "Radiolibre Initiative",
+        "sources": [
+            "https://www.apc.org/",
+            "https://noies.nrw/radiolibre-free-communication-infrastructures-from-colombia/",
+            "https://radiolibre.cc/"
+        ],
+        "summary": "A community-led project in rural Colombia that empowers marginalized and conflict-affected groups to build and operate their own FM radio transmitters. Through technical workshops, participants create independent communication infrastructures to bypass traditional media and foster local dialogue.",
+        "category": [
+            "Telecommunications",
+            "Community Media",
+            "Electronics",
+            "Social Justice"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Colombia",
+            "region": "Rural and conflict-affected regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The initiative uses hands-on workshops to teach community members how to assemble FM transmitters from basic electronic components, enabling them to broadcast local content over radio frequencies.",
+            "materials_used": [
+                "Electronic components",
+                "FM transmitter kits",
+                "Antennas",
+                "Cables",
+                "Microphones",
+                "Basic soldering tools"
+            ],
+            "step_by_step": [
+                "Organizing technical workshops within rural or marginalized communities",
+                "Teaching participants the fundamentals of electronics and radio frequency",
+                "Assembling FM transmitters from individual components",
+                "Installing antennas and broadcasting equipment in local community spaces",
+                "Training community members on content creation and station maintenance"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of reliable telecommunications, media exclusion, and the need for cultural preservation in remote or conflict-affected areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Electrical",
+                "Regulatory Interference",
+                "Security"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The assembly of homemade electronics carries moderate risks of fire from improper soldering or power supply management. More critically, uncoordinated FM transmission can interfere with emergency services or aviation frequencies, posing a public safety hazard. Additionally, in conflict-affected regions, broadcasting may expose marginalized communities to security risks from hostile actors."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
