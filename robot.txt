@@ -1,0 +1,7 @@
+# robots.txt for GSI Radar
+# Mengizinkan semua search engine bot untuk merayapi website
+User-agent: *
+Allow: /
+
+# Menunjukkan lokasi peta situs (sitemap) agar indeks lebih cepat
+Sitemap: https://anggaconni.github.io/GSI-Radar/sitemap.xml
