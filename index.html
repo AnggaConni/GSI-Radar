@@ -8,7 +8,7 @@
     <title>GSI Radar | Global Innovation Intelligence System</title>
     <meta name="title" content="GSI Radar | Global Innovation Intelligence System">
     <meta name="description" content="AI-powered intelligence system transforming raw, decentralised innovation data into structured, policy-ready insights. Discover grassroots and institutional solutions worldwide.">
-    <meta name="keywords" content="Grassroots Innovation, STI, Science Technology Innovation, OSINT, AI Radar, Policy Intelligence, Jugaad, Frugal Innovation">
+    <meta name="keywords" content="Grassroots Innovation, STI, Science Technology Innovation, OSINT, AI Radar, Policy Intelligence, Jugaad, Frugal Innovation, Systemic Risk">
     <meta name="author" content="Angga Conni Saputra">
 
     <!-- Open Graph / Facebook -->
@@ -122,7 +122,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            touch-action: none; /* Penting agar tidak scrolling saat main di HP */
+            touch-action: none;
         }
         #zuma-ui-layer {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -172,8 +172,9 @@
                     </div>
                 </a>
                 
-                <div class="hidden lg:flex items-center gap-8">
+                <div class="hidden lg:flex items-center gap-6">
                     <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">The Blind Spot</a>
+                    <a href="#responsibility" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">Risk & Trends</a>
                     <a href="#methodology" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">AI Pipeline</a>
                     <a href="#framework" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">STI Framework</a>
                     <a href="#quiz" class="text-sm font-semibold text-slate-600 hover:text-brand-accent transition-colors">Knowledge Quiz</a>
@@ -228,6 +229,7 @@
                 <!-- Right HTML/CSS UI Mockup (Light Theme) -->
                 <div class="relative hidden lg:block animate-float">
                     <div class="mockup-container bg-white rounded-2xl flex flex-col h-[550px] overflow-hidden border border-slate-200">
+                        <!-- Mock Header -->
                         <div class="h-14 border-b border-slate-100 bg-slate-50 flex items-center px-5 justify-between">
                             <div class="flex items-center gap-2">
                                 <i class="ph-fill ph-radar text-brand-blue text-lg animate-spin-slow"></i>
@@ -240,6 +242,7 @@
                             </div>
                         </div>
 
+                        <!-- Mock Stats -->
                         <div class="grid grid-cols-3 gap-px bg-slate-100 border-b border-slate-100">
                             <div class="bg-white p-4">
                                 <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Innovations</p>
@@ -255,7 +258,9 @@
                             </div>
                         </div>
 
+                        <!-- Mock Body -->
                         <div class="flex-1 flex flex-col gap-4 p-5 bg-slate-50/50 overflow-hidden">
+                            <!-- Fake Lineage Chart -->
                             <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
                                 <h3 class="font-serif font-bold text-xs text-slate-800 mb-3 flex items-center gap-2"><i class="ph-fill ph-tree-structure text-brand-blue"></i> Innovation Lineage</h3>
                                 <div class="space-y-3">
@@ -270,6 +275,7 @@
                                 </div>
                             </div>
 
+                            <!-- Fake Directory Card -->
                             <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex gap-4 mt-2">
                                 <div class="w-20 h-20 bg-amber-50 rounded-lg flex flex-col items-center justify-center border border-amber-100 shrink-0">
                                     <i class="ph-fill ph-recycle text-amber-500 text-3xl mb-1"></i>
@@ -288,13 +294,14 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Definition / The Problem Section -->
+    <!-- 1. The Problem Section (Blind Spot) -->
     <section id="about" class="py-24 border-t border-slate-200 bg-white relative">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-brand-blue font-bold text-xs tracking-widest uppercase mb-4">The Context</h2>
@@ -307,25 +314,69 @@
                 <p>
                     But this creates a massive structural blind spot. The most ingenious, context-driven solutions—those solving real problems in real time—often happen outside laboratories. They happen in villages, workshops, and urban slums. This is known as <strong>Grassroots Innovation</strong> (or <em>Jugaad / Frugal Innovation</em>).
                 </p>
-                
-                <div class="grid md:grid-cols-2 gap-6 mt-8">
-                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl shadow-sm">
-                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-4"><i class="ph-fill ph-eye-slash"></i></div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">The Visibility Gap</h4>
-                        <p class="text-sm">A farmer modifying a tractor to run on biogas scores a "zero" on traditional STI metrics because they don't publish journals. Without visibility, there is no funding or scaling.</p>
-                    </div>
-                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl shadow-sm">
-                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-4"><i class="ph-fill ph-warning-circle"></i></div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">The Safety Hazard</h4>
-                        <p class="text-sm">Because grassroots innovations lack formal Quality Control (QC), mechanical or chemical workarounds often pose severe safety risks to the creators and their communities.</p>
-                    </div>
-                </div>
+                <p>
+                    Because grassroots innovators rarely publish academic papers or hold patents, their work scores a mathematical "zero" in traditional STI metrics. The result? Brilliant, scalable local solutions are chronically underfunded and ignored by policymakers.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- AI Pipeline / Methodology Section -->
-    <section id="methodology" class="py-24 border-t border-slate-200 bg-slate-50">
+    <!-- NEW 2. Trend Awareness & Risk Ripple Effect Section -->
+    <section id="responsibility" class="py-24 border-t border-slate-200 bg-slate-50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-red-100/30 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-brand-blue font-bold text-xs tracking-widest uppercase mb-4">Intelligence & Responsibility</h2>
+                <h3 class="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Trend Awareness vs. Systemic Risk</h3>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Grassroots innovation is a double-edged sword. While it represents the pinnacle of human ingenuity and survival, operating completely outside formal regulations introduces dangerous vulnerabilities. <strong>GSI Radar doesn't just hunt for trends; it hunts for risks.</strong>
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-stretch">
+                <!-- Left: The Power of Trends -->
+                <div class="bg-white p-8 rounded-3xl border border-blue-200 shadow-lg flex flex-col">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-blue-100"><i class="ph-fill ph-trend-up"></i></div>
+                    <h4 class="text-2xl font-serif font-bold text-slate-900 mb-4">The Power of Trend Awareness</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6 flex-grow">
+                        By tracking informal innovation trends across the decentralized web, policymakers can spot hyper-local solutions <em>before</em> they hit the mainstream. 
+                        If ten different villages independently invent a similar low-cost water filtration system, it proves a massive market need and a viable functional concept that formal institutions can adopt, refine, and scale.
+                    </p>
+                    <ul class="space-y-3 text-sm font-medium text-slate-700 bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+                        <li class="flex gap-3 items-start"><i class="ph-fill ph-check-circle text-blue-500 mt-0.5"></i> <span>Identifies localized problem-solution fits.</span></li>
+                        <li class="flex gap-3 items-start"><i class="ph-fill ph-check-circle text-blue-500 mt-0.5"></i> <span>Saves years of costly, disconnected formal R&D.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Right: The Reality of Risk -->
+                <div class="bg-white p-8 rounded-3xl border border-red-200 shadow-lg flex flex-col relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-[100px] pointer-events-none"></div>
+                    <div class="w-16 h-16 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-red-100 relative z-10"><i class="ph-fill ph-warning-octagon"></i></div>
+                    <h4 class="text-2xl font-serif font-bold text-slate-900 mb-4 relative z-10">The Risk Ripple Effect</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">
+                        Informal innovations bypass Quality Control (QC). A failing DIY invention doesn't just hurt the inventor—it can cause catastrophic collateral damage. 
+                        A DIY biogas digester is an amazing trend; a <em>leaking</em> DIY biogas digester is a neighborhood hazard. A homemade agricultural chemical might kill pests, but it might also permanently poison the communal groundwater.
+                    </p>
+                    <ul class="space-y-3 text-sm font-medium text-slate-700 bg-red-50/50 p-4 rounded-xl border border-red-100 relative z-10">
+                        <li class="flex gap-3 items-start"><i class="ph-fill ph-x-circle text-red-500 mt-0.5"></i> <span><strong>Community Hazard:</strong> Ungrounded electrical DIYs causing fires.</span></li>
+                        <li class="flex gap-3 items-start"><i class="ph-fill ph-x-circle text-red-500 mt-0.5"></i> <span><strong>Environmental Spillovers:</strong> Toxic leaching from informal recycling.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Conclusion Bar -->
+            <div class="mt-12 bg-slate-900 rounded-2xl p-6 md:p-8 text-center border border-slate-800 shadow-xl">
+                <p class="text-slate-300 text-lg leading-relaxed max-w-3xl mx-auto">
+                    <span class="text-brand-accent font-bold">The Goal of STI Policy</span> is not to ban grassroots innovation out of fear, nor to romanticize it blindly. The goal is to discover it, assess the systemic risks, and provide the institutional engineering support needed to make it safe for scale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. AI Pipeline / Methodology Section -->
+    <section id="methodology" class="py-24 border-t border-slate-200 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-brand-accent font-bold text-xs tracking-widest uppercase mb-4">The Methodology</h2>
@@ -336,12 +387,12 @@
             </div>
 
             <div class="relative pl-4 md:pl-0 max-w-4xl mx-auto">
-                <div class="hidden md:block absolute left-1/2 top-4 bottom-4 w-1 bg-slate-200 -translate-x-1/2"></div>
+                <div class="hidden md:block absolute left-1/2 top-4 bottom-4 w-1 bg-slate-100 -translate-x-1/2"></div>
                 
                 <div class="space-y-12 relative z-10">
                     <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
                         <div class="md:w-1/2 flex justify-end md:text-right">
-                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full">
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full hover:border-brand-blue transition-colors">
                                 <h4 class="text-lg font-bold text-slate-900 mb-2"><span class="text-brand-blue">01.</span> Open Web Discovery</h4>
                                 <p class="text-sm text-slate-600">The AI searches blogs, YouTube tutorials, and local forums using specific thematic keywords to find unrecorded solutions.</p>
                             </div>
@@ -358,18 +409,19 @@
                             <i class="ph-fill ph-cube text-brand-accent text-xl"></i>
                         </div>
                         <div class="md:w-1/2 flex justify-start">
-                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full">
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full hover:border-brand-accent transition-colors">
                                 <h4 class="text-lg font-bold text-slate-900 mb-2"><span class="text-brand-accent">02.</span> Deep Data Structuring</h4>
                                 <p class="text-sm text-slate-600">Unstructured text is converted into metadata: step-by-step processes, material lists, and exact geographic coordinates.</p>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Updated Step 3 to reflect Risk Awareness -->
                     <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
                         <div class="md:w-1/2 flex justify-end md:text-right">
-                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full">
-                                <h4 class="text-lg font-bold text-slate-900 mb-2"><span class="text-red-500">03.</span> Risk Assessment (Safety Brake)</h4>
-                                <p class="text-sm text-slate-600">The system evaluates hazards (fire, toxicity, structural failure) and flags dangerous grassroots practices needing institutional intervention.</p>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full hover:border-red-400 transition-colors">
+                                <h4 class="text-lg font-bold text-slate-900 mb-2"><span class="text-red-500">03.</span> Algorithmic Risk Assessment</h4>
+                                <p class="text-sm text-slate-600">The system evaluates collateral hazards (fire, toxicity, leaching) and flags dangerous practices to prevent the "Risk Ripple Effect" within communities.</p>
                             </div>
                         </div>
                         <div class="hidden md:flex w-12 h-12 bg-white border-4 border-red-400 rounded-full items-center justify-center shrink-0 z-10 shadow-md">
@@ -384,7 +436,7 @@
                             <i class="ph-fill ph-share-network text-purple-500 text-xl"></i>
                         </div>
                         <div class="md:w-1/2 flex justify-start">
-                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full">
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm w-full hover:border-purple-400 transition-colors">
                                 <h4 class="text-lg font-bold text-slate-900 mb-2"><span class="text-purple-500">04.</span> Knowledge Lineage</h4>
                                 <p class="text-sm text-slate-600">Maps whether the knowledge is self-taught, derived from formal education, or adapted from traditional cultural practices.</p>
                             </div>
@@ -395,8 +447,8 @@
         </div>
     </section>
 
-    <!-- Educational Carousel (STI Framework) -->
-    <section id="framework" class="py-24 border-t border-slate-200 bg-white overflow-hidden">
+    <!-- 4. Educational Carousel (STI Framework) -->
+    <section id="framework" class="py-24 border-t border-slate-200 bg-slate-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
                 <h2 class="text-brand-blue font-bold text-xs tracking-widest uppercase mb-4">STI Frameworks</h2>
@@ -404,15 +456,15 @@
                 <p class="text-slate-600 text-lg max-w-2xl">Not all innovation happens in a lab. Swipe to explore the different levels of technological advancement tracked by the radar.</p>
             </div>
             <div class="flex gap-2">
-                <button onclick="document.getElementById('od-carousel').scrollBy({left: -300, behavior: 'smooth'})" class="w-12 h-12 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-white hover:shadow-md transition-all"><i class="ph-bold ph-arrow-left"></i></button>
-                <button onclick="document.getElementById('od-carousel').scrollBy({left: 300, behavior: 'smooth'})" class="w-12 h-12 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-white hover:shadow-md transition-all"><i class="ph-bold ph-arrow-right"></i></button>
+                <button onclick="document.getElementById('od-carousel').scrollBy({left: -300, behavior: 'smooth'})" class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-100 hover:shadow-md transition-all shadow-sm"><i class="ph-bold ph-arrow-left"></i></button>
+                <button onclick="document.getElementById('od-carousel').scrollBy({left: 300, behavior: 'smooth'})" class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-100 hover:shadow-md transition-all shadow-sm"><i class="ph-bold ph-arrow-right"></i></button>
             </div>
         </div>
 
         <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-6 md:px-12 pb-12 hide-scrollbar scroll-smooth" id="od-carousel">
             
-            <article class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col hover:shadow-xl hover:border-emerald-300 transition-all">
-                <div class="bg-white w-14 h-14 rounded-xl flex items-center justify-center text-emerald-500 text-2xl mb-6 border border-slate-200 shadow-sm"><i class="ph-fill ph-plant"></i></div>
+            <article class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-white border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col hover:shadow-xl hover:border-emerald-300 transition-all">
+                <div class="bg-slate-50 w-14 h-14 rounded-xl flex items-center justify-center text-emerald-500 text-2xl mb-6 border border-slate-100 shadow-sm"><i class="ph-fill ph-plant"></i></div>
                 <h4 class="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">Level 1</h4>
                 <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">Grassroots Innovation</h3>
                 <p class="text-slate-600 mb-6 leading-relaxed flex-grow text-sm">
@@ -423,8 +475,8 @@
                 </div>
             </article>
 
-            <article class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col hover:shadow-xl hover:border-amber-300 transition-all">
-                <div class="bg-white w-14 h-14 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6 border border-slate-200 shadow-sm"><i class="ph-fill ph-wrench"></i></div>
+            <article class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-white border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col hover:shadow-xl hover:border-amber-300 transition-all">
+                <div class="bg-slate-50 w-14 h-14 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6 border border-slate-100 shadow-sm"><i class="ph-fill ph-wrench"></i></div>
                 <h4 class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-2">Level 2</h4>
                 <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">Semi-Formal Innovation</h3>
                 <p class="text-slate-600 mb-6 leading-relaxed flex-grow text-sm">
@@ -435,8 +487,8 @@
                 </div>
             </article>
 
-            <article class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col hover:shadow-xl hover:border-blue-300 transition-all">
-                <div class="bg-white w-14 h-14 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6 border border-slate-200 shadow-sm"><i class="ph-fill ph-bank"></i></div>
+            <article class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-white border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col hover:shadow-xl hover:border-blue-300 transition-all">
+                <div class="bg-slate-50 w-14 h-14 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-6 border border-slate-100 shadow-sm"><i class="ph-fill ph-bank"></i></div>
                 <h4 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Level 3</h4>
                 <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">Institutional Innovation</h3>
                 <p class="text-slate-600 mb-6 leading-relaxed flex-grow text-sm">
@@ -447,8 +499,8 @@
                 </div>
             </article>
 
-            <article class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col hover:shadow-xl hover:border-purple-300 transition-all">
-                <div class="bg-white w-14 h-14 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-6 border border-slate-200 shadow-sm"><i class="ph-fill ph-handshake"></i></div>
+            <article class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-white border border-slate-200 rounded-3xl p-8 shadow-sm flex flex-col hover:shadow-xl hover:border-purple-300 transition-all">
+                <div class="bg-slate-50 w-14 h-14 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-6 border border-slate-100 shadow-sm"><i class="ph-fill ph-handshake"></i></div>
                 <h4 class="text-xs font-bold text-purple-600 uppercase tracking-widest mb-2">The Synthesis</h4>
                 <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">Inclusive Innovation</h3>
                 <p class="text-slate-600 mb-6 leading-relaxed flex-grow text-sm">
@@ -464,14 +516,13 @@
 
     <!-- KNOWLEDGE QUIZ SECTION -->
     <section id="quiz" class="py-24 border-t border-slate-200 bg-slate-900 relative overflow-hidden">
-        <!-- Decoration -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/10 rounded-full blur-[100px] pointer-events-none"></div>
         
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <div class="text-center mb-12">
                 <h2 class="text-brand-accent font-bold text-xs tracking-widest uppercase mb-4"><i class="ph-fill ph-brain text-lg align-middle"></i> Test Your Knowledge</h2>
                 <h3 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">STI & Innovation Quiz</h3>
-                <p class="text-slate-400 text-lg">Test your understanding of modern Science, Technology, and Innovation policy, Grassroots ecosystems, and OSINT methodology.</p>
+                <p class="text-slate-400 text-lg">Test your understanding of modern Science, Technology, and Innovation policy, Grassroots ecosystems, and Systemic Risks.</p>
             </div>
             
             <div class="bg-slate-800 border border-slate-700 rounded-3xl p-8 shadow-2xl relative overflow-hidden min-h-[400px] flex flex-col">
@@ -502,10 +553,9 @@
         </div>
     </section>
 
-    <!-- NEW: ZUMA GAME SECTION (Mental Break) -->
-    <section id="game-break" class="py-24 border-t border-slate-700 bg-slate-900 relative overflow-hidden">
-        <!-- Decoration to blend with previous dark section -->
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-journal/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <!-- ZUMA GAME SECTION (Mental Break) -->
+    <section id="game-break" class="py-24 border-t border-slate-700 bg-[#0a0a0a] relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <div class="text-center mb-10">
@@ -514,7 +564,6 @@
                 <p class="text-slate-400 text-sm max-w-xl mx-auto">Strategic analysis can be exhausting. Take a quick mental break with this classic retro challenge. Clear the marbles before they reach the center.</p>
             </div>
 
-            <!-- ZUMA GAME WRAPPER -->
             <div id="zuma-wrapper">
                 <canvas id="zumaCanvas" width="800" height="800"></canvas>
                 <div id="zuma-hud">Score: <span id="zuma-score">0</span></div>
@@ -617,6 +666,7 @@
             { t: "Frugal Innovation (Jugaad)", d: "A core characteristic of developing-world ingenuity.", q: "The term 'Frugal Innovation' refers to:", opts:["Spending billions of dollars to create luxury goods.", "Redesigning products and processes to do more with less, drastically cutting costs while maintaining utility.", "Refusing to use any form of electricity or modern tools.", "Creating technologies that only work in zero-gravity environments."], ans: 1},
             { t: "OSINT in Policy", d: "Using Open-Source Intelligence for development.", q: "How does a system like GSI Radar utilize OSINT (Open-Source Intelligence) for policy making?", opts:["By hacking into secure government databases.", "By autonomously scanning public blogs, forums, and local news to find invisible community solutions.", "By launching physical satellites to track farm equipment.", "By conducting door-to-door paper surveys."], ans: 1},
             { t: "Knowledge Lineage", d: "Tracing the origin of an idea.", q: "When GSI Radar tags an innovation's knowledge source as 'Adapted from Existing', what does this imply?", opts:["The creator stole a patented corporate design.", "The community took a known concept (e.g., a toilet) and iteratively modified it to fit local material constraints.", "The innovation was handed down by ancient ancestors without any modern changes.", "The innovation was generated entirely by AI."], ans: 1},
+            { t: "Systemic Risk (The Ripple Effect)", d: "Understanding collateral damage in informal innovation.", q: "Why is 'The Risk Ripple Effect' a critical concern in grassroots innovation?", opts:["Because a failing DIY invention, like a leaking biogas digester, doesn't just harm the inventor—it can poison community groundwater or cause neighborhood fires.", "Because local inventions often steal market share from multinational corporations.", "Because grassroots innovators usually overcharge their neighbors for their inventions.", "Because it causes the local currency to inflate."], ans: 0},
             { t: "Priority Scoring Matrix", d: "How automated intelligence evaluates findings.", q: "In strategic intelligence, a 'Priority Score' for a new innovation is typically a composite of:", opts:["The creator's age and social media follower count.", "Impact Scale, Risk Penalties, and Ease of Replicability.", "The number of colors used in the design and its aesthetic appeal.", "The amount of venture capital funding it received."], ans: 1}
         ];
 
@@ -698,10 +748,8 @@
         const zCanvas = document.getElementById('zumaCanvas');
         const zCtx = zCanvas.getContext('2d');
 
-        // Audio Context (Local variables to avoid conflict)
         let zAudioCtx = null;
 
-        // Zuma Constants
         const Z_COLORS =['#FF2222', '#22FF22', '#2288FF', '#FFFF22', '#FF22FF'];
         const Z_MARBLE_RADIUS = 16;
         const Z_MARBLE_DIA = Z_MARBLE_RADIUS * 2;
@@ -710,21 +758,19 @@
         const Z_PROJECTILE_SPEED = 18;
         const Z_TOTAL_MARBLES = 80;
 
-        // Zuma State
         let zPathNodes =[];
         let Z_MAX_PATH = 0;
-        let zMarbles = [];
+        let zMarbles =[];
         let zProjectiles = [];
         let zParticles =[];
         let zScore = 0;
         let zSpawnedCount = 0;
-        let zState = 'START'; // START, PLAYING, GAMEOVER, WIN
+        let zState = 'START'; 
         let zMouseX = 400, zMouseY = 400;
         let zShooterAngle = 0;
         let zCurrentColor = Z_COLORS[0];
         let zNextColor = Z_COLORS[1];
 
-        // --- Audio ---
         function zInitAudio() {
             if (!zAudioCtx) zAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
             if (zAudioCtx.state === 'suspended') zAudioCtx.resume();
@@ -758,7 +804,6 @@
             }
         }
 
-        // --- Path ---
         function zGenPath() {
             zPathNodes =[];
             let totalLength = 0;
@@ -941,7 +986,6 @@
             if (zState === 'PLAYING') requestAnimationFrame(zLoop);
         }
 
-        // --- Input Scoped to Canvas Wrapper ---
         function zUpdateMouse(clientX, clientY) {
             const rect = zCanvas.getBoundingClientRect();
             const scaleX = zCanvas.width / rect.width;
@@ -971,7 +1015,6 @@
             if (zState === 'PLAYING') { e.preventDefault(); zUpdateMouse(e.touches[0].clientX, e.touches[0].clientY); zShoot(); }
         }, {passive: false});
 
-        // Initialize empty draw
         zGenPath(); zDraw();
     </script>
 </body>
