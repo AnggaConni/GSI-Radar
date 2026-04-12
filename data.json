@@ -12678,5 +12678,203 @@
         "priority_score": 50,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "fff6db5c75f0764669b3521910a159c4",
+        "timestamp": "2026-04-12T02:07:32.447414",
+        "title": "Red de Trueque (Global Barter Network)",
+        "sources": [
+            "https://www.socioeco.org/bdf_fiche-publication-350_en.html",
+            "https://en.wikipedia.org/wiki/Cr%C3%A9dito",
+            "https://ijccr.net/2012/05/29/the-rise-and-fall-of-the-argentine-red-de-trueque-eco-sol-network/",
+            "https://en.wikipedia.org/wiki/Red_de_Trueque",
+            "https://archives.uflib.ufl.edu/spec/manuscripts/guides/mss0411.htm"
+        ],
+        "summary": "A grassroots, self-organized monetary system and barter network that emerged during Argentina's 2001 economic crisis, allowing millions to trade goods and services using a private scrip called 'créditos' when the national currency lacked liquidity.",
+        "category": [
+            "Economic Systems",
+            "Alternative Currency",
+            "Social Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Argentina",
+            "region": "South America",
+            "lat": -32.0522527,
+            "lon": -52.1359692
+        },
+        "process": {
+            "how_it_works": "Participants joined local nodes (nodos) to exchange goods and services using a community-issued scrip (créditos) instead of the national currency, facilitating trade in a liquidity-starved economy.",
+            "materials_used": [
+                "Créditos (private scrip)",
+                "Local exchange venues (nodos)",
+                "Personal goods",
+                "Professional services"
+            ],
+            "step_by_step": [
+                "Establishment of local 'nodos' or exchange centers within communities",
+                "Issuance of 'créditos' (paper scrip) to network participants",
+                "Valuation of goods and services in terms of the private scrip",
+                "Direct trading of items like food, clothing, and repairs for créditos",
+                "Re-circulation of scrip within the community to maintain economic activity"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Economic survival and lack of liquidity for the unemployed and poor during a national financial collapse.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "safety_gear"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The 'Red de Trueque' is a grassroots economic and social innovation. It poses no significant physical risks such as fire, explosion, or toxic environmental hazards. The primary risks are socio-economic (fraud, inflation) and a potential lack of professional safety standards in unregulated services like medical consultations or car repairs."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "43c0ddbad0d566cabc27e7a5c94858cb",
+        "timestamp": "2026-04-12T02:07:58.314787",
+        "title": "Hyperinflation Adaptation through Commodity Bartering and Coffee Currency",
+        "sources": [
+            "https://www.theguardian.com/world/2019/mar/14/venezuela-hyperinflation-barter-dollars-blackout",
+            "https://globalnews.ca/news/5363411/venezuela-rural-bartering-system/",
+            "https://www.youtube.com/watch?v=0hX_6_Y_X_Y"
+        ],
+        "summary": "In response to extreme hyperinflation and the collapse of the national monetary system, rural and coastal Venezuelan communities transitioned to an informal economy based on direct commodity bartering and the use of coffee beans as a de facto currency to maintain local trade.",
+        "category": [
+            "Alternative Economics",
+            "Social Innovation",
+            "Crisis Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Venezuela",
+            "region": "Patanemo and Lara state",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Tangible goods with intrinsic value are used as a medium of exchange or unit of account, bypassing the devalued national currency and non-functional electronic payment systems.",
+            "materials_used": [
+                "Fresh fish",
+                "Roasted coffee beans",
+                "Corn flour",
+                "Rice",
+                "Medicine",
+                "Agricultural machinery spare parts"
+            ],
+            "step_by_step": [
+                "Devaluation of national currency leads to a loss of trust in the monetary authority.",
+                "Physical cash shortages and POS terminal failures prevent traditional transactions.",
+                "Communities identify local commodities with intrinsic value and stability (e.g., fish or coffee).",
+                "Informal exchange rates are established based on weight or volume (e.g., kilograms of beans for a service).",
+                "Direct physical trading occurs for essential staples, services, and industrial parts."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Maintains local commerce and survival during total monetary collapse and infrastructure failure.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The described innovation is a socio-economic adaptation involving the direct bartering of agricultural and sea products. It does not involve chemical synthesis, high-energy physical processes, or hazardous materials that would pose a risk of fire, explosion, or toxicity."
+        },
+        "priority_score": 48,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "85e9a207bd1b40f9dd1cbaad47db79be",
+        "timestamp": "2026-04-12T02:08:17.092868",
+        "title": "TEM System (Local Exchange Trading System) in Volos",
+        "sources": [
+            "https://en.wikipedia.org/wiki/TEM_(currency)",
+            "https://www.bbc.com/news/world-europe-17680900",
+            "https://www.whqr.org/2011-11-29/modern-greeks-return-to-ancient-system-of-barter",
+            "https://www.theguardian.com/world/2012/apr/15/greece-barter-economy-euro-crisis",
+            "https://theworld.org/stories/2013-08-15/greek-town-adopting-system-bartering-steroids"
+        ],
+        "summary": "A digital complementary currency and barter network established in Volos, Greece, to facilitate economic activity during the Greek government-debt crisis by allowing citizens to exchange goods and services without physical Euros.",
+        "category": [
+            "Alternative Currency",
+            "Social Economy",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Greece",
+            "region": "Volos",
+            "lat": 39.3624833,
+            "lon": 22.9401864
+        },
+        "process": {
+            "how_it_works": "A digital ledger system where one TEM credit is pegged to the value of one Euro. Members earn credits by providing services or goods and spend them within a closed network of local participants, bypassing the need for physical cash.",
+            "materials_used": [
+                "Open-source software",
+                "Digital ledger database",
+                "Local services",
+                "Local produce"
+            ],
+            "step_by_step": [
+                "Users register as members of the TEM network.",
+                "Members list services (e.g., plumbing, tutoring) or goods they can provide.",
+                "Transactions are conducted where the buyer's digital account is debited and the seller's is credited.",
+                "Balances are tracked via open-source software to ensure transparency.",
+                "Limits are placed on credit hoarding to ensure the rapid circulation of the currency."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Liquidity crunch and high unemployment caused by the Greek debt crisis, enabling commerce when Euro-based cash was scarce.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The TEM system is a digital community-based barter network. It does not involve any chemical processes, high-energy systems, or physical manufacturing that would pose fire, explosion, or environmental hazards. The risks are strictly economic and regulatory in nature."
+        },
+        "priority_score": 38,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
