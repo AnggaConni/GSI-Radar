@@ -12876,5 +12876,216 @@
         "priority_score": 38,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "c572640179903dfc6027778dbb18263b",
+        "timestamp": "2026-04-15T02:03:28.497787",
+        "title": "Laundry-to-Landscape Greywater System",
+        "sources": [
+            "https://greywateraction.org/laundry-to-landscape/",
+            "https://www.motherearthnews.com/sustainable-living/nature-and-environment/laundry-to-landscape-greywater-system-ze0z1306zgar/",
+            "https://www.instructables.com/Laundry-to-Landscape-Greywater-System/"
+        ],
+        "summary": "A popular DIY greywater irrigation system that utilizes a washing machine's internal pump to redirect wastewater to garden plants without the need for additional pumps or storage tanks.",
+        "category": [
+            "Sustainability",
+            "Water Conservation",
+            "DIY",
+            "Irrigation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "Arid and semi-arid regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system redirects discharge water from a washing machine using its internal pump. A diverter valve allows the user to choose between the sewer/septic system and the garden. The water travels through HDPE tubing to mulch-filled basins that filter the water and prevent pooling.",
+            "materials_used": [
+                "3-way diverter valve",
+                "1-inch HDPE tubing",
+                "Mulch",
+                "Washing machine pump",
+                "PVC fittings",
+                "Vacuum breaker (auto-vent)"
+            ],
+            "step_by_step": [
+                "Install a 3-way diverter valve directly behind the washing machine.",
+                "Connect the washing machine drain hose to the inlet of the diverter valve.",
+                "Connect one outlet of the valve to the existing sewer/septic drain.",
+                "Connect the second outlet to 1-inch HDPE tubing.",
+                "Route the HDPE tubing through an exterior wall to the garden area.",
+                "Dig basins around fruit trees or large perennials and fill them with mulch.",
+                "Distribute the tubing to the mulch basins to allow water to soak into the soil."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces potable water consumption for irrigation and decreases the volume of wastewater entering sewage systems.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "environment",
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The system is generally safe for residential use; however, environmental risks include soil salinization or boron toxicity depending on detergent choice. Biological risks (pathogens) are present but mitigated by the lack of storage and use of mulch basins. Safety concerns are primarily related to potential cross-contamination with potable water if backflow prevention is not maintained."
+        },
+        "priority_score": 46,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "b84cdb7210daecdca665e5346716b70f",
+        "timestamp": "2026-04-15T02:03:45.395066",
+        "title": "Homemade Gravity-Fed Shower Greywater Diversion System",
+        "sources": [
+            "https://www.lifeaterg.org/how-to-build-a-simple-graywater-system-in-your-own-backyard/",
+            "https://www.keithmessickarchitecture.com/diy-simple-grey-water-system"
+        ],
+        "summary": "A low-maintenance greywater system that redirects shower drainage via a diverter valve and gravity-fed ABS pipes to irrigate non-edible landscapes and fruit trees.",
+        "category": [
+            "Water Conservation",
+            "Sustainable Gardening",
+            "DIY Plumbing"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Not specified",
+            "region": "Not specified",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system intercepts shower wastewater using a diverter valve and uses gravity to transport it through large-diameter pipes to an outdoor distribution network of perforated pipes buried in garden beds.",
+            "materials_used": [
+                "1.5-inch ABS pipes",
+                "Diverter valve",
+                "Exterior catch basin",
+                "Perforated pipes",
+                "Float switch (optional)",
+                "Small pump (optional)"
+            ],
+            "step_by_step": [
+                "Modify existing shower plumbing by installing a diverter valve.",
+                "Connect 1.5-inch ABS piping to the diverter to carry water outside.",
+                "Install an exterior catch basin to collect the diverted water.",
+                "Lay perforated pipes from the catch basin into garden beds.",
+                "Bury the perforated pipes to allow passive distribution to soil and roots.",
+                "Optionally add a pump with a float switch for uphill irrigation needs."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces freshwater consumption for irrigation and decreases the volume of wastewater sent to municipal sewer or septic systems.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "biological",
+                "structural",
+                "environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "Modifying residential plumbing without professional oversight poses risks of cross-contamination with potable water supplies if backflow prevention is not correctly installed. Stagnant greywater in catch basins can become a breeding ground for pathogens and mosquitoes. Additionally, improper installation of ABS piping or basins near foundations can lead to water ingress and structural damage.",
+            "safety_gear": [
+                "gloves",
+                "eye protection",
+                "waterproof sealant"
+            ]
+        },
+        "priority_score": 34,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "e1ce0506943aab749c22c80852f79ace",
+        "timestamp": "2026-04-15T02:04:06.239758",
+        "title": "Small-Scale Vertical Biological Greywater Filter",
+        "sources": [
+            "https://www.dripworks.com/blog/diy-greywater-system",
+            "https://www.betterfarm.org/blog/2013/07/diy-simple-graywater-system.html"
+        ],
+        "summary": "A portable, DIY vertical filtration system using buckets or drums to treat greywater from sinks or showers for irrigation purposes, designed specifically for renters and small-scale use.",
+        "category": [
+            "Water Management",
+            "Sustainable Living",
+            "DIY Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "Urban/Residential",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Greywater flows through successive layers of gravel, sand, and stone which act as physical and biological filters to remove debris and contaminants before the water is collected for reuse.",
+            "materials_used": [
+                "5-gallon bucket or 55-gallon drum",
+                "Crushed stone",
+                "Weed matting",
+                "Sand",
+                "Gravel",
+                "Spigot",
+                "Drip irrigation hose"
+            ],
+            "step_by_step": [
+                "Install a spigot at the bottom of a 5-gallon bucket or 55-gallon drum.",
+                "Fill the bottom with a layer of crushed stone.",
+                "Place a layer of weed matting over the stone to prevent mixing.",
+                "Add a layer of sand followed by a layer of gravel on top.",
+                "Pour greywater from a kitchen sink or shower into the top of the container.",
+                "Collect the filtered water from the bottom spigot for use in drip irrigation."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a low-cost, portable solution for treating greywater for irrigation, reducing water waste in small-scale or rental environments.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "biological",
+                "environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The system presents a moderate biological risk as greywater can contain pathogens and organic matter that may turn septic (blackwater) if stored for more than 24 hours. There is also a risk of insect breeding (mosquitoes) in stagnant water and potential soil contamination if the filtration is inadequate or if non-biodegradable chemicals are introduced."
+        },
+        "priority_score": 44,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
