@@ -13087,5 +13087,196 @@
         "priority_score": 44,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "cf0a33863f152010f19dce28d37bb49c",
+        "timestamp": "2026-04-27T09:42:54.961660",
+        "title": "Mata Masu Dubara (Women on the Move)",
+        "sources": [
+            "https://www.care.org/our-work/poverty-and-hunger/microfinance/vslas-village-savings-and-loan-associations/",
+            "https://www.care-international.org/our-work/women-and-girls/economic-empowerment/village-savings-and-loan-associations"
+        ],
+        "summary": "A pioneering microfinance model originating in Niger that uses a triple-locked box system to create a self-sustaining, community-managed savings and loan association for unbanked populations.",
+        "category": [
+            "Microfinance",
+            "Financial Inclusion",
+            "Social Innovation",
+            "Women's Empowerment"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Niger",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Members pool small weekly savings into a physical lockbox. The box is secured with three separate padlocks, and the keys are held by three different members, ensuring that the fund can only be accessed when the group leadership is present.",
+            "materials_used": [
+                "Physical lockbox",
+                "Three padlocks",
+                "Three keys",
+                "Ledger books",
+                "Member passbooks"
+            ],
+            "step_by_step": [
+                "Form a group of members interested in collective saving",
+                "Appoint three separate key holders and a box keeper to ensure transparency",
+                "Collect small, fixed weekly savings contributions from each member",
+                "Store the collected funds in the triple-locked box",
+                "Provide low-interest loans from the revolving fund to members for micro-enterprises",
+                "Repay loans with interest to grow the total fund pool",
+                "Distribute the accumulated savings and interest back to members at the end of a cycle"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to formal banking, credit, and secure savings mechanisms for rural and impoverished populations.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Mata Masu Dubara model is a social and financial innovation focused on community-managed savings. It involves no chemical, energy, or industrial processes. The physical component is a simple lockbox, which presents no fire, explosion, toxic, or environmental hazards."
+        },
+        "priority_score": 64,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "6f6adbd449cf16b09f8442c5c24f3271",
+        "timestamp": "2026-04-27T09:43:10.746078",
+        "title": "Saving for Change: Oral Record-Keeping and Volunteer Replicator Model",
+        "sources": [
+            "https://www.oxfamamerica.org"
+        ],
+        "summary": "A community-based savings and lending program designed for non-literate populations that uses oral record-keeping rituals and a peer-to-peer volunteer training model to spread financial inclusion across rural Mali.",
+        "category": [
+            "Financial Inclusion",
+            "Community Development",
+            "Women's Empowerment"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Mali",
+            "region": "Rural areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system replaces traditional written accounting with memorized rituals and physical tokens to track financial transactions, while using a viral peer-to-peer training network to scale the model.",
+            "materials_used": [
+                "Physical tokens",
+                "Memorized rituals",
+                "Training guides"
+            ],
+            "step_of_step": [
+                "Formation of a local savings group among women in a village.",
+                "Training in oral record-keeping techniques using physical tokens and memorized rituals.",
+                "Establishment of a rotating credit and savings fund managed by the group.",
+                "Selection and training of 'Volunteer Replicators' from successful groups.",
+                "Volunteer Replicators travel to neighboring villages to teach the methodology to new groups."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Financial exclusion and lack of credit access for remote, non-literate populations.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a social and financial organizational model for community savings and peer-to-peer training. It does not involve any hazardous chemicals, energy systems, or physical processes that pose a risk of fire, explosion, or toxicity. The primary focus is on literacy-accessible record-keeping and economic empowerment."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "88b447198540375f5a969eca7d63df65",
+        "timestamp": "2026-04-27T09:43:40.266223",
+        "title": "Bidding ROSCAs (Chit Funds / Kameti)",
+        "sources": [
+            "https://www.investopedia.com/terms/r/rosca.asp",
+            "https://en.wikipedia.org/wiki/Chit_fund",
+            "https://www.rbi.org.in"
+        ],
+        "summary": "A sophisticated evolution of traditional savings associations where members compete for a pooled pot through a bidding process. By offering a discount to access funds early, members create an internal market that provides urgent capital to some and high interest returns to others.",
+        "category": [
+            "Finance",
+            "Microfinance",
+            "Social Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Rural and semi-urban areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Members contribute a fixed amount to a central pot. Instead of a random draw, the pot is auctioned. The member who offers the highest discount (accepting the smallest portion of the pot) wins the funds, and the 'saved' discount is distributed among the other members.",
+            "materials_used": [
+                "Ledger or record-keeping book",
+                "Cash or digital currency contributions"
+            ],
+            "step_by_step": [
+                "A group of individuals forms a 'Kameti' or 'Chit' with a fixed duration and contribution amount.",
+                "At each interval, a meeting is held to collect contributions into a single lump sum.",
+                "Members in need of capital bid against each other by offering a discount on the total pot.",
+                "The member willing to accept the lowest amount (the highest bidder) receives the pot.",
+                "The difference between the full pot and the winning bid is distributed as a 'dividend' to all other members.",
+                "The winner continues to pay their installments but is excluded from bidding in future rounds until the cycle completes."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides immediate access to credit for unbanked populations and offers a higher rate of return for savers than traditional banks.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation described is a financial mechanism for community-based savings and credit. It does not involve any physical materials, chemicals, or energy-intensive processes, and therefore poses no risk of fire, explosion, toxicity, or environmental damage. Physical safety gear is not applicable to this organizational model."
+        },
+        "priority_score": 54,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
