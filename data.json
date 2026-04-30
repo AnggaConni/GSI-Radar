@@ -13469,5 +13469,203 @@
         "priority_score": 48,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "5dc929cc609dd715a7351904f2fc4dcb",
+        "timestamp": "2026-04-30T02:33:42.242397",
+        "title": "mChip",
+        "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/21803853/",
+            "https://www.borgenproject.org/6-health-innovations-underdeveloped-areas/",
+            "https://www.engineering.columbia.edu/news/sia-mchip-hiv-syphilis-test",
+            "https://magazine.columbia.edu/article/portable-diagnostic-tool-saving-rural-lives"
+        ],
+        "summary": "A portable, credit-card-sized diagnostic device that uses microfluidics and gold nanoparticles to perform ELISA-level testing for HIV and syphilis at the point of care in remote areas.",
+        "category": [
+            "Medical Diagnostics",
+            "Microfluidics",
+            "Global Health",
+            "Biotechnology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "USA",
+            "region": "New York",
+            "lat": 40.7127281,
+            "lon": -74.0060152
+        },
+        "process": {
+            "how_it_works": "The device miniaturizes the enzyme-linked immunosorbent assay (ELISA) process onto a microfluidic chip, using gold nanoparticles to provide a visual or optical signal when specific disease antibodies are detected in a blood sample.",
+            "materials_used": [
+                "Microfluidic plastic chip",
+                "Gold nanoparticles",
+                "ELISA reagents",
+                "Silver ions"
+            ],
+            "step_by_step": [
+                "A single drop of blood is collected from the patient via a finger prick.",
+                "The blood sample is loaded into the mChip device.",
+                "The sample is drawn through microfluidic channels where it encounters specific antigens.",
+                "Gold nanoparticles and reagents react with the sample to identify HIV or syphilis antibodies.",
+                "The reaction produces a signal that can be read within 15 minutes, allowing for immediate diagnosis."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the need for large, expensive laboratory equipment and multi-day wait times, reducing the 'lost to follow-up' rate in rural healthcare settings.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Biohazard",
+                "Environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The mChip is a low-risk diagnostic tool. The primary safety concerns are related to the handling of human blood samples (potential exposure to pathogens) and the proper disposal of the used microfluidic chips as biohazardous waste. The chemical reagents and gold nanoparticles are contained in micro-quantities within the device, posing minimal toxicological or environmental risk if handled according to standard medical protocols."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "22d525967a1c62d42ceb95dfaf0f6309",
+        "timestamp": "2026-04-30T02:34:07.782665",
+        "title": "The Sterile Box",
+        "sources": [
+            "https://www.rice.edu",
+            "https://www.insidehook.com/article/innovation/low-cost-medical-innovations-developing-countries",
+            "https://news.rice.edu/news/2015/sterile-box-brings-clean-tools-remote-surgeons"
+        ],
+        "summary": "An all-in-one, off-grid medical sterilization station housed in a 20-foot shipping container that uses solar thermal energy to power an autoclave, providing sterile instruments and water for rural clinics in low-resource settings.",
+        "category": [
+            "Healthcare",
+            "Renewable Energy",
+            "Medical Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "USA",
+            "region": "Texas",
+            "lat": 31.2638905,
+            "lon": -98.5456116
+        },
+        "process": {
+            "how_it_works": "The station captures solar thermal energy to generate the high-pressure steam required for an autoclave to sterilize medical instruments without needing an external power grid.",
+            "materials_used": [
+                "20-foot shipping container",
+                "Solar thermal panels",
+                "Autoclave",
+                "Water purification system"
+            ],
+            "step_by_step": [
+                "Solar thermal panels collect energy from sunlight.",
+                "The energy is used to heat water into high-pressure steam.",
+                "The steam is fed into an autoclave unit located inside the container.",
+                "Medical instruments are placed in the autoclave for sterilization.",
+                "The system simultaneously produces sterile water for surgical use."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High post-operative infection rates in rural areas caused by the lack of reliable electricity and clean water for instrument sterilization.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "high",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Pressure",
+                "Thermal"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The Sterile Box utilizes high-pressure steam autoclaves and solar thermal energy. The primary risks are associated with pressure vessel failure (explosion risk) and thermal burns from concentrated solar heat or steam. However, as a project developed by a reputable university for medical applications, it likely adheres to standard engineering safety protocols and pressure relief mechanisms."
+        },
+        "priority_score": 44,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "c1b6068d418d47bf2227fede1cac3dfb",
+        "timestamp": "2026-04-30T02:34:24.669000",
+        "title": "Pocket Colposcope",
+        "sources": [
+            "https://gwht.pratt.duke.edu/pocket-colposcope",
+            "https://www.borgenproject.org/6-health-innovations-underdeveloped-areas/",
+            "https://gwht.duke.edu/"
+        ],
+        "summary": "A portable, handheld cervical cancer screening device designed for use in low-resource settings by mid-level health workers, integrating with mobile technology and AI for diagnosis.",
+        "category": [
+            "Healthcare",
+            "Medical Devices",
+            "Women's Health",
+            "Digital Health"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "USA",
+            "region": "North Carolina",
+            "lat": 35.6729639,
+            "lon": -79.0392919
+        },
+        "process": {
+            "how_it_works": "The device captures high-resolution images of the cervix and transmits them to a smartphone or tablet for analysis, often using AI to detect lesions.",
+            "materials_used": [
+                "High-resolution camera",
+                "LED lights",
+                "Handheld casing",
+                "Smartphone/Tablet interface",
+                "AI-based algorithms"
+            ],
+            "step_by_step": [
+                "Insert the handheld device to visualize the cervix",
+                "Capture high-resolution images using the integrated camera",
+                "Connect the device to a mobile device for display",
+                "Apply AI-based algorithms to identify precancerous lesions",
+                "Provide immediate diagnosis and treatment if necessary during the same visit"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to expensive, bulky cervical cancer screening equipment in rural or low-resource areas, preventing late-stage diagnosis.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety gear"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Pocket Colposcope is a non-invasive medical diagnostic tool. Its primary risks are associated with standard electronic device usage (lithium-ion battery) and the requirement for clinical sterilization between patients to prevent cross-contamination. It does not involve hazardous chemicals, explosive materials, or high-energy systems. Standard medical PPE (gloves) is sufficient for use."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
