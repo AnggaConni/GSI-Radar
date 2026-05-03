@@ -13667,5 +13667,205 @@
         "priority_score": 58,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "962c003e2b5f227c2735be49ed64cd80",
+        "timestamp": "2026-05-03T02:30:45.911334",
+        "title": "GiveLove DIY Composting Toilet System (Humanure Method)",
+        "sources": [
+            "https://givelove.org",
+            "https://oceansewagealliance.org/meet-the-humanure-toilet-it-recycles-poop-to-grow-more-food-and-stops-sewage-pollution/",
+            "https://givelove.org/haiti-projects/",
+            "https://humanurehandbook.com/downloads/Haiti_Humanure_Sanitation_2011.pdf"
+        ],
+        "summary": "A decentralized, waterless sanitation system implemented in Haiti using the Humanure method to convert human waste into safe agricultural compost using recycled buckets and sugar cane bagasse.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Agriculture"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Haiti",
+            "region": "Leogane",
+            "lat": 18.5111126,
+            "lon": -72.6334255
+        },
+        "process": {
+            "how_it_works": "The system uses a dry composting method where waste is collected in buckets and covered with carbon-rich materials to suppress odors and flies, followed by high-temperature composting in external bins to kill pathogens.",
+            "materials_used": [
+                "20-liter or 60-liter recycled plastic buckets",
+                "Wooden or masonry commodes",
+                "Sugar cane bagasse",
+                "Large on-site compost bins"
+            ],
+            "step_by_step": [
+                "Waste is collected in plastic buckets housed within simple commodes.",
+                "Users add sugar cane bagasse as a cover material after each use to eliminate odors.",
+                "Full buckets are emptied into large on-site compost bins.",
+                "Thermophilic decomposition occurs in the bins, reaching temperatures high enough to kill pathogens.",
+                "The final product is used as fertile compost for local agriculture."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of sanitation infrastructure and water access following the 2010 earthquake, preventing the spread of waterborne diseases.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Biological",
+                "Health Hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological rather than chemical. The 'Humanure' method relies on thermophilic decomposition to kill pathogens in human waste. If the compost fails to reach and maintain temperatures above 55°C (131°F), there is a risk of spreading diseases such as cholera or parasitic infections. While the system is low-cost and effective, it requires strict adherence to management protocols and the use of personal protective equipment during waste handling."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "a0231c63a5bd7b94e79e4dbf70e5e69d",
+        "timestamp": "2026-05-03T02:31:05.176598",
+        "title": "High-Capacity DIY Composting Toilet at Bending Oak Permaculture Farm",
+        "sources": [
+            "https://midwestpermaculture.com/composting-toilet-system/",
+            "https://midwestpermaculture.com/2022/07/diy-super-clean-composting-toilet-design/",
+            "https://bendingoak.com"
+        ],
+        "summary": "A high-capacity, odorless composting toilet system designed for high-traffic rural areas, utilizing heavy-duty industrial totes and cement culvert pedestals to facilitate long-term aerobic 'cold' composting.",
+        "category": [
+            "Sanitation",
+            "Permaculture",
+            "Waste Management",
+            "Sustainable Infrastructure"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Youngstown, Ohio",
+            "lat": 41.1035786,
+            "lon": -80.6520161
+        },
+        "process": {
+            "how_it_works": "The system uses a batch-processing method where waste is collected in large containers beneath a pedestal. A carbon-rich bulking agent is added to maintain aerobic conditions and suppress odors. Once a container is full, it is swapped and moved to a separate location to decompose naturally over time.",
+            "materials_used": [
+                "26-gallon heavy-duty plastic totes",
+                "Cement culvert tubes",
+                "Woodchips",
+                "Pine shavings",
+                "Sealing materials"
+            ],
+            "step_by_step": [
+                "Construct custom pedestals using sealed cement culvert tubes.",
+                "Position a 26-gallon plastic tote directly beneath the pedestal opening.",
+                "Add a specific blend of woodchips and pine shavings after each use to maintain aerobic conditions.",
+                "Monitor the fill level of the active tote.",
+                "Slide out the full tote and replace it with an empty one.",
+                "Move the full tote to a secondary location for long-term 'cold' composting until decomposition is complete."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a scalable, low-cost, and odorless sanitation solution for rural areas and high-traffic sites without access to traditional sewage infrastructure.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "biological",
+                "environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological due to the handling and processing of human waste, which contains pathogens. While the system is designed for aerobic conditions, 'cold' composting requires significant time (often 12-24 months) to ensure complete pathogen die-off. Risk of environmental contamination exists if the secondary composting area is not properly contained or if totes leak during transport."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "4d0c53fa835087c95a3ff52ff42c6312",
+        "timestamp": "2026-05-03T02:31:22.512313",
+        "title": "DIY Double-Vault Composting Toilets",
+        "sources": [
+            "https://repository.arizona.edu/bitstream/handle/10150/215014/azu_climas_reports_76_w.pdf",
+            "https://www.sswm.info/sswm-solutions-case-studies/nogales-mexico-dry-sanitation-project"
+        ],
+        "summary": "A community-driven project in Nogales, Sonora, implementing double-vault dry toilets to address water scarcity and groundwater pollution. The system uses alternating chambers and desiccation to produce nutrient-rich compost without the need for water or centralized sewage.",
+        "category": [
+            "Sanitation",
+            "Water Conservation",
+            "Waste Management",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Mexico",
+            "region": "Nogales, Sonora",
+            "lat": 31.3285057,
+            "lon": -110.9450472
+        },
+        "process": {
+            "how_it_works": "The system utilizes two permanent chambers where one is active while the other rests. Pathogens are eliminated through desiccation and time, aided by a ventilation system that promotes airflow and removes moisture and odors.",
+            "materials_used": [
+                "Cinderblocks",
+                "Fibrous concrete",
+                "4-inch PVC ventilation pipe",
+                "Sawdust",
+                "Soil"
+            ],
+            "step_by_step": [
+                "Construct two permanent chambers using cinderblocks or fibrous concrete.",
+                "Install a 4-inch PVC ventilation pipe to ensure airflow and odor control.",
+                "Use the first chamber, covering waste with a mixture of sawdust and soil after each use.",
+                "Once the first chamber is full, seal it and switch use to the second chamber.",
+                "Allow the full chamber to rest for a one-year period to ensure pathogen die-off.",
+                "Harvest the resulting odorless, nutrient-rich compost for agricultural use."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Groundwater pollution and water scarcity in peri-urban and rural arid settlements.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Biological"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological due to the handling of human waste and potential pathogens. However, the double-vault composting method with a one-year resting period is a well-established ecological sanitation practice that effectively mitigates these risks when managed correctly. The use of ventilation and cover materials further reduces odors and pest attraction."
+        },
+        "priority_score": 46,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
