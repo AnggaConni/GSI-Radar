@@ -13867,5 +13867,198 @@
         "priority_score": 46,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "6f040c6733dc0fecc3d2642923631610",
+        "timestamp": "2026-05-06T02:28:05.550394",
+        "title": "Artemisinin (Qing Hao) Discovery",
+        "sources": [
+            "https://www.who.int/news-room/feature-stories/detail/traditional-medicine-has-a-long-history-of-contributing-to-conventional-medicine-and-continues-to-hold-promise",
+            "https://www.who.int/news-room/fact-sheets/detail/malaria",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10711612/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7405232/",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4966551/",
+            "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/"
+        ],
+        "summary": "Derived from the Artemisia annua plant used in Traditional Chinese Medicine for over 2,000 years, artemisinin was isolated by scientist Tu Youyou using ancient texts to identify a specific cold-extraction method. It is now the primary global treatment for multi-drug-resistant malaria.",
+        "category": [
+            "Medicine",
+            "Pharmacology",
+            "Traditional Knowledge"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "China",
+            "region": "East Asia",
+            "lat": 22.1404079,
+            "lon": 113.5704777
+        },
+        "process": {
+            "how_it_works": "Artemisinin and its derivatives act by releasing free radicals that damage and kill the Plasmodium parasites in the red blood cells of the host.",
+            "materials_used": [
+                "Artemisia annua (Sweet Wormwood)",
+                "Low-temperature solvents (ether)",
+                "Laboratory purification equipment"
+            ],
+            "step_by_step": [
+                "Screening of hundreds of traditional herbal recipes for anti-malarial properties.",
+                "Identification of Artemisia annua in Ge Hong's 4th-century manual.",
+                "Implementation of a low-temperature extraction method to prevent the active compound from being destroyed by heat.",
+                "Isolation and purification of the active molecule (artemisinin).",
+                "Clinical validation and global standardization for malaria treatment."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Treatment of multi-drug-resistant malaria which was previously fatal.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Artemisinin is a globally standardized pharmaceutical treatment for malaria. The innovation represents a validated medical breakthrough derived from traditional knowledge and refined through rigorous scientific methodology, posing no significant risk to safety or the environment when produced in controlled pharmaceutical settings."
+        },
+        "priority_score": 48,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "ccd97044e085ee0f3a4ba4a29349380b",
+        "timestamp": "2026-05-06T02:28:28.276866",
+        "title": "Hoodia gordonii Traditional Appetite Suppressant",
+        "sources": [
+            "https://www.cbd.int/traditional/casestudies.shtml",
+            "https://www.unesco.org/en/articles/commercialization-traditional-knowledge",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC5030232/"
+        ],
+        "summary": "The San people of the Kalahari Desert have traditionally used the Hoodia gordonii succulent to suppress hunger and thirst during long hunts. This indigenous knowledge led to the isolation of the P57 molecule and a landmark legal case for benefit-sharing and indigenous intellectual property rights.",
+        "category": [
+            "Traditional Medicine",
+            "Indigenous Knowledge",
+            "Pharmacology",
+            "Legal Rights"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "South Africa",
+            "region": "Kalahari Desert",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The plant contains an active molecule named P57 that acts on the brain to suppress the sensation of hunger and thirst when the succulent is consumed.",
+            "materials_used": [
+                "Hoodia gordonii succulent"
+            ],
+            "step_by_step": [
+                "Identification and harvesting of the Hoodia gordonii plant in arid environments",
+                "Consumption of the plant material during long-distance hunting trips",
+                "Documentation of the practice by botanists",
+                "Scientific isolation of the P57 molecule by the CSIR",
+                "Establishment of a benefit-sharing trust to return royalties to the San community"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Survival during food and water scarcity in arid environments; legal protection against biopiracy for indigenous communities.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is based on long-standing traditional knowledge with minimal physical or chemical hazards. The primary risk associated with Hoodia gordonii is environmental due to potential over-harvesting of the wild succulent population. Ethical risks regarding biopiracy have been historically addressed through benefit-sharing agreements."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "499678205fba355bb6276e55f44dce4b",
+        "timestamp": "2026-05-06T02:28:46.939748",
+        "title": "Discovery of Vinblastine and Vincristine from Rosy Periwinkle",
+        "sources": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC3131777/",
+            "https://en.wikipedia.org/wiki/Catharanthus_roseus",
+            "https://www.livingrainforest.org/explore/rosy-periwinkle",
+            "https://www.britannica.com/plant/Madagascar-periwinkle",
+            "https://www.botanicgarden.cam.ac.uk/trail/medicines-from-plants-madagascar-periwinkle/"
+        ],
+        "summary": "The transition of the Rosy Periwinkle from a traditional Malagasy remedy for diabetes to a source of life-saving chemotherapy drugs, vinblastine and vincristine, which revolutionized the treatment of childhood leukemia and Hodgkin's lymphoma.",
+        "category": [
+            "Medicine",
+            "Pharmacology",
+            "Ethnobotany"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Madagascar",
+            "region": "East Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The plant's alkaloids, specifically vincristine and vinblastine, act as mitotic inhibitors by binding to tubulin, thereby preventing the formation of microtubules necessary for cancer cell division.",
+            "materials_used": [
+                "Catharanthus roseus (Rosy Periwinkle)",
+                "Laboratory extraction equipment",
+                "Chemical solvents"
+            ],
+            "step_by_step": [
+                "Local Malagasy healers identify and use the plant for medicinal purposes.",
+                "Western scientists investigate the plant's ethnomedical claims regarding diabetes.",
+                "Researchers isolate the alkaloids vinblastine and vincristine from the plant tissue.",
+                "Clinical trials confirm potent anti-tumor properties.",
+                "Pharmaceutical mass production of chemotherapy drugs."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Extremely low survival rates for childhood leukemia and other cancers; survival rates for childhood leukemia rose from 10% to over 90%.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "high",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation involves the isolation and production of vinca alkaloids, which are highly potent cytotoxic compounds. While medically beneficial, these substances are toxic to handle and require specialized safety gear and controlled laboratory environments to prevent accidental exposure during the manufacturing process."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
