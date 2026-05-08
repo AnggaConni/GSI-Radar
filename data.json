@@ -14060,5 +14060,203 @@
         "priority_score": 60,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "664f2bcf00e775bbeee39b12fca6fb5c",
+        "timestamp": "2026-05-08T02:37:04.647553",
+        "title": "Purdue Improved Crop Storage (PICS) bags",
+        "sources": [
+            "https://autm.net/about-tech-transfer/better-world-project/the-better-world-database/purdue-improved-crop-storage-(pics)",
+            "https://picsnetwork.org/",
+            "https://www.purdue.edu/newsroom/releases/2015/Q4/pics-celebration-in-africa-to-highlight-success-of-grain-storage-technology.html",
+            "https://www.icrisat.org/hermetic-storage-technologies-for-safe-grain-and-seed-storage-in-asia-and-sub-saharan-africa/",
+            "https://agapeinnovations.com/protecting-ugandas-harvest-the-story-of-pics-bags-agape-innovations/"
+        ],
+        "summary": "A chemical-free, triple-layered hermetic storage solution that creates an airtight seal to suffocate insects, allowing smallholder farmers to preserve staple crops for months and sell at higher off-season prices.",
+        "category": [
+            "Agriculture",
+            "Post-harvest Technology",
+            "Food Security"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Niger, Burkina Faso",
+            "region": "West and Central Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The bags utilize two inner high-density polyethylene liners and an outer woven layer to create a hermetic seal that depletes oxygen, suffocating insects and preventing them from reproducing.",
+            "materials_used": [
+                "High-density polyethylene (HDPE) liners",
+                "Woven polypropylene layer"
+            ],
+            "step_by_step": [
+                "Ensure grain is clean and thoroughly dried",
+                "Pour the grain into the first inner HDPE liner",
+                "Tie the first liner securely to remove as much air as possible",
+                "Insert the first liner into the second HDPE liner and tie it tightly",
+                "Place the two sealed liners into the outer woven polypropylene bag for physical protection",
+                "Store the bag in a dry area for several months"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates pest infestation in stored staple crops without chemicals and prevents economic loss from low harvest-time market prices.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "PICS bags are a passive, chemical-free hermetic storage solution. They rely on physical barriers (polyethylene and polypropylene) to suffocate pests rather than toxic pesticides. There are no significant fire, explosion, or toxic hazards associated with their use or storage."
+        },
+        "priority_score": 64,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "b9382a142587834245b7059ca6e6d9d8",
+        "timestamp": "2026-05-08T02:37:20.365048",
+        "title": "Small Metallic Silos for Community Grain Storage",
+        "sources": [
+            "https://isdsnet.com/ijds-v2n2-47.pdf",
+            "https://www.bidragonsilo.com/news/Grain-Storage-Challenges-in-Africa-and-How-Grain-Silos-Help.html",
+            "https://www.fao.org",
+            "https://www.fao.org/4/t1838e/T1838E0v.htm"
+        ],
+        "summary": "Locally manufactured galvanized iron silos designed to be airtight and pest-proof, providing a robust storage solution for maize and other grains to prevent post-harvest losses in Southern Africa.",
+        "category": [
+            "Agriculture",
+            "Food Security",
+            "Post-harvest Management"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Malawi, Eswatini",
+            "region": "Southern Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The silos create an airtight environment that prevents the entry of pests and rodents. By sealing the grain inside, any existing insects are suffocated due to lack of oxygen, and the metal barrier prevents external infestation.",
+            "materials_used": [
+                "Galvanized iron sheets",
+                "Solder",
+                "Rivets",
+                "Sealants"
+            ],
+            "step_by_step": [
+                "Local artisans receive technical training in metalworking and silo construction.",
+                "Galvanized iron sheets are measured and cut to specific dimensions.",
+                "The sheets are rolled into cylinders and joined using rivets and solder to ensure an airtight seal.",
+                "Conical tops and flat bottoms are attached to the main body.",
+                "An inlet for loading grain and an outlet for extraction are installed with tight-fitting caps.",
+                "The finished silo is tested for leaks before being deployed to farmers."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces post-harvest losses caused by rodents and the Larger Grain Borer, while eliminating the need for expensive and potentially harmful chemical fumigants.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Small metallic silos are a low-risk, proven technology for grain storage. The primary safety concerns are mechanical (sharp edges during artisanal manufacturing) and biological (potential for mold or aflatoxin growth if grain is not properly dried before sealing). However, they significantly reduce the need for hazardous chemical fumigants and improve food security compared to traditional methods."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "91a5f59940a2dafb3998912fb41c1e42",
+        "timestamp": "2026-05-08T02:37:36.616139",
+        "title": "Silo Africa Digitized Grain Stores",
+        "sources": [
+            "https://silo.africa",
+            "https://www.b2bcentral.co.za/smart-silos-and-grain-storage-technology-in-africa/",
+            "https://panagrimedia.com/silo-africas-digitised-grain-stores-cut-post-harvest-losses/"
+        ],
+        "summary": "A Kenyan agritech innovation that integrates IoT sensors into community grain storage structures to monitor moisture, CO2, and temperature, providing real-time alerts to prevent post-harvest spoilage.",
+        "category": [
+            "Agritech",
+            "Food Security",
+            "IoT",
+            "Post-harvest Management"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2686662,
+            "lon": 36.8161377
+        },
+        "process": {
+            "how_it_works": "IoT sensors installed in silos monitor environmental conditions and transmit data to a mobile platform, allowing for proactive management of grain quality.",
+            "materials_used": [
+                "IoT sensors",
+                "Grain silos",
+                "Mobile devices",
+                "Data transmission hardware",
+                "Cooling systems"
+            ],
+            "step_by_step": [
+                "Install sensors in traditional or community grain storage structures.",
+                "Calibrate sensors to track moisture content, CO2 levels, and temperature.",
+                "Connect sensors to a digital network for real-time data transmission.",
+                "Send automated alerts and data reports to farmers via mobile devices.",
+                "Implement cooling-as-a-service if parameters indicate potential spoilage."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High post-harvest losses (up to 40%) due to spoilage and pest activity in traditional storage.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire",
+                "Explosion"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The integration of IoT into grain silos introduces minor electrical risks in environments prone to combustible grain dust. However, the technology is primarily a safety and quality control measure, as monitoring CO2 and temperature helps prevent spontaneous combustion and spoilage. The risk is low provided the sensors are appropriately rated for dust-rich environments."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
