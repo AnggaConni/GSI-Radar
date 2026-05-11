@@ -14258,5 +14258,193 @@
         "priority_score": 46,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "6277295f8eee3e5eb240668c117344b4",
+        "timestamp": "2026-05-11T02:43:09.864026",
+        "title": "Cement-Bamboo Frame Technology (CBFT)",
+        "sources": [
+            "https://www.base-builds.com/"
+        ],
+        "summary": "A sustainable and disaster-resilient construction system that uses treated bamboo frames encased in cement-mortar plaster to build housing capable of withstanding extreme weather events while reducing carbon emissions by 70%.",
+        "category": [
+            "Sustainable Construction",
+            "Disaster Resilience",
+            "Green Building"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Philippines",
+            "region": "Negros Occidental and Davao",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The technology uses a load-bearing frame of treated bamboo poles connected with metal joints, which is then finished with a cement-mortar plaster to combine bamboo's tensile strength with concrete's durability.",
+            "materials_used": [
+                "Treated bamboo poles",
+                "Metal joints",
+                "Cement-mortar plaster"
+            ],
+            "step_by_step": [
+                "Treat bamboo poles to ensure durability and resistance to pests",
+                "Assemble a load-bearing frame using the treated bamboo poles",
+                "Secure the bamboo structure using specialized metal joints",
+                "Apply a cement-mortar plaster coating over the bamboo frame to create solid walls"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Inadequate disaster-resilient housing for rural areas and high carbon footprints associated with traditional steel-reinforced concrete construction.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Chemical",
+                "Structural"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Cement-Bamboo Frame Technology (CBFT) is a well-engineered construction method designed specifically for disaster resilience. Risks are minimal and primarily associated with standard construction hazards, such as the handling of cement dust and the chemical preservatives used to treat the bamboo against pests. The technology significantly improves safety in disaster-prone areas compared to traditional or informal housing."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "c076f853952b31d6cce26c25318f7c38",
+        "timestamp": "2026-05-11T02:43:27.262349",
+        "title": "Bamboo-Reinforced Concrete Housing",
+        "sources": [
+            "https://www.iitkgp.ac.in"
+        ],
+        "summary": "A sustainable and low-cost construction technology developed by researchers at IIT Kharagpur that replaces traditional steel reinforcement with treated bamboo culms for rural housing projects.",
+        "category": [
+            "Construction",
+            "Sustainable Materials",
+            "Affordable Housing"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "India",
+            "region": "Kharagpur, West Bengal",
+            "lat": 22.34309,
+            "lon": 87.3012875
+        },
+        "process": {
+            "how_it_works": "Bamboo culms serve as the primary tensile reinforcement within concrete structures, providing the necessary strength for single or double-story buildings while significantly reducing reliance on steel.",
+            "materials_used": [
+                "Bamboo culms",
+                "Concrete",
+                "Preservative treatments",
+                "Sand",
+                "Cement"
+            ],
+            "step_by_step": [
+                "Selection of mature bamboo culms suitable for structural use",
+                "Chemical treatment of bamboo culms to prevent rotting and biological degradation",
+                "Designing and assembling the bamboo reinforcement framework for slabs, beams, and columns",
+                "Pouring concrete into the formwork containing the bamboo reinforcement",
+                "Curing the concrete to achieve structural integrity"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of steel and difficulty of transporting construction materials to remote rural areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Structural Safety",
+                "Durability"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "While bamboo has high tensile strength, its use as a direct replacement for steel in concrete carries risks related to long-term bonding and organic degradation. Bamboo can swell or shrink with moisture changes, potentially causing the concrete to crack or delaminate over time. The risk is mitigated by the research being conducted by a reputable institution (IIT) and its application being limited to low-rise, single or double-story structures."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "83189f369e086e2886f675990a689c3f",
+        "timestamp": "2026-05-11T02:43:46.427202",
+        "title": "Bamboo-Reinforced Cement Disaster-Resilient Homes",
+        "sources": [
+            "https://www.habitat.org/where-we-build/nepal",
+            "https://www.hiltifoundation.org/en/projects/safe-and-affordable-housing/bamboo-construction"
+        ],
+        "summary": "A collaborative housing project in Nepal that utilizes treated bamboo frames plastered with cement to create lightweight, earthquake-resistant shear wall structures for rural communities.",
+        "category": [
+            "Construction",
+            "Disaster Management",
+            "Sustainable Architecture"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Nepal",
+            "region": "Nagar Gaurav village",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses treated bamboo as a structural reinforcement for cement plaster. This creates a 'shear wall' system that is significantly lighter than traditional masonry, reducing the seismic mass of the building and making it more resistant to earthquake forces.",
+            "materials_used": [
+                "Treated bamboo",
+                "Cement",
+                "Plaster",
+                "Bamboo frames"
+            ],
+            "step_by_step": [
+                "Harvest and treat bamboo locally to ensure durability and resistance to pests.",
+                "Construct engineered bamboo frames to serve as the structural skeleton.",
+                "Erect the bamboo frames on-site to form the walls and roof support.",
+                "Apply layers of cement plaster over the bamboo frames to create rigid shear walls."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Vulnerability of traditional mud-and-bamboo housing to seismic activity and lack of sustainable local employment.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing",
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Fire Hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This is an engineered, NGO-backed construction project designed specifically to increase safety against seismic activity. While bamboo is a combustible material, the cement plastering provides a fire-resistant barrier. The use of treated bamboo and professional engineering standards minimizes structural risks compared to traditional mud-and-bamboo dwellings."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
