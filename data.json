@@ -14446,5 +14446,198 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "1ac5ee31370e6b4412a2130089926bf1",
+        "timestamp": "2026-05-14T02:42:50.592912",
+        "title": "Large-scale SODIS Implementation in Rural Bolivia",
+        "sources": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3077461/",
+            "https://www.researchgate.net/publication/51036814_Factors_associated_with_compliance_among_users_of_solar_water_disinfection_in_rural_Bolivia",
+            "https://www.sodis.ch/methode/anwendung/projekte/bolivien/index_EN"
+        ],
+        "summary": "A large-scale public health initiative led by Project Concern International (PCI) to implement Solar Water Disinfection (SODIS) across 22 rural Bolivian communities. The project focused on reducing childhood diarrhea by training households to use PET bottles for water purification, while studying the socio-economic factors influencing behavioral adoption.",
+        "category": [
+            "Water Treatment",
+            "Public Health",
+            "Rural Development"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Bolivia",
+            "region": "Rural",
+            "lat": 41.7208744,
+            "lon": -1.0329335
+        },
+        "process": {
+            "how_it_works": "Transparent PET bottles are filled with contaminated water and exposed to direct sunlight, where UV radiation and thermal heat work together to kill pathogenic microorganisms.",
+            "materials_used": [
+                "Transparent PET bottles",
+                "Solar radiation",
+                "Training manuals",
+                "Motivational visit protocols"
+            ],
+            "step_by_step": [
+                "Selection of target communities using a cluster-randomized trial approach.",
+                "Training of community leaders, primary schools, and household heads.",
+                "Distribution and preparation of transparent PET bottles.",
+                "Exposure of water-filled bottles to sunlight for a specific duration.",
+                "Conducting motivational household visits to encourage consistent usage and behavioral change."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High rates of childhood diarrhea and poor microbiological drinking water quality in rural areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Health",
+                "Environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "SODIS is a safe, low-tech water treatment method using solar UV radiation. The primary risks are health-related if the disinfection is incomplete due to low compliance or insufficient sunlight, and environmental due to the use of PET bottles. It does not pose fire, explosion, or chemical hazards."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "b03ec0a29304893151cf0be63d020571",
+        "timestamp": "2026-05-14T02:43:12.611153",
+        "title": "SODIS Water Disinfection Project in North Rift Kenya",
+        "sources": [
+            "https://wedc-knowledge.lboro.ac.uk/resources/conference/27/M_-_Kenya.pdf",
+            "https://www.fairplanet.org/story/kenya-kiberas-bright-solution-for-clean-water/",
+            "https://www.semanticscholar.org/paper/Solar-disinfection-of-water-a-case-study-from-Kenya-Meierhofer/17d4787687841551065163157548671192849111"
+        ],
+        "summary": "The Christian Community Services (CCS) implemented Solar Water Disinfection (SODIS) in Kenya's North Rift region to provide clean water to rural self-help groups. By using PET bottles and integrating the process with traditional utensil-drying platforms, the project achieved a significant reduction in waterborne diseases and reduced reliance on firewood.",
+        "category": [
+            "Water and Sanitation",
+            "Public Health",
+            "Renewable Energy"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "North Rift",
+            "lat": -1.2881283,
+            "lon": 36.8287205
+        },
+        "process": {
+            "how_it_works": "The method uses solar UV radiation and thermal energy to kill pathogens in water stored in transparent PET bottles.",
+            "materials_used": [
+                "PET bottles",
+                "Black paint",
+                "Raised wooden platforms"
+            ],
+            "step_by_step": [
+                "Collect water from unprotected springs or shallow wells",
+                "Fill three to six PET bottles with the collected water",
+                "Paint one side of the bottles black to enhance heat absorption",
+                "Place the bottles on raised wooden platforms (traditionally used for drying utensils) in direct sunlight",
+                "Expose the bottles to the sun for several hours to allow UV radiation and heat to disinfect the water"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Contamination of water sources with fecal coliforms and high economic/time costs of gathering firewood for boiling water.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Health"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "SODIS is a globally recognized, low-risk method for water purification. The primary risk is potential user error leading to incomplete disinfection, but the technology itself is non-hazardous. It reduces environmental impact and fire hazards associated with boiling water using firewood."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "26e658159579519a772e2cfa449aa0ec",
+        "timestamp": "2026-05-14T02:43:34.140942",
+        "title": "SODIS Water Disinfection Project in Siddhipur",
+        "sources": [
+            "https://www.sodis.ch/methode/anwendung/projekte/nepal/index_EN",
+            "https://cen.org.np/sodis-promotion-campaign/",
+            "https://enpho.org",
+            "https://www.eawag.ch/en/department/sandec/projects/sodis/",
+            "https://www.tandfonline.com/doi/abs/10.2166/wh.2006.0019"
+        ],
+        "summary": "An initiative in Siddhipur, Nepal, that successfully promoted Solar Water Disinfection (SODIS) by utilizing the Health Belief Model and school-based programs to overcome cultural barriers and improve household water safety.",
+        "category": [
+            "Water & Sanitation",
+            "Public Health",
+            "Community Development"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Nepal",
+            "region": "Kathmandu Valley",
+            "lat": 27.6413905,
+            "lon": 85.3636287
+        },
+        "process": {
+            "how_it_works": "The method uses solar UV-A radiation and increased temperature to kill or inactivate pathogens in water stored in transparent PET bottles.",
+            "materials_used": [
+                "Transparent PET bottles",
+                "Sunlight",
+                "Water"
+            ],
+            "step_by_step": [
+                "Clean PET bottles of any labels",
+                "Fill the bottles with water",
+                "Place the bottles on a roof or rack in direct sunlight",
+                "Expose the bottles for at least 6 hours (or 2 days if cloudy)",
+                "Consume water directly from the bottle to avoid re-contamination"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High prevalence of waterborne diseases and low cultural acceptance of traditional water treatment methods.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "SODIS is a low-risk, WHO-recommended water purification method. The primary risks are environmental, related to the management of PET bottle waste, and health-related if the procedure is not followed correctly (e.g., insufficient sunlight). It involves no hazardous chemicals, high pressures, or flammable materials."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
