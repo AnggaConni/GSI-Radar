@@ -14639,5 +14639,215 @@
         "priority_score": 52,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "8468b41a20b66560b053a9778ea7905d",
+        "timestamp": "2026-05-17T02:40:34.331436",
+        "title": "Liter of Light (Isang Litrong Liwanag)",
+        "sources": [
+            "https://en.wikipedia.org/wiki/Liter_of_Light",
+            "https://www.zayedsustainabilityprize.com/en/about/winners/liter-of-light",
+            "https://globalvoices.org/2014/08/23/a-liter-of-light-to-brighten-the-poorest-homes/",
+            "https://myshelterfoundation.org",
+            "https://www.appropedia.org/Liter_of_light",
+            "https://literoflight.org",
+            "https://good-search.org/liter-of-light-solar-lamps-from-pet-bottles-to-illuminate-slums/"
+        ],
+        "summary": "A sustainable lighting project that uses recycled plastic bottles filled with water and bleach to provide solar-powered illumination to windowless homes in informal settlements without the use of electricity.",
+        "category": [
+            "Sustainable Energy",
+            "Social Innovation",
+            "Upcycling",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Philippines",
+            "region": "Manila",
+            "lat": 14.5904492,
+            "lon": 120.9803621
+        },
+        "process": {
+            "how_it_works": "The device utilizes the principle of refraction. When sunlight hits the water inside the bottle, it is scattered 360 degrees throughout the room, providing light equivalent to a 55-60 watt incandescent bulb.",
+            "materials_used": [
+                "1.5-liter PET plastic bottle",
+                "Purified water",
+                "Bleach (chlorine)",
+                "Corrugated metal sheet",
+                "Polyurethane sealant"
+            ],
+            "step_by_step": [
+                "Fill a clean 1.5-liter PET bottle with purified water.",
+                "Add approximately 10ml of bleach to the water to prevent algae and bacteria growth.",
+                "Cut a circular hole in a piece of corrugated metal or the roof itself to match the bottle diameter.",
+                "Insert the bottle into the hole so that the bottom half hangs inside the house and the top half is exposed to the sun.",
+                "Apply a heavy-duty sealant around the joint to prevent rain leaks.",
+                "Secure the bottle cap to protect the contents."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the need for expensive daytime electricity or hazardous kerosene lamps in windowless slum dwellings, reducing fire risks and energy costs.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Chemical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Liter of Light is a well-established humanitarian innovation that uses common household materials. The primary risk is minimal, involving the handling of small amounts of bleach during the initial filling process. It significantly improves safety by replacing hazardous kerosene lamps, which are high fire risks in informal settlements."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "61aa7b756262dd7b5022cd240555c70d",
+        "timestamp": "2026-05-17T02:40:53.027285",
+        "title": "Gjenge Makers Plastic Paving Blocks",
+        "sources": [
+            "https://www.borgenproject.org/plastic-bricks-for-affordable-housing/",
+            "https://www.gjenge.co.ke/",
+            "https://www.goodgoodgood.co/articles/kubik-plastic-bricks-affordable-housing-africa",
+            "https://www.unep.org/news-and-stories/story/kenyan-entrepreneur-transforms-plastic-waste-paving-blocks",
+            "https://www.visionofhumanity.org/can-recycled-plastic-homes-solve-the-housing-shortage/",
+            "https://cities4children.org/blog/3-ways-to-tackle-waste-in-cities-drawing-inspiration-from-young-african-changemakers/"
+        ],
+        "summary": "A Kenyan startup that recycles plastic waste into durable, lightweight, and affordable paving blocks by mixing plastic with sand and applying high heat and compression.",
+        "category": [
+            "Recycling",
+            "Construction",
+            "Waste Management",
+            "Circular Economy"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya",
+            "region": "Nairobi",
+            "lat": -1.302398,
+            "lon": 36.8288509
+        },
+        "process": {
+            "how_it_works": "Plastic waste is used as a binder, mixed with sand, and compressed under high heat to form solid paving tiles that are stronger than traditional concrete.",
+            "materials_used": [
+                "High-density polyethylene (HDPE)",
+                "Low-density polyethylene (LDPE)",
+                "Polypropylene (PP)",
+                "Sand"
+            ],
+            "step_by_step": [
+                "Collection of plastic waste from informal settlements by local youth",
+                "Sorting of plastic into HDPE, LDPE, and PP categories",
+                "Mixing the plastic waste with sand",
+                "Heating the mixture to a high temperature",
+                "Compressing the heated mixture into paving block molds"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the dual crisis of plastic pollution and the lack of durable, affordable infrastructure in Nairobi's slums.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic fumes",
+                "Thermal burns"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The process involves heating plastic polymers (HDPE, LDPE, and PP) to high temperatures to facilitate bonding with sand. This thermal processing carries inherent fire risks and the potential for toxic gas emission if temperature controls fail. While the project has significant environmental benefits, the industrial-scale melting of plastics requires rigorous safety standards, specialized ventilation, and personal protective equipment to mitigate respiratory and burn hazards for workers."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "940f5c28ec88dc1b1b5344a9faa257a0",
+        "timestamp": "2026-05-17T02:41:11.392302",
+        "title": "Fresh Life (formerly Sanergy) Circular Sanitation System",
+        "sources": [
+            "https://www.seattleglobalist.com/2013/05/15/pushed-to-the-brink-slums-become-hotbeds-of-innovation/13175",
+            "https://www.freshlife.com/",
+            "https://www.unfccc.int/climate-action/momentum-for-change/lighthouse-activities/sanergy",
+            "https://www.africanews.com/2024/08/13/kenyas-slums-recycle-poo-to-improve-sanitation/",
+            "https://www.sanergy.com/"
+        ],
+        "summary": "A circular economy sanitation model operating in Nairobi's informal settlements that replaces traditional sewers with dry toilets. Collected waste is converted into high-value agricultural products like organic fertilizer and insect-based animal feed.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Circular Economy",
+            "Agriculture"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya",
+            "region": "Nairobi",
+            "lat": -1.302398,
+            "lon": 36.8288509
+        },
+        "process": {
+            "how_it_works": "The system uses a franchise model to install waterless dry toilets. Waste is collected daily in sealed cartridges and transported to a central factory where it is processed using Black Soldier Fly larvae to create organic soil enhancers and protein-rich animal feed.",
+            "materials_used": [
+                "Dry toilets",
+                "Black Soldier Fly larvae",
+                "Human waste",
+                "Collection cartridges"
+            ],
+            "step_by_step": [
+                "Install 'Fresh Life' dry toilets in areas where sewer infrastructure is absent.",
+                "Collect waste cartridges from the toilets on a daily basis.",
+                "Transport the waste to a centralized processing facility.",
+                "Introduce Black Soldier Fly larvae to consume and break down the organic waste.",
+                "Process the larvae into high-protein animal feed and the remaining byproduct into organic fertilizer."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of sanitation infrastructure in slums, prevalence of waterborne diseases, and high costs of chemical fertilizers/animal feed.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Biological",
+                "Environmental",
+                "Toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological due to the handling and transport of human waste (pathogens, parasites). While the Black Soldier Fly larvae process is effective, the scale of operations in dense urban slums necessitates strict adherence to PPE and hygiene protocols to prevent disease outbreaks. Additionally, large-scale decomposition can produce methane (fire risk) and ammonia (toxic/irritant)."
+        },
+        "priority_score": 74,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
