@@ -14849,5 +14849,208 @@
         "priority_score": 74,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "35eb5370b8ef8bfd781f626478a79d80",
+        "timestamp": "2026-05-19T02:48:08.896292",
+        "title": "Moringa Oleifera Seed Water Purification (Shagarat al Rauwãq)",
+        "sources": [
+            "https://pubmed.ncbi.nlm.nih.gov/3586089/",
+            "https://www.globalpolicy.org/component/content/article/209/49767.html",
+            "https://www.fao.org/3/ad053e/ad053e02.htm"
+        ],
+        "summary": "A traditional Sudanese method where crushed Moringa oleifera seeds are used as a natural coagulant to remove turbidity and bacteria from river water, providing a low-cost alternative to chemical treatments.",
+        "category": [
+            "Water Treatment",
+            "Indigenous Knowledge",
+            "Sustainable Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Sudan",
+            "region": "Nile River Basin",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Positively charged proteins in the Moringa seeds act as a natural coagulant, binding with negatively charged particles such as silt, clay, and bacteria, causing them to settle at the bottom via sedimentation.",
+            "materials_used": [
+                "Moringa oleifera seeds",
+                "Clean water (for paste)",
+                "Turbid river water",
+                "Crushing tool (mortar and pestle)"
+            ],
+            "step_by_step": [
+                "Dry the Moringa oleifera seeds.",
+                "Remove the seed coats to extract the kernels.",
+                "Crush the kernels into a fine powder.",
+                "Mix the powder with a small amount of clean water to create a paste.",
+                "Stir the paste into the turbid river water.",
+                "Allow the water to sit for one to two hours to let particles settle.",
+                "Decant the purified water from the top."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High water turbidity and bacterial contamination in rural areas without access to expensive chemical flocculants like alum.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "biological"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Moringa oleifera seeds are a safe, natural, and biodegradable alternative to chemical flocculants. The primary risk is biological, as the process may not eliminate 100% of pathogens, and the organic matter introduced can promote bacterial regrowth if the treated water is stored for extended periods. However, compared to untreated turbid water, it significantly reduces health risks."
+        },
+        "priority_score": 56,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "f4ff38fbf093a91d6d6f536a8fe0edd0",
+        "timestamp": "2026-05-19T02:48:27.087827",
+        "title": "Biosand Filter (BSF)",
+        "sources": [
+            "https://www.waterforcambodia.org/",
+            "https://trailblazerfoundation.org/",
+            "https://www.samaritanspurse.org/article/from-poverty-to-happiness/",
+            "https://www.justadrop.org/biosand-filters-cambodia",
+            "https://www.samaritanspurse.org/"
+        ],
+        "summary": "An adaptation of traditional slow sand filtration, the Biosand Filter is a household water treatment system that uses a concrete or plastic container filled with sand and gravel to remove pathogens from contaminated water sources without the need for electricity.",
+        "category": [
+            "Water Treatment",
+            "Public Health",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Cambodia",
+            "region": "Siem Reap",
+            "lat": 13.3617562,
+            "lon": 103.8590321
+        },
+        "process": {
+            "how_it_works": "Contaminated water is poured into the top of the filter. It passes through a biological layer (schmutzdecke) where microorganisms consume pathogens, followed by layers of sand and gravel that purify the water through physical trapping and adsorption.",
+            "materials_used": [
+                "Concrete or plastic container",
+                "Locally sourced sand",
+                "Locally sourced gravel",
+                "PVC piping for outlet"
+            ],
+            "step_by_step": [
+                "Construct or acquire a concrete or plastic housing unit.",
+                "Layer the bottom with coarse gravel.",
+                "Add a layer of finer gravel above the coarse base.",
+                "Fill the remaining space with specially prepared filter sand.",
+                "Allow a 'biolayer' (schmutzdecke) to develop at the sand-water interface over 1-3 weeks.",
+                "Pour contaminated water into the top and collect the purified water from the outlet pipe."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to clean drinking water and high prevalence of waterborne diseases in rural areas.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "biological"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The biosand filter is a passive, gravity-fed water treatment technology using natural materials like sand and gravel. It poses no fire, explosion, or chemical hazards. The only significant risk is biological if the filter is improperly maintained, leading to incomplete pathogen removal, but the system itself is inherently safe for household use."
+        },
+        "priority_score": 64,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "da2718a56e50c1cfb712a74a010aacd1",
+        "timestamp": "2026-05-19T02:48:47.994534",
+        "title": "Filtrón",
+        "sources": [
+            "https://comunidadconnect.org/nica-agua-bio-sand-filters/",
+            "https://www.pottersforpeace.org/",
+            "https://www.ideassonline.org/public/pdf/Filtron-ENG.pdf",
+            "https://www.who.int/publications/i/item/9789241548151",
+            "https://www.pottersforpeace.org/ceramic-water-filter-project"
+        ],
+        "summary": "The Filtrón is a low-cost, point-of-use ceramic water filter developed to provide clean drinking water in rural Nicaragua. It combines traditional pottery techniques with modern microbiological principles to filter out pathogens.",
+        "category": [
+            "Water Purification",
+            "Public Health",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nicaragua",
+            "region": "Central America",
+            "lat": 12.1040984,
+            "lon": -86.2567265
+        },
+        "process": {
+            "how_it_works": "The filter uses a porous ceramic structure to physically trap bacteria and parasites. The pores are created when organic material mixed into the clay burns away during firing. Colloidal silver is added to act as a biocide, killing any remaining pathogens.",
+            "materials_used": [
+                "Clay",
+                "Sawdust",
+                "Rice husks",
+                "Colloidal silver",
+                "Water"
+            ],
+            "step_by_step": [
+                "Mix clay with a specific ratio of combustible material like sawdust or rice husks.",
+                "Mold the mixture into a pot-shaped filter using a press or manual pottery techniques.",
+                "Fire the pot in a kiln at temperatures high enough to burn off the organic material, leaving microscopic pores.",
+                "Apply a coating of colloidal silver to the finished ceramic filter.",
+                "Place the filter inside a plastic or ceramic receptacle with a lid and a tap."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Access to safe drinking water and reduction of waterborne diarrheal diseases in post-disaster and rural settings.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic",
+                "Environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The production process involves high-temperature kilns which present a fire hazard and emit smoke/particulates into the environment. Additionally, the application of colloidal silver requires careful handling to avoid skin/eye irritation and ensure proper concentration. However, the technology is a well-established humanitarian solution with proven safety protocols."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
