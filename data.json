@@ -15052,5 +15052,201 @@
         "priority_score": 62,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "66ff412cb10580b943ed96ea8cc7c8b1",
+        "timestamp": "2026-05-21T02:51:37.887069",
+        "title": "Netafim Family Drip System (FDS)",
+        "sources": [
+            "https://www.netafimusa.com",
+            "https://goexplorer.org",
+            "https://www.fao.org",
+            "https://www.netafim.com"
+        ],
+        "summary": "A gravity-fed irrigation solution designed for smallholder farmers that uses an elevated water tank to distribute water and nutrients directly to crop roots, eliminating the need for electricity or fuel-powered pumps.",
+        "category": [
+            "Agriculture",
+            "Water Management",
+            "Sustainable Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya",
+            "region": "Rural regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system utilizes gravity from an elevated water tank to push water through a network of drip lines, delivering precise quantities of water and nutrients directly to the root zones of crops.",
+            "materials_used": [
+                "Elevated water tank",
+                "Drip irrigation tubing",
+                "Plug-and-grow kit components",
+                "Connectors",
+                "Filtration components"
+            ],
+            "step_by_step": [
+                "Position a water tank at an elevated height to create gravity-based pressure.",
+                "Assemble the 'plug-and-grow' kit components according to the field layout.",
+                "Lay the drip lines along the crop rows near the root zones.",
+                "Connect the drip system to the elevated water tank.",
+                "Fill the tank with water and nutrients to allow gravity-fed distribution to the plants."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces water usage by 60%, eliminates high costs of fuel and electricity for pumping, and increases crop yields for smallholder farmers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Family Drip System is a low-risk, gravity-fed innovation that eliminates the hazards associated with electrical or fuel-powered pumps. It reduces water waste and promotes sustainable agriculture. The only minimal risks involve standard agricultural nutrient handling and potential soil management, which are inherent to farming rather than the specific technology."
+        },
+        "priority_score": 48,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "f8d243d8b733009c7b651515d9b9b6e6",
+        "timestamp": "2026-05-21T02:51:58.475473",
+        "title": "iDE Low-Cost Microtube Drip Irrigation System",
+        "sources": [
+            "https://www.ideglobal.org",
+            "https://www.caltech.edu",
+            "https://farmingfirst.org",
+            "https://www.fao.org/land-water/news-archive/news-detail/en/c/288599/",
+            "https://www.irrigationtoolbox.com",
+            "https://www.ideglobal.org/"
+        ],
+        "summary": "A market-driven, low-cost drip irrigation solution utilizing non-proprietary microtubes and recycled plastics, designed for small-scale farmers in South Asia to increase yields and conserve water.",
+        "category": [
+            "Agriculture",
+            "Water Conservation",
+            "Rural Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "India and Nepal",
+            "region": "South Asia",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system replaces expensive commercial emitters with short lengths of microtubes and plastic tubing to deliver water directly to plant roots via gravity or low pressure.",
+            "materials_used": [
+                "Plastic tubing",
+                "Microtubes",
+                "Recycled plastic",
+                "Connectors"
+            ],
+            "step_by_step": [
+                "Source locally manufactured plastic pipes and microtubes to ensure low cost.",
+                "Design a layout based on specific crop spacing (e.g., for tomatoes or eggplant).",
+                "Connect the plastic piping network to a central water source or storage drum.",
+                "Insert microtubes into the main lines at the base of each plant to act as emitters.",
+                "Operate the system to provide consistent, low-volume irrigation to the root zones."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of commercial irrigation technology and the labor-intensive nature of manual bucket watering for extreme-poor farmers.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The microtube drip irrigation system is a low-pressure, water-based technology using inert plastic materials. It presents no significant fire, explosion, or chemical hazards. The only minor risk is potential environmental impact from plastic waste if not disposed of properly, but the overall safety for farmers is high."
+        },
+        "priority_score": 64,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "3e175361d45fc07c39e54fc79ea48a20",
+        "timestamp": "2026-05-21T02:52:17.553450",
+        "title": "Solar-powered Drip Irrigation System in Jinotega",
+        "sources": [
+            "https://gridalternatives.org"
+        ],
+        "summary": "The Cruz family in Nicaragua implemented a solar-powered drip irrigation system to replace expensive gas-powered pumps. By using a submersible solar pump and gravity-fed distribution, they doubled their bean yields and achieved year-round crop production while eliminating fuel costs.",
+        "category": [
+            "Agriculture",
+            "Renewable Energy",
+            "Water Management"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nicaragua",
+            "region": "Jinotega",
+            "lat": 13.8038301,
+            "lon": -85.39452
+        },
+        "process": {
+            "how_it_works": "A submersible solar pump extracts water from an artesian well into an elevated 5,000-liter storage tank, which then uses gravity to distribute water through drip irrigation lines to the crops.",
+            "materials_used": [
+                "Submersible solar pump",
+                "Solar panels",
+                "5,000-liter storage tank",
+                "Drip irrigation lines",
+                "Artesian well"
+            ],
+            "step_by_step": [
+                "Install a submersible solar pump within an artesian well",
+                "Connect the pump to a solar energy source for power",
+                "Pump water into a 5,000-liter storage tank located at an elevation",
+                "Utilize gravity to feed water from the tank into drip irrigation lines across the field"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of fuel and gas pump rentals which consumed over 50% of harvest income, and low crop yields.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Electrical",
+                "Structural"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation uses standard solar-powered irrigation technology, which is significantly safer than the previous gas-powered pumps. Risks are minimal and limited to standard electrical maintenance of the solar pump and ensuring the structural stability of the 5,000-liter water tank. The involvement of established organizations like GRID Alternatives suggests professional installation standards were followed."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
