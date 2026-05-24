@@ -15248,5 +15248,211 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "ed3f02292f9e49d12ff4711c51387c84",
+        "timestamp": "2026-05-24T02:48:30.887650",
+        "title": "IBC Tote Rainwater System",
+        "sources": [
+            "https://www.instructables.com/DIY-275-Gallon-Rainwater-Collection/",
+            "https://www.texaswaternewsroom.org/articles/how_to_build_a_high_volume_residential_rainwater_harvesting_system.html",
+            "https://greatescapefarms.com/educational-diy-rainwater-collection-system-all-you-need-to-know/"
+        ],
+        "summary": "A high-capacity DIY rainwater harvesting system that repurposes 275-gallon industrial Intermediate Bulk Containers (IBC) for residential and agricultural water storage, featuring a first-flush filtration mechanism to ensure water quality.",
+        "category": [
+            "Water Management",
+            "Sustainability",
+            "Agriculture",
+            "DIY"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "Rural and Homesteading areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system captures rainwater from roof gutters, uses a floating ball mechanism in a PVC diverter to bypass initial contaminated runoff, and stores the clean water in a large industrial container for gravity-fed or hose-connected irrigation.",
+            "materials_used": [
+                "275-gallon IBC tote",
+                "Cinder blocks",
+                "Gravel",
+                "PVC piping",
+                "Floating ball mechanism",
+                "2-inch to 3/4-inch adapter"
+            ],
+            "step_by_step": [
+                "Prepare a level foundation using cinder blocks and gravel to support over 2,000 lbs of weight.",
+                "Place the 275-gallon IBC tote on the level foundation.",
+                "Construct a first-flush diverter using PVC piping and a floating ball to trap initial roof debris.",
+                "Connect the roof gutter downspout to the first-flush diverter inlet.",
+                "Install a 2-inch to 3/4-inch adapter on the tote's main valve to allow for standard garden hose connectivity."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a low-cost, high-volume water storage solution for irrigation while reducing reliance on municipal water and repurposing industrial containers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "structural",
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary safety concerns are structural and chemical. A full 275-gallon tote weighs over 2,200 lbs, requiring a highly stable foundation to prevent tipping or collapse. Additionally, repurposed industrial IBC totes may contain hazardous chemical residues if their previous contents are unknown, posing a toxicity risk for irrigation or contact. Proper filtration and UV protection are also needed to prevent algae and bacterial growth.",
+            "safety_gear": [
+                "structural reinforcement",
+                "food-grade liner or certified clean tank",
+                "overflow drainage system"
+            ]
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "522d5d677c7646023e30bb1ab18543b9",
+        "timestamp": "2026-05-24T02:48:55.353523",
+        "title": "Stacked Rain Barrel System",
+        "sources": [
+            "https://www.instructables.com/The-Best-RAIN-BARREL-for-Less-Than-15-and-Where-to-F/",
+            "https://biglivinglittlefootprint.com/hubby-how-to-diy-stacked-rain-barrel-system/"
+        ],
+        "summary": "A space-saving DIY water harvesting innovation that utilizes a multi-tiered wooden frame to stack 55-gallon barrels vertically, using a PVC manifold for automatic overflow management and gravity-fed distribution.",
+        "category": [
+            "Water Conservation",
+            "Urban Agriculture",
+            "DIY Construction",
+            "Sustainability"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Not specified",
+            "region": "Urban environments",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Water is collected in the top barrel and flows through a vertical PVC manifold to lower units as each reaches capacity. Air relief valves prevent vacuum pressure, while the vertical arrangement uses gravity to provide water pressure through a bottom-mounted hose bib.",
+            "materials_used": [
+                "55-gallon food-grade barrels",
+                "Lumber for wooden frame",
+                "PVC pipes and manifold components",
+                "Air relief valves",
+                "Hose bib"
+            ],
+            "step_by_step": [
+                "Construct a sturdy, multi-tiered wooden frame capable of supporting the weight of full 55-gallon barrels.",
+                "Position food-grade barrels vertically on each tier of the frame.",
+                "Install a vertical PVC manifold system to link the barrels together.",
+                "Integrate air relief valves into the system to prevent vacuum pressure during drainage.",
+                "Attach a hose bib to the lowest barrel to allow for gravity-fed water usage."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses limited ground space for water storage in urban areas and improves gravity-fed water pressure.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Physical Hazard",
+                "Structural Failure"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The primary risk is the significant weight and high center of gravity. A three-barrel stack contains over 1,300 lbs of water; a DIY wooden frame failure or uneven ground settling could lead to a catastrophic collapse or tip-over in a dense urban environment. Structural engineering and secure anchoring are necessary to mitigate crush hazards."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "43da83258ad4ee0e22b95ecf9311d6ce",
+        "timestamp": "2026-05-24T02:49:13.705942",
+        "title": "BlueBarrel Rainwater Catchment System",
+        "sources": [
+            "https://watercache.com/education/rainwater-harvesting-101",
+            "https://www.bluebarrelsystems.com/"
+        ],
+        "summary": "A modular DIY rainwater harvesting system that connects repurposed 55-gallon barrels at the base. This bottom-plumbed design allows multiple barrels to function as a single unit, filling and draining simultaneously via the principle of communicating vessels.",
+        "category": [
+            "Water Management",
+            "Sustainable Living",
+            "DIY",
+            "Rainwater Harvesting"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "USA",
+            "region": "California",
+            "lat": 36.7014631,
+            "lon": -118.755997
+        },
+        "process": {
+            "how_it_works": "The system uses a 'wet' bottom-plumbed configuration where barrels are connected at their lowest point. This ensures that water levels remain equal across all barrels regardless of which one receives the inflow, allowing the entire array to be managed through one inlet and one outlet.",
+            "materials_used": [
+                "Repurposed 55-gallon food-grade barrels",
+                "PVC piping",
+                "High-flow valves",
+                "Bulkhead fittings",
+                "Downspout diverter"
+            ],
+            "step_by_step": [
+                "Obtain repurposed food-grade 55-gallon barrels.",
+                "Prepare a level foundation or platform for the barrel array.",
+                "Install bulkhead fittings near the bottom of each barrel.",
+                "Connect the barrels using a series of PVC pipes and specialized fittings.",
+                "Connect the primary barrel to a roof downspout using a diverter.",
+                "Install a high-flow outlet valve for gravity-fed or pump-assisted irrigation."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the complexity of plumbing multiple rain barrels individually and prevents the uneven filling/overflow issues common in top-linked systems.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "safety",
+                "environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The system is low-risk as it uses gravity-fed water storage. Primary risks include structural failure if the foundation is not rated for the significant weight of filled barrels (approx. 450 lbs per unit) and potential chemical contamination if repurposed barrels previously held toxic substances. The water is non-potable and poses a minor environmental risk if stagnant water becomes a breeding ground for mosquitoes."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
