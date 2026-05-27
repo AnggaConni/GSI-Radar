@@ -15454,5 +15454,200 @@
         "priority_score": 46,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "3bfe9a7ff6e44abbc5f72dc164dcaefc",
+        "timestamp": "2026-05-27T02:55:42.821385",
+        "title": "VeryPay NFC-Enabled Mobile Money Solution",
+        "sources": [
+            "https://www.gsma.com/mobilefordevelopment/blog/beyond-ussd-how-offline-nfc-transactions-can-drive-mobile-money-use/",
+            "https://www.gi-de.com/en/spotlight/payment/enabling-offline-payment-transactions",
+            "https://verypay.ch/"
+        ],
+        "summary": "VeryPay is an NFC-based payment system that uses bracelets and cards linked to mobile money accounts, allowing unbanked individuals in rural Africa to conduct digital transactions without smartphones or constant internet connectivity.",
+        "category": [
+            "Fintech",
+            "Digital Finance",
+            "NFC Technology",
+            "Financial Inclusion"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda, Senegal, Zambia",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "NFC-enabled wearables or cards act as a proxy for a mobile money wallet. Transactions are conducted offline at merchant points and synchronized with the mobile money network once connectivity is restored.",
+            "materials_used": [
+                "NFC-enabled bracelets",
+                "NFC cards",
+                "Merchant payment terminals",
+                "Mobile money account integration"
+            ],
+            "step_by_step": [
+                "The user links an NFC-enabled bracelet or card to their existing mobile money account.",
+                "The merchant enters the transaction amount on an NFC-compatible terminal.",
+                "The user taps their wearable or card on the terminal to authorize the payment.",
+                "The transaction is recorded locally in a 'closed-loop' offline environment.",
+                "The system synchronizes the transaction data with the mobile network operator's servers when a connection becomes available."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of smartphones and lack of reliable 2G/3G/4G infrastructure in remote areas preventing access to digital financial services.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "financial_security"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation uses passive NFC technology (bracelets and cards) which poses no physical risk of fire, explosion, or toxicity. The primary risks are related to financial security and data privacy, which are standard for digital payment systems and do not require the safety gear or environmental interventions associated with chemical or energy-based innovations."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "10d3f8b96e3d665d8b1bbfe4b18e72bf",
+        "timestamp": "2026-05-27T02:56:00.351744",
+        "title": "Mobile Money Integration with SACCOs in Rural Nepal",
+        "sources": [
+            "https://www.uncdf.org/article/8553/how-agent-networks-are-powering-change-in-ethiopia",
+            "https://www.uncdf.org/article/3416/community-based-organizations-can-be-good-digital-agents"
+        ],
+        "summary": "A collaborative model where mobile money providers partner with local Savings and Credit Cooperatives (SACCOs) to act as digital agent points, enabling remote smallholder farmers to receive digital payouts for dairy and crops and access formal financial services.",
+        "category": [
+            "Fintech",
+            "Agriculture",
+            "Financial Inclusion"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nepal",
+            "region": "Rural areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Local cooperatives serve as a 'human bridge' by becoming digital agents. Instead of cash payments, agricultural earnings are transferred to mobile wallets, which can be managed at the cooperative level.",
+            "materials_used": [
+                "Mobile money platforms",
+                "Mobile phones",
+                "Existing SACCO physical infrastructure",
+                "Digital payment software"
+            ],
+            "step_by_step": [
+                "Mobile money providers establish partnerships with established local SACCOs.",
+                "SACCOs are equipped and trained to function as digital agent points.",
+                "Dairy and crop payout systems are digitized to transfer funds directly to farmers' mobile accounts.",
+                "Farmers use the local SACCO to deposit, withdraw, or save their digital earnings."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the need for farmers to travel long distances to bank branches and reduces the security risk of carrying large amounts of cash.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "None"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a socio-economic and digital process that utilizes existing social infrastructure. It does not involve any hazardous chemicals, high-energy systems, or physical manufacturing processes. It actually enhances safety by reducing the physical risk of theft or loss associated with farmers carrying large amounts of cash."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "eb053dcfd7d1eacfdc93a15fed740c8a",
+        "timestamp": "2026-05-27T02:56:17.527549",
+        "title": "M-KOPA Solar Home Systems",
+        "sources": [
+            "https://m-kopa.com/",
+            "https://www.ukcdr.org.uk/case-study/supporting-technological-innovation-to-improve-financial-inclusion/",
+            "https://www.gsma.com/mobilefordevelopment/resources/m-kopa-solar-connected-solar-energy-in-kenya/",
+            "https://www.hbs.edu/working-knowledge/Pages/item.aspx?num=40504"
+        ],
+        "summary": "A pay-as-you-go (PAYG) financing model that integrates mobile money with IoT-enabled solar home systems to provide electricity and credit-building opportunities for unbanked households in East Africa.",
+        "category": [
+            "FinTech",
+            "Renewable Energy",
+            "IoT"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2686662,
+            "lon": 36.8161377
+        },
+        "process": {
+            "how_it_works": "The system uses IoT technology to act as digital collateral; users make daily micropayments via mobile money to keep the solar device active. If payments stop, the device is remotely disabled until the next payment is received.",
+            "materials_used": [
+                "Solar panels",
+                "Battery storage units",
+                "IoT-enabled control box",
+                "LED bulbs",
+                "Mobile money platform"
+            ],
+            "step_by_step": [
+                "Customer pays an initial small deposit to receive the solar kit.",
+                "The IoT-enabled system is installed at the customer's home.",
+                "Customer sends daily micropayments through a mobile money service like M-Pesa.",
+                "The M-KOPA system receives the payment and remotely activates the device via the GSM network.",
+                "Once the total cost of the asset is paid off, the device is unlocked permanently and the user gains full ownership.",
+                "The payment history is used to create a digital credit score for the user to access further financial services."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to formal credit and reliable electricity for rural, unbanked populations.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation involves the mass distribution of solar home systems containing batteries (typically lithium-ion or lead-acid). These components pose a fire hazard if damaged, improperly maintained, or subjected to thermal runaway. Furthermore, the lack of formal e-waste management infrastructure in rural East Africa presents a significant environmental risk regarding the disposal of batteries and electronic components at the end of their lifecycle."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
