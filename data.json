@@ -15649,5 +15649,213 @@
         "priority_score": 60,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "00d815ea23374038abb47254a01316bb",
+        "timestamp": "2026-05-30T02:40:39.735472",
+        "title": "Long-tail boat (Ruea Hang Yao)",
+        "sources": [
+            "https://en.wikipedia.org/wiki/Long-tail_boat",
+            "https://www.thailand.go.th",
+            "https://www.exotravel.com/blog/thailand/discover-the-waterways-of-southeast-asia-on-the-long-tail-boat/",
+            "https://jtgatoring.com/assembling-thai-long-tail-mud-motor-kits/",
+            "https://www.bangkokpost.com"
+        ],
+        "summary": "A low-cost marine propulsion system originating in Thailand that repurposes second-hand automotive engines. It features a long, pivoting drive shaft that allows for navigation in shallow, muddy, or weed-choked waters where traditional outboard motors would fail.",
+        "category": [
+            "Maritime Transportation",
+            "Frugal Innovation",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Thailand",
+            "region": "Southeast Asia",
+            "lat": 13.7886163,
+            "lon": 100.546379
+        },
+        "process": {
+            "how_it_works": "An internal combustion engine from a car or truck is mounted on a pivoting turret at the boat's stern. A long steel shaft connects the engine directly to a propeller, allowing the operator to steer and adjust the propeller's depth by manually maneuvering the engine unit.",
+            "materials_used": [
+                "Second-hand automotive or truck engine",
+                "Steel drive shaft",
+                "Propeller",
+                "Pivoting turret/pole mount",
+                "Internal combustion engine parts"
+            ],
+            "step_by_step": [
+                "Acquire a used automotive or truck internal combustion engine.",
+                "Install a pivoting turret-like pole at the stern of the boat to serve as the engine mount.",
+                "Mount the engine onto the pivoting pole to allow for 360-degree horizontal movement and vertical tilting.",
+                "Attach a long, straight steel drive shaft (the 'tail') directly to the engine's crankshaft.",
+                "Affix a propeller to the end of the drive shaft.",
+                "Operate the boat by using the engine's weight and the long shaft as a lever to steer and lift the propeller over obstacles."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of specialized marine engines and the inability of standard motors to navigate shallow or debris-filled tropical waterways.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "fire hazard",
+                "environment",
+                "safety gear",
+                "toxic"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "Repurposing automotive engines for marine use presents significant safety risks. These engines lack marine-grade spark protection and cooling systems, increasing fire and explosion risks. The long, exposed rotating drive shaft and propeller are major mechanical hazards. Additionally, the lack of emission controls and frequent oil/fuel leakage from second-hand engines causes substantial environmental damage to aquatic ecosystems."
+        },
+        "priority_score": 82,
+        "hidden_gem": true,
+        "critical_flag": true
+    },
+    {
+        "id": "43225427f8fe34d64eb3dfacf6b4fb74",
+        "timestamp": "2026-05-30T02:41:03.730439",
+        "title": "Solar-Powered Electric Outboard Motors for Zanzibar Seaweed Farmers",
+        "sources": [
+            "https://plugboats.com/the-epropulsion-zanzibar-project-how-electric-outboards-are-changing-the-lives-of-local-populations/",
+            "https://www.marinecultures.org/en/projects/seaweed-farming/",
+            "https://www.unep.org/"
+        ],
+        "summary": "An adaptation initiative in Zanzibar equipping women seaweed farmers with solar-powered fiberglass boats to reach deeper, cooler waters necessitated by rising ocean temperatures, eliminating fuel costs and physical labor.",
+        "category": [
+            "Renewable Energy",
+            "Climate Adaptation",
+            "Sustainable Agriculture",
+            "Marine Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Tanzania",
+            "region": "Zanzibar",
+            "lat": -6.0999709,
+            "lon": 39.3209535
+        },
+        "process": {
+            "how_it_works": "Solar arrays mounted on fiberglass boats charge batteries that drive electric outboard motors, enabling carbon-free transport to deep-sea farms without the need for manual pull-starting or expensive petrol.",
+            "materials_used": [
+                "5-6 meter fiberglass boats",
+                "Electric outboard motors",
+                "600W solar panel arrays",
+                "Battery storage systems"
+            ],
+            "step_by_step": [
+                "Equip 5-6 meter fiberglass boats with 600W solar panel arrays.",
+                "Connect the solar arrays to a battery system to power electric outboard motors.",
+                "Navigate the boats to deeper, cooler waters where seaweed can thrive despite rising ocean temperatures.",
+                "Harvest the seaweed and transport it back to shore using the vibration-free electric motor to prevent crop damage.",
+                "Recharge the batteries using the integrated solar panels during operation and while docked."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Rising ocean temperatures forcing seaweed to deeper waters, high fuel costs for farmers, and the physical difficulty of pull-starting petrol engines.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Electrical hazard",
+                "Environmental hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the transition to electric motors reduces fuel-related risks, the integration of high-capacity batteries and 600W solar arrays in a corrosive saltwater environment introduces risks of electrical shorts and thermal runaway (fire). Saltwater exposure can accelerate the degradation of wiring and battery enclosures. Intervention is needed to ensure proper waterproofing standards, electrical grounding, and a sustainable plan for the disposal of toxic battery components at the end of their lifecycle."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "1680a71dfe5f854dfcd0e15cc5501512",
+        "timestamp": "2026-05-30T02:41:28.306678",
+        "title": "Asobo Electric Outboard Motor Rental System",
+        "sources": [
+            "https://www.youtube.com/watch?v=FVFDPTpdvc932sBxp8x8pwwOGlOi8_rfeJa28BWt2ohBIeq9XQjSfFGXzxBpmOGBFhIgTWLHjvzz8jx7ZIKo3fWrhqGFvCk45ETNU4broPFwkw35Lsu0i5ZIxpsr2LVHnv-Re2UoE",
+            "https://www.voanews.com/a/electric-fishing-boats-in-kenya-s-lake-victoria-help-cut-emissions-/6587475.html",
+            "https://www.africanews.com/2024/08/13/motorboat-company-launches-electric-fishing-boats-on-lake-victoria/",
+            "https://asobo.no/"
+        ],
+        "summary": "Asobo provides a pay-as-you-go rental model for electric outboard motors and batteries to fishers on Lake Victoria, Kenya. This allows them to replace expensive petrol engines with clean, silent, and cost-effective electric propulsion powered by renewable energy without high upfront costs.",
+        "category": [
+            "Clean Energy",
+            "Sustainable Fishing",
+            "Transportation",
+            "Fintech"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "Lake Victoria",
+            "lat": -0.1142701,
+            "lon": 34.7616387
+        },
+        "process": {
+            "how_it_works": "Fishers rent high-tech electric motors and batteries through a subscription or pay-as-you-go model. Batteries are recharged at solar-powered hubs, and the motors include GPS tracking for safety and management.",
+            "materials_used": [
+                "Electric outboard motors",
+                "Lithium-ion batteries",
+                "Solar charging infrastructure",
+                "GPS tracking devices",
+                "Mobile payment systems"
+            ],
+            "step_by_step": [
+                "Fishers register for the Asobo rental service to avoid high capital expenditure.",
+                "An electric motor is fitted to the fisher's boat.",
+                "Fishers collect fully charged batteries from a solar-powered charging hub.",
+                "The silent motor is used for night fishing, which improves catch rates by not disturbing fish.",
+                "Used batteries are returned to the hub to be swapped for fresh ones.",
+                "Payments are made via a pay-as-you-go system, typically using mobile money."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High fuel costs, environmental pollution from petrol engines, and the financial 'poverty trap' caused by high maintenance and operating expenses.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Environmental hazard",
+                "Electrical safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks involve the use of high-capacity lithium-ion batteries in a humid, marine environment, which can lead to thermal runaway or electrical fires if damaged. However, because the startup manages the maintenance, charging, and end-of-life disposal through a rental model, the risks are significantly lower than DIY or unmanaged solutions. The inclusion of GPS tracking and professional oversight enhances overall fisher safety."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
