@@ -15857,5 +15857,214 @@
         "priority_score": 50,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "b1e0272aba80ed5b3fedbf260a28f38c",
+        "timestamp": "2026-06-01T03:34:15.948740",
+        "title": "Bio-robotic E-waste Prosthetic Arm",
+        "sources": [
+            "https://www.bellanaija.com/2023/01/moses-kiuna-david-gathu-bio-robotic-prosthetic-limbs/",
+            "https://www.reuters.com/article/world/kenyan-cousins-build-bio-robotic-arm-from-e-waste-idUSKBN2B11O4/",
+            "https://www.vanguardngr.com/2024/05/how-two-kenyan-school-dropouts-made-prosthetic-arms-for-people-with-disabilities/",
+            "https://gulfnews.com/photos/news/photos-kenyan-innovators-turn-e-waste-to-bio-robotic-prosthetic-1.1678278784381",
+            "https://www.aljazeera.com/news/2021/3/1/kenyan-cousins-build-bio-robotic-arm-from-e-waste",
+            "https://borgenproject.org/kenyan-inventors-waste-to-affordable-prosthetics/"
+        ],
+        "summary": "Self-taught cousins David Gathu and Moses Kiuna developed a bio-robotic prosthetic arm and a brain-signal-controlled suit using recycled electronic waste. The innovation aims to provide an affordable, locally-made alternative to expensive imported prosthetics for people with disabilities in Kenya.",
+        "category": [
+            "Robotics",
+            "Healthcare",
+            "E-waste Recycling",
+            "Assistive Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Kikuyu",
+            "lat": -1.2362919,
+            "lon": 36.590477
+        },
+        "process": {
+            "how_it_works": "The system uses a headset receiver to capture neural signals (intentions) from the wearer's brain. These signals are processed and converted into electrical commands that trigger mechanical movements in the prosthetic limb or suit in under two seconds.",
+            "materials_used": [
+                "Old computer motherboards",
+                "Wires",
+                "Plastic scrap",
+                "Electronic waste",
+                "Headset receiver"
+            ],
+            "step_by_step": [
+                "Salvage electronic components and plastic scrap from local junkyards",
+                "Extract functional circuitry and wiring from old computer motherboards",
+                "Assemble the mechanical structure of the arm using recycled plastic",
+                "Integrate a headset receiver to detect brain signals",
+                "Calibrate the system to translate neural intentions into specific mechanical actions"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and inaccessibility of imported medical prosthetics for low-income individuals.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Electrical",
+                "Toxic",
+                "Fire"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "While highly innovative, the project utilizes recycled electronic waste which often contains hazardous materials like lead and mercury. Working in a makeshift wooden granary increases fire risks, especially when dealing with potentially unstable recycled batteries and uncertified wiring. Furthermore, a brain-signal-controlled suit requires rigorous electrical isolation to ensure user safety from shocks or malfunctions."
+        },
+        "priority_score": 36,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "a21002cf22180a7508b3fd55ce38510d",
+        "timestamp": "2026-06-01T03:34:32.967729",
+        "title": "Sun Jifa's DIY Steel Bionic Hands",
+        "sources": [
+            "https://www.dailymail.co.uk/news/article-2188407/Chinese-farmer-Sun-Jifa-lost-hands-explosion-builds-prosthetic-replacements.html",
+            "https://www.vice.com/en/article/this-chinese-amputee-builds-diy-prosthetics-to-give-people-back-their-hands/",
+            "https://www.ibtimes.co.uk/china-farmer-bionic-arms-sun-jifa-471013",
+            "https://www.bbc.com/news/world-asia-china-19266184",
+            "https://www.itv.com/news/2012-09-26/man-rebuilds-life-and-limbs-after-dynamite-accident",
+            "https://www.medicaldaily.com/real-bionic-man-sun-jifa-builds-himself-diy-prosthetic-hands-241951"
+        ],
+        "summary": "After losing both hands in a dynamite accident and being unable to afford hospital-grade prosthetics, farmer Sun Jifa spent eight years engineering his own functional bionic hands from scrap metal and pulleys. His innovation has since grown into a social enterprise providing affordable limbs to hundreds of other amputees.",
+        "category": [
+            "Prosthetics",
+            "Assistive Technology",
+            "Mechanical Engineering",
+            "Social Entrepreneurship"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "China",
+            "region": "Jilin province",
+            "lat": 43.7289674,
+            "lon": 126.1997366
+        },
+        "process": {
+            "how_it_works": "The hands operate through a mechanical pulley and wire system. The movement of the user's elbows pulls the wires, which in turn controls the opening and closing of the steel fingers, allowing for a functional grip.",
+            "materials_used": [
+                "Scrap metal",
+                "Steel",
+                "Pulleys",
+                "Wires"
+            ],
+            "step_by_step": [
+                "Experimentation with scrap metal prototypes in a home workshop",
+                "Development of a wire-and-pulley mechanism to translate joint movement into grip",
+                "Iterative refinement over eight years to achieve dexterity for tasks like using cutlery",
+                "Scaling production to create a low-cost manufacturing process for other users"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and inaccessibility of commercial prosthetics for low-income rural amputees.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Safety",
+                "Medical"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the innovation is a remarkable mechanical achievement, the production of prosthetic limbs in a grassroots workshop lacks medical certification and quality control. Potential risks include mechanical failure during labor, skin infections from non-medical grade materials, and long-term musculoskeletal or nerve damage due to improper ergonomic design and weight distribution."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "9a3f7e55401afcf55ce59f1a39edef2c",
+        "timestamp": "2026-06-01T03:34:54.724292",
+        "title": "Project Daniel",
+        "sources": [
+            "https://www.businessinsider.com/how-a-100-3d-printed-arm-is-saving-the-children-of-sudan-2014-1",
+            "https://designmuseum.org/exhibitions/designs-of-the-year-2014/product/project-daniel",
+            "https://www.notimpossible.com/projects/project-daniel",
+            "https://www.bbc.com/news/technology-25642434",
+            "https://waag.org/en/article/project-daniel-3d-printed-100-prosthesis/"
+        ],
+        "summary": "An initiative by Not Impossible Labs that established the world's first 3D-printing prosthetic lab in South Sudan to provide affordable, locally manufactured artificial limbs to war victims.",
+        "category": [
+            "Healthcare",
+            "3D Printing",
+            "Humanitarian Aid",
+            "Social Innovation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "South Sudan",
+            "region": "Nuba Mountains",
+            "lat": 12.0,
+            "lon": 30.75
+        },
+        "process": {
+            "how_it_works": "The project utilizes consumer-grade 3D printers and open-source designs to create functional prosthetic arms. Instead of a one-time donation, the project focuses on 'teaching a man to fish' by setting up a permanent lab and training local staff.",
+            "materials_used": [
+                "3D printer filament (PLA/ABS)",
+                "3D printers",
+                "Laptops",
+                "Basic hardware components",
+                "Cables and pulleys"
+            ],
+            "step_by_step": [
+                "Establish a 3D printing facility within a local community hospital",
+                "Train local residents and medical staff on 3D modeling and printer operation",
+                "Measure the amputee's residual limb for sizing",
+                "Print the custom prosthetic components using open-source designs",
+                "Assemble the printed parts with mechanical components",
+                "Fit the device to the patient and provide usage training"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to expensive traditional prosthetics in war-torn regions with no medical infrastructure.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "mechanical",
+                "medical"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The project involves the grassroots manufacturing of medical devices (prosthetics) using 3D printing in a non-clinical environment. While the technology (FDM printing) is generally safe, risks include potential mechanical failure of the limb, skin irritation from materials, and minor fire hazards from printer heating elements. However, the risk is low given the non-invasive nature of the devices and the extreme lack of alternatives in the region."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
