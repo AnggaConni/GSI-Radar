@@ -16066,5 +16066,198 @@
         "priority_score": 46,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "4327309401ba9c36094e7d4a3c708e04",
+        "timestamp": "2026-06-03T03:38:24.358931",
+        "title": "Liter of Light",
+        "sources": [
+            "https://literoflight.org"
+        ],
+        "summary": "An open-source global movement that provides sustainable, zero-carbon lighting to high-density slums using recycled plastic bottles, water, and bleach to refract sunlight into dark interiors.",
+        "category": [
+            "Sustainable Energy",
+            "Waste Management",
+            "Social Innovation",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "Global",
+            "lat": 21.0965093,
+            "lon": 105.8529112
+        },
+        "process": {
+            "how_it_works": "A water-filled bottle is embedded in a roof to act as a skylight. Using the principle of refraction, the water scatters sunlight 360 degrees inside the room, providing illumination equivalent to a 55-watt incandescent bulb.",
+            "materials_used": [
+                "1.5-liter plastic bottle",
+                "Water",
+                "Bleach",
+                "Roofing sealant"
+            ],
+            "step_by_step": [
+                "Fill a recycled 1.5-liter plastic bottle with purified water.",
+                "Add a small amount of bleach to the water to prevent the growth of algae.",
+                "Cut a hole in a piece of corrugated metal or directly into the roof matching the diameter of the bottle.",
+                "Insert the bottle into the hole so that the top half is exposed to the sun and the bottom half hangs inside.",
+                "Apply a durable sealant around the joint to ensure the roof remains waterproof."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of indoor lighting in windowless slum dwellings and the dangers/costs associated with kerosene lamps.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Liter of Light is a well-established, low-risk humanitarian innovation. The primary safety concerns are related to the physical installation on roofs and ensuring a watertight seal to prevent leaks. The chemical component (bleach) is used in very small quantities and is sealed within the bottle, posing negligible toxic risk. It significantly improves overall safety by reducing the need for fire-prone kerosene lamps."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "5577c88c9420032bc3dd92e9aa206683",
+        "timestamp": "2026-06-03T03:38:42.905256",
+        "title": "Wecyclers",
+        "sources": [
+            "https://www.wecyclers.com/"
+        ],
+        "summary": "Wecyclers is a social enterprise in Lagos, Nigeria, that uses low-cost cargo bicycles to collect recyclable waste from informal settlements where traditional garbage trucks cannot reach, rewarding residents with points redeemable for household goods.",
+        "category": [
+            "Waste Management",
+            "Social Enterprise",
+            "Recycling",
+            "Sustainability"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nigeria",
+            "region": "Lagos",
+            "lat": 6.4550575,
+            "lon": 3.3941795
+        },
+        "process": {
+            "how_it_works": "A fleet of locally assembled cargo bicycles navigates narrow streets to collect recyclables from households, utilizing an SMS-based points system to incentivize waste sorting and collection.",
+            "materials_used": [
+                "Cargo bicycles (wecycles)",
+                "SMS-based rewards platform",
+                "Plastic bottles",
+                "Aluminum cans",
+                "Household reward items"
+            ],
+            "step_by_step": [
+                "Residents separate their recyclable waste into plastic and aluminum.",
+                "Wecyclers staff visit households using cargo bicycles to collect the materials.",
+                "The collected waste is weighed on-site.",
+                "Residents receive reward points via SMS based on the weight of the recyclables provided.",
+                "Collected materials are transported to a central hub for further processing and sale to recycling plants.",
+                "Residents redeem their accumulated points for essential household items like food or appliances."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Inaccessibility of waste management in slums, environmental pollution, drainage clogging, flooding, and lack of supplemental income for low-income families.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety gear"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is primarily a logistical and social solution for waste collection. Risks are low and limited to physical labor, such as potential traffic accidents for bicycle operators and the need for basic personal protective equipment (gloves, boots) to handle recyclable materials safely. There are no hazardous chemical processes or high-energy systems involved."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "e1c62fe5f9a519d6b73aa4303abb9d95",
+        "timestamp": "2026-06-03T03:39:02.367255",
+        "title": "Bottle Brick Technology",
+        "sources": [
+            "https://www.bbc.com/news/world-africa-14722179",
+            "https://www.reuters.com/article/idUSKBN1961YI/"
+        ],
+        "summary": "An eco-friendly construction method that repurposes discarded plastic bottles by filling them with sand to create durable, cost-effective building blocks for housing.",
+        "category": [
+            "Sustainable Construction",
+            "Waste Management",
+            "Affordable Housing"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Nigeria, Mexico",
+            "region": "Northern Nigeria",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Plastic bottles are filled with dry sand and used as bricks, which are then stacked and bound together using mud or cement mortar.",
+            "materials_used": [
+                "Discarded plastic bottles",
+                "Dry sand",
+                "Mud",
+                "Cement"
+            ],
+            "step_by_step": [
+                "Collect discarded plastic bottles of similar size.",
+                "Fill the bottles with dry sand, compacting it thoroughly to ensure strength.",
+                "Cap the bottles securely.",
+                "Stack the sand-filled bottles horizontally in layers.",
+                "Bind the layers together using a mixture of mud or cement.",
+                "Apply a final layer of plaster to the exterior for protection and aesthetics."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses plastic waste pollution and the lack of affordable, durable housing materials.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "While structurally durable and environmentally beneficial, the primary safety concern is the flammability of the plastic containers. If the bottles are not completely encased in a thick layer of fire-resistant plaster (like mud or cement), they pose a significant fire hazard and can release toxic fumes during combustion. Proper construction standards are necessary to ensure the plastic is shielded from UV degradation and heat."
+        },
+        "priority_score": 60,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
