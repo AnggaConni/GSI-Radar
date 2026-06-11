@@ -16259,5 +16259,209 @@
         "priority_score": 60,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "a288e1a769345da7f78bf48dd425f7e4",
+        "timestamp": "2026-06-11T03:29:18.782702",
+        "title": "IBC 'Chop and Flip' Aquaponics System",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbH8CHu5kvdemT0Dn68lQEv-DNhuHfwmUak622pW6P1uwvmE9EE_jcCsM1y2RuvXjXHNYrdxfcSoyk6AtaGOJ6a9gHc8m-Fbbr_5MH_Q6BqAhDKjk8290gx9w8SMsvM-58",
+            "https://www.youtube.com/watch?v=WYFM7J_TpTU",
+            "https://backyardaquaponics.com",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfi90kWrPaWKk-xf-0CqJhvwLf2Eia48jtMFJo5SNsnK52d30KIeYRDTqGSd1JdeJk6CWDFHAyAuLXkobukphUEFSDzcfSxKHmFmyp0ZrCmDPP8vrkSv5FPfkv3pB7OuqBO4c5AtSGk5k6RGwfl7MyQFY-0YVznXVdKIrVe4WB6ku1qYO8MpNIBPvNy4w_CEfMht2G",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-3j5_4ktgetQ0fL6Vc99wdpzM6OjOzjfHXQkn5dgpKdzeWDOao5rxEBcctZ20F-DdwR70Tb98llm-UPfiSHgitiGdomzVdK8tSbqtoRx6UagT6zxZSMzRBbShVsiUJgRu"
+        ],
+        "summary": "A low-cost, DIY aquaponics setup that repurposes a 275-gallon industrial IBC tote into a closed-loop system for raising fish and growing vegetables simultaneously.",
+        "category": [
+            "Aquaculture",
+            "Hydroponics",
+            "Sustainable Farming",
+            "Urban Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "Urban and Suburban areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A water pump circulates nutrient-rich water from the fish tank (bottom) to the plant grow bed (top). The plants and their growing medium act as a biological filter, cleaning the water before it drains back into the fish tank.",
+            "materials_used": [
+                "275-gallon IBC tote",
+                "Submersible water pump",
+                "PVC piping and fittings",
+                "Growing medium (gravel or expanded clay)",
+                "Fish",
+                "Vegetable seedlings"
+            ],
+            "step_by_step": [
+                "Acquire a food-grade 275-gallon IBC tote.",
+                "Cut the plastic container and metal cage horizontally, approximately one-third from the top.",
+                "Remove the top section and flip it over.",
+                "Place the flipped top section onto the bottom section to serve as the grow bed.",
+                "Install a water pump in the bottom fish tank section.",
+                "Plumb the system to move water from the pump to the top bed and allow it to gravity-drain back.",
+                "Fill the grow bed with media and the tank with water and fish."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High entry costs of commercial aquaculture and high water consumption in traditional gardening.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Toxic",
+                "Safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The primary risk is chemical toxicity; recycled industrial IBCs may have previously contained hazardous substances that can leach into the food system. Additionally, the structural integrity of the metal cage is often compromised during the 'chop' process, and the weight of the water (approx. 2,300 lbs) poses a significant crush or collapse hazard if not properly supported."
+        },
+        "priority_score": 34,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "efb190b5caca139c1aab96d5265cbb23",
+        "timestamp": "2026-06-11T03:29:43.077712",
+        "title": "Barrelponics (55-gallon Barrel Method)",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXGDsbUHavEXSrlsWnZ5mPsqGRA2VKGrda_SJc_FgagfOQytez0mUwka_F-n9O00yY76z7ku24oAHstJ5WnNEueHTOfH0x_2YB0s6yOdL7rVvVejbvUtcKcPvUnvHgff4j",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFK_kJRW8ML322gAC8_bcEgc5RmXbTkpT1k-YqHDubmxwew6QgoUHAkoJoY_aRsAf4cmdwt1e104jOGFdTM2th-mF59fvJq5Gb-idqaNqcjQGbMHuR6t51yEOgzj1eqTrWB",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAczSDO6Y38jm591RzSFbFxHOeJ2Ksr-G2C7TYOnqq8MDApaSOH8ZFZ6Wp8I_Y7UXuYqFpUYKm1PrOChEWSGjiDmFRkus8oIiBO_zHTEYOVfNkmmWevwyr3bgVCCV3W61C81X6jOHtaIqBKAU="
+        ],
+        "summary": "A modular and ultra-low-cost aquaponics system using repurposed 55-gallon food-grade plastic barrels to create a dual-zone environment for raising fish and growing leafy greens in limited spaces.",
+        "category": [
+            "Aquaponics",
+            "Urban Farming",
+            "Upcycling",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "Urban and rural areas with limited space",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses repurposed plastic barrels to create separate zones for fish and plants. A submersible pump circulates water through PVC plumbing, allowing fish waste to provide nutrients for plants while the plants filter the water for the fish.",
+            "materials_used": [
+                "55-gallon food-grade blue plastic barrels",
+                "PVC plumbing",
+                "Small submersible pump",
+                "Tilapia or catfish",
+                "Leafy greens"
+            ],
+            "step_by_step": [
+                "Source food-grade 55-gallon plastic barrels.",
+                "Cut the barrels lengthwise to create two grow beds, or crosswise to create a tank and a top-mounted garden.",
+                "Configure the plumbing using PVC pipes to connect the fish tank and plant zones.",
+                "Install a small submersible pump to circulate water between the components.",
+                "Link multiple barrels together if scaling up the system."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High entry costs and space requirements for traditional aquaculture and hydroponics.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "environment",
+                "safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The system is generally safe for small-scale use; however, risks include the structural weight of the water (approx. 450 lbs per barrel), potential electrical hazards from submersible pumps, and the environmental risk of introducing non-native fish species to local ecosystems if containment fails. Proper sourcing of food-grade barrels is essential to avoid chemical leaching."
+        },
+        "priority_score": 40,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "995faec5977fcf4f8fec1cab79bcddc1",
+        "timestamp": "2026-06-11T03:30:03.904832",
+        "title": "Tarpaulin-lined Pond",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaJddeMa5wVlqYyqiGZxarc7CXDPLs69_uo1Ep3745DV8OUGopwigA8zYMVIwibiS8M6X8F55wp2WcS6J38jFYUKfla8uzG0W-LwhDjI8iUliOxV_FxaDENpAO9O3-rWRP",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaV5KZQnE77L1HskSF4BIxsGt0MDkdziYVQ_q1jN0drT_IHd6nGJZyGcv43UZ4GHNwgju6ohXlVGPM5sf59j16xCHG3AAHTN2kb6JxI78bFigsy9o_Qn0FfJ0ABOgJlg4W",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhVjKuPy5_DRthzt4Q7j66wJCO7VYoS1wUrhS7cIxbXaI_eC7wvE56tK-JWcGyc65SY3cGQDpvq12j4f-I_2Vxtun7v0_mQK5WfNjSs0me6ZXtX2rKX_GOUk8zLqRs7JqTQ-BCe0UjPV_j7QWNcv_nfg=="
+        ],
+        "summary": "A high-yield, low-cost alternative to traditional concrete or fiberglass fish tanks, using a dug pit lined with heavy-duty waterproof material for flexible and efficient aquaculture.",
+        "category": [
+            "Aquaculture",
+            "Agriculture",
+            "Sustainable Farming"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "",
+            "region": "",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A shallow pit is dug in the ground and lined with a waterproof membrane (tarpaulin or HDPE) to create a contained water body for fish farming without the need for masonry.",
+            "materials_used": [
+                "Heavy-duty tarpaulin",
+                "HDPE geomembrane",
+                "200 GSM silpaulin sheet"
+            ],
+            "step_by_step": [
+                "Dig a shallow pit in a backyard or available land area",
+                "Line the pit with a heavy-duty, waterproof tarpaulin or HDPE geomembrane",
+                "Secure the edges of the liner to prevent water leakage or soil collapse",
+                "Fill the pond with water and introduce fish species like catfish or tilapia",
+                "Maintain water quality through simple aeration and regular water changes"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of masonry and specialized pond liners for small-scale fish farming.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "environment",
+                "safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks involve potential environmental contamination from nutrient-rich wastewater if the liner punctures and the physical safety hazard of an open body of water (drowning risk) if not properly fenced. While the materials are generally safe, low-quality plastics could potentially leach chemicals into the food supply.",
+            "innovation_assessment": "Low-cost, high-efficiency agricultural innovation using standard materials for small-scale food security."
+        },
+        "priority_score": 56,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
