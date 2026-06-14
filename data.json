@@ -16463,5 +16463,211 @@
         "priority_score": 56,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "9807ae179ff205af1ae78a76aa4ab0dd",
+        "timestamp": "2026-06-14T03:32:28.780452",
+        "title": "Janma Clean Birth Kit",
+        "sources": [
+            "https://www.engineeringforchange.org/solutions/product/janma-clean-birth-kit/",
+            "https://ayzh.com/products/clean-birth-kits/",
+            "https://ayzh.com/",
+            "https://www.ted.com/talks/zubaida_bai_a_simple_birth_kit_for_mothers_in_the_developing_world",
+            "https://www.forbes.com/sites/ashoka/2013/05/29/zubaida-bai-and-the-clean-birth-kit/"
+        ],
+        "summary": "The Janma kit is a sterile, low-cost 'clean birth kit in a purse' designed to prevent infection during childbirth in low-resource settings. It replaces dangerous improvised tools with sterilized medical components to ensure the 'six cleans' of delivery.",
+        "category": [
+            "Healthcare",
+            "Maternal Health",
+            "Social Innovation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "India",
+            "region": "Africa",
+            "lat": 28.588148,
+            "lon": 77.1850384
+        },
+        "process": {
+            "how_it_works": "The kit provides all necessary sterilized components to maintain hygiene during the six critical points of labor and delivery: clean hands, perineum, delivery surface, cord cutting, cord tying, and cord care.",
+            "materials_used": [
+                "Biodegradable jute bag",
+                "Blood-absorbent underpad",
+                "Surgical blade",
+                "Cord clamp",
+                "Soap",
+                "Gloves",
+                "Baby wiping cloth"
+            ],
+            "step_by_step": [
+                "The midwife or mother cleans hands using the provided soap",
+                "The blood-absorbent underpad is placed to create a clean delivery surface",
+                "The birth attendant puts on the sterile gloves",
+                "The surgical blade is used to safely cut the umbilical cord",
+                "The cord clamp is used to securely tie the cord",
+                "The baby wiping cloth is used to clean the newborn without contamination"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Prevents maternal and neonatal infections and mortality caused by the use of unsterile tools like agricultural sickles or glass shards during home births.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "Biological"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Janma kit is a sterile medical intervention designed to reduce the risk of infection and mortality during childbirth. It replaces dangerous improvised tools with standardized, sterile components. The only inherent risk is the standard biological hazard associated with medical waste disposal after use, but the innovation itself significantly increases safety for mothers and infants."
+        },
+        "priority_score": 48,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "23970405f167a6f382d470b0ccc89efe",
+        "timestamp": "2026-06-14T03:32:55.784245",
+        "title": "PATH Clean Delivery Kit",
+        "sources": [
+            "https://www.tech-exchange.xyz/solutions/path-clean-delivery-kit/",
+            "https://pubmed.ncbi.nlm.nih.gov/22168234/",
+            "https://www.path.org/resources/clean-delivery-kits-guidelines-for-their-use-in-programmatic-settings/",
+            "https://healthmarketinnovations.org/innovation/clean-delivery-kit",
+            "https://www.path.org"
+        ],
+        "summary": "A low-cost, culturally adaptable kit containing essential items for a clean and safe delivery, designed to prevent infection in resource-poor settings by standardizing the tools used by traditional birth attendants.",
+        "category": [
+            "Healthcare",
+            "Maternal Health",
+            "Global Health"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nepal, Tanzania",
+            "region": "South Asia, East Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The kit provides a standardized set of clean materials to ensure the 'six cleans' of delivery, replacing unsterilized household items that often lead to infection.",
+            "materials_used": [
+                "Soap",
+                "Plastic sheet (approx. 1 square meter)",
+                "Clean string (two pieces)",
+                "New razor blade",
+                "Pictorial instruction sheet",
+                "Small plastic bag"
+            ],
+            "step_by_step": [
+                "Wash hands thoroughly using the provided soap bar",
+                "Spread the plastic sheet to create a clean delivery surface",
+                "Deliver the baby onto the clean surface",
+                "Tie the umbilical cord in two places using the clean strings",
+                "Cut the cord between the ties using the new razor blade",
+                "Follow the pictorial guide for additional hygiene and care instructions"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Maternal and neonatal mortality caused by infections such as sepsis and tetanus during home births.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Sharp objects"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The PATH Clean Delivery Kit is a well-established public health intervention designed to increase safety and reduce infection rates during childbirth. The primary physical risk is the inclusion of a sharp razor blade, which requires standard handling precautions. The materials themselves are non-toxic and stable, though the plastic components present a minor environmental waste consideration."
+        },
+        "priority_score": 68,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "8fd6175733bed5a0a23a7264b34d3c7a",
+        "timestamp": "2026-06-14T03:33:15.706983",
+        "title": "Maama Kit",
+        "sources": [
+            "https://health.go.ug/",
+            "https://www.unicef.org/uganda/stories/maama-kits-saving-lives-mothers-and-newborns",
+            "https://www.afro.who.int/publications/maama-kit",
+            "https://www.who.int/"
+        ],
+        "summary": "A standardized, low-cost birth kit containing essential sterile supplies designed to prevent maternal and neonatal sepsis during childbirth in rural and resource-limited settings.",
+        "category": [
+            "Healthcare",
+            "Maternal Health",
+            "Sanitation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Uganda",
+            "region": "East Africa",
+            "lat": 0.2858775,
+            "lon": 32.6077523
+        },
+        "process": {
+            "how_it_works": "The kit provides a sterile environment and necessary tools for delivery, acting as an incentive for clinical care while serving as a safety net for home births to prevent infection.",
+            "materials_used": [
+                "soap",
+                "plastic sheet",
+                "razor blades",
+                "cotton wool",
+                "cord ties"
+            ],
+            "step_by_step": [
+                "Kits are produced and standardized by health authorities",
+                "Kits are distributed to pregnant women during antenatal care (ANC) visits",
+                "Mothers bring the kit to a health facility or use it with a village midwife during labor",
+                "The plastic sheet is used to create a clean birthing surface",
+                "Sterile razor blades and cord ties are used to safely manage the umbilical cord",
+                "Soap and cotton wool are used for hygiene and cleaning during and after delivery"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Maternal and neonatal sepsis and mortality caused by unhygienic delivery conditions.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "None"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Maama Kit is a standardized, low-tech medical intervention endorsed by the WHO and the Ugandan Ministry of Health. It consists of inert materials like soap, cotton, and plastic sheets designed to prevent infection. It poses no chemical, fire, or explosion hazards and is a proven safety measure for maternal health."
+        },
+        "priority_score": 64,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
