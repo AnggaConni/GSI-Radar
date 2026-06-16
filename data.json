@@ -16669,5 +16669,200 @@
         "priority_score": 64,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "d434b4c8a36b166ddf86e757a1392cbc",
+        "timestamp": "2026-06-16T03:37:20.073241",
+        "title": "Village Savings and Loan Association (VSLA)",
+        "sources": [
+            "https://www.care.org/our-work/poverty-hunger/village-savings-and-loan-associations-vsla/",
+            "https://www.care.org/news-and-stories/stories/market-makers-a-snapshot-of-savings-groups-driving-global-economic-growth/",
+            "https://www.carenederland.org/how-vslas-were-central-to-success/",
+            "https://www.care.org/our-work/women-and-work/village-savings-and-loan-associations/"
+        ],
+        "summary": "A self-managed and self-capitalized microfinance model where rural community groups pool savings to provide low-interest loans and social insurance without external capital or formal banking infrastructure.",
+        "category": [
+            "Microfinance",
+            "Financial Inclusion",
+            "Social Development"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Global",
+            "region": "67 countries",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Groups of 15–25 neighbors pool small savings into a communal fund for loans and a separate social fund for emergencies, managed through a transparent, multi-key lockbox system.",
+            "materials_used": [
+                "Physical lockbox",
+                "Multiple keys",
+                "Communal savings fund",
+                "Social fund"
+            ],
+            "step_by_step": [
+                "Form a group of 15–25 neighbors in a rural community",
+                "Regularly pool small savings into a communal fund",
+                "Establish a 'social fund' for community insurance against crises",
+                "Provide low-interest loans to members for business investments or emergencies",
+                "Secure funds in a lockbox where keys are held by different members to ensure transparency",
+                "Utilize verbal accounting methods to ensure accessibility for illiterate populations"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to formal banking and credit for rural and illiterate populations.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "security"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The VSLA model is a social and financial innovation that does not involve hazardous chemicals, energy production, or industrial processes. The primary physical risk is the security of the communal fund, which is mitigated by the use of physical lockboxes and multi-key accountability systems."
+        },
+        "priority_score": 64,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "10906e38a80aa6c8bd91c61fadbeb1f7",
+        "timestamp": "2026-06-16T03:37:38.128434",
+        "title": "Oxfam’s Saving for Change (SfC)",
+        "sources": [
+            "https://www.oxfam.org/en/saving-change",
+            "https://www.oxfamamerica.org/explore/research-publications/saving-for-change-financial-inclusion-and-resilience-for-the-worlds-poorest-people/",
+            "https://www.oxfam.org",
+            "https://www.oxfamamerica.org/explore/stories/savings-groups-help-villagers-plan-for-the-future/"
+        ],
+        "summary": "A micro-savings initiative that adapts traditional Rotating Savings and Credit Association models to provide critical liquidity during the 'lean season' through a structured one-year cycle of saving, internal lending, and a final share-out of capital and interest.",
+        "category": [
+            "Finance",
+            "Microfinance",
+            "Social Development",
+            "Poverty Alleviation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Mali, Cambodia, Senegal",
+            "region": "West Africa and Southeast Asia",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Village women are trained to save small amounts regularly in a communal fund. Members can take loans from this fund at interest. At the end of a 12-month cycle, the entire fund including interest is distributed back to members.",
+            "materials_used": [
+                "Ledgers",
+                "Savings boxes",
+                "Training modules"
+            ],
+            "step_by_step": [
+                "Formation of savings groups among village women",
+                "Regular weekly or monthly savings contributions",
+                "Issuance of internal loans to members with interest",
+                "Strategic 'share-out' of the total fund at the start of the hungry season or school year"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of liquidity during the hungry season and reliance on predatory outside lenders.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This is a social and financial innovation involving community-based microfinance. It does not involve any chemical, energy, or physical processes that would pose fire, explosion, toxic, or environmental hazards. The risks are purely socio-economic in nature."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "bf1f2eba4e726e097e1245458e2ef6e2",
+        "timestamp": "2026-06-16T03:38:01.504919",
+        "title": "Digital Tontines (Tontiin and Zepargn)",
+        "sources": [
+            "https://www.wsbi-esbg.org/an-opportunity-for-the-banking-sector-to-work-with-informal-savings-groups-in-morocco/",
+            "https://zepargn.com/blog/the-digital-tontine-the-revolution-of-collective-savings-in-africa/",
+            "https://tontiin.com/",
+            "https://tontiin.com/blog/how-tontiin-is-revolutionizing-community-savings-in-africa/"
+        ],
+        "summary": "Digital platforms that modernize traditional West African rotating savings and credit associations (tontines) by integrating mobile money, smart contracts, and automated ledgers to eliminate physical security risks and manual accounting errors.",
+        "category": [
+            "Fintech",
+            "Social Innovation",
+            "Community Finance"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Multiple",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Community members contribute fixed amounts of money into a digital pool using mobile money services. The system uses automated ledgers or smart contracts to track contributions and distribute the total 'pot' to members on a rotating schedule.",
+            "materials_used": [
+                "Mobile phones",
+                "Mobile money APIs (MTN, Orange Money)",
+                "Smart contracts",
+                "Digital ledgers"
+            ],
+            "step_by_step": [
+                "Members form or join a digital tontine group on the platform",
+                "Participants link their mobile money accounts for automated or manual transfers",
+                "Fixed contributions are collected digitally at set intervals",
+                "The platform records all transactions in an immutable ledger to ensure transparency",
+                "The total collected sum is automatically disbursed to the member whose turn it is to receive the payout"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Physical theft of cash, manual record-keeping errors, lack of transparency, and geographical limitations of traditional village-level savings groups.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a digital financial platform (fintech) that digitizes traditional rotating savings. It does not involve any physical materials, chemical reactions, or energy storage systems that would pose risks of fire, explosion, or toxicity. It actually increases physical safety by reducing the need to carry large amounts of cash."
+        },
+        "priority_score": 48,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
