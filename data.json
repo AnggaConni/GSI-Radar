@@ -16864,5 +16864,208 @@
         "priority_score": 48,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "0ef69383c791b79e716cd10467a1cbe0",
+        "timestamp": "2026-06-19T03:50:49.199946",
+        "title": "Zaï technique",
+        "sources": [
+            "https://wocatpedia.net/wiki/Za%C3%AF_pits",
+            "https://www.worldbank.org/en/news/feature/2014/02/11/restoring-land-in-the-sahel",
+            "https://www.unccd.int/news-stories/stories/man-who-stopped-desert",
+            "https://www.fao.org/3/t0321e/t0321e02.htm"
+        ],
+        "summary": "A traditional indigenous soil restoration method used in the Sahel to rehabilitate degraded, crusted land by digging pits and filling them with organic matter, which improves water infiltration and soil fertility through termite activity.",
+        "category": [
+            "Agriculture",
+            "Soil Restoration",
+            "Indigenous Knowledge",
+            "Water Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Burkina Faso, Mali",
+            "region": "Sahel",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Small pits are dug to act as micro-catchments that concentrate water and nutrients. Organic matter added to the pits attracts termites, which create deep channels in the hard-packed soil, enhancing aeration and water penetration.",
+            "materials_used": [
+                "Manure",
+                "Compost",
+                "Organic matter"
+            ],
+            "step_by_step": [
+                "Dig small pits (20-40 cm in diameter and 10-20 cm deep) during the dry season.",
+                "Fill the pits with organic matter such as manure or compost.",
+                "Allow termites to be attracted to the organic material to dig channels into the soil.",
+                "Plant crops like millet or sorghum directly into the pits when the rainy season begins."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Rehabilitation of barren, crusted 'zippelle' land and crop failure in arid conditions.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Zaï technique is a traditional, nature-based agricultural practice that utilizes manual labor and organic materials. It poses no chemical, explosive, or toxic risks. On the contrary, it is an environmentally restorative process that improves soil health and water management without the use of hazardous substances."
+        },
+        "priority_score": 64,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "1e1d5d45e93f4b15a566a996814abb23",
+        "timestamp": "2026-06-19T03:51:08.939729",
+        "title": "Terra Preta (Amazonian Dark Earth)",
+        "sources": [
+            "https://www.oneearth.org/biochar-rediscovering-ancient-wisdom-for-modern-soil-health/",
+            "https://www.smithsonianmag.com/science-nature/pristine-untouched-amazon-actually-shaped-by-humans-180962378/",
+            "https://www.nature.com/articles/s41467-023-38474-0",
+            "https://www.nature.com/articles/s41467-021-21411-x",
+            "https://www.science.org/doi/10.1126/science.adh8455",
+            "https://academic.oup.com/bioscience/article/56/11/901/221650"
+        ],
+        "summary": "A highly fertile, carbon-rich soil engineered by pre-Columbian indigenous populations in the Amazon through the incorporation of charcoal and organic waste, which remains productive and sequesters carbon for centuries.",
+        "category": [
+            "Agriculture",
+            "Soil Science",
+            "Environmental Engineering",
+            "Indigenous Knowledge"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Brazil",
+            "region": "Amazon Basin",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Charcoal acts as a 'microbial reef,' providing a stable structure that retains nutrients and moisture while preventing leaching caused by heavy tropical rains.",
+            "materials_used": [
+                "Charcoal",
+                "Animal bones",
+                "Fish remains",
+                "Manure",
+                "Pottery shards"
+            ],
+            "step_by_step": [
+                "Produce charcoal via low-temperature 'slash-and-char' fires.",
+                "Incorporate the charcoal into naturally nutrient-poor oxisol soil.",
+                "Add organic waste including animal bones and fish remains.",
+                "Mix in manure and pottery shards to enhance structural stability and nutrient content.",
+                "Allow microbial communities to colonize the charcoal structure over time."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Nutrient leaching and poor soil fertility in tropical environments; long-term carbon sequestration.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Terra Preta is a stable, carbon-rich soil amendment with high environmental benefits. The primary risk is associated with the 'slash-and-char' process used to create biochar, which involves controlled low-temperature fires. Standard agricultural safety practices for fire management and handling organic waste (manure) are sufficient."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "5a8062835f920ffa1503e9d6f19db471",
+        "timestamp": "2026-06-19T03:51:27.619935",
+        "title": "Chinampas (Floating Gardens)",
+        "sources": [
+            "https://whc.unesco.org/en/list/412",
+            "https://arcatierra.com/en/chinampas-the-ancient-aztec-farming-system/",
+            "https://www.fao.org/giahs/giahs-around-the-world/designated-sites/latin-america-and-the-caribbean/chinampas-agriculture-system-in-mexico-city/en/",
+            "https://www.britannica.com/topic/chinampa",
+            "https://www.nationalgeographic.com/environment/article/mexico-city-chinampa-aztec-agriculture"
+        ],
+        "summary": "An ancient Mesoamerican agricultural system of raised-field farming where artificial islands are constructed in shallow lake beds using organic layers and anchored by trees, creating a highly productive and self-sustaining ecosystem.",
+        "category": [
+            "Agriculture",
+            "Sustainable Farming",
+            "Traditional Knowledge",
+            "Water Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Mexico",
+            "region": "Valley of Mexico",
+            "lat": 19.5018295,
+            "lon": -99.0661917
+        },
+        "process": {
+            "how_it_works": "Artificial islands are built in shallow water by layering organic matter and sediment. These islands are irrigated naturally through capillary action from the surrounding canals and fertilized by nutrient-rich mud dredged from the canal floor.",
+            "materials_used": [
+                "Mud",
+                "Lake sediment",
+                "Decaying vegetation",
+                "Woven reeds",
+                "Stakes",
+                "Willow trees (ahuejotes)"
+            ],
+            "step_by_step": [
+                "Identify shallow lake beds or marshy areas.",
+                "Construct rectangular enclosures using woven reeds and wooden stakes.",
+                "Fill the enclosures with alternating layers of mud, lake sediment, and decaying vegetation.",
+                "Plant native willow trees (ahuejotes) along the perimeters to anchor the soil with their root systems.",
+                "Dredge nutrient-rich muck from the surrounding canal bottoms to spread on the fields as natural fertilizer.",
+                "Plant crops that benefit from the constant moisture provided by the surrounding water through capillary action."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Food production in swampy or lake-filled terrain; high-yield agriculture without chemical fertilizers; year-round farming capability.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Chinampas are a traditional, sustainable agricultural system utilizing natural materials such as mud, sediment, and vegetation. This method involves no hazardous chemicals, high-energy processes, or significant safety risks, and it is inherently environmentally beneficial."
+        },
+        "priority_score": 54,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
