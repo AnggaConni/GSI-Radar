@@ -17067,5 +17067,196 @@
         "priority_score": 54,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "2be6e57355aa62f524b0d6858cec218c",
+        "timestamp": "2026-06-22T03:42:10.798026",
+        "title": "Ecotiles: Recycled Plastic and Glass Roofing Tiles",
+        "sources": [
+            "https://viawater.nl/projects/roof-tiles-from-recycled-plastics-and-glass-kenya",
+            "https://www.aquaforall.org/project/trace-kenya/"
+        ],
+        "summary": "A social enterprise in Gilgil, Kenya, that manufactures durable, interlocking roofing tiles by blending recycled plastic waste with crushed glass, providing an affordable and sustainable alternative to traditional roofing materials.",
+        "category": [
+            "Waste Management",
+            "Construction",
+            "Circular Economy",
+            "Sustainable Housing"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "Gilgil",
+            "lat": -0.5414303,
+            "lon": 36.2361646
+        },
+        "process": {
+            "how_it_works": "Plastic waste is collected and blended with crushed glass to create a composite material that is molded into lightweight, interlocking tiles designed to be waterproof and crack-resistant.",
+            "materials_used": [
+                "Plastic waste",
+                "Crushed glass"
+            ],
+            "step_by_step": [
+                "Collection of plastic waste and glass by local waste pickers",
+                "Processing of glass into a crushed form",
+                "Blending the plastic waste with the crushed glass",
+                "Molding the composite mixture into interlocking roofing tiles"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Local plastic pollution, drainage blockages, and the high cost/weight of traditional roofing materials for low-income families.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic",
+                "Safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The manufacturing process involves melting plastic waste, which can release toxic fumes (such as dioxins or VOCs) and poses a significant fire hazard. Additionally, handling crushed glass presents risks of respiratory issues from silica dust and physical injury. While the end product is beneficial, the grassroots industrial setting requires strict oversight for worker safety, emission controls, and fire-retardancy testing of the final roofing material."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "5a8d39f1e3e4b0e4eb3d03527a808b6b",
+        "timestamp": "2026-06-22T03:42:28.894860",
+        "title": "PolyAl Roofing Sheets for Dairy Farming",
+        "sources": [
+            "https://www.thehindu.com/news/national/other-states/sabar-dairy-tetra-pak-partner-to-build-sheds-from-recycled-cartons/article68110594.ece",
+            "https://www.tetrapak.com/en-in/about-tetra-pak/news-and-events/newsarchive/sabar-dairy-tetra-pak-cow-shed-roofs-recycled-cartons",
+            "https://www.sabardairy.org/",
+            "https://www.tetrapak.com/en-in/sustainability/planet/recycling/polyal-recycling"
+        ],
+        "summary": "A collaborative initiative between Sabar Dairy and Tetra Pak in Gujarat that transforms recycled beverage carton waste (PolyAl) into corrugated roofing sheets for rural cow sheds, offering superior thermal insulation and waterproofing compared to traditional materials.",
+        "category": [
+            "Recycling",
+            "Sustainable Construction",
+            "Agriculture",
+            "Waste Management"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "India",
+            "region": "Gujarat",
+            "lat": 22.3850051,
+            "lon": 71.745261
+        },
+        "process": {
+            "how_it_works": "The polyethylene and aluminum layers (PolyAl) from recycled beverage cartons are processed and compressed into corrugated sheets. The aluminum component reflects solar radiation while the polyethylene provides a waterproof structure.",
+            "materials_used": [
+                "Recycled beverage cartons",
+                "Polyethylene",
+                "Aluminum"
+            ],
+            "step_by_step": [
+                "Collection of used multi-layer beverage cartons",
+                "Extraction of PolyAl material through recycling processes",
+                "Compression and molding of PolyAl into corrugated sheets",
+                "Installation of sheets on agricultural structures like cow sheds"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces landfill waste from multi-layer packaging and mitigates heat stress in livestock which improves milk yield.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The PolyAl material is a stable composite of recycled polyethylene and aluminum. While it offers excellent thermal insulation and moisture resistance, the polyethylene component is inherently more flammable than traditional cement or corrugated iron roofing. However, the risk is considered low for agricultural applications, and the environmental benefits of waste diversion and improved animal welfare outweigh the moderate fire risk."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "bdd9447ed8ff430631b1e36d6f26b95f",
+        "timestamp": "2026-06-22T03:42:46.784812",
+        "title": "Ocean Plastic Roofing Tiles",
+        "sources": [
+            "https://www.sevencleanseas.com/impact",
+            "https://www.sevencleanseas.com/",
+            "https://www.youtube.com/watch?v=6cX6Qd3GExt"
+        ],
+        "summary": "Seven Clean Seas transforms recovered ocean plastic into high-performance, waterproof roofing tiles designed to replace hazardous asbestos roofing in rural coastal communities in Southeast Asia.",
+        "category": [
+            "Circular Economy",
+            "Waste Management",
+            "Sustainable Construction"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Multiple",
+            "region": "Southeast Asia",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Recovered marine plastic waste is processed and molded into durable shingles that are resistant to salt air and high humidity.",
+            "materials_used": [
+                "Recovered ocean plastic",
+                "Recycled polymers"
+            ],
+            "step_by_step": [
+                "Collection of plastic waste from oceans and coastal areas.",
+                "Sorting and cleaning of the recovered plastic materials.",
+                "Processing and manufacturing the plastic into roofing shingles.",
+                "Replacement of existing hazardous asbestos or leaky roofing in coastal villages.",
+                "Installation of the new waterproof and weather-resistant tiles."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigates ocean plastic pollution while replacing dangerous asbestos roofing and providing resilient housing for vulnerable coastal populations.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the project addresses the health risks of asbestos, replacing it with plastic roofing introduces significant fire hazards if the material is not treated with flame retardants. Furthermore, the thermal processing of recovered marine plastics (which may contain PVC or other contaminants) can release toxic fumes, and long-term UV exposure in tropical climates could lead to material degradation and microplastic shedding into the local environment."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
