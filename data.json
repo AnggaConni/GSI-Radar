@@ -17258,5 +17258,207 @@
         "priority_score": 50,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "d246defba7603bbb3eee9fd0dbd904d3",
+        "timestamp": "2026-06-25T02:47:57.352973",
+        "title": "Sand-filled Plastic Bottle Houses",
+        "sources": [
+            "https://www.aljazeera.com/features/2011/12/13/nigerias-plastic-bottle-house",
+            "https://www.archdaily.com/606553/this-plastic-bottle-house-turns-trash-into-affordable-housing-in-nigeria",
+            "https://www.fairplanet.org/story/nigeria-builds-houses-of-plastic/",
+            "https://www.bbc.com/news/world-africa-14722179"
+        ],
+        "summary": "An innovative construction technique developed by the Development Association for Renewable Energies (DARE) that repurposes plastic bottles filled with sand as building blocks to create affordable, bulletproof, and thermally efficient housing in Nigeria.",
+        "category": [
+            "Sustainable Construction",
+            "Waste Management",
+            "Affordable Housing",
+            "Environmental Conservation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nigeria",
+            "region": "Yelwa, near Kaduna",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Plastic bottles are repurposed as bricks by filling them with sand, creating a dense and durable building material that provides high thermal mass and structural integrity.",
+            "materials_used": [
+                "Plastic bottles",
+                "Sand",
+                "Mud",
+                "Cement"
+            ],
+            "step_by_step": [
+                "Collect discarded plastic bottles",
+                "Fill bottles tightly with sand to create 'bottle-bricks'",
+                "Stack the bottles horizontally in rows",
+                "Bind the bottles together using a mixture of mud and cement",
+                "Reinforce the structure with string or wire if necessary",
+                "Apply a final layer of plaster to the walls"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the severe housing shortage and plastic waste pollution while providing disaster-resistant (bulletproof, fireproof, earthquake-resistant) shelter.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Structural Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The sand-filled plastic bottle construction method is a low-risk, sustainable innovation. The materials used (sand, PET bottles, mud, and cement) are largely inert and non-combustible, significantly reducing fire hazards. The primary risk is standard construction safety, but the resulting structures are reported to be durable and provide excellent thermal insulation, making it a safe alternative for low-income housing."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "3c19dfc650f034c0eb3c17ac249bcb18",
+        "timestamp": "2026-06-25T02:48:16.100671",
+        "title": "Bottle Schools",
+        "sources": [
+            "https://www.theguardian.com/sustainable-business/2014/may/29/ecobricks-plastic-bottle-waste-build-schools-guatemala",
+            "https://hugitforward.org/what-we-build/",
+            "https://revista.drclas.harvard.edu/trash-into-treasure/",
+            "https://hugitforward.org/"
+        ],
+        "summary": "A sustainable construction method that utilizes 'ecobricks'—plastic bottles stuffed with non-biodegradable waste—to build school infrastructure in rural and low-income communities. This approach reduces construction costs by 25% compared to traditional methods while addressing local waste management issues.",
+        "category": [
+            "Sustainable Construction",
+            "Waste Management",
+            "Education"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Guatemala",
+            "region": "Rural and low-income communities",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Plastic bottles are packed tightly with inorganic trash to create 'ecobricks.' These bricks act as insulation and filler within a structural frame, which is then reinforced with wire mesh and finished with cement.",
+            "materials_used": [
+                "Plastic bottles",
+                "Non-biodegradable trash",
+                "Chicken wire",
+                "Cement",
+                "Wood or rebar for framing"
+            ],
+            "step_by_step": [
+                "Community members collect plastic bottles and non-biodegradable waste.",
+                "Waste is stuffed into the bottles using sticks until they are solid and firm (ecobricks).",
+                "A structural frame for the building is constructed using traditional materials like wood or reinforced concrete.",
+                "Chicken wire is fastened to both sides of the structural frame.",
+                "The ecobricks are stacked vertically between the layers of chicken wire.",
+                "A mixture of cement and sand is applied over the wire mesh in three layers to create solid, durable walls."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable educational infrastructure and environmental pollution caused by plastic waste.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Structural integrity"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The use of plastic-filled ecobricks as wall infill is generally safe when encased in cement; however, fire remains a hazard as the plastic core could release toxic fumes if the exterior is breached. In seismic regions like Guatemala, structural integrity depends on the reinforced concrete frame rather than the bottles themselves, requiring consistent engineering oversight."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "c60df655d8873b746e34ac190d4f3177",
+        "timestamp": "2026-06-25T02:48:34.451172",
+        "title": "Upcycle Africa Plastic Bottle Housing",
+        "sources": [
+            "https://upcycleafrica.org/",
+            "https://www.bbc.com/news/av/world-africa-48356340",
+            "https://engoo.com/app/daily-news/article/used-plastic-bottles-become-homes-in-uganda/h9u_ZAnuEemZ0p_M_O_mYQ",
+            "https://www.reuters.com/article/world/ugandan-social-entrepreneur-turns-plastic-waste-into-homes-idUSKCN1S617L/"
+        ],
+        "summary": "Upcycle Africa trains marginalized youth and refugees in Uganda to construct durable, low-cost housing and sanitation facilities by repurposing plastic bottles filled with soil as building bricks.",
+        "category": [
+            "Sustainable Construction",
+            "Waste Management",
+            "Social Entrepreneurship"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Uganda",
+            "region": "Kampala and Nakivale Refugee Settlement",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Plastic bottles are collected and packed tightly with soil to create 'eco-bricks' that are used in place of traditional clay or mud bricks to build structural walls.",
+            "materials_used": [
+                "Plastic bottles",
+                "Soil",
+                "Cement",
+                "Sand",
+                "Water"
+            ],
+            "step_by_step": [
+                "Collection of discarded plastic bottles from urban areas and slums",
+                "Filling and compacting each bottle with soil to ensure structural density",
+                "Paying local residents for bottle collection and filling to support the local economy",
+                "Stacking the soil-filled bottles horizontally and binding them with mortar",
+                "Plastering the bottle walls to provide a smooth finish and additional protection"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses plastic waste pollution, high youth unemployment, and the lack of affordable, flood-resistant housing.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Structural safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks involve standard construction safety and the potential flammability of PET plastic if the exterior plaster or mortar fails during a fire. However, the innovation is low-risk as it uses stable, non-volatile waste materials and provides significant environmental and social benefits without involving hazardous chemical processes."
+        },
+        "priority_score": 56,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
