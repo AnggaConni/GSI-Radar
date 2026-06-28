@@ -17460,5 +17460,210 @@
         "priority_score": 56,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "57e2221e87cab0a6eb3a5d1df59e4d3c",
+        "timestamp": "2026-06-28T02:57:58.148453",
+        "title": "The 'Nestle' Project: Wind Turbine Nacelle Tiny Homes",
+        "sources": [
+            "https://group.vattenfall.com/",
+            "https://www.dezeen.com/2025/05/12/blade-made-wind-turbine-tiny-house-nestle/",
+            "https://www.superuse-studios.com/",
+            "https://group.vattenfall.com/press-and-media/newsroom/2024/wind-turbine-turned-into-compact-living/",
+            "https://www.superuse-studios.com/project/nestle-tiny-house/"
+        ],
+        "summary": "A collaborative initiative between Vattenfall and Superuse Studios that repurposes decommissioned wind turbine nacelles into building-code-compliant tiny homes, promoting a circular economy in the renewable energy sector.",
+        "category": [
+            "Sustainable Architecture",
+            "Circular Economy",
+            "Renewable Energy",
+            "Housing"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Netherlands",
+            "region": "Europe",
+            "lat": 52.3417979,
+            "lon": 4.823375
+        },
+        "process": {
+            "how_it_works": "Decommissioned nacelles are hollowed out to remove industrial machinery and then retrofitted with insulation, utilities, and living spaces to create durable, weather-resistant housing units.",
+            "materials_used": [
+                "Decommissioned wind turbine nacelle (Vestas V80)",
+                "Steel",
+                "Fiberglass",
+                "High-performance insulation",
+                "Solar panels",
+                "Heat pumps"
+            ],
+            "step_by_step": [
+                "Acquire a decommissioned wind turbine nacelle after its service life.",
+                "Hollow out the internal industrial components to create an open shell.",
+                "Install high-performance insulation to make the structure energy-efficient.",
+                "Design and install interior partitions for a kitchen, bathroom, and mezzanine sleeping area.",
+                "Integrate sustainable energy systems including solar panels and heat pumps.",
+                "Ensure the structure meets local building-code requirements for residential use."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the waste management challenge of decommissioned wind turbine components and provides a sustainable solution for the housing shortage.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire hazard",
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The project repurposes industrial fiberglass (GRP) structures which are inherently flammable and require specialized fire-retardant treatments to meet residential safety standards. Additionally, the conversion process involves cutting fiberglass, which produces toxic dust requiring high-level respiratory protection. However, as an initiative by established engineering and design firms aimed at building-code compliance, the operational risks are well-managed."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "201ca22ae04d4b39af33e73234461393",
+        "timestamp": "2026-06-28T02:58:17.905209",
+        "title": "Repurposing Wind Turbine Blades for Pedestrian Bridges",
+        "sources": [
+            "https://www.re-wind.info",
+            "https://bladebridge.ie",
+            "https://bladebridge.ie/",
+            "https://research.gatech.edu/bridging-gap-reusing-wind-turbine-blades-build-bridges",
+            "https://www.re-wind.info/"
+        ],
+        "summary": "A structural engineering method developed by the Re-Wind Network and BladeBridge to reuse decommissioned wind turbine blades as primary girders for pedestrian and bicycle bridges. This 'adaptive reuse' approach avoids energy-intensive shredding and leverages the blade's inherent strength and weather resistance to create low-carbon infrastructure.",
+        "category": [
+            "Sustainable Construction",
+            "Circular Economy",
+            "Civil Engineering",
+            "Renewable Energy"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Ireland, USA",
+            "region": "County Cork, Atlanta",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Instead of being discarded or shredded, decommissioned wind turbine blades are integrated into bridge designs as the main load-bearing girders, replacing traditional steel or concrete beams.",
+            "materials_used": [
+                "Decommissioned wind turbine blades",
+                "Steel connectors",
+                "Concrete abutments",
+                "Decking materials (timber or composite)"
+            ],
+            "step_by_step": [
+                "Sourcing and collection of decommissioned wind turbine blades.",
+                "Structural testing and analysis to ensure blade integrity and load-bearing capacity.",
+                "Engineering design to adapt the specific blade geometry into a bridge girder system.",
+                "Fabrication of custom steel connections to join the blades to the bridge deck and foundations.",
+                "Transport and installation of the blade-based structure at the project site."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the waste management challenge of non-biodegradable composite wind blades and reduces the carbon footprint of infrastructure construction.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "structural safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation utilizes adaptive reuse of high-strength, weather-resistant composite materials. The primary risk is standard structural engineering verification for load-bearing capacity, which is well-managed in established civil engineering practices. It significantly reduces environmental impact compared to traditional disposal or energy-intensive recycling methods."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "b0aaeb960f3c469977b9b3c02af8e751",
+        "timestamp": "2026-06-28T02:58:40.568904",
+        "title": "Blade Made",
+        "sources": [
+            "https://blade-made.com/",
+            "https://www.superuse-studios.com/project/wikado/",
+            "https://www.brightvibes.com/blade-made-turns-discarded-wind-turbine-blades-into-playgrounds-and-street-furniture/",
+            "https://www.blade-made.com/"
+        ],
+        "summary": "An initiative by Superuse Studios that transforms retired wind turbine blades into durable, imaginative playground equipment and urban furniture, significantly reducing the carbon footprint of construction by upcycling materials that are difficult to recycle.",
+        "category": [
+            "Circular Economy",
+            "Sustainable Architecture",
+            "Waste Management",
+            "Urban Design"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Netherlands",
+            "region": "Rotterdam",
+            "lat": 51.9244424,
+            "lon": 4.47775
+        },
+        "process": {
+            "how_it_works": "Decommissioned rotor blades are repurposed as structural components for urban spaces by cutting them into functional shapes like tunnels and towers and anchoring them to the ground.",
+            "materials_used": [
+                "Retired wind turbine blades",
+                "Steel anchors",
+                "Concrete foundations"
+            ],
+            "step_by_step": [
+                "Source decommissioned wind turbine blades",
+                "Design a layout based on the specific geometry of the blades",
+                "Cut blades into various sections to create tunnels, towers, and bridges",
+                "Transport sections to the installation site",
+                "Anchor the blade sections securely to the ground",
+                "Integrate functional elements like slides and seating"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Disposal of non-recyclable composite wind turbine blades and high carbon emissions in traditional playground construction.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Physical safety",
+                "Construction hazards"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The initiative repurposes inert wind turbine blades into structural elements. While the materials are durable and safe for public use once installed, the primary risks involve the construction phase, specifically the inhalation of fiberglass dust during cutting and ensuring the finished structures meet playground safety standards to prevent injury or entrapment."
+        },
+        "priority_score": 40,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
