@@ -1,7 +1,7 @@
 [
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-03-31T10:58:45.679328",
             "period": "Q1 2026",
             "total_records_analyzed": 175
@@ -220,6 +220,248 @@
                 {
                     "source": "Formal",
                     "count": 34
+                }
+            ]
+        }
+    },
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-06-30T02:52:16.780063",
+            "period": "Q2 2026",
+            "total_records_analyzed": 265
+        },
+        "global_summary": {
+            "total_innovations": 265,
+            "grassroots_percentage": 41.51,
+            "institutional_percentage": 30.19,
+            "semi_formal_percentage": 28.3
+        },
+        "top_categories": [
+            {
+                "category": "Waste Management & Circular Economy",
+                "count": 38,
+                "trend": "increasing"
+            },
+            {
+                "category": "Sustainable Agriculture",
+                "count": 32,
+                "trend": "stable"
+            },
+            {
+                "category": "Renewable Energy",
+                "count": 24,
+                "trend": "increasing"
+            },
+            {
+                "category": "Healthcare & Diagnostics",
+                "count": 22,
+                "trend": "stable"
+            },
+            {
+                "category": "Water & Sanitation",
+                "count": 20,
+                "trend": "stable"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "Southeast Asia (Indonesia/Philippines)",
+                "key_pattern": "Institutional disaster risk reduction and seaweed-based bioproducts.",
+                "risk_level": "low"
+            },
+            {
+                "region": "East Africa (Kenya/Uganda)",
+                "key_pattern": "Circular sanitation systems and Pay-As-You-Go energy models.",
+                "risk_level": "medium"
+            },
+            {
+                "region": "Latin America (Bolivia/Nicaragua/Mexico)",
+                "key_pattern": "Manual deep-well drilling and ancient agricultural terrace restoration.",
+                "risk_level": "medium"
+            },
+            {
+                "region": "South Asia (India)",
+                "key_pattern": "Frugal medical diagnostics and traditional-to-digital financial systems.",
+                "risk_level": "low"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 12,
+            "critical_cases": 12,
+            "top_risk_types": [
+                "Fire Hazard",
+                "Explosion",
+                "Biological/Pathogen Exposure",
+                "Toxic Fumes"
+            ],
+            "emerging_risks": [
+                "DIY Biogas pressure management in residential areas.",
+                "Toxic off-gassing from melting unclassified plastic waste for construction.",
+                "Pathogen survival in improperly managed thermophilic composting systems.",
+                "Structural collapse of high-weight vertical rain barrel stacks."
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Waste-to-Infrastructure",
+                "description": "Repurposing plastic bottles, glass, and wind turbine blades into housing, bridges, and paving.",
+                "regions": [
+                    "Nigeria",
+                    "Guatemala",
+                    "Netherlands",
+                    "Kenya"
+                ],
+                "risk_level": "medium"
+            },
+            {
+                "pattern_name": "Indigenous Tech Integration",
+                "description": "Combining ancestral knowledge (tracking, fire management) with drones, AI, and IoT.",
+                "regions": [
+                    "Brazil",
+                    "Australia",
+                    "Canada",
+                    "Arctic"
+                ],
+                "risk_level": "low"
+            },
+            {
+                "pattern_name": "Frugal Medical Diagnostics",
+                "description": "Miniaturizing lab processes (centrifugation, microscopy) using paper, string, and smartphone lenses.",
+                "regions": [
+                    "USA",
+                    "India",
+                    "Mexico"
+                ],
+                "risk_level": "low"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "Liter of Light",
+                "country": "Philippines",
+                "reason": "Zero-carbon, zero-cost daytime lighting using refraction; highly scalable and safe."
+            },
+            {
+                "title": "Zaï Technique",
+                "country": "Burkina Faso",
+                "reason": "Low-tech soil restoration using termites; high impact on desertification reversal."
+            },
+            {
+                "title": "Paperfuge",
+                "country": "USA/Global",
+                "reason": "Hand-powered centrifuge reaching 125,000 rpm for $0.20; revolutionary for rural clinics."
+            },
+            {
+                "title": "Sack Gardening",
+                "country": "Kenya",
+                "reason": "High-density urban farming in slums with zero land requirement."
+            },
+            {
+                "title": "Biopore Infiltration Holes",
+                "country": "Indonesia",
+                "reason": "Simultaneous flood mitigation and composting using simple manual augers."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "training",
+                "target": "Grassroots Biogas and Humanure Managers",
+                "priority_level": "high",
+                "justification": "High inherent risk of explosion and disease transmission requires standardized safety protocols."
+            },
+            {
+                "type": "regulation",
+                "target": "Recycled Plastic Building Materials",
+                "priority_level": "medium",
+                "justification": "Fire safety and toxic fume standards are needed for plastic-based roofing and bricks."
+            },
+            {
+                "type": "research",
+                "target": "Scavenged Plastic Leaching",
+                "priority_level": "medium",
+                "justification": "Verify if scavenged bottles used in hydroponics/water storage leach toxins into food/water."
+            },
+            {
+                "type": "funding",
+                "target": "Seaweed-based Bioplastics",
+                "priority_level": "high",
+                "justification": "Institutional innovation with high scalability to replace single-use petroleum plastics."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "shifting",
+            "observation": "Innovations are moving from purely traditional methods to 'Hybrid Tech' where IoT/AI validates ancestral wisdom."
+        },
+        "recommendations": [
+            "Standardize and distribute pictorial safety manuals for DIY energy and sanitation systems.",
+            "Establish legal frameworks for community-managed social currencies to survive national liquidity crises.",
+            "Incentivize the use of '0km building' materials like 3D-printed raw earth (TECLA).",
+            "Formalize e-waste dismantling hubs to provide safe components for grassroots roboticists.",
+            "Integrate mobile money agents with traditional cooperatives (SACCOs) to bridge the digital divide."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "East Africa",
+                    "count": 35
+                },
+                {
+                    "region": "Southeast Asia",
+                    "count": 25
+                },
+                {
+                    "region": "Latin America",
+                    "count": 20
+                },
+                {
+                    "region": "South Asia",
+                    "count": 16
+                },
+                {
+                    "region": "West Africa",
+                    "count": 15
+                },
+                {
+                    "region": "North America",
+                    "count": 15
+                },
+                {
+                    "region": "Europe",
+                    "count": 10
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "High",
+                    "count": 12
+                },
+                {
+                    "level": "Medium",
+                    "count": 88
+                },
+                {
+                    "level": "Low",
+                    "count": 165
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "Adapted from Existing",
+                    "count": 58
+                },
+                {
+                    "source": "Traditional",
+                    "count": 34
+                },
+                {
+                    "source": "Formal Education",
+                    "count": 31
+                },
+                {
+                    "source": "Self-Taught",
+                    "count": 13
                 }
             ]
         }
