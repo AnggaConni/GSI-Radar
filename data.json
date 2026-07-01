@@ -17665,5 +17665,202 @@
         "priority_score": 40,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "bf48fef0805d1b0caa2b33c0d6bfd23b",
+        "timestamp": "2026-07-01T02:58:02.673822",
+        "title": "MaTontine",
+        "sources": [
+            "https://www.bbc.com/news/business-43714201",
+            "https://www.matontine.com",
+            "https://www.itu.int/en/ITU-D/Regional-Presence/Africa/Documents/MaTontine.pdf",
+            "https://www.seedstars.com/community/entrepreneurs/matontine-senegal/",
+            "https://matontine.com/"
+        ],
+        "summary": "MaTontine is a digital financial services platform that modernizes the traditional West African 'tontine' (ROSCA) by digitizing contributions and payouts to build digital credit histories for the unbanked, enabling access to micro-insurance and loans.",
+        "category": [
+            "FinTech",
+            "Financial Inclusion",
+            "Microfinance"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Senegal",
+            "region": "West Africa",
+            "lat": 14.7447084,
+            "lon": -17.5207808
+        },
+        "process": {
+            "how_it_works": "The platform digitizes the manual processes of traditional rotating savings groups. By tracking digital contributions via mobile money, it creates a credit score for members, which is then used to facilitate access to formal financial products like insurance and business loans.",
+            "materials_used": [
+                "Mobile phones",
+                "Mobile money infrastructure",
+                "MaTontine digital platform",
+                "Cloud-based database"
+            ],
+            "step_by_step": [
+                "Members form or join a digital tontine group through the platform.",
+                "Contributions are collected automatically or manually via mobile money transfers.",
+                "The platform records every transaction to build a digital financial identity for each member.",
+                "Payouts are distributed to members on a rotating basis according to the group's schedule.",
+                "Members with high repayment reliability are offered additional services such as micro-insurance or small business loans based on their digital credit score."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses financial exclusion, high borrowing costs, and the lack of formal credit history for rural and low-income populations using informal savings systems.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "MaTontine is a digital financial services platform. As a software-based fintech innovation, it does not involve any chemical substances, high-energy systems, or physical manufacturing processes that would pose risks of fire, explosion, toxicity, or environmental damage."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "39ac11414b24c30c535b437bac849f33",
+        "timestamp": "2026-07-01T02:58:23.642006",
+        "title": "Chamasoft",
+        "sources": [
+            "https://www.chamasoft.com",
+            "https://play.google.com/store/apps/details?id=com.chamasoft.app",
+            "https://chamasoft.com/"
+        ],
+        "summary": "A specialized web and mobile application designed to automate the management of informal investment and rotating savings groups (Chamas) in Kenya, enhancing transparency and financial record-keeping through digital integration.",
+        "category": [
+            "Fintech",
+            "Social Finance",
+            "Mobile Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.349778,
+            "lon": 36.7563185
+        },
+        "process": {
+            "how_it_works": "The platform automates member invoicing, financial reporting, and contribution tracking by integrating directly with mobile money services to replace manual record-keeping.",
+            "materials_used": [
+                "Mobile application",
+                "Web interface",
+                "M-Pesa API",
+                "SMS gateway"
+            ],
+            "step_by_step": [
+                "The investment group (Chama) registers on the Chamasoft platform",
+                "Members are enrolled and their mobile money accounts are linked",
+                "The system sends automated invoices and SMS reminders for scheduled contributions",
+                "Members contribute funds digitally via M-Pesa integration",
+                "The platform generates real-time financial statements and manages digital payouts to members"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates lack of transparency, manual accounting errors, and poor record-keeping in informal village-level savings groups.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "financial",
+                "data privacy"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Chamasoft is a digital software solution for financial management. It does not involve physical chemicals, energy production, or hazardous materials, and therefore poses no risk of fire, explosion, or toxic environmental impact. The primary risks are related to financial security and data privacy, which are managed through digital protocols rather than physical safety gear."
+        },
+        "priority_score": 64,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "4ca538f1e25b26b1a20c85f31a592f1f",
+        "timestamp": "2026-07-01T02:58:44.589870",
+        "title": "Zepargn",
+        "sources": [
+            "https://www.zepargn.com",
+            "https://zepargn.com/",
+            "https://web.livezepargn.net"
+        ],
+        "summary": "Zepargn is a mobile application designed for the UEMOA region, specifically Benin, that digitizes the traditional 'tontine' community savings model. It integrates mobile money for secure contributions, offers interest-bearing savings through 'Z-lock', and provides microcredit via 'Z-flex' while ensuring democratic governance through automated voting.",
+        "category": [
+            "Fintech",
+            "Financial Inclusion",
+            "Community Savings"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Benin",
+            "region": "UEMOA",
+            "lat": 6.5158395,
+            "lon": 2.675811
+        },
+        "process": {
+            "how_it_works": "The app digitizes traditional savings circles by allowing members to contribute funds via mobile money into a secure digital wallet, managed by group-defined rules and automated voting for payouts.",
+            "materials_used": [
+                "Smartphone",
+                "Zepargn Mobile Application",
+                "MTN MoMo account",
+                "Moov Money account"
+            ],
+            "step_by_step": [
+                "Users download the app and create or join a digital savings group.",
+                "Members link their mobile money accounts (MTN or Moov) to the platform.",
+                "Contributions are automatically collected or manually sent to the group's digital wallet.",
+                "The platform uses an automated voting system to approve fund withdrawals or payouts to members.",
+                "Groups can opt into 'Z-lock' to earn interest on collective funds or 'Z-flex' for individual micro-loans based on savings history."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates physical cash handling risks such as theft and disputes, provides transparent governance, and offers credit access to unbanked community members.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Financial",
+                "Cybersecurity"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Zepargn is a software-based financial innovation. It poses no physical hazards such as fire, explosion, or toxicity. The primary risks are non-physical, involving financial fraud, data privacy, and regulatory compliance within the UEMOA microfinance framework."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
