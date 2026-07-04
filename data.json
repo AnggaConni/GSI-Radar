@@ -17862,5 +17862,204 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "0c1bc5985b353be874f42078e8fc90c8",
+        "timestamp": "2026-07-04T02:28:48.080790",
+        "title": "Darshana Project",
+        "sources": [
+            "https://www.scribd.com/document/269707784/Homemade-Projector-for-Education",
+            "https://www.scribd.com/document/462529712/Darshana-1-pdf"
+        ],
+        "summary": "A frugal innovation initiative in India that develops portable, low-power, and battery-operated projectors to bridge the digital divide in remote schools lacking reliable electricity.",
+        "category": [
+            "Education",
+            "Technology",
+            "Frugal Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Remote villages",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The device uses energy-efficient LED light sources and simplified optics to project digital educational content onto flat surfaces, designed to be powered by batteries and easily repaired by local technicians.",
+            "materials_used": [
+                "LED light sources",
+                "Local electronic components",
+                "Durable casings",
+                "Simplified optics",
+                "Batteries"
+            ],
+            "step_by_step": [
+                "Source electronic components and durable casings from local markets",
+                "Assemble simplified optical systems for projection",
+                "Integrate energy-efficient LED light sources into the hardware",
+                "Configure the device to operate on battery power for off-grid use",
+                "Ensure the assembly allows for easy repair by local technicians"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Digital divide and hardware cost barriers in schools with unreliable electricity and limited resources.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "battery safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "While the use of LEDs reduces heat compared to traditional projectors, the reliance on locally sourced components and battery power in a 'frugal' context introduces risks related to electrical shorts and thermal runaway. Without standardized battery management systems, there is a moderate risk of fire or battery failure during charging or extended use."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "99641a06f5f55e84a2816ea383534d6a",
+        "timestamp": "2026-07-04T02:29:06.628402",
+        "title": "Smart Projector Kits for Rural Agricultural Education",
+        "sources": [
+            "https://www.accessagriculture.org/",
+            "https://www.accessagriculture.org/news/building-culture-digital-entrepreneurship-among-rural-youths-madhya-pradesh-india",
+            "https://www.accessagriculture.org/news/smart-projector-revolutionary-tool-rural-actors"
+        ],
+        "summary": "A solar-powered, ruggedized projector system designed for off-grid communities in West Africa, containing a pre-loaded library of educational videos to facilitate agricultural training without internet or electricity.",
+        "category": [
+            "Agriculture",
+            "Education",
+            "Renewable Energy",
+            "Information Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Benin",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The kit operates as a mobile classroom using a battery-powered projector that stores hundreds of educational videos locally, eliminating the need for a live internet connection or a power grid.",
+            "materials_used": [
+                "Ruggedized projector",
+                "Built-in battery",
+                "Solar panel",
+                "Internal storage library",
+                "Portable carrying case"
+            ],
+            "step_by_step": [
+                "Entrepreneurs for Rural Access (ERAs) transport the kits to remote villages.",
+                "The solar panel is used to charge the internal battery during the day.",
+                "The projector is set up in a community space, functioning entirely offline.",
+                "Farmers and students view high-quality agricultural training videos in local languages.",
+                "ERAs facilitate discussions based on the visual content provided."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to digital media, agricultural training, and electricity in remote, off-grid communities.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The integration of high-capacity batteries and solar charging components in high-temperature, rural environments introduces a moderate fire hazard, particularly if the ruggedized casing is compromised. Furthermore, the deployment of electronic hardware in remote areas lacks a clear strategy for e-waste management, posing a long-term environmental risk when the units fail or expire."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "0cf3fcdb31316ff84975daf06f7d40f0",
+        "timestamp": "2026-07-04T02:29:22.408700",
+        "title": "Onebillion Solar-Powered Projection Solution",
+        "sources": [
+            "https://onebillion.org/",
+            "https://www.globalgiving.org/projects/solar-electricity-for-an-african-school/",
+            "https://www.optoma.co.uk/case-studies/onebillion-unveils-solar-powered-projection-solution"
+        ],
+        "summary": "A portable, solar-powered projection system designed to deliver interactive digital literacy and numeracy content to overcrowded classrooms in Malawi, bypassing the need for physical textbooks and grid electricity.",
+        "category": [
+            "Education",
+            "Renewable Energy",
+            "Digital Literacy"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Malawi",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses high-efficiency LED projectors and amplified speakers to display interactive educational apps from a central device onto a wall, allowing a single teacher to instruct hundreds of students simultaneously using solar energy.",
+            "materials_used": [
+                "High-efficiency LED projectors",
+                "Sturdy locally-adapted cases",
+                "Integrated battery",
+                "Amplified speaker system",
+                "Solar panels",
+                "Interactive literacy and numeracy apps"
+            ],
+            "step_by_step": [
+                "Charge the integrated battery system using portable solar panels",
+                "Hose the projection equipment in a durable, climate-resistant case for transport",
+                "Connect the educational tablet or device to the LED projector",
+                "Project the interactive lesson content onto a classroom wall or flat surface",
+                "Utilize the amplified speakers to ensure audio instructions reach all pupils in the overcrowded setting"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses extreme classroom overcrowding (up to 300:1 student-teacher ratio), lack of physical textbooks, and absence of electrical infrastructure.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation uses standard consumer electronics (LED projectors, batteries, and solar panels). The primary risk is associated with the integrated battery system, which could pose a fire hazard if damaged or exposed to extreme heat. Additionally, the disposal of electronic components and batteries presents a long-term environmental risk (e-waste). However, for classroom use, the safety level is high compared to chemical or high-energy innovations."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
