@@ -18061,5 +18061,200 @@
         "priority_score": 62,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "1c41c204f1d48bc45d4e848300a2bf5c",
+        "timestamp": "2026-07-06T02:42:31.001332",
+        "title": "Improvised Birth Kits for Remote Papua New Guinea",
+        "sources": [
+            "https://www.healthynewbornnetwork.org/resource/clean-birth-kits-potential-to-deliver/",
+            "https://www.thermofisher.com/blog/connected-to-science/thermo-fisher-volunteers-assemble-birthing-kits-to-support-underserved-mothers-and-babies/",
+            "https://www.sdp.com.pg/"
+        ],
+        "summary": "A low-cost, lightweight birth kit designed by the Sustainable Development Program (SDP) to facilitate safe deliveries in remote 'bush' settings where cultural norms require women to give birth away from home and clinical facilities.",
+        "category": [
+            "Healthcare",
+            "Maternal Health",
+            "Emergency Medicine"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Papua New Guinea",
+            "region": "Remote bush regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The kit provides a portable, sterile environment and basic tools to adhere to the 'six cleans' of safe birthing in non-clinical settings, preventing infection during and after delivery.",
+            "materials_used": [
+                "Heavy-duty plastic sheet",
+                "White cotton string",
+                "Single-use sterile razor blade"
+            ],
+            "step_by_step": [
+                "Spread the heavy-duty plastic sheet on the ground to create a sterile delivery surface.",
+                "Perform the delivery on the cleansed surface to avoid contact with soil or foliage.",
+                "Use the sterile razor blade to cut the umbilical cord safely.",
+                "Secure the umbilical cord using the white cotton string as an improvised cord tie."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High risk of infection and maternal/infant mortality due to unsterile birthing conditions in remote areas where cultural practices mandate delivery outside the home.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "biological",
+                "safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a low-tech medical intervention designed to reduce maternal and neonatal mortality. While it involves a sharp object (razor) and biological materials, it adheres to established 'six cleans' protocols and is a structured public health initiative. The risk is minimal compared to the traditional practices it replaces, and it does not involve volatile chemicals or high-energy systems."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "61322af99c014848fdae1aaed7ac5ac5",
+        "timestamp": "2026-07-06T02:43:08.993189",
+        "title": "Safe Delivery Kits for Rural Ethiopia",
+        "sources": [
+            "https://www.unfpa.org/news/clean-delivery-kits-help-save-mothers-and-newborns-ethiopia",
+            "https://www.unicef.org/ethiopia/",
+            "https://www.frontiersin.org/articles/10.3389/fpubh.2023.1184742/full",
+            "https://www.healthynewbornnetwork.org/"
+        ],
+        "summary": "A community-led initiative in rural Ethiopia where local women's groups are trained to assemble and distribute delivery kits to midwives. The kits contain essential tools like chlorhexidine and sterilized cutting implements to prevent neonatal umbilical infections in remote areas.",
+        "category": [
+            "Healthcare",
+            "Maternal Health",
+            "Community Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Ethiopia",
+            "region": "Rural villages (Kebeles)",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Local women's groups assemble standardized medical components into kits that are distributed to village midwives to ensure sterile conditions during childbirth.",
+            "materials_used": [
+                "Chlorhexidine (antiseptic)",
+                "Razor",
+                "String",
+                "Soap",
+                "Plastic sheeting"
+            ],
+            "step_by_step": [
+                "Training local women's groups on kit assembly and sterilization standards",
+                "Sourcing standardized components like soap and plastic sheeting locally",
+                "Assembling kits with specialized antiseptic and cord-cutting tools",
+                "Distributing kits to midwives in remote kebeles (villages)",
+                "Implementation of clean cord-cutting and tying during home deliveries"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High rates of neonatal and umbilical infections caused by unhygienic delivery practices in remote areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation uses standardized, low-risk medical components like chlorhexidine and razors to improve neonatal health. The primary safety concern is the handling of sharp objects (razors), but the overall risk is minimal compared to the significant reduction in infection rates. The community-led assembly model follows established public health protocols."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "df6553f9c520f95244fe43cb4b72bf1c",
+        "timestamp": "2026-07-06T02:43:26.465713",
+        "title": "Midwives For Haiti Clean Delivery Kits (CDKs)",
+        "sources": [
+            "https://midwivesforhaiti.org",
+            "https://www.globalgiving.org/projects/clean-birth-kits-for-safer-births/",
+            "https://midwivesforhaiti.org/clean-delivery-kits/"
+        ],
+        "summary": "A health intervention that provides traditional birth attendants (matròns) in rural Haiti with low-cost, improvised sterile delivery kits and pictorial instructions to replace unhygienic birthing conditions with a life-saving medical protocol.",
+        "category": [
+            "Maternal Health",
+            "Global Health",
+            "Medical Innovation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Haiti",
+            "region": "Rural Haiti",
+            "lat": 20.7567078,
+            "lon": -77.906624
+        },
+        "process": {
+            "how_it_works": "The kit uses absorbent disposable pads to create a sterile field and simple household-like tools for umbilical cord care, guided by a pictorial manual to ensure hygiene standards are met by non-literate attendants.",
+            "materials_used": [
+                "Chux pads",
+                "Cotton string",
+                "Single-edged razor blade",
+                "Cardboard safety cover",
+                "Pictorial guide"
+            ],
+            "step_by_step": [
+                "Distribute kits to traditional birth attendants (matròns) in rural areas.",
+                "Lay out the Chux pad to create a sterile field, replacing straw mats or dirt floors.",
+                "Follow the pictorial guide to adhere to the 'six cleans' protocol.",
+                "Use the two lengths of cotton string to tie the umbilical cord.",
+                "Use the protected razor blade to safely cut the cord."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces neonatal and maternal infections caused by unsterile birthing environments in rural households.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Physical injury",
+                "Biological hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation utilizes non-toxic, non-explosive household-like items to create a sterile field and manage umbilical cord care. The primary physical risk involves the razor blade, which is mitigated by a cardboard safety cover. While childbirth involves biological hazards, this kit is designed specifically to reduce those risks (sepsis and tetanus) compared to traditional practices. No chemical or energy-related hazards are introduced."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
