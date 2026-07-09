@@ -18256,5 +18256,208 @@
         "priority_score": 52,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "49d394c6a5538eaf79e060fac52a3cc6",
+        "timestamp": "2026-07-09T02:30:36.700261",
+        "title": "Magiro Micro-Hydro Power System",
+        "sources": [
+            "https://www.reuters.com/article/us-kenya-energy-hydro-idUSKBN16G066/",
+            "https://www.hydrobox.africa/",
+            "https://www.bbc.com/news/av/world-africa-44163901"
+        ],
+        "summary": "A self-taught Kenyan inventor developed a micro-hydroelectric turbine using scavenged bicycle parts and a small dynamo to provide affordable electricity to rural communities. The innovation transitioned from a DIY prototype to a commercial partnership capable of generating up to 750kW.",
+        "category": [
+            "Renewable Energy",
+            "Hydroelectric Power",
+            "Rural Electrification"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Murang'a County",
+            "lat": -0.8317087,
+            "lon": 37.0049216
+        },
+        "process": {
+            "how_it_works": "The system harnesses the kinetic energy of falling water from a river to spin a turbine, which is connected to a generator or dynamo to produce electricity.",
+            "materials_used": [
+                "bicycle wheel rim",
+                "small dynamo",
+                "wooden frame",
+                "scavenged metal parts",
+                "PVC pipes",
+                "wiring"
+            ],
+            "step_by_step": [
+                "Identify a suitable waterfall or high-pressure point on a local river",
+                "Construct a wooden or metal frame to house the turbine mechanism",
+                "Modify a bicycle wheel rim to act as a water wheel or turbine runner",
+                "Connect the wheel to a dynamo using a belt or direct drive system",
+                "Install the unit in the water flow to initiate rotation",
+                "Connect the dynamo output to a voltage regulator and distribution lines for households"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to the national grid and high costs of electricity in rural Kenyan villages.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Electrical",
+                "Mechanical"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "While the initial DIY prototype posed significant risks due to scavenged parts and lack of formal engineering, the project has since matured into a professional partnership with HydroBox. The current commercial-scale operations (16kW to 750kW) involve standard hydroelectric engineering, which mitigates grassroots safety concerns, though inherent electrical and mechanical risks of power generation remain."
+        },
+        "priority_score": 62,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "5a963da352a4b95942bae214e7b37a2a",
+        "timestamp": "2026-07-09T02:31:04.867320",
+        "title": "Pico-hydro Bucket Turbine",
+        "sources": [
+            "https://www.appropedia.org/Pico-hydro_bucket_turbine",
+            "https://www.engineeringforchange.org/solutions/product/pico-hydro-bucket-turbine/"
+        ],
+        "summary": "A portable hydroelectric generator housed in a standard five-gallon bucket, utilizing a Permanent Magnet Alternator and a PVC Pelton wheel to generate small-scale electricity from streams for remote communities.",
+        "category": [
+            "Renewable Energy",
+            "Hydroelectric",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Guatemala",
+            "region": "La Florida",
+            "lat": 15.1861076,
+            "lon": -91.8003875
+        },
+        "process": {
+            "how_it_works": "Water from a stream is directed through a nozzle into the bucket, where it strikes the buckets of a Pelton wheel. The kinetic energy of the water spins the wheel, which is connected to a Permanent Magnet Alternator (PMA) that converts the mechanical energy into electrical power.",
+            "materials_used": [
+                "Five-gallon plastic bucket",
+                "Permanent Magnet Alternator (PMA)",
+                "PVC pipes",
+                "Pelton wheel buckets",
+                "Metal hardware",
+                "Nozzle"
+            ],
+            "step_by_step": [
+                "Fabricate the Pelton wheel buckets using sections of PVC pipe.",
+                "Mount the Pelton wheel onto the shaft of the Permanent Magnet Alternator.",
+                "Secure the alternator and wheel assembly inside the five-gallon bucket.",
+                "Install a water inlet nozzle through the side of the bucket, aligned with the Pelton wheel.",
+                "Connect the system to a water source with sufficient head (vertical drop) via a pipe.",
+                "Connect the electrical output to a battery or charging circuit."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of reliable electricity for charging mobile phones and small devices in off-grid rural areas, which is essential for communication, market access, and medical services.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Electrical",
+                "Mechanical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The pico-hydro turbine is a low-voltage, small-scale energy solution. While it involves moving parts and electricity generation, the power output is minimal (intended for phone charging), which significantly limits the potential for fire or serious injury. The design is self-contained within a plastic bucket, providing a physical barrier against mechanical hazards."
+        },
+        "priority_score": 26,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "b961fc12f6bce15365d9a126c4d9b192",
+        "timestamp": "2026-07-09T02:31:35.401356",
+        "title": "Daniel Connell's DIY Micro-Hydro Siphon Turbine",
+        "sources": [
+            "https://github.com/danielconnell",
+            "https://www.youtube.com/@DanielConnell",
+            "https://www.solar-fire.org/"
+        ],
+        "summary": "An open-source, low-cost micro-hydro turbine that utilizes a siphon system and a recycled hoverboard motor to generate renewable energy without the need for permanent dams or significant earthworks.",
+        "category": [
+            "Renewable Energy",
+            "Micro-hydro",
+            "Open-source Hardware",
+            "Waste Upcycling"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Global",
+            "region": "Developing regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses a U-shaped PVC pipe to create a siphon that draws water over a barrier (like a channel wall), which then flows through a turbine. This turbine is connected to a repurposed brushless motor that acts as a generator.",
+            "materials_used": [
+                "PVC pipe",
+                "Discarded hoverboard brushless motor",
+                "Recycled materials",
+                "Wiring",
+                "Turbine blades"
+            ],
+            "step_by_step": [
+                "Salvage a brushless motor from a discarded hoverboard to serve as the generator.",
+                "Construct a U-shaped configuration using PVC pipes to facilitate a siphon effect.",
+                "Assemble the turbine unit and connect it to the hoverboard motor.",
+                "Position the assembly over the wall of a water channel or stream.",
+                "Prime the siphon to start the water flow through the turbine.",
+                "Connect the motor to a power storage or distribution system."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and environmental impact of traditional hydroelectric dams; lack of affordable energy infrastructure in remote areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Electrical",
+                "Mechanical"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The project involves the combination of water and electricity, which carries an inherent risk of electrocution or short circuits if waterproofing is not handled correctly. Additionally, DIY turbine blades and mechanical components made from recycled materials may fail under high rotational speeds or water pressure. However, the relatively low power output (200W-500W) and the absence of high-pressure dams or toxic chemicals keep the overall risk level moderate."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
