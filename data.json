@@ -18459,5 +18459,216 @@
         "priority_score": 50,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "53c960e98cf10e5a74cddb24387df6a1",
+        "timestamp": "2026-07-12T02:13:41.713188",
+        "title": "Liter of Light (Solar Bottle Bulb)",
+        "sources": [
+            "https://solve.mit.edu/challenges/youth-skills-and-the-future-of-work/solutions/114",
+            "https://literoflight.org/",
+            "https://www.unep.org/news-and-stories/story/liter-light-shining-bright",
+            "https://www.undp.org/argentina/projects/liter-light",
+            "https://www.unesco.org/en/articles/liter-light"
+        ],
+        "summary": "Liter of Light is a global open-source movement that provides an ingenious low-cost lighting solution for dark, windowless slum dwellings using recycled PET bottles, water, and bleach to refract sunlight.",
+        "category": [
+            "Renewable Energy",
+            "Sustainable Design",
+            "Waste Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Philippines",
+            "region": "Global",
+            "lat": 14.6139006,
+            "lon": 120.9971174
+        },
+        "process": {
+            "how_it_works": "The water inside a PET bottle refracts sunlight in 360 degrees, producing light equivalent to a 55-watt incandescent bulb. Bleach is added to the water to prevent algae growth, ensuring the light remains clear.",
+            "materials_used": [
+                "1.5 to 2-liter plastic PET bottle",
+                "Water",
+                "Bleach",
+                "Corrugated iron roof",
+                "Waterproof adhesive",
+                "LEDs",
+                "Simple circuits",
+                "Small solar panels"
+            ],
+            "step_by_step": [
+                "Fill a recycled PET bottle with water and a small amount of bleach.",
+                "Cut a hole in a corrugated iron roof matching the bottle's circumference.",
+                "Insert the bottle through the hole and secure it.",
+                "Seal the installation with a waterproof adhesive to prevent leaks.",
+                "For night-time use, integrate a small solar panel, circuit, and LED into the bottle assembly."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides indoor illumination for windowless homes without electricity, reduces energy costs, and minimizes fire hazards from candles or kerosene.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Chemical",
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Solar Bottle Bulb is a low-risk humanitarian innovation designed to replace hazardous lighting like candles. The primary risks involve minor chemical handling (bleach) and physical safety risks associated with cutting metal roofs during installation. The night-time solar lamps use low-voltage electronics, which pose minimal fire or electrical hazards compared to traditional grid or fuel-based lighting."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "ee0b98be55694121d2519fc18564fd2c",
+        "timestamp": "2026-07-12T02:14:08.252267",
+        "title": "Pendeza Shelters",
+        "sources": [
+            "https://socialinnovationacademy.org/enterprise/pendeza-shelters/",
+            "https://solve.mit.edu/challenges/youth-skills-and-the-future-of-work/solutions/68688",
+            "https://pendezashelters.org/",
+            "https://socialinnovationacademy.org/portfolio-item/pendeza-shelters/",
+            "https://www.pendezashelters.com/",
+            "https://happyeconews.com/plastic-bottle-shelter-uganda/"
+        ],
+        "summary": "A sustainable housing initiative in Uganda that transforms plastic waste into durable building materials by filling discarded bottles with soil or sand to create 'eco-bricks' for construction in slums and refugee settlements.",
+        "category": [
+            "Sustainable Construction",
+            "Waste Management",
+            "Affordable Housing",
+            "Circular Economy"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Uganda",
+            "region": "East Africa",
+            "lat": 0.2858775,
+            "lon": 32.6077523
+        },
+        "process": {
+            "how_it_works": "Plastic bottles are repurposed as bricks by filling them with non-compressible material like soil or sand, creating a dense building block that is stronger than traditional clay bricks.",
+            "materials_used": [
+                "Discarded plastic bottles",
+                "Soil",
+                "Sand",
+                "Cement/Mortar",
+                "Water"
+            ],
+            "step_by_step": [
+                "Collection of discarded plastic bottles from the environment and drainage systems.",
+                "Filling and compacting the bottles with soil or sand to create eco-bricks.",
+                "Using the bottles as structural units, laid in rows and bound with mortar to build walls.",
+                "Plastering the exterior and interior surfaces for a finished look and added durability.",
+                "Training local youth and community members in green construction techniques."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses plastic pollution, clogged drainage systems causing flooding, lack of affordable housing for marginalized groups, and youth unemployment.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "While sand-filled bottles are non-combustible at their core, the PET plastic shells are flammable and can release toxic fumes if exposed to high heat. Additionally, structural integrity depends heavily on the quality of the mortar and the skill of the builders, necessitating basic safety oversight for larger structures."
+        },
+        "priority_score": 56,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "c54f53210e18f971d15696a6e2de1531",
+        "timestamp": "2026-07-12T02:14:30.819679",
+        "title": "Reform Africa",
+        "sources": [
+            "https://reformafrica.org/",
+            "https://socialinnovationacademy.org/enterprise/reform-africa/",
+            "https://www.facebook.com/ReformAfrica/",
+            "https://seed.uno/enterprise-profiles/reform-africa",
+            "https://www.theguardian.com/global-development/2022/jun/03/from-bricks-to-bags-to-eco-art-six-innovative-uses-for-plastic-waste-around-the-world"
+        ],
+        "summary": "A Ugandan social enterprise that upcycles plastic waste, specifically polyethylene bags and bottles, into durable, waterproof fabrics used to manufacture backpacks and accessories. The initiative addresses plastic pollution and unemployment while providing school bags to underprivileged children through a 'buy one, give one' model.",
+        "category": [
+            "Waste Management",
+            "Upcycling",
+            "Social Entrepreneurship",
+            "Environmental Protection"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda",
+            "region": "Kampala",
+            "lat": 0.3177137,
+            "lon": 32.5813539
+        },
+        "process": {
+            "how_it_works": "Discarded plastic waste is collected from slums and landfills, then processed through heat-pressing to create a thick, waterproof material that functions as a textile.",
+            "materials_used": [
+                "Polyethylene plastic bags",
+                "Discarded plastic bottles",
+                "Heat press machine",
+                "Sewing machines",
+                "Thread",
+                "Zippers"
+            ],
+            "step_by_step": [
+                "Collection of discarded plastic bags and bottles from informal settlements",
+                "Thorough washing and drying of the collected plastic materials",
+                "Layering and heat-pressing the plastic to fuse it into a durable, waterproof fabric",
+                "Designing and cutting patterns from the recycled fabric",
+                "Sewing the fabric into products such as backpacks, laptop cases, and shopping bags"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces plastic pollution that causes drainage blockages and flooding in slums; provides stable income for single mothers and youth; provides durable school bags for rural children.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The process involves heat-pressing polyethylene, which poses a fire hazard and can release toxic fumes if the plastic is overheated or if there is insufficient ventilation. While the environmental and social impact is high, the thermal processing of waste in informal settings requires standardized safety protocols and protective gear to mitigate respiratory risks and accidental fires."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
