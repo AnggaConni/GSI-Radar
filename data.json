@@ -18670,5 +18670,205 @@
         "priority_score": 50,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "6298fa64df317bdd4449d1b67572653b",
+        "timestamp": "2026-07-15T01:57:11.576695",
+        "title": "Eco-makaa Briquettes",
+        "sources": [
+            "https://www.youtube.com/watch?v=NpM4H-XJo48",
+            "https://www.youtube.com/watch?v=GcdIpGveo9r"
+        ],
+        "summary": "Kencoco Ltd transforms discarded coconut shells and husks into 'Eco-makaa' briquettes, providing a smokeless and high-heat alternative to traditional wood charcoal while addressing agricultural waste in coastal Kenya.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Sustainable Cooking"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "Coastal regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Agricultural waste is carbonized into char and bound with natural starch to create high-efficiency fuel briquettes.",
+            "materials_used": [
+                "Coconut shells",
+                "Coconut husks",
+                "Cassava starch"
+            ],
+            "step_by_step": [
+                "Collection of discarded coconut shells and husks from coastal regions.",
+                "Carbonization of the waste in controlled kilns to produce char.",
+                "Crushing the char into a fine powder.",
+                "Mixing the char powder with a natural binder such as cassava starch.",
+                "Pressing the mixture into briquettes for use as fuel."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces agricultural waste accumulation, prevents deforestation, and minimizes respiratory health risks from indoor cooking smoke.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "respiratory hazard",
+                "dust explosion risk"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The production process involves high-temperature carbonization and the handling of fine carbon dust, which are inherent fire and explosion risks if not managed. However, the use of agricultural waste and controlled kilns is significantly safer and more environmentally friendly than traditional charcoal production. Primary risks are manageable through standard industrial safety protocols, such as dust control and respiratory protection for workers."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "7018c930917ae977982a34c155ba5764",
+        "timestamp": "2026-07-15T01:57:32.015185",
+        "title": "Waste Paper and Cardboard Charcoal Briquettes",
+        "sources": [
+            "https://www.researchgate.net/publication/344465431_Production_of_Charcoal_Briquettes_from_Waste_Paper",
+            "https://www.wikihow.com/Make-Briquettes",
+            "https://region10.dost.gov.ph/",
+            "https://www.researchgate.net/publication/385684534_INNOVATIVE_CONVERSION_OF_PAPER_WASTES_INTO_ECO-FRIENDLY_CHARCOAL_BRIQUETTES_AS_A_SUSTAINABLE_ENERGY_SOURCE_AND_SOLUTION_FOR_SCHOOL-BASED_WASTE_MANAGEMENT",
+            "https://www.dost.gov.ph/"
+        ],
+        "summary": "A research-driven project in the Philippines that converts school and office paper waste into high-efficiency charcoal briquettes. By shredding and soaking cardboard, newspaper, and office paper, the process creates a low-cost fuel source that is significantly cheaper than commercial charcoal while addressing solid waste management.",
+        "category": [
+            "Waste Management",
+            "Renewable Energy",
+            "Circular Economy"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Philippines",
+            "region": "Southeast Asia",
+            "lat": 10.2338947,
+            "lon": 123.7712438
+        },
+        "process": {
+            "how_it_works": "Paper waste is broken down into pulp to release binding fibers, which then allow the material to be compressed into dense blocks that serve as a combustible fuel source.",
+            "materials_used": [
+                "Cardboard",
+                "Newspaper",
+                "Office paper",
+                "Water",
+                "Molds"
+            ],
+            "step_by_step": [
+                "Shred the collected paper and cardboard waste into small pieces.",
+                "Soak the shredded material in water for several days to soften and release binding fibers.",
+                "Mix the pulp to ensure a consistent texture.",
+                "Compress the pulp into molds to remove excess water and form the briquette shape.",
+                "Sun-dry the briquettes until they are completely hardened and moisture-free."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of commercial cooking fuel and the accumulation of paper waste in educational and administrative institutions.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Respiratory hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The production process is relatively safe as it involves water-based soaking and mechanical compression. However, the storage of high-efficiency fuel briquettes in school or office environments presents a significant fire hazard. Furthermore, burning paper and cardboard containing industrial inks, adhesives, and coatings can release harmful particulates and volatile organic compounds, necessitating strict guidelines for ventilation and safe combustion practices."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "42edaa6e65aab43f2ee7eb0daa9e0505",
+        "timestamp": "2026-07-15T01:57:49.706666",
+        "title": "Eco-Fuel Africa",
+        "sources": [
+            "https://www.bbc.com/news/business-22485640",
+            "https://www.ashden.org/winners/eco-fuel-africa",
+            "https://cgspace.cgiar.org/handle/10568/34015",
+            "https://d-lab.mit.edu/resources/how-to-guides/how-make-charcoal-briquettes-agricultural-waste"
+        ],
+        "summary": "Eco-Fuel Africa utilizes a micro-franchising model in Uganda to convert agricultural residues like maize stalks and coffee husks into clean-burning fuel briquettes and biochar, promoting a circular economy and reducing deforestation.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Agriculture",
+            "Circular Economy"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda",
+            "region": "East Africa",
+            "lat": 0.2858775,
+            "lon": 32.6077523
+        },
+        "process": {
+            "how_it_works": "Farmers use low-cost kilns to carbonize agricultural waste into char, which is then compressed into fuel briquettes using manual machines, while the byproduct biochar is used to enhance soil fertility.",
+            "materials_used": [
+                "maize stalks",
+                "coffee husks",
+                "groundnut shells",
+                "low-cost kilns",
+                "manual press machines"
+            ],
+            "step_by_step": [
+                "Collection of agricultural residues from local farms.",
+                "Carbonization of the waste on-site using simple, low-cost kilns.",
+                "Processing the resulting char into briquettes using manual press machines.",
+                "Distribution of fuel briquettes to households and biochar to farmers for soil improvement."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Deforestation, high household fuel costs, agricultural waste management, and soil degradation.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The carbonization of agricultural waste involves high-temperature thermal decomposition, which presents significant fire hazards and the release of toxic gases like carbon monoxide and particulate matter. Because the model relies on decentralized, low-cost kilns operated at a grassroots level, there is a risk of inconsistent safety standards, lack of protective equipment, and potential for localized air pollution or accidental fires."
+        },
+        "priority_score": 84,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
