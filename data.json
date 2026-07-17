@@ -18870,5 +18870,204 @@
         "priority_score": 84,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "a7b42d0b2b49dbdf21e5db32af5b75c1",
+        "timestamp": "2026-07-17T02:10:52.578984",
+        "title": "Punukula Non-Pesticide Management (NPM) Farming",
+        "sources": [
+            "https://www.downtoearth.org.in/agriculture/punukula-shows-the-way-9130",
+            "https://www.scribd.com/document/429051410/the-pesticide-free-village",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnr6keWNdyA2t_OJdvEG2U_DkpkWFUnhHv2rvbCz-YuGrkiRQNmbimCp-d1an28Jmd1ynTiXv-zaX1jEizo6e7_aARmELaMpN_XPqCepFF7hGHp-LxGTcoEIRLTU8lof8WbNcZLd9sE7v74uLGxp38xx5pVEuP86qH0Q==",
+            "https://india.mongabay.com/2021/06/the-andhra-village-that-pioneered-natural-farming-is-now-looking-for-a-market/"
+        ],
+        "summary": "Punukula village transitioned to Non-Pesticide Management (NPM) to combat the economic and health crises caused by synthetic pesticides. By using natural solutions like neem and chili-garlic extracts, the community eliminated chemical use, restored soil health, and improved farmer livelihoods.",
+        "category": [
+            "Agriculture",
+            "Sustainable Development",
+            "Environmental Health"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Andhra Pradesh",
+            "lat": 15.9240905,
+            "lon": 80.1863809
+        },
+        "process": {
+            "how_it_works": "The method uses botanical extracts that act as natural repellents and growth inhibitors for pests without harming beneficial insects or the environment.",
+            "materials_used": [
+                "Neem seeds",
+                "Water",
+                "Soap",
+                "Chili",
+                "Garlic"
+            ],
+            "step_by_step": [
+                "Grind neem seeds into a fine powder.",
+                "Soak the neem powder in water overnight.",
+                "Add a small amount of soap to the mixture to act as a surfactant/sticker.",
+                "Prepare a chili-garlic paste to target sucking pests.",
+                "Filter the solutions and spray them onto the crops."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of chemical inputs leading to farmer debt, soil degradation, and pesticide-related illnesses.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Skin and eye irritation"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation utilizes biodegradable, botanical materials such as neem, chili, and garlic, which pose significantly lower risks than synthetic chemical pesticides. The primary safety concern is physical irritation to the eyes and skin during the preparation and application of the chili-garlic paste, which is manageable with basic protective measures."
+        },
+        "priority_score": 52,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "e845b5673db6ff25c2fd923bc0247542",
+        "timestamp": "2026-07-17T02:11:10.105730",
+        "title": "Organic Pest Control System for Strawberry Farming in Gakenke",
+        "sources": [
+            "https://openaccesspub.org/jabb/article/1691",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGt32Pq1FU-PExzCOyVqhPBY4_wpawwx0f1sfjzNNvyhXkXBw9T2EqALzM8InZ1PirV46nxC0AOHwEhKO1XeKf0pH0ubBJxvc2oWMFv6gzs2BIvTg7ekFLok8oYUrErdPKBv_VWuif-4QV94ao08-pOjuDgqaxJKudBxbinV7OQuaxlMNtzyeXFQDrdKbSUmME2XX3lqcAKC6pinB-eGrLmr0EoL9Yu4ZprUSSpGghSAGasyHHK504dXUfazXx5p4aNllpocelMDm7dhjhZaGQwjKg=="
+        ],
+        "summary": "A traditional organic pesticide and fertilizer mixture developed by smallholder farmers in Rwanda using local plants to control strawberry pests and diseases like aphids and powdery mildew.",
+        "category": [
+            "Agriculture",
+            "Organic Farming",
+            "Pest Control",
+            "Indigenous Knowledge"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Rwanda",
+            "region": "Gakenke District",
+            "lat": -1.7111633,
+            "lon": 29.7666995
+        },
+        "process": {
+            "how_it_works": "The mixture extracts bioactive compounds like saponins and capsaicin from indigenous plants, which act as natural repellents and biocides against pests while providing nutrients to the soil.",
+            "materials_used": [
+                "Endod (Phytolacca dodecandra)",
+                "Papaya leaves",
+                "Marigold (Tagetes erecta)",
+                "Chili peppers",
+                "Water"
+            ],
+            "step_by_step": [
+                "Collect local plants including Endod, papaya leaves, marigold, and chili peppers.",
+                "Chop and crush the plant materials to facilitate extraction.",
+                "Soak the crushed materials in water to extract bioactive compounds like saponins and capsaicin.",
+                "Apply the resulting solution as a foliar spray on strawberry plants."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Effective control of aphids and powdery mildew without synthetic chemicals, while providing a low-cost organic fertilizer.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation uses natural botanical extracts. The primary risks are localized: capsaicin from chilies and saponins from Endod are potent irritants to the eyes, skin, and respiratory system during preparation and spraying. Additionally, Endod is known to be toxic to aquatic life (molluscicidal), requiring care to prevent runoff into water bodies. Standard personal protective equipment like gloves and goggles is sufficient for safety.",
+            "safety_gear": "gloves, eye protection, face mask"
+        },
+        "priority_score": 56,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "2f591a2ad745aa8069c6823442245ea0",
+        "timestamp": "2026-07-17T02:11:32.695334",
+        "title": "Kijani Farmstead All-in-One Organic Pesticide and Fertilizer",
+        "sources": [
+            "https://www.kijanifarm.org/",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9QCZHS4huE3HVFRw5HfxehXv6wuJfqlDh_d3scIfg4YFPnTyGi4-IzsrL4gdEyR3DhwxmCCxG7zeRAA9l97kpdw41qGHun_TUxJ55KgyOfzfPxaFM0BbJJtY73Ih_rQYP",
+            "https://www.youtube.com/watch?v=R_fN_7_X_Xo"
+        ],
+        "summary": "A circular economy innovation that transforms fermented rabbit urine into a dual-purpose organic pesticide and foliar fertilizer, supplemented with wood ash, garlic, and oil to reduce reliance on synthetic chemicals.",
+        "category": [
+            "Organic Farming",
+            "Circular Economy",
+            "Sustainable Agriculture",
+            "Pest Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "",
+            "lat": 1.4419683,
+            "lon": 38.4313975
+        },
+        "process": {
+            "how_it_works": "Fermented rabbit urine provides nitrogen for growth and ammonia to repel soft-bodied insects. Wood ash provides potassium and a physical barrier, garlic acts as a natural repellent, and cooking oil ensures the mixture adheres to the foliage.",
+            "materials_used": [
+                "Fermented rabbit urine",
+                "Wood ash",
+                "Crushed garlic",
+                "Cooking oil"
+            ],
+            "step_by_step": [
+                "Collect rabbit urine from farm structures",
+                "Allow the urine to ferment to increase ammonia and nitrogen availability",
+                "Mix the fermented urine with wood ash",
+                "Add crushed garlic to the mixture for its repellent properties",
+                "Incorporate a small amount of cooking oil to act as a surfactant",
+                "Apply the final solution as a foliar spray to crops"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of synthetic fertilizers and pesticides, and the environmental impact of animal waste.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Chemical",
+                "Biological"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation utilizes organic agricultural byproducts which are generally low-risk. Potential hazards include skin and eye irritation from the high alkalinity of wood ash and ammonia produced during urine fermentation. There is also a minor biological risk associated with handling animal waste. However, compared to synthetic pesticides, the overall risk to the environment and human health is low."
+        },
+        "priority_score": 40,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
