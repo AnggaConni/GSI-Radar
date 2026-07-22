@@ -19260,5 +19260,206 @@
         "priority_score": 52,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "e35390316dcac37eb33dc1af9b765d6a",
+        "timestamp": "2026-07-22T02:08:41.716228",
+        "title": "Housing NOW",
+        "sources": [
+            "https://www.bluetemple.org/",
+            "https://www.bluetemple.org/housing-now",
+            "https://world-habitat.org/world-habitat-awards/winners-and-finalists/housing-now/",
+            "https://www.archdaily.com/1007421/housing-now-blue-temple",
+            "https://www.dezeen.com/2023/07/20/blue-temple-housing-now-bamboo-myanmar/",
+            "https://www.archdaily.com/1004126/housing-now-blue-temple"
+        ],
+        "summary": "Housing NOW is a modular, prefabricated housing system developed in Myanmar that utilizes bundled small-diameter bamboo and mechanical steel connections to provide affordable, earthquake-proof shelter for displaced populations and low-income families.",
+        "category": [
+            "Architecture",
+            "Sustainable Construction",
+            "Disaster Relief",
+            "Social Housing"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Myanmar",
+            "region": "Southeast Asia",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system bundles low-cost, small-diameter bamboo culms to create strong structural members, which are then joined using standardized mechanical steel connections to form a modular, earthquake-resilient frame.",
+            "materials_used": [
+                "Small-diameter bamboo culms",
+                "Mechanical steel connections",
+                "Prefabricated modular components"
+            ],
+            "step_by_step": [
+                "Harvesting and bundling of abundant, small-diameter bamboo species",
+                "Prefabrication of structural modules in a controlled environment",
+                "Integration of mechanical steel connectors for structural stability",
+                "Transportation of modular components to the site",
+                "Community-led assembly of the housing units"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable, climate-resilient, and dignified housing for displaced populations and low-income families in conflict-affected regions.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Structural safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation uses sustainable, low-cost materials for earthquake-resilient housing. The primary risks are the inherent flammability of bamboo and the potential for structural failure if community-led assembly lacks proper quality control. However, the use of mechanical steel connections significantly improves safety over traditional methods."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "983af43b7b5cab3dbbd9f2d3929010c6",
+        "timestamp": "2026-07-22T02:09:03.756986",
+        "title": "Conceptos Plásticos Interlocking Plastic Bricks",
+        "sources": [
+            "https://conceptosplasticos.com/",
+            "https://www.archdaily.com/869926/this-house-was-built-in-5-days-using-recycled-plastic-bricks",
+            "https://www.unicef.org/innovation/stories/conceptos-plasticos-schools-made-out-plastic-eco-bricks",
+            "https://www.unicef.org/stories/bricks-plastic-waste-ivory-coast"
+        ],
+        "summary": "A Colombian startup that converts non-recyclable plastic and rubber waste into interlocking construction blocks used to build durable, low-cost houses and schools without the need for cement or mortar.",
+        "category": [
+            "Construction",
+            "Waste Management",
+            "Sustainability",
+            "Social Housing"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Colombia",
+            "region": "Latin America",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Non-recyclable plastic and rubber are processed and molded into LEGO-like interlocking bricks that provide structural stability without adhesive materials.",
+            "materials_used": [
+                "Non-recyclable plastic waste",
+                "Rubber waste"
+            ],
+            "step_by_step": [
+                "Collection of non-recyclable plastic and rubber waste from landfills",
+                "Melting and molding the waste into specific interlocking shapes",
+                "Transporting lightweight blocks to the construction site",
+                "Assembling the structure by stacking and interlocking the bricks",
+                "Installing roof and finishing touches without the need for mortar"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces plastic pollution in landfills and oceans while addressing the global shortage of affordable, disaster-resistant housing and educational infrastructure.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic",
+                "Environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation uses recycled plastic and rubber, which are inherently flammable and can release toxic fumes (VOCs) if ignited, despite fire-resistant treatments. While the construction method is earthquake-proof and provides social benefits, the long-term environmental impact of microplastic leaching and the chemical stability of 'non-recyclable' waste sources require ongoing monitoring. The project is currently partnered with UNICEF, suggesting it has undergone significant safety and quality audits."
+        },
+        "priority_score": 76,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "78fd36168f91798f5660e9c108531078",
+        "timestamp": "2026-07-22T02:09:18.347496",
+        "title": "Kasa Konsultants (Kanea Kasa) Rammed Earth Construction",
+        "sources": [
+            "https://www.azuremagazine.com/article/rammed-earth-construction-ghana/",
+            "https://www.instagram.com/kaneakasa/",
+            "https://www.linkedin.com/company/kasa-konsultants/",
+            "https://buildwithamoaa.com/rammed-earth-homes-in-ghana/",
+            "https://kasakonsultants.com/"
+        ],
+        "summary": "A Ghanaian architectural and construction firm that modernizes ancient rammed earth techniques to provide sustainable, affordable, and climate-responsive housing using locally sourced soil and gravel.",
+        "category": [
+            "Sustainable Construction",
+            "Affordable Housing",
+            "Green Building"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Ghana",
+            "region": "West Africa",
+            "lat": 5.7051781,
+            "lon": -0.1753187
+        },
+        "process": {
+            "how_it_works": "The technique involves compacting a damp mixture of local soil, clay, and gravel into temporary formwork to create solid, monolithic walls that act as a high-thermal-mass structure.",
+            "materials_used": [
+                "Local soil",
+                "Clay",
+                "Gravel",
+                "Formwork"
+            ],
+            "step_by_step": [
+                "Sourcing and testing local soil and clay for suitability",
+                "Mixing the earth components with a small amount of stabilizer if necessary",
+                "Erecting wooden or metal formwork in the shape of the desired walls",
+                "Pouring the mixture into the formwork in layers",
+                "Pneumatically or manually tamping each layer until it is highly compressed",
+                "Removing the formwork immediately after compaction to reveal the finished wall"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces reliance on expensive imported cement and timber, lowers the carbon footprint of construction, and provides natural thermal regulation in hot climates.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Structural Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation utilizes natural, non-combustible, and non-toxic materials (soil, clay, and gravel), which present minimal environmental or chemical hazards. The primary risks are standard construction-related safety issues, such as ensuring structural integrity through proper compaction and worker safety on-site, which are mitigated by the company's focus on training and workshops."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
