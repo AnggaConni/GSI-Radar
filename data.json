@@ -19461,5 +19461,206 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "b3538178885566fdc265d4aea4ff7d85",
+        "timestamp": "2026-07-24T02:12:01.687713",
+        "title": "Blacksmith-led Micro Hydroelectric Power Plant Component Manufacturing",
+        "sources": [
+            "https://www.sciencedirect.com/science/article/abs/pii/S030142151100185X",
+            "https://www.giz.de/en/worldwide/20562.html",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTVD8ISb7ZdZU8EqlNCOVBPe6jtmvjINpHIlln2obCcXl_GL02C05x7j_rYCXQOuJaIEwvjjF4LFtihhMzj_B3Mfx-KuWqCsiXrB5X1wg-AEDxV_bPj1LR20YKqMK1muqE1MHVEwOI3wd_5LE8aXpRxmQxy1ygC6Rh5QdQzJEhEg_uFf_t4ik7KX8AMQBUir_oBeRcgb_08dNNEr9rRl7wU8Hc0YD_iUSJMZfvfhuBZObXhRyHDpXrBMUn9DWpPBdIhzYfEJKp_Je3K0b-dvtzVvtK7Z78tPFdtbfyySBQOiYI_9wBPkR3EU6AbKoC1a40411qFvmdTOdFgJZYETWqfg==",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlMTxlLWeglB4hrwM9Fi_-8F0GT8o-KDuZz7OfhO8i6r_vtnGTOKuIBOzTganGz7Rzmsak5i4hjYFo0MNZFkXKSlvyqnLsZ2DizBVcrzo5DCzrUIfS73LFZQHCF4N3KDQq4D7Ovg8a9YU1ckV5dX-pux8=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZVVMnUB13lMNGrk8DOEe6rmPEFawyAVx9XamohCD0cMBlKb0CI7V1ZAVmUZ1HUNZomng00m1c2yRG2omveNRQ-XXrlBrJcAFQTL58fpgeKVZveISZhaGnP4HYSIwzggpPKT8c472y8ZDt8WlccM3FcQ9Qh2YtksVQf8GKBlu50nyAJpQ="
+        ],
+        "summary": "Artisans in the West Region of Cameroon have adapted traditional blacksmithing techniques to manufacture and maintain micro-hydroelectric power plant components, enabling affordable off-grid electricity for remote villages using recycled materials.",
+        "category": [
+            "Renewable Energy",
+            "Mechanical Engineering",
+            "Metalworking",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Cameroon",
+            "region": "West Region",
+            "lat": 5.5211184,
+            "lon": 10.6528684
+        },
+        "process": {
+            "how_it_works": "Local blacksmiths apply traditional metal-shaping and forging skills to create mechanical components for hydroelectricity. By repurposing scrap metal, they manufacture turbines and structural parts that interface with water flow to generate power.",
+            "materials_used": [
+                "Recycled metal",
+                "Scrap steel",
+                "Welding equipment",
+                "Traditional forging tools",
+                "Mechanical fasteners"
+            ],
+            "step_by_step": [
+                "Sourcing of scrap and recycled metals from local markets",
+                "Forging and shaping turbine blades to specific hydraulic requirements",
+                "Assembling intake weir structures and mechanical housings",
+                "Fabricating distribution equipment for local grid connection",
+                "Providing ongoing maintenance and localized repair services"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of imported energy infrastructure and lack of reliable grid access in rural areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "mechanical failure",
+                "physical injury",
+                "occupational hazards"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The transition from agricultural tools to complex mechanical components like turbines involves significant engineering challenges. Using recycled materials without standardized quality control for high-pressure water systems increases the risk of catastrophic mechanical failure. Furthermore, traditional blacksmithing environments often lack the necessary safety gear (PPE) and formal engineering oversight required for civil and mechanical energy infrastructure."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "eebf711c76d82970df8dbd14a5c8f140",
+        "timestamp": "2026-07-24T02:12:22.325002",
+        "title": "Repurposing Vehicle Leaf Springs for Agricultural Tools",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExP99YgnnHSUAQKIW8HpM5mBN1pSgG24MDmHKGdKhlA6tmUTsv1TLPK6QTOx8QCe10-W8IJNdrxRommhAKF-P0qqXY08dUU3N_zpVUZofcHjBnHoyltxO3TolyHAMbfmKz",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkVF23OXtUOLlKFLVFMF1XgJZ-W2uTa_HzRQKTLbUlm29NUgCJuyvOVny2Uf6HMfvdh2sfdl94ScbDR92wIsUK9rjnXjobGt82yuUyvrq2rz4BU7yti1JOlxX2ljYsnw==",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNYkdDklL4rIrdjp8UDOTeKCJCR1yQ2MW2UqA2LbHYg-j9STEC6oNquVl8fP0JaUUBfQ8oyRhw72Uq3CVEPhS6iJSlpn_G9NcuYGivJWv8OkYmXyGVuLIuGz5LbDWaXw=="
+        ],
+        "summary": "Blacksmiths in Sierra Leone's Mabole Valley repurpose high-carbon steel from discarded vehicle leaf springs to forge durable, cost-effective agricultural tools like plow shares and machetes, specifically designed to withstand dense, root-heavy soils.",
+        "category": [
+            "Agriculture",
+            "Recycling",
+            "Manufacturing",
+            "Grassroots Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Sierra Leone",
+            "region": "Mabole Valley",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Traditional blacksmithing techniques are used to transform high-carbon steel from truck springs into tools that offer superior hardness and flexibility compared to standard mild iron, which often fails in local soil conditions.",
+            "materials_used": [
+                "Discarded vehicle leaf springs",
+                "High-carbon steel"
+            ],
+            "step_by_step": [
+                "Source discarded truck leaf springs from old vehicles",
+                "Uncoil the steel springs using heat and force",
+                "Forge the steel into specific agricultural tool shapes such as plow shares, machetes, and hoes",
+                "Heat-treat and sharpen the implements to ensure durability for animal traction and manual tilling"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of industrial tools and the failure of standard mild iron implements in dense, root-heavy soils.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "fire hazard",
+                "safety gear",
+                "toxic"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The process involves high-temperature forging using open furnaces, which presents a significant fire hazard and risk of severe burns. Working with scrap vehicle parts can release toxic fumes from residual oils or coatings when heated. Given the grassroots nature of the innovation, there is likely a lack of standardized safety gear such as eye protection, heat-resistant gloves, and respiratory masks, necessitating intervention for worker safety."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "680391ce5f3ab0f292677321de07116d",
+        "timestamp": "2026-07-24T02:12:38.368507",
+        "title": "Stone Tool Integration in African Iron Forging",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2KSQQveAwPotvu9njv8NCQQfSFccZuDZKWEByt6Jwz651XyCTpsp8B6qaaDrwj8sod8iL2-4_4Tt2VJRgnJa5gtNkOYXvf-CQEP3rwc6GBnDi5KdIHNgaINcq-zPDFLrPKXkW1-svpwugmKv3rHqMS6U3F7FEBr6X80cuIZjhklFDCLqZz6E7rJw-N4k421R2t8gvHgU-456XnRTROY7PC41Ew8AtamcRzvYu8CuMG2scQlk=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoAi8Xf-KeValvqaJU22Vzw2X8EByacBfSUt-tST_VoZ1g9o9ClEWZzba4fNttxwBzQSiZMPi2ClL_slykM5TJvfvo9wm-RKQlxCEqhKhFMK6GAFTMgWnwKlGLinPCimnpTGL7Gip9kmDmOHuW9j1UHdT7pnmpo6lrORBXi6qLT2qBR44HlmQ-qulMMCzE_7lRXFp652wCTDcEOCcY92WQfjD7KXSlWOxnnyX-eHPH6kiBRJ4=",
+            "https://www.archaeology.org",
+            "https://www.unesco.org",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRle65kEzfZ05A2LGl28Yy_sIm3AHMABiASPxhHHba5jEHOvZ10ek_C4l4jOCdaXTzjdHvGnQeWHE0Dmylnp3lHV8S63aBpxwy2V2IMpFF94YRgV0iU1DYp7uLHdN65469Vy6FmR9Ge6c24I6lq71_YrjyTARbO7ZwFUU40Zg8VOh06UI5nfAMGyNcEtbOeRn9PyiLpJd-atYjLRMBrrEPTGCn2MGiVuni7WP-jWHlKeoLVXvosVI="
+        ],
+        "summary": "Traditional blacksmiths in Mali and Ethiopia utilize polished basalt hammers and stone anvils instead of steel tools to forge iron. Because stone has lower thermal conductivity than steel, it prevents the rapid cooling of red-hot metal, thereby reducing fuel consumption and the frequency of reheating cycles.",
+        "category": [
+            "Metallurgy",
+            "Traditional Craftsmanship",
+            "Sustainable Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Mali, Ethiopia",
+            "region": "Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Stone tools act as thermal insulators compared to steel. When striking red-hot iron, the stone does not 'rob' or conduct the heat away from the workpiece as quickly as a metal hammer or anvil would, maintaining the iron's malleability for a longer duration.",
+            "materials_used": [
+                "Polished basalt",
+                "Stone anvils",
+                "Iron",
+                "Charcoal"
+            ],
+            "step_by_step": [
+                "Carve basalt stones into sophisticated forms that mirror the intended metal products.",
+                "Heat the iron using charcoal until it reaches a glowing red-hot state.",
+                "Place the hot iron on a stone anvil.",
+                "Shape the material using polished basalt hammers, taking advantage of the extended working window provided by the stone's thermal properties."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High fuel (charcoal) consumption and inefficient workflow caused by rapid heat loss and frequent reheating cycles during forging.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Physical injury"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation involves traditional blacksmithing which inherently carries risks of burns, fire from charcoal, and physical injury from heavy tool use. The use of basalt tools specifically introduces a minor risk of stone fragmentation or chipping under high-impact stress, though basalt is generally durable. However, the technique is a well-established traditional practice that improves thermal efficiency and does not introduce new chemical or explosive hazards."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
