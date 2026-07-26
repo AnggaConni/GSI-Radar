@@ -19662,5 +19662,206 @@
         "priority_score": 50,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "3bb9abc1d996df1baac7256b7c06610e",
+        "timestamp": "2026-07-26T02:21:32.505871",
+        "title": "Village Savings and Loan Association (VSLA) Digital Sub-Wallets",
+        "sources": [
+            "https://www.care-international.org/our-work/women-and-girls-empowerment/village-savings-and-loans-associations",
+            "https://www.care.org/news-and-stories/press-releases/care-and-postbank-uganda-partner-to-digitize-savings-groups/",
+            "https://www.care.org/our-work/poverty-hunger/financial-inclusion/village-savings-and-loan-associations-vsla/",
+            "https://sipa.columbia.edu/news/assessing-impact-womens-village-savings-and-loans-associations-building-resilience",
+            "https://www.care.org/our-work/food-and-nutrition/vslas/"
+        ],
+        "summary": "A community-led micro-savings model where members pool funds to provide low-interest loans, now enhanced with digital mobile money sub-wallets to improve security and financial agency for women in rural areas.",
+        "category": [
+            "Finance",
+            "Social Innovation",
+            "Digital Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda",
+            "region": "East Africa",
+            "lat": 0.2858775,
+            "lon": 32.6077523
+        },
+        "process": {
+            "how_it_works": "A group of 15–25 members saves money together and takes small loans from those savings. Digital sub-wallets allow these funds to be stored and tracked via mobile money platforms rather than in a physical cash box.",
+            "materials_used": [
+                "Mobile phones",
+                "Mobile money accounts",
+                "Digital sub-wallet software",
+                "Group ledger"
+            ],
+            "step_by_step": [
+                "Form a group of 15–25 trusted community members",
+                "Agree on group bylaws and interest rates for loans",
+                "Collect regular savings contributions from each member during meetings",
+                "Deposit pooled funds into a secure digital sub-wallet via mobile money",
+                "Approve and disburse small loans to members from the digital pool",
+                "Repay loans with interest back into the digital fund to grow the group's capital"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Financial exclusion, security risks of carrying physical cash, and lack of financial privacy or agency for women in rural households.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a digital and social financial model. It does not involve chemicals, energy production, or physical manufacturing, thus posing no risk of fire, explosion, or toxicity. The digital nature of the sub-wallets actually improves safety by reducing the risks associated with carrying physical cash."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "52afe79a393f7be22b991f1faeb65b63",
+        "timestamp": "2026-07-26T02:21:51.108129",
+        "title": "Digital Evolution of Kenyan Chamas",
+        "sources": [
+            "https://solve.mit.edu/challenges/financial-inclusion/solutions/1148",
+            "https://www.citizen.digital/lifestyle/gen-z-chamas-the-digital-evolution-of-kenyas-traditional-savings-groups-n339049",
+            "https://hudumaglobal.com/understanding-chamas-in-kenya/",
+            "https://www.centralbank.go.ke/",
+            "https://chamasoft.com/"
+        ],
+        "summary": "Traditional Kenyan informal cooperative societies, known as Chamas, have evolved from simple 'merry-go-round' rotating funds into sophisticated, digitally-managed investment vehicles. By utilizing mobile platforms like Chamasoft, these groups automate record-keeping and pool resources to invest in high-level assets such as real estate and stocks, modernizing the 'Harambee' spirit for a digital-first generation.",
+        "category": [
+            "FinTech",
+            "Social Innovation",
+            "Community Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.349778,
+            "lon": 36.7563185
+        },
+        "process": {
+            "how_it_works": "Members form a group and use mobile applications to automate contributions, track financial statements in real-time, and manage collective investment portfolios without the need for manual ledgers.",
+            "materials_used": [
+                "Mobile smartphones",
+                "Chamasoft application",
+                "Mobile money APIs (e.g., M-Pesa)",
+                "Internet connectivity"
+            ],
+            "step_by_step": [
+                "Formation of a trust-based group or 'Gen Z Chama'",
+                "Registration on a digital management platform like Chamasoft",
+                "Setting up automated contribution schedules for members via mobile money",
+                "Real-time tracking of group savings and individual balances through the app",
+                "Collective identification and purchase of formal investment assets like stocks or property"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates manual record-keeping errors, increases financial transparency, and provides low-income or young individuals access to large-scale investment opportunities.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "financial"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a digital financial and organizational platform. It does not involve chemicals, energy production, or physical manufacturing, and therefore poses no risk of fire, explosion, or toxic exposure. The primary risks are digital and financial in nature, such as cybersecurity and investment volatility, which fall outside the scope of physical safety hazards."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "fb6f947e0a78ba72c3aca6630afc9d0e",
+        "timestamp": "2026-07-26T02:22:11.534010",
+        "title": "E-Susu Digital Savings System",
+        "sources": [
+            "https://www.findevgateway.org/blog/2017/05/susu-savings-collectors-competition-or-cooperation-benin",
+            "https://www.imtfi.uci.edu/research/2012/osei-assibey_2012.php",
+            "https://www.uncdf.org",
+            "https://www.gsma.com",
+            "https://www.worldbank.org",
+            "https://postgrowth.org/the-ghana-susu-reimagining-financial-development-5f963a73c73c"
+        ],
+        "summary": "A digital modernization of the traditional West African Susu system, integrating mobile money platforms to secure micro-savings for market traders and artisans while building a digital credit history.",
+        "category": [
+            "Fintech",
+            "Financial Inclusion",
+            "Social Innovation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Ghana, Benin",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Mobile collectors utilize mobile money platforms and digital ledgers to collect and record daily or weekly savings from informal sector workers, replacing traditional paper-based tracking.",
+            "materials_used": [
+                "Mobile phones",
+                "Mobile money applications",
+                "USSD technology",
+                "Digital payment gateways"
+            ],
+            "step_by_step": [
+                "Mobile collectors visit traders and artisans at their places of business.",
+                "The collector accepts a small daily or weekly cash deposit from the participant.",
+                "The transaction is immediately recorded on a mobile platform.",
+                "The participant receives a digital confirmation (SMS or app notification) of the deposit.",
+                "Funds are stored in a secure digital account rather than a physical bag or ledger.",
+                "The accumulated digital data is used to establish a financial footprint for future bank loan applications."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces the risk of fraud, theft, and loss associated with manual collectors while providing unbanked individuals access to formal credit.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The E-Susu system is a digital financial innovation focused on mobile money and transaction recording. It does not involve any hazardous chemicals, high-energy physical processes, or industrial manufacturing that would pose risks of fire, explosion, or toxicity. The primary safety enhancement is the reduction of physical theft and fraud."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
