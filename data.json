@@ -19863,5 +19863,214 @@
         "priority_score": 38,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "9cb77c97fcd13c5206c8686e93d77b68",
+        "timestamp": "2026-07-29T02:06:57.722008",
+        "title": "Datooga Scrap Metal Recycling and Traditional Forging",
+        "sources": [
+            "https://mo-maa.com/blacksmiths-in-african-art/",
+            "https://www.atlasobscura.com/places/datooga-tribe-blacksmiths",
+            "https://www.nationalgeographic.com/culture/article/hadza-tanzania-culture",
+            "https://www.youtube.com/watch?v=Ex1VsOVZscCkNONJwd_XSSREqDW8V27XvatF2CHA-115ruvVYz4vQTwBt_-TGA3TqVerLHWxZaPdzO2pR_qhJ8rMxguBcEnvVIaiW62_zmd_LRPQKVNN1IbRQIcuR0SYg=",
+            "https://en.wikipedia.org/wiki/Datooga_people"
+        ],
+        "summary": "The Datooga people of northern Tanzania have adapted their ancient blacksmithing skills to recycle industrial scrap metal, such as car parts and construction debris, into traditional tools and weaponry for trade with neighboring tribes.",
+        "category": [
+            "Recycling",
+            "Metalworking",
+            "Circular Economy",
+            "Traditional Knowledge"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Tanzania",
+            "region": "Northern Tanzania",
+            "lat": -3.3454455,
+            "lon": 37.3406664
+        },
+        "process": {
+            "how_it_works": "Industrial steel waste is repurposed using traditional bellows-driven forges to create high-precision tools that sustain a local barter economy.",
+            "materials_used": [
+                "Old car parts",
+                "Construction materials",
+                "Scrap steel",
+                "Charcoal",
+                "Traditional bellows"
+            ],
+            "step_by_step": [
+                "Collection of discarded industrial scrap metal from urban areas or roadsides.",
+                "Heating the metal in a hand-operated bellows forge until it is malleable.",
+                "Hammering and shaping the hot steel into specific designs like arrowheads or spearheads.",
+                "Refining and sharpening the edges using manual grinding techniques.",
+                "Trading the finished products with the Hadzabe and Maasai for honey, animal skins, or livestock."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Scarcity of raw iron ore and the accumulation of industrial waste in the environment.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "physical injury"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The transition to recycling modern scrap metal involves high-temperature forging which poses a constant fire hazard. Using industrial waste like car parts introduces risks from toxic fumes released by burning paints, oils, and coatings. Additionally, there is a risk of explosion if pressurized components (like shock absorbers) are accidentally heated, and the lack of standardized safety gear in a grassroots setting increases the likelihood of burns and respiratory issues."
+        },
+        "priority_score": 52,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "2f5ad5d5882f8bcaf437e84fdc2eec95",
+        "timestamp": "2026-07-29T02:07:15.078761",
+        "title": "Haya Preheating Forced-Air Bellows and Steel Smelting",
+        "sources": [
+            "https://mo-maa.com/blacksmiths-in-african-art/",
+            "https://www.science.org/doi/10.1126/science.201.4361.1085",
+            "https://www.brown.edu/Departments/Anthropology/people/schmidt/index.html",
+            "https://whc.unesco.org/en/tentativelists/2085/",
+            "https://protradecraft.com/african-blacksmithing-tools-late-18th-century"
+        ],
+        "summary": "The Haya people of the Lake Victoria region developed a sophisticated iron-smelting technology using preheating forced-air bellows. This innovation allowed them to reach temperatures exceeding 1800°C, enabling the production of high-carbon steel centuries before similar industrial processes were established in Europe.",
+        "category": [
+            "Metallurgy",
+            "Indigenous Technology",
+            "Material Science",
+            "Engineering"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Tanzania",
+            "region": "Lake Victoria (Kagera Region)",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses clay pipes (tuyères) inserted deep into the furnace. As the furnace heats up, the air being pumped through these pipes is preheated before it reaches the charcoal fuel, significantly increasing the efficiency and temperature of the combustion.",
+            "materials_used": [
+                "Iron ore",
+                "Charcoal",
+                "Clay (for tuyères and furnace)",
+                "Animal skins (for bellows)",
+                "Wood/Reeds"
+            ],
+            "step_by_step": [
+                "Construct a bowl-like furnace pit lined with slag and clay.",
+                "Build a tall shaft above the pit using clay and recycled slag.",
+                "Insert long clay tuyères (blowpipes) through the furnace base into the charcoal bed.",
+                "Connect hand-operated bellows to the external ends of the tuyères.",
+                "Layer iron ore and charcoal inside the furnace.",
+                "Operate the bellows continuously to force air through the tuyères, which are heated by the surrounding embers, creating a preheated blast.",
+                "Extract the bloom (high-carbon steel) once the smelting process is complete."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Achieving the high temperatures necessary to produce high-quality, high-carbon steel using traditional fuel sources.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic fumes",
+                "High heat"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The metallurgical process described involves high-temperature smelting (reaching temperatures for high-carbon steel), which inherently involves risks of fire, thermal burns, and the release of carbon monoxide or other furnace gases. However, as this is a historical/indigenous industrial practice rather than an unregulated modern experiment, the risk is managed within its traditional context."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "2e48ca8e1acb7d95efe6bce82a2c6405",
+        "timestamp": "2026-07-29T02:07:34.133849",
+        "title": "Mossi Mud-and-Straw Bloomery Furnace",
+        "sources": [
+            "https://whc.unesco.org/en/list/1602/",
+            "https://news.mit.edu/2022/ancient-african-smelting-technique-sparks-anew-mit-0706",
+            "https://www.researchgate.net/publication/265215682_A_General_History_of_Iron_Technology_in_Africa_ca_2000BC-1900AD"
+        ],
+        "summary": "A traditional iron-smelting furnace developed by Mossi blacksmiths in Burkina Faso, utilizing a cylindrical mud-and-straw structure to achieve high-heat insulation and optimized airflow for efficient ore conversion.",
+        "category": [
+            "Metallurgy",
+            "Sustainable Design",
+            "Traditional Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Burkina Faso",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The furnace uses a mixture of mud and straw to create a thick, insulating wall that retains extreme heat while the cylindrical shape facilitates natural draft or bellows-driven airflow to smelt iron ore.",
+            "materials_used": [
+                "Mud",
+                "Straw",
+                "Iron ore",
+                "Charcoal"
+            ],
+            "step_by_step": [
+                "Construct a five-foot-high cylindrical structure using a mixture of local mud and straw.",
+                "Design the furnace walls to act as high-heat insulators for thermal efficiency.",
+                "Incorporate air intake points to optimize airflow for the combustion process.",
+                "Load the furnace with local iron ore and fuel (charcoal).",
+                "Maintain extreme temperatures to convert the ore into iron bloom for tool production."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High fuel consumption in metallurgy and the need for community self-sufficiency in tool production.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic",
+                "Safety gear"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "Iron smelting requires temperatures exceeding 1,100°C, posing severe fire and burn hazards. The process releases carbon monoxide and other toxic gases during the reduction of ore. In a grassroots/traditional setting, the lack of modern personal protective equipment (PPE) and professional ventilation systems increases the risk to operators and the surrounding environment."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
