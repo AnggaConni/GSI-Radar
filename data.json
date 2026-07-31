@@ -20072,5 +20072,214 @@
         "priority_score": 58,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "2281558447b6db6c6decf8a9ea26f0f3",
+        "timestamp": "2026-07-31T02:21:47.634384",
+        "title": "William Kamkwamba's Wind Turbine",
+        "sources": [
+            "https://movingwindmills.org/",
+            "https://rediscovercenter.org/create-a-wind-turbine-tower/",
+            "https://www.ted.com/speakers/william_kamkwamba",
+            "https://www.williamkamkwamba.typepad.com/",
+            "https://movingwindmills.org/williams-story/",
+            "https://www.ted.com/talks/william_kamkwamba_how_i_harnessed_the_wind"
+        ],
+        "summary": "A functional wind turbine constructed from salvaged scrap metal and bicycle parts to provide electricity and irrigation in rural Malawi during a period of severe famine.",
+        "category": [
+            "Renewable Energy",
+            "Grassroots Engineering",
+            "Sustainable Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Malawi",
+            "region": "Wimbe",
+            "lat": -12.9853902,
+            "lon": 33.6923324
+        },
+        "process": {
+            "how_it_works": "The turbine uses wind power to rotate a tractor fan and bicycle wheel assembly, which spins a bicycle dynamo to generate electricity for light bulbs and small electronics.",
+            "materials_used": [
+                "salvaged scrap metal",
+                "tractor fan",
+                "old bicycle frame",
+                "shock absorber",
+                "PVC pipes",
+                "bicycle dynamo"
+            ],
+            "step_by_step": [
+                "Gather scrap materials and discarded mechanical parts from local junkyards.",
+                "Flatten PVC pipes over a fire to create aerodynamic turbine blades.",
+                "Construct a wooden tripod tower to elevate the turbine.",
+                "Assemble the drivetrain using a bicycle frame and a tractor fan.",
+                "Install a bicycle dynamo to convert the mechanical rotation into electrical energy.",
+                "Run copper wire from the turbine to the house to power lights and a radio."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to electricity and water for irrigation in a resource-constrained village during a famine.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 5,
+            "risk_type": [
+                "Mechanical Failure",
+                "Structural Instability",
+                "Electrical Hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While highly innovative, the use of salvaged scrap metal and improvised structural components for high-torque rotating machinery presents significant risks. Potential hazards include catastrophic mechanical failure of the blades, structural collapse of the tower in high winds, and electrical shorts from uninsulated or improperly rated wiring. In a grassroots setting, the lack of safety braking systems and fall protection during construction necessitates technical oversight to prevent injury."
+        },
+        "priority_score": 48,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "fbf8bc2a9e045f86abb752362d7c213e",
+        "timestamp": "2026-07-31T02:22:07.656584",
+        "title": "BladeBridge",
+        "sources": [
+            "https://www.irishtimes.com/news/environment/cork-greenway-bridge-made-from-old-wind-turbine-blades-1.4786435",
+            "https://www.re-wind.info/",
+            "https://www.corkcoco.ie/en/news/cork-county-council-officially-opens-the-bladebridge-on-the-midleton-to-youghal-greenway",
+            "https://www.re-wind.info/bladebridge",
+            "https://www.mtu.ie/news/re-wind-project-blade-bridge/"
+        ],
+        "summary": "A structural innovation that repurposes decommissioned wind turbine blades as the primary load-bearing girders for a pedestrian and cyclist bridge, addressing the challenge of recycling fiberglass composites.",
+        "category": [
+            "Circular Economy",
+            "Sustainable Construction",
+            "Civil Engineering"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Ireland",
+            "region": "County Cork",
+            "lat": 51.9175359,
+            "lon": -8.5859773
+        },
+        "process": {
+            "how_it_works": "The project uses the inherent structural strength and weather resistance of retired fiberglass wind turbine blades to act as the main horizontal supports (girders) for a bridge deck.",
+            "materials_used": [
+                "Decommissioned wind turbine blades (Nordex N29)",
+                "Fiberglass composite",
+                "Steel connectors",
+                "Concrete abutments"
+            ],
+            "step_by_step": [
+                "Decommissioning of retired Nordex N29 wind turbines",
+                "Selection of two 13.4-meter LM blades for structural suitability",
+                "Engineering analysis and design by the Re-Wind Network research team",
+                "Transportation of blades to the Midleton to Youghal Greenway site",
+                "Installation of blades as primary girders on bridge foundations",
+                "Construction of the pedestrian/cyclist walkway surface over the blades"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a second-life use for non-biodegradable fiberglass turbine blades and reduces carbon emissions by replacing traditional steel or concrete beams.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing",
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Structural integrity",
+                "Fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The BladeBridge project repurposes high-strength fiberglass composites originally engineered for extreme fatigue and environmental stress. While using repurposed materials in load-bearing roles requires rigorous structural validation, the project is led by a professional research network (Re-Wind). The material is inert and durable, posing minimal toxic or environmental risk, though long-term monitoring of composite degradation and fire resistance in a public setting is standard for such infrastructure."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "6ef661008f0649641479474214dd7a15",
+        "timestamp": "2026-07-31T02:22:28.759366",
+        "title": "Wikado Playground",
+        "sources": [
+            "https://www.re-thinkingthefuture.com/architectural-projects/a5214-wikado-playground-by-superuse-studios/",
+            "https://www.superuse-studios.com/project/wikado/",
+            "https://www.archdaily.com/133535/wikado-playground-2012architecten",
+            "https://www.blade-made.com/projects/wikado",
+            "https://www.archdaily.com/49257/wikado-playground-superuse-studios"
+        ],
+        "summary": "A 1,200-square-meter community playground in Rotterdam constructed from five discarded wind turbine rotor blades, serving as a landmark for circular urbanism and sustainable public infrastructure.",
+        "category": [
+            "Upcycling",
+            "Circular Economy",
+            "Urban Design",
+            "Sustainable Architecture"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Netherlands",
+            "region": "Rotterdam",
+            "lat": 51.9244424,
+            "lon": 4.47775
+        },
+        "process": {
+            "how_it_works": "The project utilizes the structural integrity and aerodynamic shapes of decommissioned wind turbine blades by cutting them into segments and repurposing them as play elements.",
+            "materials_used": [
+                "Discarded wind turbine rotor blades (fiberglass/composite)",
+                "Steel anchors",
+                "Concrete foundations",
+                "Recycled rubber surfacing"
+            ],
+            "step_by_step": [
+                "Sourcing five decommissioned wind turbine rotor blades from a local site.",
+                "Analyzing the geometry of the blades to determine optimal cutting points for play functions.",
+                "Cutting the blades into specific segments to create towers, tunnels, and bridges.",
+                "Transporting the large segments to the 1,200-square-meter site in Rotterdam.",
+                "Anchoring the segments securely into the ground using steel and concrete foundations.",
+                "Installing additional play components such as slides, nets, and safety flooring."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the waste management issue of non-biodegradable wind turbine blades while reducing the carbon footprint of playground construction by 90%.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "safety gear"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project uses industrial fiberglass-reinforced polymers from wind turbine blades. While the fabrication phase requires safety gear to manage fiberglass dust and sharp edges, the final structures are extremely durable and structurally sound for public use. As a completed architectural project, it presents low risk to the community."
+        },
+        "priority_score": 40,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
