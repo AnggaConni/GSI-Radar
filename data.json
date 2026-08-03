@@ -20281,5 +20281,208 @@
         "priority_score": 40,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "eb48db7b82195a537a432f668f3d52ce",
+        "timestamp": "2026-08-03T02:22:15.278283",
+        "title": "Integration of Traditional Cultural Burning with Modern Geospatial Technology",
+        "sources": [
+            "https://www.klc.org.au/",
+            "https://wildlifedrones.net/modern-technology-and-indigenous-knowledge/",
+            "https://www.klc.org.au/indigenous-fire-management",
+            "https://wildlifedrones.net/",
+            "https://earthwiseaware.org/traditional-ecological-knowledge-tek/"
+        ],
+        "summary": "Aboriginal rangers in Australia are combining tens of thousands of years of traditional fire management knowledge with modern tools like satellite imagery and drones to conduct precise 'cultural burns' that prevent catastrophic wildfires and enhance biodiversity.",
+        "category": [
+            "Environmental Management",
+            "Indigenous Knowledge",
+            "Geospatial Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Australia",
+            "region": "Kimberley",
+            "lat": -16.27412,
+            "lon": 145.4472478
+        },
+        "process": {
+            "how_it_works": "Small, controlled 'cool' fires are lit during the early dry season to clear undergrowth. Real-time data from satellites and drones are used to monitor fuel loads and map burn scars, ensuring fires are applied with surgical precision.",
+            "materials_used": [
+                "Satellite imagery",
+                "Drones",
+                "Thermal imaging cameras",
+                "Remote sensing data",
+                "Traditional fire-starting tools"
+            ],
+            "step_by_step": [
+                "Monitor fuel loads across the landscape using satellite imagery.",
+                "Deploy drones equipped with thermal imaging to identify optimal burn locations.",
+                "Execute small-scale cultural burns during the early dry season to create firebreaks.",
+                "Use remote sensing to map burn scars in real-time and assess carbon sequestration levels."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Prevention of catastrophic wildfires, loss of biodiversity, and high-intensity carbon emissions from late-season fires.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire hazard",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "While the practice involves the intentional use of fire, it is a highly structured land management strategy that combines traditional expertise with precision technology. The use of drones and satellite imagery significantly reduces the risk of fires becoming uncontrolled, and the primary goal is the mitigation of much larger, catastrophic wildfire risks."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "8af20012de8019ba986e40d4288434fc",
+        "timestamp": "2026-08-03T02:22:35.643306",
+        "title": "AI-Integrated Inuit Traditional Fishing and Mariculture",
+        "sources": [
+            "https://www.polarcticllc.com",
+            "https://wwf.ca",
+            "https://www.arcticwwf.org/newsroom/stories/blending-indigenous-knowledge-and-artificial-intelligence-to-enable-adaptation/",
+            "https://www.polarcticllc.com/projects"
+        ],
+        "summary": "The Inuit community of Sanikiluaq, in partnership with PolArctic and WWF, integrates Inuit Qaujimajatuqangit (traditional knowledge) with AI and remote sensing to adapt fishing and mariculture to climate-driven changes in Arctic ice and fish migration.",
+        "category": [
+            "Artificial Intelligence",
+            "Climate Adaptation",
+            "Indigenous Knowledge",
+            "Marine Conservation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Canada",
+            "region": "Nunavut",
+            "lat": 65.0377727,
+            "lon": -92.5540791
+        },
+        "process": {
+            "how_it_works": "AI models process oral histories of fish behavior and traditional ecological knowledge alongside real-time satellite data and oceanographic sensors to predict sustainable fishing locations and marine farming sites.",
+            "materials_used": [
+                "AI modeling software",
+                "Satellite data",
+                "Oceanographic sensors",
+                "Oral history records",
+                "Remote sensing technology"
+            ],
+            "step_by_step": [
+                "Document centuries of Inuit Qaujimajatuqangit regarding fish behavior and ice patterns",
+                "Collect contemporary satellite imagery and oceanographic sensor data",
+                "Integrate oral histories and scientific data into specialized AI algorithms",
+                "Analyze model outputs to identify new, sustainable fishing locations",
+                "Identify optimal sites for community-led marine farming based on environmental shifts"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Traditional seasonal indicators for fishing have become unreliable due to climate change and shifting ice patterns.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is primarily a data-driven decision-support system using AI and remote sensing to enhance traditional fishing practices. It does not involve hazardous chemicals, high-energy systems, or significant physical risks. The 'environment' risk type is noted only because mariculture involves ecosystem interaction, which the AI is specifically designed to manage sustainably."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "a8c53ec2ebeda11342ec856805e4f39c",
+        "timestamp": "2026-08-03T02:22:55.856045",
+        "title": "Asháninka High-Tech Forest Surveillance Network",
+        "sources": [
+            "https://rainforestfoundation.org/",
+            "https://globalconservation.org/news/where-ancestral-knowledge-meets-modern-tech/",
+            "https://www.reuters.com/",
+            "https://www.worth.com/how-indigenous-communities-are-using-tech-to-save-the-amazon/",
+            "https://www.globalforestwatch.org/"
+        ],
+        "summary": "Asháninka communities in the Peruvian Amazon have integrated modern technology—including drones, satellite-based machine learning, and GPS-enabled tablets—with traditional forest stewardship to detect and document illegal logging and deforestation.",
+        "category": [
+            "Environmental Protection",
+            "Indigenous Rights",
+            "Technology",
+            "Conservation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Peru",
+            "region": "Amazon",
+            "lat": -3.8932882,
+            "lon": -73.1868553
+        },
+        "process": {
+            "how_it_works": "The system uses satellite imagery and machine learning to identify canopy changes, which are then verified on the ground using drones and GPS tablets to provide high-resolution evidence for legal action.",
+            "materials_used": [
+                "Drones",
+                "Satellite-based machine learning algorithms",
+                "GPS-enabled tablets",
+                "High-resolution cameras"
+            ],
+            "step_by_step": [
+                "Satellite algorithms monitor the forest canopy and flag potential changes or deforestation.",
+                "Alerts are sent to community members via GPS-enabled tablets.",
+                "Community guardians deploy drones to the specific coordinates flagged by the satellite.",
+                "Drones capture high-resolution photographic and video evidence of illegal activities.",
+                "The collected data is used to assert legal land rights and coordinate responses with authorities."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Detection of 'hidden' deforestation invisible from the ground and reduction in response time to illegal logging threats.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation involves the use of standard consumer electronics (drones, tablets, and satellite data) which pose minimal physical risk. The primary hazard is the potential for physical confrontation with illegal loggers during enforcement, but the technology itself is safe and serves to protect the environment."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
