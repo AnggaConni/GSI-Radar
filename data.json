@@ -20484,5 +20484,142 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "990cc3d075e7797edc7ed72b090fc1f8",
+        "timestamp": "2026-08-06T02:06:10.350808",
+        "title": "Scoraig Grassroots Wind Turbines (Piggott Turbine)",
+        "sources": [
+            "https://windempowerment.org/the-piggott-turbine/",
+            "https://www.youtube.com/watch?v=Dronx8mobFo",
+            "https://scoraigwind.co.uk/",
+            "https://www.theherald.com.scot/news/24357214.meet-highland-wind-power-pioneers-no-energy-bills/",
+            "https://scoraigwind.co.uk/about/"
+        ],
+        "summary": "A community-led movement in the remote Scoraig peninsula where residents build small-scale wind turbines from salvaged scrap metal and automotive parts, pioneered by Hugh Piggott to provide sustainable off-grid electricity.",
+        "category": [
+            "Renewable Energy",
+            "DIY",
+            "Sustainability",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Scotland",
+            "region": "Northwest Highlands",
+            "lat": 57.28,
+            "lon": -5.1
+        },
+        "process": {
+            "how_it_works": "The turbines utilize axial flux generators featuring hand-wound copper coils and magnets, powered by wind-driven hand-carved timber blades and mounted on hubs repurposed from scrap vehicle components.",
+            "materials_used": [
+                "scrap car wheel bearings",
+                "reclaimed steel",
+                "timber",
+                "copper coils",
+                "magnets",
+                "discarded automotive parts"
+            ],
+            "step_by_step": [
+                "Salvage scrap car wheel bearings to serve as the main hub",
+                "Carve aerodynamic turbine blades from timber",
+                "Wind copper coils manually to construct the axial flux generator",
+                "Fabricate the tail and mounting frames using reclaimed steel",
+                "Assemble the generator, blades, and hub into a functional off-grid unit"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides affordable, maintainable, and sustainable electricity for remote, off-grid communities through local manufacturing.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "fire hazard",
+                "safety gear",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation uses salvaged scrap and DIY electrical components in high-speed rotating machinery. While proven, the use of hand-carved timber and reclaimed automotive bearings introduces risks of mechanical failure, blade shedding, and electrical fires from hand-wound coils. Proper safety gear during construction and maintenance at height is essential, though the project's long-term success suggests a high degree of community-managed safety."
+        },
+        "priority_score": 74,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "10e56ae2166ae9fbefd19305e60a039d",
+        "timestamp": "2026-08-06T02:06:57.361760",
+        "title": "Repurposing Wind Turbine Blade Bases into Fence and Dock Posts",
+        "sources": [
+            "https://www.cfra.org/blog/recycling-wind-turbine-blades-farmers-ingenuity",
+            "https://www.agweek.com/news/iowa-farmer-finds-new-life-for-old-wind-turbine-blades",
+            "https://www.youtube.com/watch?v=Dronx8mobFo",
+            "https://www.desmoinesregister.com/story/money/agriculture/2023/12/03/iowa-farmer-recycles-wind-turbine-blades-into-fence-posts/71746205007/",
+            "https://www.thegazette.com/agriculture/iowa-farmer-finds-new-life-for-old-wind-turbine-blades/"
+        ],
+        "summary": "Greg Birkhofer, a farmer in Lone Tree, Iowa, repurposes the heavy-duty fiberglass bases of retired wind turbine blades into durable, fully insulated fence and dock posts. This innovation addresses the challenge of disposing of non-recyclable industrial waste while providing a long-lasting alternative to wood or steel posts.",
+        "category": [
+            "Agriculture",
+            "Waste Management",
+            "Circular Economy",
+            "Sustainability"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Lone Tree, Iowa",
+            "lat": 41.4881375,
+            "lon": -91.4258091
+        },
+        "process": {
+            "how_it_works": "The thick, fiberglass-reinforced circular bases of decommissioned wind turbine blades are cut into sections to create structural posts that are naturally insulated and resistant to rot.",
+            "materials_used": [
+                "Wind turbine blade bases",
+                "Fiberglass-reinforced composite"
+            ],
+            "step_by_step": [
+                "Acquire retired wind turbine blades from industrial sites",
+                "Identify the eight-foot-wide circular base sections",
+                "Cut the heavy-duty composite material into vertical sections suitable for posts",
+                "Install the sections as fence or dock posts without the need for additional insulators"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Solves the logistical and environmental challenge of disposing of the thickest, most difficult-to-recycle part of turbine blades while replacing rot-prone wood and rust-prone steel posts.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "toxic",
+                "safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The primary risk is associated with the mechanical processing of the fiberglass-reinforced composite material. Cutting these heavy-duty industrial bases generates fine fiberglass dust and particulate matter, which are significant respiratory and skin irritants. Proper safety gear, including high-grade respirators and dust mitigation systems, is essential during the fabrication phase. While the finished product is stable, the long-term environmental impact of micro-fiber shedding in soil or water remains a minor concern.",
+            "innovation_assessment": "high"
+        },
+        "priority_score": 34,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
