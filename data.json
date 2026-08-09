@@ -20621,5 +20621,194 @@
         "priority_score": 34,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "ff423244cb254dc09e65e32771744a6c",
+        "timestamp": "2026-08-09T01:16:59.975994",
+        "title": "One Life Project: Recycled Plastic Bottle and Bamboo Greenhouse",
+        "sources": [
+            "https://www.youtube.com/watch?v=f-K8m9S_X_A"
+        ],
+        "summary": "A collaborative initiative in Bariloche, Argentina, that constructs greenhouses using recycled plastic bottles and bamboo to improve crop yields and promote environmental education.",
+        "category": [
+            "Sustainable Construction",
+            "Agriculture",
+            "Waste Management",
+            "Environmental Education"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Argentina",
+            "region": "Bariloche",
+            "lat": -41.1334781,
+            "lon": -71.3101474
+        },
+        "process": {
+            "how_it_works": "The greenhouse uses recycled plastic bottles to trap solar radiation and create a warmer microclimate, while a bamboo frame provides a sturdy, sustainable structure suitable for the Andean environment.",
+            "materials_used": [
+                "Recycled plastic bottles",
+                "Locally sourced bamboo"
+            ],
+            "step_by_step": [
+                "Conduct a two-day plastic bottle collection drive",
+                "Organize hands-on construction workshops to teach sustainable building techniques",
+                "Construct the structural frame using locally sourced bamboo",
+                "Assemble the walls and roof using the collected plastic bottles to trap solar radiation"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Harsh Andean climate limiting crop growth and high levels of plastic waste being burned or sent to landfills.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project involves low-risk sustainable construction using recycled plastic and bamboo. The primary risk is the flammability of the building materials, but there are no hazardous chemical processes, high-pressure systems, or toxic substances involved in the operation of the greenhouse."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "50bd92ee737a76906ddfc001d188bf4b",
+        "timestamp": "2026-08-09T01:17:22.688926",
+        "title": "Vegetable Nursery from Plastic Bottles and Bamboo",
+        "sources": [
+            "https://112.com.vn/vegetable-nursery-p100.html",
+            "https://www.archdaily.com/469279/vegetable-nursery-1-1-2-architects",
+            "https://offgridworld.com/beautifully-ingenious-greenhouse-in-vietnam-is-made-from-recycled-plastic-bottles-bamboo/"
+        ],
+        "summary": "A collaborative architectural project in rural Vietnam that utilizes over 2,000 recycled plastic bottles and a bamboo frame to create a low-cost, functional greenhouse for seedling cultivation and vegetable production.",
+        "category": [
+            "Sustainable Architecture",
+            "Waste Management",
+            "Agriculture",
+            "Upcycling"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Vietnam",
+            "region": "Rural Southeast Asia",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The structure uses PET bottles as a building skin; the bottles refract natural sunlight to optimize photosynthesis for seedlings while providing insulation to maintain a stable internal temperature. The bamboo frame provides a lightweight, renewable structural support.",
+            "materials_used": [
+                "2,000+ PET plastic bottles",
+                "Bamboo",
+                "Nylon strings",
+                "Wire"
+            ],
+            "step_by_step": [
+                "Collection of discarded plastic bottles from the local environment.",
+                "Treatment and cleaning of bottles to ensure maximum light transparency.",
+                "Construction of a structural frame using locally sourced bamboo.",
+                "Stringing or fixing the bottles together to form modular panels.",
+                "Installing the bottle panels onto the bamboo frame to create the walls and roof."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces plastic pollution in rural areas while providing affordable agricultural infrastructure for low-income farmers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Structural stability"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks are the high flammability of the bamboo frame and PET bottles, as well as potential structural vulnerability to high winds or typhoons common in Southeast Asia. While the innovation is low-tech and environmentally beneficial, it requires fire safety awareness and regular maintenance to prevent plastic degradation."
+        },
+        "priority_score": 56,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "43099d4afd7233540ba9796716064241",
+        "timestamp": "2026-08-09T01:17:39.909271",
+        "title": "Ocean Sole Plastic Bottle Greenhouse",
+        "sources": [
+            "https://oceansole.com/blogs/news/plastic-bottles-greenhouse-project",
+            "https://oceansole.com/"
+        ],
+        "summary": "A community-led project by the social enterprise Ocean Sole in Kenya that repurposed 1,500 discarded plastic bottles to construct a functional greenhouse. The structure serves to extend the growing season for local produce while demonstrating practical waste upcycling and environmental stewardship.",
+        "category": [
+            "Waste Management",
+            "Sustainable Agriculture",
+            "Upcycling",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Kilifi",
+            "lat": -3.1507392,
+            "lon": 39.6750716
+        },
+        "process": {
+            "how_it_works": "The greenhouse uses vertically stacked plastic bottles as the primary wall material. These bottles act as insulation to regulate temperature and diffuse sunlight, protecting plants from harsh direct rays while maintaining a warm environment for growth.",
+            "materials_used": [
+                "1,500 plastic bottles",
+                "Timber",
+                "Metal frame"
+            ],
+            "step_by_step": [
+                "Collection of plastic bottles from local neighborhoods.",
+                "Cleaning and preparation of the bottles by volunteers and staff.",
+                "Erection of a structural frame made of timber and metal.",
+                "Vertical stacking and securing of the bottles to create the walls of the greenhouse."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses plastic pollution through upcycling and provides an affordable solution for extending growing seasons for sensitive plants.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "fire hazard",
+                "environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project primarily involves the reuse of inert plastic bottles for structural purposes. The main risks are the flammability of the plastic material if exposed to an ignition source and the long-term environmental degradation (microplastics) of the bottles due to UV exposure. Structural risks are mitigated by the use of timber and metal framing."
+        },
+        "priority_score": 36,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
