@@ -20810,5 +20810,215 @@
         "priority_score": 36,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "463ecdf14b8e4094febacbf16a3c98d6",
+        "timestamp": "2026-08-11T01:17:28.323266",
+        "title": "Voltarent ECU",
+        "sources": [
+            "https://www.youtube.com/watch?v=UupobrItEI0",
+            "https://nation.africa/kenya/life-and-style/motoring/peter-mbiria-the-man-who-gives-old-cars-a-new-lease-of-life-3855512",
+            "https://www.youtube.com/watch?v=bT72laztHvY",
+            "https://www.youtube.com/watch?v=XWv_G_Q6U5I",
+            "https://www.peopledaily.co.ke/news/kenyan-engineers-novelty-gives-car-engines-fresh-breath/"
+        ],
+        "summary": "An Arduino-based electronic fuel injection (EFI) controller designed to modernize vintage car engines from the 1960s to the 1980s. It replaces inefficient carburetors and mechanical fuel injection systems, allowing classic vehicles to achieve modern performance and fuel economy while retaining their original engine blocks.",
+        "category": [
+            "Automotive",
+            "Electronics",
+            "Engineering",
+            "Sustainable Transport"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Nairobi",
+            "lat": -1.2890006,
+            "lon": 36.8172812
+        },
+        "process": {
+            "how_it_works": "The system replaces mechanical fuel delivery with a digital controller that uses an Arduino to manage fuel injection timing and air-fuel ratios based on real-time sensor data.",
+            "materials_used": [
+                "Arduino microcontroller",
+                "OLED display",
+                "Electronic fuel injectors",
+                "Custom wiring harness",
+                "Sensors (MAP, TPS, Temp)",
+                "Custom software"
+            ],
+            "step_by_step": [
+                "Decommission the original carburetor or mechanical fuel injection system.",
+                "Retrofit the engine with modern electronic fuel injectors and necessary sensors.",
+                "Install the custom Arduino-based Voltarent ECU to interface with the engine components.",
+                "Mount an OLED dashboard display for driver interaction and mode selection.",
+                "Calibrate the software to provide Economy, Comfort, and Sport driving modes."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High fuel consumption, poor reliability, and mechanical obsolescence of vintage car engines.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "fire hazard",
+                "safety risk",
+                "environmental hazard"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "Modifying vintage engines with custom-built Arduino-based Electronic Fuel Injection (EFI) systems involves high-pressure fuel lines and complex electrical integration. Grassroots electronic control of fuel and ignition timing carries a high risk of engine bay fires, fuel leaks, or sudden mechanical failure if the system malfunctions during operation. While innovative for efficiency, such systems lack the rigorous safety certifications and fail-safes required for automotive standards, potentially leading to road safety hazards or improper emission levels."
+        },
+        "priority_score": 56,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "b5b2909fb3d97201651a904099acac40",
+        "timestamp": "2026-08-11T01:17:50.545976",
+        "title": "Toyota Sienna Minivan 5500-watt Home Backup Generator",
+        "sources": [
+            "https://hackaday.com/2023/09/22/thats-not-a-junker-thats-my-generator/",
+            "https://blog.arduino.cc/2023/09/20/turning-an-old-car-into-a-powerful-generator/",
+            "https://steampunkworkshop.com/the-sienna-gen-project/",
+            "https://steampunkworkshop.com/car-generator-powered-by-arduino/",
+            "https://makezine.com/article/workshop/toyota-sienna-generator-project/"
+        ],
+        "summary": "Maker Jake von Slatt converted a junked Toyota Sienna minivan into a high-capacity 5500-watt home backup generator by mounting a generator head under the hood and using an Arduino to regulate engine speed for stable power output.",
+        "category": [
+            "Energy",
+            "Automotive",
+            "Electronics",
+            "DIY"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Massachusetts",
+            "lat": 42.3788774,
+            "lon": -72.032366
+        },
+        "process": {
+            "how_it_works": "The vehicle's internal combustion engine acts as the prime mover to spin a generator head. An Arduino microcontroller monitors the frequency of the electrical output and sends signals to the car's cruise control system to adjust the throttle, maintaining a steady 3600 RPM required for a 60Hz AC current.",
+            "materials_used": [
+                "Toyota Sienna minivan",
+                "5500-watt generator head (scrapped)",
+                "Arduino microcontroller",
+                "Vehicle cruise control system",
+                "Custom mounting brackets",
+                "Drive belts"
+            ],
+            "step_by_step": [
+                "Mount a generator head from a scrapped genset under the hood of the minivan.",
+                "Connect the generator head to the engine's drive system using belts.",
+                "Integrate an Arduino microcontroller to sense the output frequency of the generator.",
+                "Interface the Arduino with the vehicle's cruise control vacuum or electronic actuator.",
+                "Program the Arduino to adjust the throttle in real-time to maintain exactly 3600 RPM regardless of electrical load.",
+                "Wire the generator output to a home transfer switch or power inlet box."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a low-cost alternative to expensive commercial whole-house backup generators by repurposing salvaged automotive and industrial parts.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "Fire",
+                "Toxic",
+                "Electrical",
+                "Mechanical"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "This project involves significant grassroots modifications to a vehicle's throttle control and high-voltage electrical systems. Using an Arduino to override the cruise control for stationary high-RPM operation poses a risk of mechanical failure or engine overheating. Furthermore, operating a vehicle as a stationary generator creates a high risk of carbon monoxide poisoning if ventilation is inadequate, and DIY integration of a 5500-watt generator head carries substantial fire and electrocution risks if not properly fused and grounded."
+        },
+        "priority_score": 44,
+        "hidden_gem": false,
+        "critical_flag": true
+    },
+    {
+        "id": "9164205cb1ac0ec0fcf884a8a43f258e",
+        "timestamp": "2026-08-11T01:18:20.554989",
+        "title": "Mohit Kumar's Motorcycle-Engine Mini Tractor",
+        "sources": [
+            "https://www.youtube.com/watch?v=V-p3l9Yj_0Y"
+        ],
+        "summary": "Mohit Kumar, a young innovator from the village of Harsa Dabbar, developed a low-cost mini tractor by repurposing a motorcycle engine and using local scrap materials. The machine is designed to help small-scale farmers perform heavy-duty agricultural tasks like plowing and soil preparation at a fraction of the cost of commercial tractors.",
+        "category": [
+            "Agriculture",
+            "Mechanical Engineering",
+            "Waste Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Harsa Dabbar",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The innovation uses a small-displacement motorcycle engine to power a custom-built chassis, providing enough torque and traction to pull agricultural implements through soil.",
+            "materials_used": [
+                "Motorcycle engine",
+                "Local scrap metal",
+                "Mechanical parts",
+                "Wheels",
+                "Plow attachment"
+            ],
+            "step_by_step": [
+                "Sourcing a used or salvaged motorcycle engine",
+                "Collecting scrap metal and mechanical components from local sources",
+                "Designing and welding a custom chassis to house the engine",
+                "Modifying the transmission to handle agricultural loads",
+                "Assembling the drive train and attaching the wheels",
+                "Installing agricultural tools for soil preparation"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and inaccessibility of commercial agricultural machinery for small-scale farmers.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Mechanical Failure",
+                "Fire Hazard",
+                "Safety Hazard"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "While innovative, repurposing a motorcycle engine for heavy-duty agricultural tasks like plowing poses significant risks. Motorcycle engines are air-cooled and designed for high-speed airflow; using them for low-speed, high-torque work can lead to overheating and fire. Additionally, DIY tractors often lack critical safety features such as Roll-Over Protective Structures (ROPS), proper shielding for moving parts, and braking systems rated for agricultural loads, posing a high risk of injury to the operator."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
