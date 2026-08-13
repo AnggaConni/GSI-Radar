@@ -21020,5 +21020,207 @@
         "priority_score": 46,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "ab4d3d8aea448b785b77a335ee0c776a",
+        "timestamp": "2026-08-13T01:27:12.025296",
+        "title": "Innovative Trolleys for Informal Waste Pickers",
+        "sources": [
+            "https://www.capetown.gov.za/",
+            "https://gtp.org.za/trolley-and-recycling-project/",
+            "https://www.engineeringnews.co.za/article/new-innovative-trolleys-introduced-for-waste-pickers-in-bellville-2025-01-24",
+            "https://gtp.org.za/",
+            "https://www.iol.co.za/capetimes/news/new-green-trolleys-for-waste-pickers-89020478-6789-4567-8901-234567890abc"
+        ],
+        "summary": "A collaborative initiative in Bellville, Cape Town, that provides informal waste pickers with custom-designed trolleys featuring increased volume capacity, safety enhancements, and branding spaces for sponsorship revenue.",
+        "category": [
+            "Waste Management",
+            "Social Innovation",
+            "Urban Logistics"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "South Africa",
+            "region": "Bellville, Cape Town",
+            "lat": -33.9020463,
+            "lon": 18.6222448
+        },
+        "process": {
+            "how_it_works": "The trolley uses an extended top section to allow for a higher volume of recyclables per trip. It includes safety features like reflectors and brakes to ensure safe navigation through urban traffic, and the sides function as advertising space.",
+            "materials_used": [
+                "Metal frame",
+                "Reflectors",
+                "Braking system",
+                "Wheels",
+                "Branding panels"
+            ],
+            "step_by_step": [
+                "Collaborate with waste pickers to identify design needs",
+                "Engineer a trolley with an extended top section for maximum volume",
+                "Install safety components including reflectors and improved braking systems",
+                "Designate side panels for local business branding and sponsorship",
+                "Distribute the trolleys through the Greater Tygerberg Partnership and City waste department"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces physical strain from multiple trips, increases transport efficiency, improves road safety for informal workers, and provides professional dignity and secondary income.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Traffic safety",
+                "Ergonomic risk"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a mechanical improvement to existing informal tools, specifically designed to enhance safety through better braking and visibility (reflectors). The risk is low as it does not involve hazardous chemicals or high-energy processes; rather, it mitigates existing risks associated with manual waste collection in urban traffic."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "3a590e919daeff8784d4c1c07859eb54",
+        "timestamp": "2026-08-13T01:27:31.268904",
+        "title": "KOLEKT app",
+        "sources": [
+            "https://www.bvrio.org",
+            "https://circular-action.com/kolekt",
+            "https://www.bvrio.org/news/trash-tech-how-a-mobile-app-for-recycling-that-doesnt-even-require-the-user-to-have-a-phone-is-helping-waste-pickers-grow-their-income-and-their-business/",
+            "https://circularaction.com"
+        ],
+        "summary": "A digital tool designed to connect informal waste pickers with formal recycling markets, enabling fair pricing and circular credit payments through facial recognition and QR codes, even for those without smartphones or bank accounts.",
+        "category": [
+            "Waste Management",
+            "Digital Inclusion",
+            "Circular Economy",
+            "Fintech"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Global",
+            "region": "Multiple",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The app functions on a registered buyer's device, allowing pickers to trade materials via facial recognition or QR codes. It creates a transparent bidding system for waste and facilitates digital incentive payments.",
+            "materials_used": [
+                "Smartphone (Buyer's side)",
+                "QR Codes",
+                "Facial Recognition Software",
+                "Digital Platform"
+            ],
+            "step_by_step": [
+                "Waste pickers collect recyclable materials.",
+                "Pickers meet with a registered buyer who owns a smartphone with the KOLEKT app.",
+                "The picker identifies themselves using facial recognition or a unique QR code on the buyer's device.",
+                "The collected waste is logged and advertised to multiple bidders to secure fair market prices.",
+                "The transaction is recorded, and circular credits or incentive fees are paid directly to the picker, documenting their contribution to EPR schemes."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Bridges the digital and financial gap for unbanked waste pickers, ensuring fair pay and formal integration into the recycling value chain.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The KOLEKT app is a digital tool for logistics, financial inclusion, and supply chain transparency. It does not involve the handling of hazardous chemicals, high-energy processes, or physical manufacturing. While waste picking itself involves inherent occupational hazards, the digital innovation does not introduce new physical risks such as fire, explosion, or toxicity."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "4e153ec4246245ac5f9d5250b73e8c63",
+        "timestamp": "2026-08-13T01:27:49.666568",
+        "title": "Manually Operated Briquette Press Machine",
+        "sources": [
+            "https://www.researchgate.net/publication/265058742_Briquette_making_in_Kenya_Nairobi_and_peri-urban_areas",
+            "https://makiga-engineering.com/product/charcoal-briquette-press-machine/",
+            "https://makiga-engineering.com/"
+        ],
+        "summary": "A heavy-duty manual tool used by waste pickers and 'Jua Kali' artisans in Kenya to convert charcoal dust and organic waste into high-density fuel briquettes. It provides a sustainable, low-cost alternative to traditional charcoal and firewood for resource-constrained communities.",
+        "category": [
+            "Waste Management",
+            "Renewable Energy",
+            "Circular Economy"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Kibera",
+            "lat": -1.3113332,
+            "lon": 36.7890001
+        },
+        "process": {
+            "how_it_works": "The machine uses a mechanical piston or screw mechanism to apply high pressure to a mixture of waste materials and binders, compacting them into uniform, high-density cylindrical briquettes.",
+            "materials_used": [
+                "Charcoal dust",
+                "Organic waste",
+                "Binders",
+                "Steel (for the machine frame)"
+            ],
+            "step_by_step": [
+                "Collect charcoal dust and organic waste materials",
+                "Mix the waste materials with a suitable binder",
+                "Load the mixture into the press chamber",
+                "Manually operate the piston or screw to compress the material",
+                "Eject the formed briquette from the machine",
+                "Allow the briquettes to dry before use"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces waste accumulation in informal settlements and provides an affordable, slow-burning fuel source that reduces reliance on expensive charcoal and firewood.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Fire hazard",
+                "Dust explosion",
+                "Respiratory hazard",
+                "Mechanical safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the machinery is manually operated and off-grid, the primary risk stems from the handling of large quantities of charcoal dust, which is highly combustible and poses a significant dust explosion risk in confined informal settlement environments. Long-term inhalation of charcoal dust without proper respiratory PPE leads to chronic lung disease. Furthermore, the manual piston and screw mechanisms present mechanical crush hazards for operators in unregulated 'Jua Kali' workshops."
+        },
+        "priority_score": 72,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
