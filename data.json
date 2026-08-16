@@ -21222,5 +21222,205 @@
         "priority_score": 72,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "12d56a4a9d543c99ab4c440cb2fe910d",
+        "timestamp": "2026-08-16T00:59:28.826829",
+        "title": "Modernized Aboriginal Cool Burning",
+        "sources": [
+            "https://www.taylorfrancis.com/journals/fire-ecology/articles/10.1186/s42408-024-00287-x",
+            "https://wildlifedrones.net/modern-technology-and-indigenous-knowledge/",
+            "https://envisioning.io/grid/indigenous-cultural-burning-with-satellite-integration",
+            "https://www.nature.org/en-us/about-us/where-we-work/beringia/stories-in-beringia/indigenous-fire-management/",
+            "https://www.csiro.au/en/research/indigenous-science/fire/cultural-burning",
+            "https://www.bbc.com/news/world-australia-51043828"
+        ],
+        "summary": "A hybrid fire management strategy that integrates 65,000 years of Indigenous Australian 'cool burning' knowledge with modern technology like AI, satellite mapping, and drones to prevent catastrophic wildfires and enhance biodiversity.",
+        "category": [
+            "Environmental Management",
+            "Indigenous Knowledge",
+            "Climate Technology",
+            "Disaster Mitigation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Australia",
+            "region": "National",
+            "lat": -35.3081255,
+            "lon": 149.1898809
+        },
+        "process": {
+            "how_it_works": "Traditional low-intensity fires are lit during cool, damp periods to clear fuel loads without damaging the forest canopy, guided by real-time data analytics to ensure precision and safety.",
+            "materials_used": [
+                "Satellite fire mapping data",
+                "AI weather modeling software",
+                "Drones for monitoring",
+                "Traditional fire-starting tools",
+                "Remote sensing sensors"
+            ],
+            "step_by_step": [
+                "Analyze satellite imagery and AI weather models to identify high-risk fuel accumulation areas.",
+                "Determine the optimal seasonal window based on traditional ecological indicators and modern meteorological data.",
+                "Conduct low-intensity 'cool burns' led by Indigenous rangers to clear undergrowth.",
+                "Use drones and remote sensing to monitor the burn progress and ecological impact in real-time.",
+                "Post-burn assessment of biodiversity recovery and fuel load reduction."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Mitigation of catastrophic high-intensity wildfires and restoration of native ecosystem biodiversity.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Cool burning is a controlled, low-intensity fire management technique. The integration of satellite mapping, AI weather modeling, and drone monitoring significantly enhances safety and precision. While fire is inherently hazardous, the combination of deep traditional knowledge and modern technology makes this a high-safety, low-risk mitigation strategy for preventing catastrophic wildfires."
+        },
+        "priority_score": 56,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "1094e453239588933d4913d6e32faf0f",
+        "timestamp": "2026-08-16T00:59:46.977901",
+        "title": "Asháninka Tech-Enhanced Forest Stewardship",
+        "sources": [
+            "https://www.worth.com/where-ancestral-knowledge-meets-modern-tech/",
+            "https://www.unredd.net/announcements-and-news/2568-traditional-indigenous-knowledge-meets-new-technologies.html"
+        ],
+        "summary": "The Asháninka people of the Peruvian Amazon integrate ancestral ecological wisdom with drones, satellite data, and machine learning to monitor remote territories and provide high-resolution evidence of illegal logging and deforestation to authorities.",
+        "category": [
+            "Environmental Conservation",
+            "Indigenous Rights",
+            "Digital Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Peru",
+            "region": "Amazon",
+            "lat": -3.8932882,
+            "lon": -73.1868553
+        },
+        "process": {
+            "how_it_works": "The community combines traditional spiritual stewardship and patrolling with remote sensing technology to identify and document environmental threats in real-time.",
+            "materials_used": [
+                "Drones",
+                "Satellite imagery",
+                "Machine learning software",
+                "GPS devices"
+            ],
+            "step_by_step": [
+                "Monitor vast and remote rainforest areas using satellite data",
+                "Deploy drones to capture high-resolution imagery of suspected illegal activity",
+                "Use machine learning to process data and identify patterns of deforestation",
+                "Validate technological findings with traditional ecological knowledge and patrolling",
+                "Present data-driven evidence to legal authorities to assert land rights and trigger enforcement"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Illegal logging and deforestation in inaccessible indigenous territories that were previously difficult to monitor and prove.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The technology itself (drones, satellite data, and machine learning) is low-risk. However, the application involves monitoring illegal activities like logging, which carries a physical safety risk for the community members involved. The innovation improves safety by allowing remote surveillance, but the context of environmental defense in remote areas remains inherently dangerous."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "f8b49b84e3736d4cc10af8a2f3109248",
+        "timestamp": "2026-08-16T01:00:04.151917",
+        "title": "AI-Integrated Traditional Ecological Knowledge for Sustainable Fishing",
+        "sources": [
+            "https://arcticeider.ca",
+            "https://www.wwf.ca/stories/blending-indigenous-knowledge-and-artificial-intelligence-to-enable-adaptation/",
+            "https://siku.org"
+        ],
+        "summary": "Inuit hunters in Sanikiluaq, Nunavut, are integrating multi-generational traditional ecological knowledge with AI and satellite remote sensing to predict fish stock movements and adapt to climate-driven changes in ice patterns.",
+        "category": [
+            "Climate Adaptation",
+            "Indigenous Knowledge",
+            "Artificial Intelligence",
+            "Fisheries"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Canada",
+            "region": "Nunavut",
+            "lat": 65.0377727,
+            "lon": -92.5540791
+        },
+        "process": {
+            "how_it_works": "AI models combine traditional observations from local fishers with satellite data to map shifting marine environments and predict optimal fishing locations.",
+            "materials_used": [
+                "Traditional ecological knowledge",
+                "Satellite remote sensing data",
+                "AI predictive modeling software",
+                "Mobile data platforms (SIKU)"
+            ],
+            "step_by_step": [
+                "Document multi-generational observations of ice and fish patterns from local hunters.",
+                "Aggregate real-time satellite imagery and oceanographic data.",
+                "Feed integrated datasets into AI frameworks to identify correlations between ice changes and fish locations.",
+                "Generate predictive models for sustainable harvesting.",
+                "Apply findings to community navigation and food security strategies."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Food insecurity and economic instability caused by unpredictable fish stock locations due to rapid Arctic climate change.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is primarily digital and informational, focusing on data integration to improve food security and navigation safety. The risk is minimal, primarily relating to the potential for algorithmic error in predicting ice stability or fish locations, which is mitigated by the inclusion of traditional ecological knowledge and multi-generational expertise."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
