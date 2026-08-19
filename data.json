@@ -21422,5 +21422,208 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "3933d5eccb3cd3722140e13aa6fa100f",
+        "timestamp": "2026-08-19T00:57:01.965259",
+        "title": "Kelvin Doe's Scavenged Radio Station and Power Solutions",
+        "sources": [
+            "https://www.youtube.com/watch?v=XOLOLrUBRBY",
+            "https://www.facebook.com/watch/?v=10155694247545455",
+            "https://news.mit.edu/2012/kelvin-doe-visiting-practitioner-1114",
+            "https://imaginationmatters.org/kelvin-doe-the-boy-who-created-his-future/"
+        ],
+        "summary": "Kelvin Doe, a self-taught engineer from Freetown, Sierra Leone, built his own batteries, generators, and an FM radio transmitter using electronic waste scavenged from trash heaps to provide power and communication to his community.",
+        "category": [
+            "Electronics",
+            "Communication",
+            "Energy",
+            "Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Sierra Leone",
+            "region": "Freetown",
+            "lat": 8.479004,
+            "lon": -13.26795
+        },
+        "process": {
+            "how_it_works": "The system utilizes scavenged electronic components to create functional power storage and transmission devices. Batteries are made using acid, soda, and metal scraps, while the transmitter uses salvaged circuit components to broadcast on the FM band.",
+            "materials_used": [
+                "Scrap electronics",
+                "Metal scraps",
+                "Acid",
+                "Soda",
+                "Tape",
+                "Wires",
+                "Discarded capacitors"
+            ],
+            "step_by_step": [
+                "Scavenge electronic waste from local trash heaps and landfills.",
+                "Identify and extract functional components such as wires, capacitors, and resistors.",
+                "Assemble a homemade battery using a mixture of acid, soda, and metal to store energy.",
+                "Construct a makeshift generator to provide electricity during frequent power outages.",
+                "Build an FM radio transmitter to broadcast news and music to the neighborhood."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addressed the lack of reliable electricity and local communication channels in Freetown neighborhoods.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "Fire Hazard",
+                "Explosion",
+                "Toxic",
+                "Electrical Shock"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "While highly innovative, scavenging scrap electronics and building homemade batteries and generators poses significant risks. Scrap components often contain toxic heavy metals (lead, mercury), and homemade power sources lack safety regulations, increasing the likelihood of electrical fires, chemical leaks, or explosions. Operating high-voltage equipment without formal training or safety gear is extremely hazardous."
+        },
+        "priority_score": 60,
+        "hidden_gem": true,
+        "critical_flag": true
+    },
+    {
+        "id": "decbde880e10dff1a343a533e510c55f",
+        "timestamp": "2026-08-19T00:57:23.927838",
+        "title": "Radio Sutatenza (Acción Cultural Popular - ACPO)",
+        "sources": [
+            "https://en.unesco.org/memoryoftheworld/registry/241",
+            "https://www.banrepcultural.org/radio-sutatenza",
+            "https://www.banrepcultural.org/radio-sutatenza/index.html",
+            "https://www.researchgate.net/publication/265063073_Making_Waves_Stories_of_Participatory_Communication_for_Social_Change"
+        ],
+        "summary": "Founded in 1947 by Father José Joaquín Salcedo, Radio Sutatenza was a pioneering educational initiative in Colombia that used radio broadcasting to provide 'integral fundamental education' to rural peasants, covering literacy, health, and agriculture.",
+        "category": [
+            "Education",
+            "Telecommunications",
+            "Rural Development"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Colombia",
+            "region": "Sutatenza",
+            "lat": 5.0243841,
+            "lon": -73.4267539
+        },
+        "process": {
+            "how_it_works": "Educational content was broadcast via radio to organized groups of rural learners who used printed materials to supplement the audio lessons in 'radio schools'.",
+            "materials_used": [
+                "Radio transmitter",
+                "Radio receivers",
+                "Printed primers and booklets",
+                "Blackboards",
+                "Batteries"
+            ],
+            "step_by_step": [
+                "Establishment of a local radio transmitter in a rural village",
+                "Organization of small groups of learners in rural homes or community centers",
+                "Distribution of radio sets and complementary printed educational materials",
+                "Broadcasting of daily lessons on literacy, numeracy, health, and farming",
+                "On-site facilitation by local community leaders to guide the learning process"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High illiteracy rates and lack of access to formal schooling in remote rural areas.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "electrical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is primarily a social and educational initiative using radio technology. While it involved a homemade transmitter, the risks are limited to standard electrical safety concerns typical of mid-20th-century electronics. There are no significant chemical, explosive, or environmental hazards associated with this grassroots telecommunications project."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "07391eefa8f82e8cd23b6febe446295b",
+        "timestamp": "2026-08-19T00:57:43.351103",
+        "title": "Warlpiri Media Association Low-Power Community Station",
+        "sources": [
+            "https://www.pawmedia.com.au/",
+            "https://cas.california-scholarship.org/view/9780520075092/xml/ch07.xml",
+            "https://www.nyu.edu/projects/faye/IndigenousMedia.pdf"
+        ],
+        "summary": "In 1985, the Warlpiri Media Association in Yuendumu established a low-power television station using a homemade transmitter to broadcast local Warlpiri-language content, bypassing mainstream media to promote self-determination and cultural preservation.",
+        "category": [
+            "Media",
+            "Telecommunications",
+            "Indigenous Technology",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Australia",
+            "region": "Yuendumu, Northern Territory",
+            "lat": -22.2527454,
+            "lon": 131.7978253
+        },
+        "process": {
+            "how_it_works": "A locally constructed low-power transmitter was used to broadcast community-produced television signals over a short range, allowing residents to receive content on standard television sets.",
+            "materials_used": [
+                "Homemade transmitter",
+                "Broadcasting equipment",
+                "Video cameras",
+                "Local language content"
+            ],
+            "step_by_step": [
+                "Formation of the Warlpiri Media Association by the community.",
+                "Technical assembly of a DIY low-power transmitter.",
+                "Recording of local traditional dances, oral histories, and news in the Warlpiri language.",
+                "Bypassing mainstream infrastructure to broadcast directly to the Yuendumu community."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of indigenous representation and cultural content in mainstream media outlets.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "fire",
+                "electrical"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The use of homemade electronic transmitters carries a moderate risk of electrical short-circuits or fire if components are not properly fused or cooled. However, as a low-power device, the physical danger to the community is relatively low. The primary technical risk is electromagnetic interference with other communication bands, though the historical context shows successful community-managed operation."
+        },
+        "priority_score": 46,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
