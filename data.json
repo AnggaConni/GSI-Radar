@@ -21625,5 +21625,196 @@
         "priority_score": 46,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "13f1f51a036459aba32368ed5ac02f9a",
+        "timestamp": "2026-08-21T01:00:05.195779",
+        "title": "Traditional use of Hoodia gordonii (ǁhoba) by the San people",
+        "sources": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2249741/",
+            "https://en.wikipedia.org/wiki/Hoodia_gordonii",
+            "https://www.wipo.int/ipadvantage/en/details.jsp?id=2599",
+            "https://www.csir.co.za/",
+            "https://www.wipo.int/ipadvantage/en/details.jsp?id=2557",
+            "https://www.publiceye.ch/en/topics/biopiracy/stolen-knowledge-the-hoodia-case",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC5416629/"
+        ],
+        "summary": "The San people of the Kalahari Desert have used the Hoodia gordonii plant for millennia to suppress appetite and maintain energy during long hunts. This indigenous knowledge led to the isolation of the P57 molecule and established a global precedent for benefit-sharing agreements in intellectual property.",
+        "category": [
+            "Indigenous Knowledge",
+            "Traditional Medicine",
+            "Bioprospecting",
+            "Intellectual Property"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "South Africa",
+            "region": "Kalahari Desert",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The plant contains a steroidal glycoside named P57, which acts on the hypothalamus in the brain to signal satiety, effectively suppressing hunger and thirst.",
+            "materials_used": [
+                "Hoodia gordonii plant (ǁhoba)"
+            ],
+            "step_by_step": [
+                "Identify and harvest the bitter succulent Hoodia gordonii in the wild.",
+                "Remove the spines and outer skin of the plant.",
+                "Consume the inner succulent flesh during long-distance travel or hunting to prevent hunger and thirst."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Sustenance during long hunting trips in arid environments; later used as a model for equitable benefit-sharing in bioprospecting.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation involves the use of a natural succulent and the isolation of a bioactive molecule (P57). The primary risks are pharmacological (potential side effects of concentrated extracts) and environmental (over-harvesting of the wild plant). However, as this is a documented scientific study by established institutions with formal benefit-sharing and regulatory oversight, the physical safety risk is very low."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "4214b098d0af95f20886a4f47e8f3996",
+        "timestamp": "2026-08-21T01:00:24.038015",
+        "title": "Artemisinin Discovery from Artemisia annua (Qinghao)",
+        "sources": [
+            "https://www.rishi-tea.com/blogs/botanical-encyclopedia/sweet-wormwood",
+            "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/",
+            "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.01281/full",
+            "https://www.who.int/news-room/fact-sheets/detail/malaria",
+            "https://www.who.int/news-room/feature-stories/detail/traditional-medicine-has-a-long-history-of-contributing-to-conventional-medicine-and-continues-to-hold-promise",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC2816553/"
+        ],
+        "summary": "The discovery of artemisinin, a primary antimalarial drug, was facilitated by ancient Chinese medical texts documenting a cold-extraction method for Artemisia annua. This technique preserved the heat-sensitive active compound that modern boiling methods initially destroyed.",
+        "category": [
+            "Medicine",
+            "Pharmacology",
+            "Traditional Knowledge"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "China",
+            "region": "East Asia",
+            "lat": 22.1404079,
+            "lon": 113.5704777
+        },
+        "process": {
+            "how_it_works": "Cold-water extraction prevents the thermal degradation of the active compound artemisinin, which is destroyed when the herb is boiled.",
+            "materials_used": [
+                "Artemisia annua (Qinghao)",
+                "Cold water"
+            ],
+            "step_by_step": [
+                "Obtain the Artemisia annua herb.",
+                "Soak the herb in cold water.",
+                "Wring out the herb to extract the juice.",
+                "Administer the juice to treat intermittent fevers."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provided a highly effective treatment for malaria, overcoming resistance to previous antimalarial drugs.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation describes a historical cold-water extraction method for a medicinal plant. This process uses non-toxic solvents (water), no high-pressure systems, and no heat, posing negligible risk to the environment or safety."
+        },
+        "priority_score": 64,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "c013738ef68054a800534a83789057c0",
+        "timestamp": "2026-08-21T01:00:42.644878",
+        "title": "Turmeric (Haridra) in Ayurvedic Medicine",
+        "sources": [
+            "https://www.ncbi.nlm.nih.gov/books/NBK92752/",
+            "https://www.banyanbotanicals.com/pages/ayurvedic-herbs-turmeric",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10218320/",
+            "https://en.wikipedia.org/wiki/Turmeric",
+            "https://www.pbs.org/food/the-history-kitchen/turmeric-history/"
+        ],
+        "summary": "The traditional medicinal and ritualistic use of turmeric, known as Haridra in Ayurveda, documented in ancient Indian Vedic texts for its anti-inflammatory, antiseptic, and spiritual purifying properties.",
+        "category": [
+            "Traditional Medicine",
+            "Ayurveda",
+            "Healthcare",
+            "Cultural Heritage"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "South Asia",
+            "lat": 21.4117746,
+            "lon": 39.889743
+        },
+        "process": {
+            "how_it_works": "Utilizes the bioactive properties of turmeric for physiological healing and spiritual purification through topical application, inhalation, and ritual use.",
+            "materials_used": [
+                "Turmeric (Curcuma longa)"
+            ],
+            "step_by_step": [
+                "Preparation of turmeric paste for topical application on wounds or skin disorders.",
+                "Burning turmeric to produce medicinal fumes for inhalation to treat respiratory congestion.",
+                "Integration into cultural ceremonies like 'Haldi' for spiritual and physical cleansing."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Treats inflammation, skin disorders, and respiratory issues while serving cultural purification needs.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Turmeric is a well-documented, safe botanical used for millennia. The traditional methods described, including topical application and controlled inhalation of fumes, carry negligible risk when compared to industrial or synthetic chemical processes. It is generally recognized as safe (GRAS) for consumption and topical use."
+        },
+        "priority_score": 64,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
