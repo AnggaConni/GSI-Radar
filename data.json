@@ -21816,5 +21816,210 @@
         "priority_score": 64,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "0f9f1c4fd27fc9ca52fb33280a36f369",
+        "timestamp": "2026-08-23T01:01:25.512638",
+        "title": "GiveLove Humanure Composting Project",
+        "sources": [
+            "https://www.youtube.com/watch?v=HBNhSZ5n94I",
+            "https://humanurehandbook.com/public_sanitation.html",
+            "https://givelove.org/haiti/",
+            "https://www.givelove.org"
+        ],
+        "summary": "A community-led sanitation project in Santo Village, Haiti, that uses the Humanure method to convert human waste into nutrient-rich fertilizer using low-cost, local materials.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Haiti",
+            "region": "Santo Village",
+            "lat": 18.5375137,
+            "lon": -72.5344637
+        },
+        "process": {
+            "how_it_works": "The system uses thermophilic composting to break down human waste and pathogens by mixing it with carbon-rich materials in a controlled environment.",
+            "materials_used": [
+                "5-gallon buckets",
+                "sugarcane bagasse",
+                "recycled pallets"
+            ],
+            "step_by_step": [
+                "Waste is deposited into 5-gallon buckets and covered with sugarcane bagasse to manage odors.",
+                "Buckets are collected from households twice a week.",
+                "Collected waste is transported to a central composting facility.",
+                "Waste is layered into composting bins made from recycled wooden pallets.",
+                "The material undergoes a nine-month thermophilic composting process.",
+                "The finished, pathogen-free compost is used as fertilizer for local agriculture."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Replaces failed commercial sanitation systems, eliminates odors and flies, and provides a sustainable source of agricultural fertilizer.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 5,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological exposure to human pathogens during the collection and initial composting phases. While the thermophilic composting method is scientifically sound for neutralizing pathogens, the manual handling of waste in a grassroots setting requires strict adherence to hygiene protocols and the use of personal protective equipment to prevent disease outbreaks. Environmental risk is present if leachate is not properly managed at the central site."
+        },
+        "priority_score": 64,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "02f8facdba8b35419012c3ac1878217d",
+        "timestamp": "2026-08-23T01:01:41.953229",
+        "title": "SOIL EkoLakay Container-Based Sanitation",
+        "sources": [
+            "https://www.oursoil.org/",
+            "https://www.engineeringforchange.org/solutions/product/ekolakay-toilet/",
+            "https://www.metropolis.org/use/soil-haiti"
+        ],
+        "summary": "SOIL operates the EkoLakay service in Haiti, providing container-based, urine-diverting dry toilets (UDDT) that transform human waste into high-quality organic compost to restore soil health and prevent waterborne diseases.",
+        "category": [
+            "Sanitation",
+            "Circular Economy",
+            "Agriculture",
+            "Waste Management"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Haiti",
+            "region": "Rural and urban-fringe areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A urine-diverting dry toilet (UDDT) separates liquid and solid waste. Solids are covered with a carbon-based material to manage odor and begin decomposition, then collected for industrial-scale composting.",
+            "materials_used": [
+                "Wood",
+                "Ferrocement",
+                "Carbon-based cover material (bonzodè)",
+                "Plastic containers"
+            ],
+            "step_by_step": [
+                "Install a locally manufactured UDDT in the home.",
+                "Users separate urine and cover solid waste with bonzodè after use.",
+                "SOIL service teams collect waste containers on a weekly basis.",
+                "Waste is transported to a large-scale composting facility.",
+                "The waste is treated and transformed into 'Konpòs Lakay' organic fertilizer."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of sanitation infrastructure, groundwater contamination, spread of waterborne diseases like cholera, and soil nutrient depletion.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological, as human waste contains pathogens like cholera. However, the system is a managed circular economy model that uses container-based sanitation and professional composting to neutralize these hazards. The risk is significantly lower than the alternative of open defecation or unmanaged pit latrines, though PPE and strict hygiene protocols are required for workers."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "65d0952274553f5ccccc428848463853",
+        "timestamp": "2026-08-23T01:01:59.809448",
+        "title": "Sadhana Forest Dry Composting Toilet System",
+        "sources": [
+            "https://sadhanaforest.org/",
+            "https://sadhanaforest.org/india/campus-india/compost-toilets/",
+            "https://www.pureecoindia.in/off-grid-commune-sadhana-forest-in-auroville-india/",
+            "https://www.youtube.com/watch?v=FgGq6UHtOAk"
+        ],
+        "summary": "An off-grid, water-efficient sanitation system used by the Sadhana Forest community in Tamil Nadu to convert human waste into nutrient-rich compost ('humanure') for reforestation in arid regions.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Environmental Restoration",
+            "Sustainable Living"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Tamil Nadu",
+            "lat": 11.3323723,
+            "lon": 78.6098639
+        },
+        "process": {
+            "how_it_works": "The system utilizes an aerobic composting process where human waste is mixed with sawdust to manage moisture and odor, eventually decomposing into organic fertilizer.",
+            "materials_used": [
+                "Sawdust",
+                "Water",
+                "Composting chambers",
+                "Stirring tools"
+            ],
+            "step_by_step": [
+                "Use the dry toilet with minimal water (approx. 1 liter) for washing.",
+                "Cover the waste with a layer of sawdust after every use to maintain carbon-nitrogen balance and facilitate aerobic conditions.",
+                "Periodically stir the waste to ensure proper aeration and decomposition.",
+                "Allow the waste to process until it is fully decomposed into safe 'humanure'.",
+                "Harvest the compost and apply it as fertilizer for the Tropical Dry Evergreen Forest."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces water consumption in arid regions by 90-95% compared to flush toilets and provides a sustainable source of fertilizer for reforestation.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological, specifically the transmission of pathogens if the composting process fails to reach thermophilic temperatures necessary to kill enteric bacteria and parasites. While the project promotes water conservation and reforestation, the manual handling and stirring of human waste require strict hygiene protocols and safety gear to prevent disease outbreaks. Environmental risk is localized to potential groundwater contamination if the composting units are not properly sealed.",
+            "safety_gear": [
+                "Gloves",
+                "Face masks",
+                "Protective footwear",
+                "Hand-washing stations"
+            ]
+        },
+        "priority_score": 60,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
