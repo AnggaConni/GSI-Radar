@@ -22021,5 +22021,208 @@
         "priority_score": 60,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "9eafa5813418445596771d5a2e503e5a",
+        "timestamp": "2026-08-26T00:59:41.670640",
+        "title": "Uru-Eu-Wau-Wau Indigenous Drone Surveillance and Territorial Monitoring",
+        "sources": [
+            "https://www.kaninde.org.br",
+            "https://www.wwf.org.br",
+            "https://www.wwf.org.uk/news-listing/meet-protectors-amazon",
+            "https://www.worldwildlife.org/stories/how-one-indigenous-community-uses-high-tech-tools-to-defend-its-territory",
+            "https://smartconservationtools.org"
+        ],
+        "summary": "The Uru-Eu-Wau-Wau people utilize drone technology and SMART software to monitor their ancestral lands in the Brazilian Amazon, documenting illegal logging and land-grabbing to provide evidence for legal action without direct confrontation.",
+        "category": [
+            "Environmental Protection",
+            "Indigenous Rights",
+            "Surveillance Technology",
+            "Conservation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Brazil",
+            "region": "Amazon (Rondônia)",
+            "lat": -8.7680327,
+            "lon": -63.8884834
+        },
+        "process": {
+            "how_it_works": "High-resolution drones capture imagery of remote areas, which is then mapped via GPS and managed through the SMART software to create reports for authorities.",
+            "materials_used": [
+                "Drones",
+                "SMART (Spatial Monitoring and Reporting Tool) software",
+                "GPS mapping equipment",
+                "High-resolution cameras",
+                "Computers"
+            ],
+            "step_by_step": [
+                "Training community members in drone operation and software use",
+                "Conducting aerial surveillance over vulnerable territory zones identified by traditional knowledge",
+                "Documenting environmental crimes with geotagged imagery and GPS coordinates",
+                "Compiling data into formal reports using SMART software",
+                "Sharing evidence with public agencies and NGOs to trigger legal enforcement"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Illegal deforestation and land-grabbing while minimizing physical risk to indigenous patrols from violent invaders.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Safety",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The technology itself (drones and software) poses minimal technical risk such as fire or explosion. However, the grassroots application in high-conflict zones involving illegal logging and land-grabbing creates a high risk of physical retaliation against the operators. Intervention is required from state authorities to ensure the safety of the Indigenous monitors and to act on the evidence collected."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "dec2f949068b865aef61d9d433e73853",
+        "timestamp": "2026-08-26T01:00:08.482076",
+        "title": "AI-Driven Early Warning System for Climate-Smart Agriculture in Nepal",
+        "sources": [
+            "https://www.icimod.org/",
+            "https://practicalaction.org/where-we-work/nepal/",
+            "https://www.ctc-n.org/news/nepal-faster-flood-farmers-harness-ai-weather-climate-shocks",
+            "https://www.wfp.org/countries/nepal",
+            "https://www.unep.org/news-and-stories/story/how-technology-helping-communities-across-globe-adapt-climate-change"
+        ],
+        "summary": "An AI-powered system that integrates 30 years of historical weather data with real-time satellite imagery to deliver localized, actionable agricultural advice to farmers in Nepal's micro-climatic regions via mobile phones.",
+        "category": [
+            "Agriculture",
+            "Artificial Intelligence",
+            "Climate Adaptation",
+            "Disaster Risk Reduction"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Nepal",
+            "region": "Micro-climatic regions",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses AI to analyze long-term weather patterns and current satellite data to generate village-specific forecasts and agricultural recommendations.",
+            "materials_used": [
+                "Satellite imagery",
+                "Historical weather datasets",
+                "AI/Machine Learning algorithms",
+                "Mobile communication networks",
+                "Smartphones/Feature phones"
+            ],
+            "step_by_step": [
+                "Aggregate 30 years of historical local weather data",
+                "Ingest real-time satellite imagery for current atmospheric conditions",
+                "Apply AI models to translate data into village-level weather forecasts",
+                "Formulate 'climate-smart' agricultural advice based on forecasts",
+                "Transmit alerts to farmers via mobile phone messages or voice calls"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces crop loss from frequent floods and landslides by providing farmers with optimal timing for sowing, irrigation, and harvesting.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a digital information system utilizing AI and satellite data for weather forecasting and agricultural advice. It does not involve any hazardous chemicals, high-energy processes, or physical risks. Its primary function is to enhance community safety and climate resilience by providing early warnings for natural disasters."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "674635d085719b77f8e13f12ee1e60de",
+        "timestamp": "2026-08-26T01:00:27.349532",
+        "title": "Red Hook WiFi",
+        "sources": [
+            "https://redhookwifi.org/",
+            "https://www.newamerica.org/oti/blog/red-hook-wifi-a-community-led-mesh-network-in-brooklyn/",
+            "https://urbanomnibus.net/2013/09/local-connections-the-red-hook-wifi-project/"
+        ],
+        "summary": "A community-owned and operated mesh network in Brooklyn, New York, designed to bridge the digital divide and provide resilient communication infrastructure during disasters like Hurricane Sandy.",
+        "category": [
+            "Telecommunications",
+            "Community Infrastructure",
+            "Disaster Resilience",
+            "Digital Inclusion"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Red Hook, Brooklyn, New York",
+            "lat": 40.6751032,
+            "lon": -74.0095841
+        },
+        "process": {
+            "how_it_works": "The system uses a series of router nodes that communicate with each other independently of the public internet to create a mesh topology, allowing for hyperlocal communication and internet sharing.",
+            "materials_used": [
+                "Wireless router nodes",
+                "Solar panels",
+                "Battery backups",
+                "Antennas",
+                "Mounting hardware"
+            ],
+            "step_by_step": [
+                "Identify strategic locations for node placement across the neighborhood",
+                "Install mesh-enabled router nodes to create a decentralized network",
+                "Equip nodes with solar-powered backups to ensure operation during power outages",
+                "Recruit and train local youth as 'Digital Stewards' to manage and maintain the hardware",
+                "Establish a local intranet for community communication during emergencies"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of internet access in underserved areas and the total failure of communication services during natural disasters.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Red Hook WiFi uses standard consumer-grade networking equipment and solar-powered battery backups. The primary risk is a minor fire hazard associated with battery storage and electrical components, which is standard for such technology. As a communication infrastructure project, it lacks the high-risk profiles of chemical or heavy energy innovations."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
