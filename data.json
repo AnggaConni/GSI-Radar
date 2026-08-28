@@ -22224,5 +22224,207 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "4aad0687ab58f4558d05a01f4cc8a39b",
+        "timestamp": "2026-08-28T08:40:50.694029",
+        "title": "Uru-Eu-Wau-Wau Indigenous Land Surveillance",
+        "sources": [
+            "https://www.worldwildlife.org/stories/how-one-indigenous-community-uses-high-tech-tools-to-defend-its-territory",
+            "https://www.nationalgeographic.com/environment/article/indigenous-people-amazon-drones-protect-land",
+            "https://www.worldwildlife.org/stories/indigenous-communities-use-drones-to-protect-the-amazon"
+        ],
+        "summary": "The Uru-Eu-Wau-Wau community integrates drones, GPS, and camera traps with traditional knowledge to monitor illegal deforestation and land-grabbing in the Brazilian Amazon, providing digital evidence for legal enforcement.",
+        "category": [
+            "Conservation",
+            "Indigenous Innovation",
+            "Geospatial Technology",
+            "Environmental Protection"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Brazil",
+            "region": "Amazon Rainforest",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Community members utilize drones for aerial reconnaissance and camera traps for ground-level monitoring to document environmental crimes without physical confrontation, feeding the data into a centralized reporting tool.",
+            "materials_used": [
+                "Drones",
+                "Smartphones",
+                "Camera traps",
+                "GPS mapping software",
+                "SMART (Spatial Monitoring and Reporting Tool)"
+            ],
+            "step_by_step": [
+                "Identify high-risk areas for monitoring based on ancestral knowledge and previous incursions.",
+                "Deploy drones to capture high-resolution aerial imagery and video of remote areas.",
+                "Use GPS mapping to record the exact coordinates of deforestation or illegal structures.",
+                "Install camera traps in strategic locations to record the movement of invaders.",
+                "Upload collected imagery and coordinates into the SMART system for data analysis.",
+                "Share verified evidence with public agencies and NGOs to trigger legal action and conservation support."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Illegal logging, land-grabbing, and wildfires on indigenous territories that are difficult to patrol safely.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation utilizes standard consumer electronics (drones, smartphones, GPS) for environmental monitoring. The primary risk is external (illegal loggers), but the technology itself is safe and designed to mitigate physical danger by enabling remote surveillance and evidence gathering."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "89c9250cad82455ed5b21055de6cddeb",
+        "timestamp": "2026-08-28T08:41:10.199357",
+        "title": "AI-Integrated Traditional Indigenous Knowledge for Arctic Fishing",
+        "sources": [
+            "https://arcticeider.com/",
+            "https://siku.org/",
+            "https://arcticwwf.org/newsroom/stories/blending-indigenous-knowledge-and-artificial-intelligence-to-enable-adaptation/"
+        ],
+        "summary": "An AI-driven hybrid technology developed in Sanikiluaq, Nunavut, that integrates traditional Indigenous knowledge with satellite remote sensing to identify sustainable inshore fishing grounds, overcoming Arctic environmental barriers like cloud cover and seasonal darkness.",
+        "category": [
+            "Artificial Intelligence",
+            "Indigenous Knowledge",
+            "Climate Adaptation",
+            "Fisheries",
+            "Remote Sensing"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Canada",
+            "region": "Sanikiluaq, Nunavut",
+            "lat": 56.5421614,
+            "lon": -79.2259227
+        },
+        "process": {
+            "how_it_works": "The system uses machine learning to synthesize oral histories and local observations from Inuit fishers with scientific satellite data, creating a predictive model that functions even when visual satellite imagery is obscured.",
+            "materials_used": [
+                "Machine learning algorithms",
+                "Satellite remote sensing data",
+                "Indigenous oral histories",
+                "Local environmental observations",
+                "Historical fishing data"
+            ],
+            "step_by_step": [
+                "Document and digitize local oral histories and traditional fishing observations.",
+                "Collect and process scientific remote sensing and satellite data for the Nunavut region.",
+                "Develop a machine learning model capable of correlating traditional indicators with scientific data points.",
+                "Tailor the AI to fill data gaps caused by Arctic cloud cover and long periods of darkness.",
+                "Map and identify new, sustainable inshore fishing grounds based on the hybrid data output."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Overcomes the failure of standard satellite monitoring in the Arctic due to weather and darkness while addressing climate-driven shifts in fish populations.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a software-based AI model used for data integration and decision support. It does not involve any hazardous chemicals, high-pressure systems, or combustible materials. It enhances safety for local fishers by providing more accurate environmental data and promotes sustainable resource management."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "b5a1ab0a96504b2cf037ef0970098bb7",
+        "timestamp": "2026-08-28T08:41:26.959753",
+        "title": "Solar-powered 'Smart Taps' Water Vending System",
+        "sources": [
+            "https://globalimpact.org/five-charities-pioneering-new-tech-to-save-the-world/",
+            "https://www.oxfam.org/en/kenya-smart-taps-bring-clean-water-drought-stricken-communities"
+        ],
+        "summary": "A community-managed water distribution system in rural Kenya that utilizes solar-powered IoT vending machines. Users access water via electronic tokens, with funds managed locally to ensure long-term maintenance and social safety.",
+        "category": [
+            "Water & Sanitation",
+            "Renewable Energy",
+            "IoT",
+            "Social Innovation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "Yaqbarsadi",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses solar energy to power water pumps and electronic vending machines that dispense water when an electronic token is scanned. The tokens are pre-paid and managed by a local community committee.",
+            "materials_used": [
+                "Solar panels",
+                "Electronic tokens",
+                "IoT-enabled water dispensers",
+                "Water storage tanks",
+                "Piping infrastructure"
+            ],
+            "step_by_step": [
+                "Community members purchase or refill electronic tokens through a designated local treasurer.",
+                "The user brings the token to the solar-powered 'Smart Tap' station.",
+                "The user taps the electronic token on the machine's sensor.",
+                "The machine dispenses the designated amount of clean water.",
+                "The local Water Committee collects the digital payments to fund future repairs and system maintenance."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces long-distance travel for water, eliminates reliance on unsafe water sources, and mitigates gender-based violence risks for women.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Electrical",
+                "Environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation uses established solar and IoT technology for water distribution. Risks are minimal, primarily limited to standard electrical maintenance of solar components and the eventual environmental management of batteries. The social benefits significantly outweigh the technical risks."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
