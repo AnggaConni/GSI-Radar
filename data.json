@@ -22426,5 +22426,201 @@
         "priority_score": 42,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "965bc84e84b27d682d7871c24240ae92",
+        "timestamp": "2026-08-31T03:06:50.250041",
+        "title": "PROOF Project DIY PET Bottle Waterproofing",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnefTR7etBJblaK3MH66pet9nRFbOh7rslZzQhNHZWe4m_T8Usvj20bBwS5y97A8jiRiTm-agetNk57MXVlN2xk6y3oKDXjU8QbgONoj4yAt8SRMW3Qauq9-c=",
+            "https://petroof.wordpress.com/about-the-project/"
+        ],
+        "summary": "A low-cost, DIY roofing and waterproofing technique for rural villages that uses discarded PET bottles to create a tile-like barrier that also facilitates rainwater harvesting.",
+        "category": [
+            "Sustainable Construction",
+            "Recycling",
+            "Water Management",
+            "Waste Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Developing countries",
+            "region": "Rural villages",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Plastic PET bottles are cut in half and joined using a weaving method to create a continuous, impermeable layer that mimics traditional roof tiles.",
+            "materials_used": [
+                "Discarded PET bottles",
+                "Knife",
+                "Integrated downpipes"
+            ],
+            "step_by_step": [
+                "Collect discarded plastic PET bottles.",
+                "Cut the bottles in half using a knife.",
+                "Join the bottle halves using a specific weaving method to form a continuous layer.",
+                "Install the layer over the roof structure to act as a waterproof barrier.",
+                "Connect integrated downpipes to the system to facilitate rainwater harvesting."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the lack of affordable waterproofing for shelters and mitigates water scarcity through harvesting in underserved communities.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The project is a passive structural innovation using recycled materials. The main safety concerns are physical injuries (cuts) from handling sharp plastic and knives during construction, and a heightened fire risk, as PET plastic is flammable and can release toxic fumes and molten droplets if exposed to open flames, which are common in rural cooking environments."
+        },
+        "priority_score": 60,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "d8ce54113afd0c4dd4f9dfdd2b7d89a1",
+        "timestamp": "2026-08-31T03:07:08.047386",
+        "title": "Eco Blocks and Tiles",
+        "sources": [
+            "https://www.ideassonline.org/public/pdf/EcoTiles-Kenya-ENG.pdf",
+            "https://www.mondigroup.com/en/news-and-insight/2019/mondi-awards-50-000-to-a-start-up-which-turns-plastic-waste-into-roof-tiles/",
+            "https://aquaforall.org/project/roof-tiles-from-recycled-plastics-and-glass-kenya/"
+        ],
+        "summary": "An initiative in Gilgil, Kenya, that converts post-consumer plastic and glass waste into durable, water-resistant roofing tiles to provide an affordable alternative to traditional construction materials.",
+        "category": [
+            "Waste Management",
+            "Construction",
+            "Sustainable Materials"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Gilgil",
+            "lat": -0.5414303,
+            "lon": 36.2361646
+        },
+        "process": {
+            "how_it_works": "The process transforms plastic and glass waste into a composite material by melting polymers and mixing them with glass-derived sand to create molded roofing tiles.",
+            "materials_used": [
+                "Plastic buckets",
+                "Plastic bottles",
+                "Jerry cans",
+                "Crushed glass waste"
+            ],
+            "step_by_step": [
+                "Collect post-consumer plastic and glass waste.",
+                "Crush glass waste into sand.",
+                "Melt fragments of plastic buckets, bottles, and jerry cans into a molten polymer.",
+                "Mix the molten polymer with the glass sand.",
+                "Mold the resulting composite into roofing tiles."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable, durable, and mold-resistant waterproofing materials in high-humidity environments.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "fire hazard",
+                "toxic fumes",
+                "respiratory hazard",
+                "environmental hazard"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The process of melting post-consumer plastics (like jerry cans and buckets) without industrial-grade temperature control and filtration systems poses significant risks. Heating polymers can release toxic VOCs, carbon monoxide, and potentially dioxins if PVC is accidentally included. Furthermore, the melting process is a fire hazard, and the crushing of glass creates hazardous dust that can cause respiratory issues and physical injury without proper safety gear."
+        },
+        "priority_score": 62,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "92943e5d563f9a57673a01afeb97d705",
+        "timestamp": "2026-08-31T03:07:26.094707",
+        "title": "AMABO Plastic-Sand Composite Roofing Tiles",
+        "sources": [
+            "https://www.fairplanet.org/story/cameroonians-transform-plastic-waste-into-sustainable-roofing-tiles/",
+            "https://amabo.org/roof-tiles-made-from-recycled-plastic-cool-chic-and-eco-friendly/",
+            "https://amabo.org/"
+        ],
+        "summary": "AMABO is a community-led initiative in Cameroon that transforms polyethylene-based waste into high-performance roofing tiles by mixing shredded plastic with sand, offering a durable and heat-resistant alternative to corrugated iron.",
+        "category": [
+            "Waste Management",
+            "Construction",
+            "Recycling",
+            "Sustainable Housing"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Cameroon",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Shredded plastic waste is combined with sand and melted to create a composite material that is then molded into tiles.",
+            "materials_used": [
+                "Polyethylene-based plastic waste",
+                "Locally sourced sand"
+            ],
+            "step_by_step": [
+                "Collection of plastic bags, canisters, and packaging waste",
+                "Shredding of the collected plastic waste",
+                "Mixing shredded plastic with sand",
+                "Melting the mixture into a composite",
+                "Molding the composite into high-performance roofing tiles"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses plastic pollution while providing superior waterproofing and heat protection for low-income housing compared to corrugated iron sheets.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic fumes",
+                "Occupational safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The process of melting polyethylene waste at a grassroots level poses significant risks. Heating plastics can release toxic fumes and volatile organic compounds (VOCs), especially if the waste is contaminated or mixed with other plastic types like PVC. Additionally, the melting process presents a high fire hazard, and without industrial-grade ventilation and standardized safety protocols, workers are at risk of respiratory issues and burns."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
