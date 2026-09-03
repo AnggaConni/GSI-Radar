@@ -22622,5 +22622,204 @@
         "priority_score": 62,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "941f0b58c3e94e13e8e9dfc1ea07306b",
+        "timestamp": "2026-09-03T02:38:49.709837",
+        "title": "Bhungroo",
+        "sources": [
+            "https://www.wipo.int/wipo_magazine/en/2023/02/article_0009.html",
+            "https://unfccc.int/climate-action/momentum-for-change/women-for-results/bhungroo",
+            "https://www.naireetaservices.com/",
+            "https://womengenderclimate.org/bhungroo-small-women-farmers-owning-and-developing-an-innovative-rainwater-saving-technology/"
+        ],
+        "summary": "An innovative sub-surface water storage technology that filters and injects excess rainwater into deep aquifers to combat monsoon flooding and dry-season drought, managed through a community-led model by women leaders.",
+        "category": [
+            "Water Management",
+            "Agriculture",
+            "Climate Adaptation",
+            "Social Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Gujarat",
+            "lat": 22.3850051,
+            "lon": 71.745261
+        },
+        "process": {
+            "how_it_works": "The system uses a massive underground pipe to filter and inject excess monsoon rainwater into deep aquifers, creating a localized water reserve that prevents surface flooding and provides irrigation water during dry periods.",
+            "materials_used": [
+                "Underground pipe (Bhungroo)",
+                "Filtration system",
+                "Well",
+                "Pumping equipment"
+            ],
+            "step_by_step": [
+                "Identify areas prone to flooding and drought with suitable sub-surface aquifers",
+                "Install a massive underground pipe and filtration unit",
+                "Capture and filter excess rainwater during the monsoon season",
+                "Inject the filtered water into deep underground aquifers for storage",
+                "Access the stored water via a well for up to seven months of irrigation during the dry season"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Monsoon flooding, dry-season drought, soil salinity, and food insecurity for marginalized rural families.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "environment"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Bhungroo is a sustainable, nature-based water management solution. The primary risk is environmental, involving the potential for groundwater contamination if surface runoff containing agricultural chemicals or pathogens is not effectively filtered before injection into the aquifer. However, the system is designed with filtration mechanisms and the overall physical hazard to the community is very low."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "3578a315865760c6d2ab94c77e84f6aa",
+        "timestamp": "2026-09-03T02:39:06.857272",
+        "title": "EMAS (Escuela Móvil de Agua y Saneamiento) Manual Drilling Method",
+        "sources": [
+            "https://globalinnovationweek.org/innovations/emas-water-supply-schemes",
+            "https://www.emas-international.de/",
+            "https://www.smartcentregroup.com/new-video-on-emas-drilling/",
+            "https://akvopedia.org/wiki/EMAS_drilling",
+            "https://drillyourownwell.com/emas-well-drilling/"
+        ],
+        "summary": "A low-cost, hybrid manual drilling technique developed in Bolivia that combines jetting, percussion, and rotary methods to reach depths of up to 100 meters, enabling communities to construct their own wells and pumps without heavy machinery.",
+        "category": [
+            "Water & Sanitation",
+            "Appropriate Technology",
+            "Rural Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Bolivia",
+            "region": "Latin America",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses a hybrid manual approach combining jetting (using water to flush out debris), percussion (striking the ground), and rotary drilling (turning the bit) to penetrate various soil types.",
+            "materials_used": [
+                "PVC pipes",
+                "Iron drilling bits",
+                "Hand-operated pumps",
+                "Check valves",
+                "Portable drilling rigs"
+            ],
+            "step_by_step": [
+                "Training local entrepreneurs and families in the EMAS methodology",
+                "Assembling the portable manual drilling rig using locally sourced components",
+                "Performing the drilling process using a combination of jetting and percussion to reach the aquifer",
+                "Installing the PVC well casing and the DIY EMAS pump system",
+                "Testing the pump's ability to lift water to the required elevation or distance"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and logistical difficulty of bringing heavy drilling machinery to remote or low-income areas to access clean groundwater.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Physical safety",
+                "Environmental contamination"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The EMAS method is relatively safe compared to industrial drilling, but manual labor at depths of 100 meters presents risks of physical injury, equipment failure, and potential borehole collapse. Additionally, improper sealing of the well could lead to groundwater contamination. While it does not involve toxic chemicals or explosives, the grassroots nature requires rigorous training to ensure structural integrity and water hygiene."
+        },
+        "priority_score": 66,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "8d2c6393947e1701e2e1ebb6aa74ede3",
+        "timestamp": "2026-09-03T02:39:21.890740",
+        "title": "The Village Drill",
+        "sources": [
+            "https://wholives.org/the-village-drill/",
+            "https://byu.edu",
+            "https://www.youtube.com/watch?v=8Z6X7e8-e-Q",
+            "https://wholives.org"
+        ],
+        "summary": "A human-powered, portable borehole drilling rig designed to reach deep, clean aquifers in remote areas where traditional truck-mounted rigs cannot travel. It reduces the cost and logistical barriers of professional-grade drilling while creating local employment.",
+        "category": [
+            "Water & Sanitation",
+            "Mechanical Engineering",
+            "Social Innovation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Global",
+            "region": "Sub-Saharan Africa, Asia, and Latin America",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A four-person team manually rotates a large wheel that provides the mechanical advantage needed to drive a drill bit through soil and rock layers to reach underground aquifers.",
+            "materials_used": [
+                "Steel frame",
+                "Drill bits",
+                "Rotating wheel mechanism",
+                "Sectional drill pipes"
+            ],
+            "step_by_step": [
+                "Disassemble and transport the rig to a remote location by hand, small vehicle, or boat.",
+                "Reassemble the rig over the designated drilling site.",
+                "A four-person team rotates the drive wheel to penetrate the ground.",
+                "Add additional pipe sections as the drill reaches deeper levels.",
+                "Once the aquifer is reached, the drill is removed and a permanent pump is installed."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides access to clean water in isolated regions where heavy machinery cannot reach and where the cost of traditional drilling is prohibitive.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Physical/Mechanical Safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The Village Drill is a human-powered mechanical device. While it avoids chemical, fire, or explosive hazards, it involves heavy rotating parts, high torque, and manual labor, which present risks of physical injury, pinch points, or structural instability if not operated with proper training and safety gear (helmets, gloves, boots)."
+        },
+        "priority_score": 66,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
