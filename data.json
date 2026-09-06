@@ -22821,5 +22821,200 @@
         "priority_score": 66,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "c3bf15a439a4bbc87e86a43fe305a979",
+        "timestamp": "2026-09-06T02:33:09.883791",
+        "title": "Zaï Pits (Traditional Agricultural Innovation)",
+        "sources": [
+            "https://www.theguardian.com/global-development/2013/apr/17/grassroot-innovations-global-challenges",
+            "https://www.unccd.int/news-events/yacouba-sawadogo-man-who-stopped-desert",
+            "https://www.theguardian.com/global-development/2018/sep/28/yacouba-sawadogo-the-man-who-stopped-the-desert-wins-alternative-nobel",
+            "https://sdg-innovation-commons.org/dataset/grassroots-agricultural-innovation-in-africa"
+        ],
+        "summary": "An adaptation of a traditional farming technique by Yacouba Sawadogo involving the digging of pits to capture rainwater and nutrients, which has successfully restored millions of hectares of degraded land in the Sahel.",
+        "category": [
+            "Agriculture",
+            "Environmental Conservation",
+            "Water Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Burkina Faso",
+            "region": "Sahel",
+            "lat": 14.0279165,
+            "lon": -0.7717776
+        },
+        "process": {
+            "how_it_works": "Pits are dug into hard-pan soil to capture runoff water and organic matter. Termites are attracted to the manure in the pits, further aerating the soil and allowing water to penetrate deeper into the ground.",
+            "materials_used": [
+                "Organic manure",
+                "Hand tools",
+                "Seeds",
+                "Compost"
+            ],
+            "step_by_step": [
+                "Dig pits (20-30 cm diameter and 10-15 cm deep) during the dry season.",
+                "Fill the pits with organic manure or compost to attract termites and provide nutrients.",
+                "Wait for the first rains to concentrate moisture and nutrients within the pits.",
+                "Plant crop seeds (such as sorghum or millet) directly into the pits.",
+                "Share the technique through market days and farmer-to-farmer training sessions."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Desertification, soil degradation, and food insecurity in arid regions.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Zaï technique is a manual, low-tech agricultural method that utilizes organic manure and traditional digging. It involves no hazardous chemicals, high-energy systems, or machinery, posing virtually no risk to safety or the environment while providing significant ecological benefits."
+        },
+        "priority_score": 64,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "9e632de3ed2ed66325beb18688da3a07",
+        "timestamp": "2026-09-06T02:33:36.038557",
+        "title": "Costa Rican Rural Electrification Cooperatives",
+        "sources": [
+            "https://regeneration.org/nexus/cooperatives",
+            "https://governanceactionhub.org/unlocking-the-transformative-potential-of-energy-communities/",
+            "https://www.coopelesca.com",
+            "https://www.coopeguanacaste.com"
+        ],
+        "summary": "A network of community-owned and operated cooperatives in Costa Rica that provide 100% renewable energy to remote rural areas through a democratic governance model, reinvesting surpluses into local social programs.",
+        "category": [
+            "Renewable Energy",
+            "Community Governance",
+            "Social Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Costa Rica",
+            "region": "Rural areas including San Carlos and Guanacaste",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Community members form and own a cooperative that manages the generation and distribution of electricity. They utilize a diverse portfolio of renewable sources and operate under a democratic model where revenue is reinvested locally.",
+            "materials_used": [
+                "Wind turbines",
+                "Solar panels",
+                "Hydroelectric turbines",
+                "Electrical distribution infrastructure"
+            ],
+            "step_by_step": [
+                "Organization of community members into a democratic cooperative structure",
+                "Identification of local energy needs in underserved remote areas",
+                "Investment in decentralized renewable energy production facilities",
+                "Establishment of a distribution grid for member households and businesses",
+                "Implementation of a democratic voting system for governance and revenue allocation",
+                "Reinvestment of surplus funds into local social infrastructure and community programs"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Energy poverty and lack of infrastructure in remote areas ignored by state and private utility companies.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Electrical hazard",
+                "Environmental impact"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation describes mature, regulated utility cooperatives managing established renewable energy technologies. While high-voltage electrical systems and hydroelectric projects carry inherent risks such as electrical hazards and localized environmental impacts, these are managed through professional engineering standards and democratic governance. The risk profile is low as these are not experimental or unregulated chemical processes."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "77c7433d2be27016122592f965d6eae8",
+        "timestamp": "2026-09-06T02:33:53.092049",
+        "title": "African Bamboo",
+        "sources": [
+            "https://ironline.american.edu/blog/five-innovative-ngos-in-agriculture/",
+            "https://www.african-bamboo.com/",
+            "https://sdg-innovation-commons.org/dataset/grassroots-agricultural-innovation-in-africa"
+        ],
+        "summary": "An Ethiopian initiative that organizes smallholder farmers into formal cooperatives to sustainably harvest and process bamboo into high-value industrial products like floorboards for the export market.",
+        "category": [
+            "Sustainable Forestry",
+            "Social Enterprise",
+            "Manufacturing",
+            "Economic Development"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Ethiopia",
+            "region": "Horn of Africa",
+            "lat": 9.0340688,
+            "lon": 38.766295
+        },
+        "process": {
+            "how_it_works": "The initiative integrates small-scale farmers into global value chains by providing technical training and industrial processing infrastructure to convert raw bamboo into export-grade materials.",
+            "materials_used": [
+                "Bamboo"
+            ],
+            "step_by_step": [
+                "Organize over 2,000 smallholder farmers into formal cooperatives to increase bargaining power.",
+                "Provide training in sustainable bamboo harvesting methods to ensure long-term resource availability.",
+                "Introduce modern processing techniques for the treatment and manufacturing of bamboo.",
+                "Transform raw bamboo into industrial products such as floorboards.",
+                "Establish logistics and trade links to export finished products to international markets."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses the underutilization of bamboo resources, low farmer income, and lack of technical infrastructure in the Ethiopian forestry sector.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks involve industrial woodworking hazards, such as the flammability of bamboo dust and the potential use of adhesives/resins in floorboard production. Standard industrial safety protocols and personal protective equipment (PPE) are sufficient to manage these risks."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
