@@ -23016,5 +23016,216 @@
         "priority_score": 46,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "a8e3c648844831be95a2fcabc3bf0cd0",
+        "timestamp": "2026-09-08T02:43:36.766638",
+        "title": "Arborloo",
+        "sources": [
+            "https://www.re-alliance.org/nakivale-arborloo-toilets",
+            "https://www.unep.org/resources/report/arborloo-simple-low-cost-composting-toilet",
+            "https://www.susana.org/en/knowledge-hub/resources-and-publications/library/details/102",
+            "https://majisafigroup.org/the-arborloo-toilet/",
+            "https://sswm.info/sswm-solutions-case-studies/fields-of-action/sanitation/sanitation-technologies/arborloo",
+            "https://akvo.org/akvopedia/wiki/Arborloo",
+            "https://en.wikipedia.org/wiki/Arborloo"
+        ],
+        "summary": "A simple, low-cost composting toilet that utilizes a 'fill and plant' cycle to transform human waste into nutrient-rich soil for reforestation and food security.",
+        "category": [
+            "Sanitation",
+            "Agriculture",
+            "Waste Management",
+            "Sustainable Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Multiple",
+            "region": "Africa and the Caribbean",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A shallow pit is used for waste collection, where soil and ash are added to facilitate decomposition. When the pit is full, the structure is moved, and a tree is planted in the resulting compost.",
+            "materials_used": [
+                "Portable slab",
+                "Lightweight privacy structure",
+                "Soil",
+                "Wood ash",
+                "Fruit tree saplings (e.g., mango, guava, banana)"
+            ],
+            "step_by_step": [
+                "Dig a shallow pit between 1 to 1.5 meters deep.",
+                "Place a portable slab and a lightweight privacy structure over the pit.",
+                "Add a cup of soil or wood ash after every use to control odors and aid decomposition.",
+                "Move the slab and superstructure to a new location once the pit is nearly full.",
+                "Cover the filled pit with a layer of soil.",
+                "Plant a fruit tree directly into the nutrient-rich compost in the old pit."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides hygienic sanitation without water or plumbing while addressing soil infertility and food insecurity.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The Arborloo is a low-risk, established sanitation method. The primary risks are biological (pathogens in human waste) and environmental (potential groundwater contamination if the pit is located too close to water sources or in areas with a high water table). However, when properly sited and managed, it is a safe and effective grassroots innovation for soil enrichment and hygiene."
+        },
+        "priority_score": 72,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "879d88a73e4df5df965ee84ef35ad7e3",
+        "timestamp": "2026-09-08T02:44:02.955354",
+        "title": "GiveLove Container-Based Sanitation (CBS)",
+        "sources": [
+            "https://givelove.org/projects/uganda/",
+            "https://www.givelove.org",
+            "https://santacruzlocal.org/2024/03/29/compost-toilet-program-to-launch-in-san-lorenzo-valley/",
+            "https://givelove.org/projects/kenya/",
+            "https://givelove.org/"
+        ],
+        "summary": "A portable, dry sanitation system using 'Loveable Loo' style toilets and community-managed composting to provide safe waste management in refugee camps and water-scarce regions where traditional infrastructure is unfeasible.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Public Health",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda, Kenya",
+            "region": "East Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses portable dry toilets to collect human waste in containers, which are then treated through a thermophilic composting process to neutralize pathogens and create safe fertilizer.",
+            "materials_used": [
+                "Portable toilet units",
+                "Biodegradable bags",
+                "Buckets",
+                "Cover material (carbon-rich organic matter)",
+                "Compost bins/piles"
+            ],
+            "step_by_step": [
+                "Waste is collected in portable units using biodegradable bags or buckets.",
+                "Community technicians collect the waste containers from households or communal points.",
+                "Waste is transported to a centralized or community-managed composting site.",
+                "The waste is placed in compost piles and monitored for specific heat cycles to ensure pathogen neutralization.",
+                "The resulting safe compost is used as soil amendment."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides sanitation in areas with high water tables, water scarcity, or land tenure issues where traditional pit latrines or sewers are impossible to build.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "biological",
+                "environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological, as handling human excreta involves exposure to pathogens like bacteria, viruses, and parasites. While the thermophilic composting process is designed to neutralize these risks through heat, it requires strict adherence to temperature monitoring and the consistent use of personal protective equipment (PPE). Environmental risk is also present if compost leachate is not properly managed, though the system is generally safer than pit latrines in high-water-table areas."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "d994fcead23ac2c352b4603e6b9e9b35",
+        "timestamp": "2026-09-08T02:44:22.051781",
+        "title": "EkoLakay Sanitation System",
+        "sources": [
+            "https://haitianstudies.org/2021/05/soil-haiti-a-circular-economy-model-for-urban-sanitation-in-vulnerable-communities/",
+            "https://www.oursoil.org/the-long-and-eventful-journey-of-the-soil-household-toilet-design/",
+            "https://www.oursoil.org/"
+        ],
+        "summary": "A circular sanitation model in Haiti that utilizes urine-diverting dry toilets to collect human waste, which is then professionally composted into high-quality organic fertilizer for soil restoration.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Agriculture",
+            "Circular Economy"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Haiti",
+            "region": "Urban and peri-urban areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system employs Urine-Diverting Dry Toilets (UDDT) to separate liquid and solid waste. Solids are stored in a container and covered with carbon-rich organic matter to manage odor and pathogens, while the waste is later collected and composted.",
+            "materials_used": [
+                "Urine-Diverting Dry Toilet (UDDT)",
+                "Sugarcane bagasse",
+                "Peanut shells",
+                "Sealable containers",
+                "Wood",
+                "Ferro-cement"
+            ],
+            "step_by_step": [
+                "Install a UDDT unit in the household to separate urine from feces.",
+                "Cover solid waste with carbon material (bagasse or peanut shells) after each use.",
+                "Store solid waste in sealable containers provided by the service.",
+                "Weekly collection of containers by SOIL service teams.",
+                "Transport waste to a large-scale composting facility.",
+                "Process waste through thermophilic composting to create 'Konpòs Lakay'.",
+                "Distribute or sell the finished compost to farmers for soil enrichment."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to safe, dignified sanitation in dense urban areas and severe soil degradation affecting agricultural productivity.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Biological",
+                "Environmental",
+                "Fire"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The primary risk is biological, as the system involves the manual collection and transport of raw human waste which contains hazardous pathogens and parasites. Any breach in the collection chain or failure to reach thermophilic temperatures during composting could lead to disease outbreaks. Additionally, the bulk storage of dry carbon materials like sugarcane bagasse and peanut shells presents a fire hazard, and urine soak pits require careful siting to prevent groundwater contamination."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
