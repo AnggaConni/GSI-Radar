@@ -23227,5 +23227,210 @@
         "priority_score": 58,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "85bb2f2984b8976f2c5eecc2be01efaa",
+        "timestamp": "2026-09-10T02:45:31.963039",
+        "title": "Potters for Peace Ceramic Water Filter",
+        "sources": [
+            "https://the-shocker.wichita.edu/fall-2006/potter-for-peace/",
+            "https://techxlab.org/solutions/potters-for-peace-ceramic-water-filter-program/",
+            "https://www.pottersforpeace.org/",
+            "https://www.pottersforpeace.org/ceramic-water-filter-project",
+            "https://www.engineeringforchange.org/solutions/product/silver-filter/",
+            "https://en.wikipedia.org/wiki/Ceramic_water_filter"
+        ],
+        "summary": "A low-cost, sustainable water filtration technology that uses porous ceramic pots treated with colloidal silver to remove 99.88% of waterborne pathogens from drinking water.",
+        "category": [
+            "Water Purification",
+            "Public Health",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Guatemala",
+            "region": "Central America",
+            "lat": 14.6036564,
+            "lon": -90.5012155
+        },
+        "process": {
+            "how_it_works": "The pot acts as a physical filter where microscopic pores trap bacteria. The organic material mixed into the clay burns off during firing to create these pores, and a colloidal silver coating provides chemical disinfection to kill remaining pathogens and prevent biofilm growth.",
+            "materials_used": [
+                "Terra-cotta clay",
+                "Sawdust",
+                "Rice husks",
+                "Colloidal silver",
+                "Water"
+            ],
+            "step_by_step": [
+                "Mix local terra-cotta clay with a combustible material like sawdust or rice husks.",
+                "Form the mixture into a pot shape using a manual or mechanical press.",
+                "Fire the pot in a kiln, which causes the organic material to burn away, leaving a network of microscopic pores.",
+                "Coat the fired pot with a solution of colloidal silver to act as a disinfectant.",
+                "Install the filter pot inside a larger plastic or ceramic collection bucket equipped with a lid and a tap."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to clean drinking water and the prevalence of waterborne diseases such as E. coli and cholera.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic",
+                "Respiratory hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The manufacturing process involves high-temperature kiln firing which poses fire and burn risks. The combustion of organic fillers (sawdust/husks) releases smoke and particulates, necessitating ventilation. Colloidal silver is used as a disinfectant; while effective for water treatment, concentrated silver solutions require proper handling to prevent toxicity or environmental runoff. Overall, the risks are well-understood and manageable within standard artisanal safety frameworks."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "2bdc71eea89cd2003a44933a47458591",
+        "timestamp": "2026-09-10T02:45:49.221379",
+        "title": "CeraMaji",
+        "sources": [
+            "https://pottersforpeace.org/ceramic-water-filter-project/",
+            "https://www.kenyaceramicproject.org/",
+            "https://www.ualberta.ca/en/newtrail/feature/ceramic-pots-clean-water.html",
+            "https://www.hwts.info/products-technologies/d25e3821/ceramic-pot-filter",
+            "https://www.engineeringforchange.org/solutions/product/ceramaji/"
+        ],
+        "summary": "CeraMaji is an open-source ceramic pot filter project adapted for the Kenyan context. It utilizes locally manufactured clay pots treated with silver to provide a household-level water purification system that prevents diarrheal diseases through a sustainable, market-based distribution model.",
+        "category": [
+            "Water Purification",
+            "Public Health",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2796562,
+            "lon": 36.816147
+        },
+        "process": {
+            "how_it_works": "The filter uses a porous ceramic pot to physically strain pathogens from water via gravity. The pot is treated with silver, which acts as a disinfectant to kill bacteria and prevent biofilm growth. The filtered water collects in a protected lower receptacle.",
+            "materials_used": [
+                "Kenyan clay",
+                "Burnout materials (sawdust or rice husks)",
+                "Colloidal silver",
+                "Plastic or ceramic receptacle",
+                "Lid",
+                "Spigot"
+            ],
+            "step_by_step": [
+                "Mix local clay with combustible burnout materials.",
+                "Press the mixture into a mold to form the filter pot.",
+                "Fire the pot in a kiln; the burnout material consumes itself, leaving microscopic pores.",
+                "Apply a silver solution to the fired pot for chemical disinfection.",
+                "Suspend the ceramic pot inside a larger storage receptacle.",
+                "Install a spigot and lid to ensure the filtered water remains uncontaminated."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces high rates of diarrheal disease by providing a culturally appropriate and sustainable alternative to boiling water or using chemical tablets.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "chemical",
+                "safety gear"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "CeraMaji utilizes established ceramic water filter technology. The primary risks are localized to the manufacturing process, involving high-temperature kilns and the handling of colloidal silver for disinfection. These are manageable industrial risks. The end product significantly improves public health by providing safe drinking water, outweighing the minimal manufacturing risks."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "7ea5d46f5fae3d4b60a716509d7d8a82",
+        "timestamp": "2026-09-10T02:46:06.560099",
+        "title": "TerraClear Ceramic Water Purifier (CWP)",
+        "sources": [
+            "https://www.susana.org/en/knowledge-hub/resources-and-publications/library/details/4137",
+            "https://www.practica.org/solutions/silver-impregnated-ceramic-water-filter/",
+            "https://www.terraclearlaos.com/",
+            "https://www.terraclear.org/how-a-filter-works/"
+        ],
+        "summary": "A social enterprise in Lao PDR producing ceramic water filters from local materials to provide safe drinking water to rural households. The filters use a combination of physical filtration and chemical treatment to remove waterborne pathogens.",
+        "category": [
+            "Water Purification",
+            "Public Health",
+            "Social Entrepreneurship"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Lao PDR",
+            "region": "Pakse",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The filter operates via size exclusion through a porous ceramic medium created by burning out organic matter, supplemented by a colloidal silver coating that acts as a secondary chemical defense against pathogens.",
+            "materials_used": [
+                "Locally sourced clay",
+                "Rice husks",
+                "Colloidal silver"
+            ],
+            "step_by_step": [
+                "Mix locally sourced clay and rice husks in a precise ratio.",
+                "Grind and mold the mixture into the filter's pot shape.",
+                "Fire the pots in a kiln, which hardens the clay and burns away the rice husks to create microscopic pores.",
+                "Apply a coating of colloidal silver to the fired ceramic element for antimicrobial protection."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Elimination of bacteria, protozoa, and helminths from drinking water in rural areas lacking infrastructure.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Fire hazard",
+                "Respiratory hazard",
+                "Chemical handling"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The production process involves high-temperature kiln firing, which poses a fire risk, and the grinding of clay/husk materials, which creates respiratory hazards from silica dust. Colloidal silver application requires standard chemical safety protocols. However, the enterprise operates in a purpose-built factory and is recognized by the WHO, suggesting that industrial safety standards are likely in place."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
