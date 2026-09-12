@@ -23432,5 +23432,212 @@
         "priority_score": 62,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "be053d5abe8514c5cef6c1828e24882b",
+        "timestamp": "2026-09-12T02:47:59.489656",
+        "title": "MayaPedal Bicimáquinas",
+        "sources": [
+            "https://www.youtube.com/watch?v=OyYtIdKe8nc",
+            "https://www.youtube.com/watch?v=nobC0KOho0s",
+            "https://www.youtube.com/watch?v=oY-KWeYTU40",
+            "https://www.mayapedal.org/",
+            "https://www.facebook.com/mayapedal/"
+        ],
+        "summary": "MayaPedal is a Guatemalan NGO that converts donated bicycles into pedal-powered machines called 'bicimáquinas.' These devices provide low-cost, sustainable mechanical power for essential tasks such as water pumping, grain grinding, and electricity generation for rural Mayan communities.",
+        "category": [
+            "Renewable Energy",
+            "Appropriate Technology",
+            "Agriculture",
+            "Waste Upcycling"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Guatemala",
+            "region": "San Andrés Itzapa",
+            "lat": 14.6210333,
+            "lon": -90.8443253
+        },
+        "process": {
+            "how_it_works": "The machines convert human kinetic energy from pedaling into mechanical or electrical energy. By using a stationary bicycle frame connected to various attachments via chains or belts, the user can drive pumps, grinders, or alternators.",
+            "materials_used": [
+                "Donated bicycle frames",
+                "Steel tubing",
+                "Water pumps",
+                "Grinding stones",
+                "Alternators",
+                "Drive belts",
+                "Chains"
+            ],
+            "step_by_step": [
+                "Collect and strip donated bicycles for parts.",
+                "Weld a custom stationary frame to support the specific function of the machine.",
+                "Install the mechanical component (e.g., a mill or a pump) onto the frame.",
+                "Connect the bicycle's drive train to the component using a belt or chain system.",
+                "Calibrate the gear ratios to ensure the pedaling speed matches the required output for the task.",
+                "Test the machine for stability and efficiency before deployment to the community."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces the physical labor of manual farming tasks and provides an affordable alternative to expensive fossil fuels and unreliable grid electricity.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "mechanical",
+                "electrical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "MayaPedal's bicimáquinas are human-powered mechanical devices. The risks are minimal, primarily involving moving mechanical parts (entanglement) and low-voltage electricity for charging devices. There are no significant chemical, fire, or explosion hazards associated with these sustainable, pedal-powered innovations."
+        },
+        "priority_score": 42,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "a1abef708d489db45c0633ec52e68174",
+        "timestamp": "2026-09-12T02:48:20.540092",
+        "title": "Human Power Plant",
+        "sources": [
+            "https://www.lowimpact.org/posts/human-power-plant-experiment",
+            "https://www.lowtechmagazine.com/2018/02/the-human-power-plant-experiment-how-many-hours-of-power-generation-a-day.html",
+            "https://solar.lowtechmagazine.com/2017/05/could-we-run-modern-society-on-human-power-alone/",
+            "https://www.humanpowerplant.eu/"
+        ],
+        "summary": "An ambitious experimental project at Utrecht University that investigates the feasibility of running a 22-story community of 750 students entirely on human-generated energy through pedal-powered equipment.",
+        "category": [
+            "Renewable Energy",
+            "Social Innovation",
+            "Sustainable Urbanism"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Netherlands",
+            "region": "Utrecht",
+            "lat": 52.0907006,
+            "lon": 5.1215634
+        },
+        "process": {
+            "how_it_works": "Residents generate electricity by using specialized pedal-powered gym equipment, converting kinetic energy into electrical power for communal and individual needs.",
+            "materials_used": [
+                "Pedal-powered generators",
+                "Energy storage systems",
+                "Gym equipment",
+                "Building infrastructure"
+            ],
+            "step_by_step": [
+                "Design a conversion plan for a 22-story residential building",
+                "Install pedal-powered energy harvesting equipment",
+                "Engage a community of 750 students to participate in energy production",
+                "Convert kinetic energy into electricity for lighting, internet, and heating",
+                "Establish social protocols for collective energy consumption and negotiation"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces reliance on fossil fuels in urban environments while addressing the social disconnect between energy consumption and production.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Electrical",
+                "Fire"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The project primarily involves low-voltage electricity generation through human exertion, which is inherently low-risk. However, scaling this to support a 750-person building introduces risks related to electrical storage (batteries), wiring safety, and potential fire hazards if the power distribution system is not professionally engineered. There is also a minor risk of physical strain or injury to participants from repetitive motion or overexertion.",
+            "innovation_assessment": "High social and technical innovation exploring decentralized, human-centric energy production."
+        },
+        "priority_score": 40,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "a5e23f624b443aab9a1e38f78da4b2c1",
+        "timestamp": "2026-09-12T02:48:39.525575",
+        "title": "Global Cycle Solutions (GCS) Bicycle-Mounted Tools",
+        "sources": [
+            "https://borgenproject.org/global-cycle-solutions/",
+            "https://www.asme.org/topics-resources/content/bicyclepowered-maize-sheller",
+            "https://www.youtube.com/watch?v=0_1pIfSx-GQ",
+            "https://d-lab.mit.edu/news/global-cycle-solutions-wins-100k-usaid-grant",
+            "https://news.mit.edu/2015/jodie-wu-global-cycle-solutions-0108"
+        ],
+        "summary": "A social enterprise founded by MIT graduates that provides bicycle-powered technology to off-grid farmers in Tanzania. The innovation includes a suite of attachments such as maize shellers and phone chargers that utilize pedal power to increase agricultural productivity and provide electricity.",
+        "category": [
+            "Agricultural Technology",
+            "Renewable Energy",
+            "Social Entrepreneurship"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Tanzania",
+            "region": "East Africa",
+            "lat": -3.3242402,
+            "lon": 37.3176448
+        },
+        "process": {
+            "how_it_works": "The system converts the kinetic energy from pedaling a stationary or mobile bicycle into mechanical power for agricultural processing or electrical power for charging devices.",
+            "materials_used": [
+                "Standard bicycle",
+                "Maize sheller attachment",
+                "Dynamo/Phone charger attachment",
+                "Drive belt",
+                "Metal frame"
+            ],
+            "step_by_step": [
+                "Mount the maize sheller or charger attachment onto the bicycle frame.",
+                "Engage the drive mechanism with the bicycle's pedals or wheel.",
+                "Pedal the bicycle to generate the necessary mechanical or electrical energy.",
+                "Feed maize into the sheller or connect mobile devices to the charger.",
+                "Distribute tools through the 'Rafiki Network' of local entrepreneurs for community use."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Inefficient manual labor for crop processing and lack of access to reliable electricity for communication in remote, off-grid villages.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Mechanical safety",
+                "Electrical safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation primarily involves mechanical pedal-powered devices and low-voltage electronics for mobile charging. The risks are minimal, limited to potential injury from moving mechanical parts in the maize sheller and standard electrical safety associated with small batteries. These risks are well-understood and manageable within a community-based model."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
