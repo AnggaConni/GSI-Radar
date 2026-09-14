@@ -23639,5 +23639,198 @@
         "priority_score": 52,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "b2234212bdab71bd5242b0aec968fed1",
+        "timestamp": "2026-09-14T03:01:01.535564",
+        "title": "Hand-operated Pulse Thresher",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJTMvXc9TeqOUeJQtwYVBGyb5u65M1bmS7felVxFON7820vsU15b0Ebwv8xDRyZQqyx0knTUNu-7KtejAW5w10efUaZ-dRBwv0wwUuEVztJmDFhuJ9ohe7Kcdqm4u9GrxTX44YwbQ3U24eaDw9jdp-jAFXVlAsZXsTSi1GjYEJb58Euhqq",
+            "https://nif.org.in/innovation/hand-operated-pulse-thresher/100"
+        ],
+        "summary": "An ergonomic, hand-cranked thresher developed by Gopalbhai Suratia for processing pulses. It utilizes a modified four-bar linkage to convert rotary motion into reciprocating beating action, replacing traditional manual stick-beating methods for smallholder farmers.",
+        "category": [
+            "Agriculture",
+            "Grassroots Innovation",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Gujarat",
+            "lat": 22.3850051,
+            "lon": 71.745261
+        },
+        "process": {
+            "how_it_works": "The machine uses a modified four-bar linkage mechanism to transform the rotary motion of a hand crank into the reciprocating motion of beaters, overcoming the technical challenge of indefinite swing angles to provide continuous threshing.",
+            "materials_used": [
+                "Iron frame (similar to a traditional cot)",
+                "Hand crank",
+                "Four-bar linkage components",
+                "Reciprocating beaters"
+            ],
+            "step_by_step": [
+                "The pulse crop is placed on the threshing platform of the iron frame.",
+                "The operator rotates the hand-crank continuously.",
+                "The linkage mechanism converts this rotation into a rhythmic, reciprocating beating motion.",
+                "The beaters strike the crop pods to separate the grains.",
+                "The grains are collected while the remaining plant residue is preserved for use as animal feed."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces the physical strain and labor time of manual threshing, minimizes grain damage, and ensures crop residue remains high-quality for livestock.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Mechanical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This is a manually operated mechanical device with no chemical, electrical, or high-energy components. The primary risks are physical pinch points or impact from the reciprocating beaters. Risk is low compared to motorized machinery, and it does not pose fire, toxic, or environmental hazards."
+        },
+        "priority_score": 42,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "6cda3e8915b7ff2906eff35f13b907c9",
+        "timestamp": "2026-09-14T03:01:19.074217",
+        "title": "Sorghum Thresher by Fedis Agricultural Research Center and Haramaya University",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExtj60jDLi9HPPWSTP6LVWzKRPsI5dnFNbXikmPSovIBdt2zBdZeO52YcqJrWVf-uv-b5_HoZTBW0P8bxTA1EqICYz89E5OxdqerIZLfcPD7hiJhkxEE_n9DwY2nAOjkieKGXTi_f0Z3rvZVrLugFTWQmLwDdH",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHviFXvwm7DYhUGy3By8bM50HlzEzS-KPoHx4JYbeUmKBZX-GV-pTlpnOpYdZXqsc2dHND_h1OxLL3Uh-hQh2dXLsmH71aZWv6dHnWqRKMqg0rVstjcC42l1zOi17kjhzRtugzOAks_7MKB5HZYXvU0dg8r5H7lb7AolSQkG-yRrZFX52vs"
+        ],
+        "summary": "A locally developed, hand-cranked sorghum thresher designed to replace labor-intensive traditional methods in Ethiopia, offering high efficiency and capacity using local materials.",
+        "category": [
+            "Agriculture",
+            "Post-harvest Technology",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Ethiopia",
+            "region": "East Hararghe Zone",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A hand-cranked mechanism rotates a threshing drum with specific concave clearances to separate sorghum grains from stalks.",
+            "materials_used": [
+                "Locally available materials",
+                "Feeding chute",
+                "Threshing drum",
+                "Hand-cranked handle"
+            ],
+            "step_by_step": [
+                "Feed sorghum into the chute",
+                "Rotate the hand-cranked handle to spin the threshing drum",
+                "Grain is separated through the concave clearances",
+                "Collect the threshed grain"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Labor-intensive traditional threshing and high post-harvest losses.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Mechanical injury",
+                "Dust inhalation"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The thresher is a manual mechanical device constructed from local materials. The primary risks are physical injuries such as cuts or entrapment from the rotating threshing drum and hand-cranked mechanism, as well as respiratory issues from grain dust. Because it lacks a high-speed motor or fuel source, the risk of severe accidents or fire is low, though basic safety guards and dust masks are recommended."
+        },
+        "priority_score": 56,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "ced5f39e4187a3c12d19c0be006e97cd",
+        "timestamp": "2026-09-14T03:01:37.833741",
+        "title": "Bicimáquina Corn Thresher (Desgranadora de Maíz)",
+        "sources": [
+            "http://www.mayapedal.org/",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuokhlc7ylcKY8VAMEjV-7kCIOAmVKNS9qb44UMfkhfAxiEm7RUegwCQLjaW_pC7UUJZeIkwXgllInzld2Y7EOdKEkUhHcV5Nsb3KMOo178jKM7-5IvxvPU2kY",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCHa2ImQzYvw8ofn8QxxTRBmirMVL2-BYVU5DvWvef0ltwvnC5fAESDlBPfmWILJ9b8mrxyG-whTtZTIGDobUYfzt70f19wE_fPFy0JHsNwWBMRE48LHpe_BOLkwS5vY43",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFL4x_EHbld-s8EynJZxTQidxQ5iFREUEhtfGEE1qeGui9KmNQwBMS458UcG9_dtNt0Rn4xbWrpxS6vuTjkGn5YCg32-9ecfxBeR_l5D_onJSM7vI2h9Z8="
+        ],
+        "summary": "A pedal-powered machine constructed from repurposed bicycle parts that de-grains corn efficiently, providing a low-cost, electricity-free alternative for rural farmers.",
+        "category": [
+            "Agriculture",
+            "Appropriate Technology",
+            "Sustainable Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Guatemala",
+            "region": "San Andrés Itzapa",
+            "lat": 14.6210333,
+            "lon": -90.8443253
+        },
+        "process": {
+            "how_it_works": "The machine utilizes the mechanical advantage of a bicycle's drive train. When the operator pedals, the chain and gears transfer human energy to a high-torque threshing drum that strips kernels from corn cobs.",
+            "materials_used": [
+                "Discarded bicycle frames",
+                "Bicycle chains",
+                "Gears",
+                "Pedals",
+                "Metal housing",
+                "Threshing mechanism"
+            ],
+            "step_by_step": [
+                "Salvage frames and drive components from old bicycles.",
+                "Reconfigure the frame into a stationary base with a seated position.",
+                "Connect the pedal-driven chain to a secondary sprocket attached to the threshing drum.",
+                "Feed dried corn cobs into the intake chute.",
+                "Pedal at a steady pace to rotate the drum and separate the kernels from the cob."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the need for expensive fuel or electricity and reduces the physical labor required for manual hand-stripping of corn.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Mechanical injury"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The bicimáquina is a low-risk mechanical device powered by human energy, eliminating fire and explosion hazards associated with fuel or high-voltage electricity. The primary risks involve mechanical entrapment in moving chains, gears, or the threshing mechanism, and potential injury from flying debris. These risks are manageable through basic physical guards and operational safety awareness."
+        },
+        "priority_score": 46,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
