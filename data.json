@@ -23832,5 +23832,211 @@
         "priority_score": 46,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "c3ec427e5a4a25a03c988fff061e0b5c",
+        "timestamp": "2026-09-17T03:02:45.911736",
+        "title": "Vintage Steel Mountain Bike to Truck Bike Conversion",
+        "sources": [
+            "https://www.instructables.com",
+            "https://www.instructables.com/Make-a-Cargo-Bike/"
+        ],
+        "summary": "A DIY fabrication project that transforms a standard vintage steel mountain bike into a 'truck bike' or butcher bike by replacing the front end with a custom-welded cargo platform and a remote steering linkage system.",
+        "category": [
+            "Transportation",
+            "Upcycling",
+            "Metalworking",
+            "DIY"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Unknown",
+            "region": "Unknown",
+            "lat": 12.4989994,
+            "lon": 124.6746741
+        },
+        "process": {
+            "how_it_works": "The front section of a bicycle frame is removed and replaced with an extended steel platform. A steering linkage is installed to connect the original handlebar position to a smaller front wheel located beneath the cargo area, lowering the center of gravity for heavy loads.",
+            "materials_used": [
+                "Vintage steel mountain bike frame",
+                "Steel tubing",
+                "Welder",
+                "Small front wheel",
+                "Steering linkage rods",
+                "Metal fabrication tools"
+            ],
+            "step_by_step": [
+                "Select a vintage steel mountain bike frame for its durability and weldability.",
+                "Cut the front end of the frame behind the head tube.",
+                "Fabricate a custom cargo platform and extended frame section using steel tubing.",
+                "Weld the new front-loading structure to the existing rear triangle of the bike.",
+                "Install a smaller front wheel and fork assembly under the cargo platform.",
+                "Design and weld a steering linkage to connect the handlebars to the front fork."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Repurposes discarded or vintage bicycle frames into high-utility delivery vehicles for heavy cargo transport.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Fire Hazard",
+                "Toxic",
+                "Safety Gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "This project involves structural modification of a vehicle frame through welding. Key risks include fire hazards from welding sparks, toxic fumes from heating paint or galvanized steel, and the potential for catastrophic mechanical failure if the welds or custom steering linkage are not engineered to professional standards for heavy cargo loads."
+        },
+        "priority_score": 36,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "99c29ffd1ff52847b62438b43cf5e06a",
+        "timestamp": "2026-09-17T03:03:02.698143",
+        "title": "Stayer Cycles Cargo Fest (Cargo Bike Conversion)",
+        "sources": [
+            "https://www.stayercycles.com/cargo-fest/",
+            "https://www.youtube.com/watch?v=l2ezU78PRzo",
+            "https://www.instagram.com/stayercycles/",
+            "https://www.stayercycles.com/"
+        ],
+        "summary": "A professional workshop-led initiative in the UK that repurposes vintage 1990s steel mountain bike frames into functional cargo bikes by welding custom-built front-end extensions onto the donor frames.",
+        "category": [
+            "Sustainable Transport",
+            "Upcycling",
+            "Cycling",
+            "Manufacturing"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "United Kingdom",
+            "region": "London",
+            "lat": 51.5074456,
+            "lon": -0.1277653
+        },
+        "process": {
+            "how_it_works": "The workshop utilizes professional welding jigs to attach a custom-engineered cargo front-end to a customer-provided 90s steel mountain bike frame, transforming it into a stable 'cycle truck' configuration.",
+            "materials_used": [
+                "90s steel mountain bike frame",
+                "Custom steel tubing",
+                "Welding consumables",
+                "Steering linkage components",
+                "Cargo racks"
+            ],
+            "step_by_step": [
+                "Selection of a high-quality 1990s steel mountain bike frame as the donor.",
+                "Removal of the original fork and preparation of the head tube area for modification.",
+                "Alignment of the donor frame with a custom-fabricated cargo front-end using a professional jig.",
+                "TIG welding the new front-end assembly to the existing frame structure.",
+                "Installation of a steering linkage system to connect the handlebars to the new front wheel position.",
+                "Safety testing and final assembly of components for cargo hauling."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces waste by giving a second life to high-quality vintage frames and provides a more affordable alternative to purchasing brand-new cargo bikes for urban transport.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic fumes",
+                "Structural failure"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The initiative involves professional welding and structural modification of legacy steel frames. While welding poses inherent fire and toxic fume risks, these are managed within a professional workshop setting. The primary safety concern is the integrity of the new geometry under heavy cargo loads, which is mitigated by the use of professional jigs and expert oversight rather than unguided DIY modification."
+        },
+        "priority_score": 44,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "ac91056b041deae6cdb6e4182904c662",
+        "timestamp": "2026-09-17T03:03:25.595496",
+        "title": "Phil Vandelay's Aluminum Cycle Truck Conversion",
+        "sources": [
+            "https://www.youtube.com/watch?v=2nZY3Gfw_gQ",
+            "https://www.youtube.com/watch?v=J3m6W7N_G-8"
+        ],
+        "summary": "A technical conversion of a standard aluminum mountain bike frame into a compact cargo bike, featuring a custom front-end for a 20-inch wheel, a removable cargo rack, and integrated disc brake mounts.",
+        "category": [
+            "Bicycle Engineering",
+            "Metalworking",
+            "Sustainable Transport",
+            "DIY"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Germany",
+            "region": "",
+            "lat": 51.1638175,
+            "lon": 10.4478313
+        },
+        "process": {
+            "how_it_works": "The project modifies the geometry of an old aluminum MTB frame to lower the center of gravity using a smaller front wheel, creating space for a cargo platform while upgrading the frame from rim brakes to disc brakes through TIG welding.",
+            "materials_used": [
+                "Aluminum mountain bike frame",
+                "Aluminum alloys",
+                "20-inch fork",
+                "Disc brake mounts",
+                "Aluminum tubing"
+            ],
+            "step_by_step": [
+                "Strip the original aluminum mountain bike frame of all components",
+                "Practice and calibrate TIG welding settings for specific aluminum alloys",
+                "Modify the front-end geometry to accommodate a 20-inch fork",
+                "Fabricate and weld a removable cargo rack system",
+                "Weld new disc brake mounts onto the frame and fork",
+                "Reassemble the bike with modern components and safety standards"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Extends the utility of old aluminum frames by adding cargo capacity and upgrading outdated rim-brake systems to modern disc-brake safety standards.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "Mechanical Failure",
+                "Structural Integrity"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "Modifying aluminum bicycle frames through TIG welding involves significant structural risks. Aluminum alloys used in bikes often require specific heat treatments to regain strength after welding; without this, the heat-affected zones near the new welds (especially on disc brake mounts and the front-end) may be prone to fatigue or sudden failure under load, posing a safety risk to the operator."
+        },
+        "priority_score": 36,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
