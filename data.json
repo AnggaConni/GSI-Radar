@@ -24038,5 +24038,222 @@
         "priority_score": 36,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "9a4530e0ae26895ed5fbf0c745c86187",
+        "timestamp": "2026-09-20T03:01:16.464953",
+        "title": "Honey Bee Network",
+        "sources": [
+            "https://www.culturalsurvival.org/publications/cultural-survival-quarterly/honey-bee-network-voices-grassroots-innovators",
+            "https://nif.org.in/",
+            "https://www.gia-agroecology.org/who-is-the-honey-bee-network-and-what-is-special-about-them/",
+            "https://gian.org/honeybee-network/",
+            "https://desiap.org/frugal-engineering-honey-bee-network/",
+            "https://honeybee.org/scouting-documentation/",
+            "https://gian.org/",
+            "http://www.honeybee.org/"
+        ],
+        "summary": "A pioneering grassroots movement in India that scouts, documents, and scales innovations created by rural farmers, artisans, and workers, ensuring intellectual property rights and knowledge sharing through a cooperative 'cross-pollination' philosophy.",
+        "category": [
+            "Agriculture",
+            "Social Innovation",
+            "Rural Development",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Rural India",
+            "lat": 12.2423771,
+            "lon": 75.8617222
+        },
+        "process": {
+            "how_it_works": "The network identifies local solutions to everyday problems created by individuals without formal training, documents them in a massive database, and facilitates their scaling while protecting the creators' rights.",
+            "materials_used": [
+                "Local agricultural tools",
+                "Traditional materials",
+                "Modified machinery",
+                "Digital database"
+            ],
+            "step_by_step": [
+                "Scouting for innovations among 'minds on the margin' in rural areas",
+                "Documenting practices and inventions in a central database",
+                "Ensuring intellectual property rights and fair benefit sharing for creators",
+                "Facilitating cross-cultural and cross-linguistic knowledge sharing",
+                "Scaling solutions for agricultural pest control, water filtration, and mechanical efficiency"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces labor-intensive manual work, addresses agricultural inefficiencies, and provides formal recognition and commercial opportunities for rural inventors.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Mechanical safety",
+                "Ergonomic risk"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a mechanical modification to traditional agricultural equipment. It does not involve hazardous chemicals, high-pressure systems, or volatile energy sources. The primary risks are limited to standard mechanical safety issues such as moving parts or weight distribution, which are manageable within traditional farming contexts."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "969f711332330662c469e86af235fbf4",
+        "timestamp": "2026-09-20T03:01:34.734223",
+        "title": "Barefoot College International (Solar Mamas)",
+        "sources": [
+            "https://www.wipo.int/wipo_magazine/en/2008/01/article_0003.html",
+            "https://barefootcollege.org/a-beginners-guide-to-barefoot-college-international/",
+            "https://ifdesign.com/en/winner-ranking/project/barefoot-solar-initiative/116363",
+            "https://mnre.gov.in/barefoot-college-tilonia/",
+            "https://barefootcollege.org/solar/",
+            "https://www.barefootcollege.org/"
+        ],
+        "summary": "A grassroots initiative that trains illiterate and semi-literate rural women to become solar engineers, enabling them to fabricate, install, and maintain solar energy systems in off-grid communities worldwide.",
+        "category": [
+            "Renewable Energy",
+            "Education",
+            "Women Empowerment",
+            "Rural Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Global (Africa, Asia, Latin America)",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The program uses non-verbal, hands-on training methods and color-coded manuals to teach complex engineering concepts to women without formal education.",
+            "materials_used": [
+                "Solar panels",
+                "Batteries",
+                "LED lights",
+                "Color-coded manuals",
+                "Circuit boards",
+                "Soldering equipment"
+            ],
+            "step_by_step": [
+                "Villages collectively decide to participate and establish a maintenance fund.",
+                "The community selects two women (Solar Mamas) to undergo training.",
+                "Trainees attend a six-month residential program using visual and tactile learning.",
+                "Trainees return to their villages to install solar lighting systems.",
+                "The community manages a fund to pay for repairs and the engineers' services."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of electricity in remote rural areas and socio-economic exclusion of non-literate women.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The initiative involves fabricating and maintaining solar energy systems, which includes handling electrical components and batteries. While low-voltage DC systems are generally safer than AC, there are inherent risks of fire from short circuits and toxic exposure or environmental hazards from improper battery disposal (lead-acid or lithium). The grassroots nature and lack of formal education among trainees necessitate strict adherence to safety protocols and the use of protective gear, though the program's long-standing success suggests effective internal management."
+        },
+        "priority_score": 66,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "9cce1da7f87d2b3afaaff11a3eb4c90f",
+        "timestamp": "2026-09-20T03:01:51.648506",
+        "title": "The Zabbaleen Informal Recycling System",
+        "sources": [
+            "https://en.wikipedia.org/wiki/Zabbaleen",
+            "https://www.ape.org.eg/",
+            "https://loe.org/shows/segments.html?programID=96-P13-00022&segmentID=5",
+            "https://www.unep.org/news-and-stories/story/cairos-waste-collectors-are-recycling-pioneers",
+            "https://www.weforum.org/agenda/2021/06/tech-helps-egypt-informal-recyclers-build-circular-economy/",
+            "https://www.clairethomasphotography.com/the-zabbaleen-cairos-world-class-recyclers/",
+            "https://www.zabbaleen.com/",
+            "https://www.theguardian.com/cities/2014/may/19/cairo-garbage-city-zabbaleen-informal-waste-collectors"
+        ],
+        "summary": "A highly efficient, community-led informal waste management system in Cairo that recovers up to 80% of collected waste through decentralized sorting, cooperative models, and innovative upcycling techniques.",
+        "category": [
+            "Waste Management",
+            "Circular Economy",
+            "Social Innovation",
+            "Upcycling"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Egypt",
+            "region": "Cairo",
+            "lat": 30.0443879,
+            "lon": 31.2357257
+        },
+        "process": {
+            "how_it_works": "Decentralized collection and manual sorting of urban refuse into reusable raw materials, livestock feed, and upcycled products.",
+            "materials_used": [
+                "Urban refuse",
+                "Textile scraps",
+                "Organic waste",
+                "Plastics",
+                "Metals"
+            ],
+            "step_by_step": [
+                "Door-to-door collection of waste from Cairo's households",
+                "Manual sorting of waste into various material categories at community hubs",
+                "Processing of organic waste for use in urban livestock farming",
+                "Upcycling of textile scraps into hand-woven rugs",
+                "Selling recovered raw materials to industrial manufacturers for recycling"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Inefficient urban waste management and lack of economic opportunities for marginalized populations.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "environment",
+                "biological hazard"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "While highly efficient in recycling, the informal nature of the Zabbaleen's operations presents significant risks. The dense accumulation of combustible materials like textiles and plastics in residential areas creates a high fire hazard. Workers face chronic exposure to toxins and pathogens from unsorted municipal and medical waste without standardized safety gear. Additionally, the integration of livestock farming with organic waste processing in a high-density urban environment poses substantial public health and environmental contamination risks."
+        },
+        "priority_score": 78,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
