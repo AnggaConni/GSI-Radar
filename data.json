@@ -24255,5 +24255,203 @@
         "priority_score": 78,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "e85e1dc84ae04dfd3bafb10e47dc61a0",
+        "timestamp": "2026-09-23T02:58:36.371044",
+        "title": "Biosand Filter Project in Chakicherla Pedda Patapu Palem",
+        "sources": [
+            "https://ewb-sandiego.org/",
+            "https://www.ewb-sd.org/",
+            "https://www.instructables.com/Biosand-Filter/"
+        ],
+        "summary": "A low-tech water filtration initiative implemented by Engineers Without Borders - San Diego to provide safe drinking water using locally sourced materials and biological filtration processes.",
+        "category": [
+            "Water Purification",
+            "Public Health",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "India",
+            "region": "Andhra Pradesh",
+            "lat": 15.9240905,
+            "lon": 80.1863809
+        },
+        "process": {
+            "how_it_works": "Contaminated water is poured into the top of the filter. It passes through a biological layer (biolayer) that naturally consumes pathogens, followed by sand and gravel layers that provide physical filtration.",
+            "materials_used": [
+                "Sand",
+                "Gravel",
+                "PVC piping",
+                "Concrete or plastic containers",
+                "Local hardware store supplies"
+            ],
+            "step_by_step": [
+                "Procure materials from local hardware stores to ensure community replicability.",
+                "Construct the filter container (housing).",
+                "Layer gravel and sand inside the container to specific depths.",
+                "Install a piping system to allow for water output via hydraulic head.",
+                "Allow the biological layer (biolayer) to mature on the top surface of the sand through consistent use.",
+                "Pour raw water into the filter and collect the treated water from the outlet."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Access to safe drinking water and reduction of waterborne diseases in rural communities.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "biological"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The biosand filter is a passive, low-tech water treatment system using inert materials like sand and gravel. The primary risk is not a physical hazard but rather the potential for health issues if the filter is improperly maintained and fails to effectively remove pathogens from the drinking water."
+        },
+        "priority_score": 26,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "909ec127546b920cd3dd6f7f306feee7",
+        "timestamp": "2026-09-23T02:58:57.551770",
+        "title": "BlueEnergy Biosand Filters in Nicaragua",
+        "sources": [
+            "https://blueenergy.fr/",
+            "https://wiki.lowtechlab.org/wiki/Water_-_Biosand_Filter",
+            "https://www.blueenergygroup.org/"
+        ],
+        "summary": "The BlueEnergy association empowers local communities in Bluefields, Nicaragua, by training residents to construct and maintain open-source biosand filters using local materials. This community-driven initiative aims to combat high rates of waterborne illness through low-tech, locally owned solutions that are adaptable to various contexts, including use on boats.",
+        "category": [
+            "Water Purification",
+            "Open Source Technology",
+            "Public Health",
+            "Community Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nicaragua",
+            "region": "Bluefields",
+            "lat": 11.6038399,
+            "lon": -83.5613814
+        },
+        "process": {
+            "how_it_works": "Water is poured into the top of the filter and moves through layers of sand and gravel. Pathogens and suspended solids are removed through physical trapping, adsorption, and biological processes within a 'schmutzdecke' layer that forms at the top of the sand.",
+            "materials_used": [
+                "Local sand",
+                "Local gravel",
+                "Concrete or plastic container",
+                "PVC piping",
+                "Open-source molds"
+            ],
+            "step_by_step": [
+                "Train local community members in the technical aspects of filter construction and maintenance.",
+                "Source and prepare local sand and gravel by washing and sifting.",
+                "Construct the filter housing using low-tech, open-source designs.",
+                "Layer the gravel and sand inside the container according to specific size gradients.",
+                "Establish a biological layer by regular use to ensure effective pathogen removal.",
+                "Adapt the design for specific local needs, such as mobile versions for boats."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High rates of waterborne illness in coastal and rural areas with limited access to clean drinking water.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Biosand filters are a low-tech, passive water purification method using inert materials like sand and gravel. The construction process involves basic manual labor and standard materials like concrete or plastic, posing negligible risks for fire, explosion, or toxicity. The primary safety concern is ensuring the filter is correctly maintained to prevent waterborne illness, which is the goal of the project's training program."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "8ee3827391e175b0cf98859cfaaa3f7c",
+        "timestamp": "2026-09-23T02:59:15.114364",
+        "title": "Samaritan's Purse Biosand Filter Project in Pailin",
+        "sources": [
+            "https://www.samaritanspurse.org/article/bringing-fresh-water-to-the-hills-of-cambodia/",
+            "https://www.samaritanspurse.org",
+            "https://www.samaritanspurse.org.uk/biosand-water-filters-for-rural-cambodia-communities/"
+        ],
+        "summary": "A large-scale water purification initiative in Cambodia's Pailin province that employs biosand filtration technology to provide clean drinking water to over 2,500 families and multiple schools, significantly reducing waterborne illnesses and school absenteeism.",
+        "category": [
+            "Water & Sanitation",
+            "Public Health",
+            "Education"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Cambodia",
+            "region": "Pailin province",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses a gravity-fed process where contaminated water passes through layers of sand and gravel, which physically filter out impurities and support a biological layer that neutralizes pathogens.",
+            "materials_used": [
+                "Sand",
+                "Gravel",
+                "Locally sourced containers",
+                "Borehole water"
+            ],
+            "step_by_step": [
+                "Source local sand and gravel for filtration layers",
+                "Construct community-sized and household-sized filter units",
+                "Install filters in schools and residential areas",
+                "Train community members and families in filter maintenance",
+                "Pour contaminated borehole water into the filter top",
+                "Collect safe, filtered water from the outlet via gravity flow"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High rates of gastrointestinal issues and school absenteeism caused by drinking contaminated borehole water.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Biosand filters are a low-risk, proven technology for water purification. They rely on natural materials like sand and gravel and do not involve hazardous chemicals, high-pressure systems, or flammable materials. The primary risk is limited to potential water re-contamination if maintenance protocols are not followed, which is a management issue rather than a physical safety hazard."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
