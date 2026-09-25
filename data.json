@@ -24453,5 +24453,198 @@
         "priority_score": 54,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "a870a174a45999509bd0be6aa8b0169a",
+        "timestamp": "2026-09-25T03:05:54.368787",
+        "title": "Ajok Lilly's Botanical Pesticide",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2SPg8yhxAn6WACJRondqgjwDZnJE1sPZSZZsh9fNIf_wl99qiFctDeaMIIbDoWbwno3H7J2RDUdu3Q-cxGfD4jkYnhKxyVfzH5iuOU6QgXg3wTvCJQlO2O2_GX0L4Qg0="
+        ],
+        "summary": "A farmer in Kole, Uganda, developed a natural botanical pesticide using neem and tobacco to combat termite infestations. The innovation provided a cost-effective alternative to synthetic chemicals, leading to significant economic savings and community-wide training for women farmers.",
+        "category": [
+            "Agriculture",
+            "Organic Farming",
+            "Pest Management"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Uganda",
+            "region": "Kole",
+            "lat": 2.2988158,
+            "lon": 32.7359522
+        },
+        "process": {
+            "how_it_works": "The mixture utilizes the natural insecticidal and repellent properties of neem and tobacco, with soap acting as a surfactant to help the solution adhere to surfaces.",
+            "materials_used": [
+                "Neem",
+                "Tobacco",
+                "Soap",
+                "Water"
+            ],
+            "step_by_step": [
+                "Collect locally available neem and tobacco plants.",
+                "Create a blend of the plant materials.",
+                "Mix the botanical blend with water and soap.",
+                "Apply the concoction to crops and soil to repel termites and other pests."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Termite devastation of crops and the high cost of synthetic pesticides.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While botanical, the use of tobacco introduces nicotine, which is a potent neurotoxin that can be absorbed through the skin or inhaled. Without standardized concentrations and proper safety gear (gloves, masks), the preparation and application of this mixture pose significant health risks to the farmers. Additionally, nicotine is a non-selective pesticide that can harm beneficial insects like pollinators."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "5956c359534465cd261f10ced19b278c",
+        "timestamp": "2026-09-25T03:06:13.499946",
+        "title": "Non-Pesticidal Management (NPM) in Punukula Village",
+        "sources": [
+            "https://www.downtoearth.org.in/coverage/punukula-shows-the-way-10255",
+            "https://www.fao.org/family-farming/detail/en/c/328221/",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF50tWiiOFNjdXN6aStlIauc_1qVGYGlPbFccalhuxVfVI1PQ8LkRTORuJtMEWLyaIkAQizB6N_YQ6ZMxNIrNGcQyObcG3OxpXxROPj30KI3O6nt0Z6Wt1cW9-B09rS85hKkIi8ns0fDBeuUGxpytBCJ19MdzwWpNe9OZ2VcHvyvJxUQutdNQ9-sh-d5TT-GUXFCf0=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1ivlu6GYFCoyKO29kVh98px3hCB9O7uClZCkJk56Sx-NYO0q-X1A5DMuK3nb0JwAM5TJ3zHNwh8g0ylfisnEtMvM-xaG04L99QUUWEUjDKQt-C4dT7oQ2pLVOOnfopOKqMA_r7U0afZ7I8yMKWrMRTZyGtJWQcrzOhW-ZIHqm4rg=",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnd3V9SPRSfUb-9GoA5e05U7fXQsr8rQuKa63UPlpkMyYP6zx4GIlKQxPTfBns7WTaQrlneJBQ8Zrs0cPEUrLB0et2d3i9RL7HBV9zVa1ASdY8V8zt9nwBlyOG6EEVz-e7IJsnYiyRjpX6BLUR0jJs-292Ckc5_2ldAJUVjUTfsKzfqarNdP1YSvss0E_41ujvhcR2rUNqaM0ayI8SrRo="
+        ],
+        "summary": "A grassroots movement in Punukula, Andhra Pradesh, where farmers replaced toxic synthetic pesticides with natural, homemade neem-based solutions, leading the village to become India's first pesticide-free community and breaking the cycle of debt and health issues.",
+        "category": [
+            "Sustainable Agriculture",
+            "Organic Farming",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Andhra Pradesh",
+            "lat": 15.9240905,
+            "lon": 80.1863809
+        },
+        "process": {
+            "how_it_works": "The method utilizes the natural insect-repelling and insecticidal properties of neem seeds and other botanical extracts to manage pests without the use of synthetic chemicals.",
+            "materials_used": [
+                "Neem seeds",
+                "Water",
+                "Chili",
+                "Garlic",
+                "Cow urine"
+            ],
+            "step_by_step": [
+                "Collect and dry neem seeds",
+                "Grind the neem seeds into a powder",
+                "Soak the ground neem powder in water",
+                "Supplement the mixture with chili-garlic sprays or cow urine for specific pests",
+                "Apply the resulting solution to crops as a natural pesticide"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High farmer debt from chemical inputs, pesticide-related health issues, and debt-driven suicides.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "biological",
+                "irritant"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This grassroots initiative replaces hazardous synthetic pesticides with natural alternatives like neem and chili-garlic sprays. While significantly safer than industrial toxins, the process involves handling biological waste (cow urine) and concentrated irritants (chili), which pose minor risks of infection or skin/eye irritation if handled without basic precautions."
+        },
+        "priority_score": 46,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "1517fd61b9f750464170b21b7ada2392",
+        "timestamp": "2026-09-25T03:06:28.440842",
+        "title": "Jeevamrutha Organic Farming in Gurrampanuku",
+        "sources": [
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7eh3guI8XtrJsVAV10wBTE36-liZxiKLeFPKMAAU8OAM9tM-PvEQRMCRv_yua5-uqDFK8rbV04kNkqpxlE2KzM266eoYRpEy3UInGXW-5gUdw-ZvI4hctoIrIkNY3mL4-Di6Z5WQCv4dIE-Iih5BfBpctL8YGEhoj4IsTSdlRwyikTBL2r8qpfDVJ5uJNiiXnY73TIKgQxB6hRPH8nNwjK0eLqKjyV5BS3XziBT_D8jAp9rQPMZpWVVCFpBZ85JYBPrYxTq7N",
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4d4IMh7girWSAdElpZWvmG5ruSZSFDXvioMcc9L5sWgZpHDxJLTLcet9W-ans3-FOx0lNlYvKBs9opmd73Yv_ye8N9HtJg6MGY9x9i8d7jN7dF6p9qIsP1liXvkuReye51yJxbzNddHVi8LZUJfUeYKjIi-XcfuXwdNmxhTzPa8cjOqWzuRuZvQVCX49wmcvhkF7yuHlzgX70SVQ-CryE7ANZ8nHOl3UloJNUTXlyg4nPiCX2pPPVRM6ccQHxcbaIzAfF0m4="
+        ],
+        "summary": "Tribal farmers in Gurrampanuku, Andhra Pradesh, have transitioned to entirely chemical-free agriculture using 'Jeevamrutha,' a bio-fertilizer and pesticide. The village utilizes a communal collection system for cattle waste to produce the mixture, which has improved soil health and created a new revenue stream through surplus sales.",
+        "category": [
+            "Agriculture",
+            "Organic Farming",
+            "Sustainability"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Andhra Pradesh",
+            "lat": 15.9240905,
+            "lon": 80.1863809
+        },
+        "process": {
+            "how_it_works": "The mixture acts as a bio-stimulant that enriches the soil with beneficial microorganisms, promoting plant growth and natural pest resistance without synthetic chemicals.",
+            "materials_used": [
+                "cow urine",
+                "cow dung",
+                "jaggery",
+                "pulse flour",
+                "undisturbed farm soil"
+            ],
+            "step_by_step": [
+                "Renovate cattle sheds with cemented floors to funnel urine into storage tanks.",
+                "Collect cow urine and dung from the communal system.",
+                "Combine the waste with jaggery, pulse flour, and a handful of undisturbed soil.",
+                "Allow the mixture to ferment into the Jeevamrutha concoction.",
+                "Apply the resulting liquid to fields as a fertilizer and bio-pesticide."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Elimination of chemical fertilizer/pesticide dependency, soil degradation, and high input costs for tribal farmers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "biological"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation uses traditional organic materials (cow waste, sugar, flour) which pose minimal chemical or physical danger. The primary risk is biological, involving potential exposure to pathogens in raw animal waste, but this is a standard agricultural risk and is significantly lower than the risks associated with synthetic chemical pesticides and fertilizers."
+        },
+        "priority_score": 52,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
