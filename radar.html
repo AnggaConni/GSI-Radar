@@ -1125,7 +1125,7 @@ function applyFilters() {
   // ═══════════════════════════════════════════════════════
   function initMap() {
     map = L.map('map',{zoomControl:true,scrollWheelZoom:false}).setView([20,0],2);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap',subdomains:'abcd',maxZoom:18}).addTo(map);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{attribution:'&copy; Esri, ArcGIS, HERE, Garmin, FAO, NOAA, USGS, EPA, NPS',maxZoom:19}).addTo(map);
   }
   function drawMapElements() {
     if(!map) return;
