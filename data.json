@@ -24646,5 +24646,203 @@
         "priority_score": 52,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "dafb08ff30f9cdda3ae54c0af626ae3d",
+        "timestamp": "2026-09-27T03:16:11.915682",
+        "title": "MittiCool",
+        "sources": [
+            "https://mitticool.com/",
+            "https://unctad.org/news/powerless-fridge-shows-potential-frugal-innovation",
+            "https://www.forbes.com/sites/petersohan/2014/04/23/mitticool-the-clay-fridge-that-runs-without-electricity/",
+            "https://www.engineeringforchange.org/solutions/product/mitticool-refrigerator/",
+            "https://nif.org.in/innovation/mitticool-refrigerator/7"
+        ],
+        "summary": "MittiCool is a zero-electricity refrigerator made of terracotta clay that uses evaporative cooling to preserve food, specifically designed for rural and low-income communities.",
+        "category": [
+            "Sustainable Technology",
+            "Food Preservation",
+            "Frugal Innovation",
+            "Rural Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Gujarat",
+            "lat": 22.3850051,
+            "lon": 71.745261
+        },
+        "process": {
+            "how_it_works": "It operates on the principle of evaporative cooling. Water from an upper chamber seeps through the porous clay walls; as the water evaporates from the exterior surface, it removes heat from the interior, cooling the storage chambers.",
+            "materials_used": [
+                "Terracotta clay",
+                "Water"
+            ],
+            "step_by_step": [
+                "Construct the unit with an upper water tank and a lower food storage chamber using specific clay types.",
+                "Fill the upper chamber with water.",
+                "Allow water to permeate the porous clay walls.",
+                "The evaporation process on the outer walls cools the inner chamber.",
+                "Place vegetables, fruits, or milk in the lower storage section for preservation."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a way to preserve perishable food items in areas without electricity or for families who cannot afford conventional refrigerators.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The MittiCool is a passive evaporative cooling device made from natural terracotta clay. It operates without electricity, refrigerants, or moving parts, eliminating risks of fire, explosion, or chemical toxicity. It is a safe, sustainable, and low-risk innovation."
+        },
+        "priority_score": 38,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "8c9e106347ed59720d36c4f51abc3be9",
+        "timestamp": "2026-09-27T03:16:31.685245",
+        "title": "Jaipur Foot",
+        "sources": [
+            "https://www.bmvss.org/",
+            "https://www.partnershipsforchange.com/jaipur-foot",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6394196/",
+            "https://www.bbc.com/news/business-29402422",
+            "https://www.jaipurfoot.org/",
+            "https://www.sciencemuseum.org.uk/objects-and-stories/jaipur-foot-low-cost-prosthetic"
+        ],
+        "summary": "A low-cost, high-durability prosthetic limb designed for the specific cultural and economic needs of amputees in developing countries, allowing for barefoot movement, squatting, and agricultural work in wet conditions.",
+        "category": [
+            "Healthcare",
+            "Prosthetics",
+            "Social Innovation"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Jaipur",
+            "lat": 26.9154576,
+            "lon": 75.8189817
+        },
+        "process": {
+            "how_it_works": "The prosthetic uses a combination of vulcanized rubber and aluminum to provide a flexible, waterproof limb that mimics the movement of a natural foot, enabling activities like squatting and climbing.",
+            "materials_used": [
+                "Vulcanized rubber",
+                "Wood",
+                "Aluminum"
+            ],
+            "step_by_step": [
+                "Collaboration between an orthopedic surgeon and a master craftsman to design a limb suited for local terrain",
+                "Fabrication of the foot using vulcanized rubber for flexibility and waterproofing",
+                "Attachment of the foot to an aluminum shank for structural support",
+                "Custom fitting for the amputee to ensure mobility without the need for shoes"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable, durable, and culturally appropriate prosthetics for manual laborers and rural residents in developing nations.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education",
+                "traditional",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "industrial_safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Jaipur Foot is a mature, globally recognized medical innovation. The manufacturing process involves standard industrial techniques such as rubber vulcanization and aluminum shaping, which carry minor industrial safety risks (heat, fumes) but are well-managed. The final product is non-toxic, durable, and safe for human use in diverse environments."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false
+    },
+    {
+        "id": "72596bfd5afe599f93957806eeee3c3d",
+        "timestamp": "2026-09-27T03:16:47.368965",
+        "title": "Low-cost Sanitary Pad Manufacturing Machine",
+        "sources": [
+            "https://www.bbc.com/news/magazine-26260978",
+            "https://nif.org.in/innovation/mini-sanitary-napkin-making-machine/10",
+            "https://jayashreeindustries.com/",
+            "https://patient-innovation.com/post/1932",
+            "https://www.ted.com/talks/arunachalam_muruganantham_how_i_started_a_sanitary_napkin_revolution",
+            "https://www.youtube.com/watch?v=bdo8fAieTWs"
+        ],
+        "summary": "A grassroots innovation consisting of a set of four simple machines that produce affordable sanitary pads from wood fiber, designed to empower rural women through a decentralized business model while improving menstrual hygiene.",
+        "category": [
+            "Healthcare",
+            "Social Entrepreneurship",
+            "Manufacturing"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Tamil Nadu",
+            "lat": 11.3323723,
+            "lon": 78.6098639
+        },
+        "process": {
+            "how_it_works": "The system uses a mechanical process to convert raw wood pulp into absorbent cellulose pads without the need for expensive industrial chemicals or high-scale infrastructure.",
+            "materials_used": [
+                "Wood fiber",
+                "Cellulose",
+                "Non-woven fabric",
+                "Polypropylene"
+            ],
+            "step_by_step": [
+                "De-fibrate the wood pulp into a soft fluff using a grinding machine",
+                "Compress the fluff into the required pad shape using a pressure machine",
+                "Wrap the compressed core in non-woven fabric and seal it",
+                "Sterilize the finished pads using a UV treatment unit"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of commercial sanitary products leading to unhygienic practices and lack of rural employment for women.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "safety gear"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a mechanical process using wood fiber to create sanitary products. It involves low-tech machinery designed for rural use without high-pressure systems or hazardous chemicals. Risk is minimal, primarily involving mechanical safety and wood dust management, which are addressed through basic training and standard safety gear."
+        },
+        "priority_score": 68,
+        "hidden_gem": true,
+        "critical_flag": false
     }
 ]
