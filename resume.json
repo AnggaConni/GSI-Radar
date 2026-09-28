@@ -226,7 +226,7 @@
     },
     {
         "report_metadata": {
-            "report_id": "gsi-current",
+            "report_id": "gsi-older",
             "generated_at": "2026-06-30T02:52:16.780063",
             "period": "Q2 2026",
             "total_records_analyzed": 265
@@ -462,6 +462,228 @@
                 {
                     "source": "Self-Taught",
                     "count": 13
+                }
+            ]
+        }
+    },
+    {
+        "report_metadata": {
+            "report_id": "gsi-current",
+            "generated_at": "2026-09-28T03:13:43.026574",
+            "period": "Q3 2026",
+            "total_records_analyzed": 372
+        },
+        "global_summary": {
+            "total_innovations": 372,
+            "grassroots_percentage": 43.28,
+            "institutional_percentage": 26.08,
+            "semi_formal_percentage": 30.65
+        },
+        "top_categories": [
+            {
+                "category": "Waste Management & Upcycling",
+                "count": 34,
+                "trend": "increasing"
+            },
+            {
+                "category": "Sustainable Agriculture",
+                "count": 28,
+                "trend": "stable"
+            },
+            {
+                "category": "Healthcare & Diagnostics",
+                "count": 22,
+                "trend": "increasing"
+            },
+            {
+                "category": "Renewable Energy (Biogas/Solar)",
+                "count": 19,
+                "trend": "stable"
+            },
+            {
+                "category": "Water & Sanitation",
+                "count": 18,
+                "trend": "increasing"
+            }
+        ],
+        "geographic_insights": [
+            {
+                "region": "East Africa",
+                "key_pattern": "Dominance of circular economy models (plastic-to-bricks) and mobile-integrated microfinance.",
+                "risk_level": "medium"
+            },
+            {
+                "region": "Southeast Asia",
+                "key_pattern": "Strong institutional focus on aerospace, maritime security, and seaweed-based biotechnology.",
+                "risk_level": "low"
+            },
+            {
+                "region": "South Asia",
+                "key_pattern": "High concentration of frugal medical engineering and traditional knowledge scaling.",
+                "risk_level": "low"
+            },
+            {
+                "region": "Latin America",
+                "key_pattern": "Leadership in container-based sanitation and indigenous land-monitoring technology.",
+                "risk_level": "medium"
+            }
+        ],
+        "risk_analysis": {
+            "high_risk_cases": 14,
+            "critical_cases": 14,
+            "top_risk_types": [
+                "Fire/Explosion (Biogas & Engine Mods)",
+                "Toxic Fumes (Plastic Melting)",
+                "Biological Pathogens (Waste Handling)",
+                "Heavy Metal Exposure (E-waste)"
+            ],
+            "emerging_risks": [
+                "Microplastic shedding from upcycled roofing and paving materials.",
+                "Asphyxiation in traditional underground anaerobic grain storage.",
+                "Structural failure of high-weight DIY vertical water storage stacks."
+            ]
+        },
+        "innovation_patterns": [
+            {
+                "pattern_name": "Hybrid Indigenous-Tech",
+                "description": "Integrating AI, IoT, and Drones with ancestral knowledge for fire and maritime management.",
+                "regions": [
+                    "Australia",
+                    "Brazil",
+                    "Canada"
+                ],
+                "risk_level": "low"
+            },
+            {
+                "pattern_name": "Plastic-to-Infrastructure",
+                "description": "Repurposing PET/HDPE into bricks, tiles, and houses via sand-composite melting.",
+                "regions": [
+                    "Kenya",
+                    "Nigeria",
+                    "Colombia",
+                    "Cameroon"
+                ],
+                "risk_level": "high"
+            },
+            {
+                "pattern_name": "Container-Based Sanitation (CBS)",
+                "description": "Decentralized dry-toilet services converting human waste into agricultural-grade compost.",
+                "regions": [
+                    "Haiti",
+                    "Kenya",
+                    "Uganda"
+                ],
+                "risk_level": "medium"
+            }
+        ],
+        "hidden_gems": [
+            {
+                "title": "Paperfuge",
+                "country": "USA/Global",
+                "reason": "125,000 RPM hand-powered centrifuge for $0.20; massive diagnostic impact."
+            },
+            {
+                "title": "Zaï technique",
+                "country": "Burkina Faso",
+                "reason": "Zero-cost soil restoration method that has reversed desertification for millions of hectares."
+            },
+            {
+                "title": "Liter of Light",
+                "country": "Philippines",
+                "reason": "Zero-carbon daytime lighting using only water, bleach, and a plastic bottle."
+            },
+            {
+                "title": "Bhungroo",
+                "country": "India",
+                "reason": "Sub-surface injection of monsoon water to prevent floods and solve dry-season drought."
+            },
+            {
+                "title": "MittiCool",
+                "country": "India",
+                "reason": "Zero-electricity terracotta refrigerator using passive evaporative cooling."
+            }
+        ],
+        "intervention_opportunities": [
+            {
+                "type": "regulation",
+                "target": "Grassroots Biogas & Engine Conversions",
+                "priority_level": "high",
+                "justification": "Critical explosion and fire risks found in DIY methane storage and vehicle fuel-system modifications."
+            },
+            {
+                "type": "research",
+                "target": "Plastic-Sand Composite Durability",
+                "priority_level": "medium",
+                "justification": "Lack of data on long-term UV degradation and toxic off-gassing for upcycled roofing tiles."
+            },
+            {
+                "type": "training",
+                "target": "E-waste Upcycling Safety",
+                "priority_level": "high",
+                "justification": "Innovators are handling lead, mercury, and cadmium without adequate respiratory or dermal protection."
+            }
+        ],
+        "knowledge_insights": {
+            "most_common_source": "adapted_from_existing",
+            "trend": "shifting",
+            "observation": "Transition from purely traditional methods to 'Hybrid Innovations' where formal scientific data (satellite/AI) validates or scales traditional ecological knowledge."
+        },
+        "recommendations": [
+            "Deploy standardized safety kits (pressure valves/flame arrestors) for grassroots biogas adopters.",
+            "Establish a global certification standard for upcycled plastic construction materials to ensure fire safety.",
+            "Incentivize the integration of informal waste pickers into formal digital payment and insurance networks.",
+            "Promote the 'Cool Burning' fire management model to global climate agencies as a wildfire mitigation strategy.",
+            "Scale 'First-Flush' filtration training for DIY rainwater harvesters to reduce waterborne disease risks."
+        ],
+        "charts": {
+            "innovation_by_region": [
+                {
+                    "region": "Africa",
+                    "count": 55
+                },
+                {
+                    "region": "Asia",
+                    "count": 48
+                },
+                {
+                    "region": "Americas",
+                    "count": 25
+                },
+                {
+                    "region": "Europe",
+                    "count": 9
+                }
+            ],
+            "risk_distribution": [
+                {
+                    "level": "High",
+                    "count": 14
+                },
+                {
+                    "level": "Medium",
+                    "count": 125
+                },
+                {
+                    "level": "Low",
+                    "count": 233
+                }
+            ],
+            "knowledge_source_trend": [
+                {
+                    "source": "traditional",
+                    "count": 35
+                },
+                {
+                    "source": "adapted",
+                    "count": 50
+                },
+                {
+                    "source": "formal",
+                    "count": 30
+                },
+                {
+                    "source": "self-taught",
+                    "count": 22
                 }
             ]
         }
