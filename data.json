@@ -24844,5 +24844,140 @@
         "priority_score": 68,
         "hidden_gem": true,
         "critical_flag": false
+    },
+    {
+        "id": "d54cd3863983e6cf3714c1232cdb74a1",
+        "timestamp": "2026-09-29T03:52:01.735095",
+        "title": "Ugani Prosthetics Mobile 3D Scanning and Printing Workflow",
+        "sources": [
+            "https://ugani-prosthetics.com/",
+            "https://zeroproject.org/view/project/189d9841-4328-4475-802c-5678393739a3",
+            "https://www.ugani.com/"
+        ],
+        "summary": "Ugani Prosthetics utilizes smartphone-based 3D scanning and affordable tabletop 3D printing to provide custom-fitted prosthetic limbs in remote areas of Kenya, significantly lowering costs and empowering local technicians.",
+        "category": [
+            "Healthcare",
+            "3D Printing",
+            "Social Entrepreneurship",
+            "Assistive Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2796562,
+            "lon": 36.816147
+        },
+        "process": {
+            "how_it_works": "A mobile-first workflow where standard smartphones act as 3D scanners to capture limb geometry, which is then used to 3D print custom sockets and prosthetic parts locally.",
+            "materials_used": [
+                "Smartphones",
+                "Tabletop 3D printers",
+                "3D printing filament",
+                "Prosthetic components"
+            ],
+            "step_by_step": [
+                "Capture the geometry of the patient's residual limb using a smartphone 3D scanner",
+                "Process the digital scan to design a custom-fitted socket",
+                "Print the socket and components using a tabletop 3D printer",
+                "Assemble the prosthetic and fit it to the patient through trained local technicians"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and limited accessibility of prosthetic limbs in remote regions.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "toxic",
+                "environment",
+                "safety_gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks involve the use of 3D printing materials, which can release volatile organic compounds (VOCs) or involve toxic resins requiring skin and eye protection. There is also an environmental concern regarding plastic waste. While the innovation is low-risk compared to chemical or energy sectors, the structural integrity of medical-grade prosthetics manufactured in decentralized workshops requires consistent quality control to ensure patient safety."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "45aa9e028e24dfdd09e1b6f5f86f3d55",
+        "timestamp": "2026-09-29T03:52:22.546241",
+        "title": "Ayúdame3D - Trésdesis 3D-printed Prosthetics",
+        "sources": [
+            "https://www.creality.com/blog/ayudame3d-3d-printing-prosthetics-kenya",
+            "https://ayudame3d.org/",
+            "https://www.youtube.com/c/Ayudame3D",
+            "https://ayudame3d.org/en/south-africa/"
+        ],
+        "summary": "A Spanish NGO that designs and distributes free 3D-printed mechanical prosthetics, known as 'trésdesis', to individuals in need globally. The organization focuses on low-cost, high-impact solutions and empowers local communities by establishing manufacturing labs.",
+        "category": [
+            "Assistive Technology",
+            "3D Printing",
+            "Social Innovation",
+            "Healthcare"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Spain",
+            "region": "Madrid",
+            "lat": 40.416782,
+            "lon": -3.703507
+        },
+        "process": {
+            "how_it_works": "The devices are mechanical prosthetics that utilize the movement of the user's remaining joint (wrist or elbow) to pull tension cables, which in turn close the 3D-printed fingers to provide a gripping function.",
+            "materials_used": [
+                "PLA plastic",
+                "Elastic cords",
+                "Fishing line or high-tension cables",
+                "Screws",
+                "Foam padding"
+            ],
+            "step_by_step": [
+                "Collection of measurements and photos from the recipient to ensure proper fit.",
+                "Customization of the 3D model based on the specific amputation type.",
+                "3D printing of the individual components using PLA.",
+                "Manual assembly of the printed parts, cables, and padding.",
+                "Distribution to the recipient and provision of maintenance instructions.",
+                "Establishment of local 3DLabs for decentralized production and repair."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides affordable and accessible upper-limb prosthetics to people in developing regions who cannot afford traditional medical prostheses.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "internet"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Mechanical failure",
+                "Electrical safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project uses standard FDM 3D printing technology and non-toxic filaments like PLA to create non-invasive, external mechanical prosthetics. Risks are limited to standard electrical safety for the printers and potential mechanical breakage of the plastic components. The decentralized '3DLab' model follows established maker-space safety protocols."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
