@@ -114,7 +114,11 @@
       radial-gradient(circle at 20% 20%, rgba(15,118,110,.05), transparent 30%),
       radial-gradient(circle at 80% 80%, rgba(37,99,235,.05), transparent 32%),
       #ffffff;
+      padding-bottom: 44px !important;
     }
+    #pathway-svg { touch-action: none; cursor: grab; }
+    #pathway-svg.is-dragging { cursor: grabbing; }
+    .pathway-canvas { min-height: 610px; }
     .pathway-node-card { cursor:pointer; transition:transform .2s ease, filter .2s ease, opacity .2s ease; }
     .pathway-node-card:hover { transform: translateY(-2px); filter: drop-shadow(0 8px 14px rgba(15,23,42,.12)); }
     .pathway-connector { stroke:#cbd5e1; stroke-width:2.5; fill:none; marker-end:url(#pathway-arrow); }
@@ -412,7 +416,7 @@
             </button>
           </div>
           <div class="pathway-canvas overflow-x-auto p-3 sm:p-5">
-            <svg id="pathway-svg" viewBox="0 0 1300 650" class="min-w-[1120px] w-full h-auto select-none" role="img" aria-label="Water management implementation pathway">
+            <svg id="pathway-svg" viewBox="0 0 1300 680" class="min-w-[1120px] w-full h-auto select-none" role="img" aria-label="Water management implementation pathway">
               <defs>
                 <marker id="pathway-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                   <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"></path>
@@ -861,6 +865,10 @@
   let pathwaySelectedNode = "water_purification";
   let pathwayDomainId = "water_management";
   let pathwayUseFilters = true;
+  let pathwayPan = { x: 0, y: 0, scale: 1 };
+  let pathwayDrag = { active: false, moved: false, startX: 0, startY: 0, originX: 0, originY: 0 };
+  let pathwayInteractionBound = false;
+  let pathwaySuppressClick = false;
 
   // ═══════════════════════════════════════════════════════
   //  Country Filter Population
@@ -1773,27 +1781,107 @@ function renderCatChart(cats) {
 
     document.getElementById("pathway-reset").onclick = () => {
       pathwaySelectedNode = getPathwayDomain()?.nodes?.find(n => n.id === "water_purification")?.id || getPathwayDomain()?.nodes?.[0]?.id || null;
+      resetPathwayView();
       renderImplementationPathway();
     };
 
+    bindPathwayCanvasInteractions();
     renderImplementationPathway();
   }
 
   function pathwayNodePositions(domain) {
     const ids = (domain.nodes || []).map(n => n.id);
-    const positions = {
-      water_protection: [120, 220],
-      water_conservation: [120, 360],
-      water_harvesting: [330, 290],
-      water_storage: [520, 290],
-      water_distribution: [710, 290],
-      water_purification: [900, 290],
-      water_treatment: [900, 430],
-      water_sanitation: [900, 570],
-      wastewater_management: [1085, 570],
-      water_reuse: [1210, 570]
+    const layout = domain.layout || {};
+    const configured = layout.nodes || {};
+    const fallbackPositions = {};
+
+    ids.forEach((id, i) => {
+      if (configured[id]) return;
+      const col = i % 5;
+      const row = Math.floor(i / 5);
+      fallbackPositions[id] = [160 + col * 230, 180 + row * 145];
+    });
+
+    return Object.fromEntries(ids.map(id => [
+      id,
+      configured[id] || (domain.nodes.find(n => n.id === id)?.layout || fallbackPositions[id] || [180, 200])
+    ]));
+  }
+
+  function pathwayRootPosition(domain) {
+    return (domain.layout && domain.layout.root) || [650, 80];
+  }
+
+  function pathwayViewBox(domain) {
+    return (domain.layout && domain.layout.viewBox) || [0, 0, 1300, 680];
+  }
+
+  function applyPathwayTransform() {
+    const svg = document.getElementById("pathway-svg");
+    const links = document.getElementById("pathway-links");
+    const nodes = document.getElementById("pathway-nodes");
+    if (!svg || !links || !nodes) return;
+    const t = `translate(${pathwayPan.x} ${pathwayPan.y}) scale(${pathwayPan.scale})`;
+    links.setAttribute("transform", t);
+    nodes.setAttribute("transform", t);
+  }
+
+  function resetPathwayView() {
+    pathwayPan = { x: 0, y: 0, scale: 1 };
+    pathwayDrag = { active:false, moved:false, startX:0, startY:0, originX:0, originY:0 };
+    pathwaySuppressClick = false;
+    applyPathwayTransform();
+  }
+
+  function bindPathwayCanvasInteractions() {
+    if (pathwayInteractionBound) return;
+    const svg = document.getElementById("pathway-svg");
+    if (!svg) return;
+    pathwayInteractionBound = true;
+
+    svg.addEventListener("pointerdown", (e) => {
+      if (e.button !== undefined && e.button !== 0) return;
+      pathwayDrag.active = true;
+      pathwayDrag.moved = false;
+      pathwayDrag.startX = e.clientX;
+      pathwayDrag.startY = e.clientY;
+      pathwayDrag.originX = pathwayPan.x;
+      pathwayDrag.originY = pathwayPan.y;
+      svg.classList.add("is-dragging");
+      svg.setPointerCapture?.(e.pointerId);
+      e.preventDefault();
+    });
+
+    svg.addEventListener("pointermove", (e) => {
+      if (!pathwayDrag.active) return;
+      const rect = svg.getBoundingClientRect();
+      const view = pathwayViewBox(getPathwayDomain());
+      const px = (view[2] / rect.width) || 1;
+      const py = (view[3] / rect.height) || 1;
+      const dx = (e.clientX - pathwayDrag.startX) * px / pathwayPan.scale;
+      const dy = (e.clientY - pathwayDrag.startY) * py / pathwayPan.scale;
+
+      if (Math.abs(e.clientX - pathwayDrag.startX) + Math.abs(e.clientY - pathwayDrag.startY) > 5) {
+        pathwayDrag.moved = true;
+        pathwaySuppressClick = true;
+      }
+
+      pathwayPan.x = pathwayDrag.originX + dx;
+      pathwayPan.y = pathwayDrag.originY + dy;
+      applyPathwayTransform();
+      e.preventDefault();
+    });
+
+    const finishDrag = () => {
+      if (!pathwayDrag.active) return;
+      pathwayDrag.active = false;
+      svg.classList.remove("is-dragging");
     };
-    return Object.fromEntries(ids.map((id, i) => [id, positions[id] || [180 + (i%5)*190, 220 + Math.floor(i/5)*150]]));
+    svg.addEventListener("pointerup", finishDrag);
+    svg.addEventListener("pointercancel", finishDrag);
+    svg.addEventListener("pointerleave", () => {
+      // Keep pointer capture behavior; only end when the actual pointerup arrives.
+    });
   }
 
   function escapePathwaySvgText(v) {
@@ -1819,16 +1907,21 @@ function renderCatChart(cats) {
       pathwayUseFilters ? `Current Directory Filter · ${data.length} records` : `All Radar Records · ${data.length} records`;
 
     const nodeById = Object.fromEntries(domain.nodes.map(n => [n.id, n]));
+    const [rootX, rootY] = pathwayRootPosition(domain);
+    const vb = pathwayViewBox(domain);
+    const svg = document.getElementById("pathway-svg");
+    if (svg) svg.setAttribute("viewBox", vb.join(" "));
     const mappedIds = new Set();
     Object.values(stats).forEach(st => st.all.forEach(x => mappedIds.add(x.item.id)));
 
     let linksHtml = "";
     const seenEdges = new Set();
 
-    // Root → source branches
-    [["root","water_protection"],["root","water_conservation"]].forEach(([a,b]) => {
-      const p1 = [650, 82], p2 = pos[b];
-      linksHtml += `<path d="M ${p1[0]} ${p1[1]} Q 650 145 ${p2[0]} ${p2[1]-38}" class="pathway-connector"></path>`;
+    // Root → source branches. Domains can declare their own root/source nodes in JSON.
+    const roots = (domain.root_targets || domain.nodes.filter(n => (n.upstream || []).length === 0).map(n => n.id)).filter(id => pos[id]);
+    roots.forEach(targetId => {
+      const p2 = pos[targetId];
+      linksHtml += `<path d="M ${rootX} ${rootY+34} Q ${rootX} ${(rootY+34 + p2[1]-38)/2} ${p2[0]} ${p2[1]-38}" class="pathway-connector"></path>`;
     });
 
     domain.nodes.forEach(node => {
@@ -1847,9 +1940,9 @@ function renderCatChart(cats) {
 
     const rootMarkup = `
       <g class="pathway-node-card" role="img" aria-label="${escapePathwaySvgText(domain.label)}">
-        <rect x="540" y="18" width="220" height="68" rx="20" class="pathway-root-bg" filter="url(#pathway-shadow)"></rect>
-        <text x="650" y="47" text-anchor="middle" class="pathway-root-label">${escapePathwaySvgText(domain.label)}</text>
-        <text x="650" y="67" text-anchor="middle" class="pathway-root-count">${mappedIds.size} records mapped into pathway</text>
+        <rect x="${rootX-110}" y="${rootY-34}" width="220" height="68" rx="20" class="pathway-root-bg" filter="url(#pathway-shadow)"></rect>
+        <text x="${rootX}" y="${rootY-5}" text-anchor="middle" class="pathway-root-label">${escapePathwaySvgText(domain.label)}</text>
+        <text x="${rootX}" y="${rootY+15}" text-anchor="middle" class="pathway-root-count">${mappedIds.size} records mapped into pathway</text>
       </g>`;
 
     const nodeMarkup = domain.nodes.map(node => {
@@ -1876,11 +1969,16 @@ function renderCatChart(cats) {
     }).join("");
 
     svgNodes.innerHTML = rootMarkup + nodeMarkup;
+    applyPathwayTransform();
     renderPathwayDetail(domain, nodeById[pathwaySelectedNode], stats[pathwaySelectedNode] || {exact:[],inferred:[],all:[]});
     if (window.lucide) window.lucide.createIcons();
   }
 
   function selectPathwayNode(nodeId) {
+    if (pathwaySuppressClick) {
+      pathwaySuppressClick = false;
+      return;
+    }
     pathwaySelectedNode = nodeId;
     renderImplementationPathway();
   }
