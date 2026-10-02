@@ -133,6 +133,14 @@
     .pathway-root-bg { fill:#ecfeff; stroke:#0f766e; stroke-width:2.5; }
     .pathway-root-label { font-size:15px; font-weight:900; fill:#0f766e; pointer-events:none; }
     .pathway-root-count { font-size:10px; font-weight:800; fill:#0f766e; pointer-events:none; }
+    .pathway-domain-select option {
+      color: #0f172a !important;
+      background: #ffffff !important;
+    }
+    .pathway-domain-select option:checked {
+      color: #ffffff !important;
+      background: #2563eb !important;
+    }
     .pathway-legend-pill { display:inline-flex; align-items:center; gap:6px; border:1px solid #e2e8f0; background:#fff; border-radius:999px; padding:6px 10px; font-size:10px; font-weight:800; color:#475569; }
     .pathway-evidence-card { transition:transform .2s ease, box-shadow .2s ease; }
     .pathway-evidence-card:hover { transform:translateY(-1px); box-shadow:0 8px 20px rgba(15,23,42,.08); }
@@ -386,7 +394,7 @@
           </div>
 
           <div class="flex flex-col sm:flex-row gap-2 w-full lg:w-auto">
-            <select id="pathway-domain" class="bg-white/15 border border-white/30 text-white text-xs font-semibold rounded-lg px-3 py-2 min-w-[210px] focus:outline-none focus:ring-2 focus:ring-white/40"></select>
+            <select id="pathway-domain" class="pathway-domain-select bg-white/15 border border-white/30 text-white text-xs font-semibold rounded-lg px-3 py-2 min-w-[210px] focus:outline-none focus:ring-2 focus:ring-white/40"></select>
             <label class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-xs font-semibold cursor-pointer">
               <input id="pathway-use-filters" type="checkbox" class="accent-white" checked>
               Use current Directory filters
@@ -869,6 +877,7 @@
   let pathwayDrag = { active: false, moved: false, startX: 0, startY: 0, originX: 0, originY: 0 };
   let pathwayInteractionBound = false;
   let pathwaySuppressClick = false;
+  let pathwayPointerNodeId = null;
 
   // ═══════════════════════════════════════════════════════
   //  Country Filter Population
@@ -1874,6 +1883,10 @@ function renderCatChart(cats) {
 
     svg.addEventListener("pointerdown", (e) => {
       if (e.button !== undefined && e.button !== 0) return;
+
+      const nodeEl = e.target?.closest?.("[data-pathway-node]");
+      pathwayPointerNodeId = nodeEl?.getAttribute("data-pathway-node") || null;
+
       pathwayDrag.active = true;
       pathwayDrag.moved = false;
       pathwayDrag.startX = e.clientX;
@@ -1887,6 +1900,7 @@ function renderCatChart(cats) {
 
     svg.addEventListener("pointermove", (e) => {
       if (!pathwayDrag.active) return;
+
       const rect = svg.getBoundingClientRect();
       const view = pathwayViewBox(getPathwayDomain());
       const px = (view[2] / rect.width) || 1;
@@ -1896,7 +1910,7 @@ function renderCatChart(cats) {
 
       if (Math.abs(e.clientX - pathwayDrag.startX) + Math.abs(e.clientY - pathwayDrag.startY) > 5) {
         pathwayDrag.moved = true;
-        pathwaySuppressClick = true;
+        pathwayPointerNodeId = null;
       }
 
       pathwayPan.x = pathwayDrag.originX + dx;
@@ -1907,15 +1921,26 @@ function renderCatChart(cats) {
 
     const finishDrag = () => {
       if (!pathwayDrag.active) return;
+
+      const clickedNode = !pathwayDrag.moved && pathwayPointerNodeId;
+      const nodeId = pathwayPointerNodeId;
+
       pathwayDrag.active = false;
       svg.classList.remove("is-dragging");
+      pathwayPointerNodeId = null;
+
+      if (clickedNode) {
+        selectPathwayNode(nodeId);
+      }
     };
+
     svg.addEventListener("pointerup", finishDrag);
-    svg.addEventListener("pointercancel", finishDrag);
-    svg.addEventListener("pointerleave", () => {
-      // Keep pointer capture behavior; only end when the actual pointerup arrives.
+    svg.addEventListener("pointercancel", () => {
+      pathwayDrag.active = false;
+      pathwayPointerNodeId = null;
+      svg.classList.remove("is-dragging");
     });
-  }
+}
 
   function escapePathwaySvgText(v) {
     return String(v || "").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -1998,7 +2023,7 @@ function renderCatChart(cats) {
       const title = escapePathwaySvgText(node.label);
 
       return `
-        <g class="pathway-node-card" tabindex="0" role="button" aria-label="${title}" onclick="selectPathwayNode('${node.id}')" onkeydown="if(event.key==='Enter') selectPathwayNode('${node.id}')">
+        <g class="pathway-node-card" data-pathway-node="${node.id}" tabindex="0" role="button" aria-label="${title}" onkeydown="if(event.key==='Enter') selectPathwayNode('${node.id}')">
           <rect x="${x-width/2}" y="${y-height/2}" width="${width}" height="${height}" rx="18" class="pathway-node-bg ${active ? 'active' : ''}" filter="url(#pathway-shadow)"></rect>
           <circle cx="${x-width/2+18}" cy="${y-12}" r="6" class="pathway-node-dot ${statusClass}"></circle>
           <text x="${x-width/2+32}" y="${y-8}" class="pathway-label">${title}</text>
@@ -2015,12 +2040,14 @@ function renderCatChart(cats) {
   }
 
   function selectPathwayNode(nodeId) {
-    if (pathwaySuppressClick) {
-      pathwaySuppressClick = false;
-      return;
-    }
+    if (!nodeId) return;
     pathwaySelectedNode = nodeId;
     renderImplementationPathway();
+
+    requestAnimationFrame(() => {
+      const detail = document.getElementById("pathway-detail");
+      if (detail) detail.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   }
 
   function renderPathwayDetail(domain, node, stat) {
