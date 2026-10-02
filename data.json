@@ -24979,5 +24979,203 @@
         "priority_score": 58,
         "hidden_gem": false,
         "critical_flag": false
+    },
+    {
+        "id": "629fa385bb36131afeed4bab93f07e6b",
+        "timestamp": "2026-10-02T03:43:52.964692",
+        "title": "BethanyKids Bamboo Wheelchairs",
+        "sources": [
+            "https://www.wionews.com/videos/a-kenyan-innovation-is-turning-a-local-resource-into-mobility-world-of-africa-wion-news-749141",
+            "https://bethanykids.org/",
+            "https://www.africanews.com/2024/08/07/lightweight-bamboo-wheelchairs-helping-kenyan-children-with-disabilities/"
+        ],
+        "summary": "BethanyKids in Kenya manufactures lightweight, durable, and affordable wheelchairs for children using locally grown bamboo. These wheelchairs are designed to be rust-resistant and easily repairable using standard bicycle parts, significantly reducing costs compared to imported metal models.",
+        "category": [
+            "Assistive Technology",
+            "Sustainable Design",
+            "Healthcare",
+            "Disability Support"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "Rural areas",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Technicians use locally sourced bamboo to build wheelchair frames that are lighter than steel. The frames are assembled using fixture jigs and integrated with standard bicycle components for easy maintenance by local mechanics.",
+            "materials_used": [
+                "Bamboo",
+                "Bicycle wheels",
+                "Bearings",
+                "Fixture jigs"
+            ],
+            "step_by_step": [
+                "Procure bamboo from local farmers",
+                "Assemble frames in local workshops using fixture jigs to ensure consistency",
+                "Attach standard bicycle wheels and bearings to the bamboo frame",
+                "Perform quality checks for pediatric use",
+                "Provide maintenance support through local mechanics"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and excessive weight of imported metal wheelchairs, which are also prone to rust and difficult to repair in rural settings.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation utilizes sustainable, locally sourced bamboo and standard bicycle components to create mobility aids. The primary risk is mechanical or structural failure of the frame, but this is minimized by the use of standardized assembly jigs and the lightweight requirements for pediatric use. There are no significant chemical, fire, or environmental hazards associated with this manufacturing process."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "935b82fb5cace71856b62ffa2f51e93f",
+        "timestamp": "2026-10-02T03:44:13.258154",
+        "title": "Leveraged Freedom Chair (LFC)",
+        "sources": [
+            "https://www.resna.org/sites/default/files/legacy/conference/proceedings/2009/SDC2009/Winter/Winter.html",
+            "https://news.mit.edu/2017/building-mountain-bike-wheelchairs-0123",
+            "https://www.grit.bike/our-story",
+            "https://mobility.mit.edu/lfc",
+            "https://www.grit.bike/"
+        ],
+        "summary": "An all-terrain mobility device designed for developing countries that utilizes a lever-drive system made from standard bicycle parts, allowing users to navigate rugged terrain and perform repairs using local components.",
+        "category": [
+            "Mobility",
+            "Assistive Technology",
+            "Social Innovation"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "USA",
+            "region": "Global",
+            "lat": 41.7177436,
+            "lon": -72.6477176
+        },
+        "process": {
+            "how_it_works": "The chair uses a lever-drive system where the user's hand position determines the torque. Moving hands to the top of the levers provides high torque for obstacles, while moving hands down allows for faster speeds on flat ground.",
+            "materials_used": [
+                "Bicycle chains",
+                "Sprockets",
+                "Bearings",
+                "Bicycle tires",
+                "Steel frame"
+            ],
+            "step_by_step": [
+                "User sits in the chair and grips two long vertical levers.",
+                "For steep or muddy terrain, the user grips the top of the levers to maximize leverage.",
+                "For speed on smooth surfaces, the user grips the bottom of the levers to increase the stroke frequency.",
+                "The levers transfer power to the wheels via a chain-and-sprocket drivetrain.",
+                "Maintenance is performed by replacing worn parts with standard bicycle components available in local markets."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Enables mobility in environments with poor infrastructure (mud, sand, hills) and eliminates dependence on expensive, imported specialized wheelchair parts.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Mechanical",
+                "Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Leveraged Freedom Chair is a purely mechanical mobility device. The primary risks are limited to standard mechanical hazards such as pinch points in the chain drive or the risk of tipping on extreme terrain. It utilizes low-risk, standard bicycle components and does not involve hazardous chemicals, high-voltage electricity, or explosive materials."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
+    },
+    {
+        "id": "c90846c62371399ff1091feb57ebc642",
+        "timestamp": "2026-10-02T03:44:32.370240",
+        "title": "SafariSeat",
+        "sources": [
+            "https://www.youtube.com/watch?v=R7Hv-269XRA",
+            "https://www.safariseat.org/",
+            "https://www.disabled-world.com/assistivedevices/mobility/wheelchairs/allterrain/safariseat.php",
+            "https://www.kickstarter.com/projects/jannaride/safariseat-open-source-wheelchair"
+        ],
+        "summary": "An open-source, manual wheelchair designed for the extreme conditions of rural East Africa, featuring a car-like suspension system and a decentralized production model using local materials.",
+        "category": [
+            "Mobility",
+            "Assistive Technology",
+            "Open-Source Hardware"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2796562,
+            "lon": 36.816147
+        },
+        "process": {
+            "how_it_works": "It utilizes a patented suspension mechanism that mimics a car's chassis, ensuring all four wheels remain in contact with the ground on highly uneven surfaces, and is propelled via a hand-crank system.",
+            "materials_used": [
+                "basic steel tubing",
+                "bicycle wheels",
+                "bicycle chains",
+                "hand-cranks"
+            ],
+            "step_by_step": [
+                "Download open-source blueprints provided by the creators",
+                "Source standard steel tubing and common bicycle components locally",
+                "Fabricate the chassis and suspension components using basic workshop tools",
+                "Assemble the hand-crank drive system and wheels",
+                "Maintain and repair using locally available bicycle parts"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Enables mobility for people in rural areas with rough terrain who were previously confined to their homes by standard wheelchair limitations.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "SafariSeat is a manual mechanical device constructed from inert materials like steel and bicycle components. It poses no fire, explosion, or chemical risks. The primary safety considerations are structural integrity and welding quality during local fabrication, which are standard mechanical manufacturing concerns rather than inherent product hazards."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false
     }
 ]
