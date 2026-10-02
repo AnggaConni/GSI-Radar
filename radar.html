@@ -123,7 +123,7 @@
     .pathway-node-card:hover { transform: translateY(-2px); filter: drop-shadow(0 8px 14px rgba(15,23,42,.12)); }
     .pathway-connector { stroke:#cbd5e1; stroke-width:2.5; fill:none; marker-end:url(#pathway-arrow); }
     .pathway-connector.active { stroke:#0f766e; stroke-width:3.5; }
-    .pathway-label { font-size:12px; font-weight:800; fill:#334155; pointer-events:none; }
+    .pathway-label { font-size:11px; font-weight:800; fill:#334155; pointer-events:none; }
     .pathway-count { font-size:10px; font-weight:800; fill:#64748b; pointer-events:none; }
     .pathway-node-bg { fill:#fff; stroke:#cbd5e1; stroke-width:1.5; }
     .pathway-node-bg.active { stroke:#0f766e; stroke-width:3; }
@@ -1950,6 +1950,44 @@ function renderCatChart(cats) {
     return String(v || "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   }
 
+  function pathwayWrapSvgText(value, maxChars = 20, maxLines = 2) {
+    const words = String(value || "").trim().split(/\s+/).filter(Boolean);
+    if (!words.length) return [""];
+    const lines = [];
+    let line = "";
+
+    for (const word of words) {
+      const candidate = line ? `${line} ${word}` : word;
+      if (candidate.length <= maxChars || !line) {
+        line = candidate;
+      } else {
+        lines.push(line);
+        line = word;
+      }
+      if (lines.length === maxLines - 1) break;
+    }
+
+    if (lines.length < maxLines && line) lines.push(line);
+
+    const consumed = lines.join(" ").split(/\s+/).filter(Boolean).length;
+    if (consumed < words.length) {
+      let last = lines[lines.length - 1] || "";
+      const remainder = words.slice(consumed).join(" ");
+      const suffix = ` …`;
+      const available = Math.max(4, maxChars - suffix.length);
+      last = (last.length > available ? last.slice(0, available).trim() : last) + suffix;
+      lines[lines.length - 1] = last;
+    }
+
+    return lines.slice(0, maxLines);
+  }
+
+  function pathwayTspans(lines, x, firstY, lineHeight = 13, anchor = "start") {
+    return lines.map((line, idx) =>
+      `<tspan x="${x}" y="${firstY + idx * lineHeight}" text-anchor="${anchor}">${escapePathwaySvgText(line)}</tspan>`
+    ).join("");
+  }
+
   function renderImplementationPathway() {
     const domain = getPathwayDomain();
     const svgNodes = document.getElementById("pathway-nodes");
@@ -2003,11 +2041,17 @@ function renderCatChart(cats) {
     });
     svgLinks.innerHTML = linksHtml;
 
+    const rootLines = pathwayWrapSvgText(domain.label, 22, 2);
+    const rootIsTwoLines = rootLines.length > 1;
+    const rootHeight = rootIsTwoLines ? 84 : 68;
+    const rootTitleFirstY = rootY - (rootIsTwoLines ? 17 : 5);
+    const rootCountY = rootY + (rootIsTwoLines ? 28 : 15);
+
     const rootMarkup = `
       <g class="pathway-node-card" role="img" aria-label="${escapePathwaySvgText(domain.label)}">
-        <rect x="${rootX-110}" y="${rootY-34}" width="220" height="68" rx="20" class="pathway-root-bg" filter="url(#pathway-shadow)"></rect>
-        <text x="${rootX}" y="${rootY-5}" text-anchor="middle" class="pathway-root-label">${escapePathwaySvgText(domain.label)}</text>
-        <text x="${rootX}" y="${rootY+15}" text-anchor="middle" class="pathway-root-count">${mappedIds.size} records mapped into pathway</text>
+        <rect x="${rootX-110}" y="${rootY-rootHeight/2}" width="220" height="${rootHeight}" rx="20" class="pathway-root-bg" filter="url(#pathway-shadow)"></rect>
+        <text x="${rootX}" y="${rootTitleFirstY}" text-anchor="middle" class="pathway-root-label">${pathwayTspans(rootLines, rootX, rootTitleFirstY, 16, "middle")}</text>
+        <text x="${rootX}" y="${rootCountY}" text-anchor="middle" class="pathway-root-count">${mappedIds.size} records mapped into pathway</text>
       </g>`;
 
     const nodeMarkup = domain.nodes.map(node => {
@@ -2018,17 +2062,22 @@ function renderCatChart(cats) {
       const [x,y] = pos[node.id];
       const active = node.id === pathwaySelectedNode;
       const statusClass = observed ? "observed" : (inferred ? "inferred" : "gap");
-      const width = 158;
-      const height = 74;
+      const width = 180;
+      const titleLines = pathwayWrapSvgText(node.label, 22, 2);
+      const titleIsTwoLines = titleLines.length > 1;
+      const height = titleIsTwoLines ? 88 : 74;
+      const titleFirstY = y - (titleIsTwoLines ? 17 : 8);
+      const countY = y + (titleIsTwoLines ? 18 : 12);
+      const evidenceY = y + (titleIsTwoLines ? 36 : 30);
       const title = escapePathwaySvgText(node.label);
 
       return `
         <g class="pathway-node-card" data-pathway-node="${node.id}" tabindex="0" role="button" aria-label="${title}" onkeydown="if(event.key==='Enter') selectPathwayNode('${node.id}')">
           <rect x="${x-width/2}" y="${y-height/2}" width="${width}" height="${height}" rx="18" class="pathway-node-bg ${active ? 'active' : ''}" filter="url(#pathway-shadow)"></rect>
           <circle cx="${x-width/2+18}" cy="${y-12}" r="6" class="pathway-node-dot ${statusClass}"></circle>
-          <text x="${x-width/2+32}" y="${y-8}" class="pathway-label">${title}</text>
-          <text x="${x-width/2+32}" y="${y+12}" class="pathway-count">${observed} observed · ${inferred} inferred</text>
-          <text x="${x-width/2+32}" y="${y+30}" class="pathway-count">${total ? 'Evidence mapped' : 'No observation'}</text>
+          <text class="pathway-label">${pathwayTspans(titleLines, x-width/2+32, titleFirstY, 13, "start")}</text>
+          <text x="${x-width/2+32}" y="${countY}" class="pathway-count">${observed} observed · ${inferred} inferred</text>
+          <text x="${x-width/2+32}" y="${evidenceY}" class="pathway-count">${total ? 'Evidence mapped' : 'No observation'}</text>
           ${active ? `<rect x="${x-width/2-1.5}" y="${y-height/2-1.5}" width="${width+3}" height="${height+3}" rx="19" fill="none" stroke="#0f766e" stroke-width="2.5" opacity=".85"></rect>` : ""}
         </g>`;
     }).join("");
