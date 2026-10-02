@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "domains": {
     "water_management": {
       "label": "Water Management",
@@ -6721,6 +6721,5481 @@
         "transport_mobility",
         "agriculture_food_security",
         "health_medical_access"
+      ]
+    },
+    "climate_adaptation_disaster_resilience": {
+      "label": "Climate Adaptation & Disaster Resilience",
+      "description": "From risk identification and early warning through preparedness, adaptation, response and recovery.",
+      "color": "#ea580c",
+      "implementation_contexts": [
+        "community",
+        "municipality",
+        "school",
+        "farm",
+        "emergency_response"
+      ],
+      "evidence_types": [
+        "community_project",
+        "institutional_solution",
+        "digital_innovation",
+        "grassroots_innovation",
+        "traditional_knowledge"
+      ],
+      "cross_sector_domains": [
+        "water_management",
+        "biodiversity_ecosystem_restoration",
+        "marine_coastal_systems",
+        "urban_community_systems"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "climate_risk_assessment": [
+            120,
+            270
+          ],
+          "early_warning": [
+            340,
+            270
+          ],
+          "preparedness": [
+            560,
+            270
+          ],
+          "local_adaptation": [
+            780,
+            270
+          ],
+          "emergency_response": [
+            1000,
+            270
+          ],
+          "recovery_resilience": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "climate_risk_assessment",
+          "label": "Risk Assessment",
+          "stage": "Assessment",
+          "order": 1,
+          "description": "Identify climate hazards, exposure, vulnerability and local risk.",
+          "upstream": [],
+          "downstream": [
+            "early_warning"
+          ],
+          "aliases": [
+            "Risk Assessment"
+          ],
+          "keywords": [
+            "climate risk",
+            "hazard mapping",
+            "vulnerability",
+            "risk assessment"
+          ],
+          "implementation": {
+            "objective": "Identify climate hazards, exposure, vulnerability and local risk.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "assessment",
+              "mapping"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "assessment",
+              "mapping"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "assessment",
+              "mapping"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "school"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of risk assessment"
+            ],
+            "secondary": [
+              "Improved local capability through the assessment stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "early_warning",
+          "label": "Early Warning",
+          "stage": "Preparedness",
+          "order": 2,
+          "description": "Detect hazards and communicate actionable warnings.",
+          "upstream": [
+            "climate_risk_assessment"
+          ],
+          "downstream": [
+            "preparedness"
+          ],
+          "aliases": [
+            "Early Warning"
+          ],
+          "keywords": [
+            "early warning",
+            "alert system",
+            "flood warning",
+            "storm warning"
+          ],
+          "implementation": {
+            "objective": "Detect hazards and communicate actionable warnings.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "monitoring",
+              "communication"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "communication"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "communication"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "digital_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of early warning"
+            ],
+            "secondary": [
+              "Improved local capability through the preparedness stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "preparedness",
+          "label": "Preparedness",
+          "stage": "Preparedness",
+          "order": 3,
+          "description": "Prepare people, assets and systems before a disruptive event.",
+          "upstream": [
+            "early_warning"
+          ],
+          "downstream": [
+            "local_adaptation"
+          ],
+          "aliases": [
+            "Preparedness"
+          ],
+          "keywords": [
+            "preparedness",
+            "emergency plan",
+            "evacuation",
+            "disaster preparedness"
+          ],
+          "implementation": {
+            "objective": "Prepare people, assets and systems before a disruptive event.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "planning",
+              "coordination"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "planning",
+              "coordination"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "planning",
+              "coordination"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of preparedness"
+            ],
+            "secondary": [
+              "Improved local capability through the preparedness stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "local_adaptation",
+          "label": "Local Adaptation",
+          "stage": "Adaptation",
+          "order": 4,
+          "description": "Apply place-based measures that reduce exposure or vulnerability.",
+          "upstream": [
+            "preparedness"
+          ],
+          "downstream": [
+            "emergency_response"
+          ],
+          "aliases": [
+            "Local Adaptation"
+          ],
+          "keywords": [
+            "climate adaptation",
+            "flood adaptation",
+            "drought adaptation",
+            "resilience"
+          ],
+          "implementation": {
+            "objective": "Apply place-based measures that reduce exposure or vulnerability.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "adaptation design",
+              "planning"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "adaptation design",
+              "planning"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "adaptation design",
+              "planning"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "traditional_knowledge",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "farm",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of local adaptation"
+            ],
+            "secondary": [
+              "Improved local capability through the adaptation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "water_management",
+              "node": "water_harvesting",
+              "relationship": "can_use",
+              "reason": "Local adaptation can use local water capture."
+            }
+          ]
+        },
+        {
+          "id": "emergency_response",
+          "label": "Emergency Response",
+          "stage": "Response",
+          "order": 5,
+          "description": "Mobilize people, supplies and services during a hazard event.",
+          "upstream": [
+            "local_adaptation"
+          ],
+          "downstream": [
+            "recovery_resilience"
+          ],
+          "aliases": [
+            "Emergency Response"
+          ],
+          "keywords": [
+            "emergency response",
+            "rescue",
+            "relief",
+            "emergency logistics"
+          ],
+          "implementation": {
+            "objective": "Mobilize people, supplies and services during a hazard event.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "coordination",
+              "logistics"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "coordination",
+              "logistics"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "coordination",
+              "logistics"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "emergency_response"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of emergency response"
+            ],
+            "secondary": [
+              "Improved local capability through the response stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "recovery_resilience",
+          "label": "Recovery & Resilience",
+          "stage": "Recovery",
+          "order": 6,
+          "description": "Restore essential functions while reducing future risk.",
+          "upstream": [
+            "emergency_response"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Recovery & Resilience"
+          ],
+          "keywords": [
+            "recovery",
+            "resilience",
+            "reconstruction",
+            "build back better"
+          ],
+          "implementation": {
+            "objective": "Restore essential functions while reducing future risk.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "recovery planning",
+              "monitoring"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "recovery planning",
+              "monitoring"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "recovery planning",
+              "monitoring"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of recovery & resilience"
+            ],
+            "secondary": [
+              "Improved local capability through the recovery stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "construction_shelter",
+              "node": "resilience_safety",
+              "relationship": "can_require",
+              "reason": "Recovery may require safer and more resilient built environments."
+            }
+          ]
+        }
+      ]
+    },
+    "biodiversity_ecosystem_restoration": {
+      "label": "Biodiversity & Ecosystem Restoration",
+      "description": "From habitat and species knowledge through conservation, restoration and ecosystem stewardship.",
+      "color": "#15803d",
+      "implementation_contexts": [
+        "community",
+        "research_site",
+        "protected_area",
+        "coastal",
+        "watershed",
+        "farm",
+        "cooperative"
+      ],
+      "evidence_types": [
+        "traditional_knowledge",
+        "community_project",
+        "institutional_solution",
+        "grassroots_innovation"
+      ],
+      "cross_sector_domains": [
+        "agriculture_food_security",
+        "environment_circular_economy",
+        "marine_coastal_systems",
+        "climate_adaptation_disaster_resilience"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "biodiversity_mapping": [
+            120,
+            270
+          ],
+          "conservation_protection": [
+            340,
+            270
+          ],
+          "restoration": [
+            560,
+            270
+          ],
+          "habitat_management": [
+            780,
+            270
+          ],
+          "species_recovery": [
+            1000,
+            270
+          ],
+          "ecosystem_stewardship": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "biodiversity_mapping",
+          "label": "Biodiversity Mapping",
+          "stage": "Knowledge",
+          "order": 1,
+          "description": "Document species, habitats and ecological patterns.",
+          "upstream": [],
+          "downstream": [
+            "conservation_protection"
+          ],
+          "aliases": [
+            "Biodiversity Mapping"
+          ],
+          "keywords": [
+            "biodiversity mapping",
+            "species inventory",
+            "habitat mapping",
+            "ecological survey"
+          ],
+          "implementation": {
+            "objective": "Document species, habitats and ecological patterns.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "mapping",
+              "field observation"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "mapping",
+              "field observation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "mapping",
+              "field observation"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "research_site",
+            "protected_area"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of biodiversity mapping"
+            ],
+            "secondary": [
+              "Improved local capability through the knowledge stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "conservation_protection",
+          "label": "Conservation & Protection",
+          "stage": "Protection",
+          "order": 2,
+          "description": "Protect species, habitats and ecological processes.",
+          "upstream": [
+            "biodiversity_mapping"
+          ],
+          "downstream": [
+            "restoration"
+          ],
+          "aliases": [
+            "Conservation & Protection"
+          ],
+          "keywords": [
+            "conservation",
+            "protected area",
+            "habitat protection",
+            "species protection"
+          ],
+          "implementation": {
+            "objective": "Protect species, habitats and ecological processes.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "stewardship",
+              "monitoring"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "stewardship",
+              "monitoring"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "stewardship",
+              "monitoring"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "community",
+            "protected_area"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of conservation & protection"
+            ],
+            "secondary": [
+              "Improved local capability through the protection stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "restoration",
+          "label": "Ecosystem Restoration",
+          "stage": "Restoration",
+          "order": 3,
+          "description": "Restore degraded ecosystems and ecological functions.",
+          "upstream": [
+            "conservation_protection"
+          ],
+          "downstream": [
+            "habitat_management"
+          ],
+          "aliases": [
+            "Ecosystem Restoration"
+          ],
+          "keywords": [
+            "restoration",
+            "reforestation",
+            "mangrove restoration",
+            "wetland restoration"
+          ],
+          "implementation": {
+            "objective": "Restore degraded ecosystems and ecological functions.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "restoration",
+              "planting"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "restoration",
+              "planting"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "restoration",
+              "planting"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "grassroots_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "coastal",
+            "watershed"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of ecosystem restoration"
+            ],
+            "secondary": [
+              "Improved local capability through the restoration stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "marine_coastal_systems",
+              "node": "mangrove_restoration",
+              "relationship": "can_overlap",
+              "reason": "Coastal ecosystems can be restoration targets."
+            }
+          ]
+        },
+        {
+          "id": "habitat_management",
+          "label": "Habitat Management",
+          "stage": "Management",
+          "order": 4,
+          "description": "Manage landscapes and habitats to sustain ecological function.",
+          "upstream": [
+            "restoration"
+          ],
+          "downstream": [
+            "species_recovery"
+          ],
+          "aliases": [
+            "Habitat Management"
+          ],
+          "keywords": [
+            "habitat management",
+            "forest management",
+            "landscape management"
+          ],
+          "implementation": {
+            "objective": "Manage landscapes and habitats to sustain ecological function.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "land management",
+              "monitoring"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "land management",
+              "monitoring"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "land management",
+              "monitoring"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "protected_area",
+            "farm"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of habitat management"
+            ],
+            "secondary": [
+              "Improved local capability through the management stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "species_recovery",
+          "label": "Species Recovery",
+          "stage": "Recovery",
+          "order": 5,
+          "description": "Support recovery of threatened or locally important species.",
+          "upstream": [
+            "habitat_management"
+          ],
+          "downstream": [
+            "ecosystem_stewardship"
+          ],
+          "aliases": [
+            "Species Recovery"
+          ],
+          "keywords": [
+            "species recovery",
+            "reintroduction",
+            "wildlife",
+            "species conservation"
+          ],
+          "implementation": {
+            "objective": "Support recovery of threatened or locally important species.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "monitoring",
+              "species management"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "species management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "species management"
+            ]
+          },
+          "evidence_types": [
+            "institutional_solution",
+            "traditional_knowledge"
+          ],
+          "implementation_contexts": [
+            "protected_area",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of species recovery"
+            ],
+            "secondary": [
+              "Improved local capability through the recovery stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "ecosystem_stewardship",
+          "label": "Community Stewardship",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Strengthen long-term local stewardship and ecological governance.",
+          "upstream": [
+            "species_recovery"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Community Stewardship"
+          ],
+          "keywords": [
+            "community stewardship",
+            "forest guardians",
+            "local conservation",
+            "ecological stewardship"
+          ],
+          "implementation": {
+            "objective": "Strengthen long-term local stewardship and ecological governance.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "community governance",
+              "monitoring"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "community governance",
+              "monitoring"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "community governance",
+              "monitoring"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of community stewardship"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        }
+      ]
+    },
+    "marine_coastal_systems": {
+      "label": "Marine & Coastal Systems",
+      "description": "From coastal observation and habitat stewardship through fisheries, blue carbon and coastal livelihoods.",
+      "color": "#0284c7",
+      "implementation_contexts": [
+        "coastal",
+        "community",
+        "municipality",
+        "protected_area",
+        "fishing_community",
+        "small_enterprise"
+      ],
+      "evidence_types": [
+        "community_project",
+        "digital_innovation",
+        "traditional_knowledge",
+        "engineering_solution",
+        "institutional_solution",
+        "social_enterprise"
+      ],
+      "cross_sector_domains": [
+        "water_management",
+        "biodiversity_ecosystem_restoration",
+        "climate_adaptation_disaster_resilience",
+        "livelihoods_employment"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "coastal_monitoring": [
+            120,
+            270
+          ],
+          "mangrove_restoration": [
+            340,
+            270
+          ],
+          "coastal_protection": [
+            560,
+            270
+          ],
+          "blue_carbon": [
+            780,
+            270
+          ],
+          "sustainable_fisheries": [
+            1000,
+            270
+          ],
+          "coastal_livelihoods": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "coastal_monitoring",
+          "label": "Coastal Monitoring",
+          "stage": "Knowledge",
+          "order": 1,
+          "description": "Observe coastal conditions, habitats and pressures.",
+          "upstream": [],
+          "downstream": [
+            "mangrove_restoration"
+          ],
+          "aliases": [
+            "Coastal Monitoring"
+          ],
+          "keywords": [
+            "coastal monitoring",
+            "shoreline monitoring",
+            "marine observation",
+            "coastal mapping"
+          ],
+          "implementation": {
+            "objective": "Observe coastal conditions, habitats and pressures.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "field monitoring",
+              "mapping"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "field monitoring",
+              "mapping"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "field monitoring",
+              "mapping"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "digital_innovation"
+          ],
+          "implementation_contexts": [
+            "coastal",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of coastal monitoring"
+            ],
+            "secondary": [
+              "Improved local capability through the knowledge stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "mangrove_restoration",
+          "label": "Mangrove Restoration",
+          "stage": "Restoration",
+          "order": 2,
+          "description": "Restore mangrove ecosystems for ecological and community benefits.",
+          "upstream": [
+            "coastal_monitoring"
+          ],
+          "downstream": [
+            "coastal_protection"
+          ],
+          "aliases": [
+            "Mangrove Restoration"
+          ],
+          "keywords": [
+            "mangrove",
+            "mangrove restoration",
+            "blue carbon",
+            "coastal restoration"
+          ],
+          "implementation": {
+            "objective": "Restore mangrove ecosystems for ecological and community benefits.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "nursery",
+              "restoration"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "nursery",
+              "restoration"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "nursery",
+              "restoration"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "traditional_knowledge"
+          ],
+          "implementation_contexts": [
+            "coastal",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of mangrove restoration"
+            ],
+            "secondary": [
+              "Improved local capability through the restoration stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "coastal_protection",
+          "label": "Coastal Protection",
+          "stage": "Protection",
+          "order": 3,
+          "description": "Reduce erosion, flooding and habitat loss using ecological or engineered measures.",
+          "upstream": [
+            "mangrove_restoration"
+          ],
+          "downstream": [
+            "blue_carbon"
+          ],
+          "aliases": [
+            "Coastal Protection"
+          ],
+          "keywords": [
+            "coastal protection",
+            "erosion control",
+            "storm surge",
+            "shoreline stabilization"
+          ],
+          "implementation": {
+            "objective": "Reduce erosion, flooding and habitat loss using ecological or engineered measures.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "risk assessment",
+              "restoration"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "risk assessment",
+              "restoration"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "risk assessment",
+              "restoration"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "engineering_solution"
+          ],
+          "implementation_contexts": [
+            "coastal",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of coastal protection"
+            ],
+            "secondary": [
+              "Improved local capability through the protection stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "blue_carbon",
+          "label": "Blue Carbon",
+          "stage": "Climate",
+          "order": 4,
+          "description": "Protect and restore coastal ecosystems that store carbon.",
+          "upstream": [
+            "coastal_protection"
+          ],
+          "downstream": [
+            "sustainable_fisheries"
+          ],
+          "aliases": [
+            "Blue Carbon"
+          ],
+          "keywords": [
+            "blue carbon",
+            "seagrass",
+            "mangrove carbon",
+            "saltmarsh"
+          ],
+          "implementation": {
+            "objective": "Protect and restore coastal ecosystems that store carbon.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "carbon assessment",
+              "ecosystem monitoring"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "carbon assessment",
+              "ecosystem monitoring"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "carbon assessment",
+              "ecosystem monitoring"
+            ]
+          },
+          "evidence_types": [
+            "institutional_solution",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "coastal",
+            "protected_area"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of blue carbon"
+            ],
+            "secondary": [
+              "Improved local capability through the climate stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "climate_adaptation_disaster_resilience",
+              "node": "local_adaptation",
+              "relationship": "supports",
+              "reason": "Healthy coastal ecosystems can support climate adaptation."
+            }
+          ]
+        },
+        {
+          "id": "sustainable_fisheries",
+          "label": "Sustainable Fisheries",
+          "stage": "Livelihood",
+          "order": 5,
+          "description": "Support fishery practices that maintain stocks and ecosystem health.",
+          "upstream": [
+            "blue_carbon"
+          ],
+          "downstream": [
+            "coastal_livelihoods"
+          ],
+          "aliases": [
+            "Sustainable Fisheries"
+          ],
+          "keywords": [
+            "sustainable fisheries",
+            "small scale fisheries",
+            "fish management",
+            "marine conservation"
+          ],
+          "implementation": {
+            "objective": "Support fishery practices that maintain stocks and ecosystem health.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "resource management",
+              "community governance"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "resource management",
+              "community governance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "resource management",
+              "community governance"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "coastal",
+            "fishing_community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of sustainable fisheries"
+            ],
+            "secondary": [
+              "Improved local capability through the livelihood stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "coastal_livelihoods",
+          "label": "Coastal Livelihoods",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Strengthen resilient livelihoods connected to healthy coastal systems.",
+          "upstream": [
+            "sustainable_fisheries"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Coastal Livelihoods"
+          ],
+          "keywords": [
+            "coastal livelihood",
+            "fishing livelihoods",
+            "marine enterprise",
+            "eco tourism"
+          ],
+          "implementation": {
+            "objective": "Strengthen resilient livelihoods connected to healthy coastal systems.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "enterprise",
+              "resource management"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "enterprise",
+              "resource management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "enterprise",
+              "resource management"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "social_enterprise"
+          ],
+          "implementation_contexts": [
+            "coastal",
+            "community",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of coastal livelihoods"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        }
+      ]
+    },
+    "digital_transformation_ai": {
+      "label": "Digital Transformation & AI",
+      "description": "From digital access and data collection through digital tools, AI-assisted analysis and decision support.",
+      "color": "#4f46e5",
+      "implementation_contexts": [
+        "rural_household",
+        "school",
+        "community",
+        "municipality",
+        "small_enterprise"
+      ],
+      "evidence_types": [
+        "digital_innovation",
+        "community_project",
+        "grassroots_innovation",
+        "engineering_prototype",
+        "institutional_solution"
+      ],
+      "cross_sector_domains": [
+        "governance_public_services",
+        "education_communication",
+        "finance_social_innovation",
+        "health_medical_access"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "digital_access_connectivity": [
+            120,
+            270
+          ],
+          "data_collection": [
+            340,
+            270
+          ],
+          "digital_tools": [
+            560,
+            270
+          ],
+          "ai_automation": [
+            780,
+            270
+          ],
+          "decision_support": [
+            1000,
+            270
+          ],
+          "digital_service": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "digital_access_connectivity",
+          "label": "Digital Access",
+          "stage": "Access",
+          "order": 1,
+          "description": "Provide affordable connectivity and access to digital tools.",
+          "upstream": [],
+          "downstream": [
+            "data_collection"
+          ],
+          "aliases": [
+            "Digital Access"
+          ],
+          "keywords": [
+            "digital access",
+            "connectivity",
+            "internet access",
+            "mobile access"
+          ],
+          "implementation": {
+            "objective": "Provide affordable connectivity and access to digital tools.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "digital literacy"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "digital literacy"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "digital literacy"
+            ]
+          },
+          "evidence_types": [
+            "digital_innovation",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of digital access"
+            ],
+            "secondary": [
+              "Improved local capability through the access stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "data_collection",
+          "label": "Data Collection",
+          "stage": "Data",
+          "order": 2,
+          "description": "Capture structured information from people, places and processes.",
+          "upstream": [
+            "digital_access_connectivity"
+          ],
+          "downstream": [
+            "digital_tools"
+          ],
+          "aliases": [
+            "Data Collection"
+          ],
+          "keywords": [
+            "data collection",
+            "digital forms",
+            "mobile data",
+            "field data",
+            "sensors"
+          ],
+          "implementation": {
+            "objective": "Capture structured information from people, places and processes.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "data capture",
+              "field methods"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "data capture",
+              "field methods"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "data capture",
+              "field methods"
+            ]
+          },
+          "evidence_types": [
+            "digital_innovation",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of data collection"
+            ],
+            "secondary": [
+              "Improved local capability through the data stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "digital_tools",
+          "label": "Digital Tools",
+          "stage": "Tools",
+          "order": 3,
+          "description": "Deploy practical software, mobile tools and digital workflows.",
+          "upstream": [
+            "data_collection"
+          ],
+          "downstream": [
+            "ai_automation"
+          ],
+          "aliases": [
+            "Digital Tools"
+          ],
+          "keywords": [
+            "digital tool",
+            "mobile app",
+            "PWA",
+            "e-government",
+            "workflow"
+          ],
+          "implementation": {
+            "objective": "Deploy practical software, mobile tools and digital workflows.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "digital literacy",
+              "workflow design"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "digital literacy",
+              "workflow design"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "digital literacy",
+              "workflow design"
+            ]
+          },
+          "evidence_types": [
+            "digital_innovation",
+            "grassroots_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of digital tools"
+            ],
+            "secondary": [
+              "Improved local capability through the tools stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "ai_automation",
+          "label": "AI & Automation",
+          "stage": "Intelligence",
+          "order": 4,
+          "description": "Use AI or automation to augment analysis, monitoring or routine tasks.",
+          "upstream": [
+            "digital_tools"
+          ],
+          "downstream": [
+            "decision_support"
+          ],
+          "aliases": [
+            "AI & Automation"
+          ],
+          "keywords": [
+            "AI",
+            "artificial intelligence",
+            "automation",
+            "machine learning",
+            "LLM"
+          ],
+          "implementation": {
+            "objective": "Use AI or automation to augment analysis, monitoring or routine tasks.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "AI literacy",
+              "automation"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "AI literacy",
+              "automation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "AI literacy",
+              "automation"
+            ]
+          },
+          "evidence_types": [
+            "digital_innovation",
+            "engineering_prototype"
+          ],
+          "implementation_contexts": [
+            "small_enterprise",
+            "municipality",
+            "school"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of ai & automation"
+            ],
+            "secondary": [
+              "Improved local capability through the intelligence stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "decision_support",
+          "label": "Decision Support",
+          "stage": "Decision",
+          "order": 5,
+          "description": "Turn data and analysis into actionable decisions.",
+          "upstream": [
+            "ai_automation"
+          ],
+          "downstream": [
+            "digital_service"
+          ],
+          "aliases": [
+            "Decision Support"
+          ],
+          "keywords": [
+            "decision support",
+            "dashboard",
+            "analytics",
+            "early warning",
+            "planning tool"
+          ],
+          "implementation": {
+            "objective": "Turn data and analysis into actionable decisions.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "analysis",
+              "visualization"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "analysis",
+              "visualization"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "analysis",
+              "visualization"
+            ]
+          },
+          "evidence_types": [
+            "digital_innovation",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "municipality",
+            "community",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of decision support"
+            ],
+            "secondary": [
+              "Improved local capability through the decision stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "governance_public_services",
+              "node": "policy_implementation",
+              "relationship": "can_support",
+              "reason": "Decision tools can support service and policy implementation."
+            }
+          ]
+        },
+        {
+          "id": "digital_service",
+          "label": "Digital Public & Community Service",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Deliver services through digital channels with practical local value.",
+          "upstream": [
+            "decision_support"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Digital Public & Community Service"
+          ],
+          "keywords": [
+            "digital public service",
+            "e-government",
+            "digital service",
+            "mobile service"
+          ],
+          "implementation": {
+            "objective": "Deliver services through digital channels with practical local value.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "service design",
+              "digital literacy"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "service design",
+              "digital literacy"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "service design",
+              "digital literacy"
+            ]
+          },
+          "evidence_types": [
+            "digital_innovation",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "municipality",
+            "community",
+            "school"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of digital public & community service"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        }
+      ]
+    },
+    "governance_public_services": {
+      "label": "Governance & Public Services",
+      "description": "From needs and policy information through participation, service delivery, accountability and feedback.",
+      "color": "#334155",
+      "implementation_contexts": [
+        "community",
+        "municipality",
+        "government"
+      ],
+      "evidence_types": [
+        "community_project",
+        "institutional_solution",
+        "social_innovation"
+      ],
+      "cross_sector_domains": [
+        "digital_transformation_ai",
+        "social_inclusion_accessibility",
+        "urban_community_systems",
+        "peace_community_resilience"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "needs_assessment": [
+            120,
+            270
+          ],
+          "participatory_governance": [
+            340,
+            270
+          ],
+          "policy_implementation": [
+            560,
+            270
+          ],
+          "service_delivery": [
+            780,
+            270
+          ],
+          "accountability": [
+            1000,
+            270
+          ],
+          "feedback_adaptation": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "needs_assessment",
+          "label": "Needs Assessment",
+          "stage": "Assessment",
+          "order": 1,
+          "description": "Understand local needs, service gaps and affected populations.",
+          "upstream": [],
+          "downstream": [
+            "participatory_governance"
+          ],
+          "aliases": [
+            "Needs Assessment"
+          ],
+          "keywords": [
+            "needs assessment",
+            "service gap",
+            "community needs",
+            "local assessment"
+          ],
+          "implementation": {
+            "objective": "Understand local needs, service gaps and affected populations.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "assessment",
+              "consultation"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "assessment",
+              "consultation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "assessment",
+              "consultation"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of needs assessment"
+            ],
+            "secondary": [
+              "Improved local capability through the assessment stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "participatory_governance",
+          "label": "Participation",
+          "stage": "Participation",
+          "order": 2,
+          "description": "Include citizens and stakeholders in decisions and implementation.",
+          "upstream": [
+            "needs_assessment"
+          ],
+          "downstream": [
+            "policy_implementation"
+          ],
+          "aliases": [
+            "Participation"
+          ],
+          "keywords": [
+            "participatory governance",
+            "citizen participation",
+            "community consultation",
+            "co-design"
+          ],
+          "implementation": {
+            "objective": "Include citizens and stakeholders in decisions and implementation.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "facilitation",
+              "stakeholder engagement"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "facilitation",
+              "stakeholder engagement"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "facilitation",
+              "stakeholder engagement"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of participation"
+            ],
+            "secondary": [
+              "Improved local capability through the participation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "policy_implementation",
+          "label": "Policy Implementation",
+          "stage": "Implementation",
+          "order": 3,
+          "description": "Translate policy goals into practical programs, services and local action.",
+          "upstream": [
+            "participatory_governance"
+          ],
+          "downstream": [
+            "service_delivery"
+          ],
+          "aliases": [
+            "Policy Implementation"
+          ],
+          "keywords": [
+            "policy implementation",
+            "local government",
+            "program delivery",
+            "public administration"
+          ],
+          "implementation": {
+            "objective": "Translate policy goals into practical programs, services and local action.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "coordination",
+              "program management"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "coordination",
+              "program management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "coordination",
+              "program management"
+            ]
+          },
+          "evidence_types": [
+            "institutional_solution",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "municipality",
+            "government"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of policy implementation"
+            ],
+            "secondary": [
+              "Improved local capability through the implementation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "service_delivery",
+          "label": "Service Delivery",
+          "stage": "Delivery",
+          "order": 4,
+          "description": "Provide accessible and reliable public or community services.",
+          "upstream": [
+            "policy_implementation"
+          ],
+          "downstream": [
+            "accountability"
+          ],
+          "aliases": [
+            "Service Delivery"
+          ],
+          "keywords": [
+            "public service",
+            "service delivery",
+            "community service",
+            "local government"
+          ],
+          "implementation": {
+            "objective": "Provide accessible and reliable public or community services.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "service management",
+              "coordination"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "service management",
+              "coordination"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "service management",
+              "coordination"
+            ]
+          },
+          "evidence_types": [
+            "institutional_solution",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "municipality",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of service delivery"
+            ],
+            "secondary": [
+              "Improved local capability through the delivery stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "digital_transformation_ai",
+              "node": "digital_service",
+              "relationship": "can_use",
+              "reason": "Digital services can be delivery channels."
+            }
+          ]
+        },
+        {
+          "id": "accountability",
+          "label": "Accountability",
+          "stage": "Oversight",
+          "order": 5,
+          "description": "Track decisions, resources and performance with transparent mechanisms.",
+          "upstream": [
+            "service_delivery"
+          ],
+          "downstream": [
+            "feedback_adaptation"
+          ],
+          "aliases": [
+            "Accountability"
+          ],
+          "keywords": [
+            "accountability",
+            "transparency",
+            "social audit",
+            "monitoring"
+          ],
+          "implementation": {
+            "objective": "Track decisions, resources and performance with transparent mechanisms.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "monitoring",
+              "auditing"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "auditing"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "auditing"
+            ]
+          },
+          "evidence_types": [
+            "institutional_solution",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of accountability"
+            ],
+            "secondary": [
+              "Improved local capability through the oversight stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "feedback_adaptation",
+          "label": "Feedback & Adaptation",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Use implementation feedback to improve services and policy delivery.",
+          "upstream": [
+            "accountability"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Feedback & Adaptation"
+          ],
+          "keywords": [
+            "feedback",
+            "adaptive management",
+            "service improvement",
+            "learning loop"
+          ],
+          "implementation": {
+            "objective": "Use implementation feedback to improve services and policy delivery.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "feedback analysis",
+              "adaptive management"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "feedback analysis",
+              "adaptive management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "feedback analysis",
+              "adaptive management"
+            ]
+          },
+          "evidence_types": [
+            "institutional_solution",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "municipality",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of feedback & adaptation"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        }
+      ]
+    },
+    "social_inclusion_accessibility": {
+      "label": "Social Inclusion & Accessibility",
+      "description": "From identifying barriers through inclusive design, assistive solutions, participation and independent access.",
+      "color": "#be185d",
+      "implementation_contexts": [
+        "community",
+        "school",
+        "municipality",
+        "household",
+        "clinic"
+      ],
+      "evidence_types": [
+        "community_project",
+        "institutional_solution",
+        "engineering_solution",
+        "social_innovation",
+        "medical_device",
+        "grassroots_innovation",
+        "engineering_prototype"
+      ],
+      "cross_sector_domains": [
+        "health_medical_access",
+        "education_communication",
+        "governance_public_services",
+        "transport_mobility"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "barrier_assessment": [
+            120,
+            270
+          ],
+          "inclusive_design": [
+            340,
+            270
+          ],
+          "assistive_solutions": [
+            560,
+            270
+          ],
+          "inclusive_services": [
+            780,
+            270
+          ],
+          "participation": [
+            1000,
+            270
+          ],
+          "independent_access": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "barrier_assessment",
+          "label": "Barrier Assessment",
+          "stage": "Assessment",
+          "order": 1,
+          "description": "Identify physical, social, digital and institutional barriers to participation.",
+          "upstream": [],
+          "downstream": [
+            "inclusive_design"
+          ],
+          "aliases": [
+            "Barrier Assessment"
+          ],
+          "keywords": [
+            "accessibility barrier",
+            "disability inclusion",
+            "barrier assessment",
+            "social exclusion"
+          ],
+          "implementation": {
+            "objective": "Identify physical, social, digital and institutional barriers to participation.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "assessment",
+              "consultation"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "assessment",
+              "consultation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "assessment",
+              "consultation"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of barrier assessment"
+            ],
+            "secondary": [
+              "Improved local capability through the assessment stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "inclusive_design",
+          "label": "Inclusive Design",
+          "stage": "Design",
+          "order": 2,
+          "description": "Design services, spaces and tools around diverse user needs.",
+          "upstream": [
+            "barrier_assessment"
+          ],
+          "downstream": [
+            "assistive_solutions"
+          ],
+          "aliases": [
+            "Inclusive Design"
+          ],
+          "keywords": [
+            "inclusive design",
+            "universal design",
+            "accessible design"
+          ],
+          "implementation": {
+            "objective": "Design services, spaces and tools around diverse user needs.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "user research",
+              "inclusive design"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "user research",
+              "inclusive design"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "user research",
+              "inclusive design"
+            ]
+          },
+          "evidence_types": [
+            "engineering_solution",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of inclusive design"
+            ],
+            "secondary": [
+              "Improved local capability through the design stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "assistive_solutions",
+          "label": "Assistive Solutions",
+          "stage": "Tools",
+          "order": 3,
+          "description": "Provide devices, tools and adaptations that improve independence.",
+          "upstream": [
+            "inclusive_design"
+          ],
+          "downstream": [
+            "inclusive_services"
+          ],
+          "aliases": [
+            "Assistive Solutions"
+          ],
+          "keywords": [
+            "assistive technology",
+            "wheelchair",
+            "prosthetic",
+            "hearing aid",
+            "accessibility tool"
+          ],
+          "implementation": {
+            "objective": "Provide devices, tools and adaptations that improve independence.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "adaptation",
+              "fabrication"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "adaptation",
+              "fabrication"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "adaptation",
+              "fabrication"
+            ]
+          },
+          "evidence_types": [
+            "medical_device",
+            "grassroots_innovation",
+            "engineering_prototype"
+          ],
+          "implementation_contexts": [
+            "household",
+            "school",
+            "clinic",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of assistive solutions"
+            ],
+            "secondary": [
+              "Improved local capability through the tools stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "health_medical_access",
+              "node": "medical_tools",
+              "relationship": "can_use",
+              "reason": "Assistive solutions can overlap with locally adapted medical tools."
+            }
+          ]
+        },
+        {
+          "id": "inclusive_services",
+          "label": "Inclusive Services",
+          "stage": "Services",
+          "order": 4,
+          "description": "Adapt public and community services so more people can use them.",
+          "upstream": [
+            "assistive_solutions"
+          ],
+          "downstream": [
+            "participation"
+          ],
+          "aliases": [
+            "Inclusive Services"
+          ],
+          "keywords": [
+            "inclusive service",
+            "accessible public service",
+            "inclusive education"
+          ],
+          "implementation": {
+            "objective": "Adapt public and community services so more people can use them.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "service design",
+              "communication"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "service design",
+              "communication"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "service design",
+              "communication"
+            ]
+          },
+          "evidence_types": [
+            "institutional_solution",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "municipality",
+            "school",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of inclusive services"
+            ],
+            "secondary": [
+              "Improved local capability through the services stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "participation",
+          "label": "Participation",
+          "stage": "Participation",
+          "order": 5,
+          "description": "Ensure underrepresented groups can participate in decisions and community life.",
+          "upstream": [
+            "inclusive_services"
+          ],
+          "downstream": [
+            "independent_access"
+          ],
+          "aliases": [
+            "Participation"
+          ],
+          "keywords": [
+            "participation",
+            "social inclusion",
+            "disability inclusion",
+            "youth participation"
+          ],
+          "implementation": {
+            "objective": "Ensure underrepresented groups can participate in decisions and community life.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "facilitation",
+              "advocacy"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "facilitation",
+              "advocacy"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "facilitation",
+              "advocacy"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of participation"
+            ],
+            "secondary": [
+              "Improved local capability through the participation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "independent_access",
+          "label": "Independent Access",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Improve independence, mobility, information access and participation.",
+          "upstream": [
+            "participation"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Independent Access"
+          ],
+          "keywords": [
+            "independent living",
+            "accessibility",
+            "mobility access",
+            "inclusive participation"
+          ],
+          "implementation": {
+            "objective": "Improve independence, mobility, information access and participation.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "self advocacy",
+              "maintenance"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "self advocacy",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "self advocacy",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "household",
+            "community",
+            "school"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of independent access"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        }
+      ]
+    },
+    "livelihoods_employment": {
+      "label": "Livelihoods & Employment",
+      "description": "From skills and resource access through enterprise, markets and resilient livelihoods.",
+      "color": "#ca8a04",
+      "implementation_contexts": [
+        "community",
+        "school",
+        "small_enterprise",
+        "farm",
+        "cooperative"
+      ],
+      "evidence_types": [
+        "teaching_practice",
+        "community_project",
+        "social_enterprise",
+        "grassroots_innovation",
+        "institutional_solution",
+        "social_innovation"
+      ],
+      "cross_sector_domains": [
+        "agriculture_food_security",
+        "finance_social_innovation",
+        "culture_heritage",
+        "marine_coastal_systems"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "skills_development": [
+            120,
+            270
+          ],
+          "productive_assets": [
+            340,
+            270
+          ],
+          "microenterprise": [
+            560,
+            270
+          ],
+          "market_access": [
+            780,
+            270
+          ],
+          "income_generation": [
+            1000,
+            270
+          ],
+          "livelihood_resilience": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "skills_development",
+          "label": "Skills Development",
+          "stage": "Foundation",
+          "order": 1,
+          "description": "Build practical and employable skills aligned with local opportunities.",
+          "upstream": [],
+          "downstream": [
+            "productive_assets"
+          ],
+          "aliases": [
+            "Skills Development"
+          ],
+          "keywords": [
+            "skills training",
+            "vocational training",
+            "capacity building",
+            "apprenticeship"
+          ],
+          "implementation": {
+            "objective": "Build practical and employable skills aligned with local opportunities.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "training",
+              "mentoring"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "training",
+              "mentoring"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "training",
+              "mentoring"
+            ]
+          },
+          "evidence_types": [
+            "teaching_practice",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of skills development"
+            ],
+            "secondary": [
+              "Improved local capability through the foundation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "education_communication",
+              "node": "teaching_support",
+              "relationship": "can_use",
+              "reason": "Livelihood pathways often depend on teaching and training."
+            }
+          ]
+        },
+        {
+          "id": "productive_assets",
+          "label": "Productive Assets",
+          "stage": "Inputs",
+          "order": 2,
+          "description": "Provide access to tools, equipment and productive resources.",
+          "upstream": [
+            "skills_development"
+          ],
+          "downstream": [
+            "microenterprise"
+          ],
+          "aliases": [
+            "Productive Assets"
+          ],
+          "keywords": [
+            "productive asset",
+            "tools",
+            "equipment",
+            "micro enterprise",
+            "livelihood asset"
+          ],
+          "implementation": {
+            "objective": "Provide access to tools, equipment and productive resources.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "asset management"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "asset management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "asset management"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "social_enterprise"
+          ],
+          "implementation_contexts": [
+            "small_enterprise",
+            "farm",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of productive assets"
+            ],
+            "secondary": [
+              "Improved local capability through the inputs stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "microenterprise",
+          "label": "Microenterprise",
+          "stage": "Enterprise",
+          "order": 3,
+          "description": "Create or strengthen small-scale income-generating activities.",
+          "upstream": [
+            "productive_assets"
+          ],
+          "downstream": [
+            "market_access"
+          ],
+          "aliases": [
+            "Microenterprise"
+          ],
+          "keywords": [
+            "microenterprise",
+            "small business",
+            "local enterprise",
+            "social enterprise"
+          ],
+          "implementation": {
+            "objective": "Create or strengthen small-scale income-generating activities.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "enterprise management",
+              "bookkeeping"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "enterprise management",
+              "bookkeeping"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "enterprise management",
+              "bookkeeping"
+            ]
+          },
+          "evidence_types": [
+            "social_enterprise",
+            "grassroots_innovation"
+          ],
+          "implementation_contexts": [
+            "small_enterprise",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of microenterprise"
+            ],
+            "secondary": [
+              "Improved local capability through the enterprise stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "market_access",
+          "label": "Market Access",
+          "stage": "Market",
+          "order": 4,
+          "description": "Connect local products and services to buyers and distribution channels.",
+          "upstream": [
+            "microenterprise"
+          ],
+          "downstream": [
+            "income_generation"
+          ],
+          "aliases": [
+            "Market Access"
+          ],
+          "keywords": [
+            "market access",
+            "local market",
+            "value chain",
+            "distribution"
+          ],
+          "implementation": {
+            "objective": "Connect local products and services to buyers and distribution channels.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "marketing",
+              "sales"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "marketing",
+              "sales"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "marketing",
+              "sales"
+            ]
+          },
+          "evidence_types": [
+            "social_enterprise",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "small_enterprise",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of market access"
+            ],
+            "secondary": [
+              "Improved local capability through the market stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "income_generation",
+          "label": "Income Generation",
+          "stage": "Outcome",
+          "order": 5,
+          "description": "Generate reliable income through productive local activity.",
+          "upstream": [
+            "market_access"
+          ],
+          "downstream": [
+            "livelihood_resilience"
+          ],
+          "aliases": [
+            "Income Generation"
+          ],
+          "keywords": [
+            "income generation",
+            "livelihood",
+            "employment",
+            "local jobs"
+          ],
+          "implementation": {
+            "objective": "Generate reliable income through productive local activity.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "financial management",
+              "enterprise management"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "financial management",
+              "enterprise management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "financial management",
+              "enterprise management"
+            ]
+          },
+          "evidence_types": [
+            "social_enterprise",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "community",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of income generation"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "livelihood_resilience",
+          "label": "Livelihood Resilience",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Strengthen the ability of households and communities to absorb shocks.",
+          "upstream": [
+            "income_generation"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Livelihood Resilience"
+          ],
+          "keywords": [
+            "livelihood resilience",
+            "economic resilience",
+            "diversification",
+            "social protection"
+          ],
+          "implementation": {
+            "objective": "Strengthen the ability of households and communities to absorb shocks.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "risk management",
+              "planning"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "risk management",
+              "planning"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "risk management",
+              "planning"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of livelihood resilience"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        }
+      ]
+    },
+    "culture_heritage": {
+      "label": "Culture & Heritage",
+      "description": "From living knowledge and transmission through documentation, safeguarding and community-led cultural continuity.",
+      "color": "#7e22ce",
+      "implementation_contexts": [
+        "community",
+        "school",
+        "cultural_group",
+        "cultural_institution",
+        "small_enterprise"
+      ],
+      "evidence_types": [
+        "traditional_knowledge",
+        "community_project",
+        "teaching_practice",
+        "digital_innovation",
+        "institutional_solution",
+        "social_enterprise"
+      ],
+      "cross_sector_domains": [
+        "education_communication",
+        "livelihoods_employment",
+        "social_inclusion_accessibility"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "living_heritage": [
+            120,
+            270
+          ],
+          "knowledge_transmission": [
+            340,
+            270
+          ],
+          "documentation": [
+            560,
+            270
+          ],
+          "safeguarding": [
+            780,
+            270
+          ],
+          "cultural_enterprise": [
+            1000,
+            270
+          ],
+          "cultural_continuity": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "living_heritage",
+          "label": "Living Heritage",
+          "stage": "Knowledge",
+          "order": 1,
+          "description": "Recognize living cultural practices, expressions and knowledge.",
+          "upstream": [],
+          "downstream": [
+            "knowledge_transmission"
+          ],
+          "aliases": [
+            "Living Heritage"
+          ],
+          "keywords": [
+            "intangible cultural heritage",
+            "living heritage",
+            "traditional practice",
+            "traditional knowledge"
+          ],
+          "implementation": {
+            "objective": "Recognize living cultural practices, expressions and knowledge.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "documentation",
+              "community engagement"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "documentation",
+              "community engagement"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "documentation",
+              "community engagement"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school",
+            "cultural_group"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of living heritage"
+            ],
+            "secondary": [
+              "Improved local capability through the knowledge stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "knowledge_transmission",
+          "label": "Knowledge Transmission",
+          "stage": "Transmission",
+          "order": 2,
+          "description": "Pass cultural knowledge and practice between generations.",
+          "upstream": [
+            "living_heritage"
+          ],
+          "downstream": [
+            "documentation"
+          ],
+          "aliases": [
+            "Knowledge Transmission"
+          ],
+          "keywords": [
+            "knowledge transmission",
+            "intergenerational",
+            "apprenticeship",
+            "oral tradition"
+          ],
+          "implementation": {
+            "objective": "Pass cultural knowledge and practice between generations.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "mentoring",
+              "documentation"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "mentoring",
+              "documentation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "mentoring",
+              "documentation"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "teaching_practice"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of knowledge transmission"
+            ],
+            "secondary": [
+              "Improved local capability through the transmission stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "documentation",
+          "label": "Documentation",
+          "stage": "Documentation",
+          "order": 3,
+          "description": "Document cultural practices without separating them from their living context.",
+          "upstream": [
+            "knowledge_transmission"
+          ],
+          "downstream": [
+            "safeguarding"
+          ],
+          "aliases": [
+            "Documentation"
+          ],
+          "keywords": [
+            "heritage documentation",
+            "cultural mapping",
+            "digital heritage",
+            "documentation"
+          ],
+          "implementation": {
+            "objective": "Document cultural practices without separating them from their living context.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "field documentation",
+              "mapping"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "field documentation",
+              "mapping"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "field documentation",
+              "mapping"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "digital_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cultural_institution"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of documentation"
+            ],
+            "secondary": [
+              "Improved local capability through the documentation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "safeguarding",
+          "label": "Safeguarding",
+          "stage": "Safeguarding",
+          "order": 4,
+          "description": "Support the continued viability and transmission of cultural practices.",
+          "upstream": [
+            "documentation"
+          ],
+          "downstream": [
+            "cultural_enterprise"
+          ],
+          "aliases": [
+            "Safeguarding"
+          ],
+          "keywords": [
+            "safeguarding",
+            "heritage protection",
+            "cultural preservation"
+          ],
+          "implementation": {
+            "objective": "Support the continued viability and transmission of cultural practices.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "community governance",
+              "program management"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "community governance",
+              "program management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "community governance",
+              "program management"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cultural_institution"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of safeguarding"
+            ],
+            "secondary": [
+              "Improved local capability through the safeguarding stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "cultural_enterprise",
+          "label": "Cultural Enterprise",
+          "stage": "Enterprise",
+          "order": 5,
+          "description": "Create respectful livelihood opportunities around cultural knowledge and products.",
+          "upstream": [
+            "safeguarding"
+          ],
+          "downstream": [
+            "cultural_continuity"
+          ],
+          "aliases": [
+            "Cultural Enterprise"
+          ],
+          "keywords": [
+            "cultural enterprise",
+            "creative economy",
+            "heritage tourism",
+            "artisan enterprise"
+          ],
+          "implementation": {
+            "objective": "Create respectful livelihood opportunities around cultural knowledge and products.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "enterprise management",
+              "cultural entrepreneurship"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "enterprise management",
+              "cultural entrepreneurship"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "enterprise management",
+              "cultural entrepreneurship"
+            ]
+          },
+          "evidence_types": [
+            "social_enterprise",
+            "traditional_knowledge"
+          ],
+          "implementation_contexts": [
+            "community",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of cultural enterprise"
+            ],
+            "secondary": [
+              "Improved local capability through the enterprise stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "livelihoods_employment",
+              "node": "microenterprise",
+              "relationship": "can_support",
+              "reason": "Cultural enterprise can become a livelihood pathway."
+            }
+          ]
+        },
+        {
+          "id": "cultural_continuity",
+          "label": "Cultural Continuity",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Strengthen continuity, community agency and respectful cultural visibility.",
+          "upstream": [
+            "cultural_enterprise"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Cultural Continuity"
+          ],
+          "keywords": [
+            "cultural continuity",
+            "community identity",
+            "heritage continuity"
+          ],
+          "implementation": {
+            "objective": "Strengthen continuity, community agency and respectful cultural visibility.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "community stewardship"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "community stewardship"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "community stewardship"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "traditional_knowledge"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cultural_group"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of cultural continuity"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        }
+      ]
+    },
+    "urban_community_systems": {
+      "label": "Urban & Community Systems",
+      "description": "From local diagnosis through infrastructure, public space, housing, mobility and neighborhood resilience.",
+      "color": "#0f766e",
+      "implementation_contexts": [
+        "community",
+        "municipality",
+        "school"
+      ],
+      "evidence_types": [
+        "community_project",
+        "institutional_solution",
+        "grassroots_innovation",
+        "engineering_solution",
+        "social_innovation"
+      ],
+      "cross_sector_domains": [
+        "construction_shelter",
+        "transport_mobility",
+        "water_management",
+        "governance_public_services"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "community_diagnosis": [
+            120,
+            270
+          ],
+          "public_space": [
+            340,
+            270
+          ],
+          "urban_services": [
+            560,
+            270
+          ],
+          "local_mobility": [
+            780,
+            270
+          ],
+          "neighborhood_resilience": [
+            1000,
+            270
+          ],
+          "inclusive_community_outcome": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "community_diagnosis",
+          "label": "Community Diagnosis",
+          "stage": "Assessment",
+          "order": 1,
+          "description": "Understand local conditions, assets, service gaps and community priorities.",
+          "upstream": [],
+          "downstream": [
+            "public_space"
+          ],
+          "aliases": [
+            "Community Diagnosis"
+          ],
+          "keywords": [
+            "community mapping",
+            "urban diagnosis",
+            "neighborhood assessment"
+          ],
+          "implementation": {
+            "objective": "Understand local conditions, assets, service gaps and community priorities.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "mapping",
+              "participatory assessment"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "mapping",
+              "participatory assessment"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "mapping",
+              "participatory assessment"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of community diagnosis"
+            ],
+            "secondary": [
+              "Improved local capability through the assessment stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "public_space",
+          "label": "Public Space",
+          "stage": "Infrastructure",
+          "order": 2,
+          "description": "Create safer and more useful shared spaces for community life.",
+          "upstream": [
+            "community_diagnosis"
+          ],
+          "downstream": [
+            "urban_services"
+          ],
+          "aliases": [
+            "Public Space"
+          ],
+          "keywords": [
+            "public space",
+            "community garden",
+            "park",
+            "shared space"
+          ],
+          "implementation": {
+            "objective": "Create safer and more useful shared spaces for community life.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "placemaking",
+              "community design"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "placemaking",
+              "community design"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "placemaking",
+              "community design"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "grassroots_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "school"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of public space"
+            ],
+            "secondary": [
+              "Improved local capability through the infrastructure stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "urban_services",
+          "label": "Urban Services",
+          "stage": "Services",
+          "order": 3,
+          "description": "Improve practical neighborhood services such as waste, water, drainage and information.",
+          "upstream": [
+            "public_space"
+          ],
+          "downstream": [
+            "local_mobility"
+          ],
+          "aliases": [
+            "Urban Services"
+          ],
+          "keywords": [
+            "urban services",
+            "waste management",
+            "water service",
+            "drainage",
+            "community service"
+          ],
+          "implementation": {
+            "objective": "Improve practical neighborhood services such as waste, water, drainage and information.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "service management"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "service management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "service management"
+            ]
+          },
+          "evidence_types": [
+            "institutional_solution",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "municipality",
+            "community"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of urban services"
+            ],
+            "secondary": [
+              "Improved local capability through the services stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "water_management",
+              "node": "water_sanitation",
+              "relationship": "can_link",
+              "reason": "Urban services often include WASH."
+            }
+          ]
+        },
+        {
+          "id": "local_mobility",
+          "label": "Local Mobility",
+          "stage": "Mobility",
+          "order": 4,
+          "description": "Improve short-distance mobility and access to essential places.",
+          "upstream": [
+            "urban_services"
+          ],
+          "downstream": [
+            "neighborhood_resilience"
+          ],
+          "aliases": [
+            "Local Mobility"
+          ],
+          "keywords": [
+            "local mobility",
+            "walking",
+            "cycling",
+            "transport access",
+            "mobility"
+          ],
+          "implementation": {
+            "objective": "Improve short-distance mobility and access to essential places.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "mobility planning"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "mobility planning"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "mobility planning"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "engineering_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "school"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of local mobility"
+            ],
+            "secondary": [
+              "Improved local capability through the mobility stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "neighborhood_resilience",
+          "label": "Neighborhood Resilience",
+          "stage": "Resilience",
+          "order": 5,
+          "description": "Strengthen local capacity to absorb environmental and social shocks.",
+          "upstream": [
+            "local_mobility"
+          ],
+          "downstream": [
+            "inclusive_community_outcome"
+          ],
+          "aliases": [
+            "Neighborhood Resilience"
+          ],
+          "keywords": [
+            "neighborhood resilience",
+            "community resilience",
+            "urban resilience"
+          ],
+          "implementation": {
+            "objective": "Strengthen local capacity to absorb environmental and social shocks.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "planning",
+              "coordination"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "planning",
+              "coordination"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "planning",
+              "coordination"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of neighborhood resilience"
+            ],
+            "secondary": [
+              "Improved local capability through the resilience stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "inclusive_community_outcome",
+          "label": "Inclusive Community Outcome",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Improve livability, participation and access to neighborhood opportunities.",
+          "upstream": [
+            "neighborhood_resilience"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Inclusive Community Outcome"
+          ],
+          "keywords": [
+            "livability",
+            "inclusive community",
+            "quality of life",
+            "community wellbeing"
+          ],
+          "implementation": {
+            "objective": "Improve livability, participation and access to neighborhood opportunities.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "community governance"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "community governance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "community governance"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of inclusive community outcome"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        }
+      ]
+    },
+    "peace_community_resilience": {
+      "label": "Peace & Community Resilience",
+      "description": "From trust and dialogue through conflict-sensitive action, social cohesion and resilient communities.",
+      "color": "#9f1239",
+      "implementation_contexts": [
+        "community",
+        "school",
+        "municipality",
+        "cooperative"
+      ],
+      "evidence_types": [
+        "community_project",
+        "social_innovation",
+        "institutional_solution"
+      ],
+      "cross_sector_domains": [
+        "governance_public_services",
+        "social_inclusion_accessibility",
+        "livelihoods_employment",
+        "education_communication"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "trust_relationships": [
+            120,
+            270
+          ],
+          "dialogue_mediation": [
+            340,
+            270
+          ],
+          "conflict_sensitive_action": [
+            560,
+            270
+          ],
+          "collective_problem_solving": [
+            780,
+            270
+          ],
+          "social_cohesion": [
+            1000,
+            270
+          ],
+          "community_resilience": [
+            1200,
+            270
+          ]
+        }
+      },
+      "nodes": [
+        {
+          "id": "trust_relationships",
+          "label": "Trust & Relationships",
+          "stage": "Foundation",
+          "order": 1,
+          "description": "Strengthen relationships, trust and social connectedness.",
+          "upstream": [],
+          "downstream": [
+            "dialogue_mediation"
+          ],
+          "aliases": [
+            "Trust & Relationships"
+          ],
+          "keywords": [
+            "trust",
+            "social cohesion",
+            "relationship building",
+            "community trust"
+          ],
+          "implementation": {
+            "objective": "Strengthen relationships, trust and social connectedness.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "listening",
+              "facilitation"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "listening",
+              "facilitation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "listening",
+              "facilitation"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of trust & relationships"
+            ],
+            "secondary": [
+              "Improved local capability through the foundation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "dialogue_mediation",
+          "label": "Dialogue & Mediation",
+          "stage": "Dialogue",
+          "order": 2,
+          "description": "Create safe processes for dialogue, mediation and conflict transformation.",
+          "upstream": [
+            "trust_relationships"
+          ],
+          "downstream": [
+            "conflict_sensitive_action"
+          ],
+          "aliases": [
+            "Dialogue & Mediation"
+          ],
+          "keywords": [
+            "dialogue",
+            "mediation",
+            "conflict resolution",
+            "peacebuilding"
+          ],
+          "implementation": {
+            "objective": "Create safe processes for dialogue, mediation and conflict transformation.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "mediation",
+              "facilitation"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "mediation",
+              "facilitation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "mediation",
+              "facilitation"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of dialogue & mediation"
+            ],
+            "secondary": [
+              "Improved local capability through the dialogue stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "conflict_sensitive_action",
+          "label": "Conflict-Sensitive Action",
+          "stage": "Action",
+          "order": 3,
+          "description": "Design interventions that reduce harm and avoid reinforcing tensions.",
+          "upstream": [
+            "dialogue_mediation"
+          ],
+          "downstream": [
+            "collective_problem_solving"
+          ],
+          "aliases": [
+            "Conflict-Sensitive Action"
+          ],
+          "keywords": [
+            "conflict sensitive",
+            "peacebuilding",
+            "do no harm",
+            "social cohesion"
+          ],
+          "implementation": {
+            "objective": "Design interventions that reduce harm and avoid reinforcing tensions.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "conflict analysis",
+              "program design"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "conflict analysis",
+              "program design"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "conflict analysis",
+              "program design"
+            ]
+          },
+          "evidence_types": [
+            "institutional_solution",
+            "community_project"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of conflict-sensitive action"
+            ],
+            "secondary": [
+              "Improved local capability through the action stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "collective_problem_solving",
+          "label": "Collective Problem Solving",
+          "stage": "Collaboration",
+          "order": 4,
+          "description": "Coordinate people around practical shared problems.",
+          "upstream": [
+            "conflict_sensitive_action"
+          ],
+          "downstream": [
+            "social_cohesion"
+          ],
+          "aliases": [
+            "Collective Problem Solving"
+          ],
+          "keywords": [
+            "collective problem solving",
+            "community action",
+            "co-design",
+            "collective action"
+          ],
+          "implementation": {
+            "objective": "Coordinate people around practical shared problems.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "coordination",
+              "co-design"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "coordination",
+              "co-design"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "coordination",
+              "co-design"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of collective problem solving"
+            ],
+            "secondary": [
+              "Improved local capability through the collaboration stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "governance_public_services",
+              "node": "participatory_governance",
+              "relationship": "can_use",
+              "reason": "Collective problem solving can feed participatory governance."
+            }
+          ]
+        },
+        {
+          "id": "social_cohesion",
+          "label": "Social Cohesion",
+          "stage": "Outcome",
+          "order": 5,
+          "description": "Strengthen inclusion, cooperation and mutual support.",
+          "upstream": [
+            "collective_problem_solving"
+          ],
+          "downstream": [
+            "community_resilience"
+          ],
+          "aliases": [
+            "Social Cohesion"
+          ],
+          "keywords": [
+            "social cohesion",
+            "community resilience",
+            "inclusion",
+            "mutual support"
+          ],
+          "implementation": {
+            "objective": "Strengthen inclusion, cooperation and mutual support.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "community governance"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "community governance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "community governance"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "social_innovation"
+          ],
+          "implementation_contexts": [
+            "community",
+            "school"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of social cohesion"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        },
+        {
+          "id": "community_resilience",
+          "label": "Community Resilience",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Enable communities to adapt and recover while maintaining social connectedness.",
+          "upstream": [
+            "social_cohesion"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Community Resilience"
+          ],
+          "keywords": [
+            "community resilience",
+            "adaptive capacity",
+            "local resilience"
+          ],
+          "implementation": {
+            "objective": "Enable communities to adapt and recover while maintaining social connectedness.",
+            "typical_inputs": [],
+            "typical_outputs": [],
+            "skills": [
+              "planning",
+              "coordination"
+            ],
+            "infrastructure": []
+          },
+          "requirements": {
+            "knowledge": [
+              "planning",
+              "coordination"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "planning",
+              "coordination"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of community resilience"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+          },
+          "cross_sector_links": []
+        }
       ]
     }
   },
