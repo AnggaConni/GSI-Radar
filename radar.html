@@ -1672,6 +1672,111 @@ function renderCatChart(cats) {
   // ═══════════════════════════════════════════════════════
   // IMPLEMENTATION PATHWAY — STATIC TAXONOMY + DYNAMIC EVIDENCE
   // ═══════════════════════════════════════════════════════
+  function getPathwayDomain() {
+    const domains = pathwayTaxonomy?.domains || {};
+    return domains[pathwayDomainId] || Object.values(domains)[0] || null;
+  }
+
+  function getPathwaySourceData() {
+    return pathwayUseFilters ? filteredData : globalData;
+  }
+
+  function pathwayNodeMatches(item, node) {
+    const categoryText = (item.category || []).map(normalizePathwayText);
+    const titleText = normalizePathwayText(item.title);
+    const summaryText = normalizePathwayText(item.summary);
+    const processText = normalizePathwayText([
+      item.process?.how_it_works,
+      ...(item.process?.step_by_step || []),
+      ...(item.process?.materials_used || [])
+    ].join(" "));
+    const impactText = normalizePathwayText(item.impact?.problem_solved);
+
+    const aliases = (node.aliases || []).map(normalizePathwayText);
+    const keywords = (node.keywords || []).map(normalizePathwayText);
+
+    let score = 0;
+    let exact = false;
+    let evidence = [];
+
+    aliases.forEach(alias => {
+      if (categoryText.some(c => c === alias || c.includes(alias) || alias.includes(c))) {
+        score = Math.max(score, 1);
+        exact = true;
+        evidence.push("category");
+      }
+    });
+
+    if (aliases.some(a => a && titleText.includes(a))) {
+      score = Math.max(score, 0.76);
+      evidence.push("title");
+    }
+
+    if (
+      keywords.some(k => k && summaryText.includes(k)) ||
+      aliases.some(a => a && summaryText.includes(a))
+    ) {
+      score = Math.max(score, 0.68);
+      evidence.push("summary");
+    }
+
+    if (
+      keywords.some(k => k && processText.includes(k)) ||
+      aliases.some(a => a && processText.includes(a))
+    ) {
+      score = Math.max(score, 0.72);
+      evidence.push("process");
+    }
+
+    if (keywords.some(k => k && impactText.includes(k))) {
+      score = Math.max(score, 0.58);
+      evidence.push("impact");
+    }
+
+    // Prefer the persisted classification when the crawler has already mapped it.
+    const stored = (item.pathway_matches || []).find(m => m.node_id === node.id);
+    if (stored && Number.isFinite(Number(stored.confidence))) {
+      score = Math.max(score, Number(stored.confidence));
+      exact = stored.match === "exact" || exact;
+      evidence = [...new Set(evidence.concat(stored.evidence || []))];
+    }
+
+    if (score < 0.58) return null;
+
+    return {
+      node_id: node.id,
+      match: exact || score >= 0.95 ? "exact" : "heuristic",
+      confidence: Math.min(1, Number(score.toFixed(2))),
+      evidence: [...new Set(evidence)]
+    };
+  }
+
+  function aggregatePathway(domain) {
+    const data = getPathwaySourceData();
+    const byNode = {};
+
+    (domain.nodes || []).forEach(node => {
+      byNode[node.id] = { exact: [], inferred: [], all: [] };
+    });
+
+    data.forEach(item => {
+      (domain.nodes || []).forEach(node => {
+        const match = pathwayNodeMatches(item, node);
+        if (!match) return;
+
+        byNode[node.id].all.push({ item, match });
+
+        if (match.match === "exact") {
+          byNode[node.id].exact.push({ item, match });
+        } else {
+          byNode[node.id].inferred.push({ item, match });
+        }
+      });
+    });
+
+    return byNode;
+  }
+
   function initImplementationPathway() {
     const select = document.getElementById("pathway-domain");
     if (!select) return;
