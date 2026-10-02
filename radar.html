@@ -107,6 +107,33 @@
       transform: translateY(-1px);
     }
 
+  
+    /* ── IMPLEMENTATION PATHWAY ── */
+    .pathway-shell { min-height: 760px; }
+    .pathway-canvas { background:
+      radial-gradient(circle at 20% 20%, rgba(15,118,110,.05), transparent 30%),
+      radial-gradient(circle at 80% 80%, rgba(37,99,235,.05), transparent 32%),
+      #ffffff;
+    }
+    .pathway-node-card { cursor:pointer; transition:transform .2s ease, filter .2s ease, opacity .2s ease; }
+    .pathway-node-card:hover { transform: translateY(-2px); filter: drop-shadow(0 8px 14px rgba(15,23,42,.12)); }
+    .pathway-connector { stroke:#cbd5e1; stroke-width:2.5; fill:none; marker-end:url(#pathway-arrow); }
+    .pathway-connector.active { stroke:#0f766e; stroke-width:3.5; }
+    .pathway-label { font-size:12px; font-weight:800; fill:#334155; pointer-events:none; }
+    .pathway-count { font-size:10px; font-weight:800; fill:#64748b; pointer-events:none; }
+    .pathway-node-bg { fill:#fff; stroke:#cbd5e1; stroke-width:1.5; }
+    .pathway-node-bg.active { stroke:#0f766e; stroke-width:3; }
+    .pathway-node-dot { fill:#0f766e; }
+    .pathway-node-dot.gap { fill:#cbd5e1; }
+    .pathway-node-dot.inferred { fill:#f59e0b; }
+    .pathway-root-bg { fill:#ecfeff; stroke:#0f766e; stroke-width:2.5; }
+    .pathway-root-label { font-size:15px; font-weight:900; fill:#0f766e; pointer-events:none; }
+    .pathway-root-count { font-size:10px; font-weight:800; fill:#0f766e; pointer-events:none; }
+    .pathway-legend-pill { display:inline-flex; align-items:center; gap:6px; border:1px solid #e2e8f0; background:#fff; border-radius:999px; padding:6px 10px; font-size:10px; font-weight:800; color:#475569; }
+    .pathway-evidence-card { transition:transform .2s ease, box-shadow .2s ease; }
+    .pathway-evidence-card:hover { transform:translateY(-1px); box-shadow:0 8px 20px rgba(15,23,42,.08); }
+    @media (max-width: 900px) { .pathway-shell { min-height: 920px; } }
+
   </style>
 </head>
 <body class="font-sans antialiased min-h-screen flex flex-col overflow-x-hidden">
@@ -171,6 +198,9 @@
       <button onclick="switchTab('nexus')" id="tab-nexus" class="tab-btn pb-3 text-sm font-medium text-slate-500 hover:text-unesco-blue flex items-center gap-2">
       <i class="ph-fill ph-share-network text-lg"></i> Innovation Nexus
     </button>
+      <button onclick="switchTab('pathway')" id="tab-pathway" class="tab-btn pb-3 text-sm font-medium text-slate-500 hover:text-unesco-blue flex items-center gap-2">
+        <i class="ph-fill ph-flow-arrow text-lg"></i> Implementation Pathway
+      </button>
       <button onclick="switchTab('resume')" id="tab-resume" class="tab-btn pb-3 text-sm font-medium text-slate-500 hover:text-unesco-blue flex items-center gap-2">
         <i class="ph-fill ph-chart-pie-slice text-lg"></i> Intelligence Resume
       </button>
@@ -330,6 +360,77 @@
 
     </div>
  
+
+    <!-- TAB 4: IMPLEMENTATION PATHWAY ───────────────────────────── -->
+    <div id="view-pathway" class="flex-col gap-6 hidden pathway-shell">
+
+      <div class="bg-gradient-to-r from-[#0f766e] via-[#0d9488] to-[#2563eb] rounded-2xl p-5 sm:p-6 text-white shadow-lg">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5">
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                <i class="ph-fill ph-flow-arrow text-2xl"></i>
+              </div>
+              <div>
+                <h2 class="font-serif font-bold text-lg leading-tight">Implementation Pathway</h2>
+                <p class="text-white/75 text-xs mt-0.5">From observed innovation to system implementation · upstream → downstream</p>
+              </div>
+            </div>
+            <p class="text-white/80 text-xs max-w-3xl leading-relaxed">
+              Select a pathway node to inspect the innovations currently mapped to that stage. Empty nodes stay visible so gaps in the present radar dataset remain explicit.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-2 w-full lg:w-auto">
+            <select id="pathway-domain" class="bg-white/15 border border-white/30 text-white text-xs font-semibold rounded-lg px-3 py-2 min-w-[210px] focus:outline-none focus:ring-2 focus:ring-white/40"></select>
+            <label class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-xs font-semibold cursor-pointer">
+              <input id="pathway-use-filters" type="checkbox" class="accent-white" checked>
+              Use current Directory filters
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="pathway-legend-pill"><span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>Observed</span>
+        <span class="pathway-legend-pill"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>Inferred / heuristic</span>
+        <span class="pathway-legend-pill"><span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>No observation</span>
+        <span id="pathway-scope-label" class="ml-auto text-[10px] text-slate-400 font-bold uppercase tracking-widest"></span>
+      </div>
+
+      <div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1.8fr)_minmax(320px,.9fr)] gap-6">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-4 sm:p-5 border-b border-slate-100 flex items-center justify-between gap-4">
+            <div>
+              <h3 class="font-serif font-bold text-slate-800">System Flow</h3>
+              <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Static pathway · dynamic evidence</p>
+            </div>
+            <button id="pathway-reset" class="text-xs font-bold text-slate-500 hover:text-emerald-700 px-3 py-2 rounded-lg border border-slate-200 hover:border-emerald-300 transition-colors">
+              Reset focus
+            </button>
+          </div>
+          <div class="pathway-canvas overflow-x-auto p-3 sm:p-5">
+            <svg id="pathway-svg" viewBox="0 0 1300 650" class="min-w-[1120px] w-full h-auto select-none" role="img" aria-label="Water management implementation pathway">
+              <defs>
+                <marker id="pathway-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"></path>
+                </marker>
+                <filter id="pathway-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity=".08"/>
+                </filter>
+              </defs>
+              <g id="pathway-links"></g>
+              <g id="pathway-nodes"></g>
+            </svg>
+          </div>
+        </div>
+
+        <aside id="pathway-detail" class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="p-6 text-center text-slate-400">Select a pathway node.</div>
+        </aside>
+      </div>
+    </div>
+
     <!-- TAB 4: INTELLIGENCE RESUME ───────────────────────────── -->
     <div id="view-resume" class="flex-col gap-6 hidden">
 
@@ -752,6 +853,10 @@
   let activeItemId = null;
   let currentModalRadar = null;
   let resumeCharts = {};
+  let pathwayTaxonomy = null;
+  let pathwaySelectedNode = "water_purification";
+  let pathwayDomainId = "water_management";
+  let pathwayUseFilters = true;
 
   // ═══════════════════════════════════════════════════════
   //  Country Filter Population
@@ -802,7 +907,16 @@ function populateCategoryFilter() {
       } else throw new Error();
     } catch(e) { globalData = RAW_JSON; }
 
-    // 2. Load resume.json (Laporan Intelijen)
+    // 2. Load pathway taxonomy
+    try {
+      const r = await fetch('pathways.json');
+      if (r.ok) pathwayTaxonomy = await r.json();
+      else throw new Error();
+    } catch(e) {
+      pathwayTaxonomy = getFallbackPathwayTaxonomy();
+    }
+
+    // 3. Load resume.json (Laporan Intelijen)
     try {
       const r = await fetch('resume.json');
       if (r.ok) { 
@@ -818,7 +932,8 @@ function populateCategoryFilter() {
     applyFilters();
     
     // Pastikan fungsi ini sekarang membaca dari globalResume
-    populateReportSelector(); 
+    populateReportSelector();
+    initImplementationPathway();
     lucide.createIcons();
   }
 
@@ -826,7 +941,7 @@ function populateCategoryFilter() {
   //  TABS
   // ═══════════════════════════════════════════════════════
   function switchTab(tab) {
-    ['directory','map','nexus','resume'].forEach(t => {
+    ['directory','map','nexus','pathway','resume'].forEach(t => {
       document.getElementById(`tab-${t}`).classList.toggle('active', t === tab);
       const el = document.getElementById(`view-${t}`);
       if (t === tab) { el.classList.remove('hidden'); el.classList.add('flex'); }
@@ -839,6 +954,9 @@ function populateCategoryFilter() {
     }
     if (tab === 'nexus') {
        initNexusMap(); // Panggil fungsi pembuat laba-laba
+    }
+    if (tab === 'pathway') {
+       renderImplementationPathway();
     }
     if (tab === 'resume') {
       const sel = document.getElementById('report-selector');
@@ -1536,6 +1654,308 @@ function renderCatChart(cats) {
         <div class="w-7 h-7 bg-yellow-400/20 text-yellow-300 font-serif font-bold text-sm rounded-lg flex items-center justify-center shrink-0">${i+1}</div>
         <p class="text-sm text-slate-200 leading-relaxed">${r}</p>
       </div>`).join('');
+  }
+
+
+  // ═══════════════════════════════════════════════════════
+  // IMPLEMENTATION PATHWAY — STATIC TAXONOMY + DYNAMIC EVIDENCE
+  // ═══════════════════════════════════════════════════════
+  function getFallbackPathwayTaxonomy() {
+    return {"version":"1.0","domains":{"water_management":{"label":"Water Management","description":"A source-to-reuse pathway for water protection, supply, treatment, WASH and post-use management.","color":"#0f766e","nodes":[{"id":"water_protection","label":"Water Protection","stage":"Source","order":1,"description":"Protect water sources and catchments from contamination and degradation.","upstream":[],"downstream":["water_harvesting"],"aliases":["Water Protection","Watershed Protection","Source Water Protection","River Protection","Water Source Protection"],"keywords":["watershed","catchment","river protection","source protection","water quality protection"]},{"id":"water_conservation","label":"Water Conservation","stage":"Source","order":1.5,"description":"Reduce unnecessary water use and improve water-use efficiency.","upstream":[],"downstream":["water_harvesting"],"aliases":["Water Conservation","Water Saving","Water Efficiency","Water Stewardship"],"keywords":["water saving","water efficient","water efficiency","reduce water use","stewardship"]},{"id":"water_harvesting","label":"Water Harvesting","stage":"Supply","order":2,"description":"Capture available water from rain, runoff or other local sources.","upstream":["water_protection","water_conservation"],"downstream":["water_storage"],"aliases":["Water Harvesting","Rainwater Harvesting","Rainwater Collection","Rainwater Catchment","Fog Harvesting","Dew Harvesting"],"keywords":["rainwater","rain water","catchment","runoff collection","fog harvesting","dew harvesting"]},{"id":"water_storage","label":"Water Storage","stage":"Supply","order":3,"description":"Store water safely between collection and distribution or treatment.","upstream":["water_harvesting"],"downstream":["water_distribution"],"aliases":["Water Storage","Household Water Storage","Water Tank","Cistern","Reservoir","Water Container"],"keywords":["water tank","cistern","reservoir","storage tank","water container","stored water"]},{"id":"water_distribution","label":"Water Distribution","stage":"Supply","order":4,"description":"Move water from a source or storage point to users and service points.","upstream":["water_storage"],"downstream":["water_purification"],"aliases":["Water Distribution","Water Supply","Water Delivery","Water Access","Piped Water"],"keywords":["distribution","piped water","water delivery","water supply","water access"]},{"id":"water_purification","label":"Water Purification","stage":"Treatment","order":5,"description":"Remove or inactivate contaminants to make water safer for intended use.","upstream":["water_distribution"],"downstream":["water_treatment"],"aliases":["Water Purification","Water Filtration","Water Filter","Biosand Filter","Ceramic Filter","Water Disinfection","SODIS"],"keywords":["purification","filter","filtration","biosand","ceramic filter","disinfection","sodis","pathogen removal","safe drinking water"]},{"id":"water_treatment","label":"Water Treatment","stage":"Treatment","order":6,"description":"Apply treatment processes such as disinfection, coagulation, biological treatment or desalination.","upstream":["water_purification"],"downstream":["water_sanitation"],"aliases":["Water Treatment","Drinking Water Treatment","Wastewater Treatment","Water Disinfection","Chlorination","Desalination"],"keywords":["chlorination","coagulation","flocculation","desalination","treatment plant","wastewater treatment","sewage treatment"]},{"id":"water_sanitation","label":"WASH & Sanitation","stage":"Use","order":7,"description":"Connect safe water with sanitation and hygiene practices at the point of use.","upstream":["water_treatment"],"downstream":["wastewater_management"],"aliases":["Water & Sanitation","Water and Sanitation","WASH","Sanitation","Ecological Sanitation","Composting Toilet","Toilet","Latrine","Handwashing","Hygiene"],"keywords":["wash","sanitation","toilet","latrine","handwashing","hygiene","ecosan","ecological sanitation","composting toilet","fecal"]},{"id":"wastewater_management","label":"Wastewater Management","stage":"Post-use","order":8,"description":"Collect, contain, treat and safely manage wastewater, greywater, blackwater and fecal sludge.","upstream":["water_sanitation"],"downstream":["water_reuse"],"aliases":["Wastewater Management","Wastewater","Greywater","Blackwater","Sewage","Fecal Sludge","Sludge Management"],"keywords":["wastewater","greywater","grey water","blackwater","sewage","fecal sludge","septage","sludge"]},{"id":"water_reuse","label":"Water Reuse","stage":"Post-use","order":9,"description":"Safely reuse recovered water or treated effluent for appropriate purposes.","upstream":["wastewater_management"],"downstream":[],"aliases":["Water Reuse","Wastewater Reuse","Greywater Reuse","Water Recycling","Treated Water Reuse"],"keywords":["reuse","re-use","water recycling","reclaimed water","treated effluent","greywater reuse"]}]}}};
+  }
+
+  function normalizePathwayText(v) {
+    return String(v || "").normalize("NFKC").toLowerCase().replace(/[&]/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
+  }
+
+  function pathwayNodeMatches(item, node) {
+    const categoryText = (item.category || []).map(normalizePathwayText);
+    const titleText = normalizePathwayText(item.title);
+    const summaryText = normalizePathwayText(item.summary);
+    const processText = normalizePathwayText([
+      item.process?.how_it_works,
+      ...(item.process?.step_by_step || []),
+      ...(item.process?.materials_used || [])
+    ].join(" "));
+    const impactText = normalizePathwayText(item.impact?.problem_solved);
+    const aliases = (node.aliases || []).map(normalizePathwayText);
+    const keywords = (node.keywords || []).map(normalizePathwayText);
+
+    let score = 0;
+    let exact = false;
+    let evidence = [];
+
+    aliases.forEach(alias => {
+      if (categoryText.some(c => c === alias || c.includes(alias) || alias.includes(c))) {
+        score = Math.max(score, 1);
+        exact = true;
+        evidence.push("category");
+      }
+    });
+
+    if (aliases.some(a => a && titleText.includes(a))) { score = Math.max(score, 0.76); evidence.push("title"); }
+    if (keywords.some(k => k && summaryText.includes(k)) || aliases.some(a => a && summaryText.includes(a))) { score = Math.max(score, 0.68); evidence.push("summary"); }
+    if (keywords.some(k => k && processText.includes(k)) || aliases.some(a => a && processText.includes(a))) { score = Math.max(score, 0.72); evidence.push("process"); }
+    if (keywords.some(k => k && impactText.includes(k))) { score = Math.max(score, 0.58); evidence.push("impact"); }
+
+    const stored = (item.pathway_matches || []).find(m => m.node_id === node.id);
+    if (stored && Number.isFinite(Number(stored.confidence))) {
+      score = Math.max(score, Number(stored.confidence));
+      exact = stored.match === "exact" || exact;
+      evidence = [...new Set(evidence.concat(stored.evidence || []))];
+    }
+
+    if (score < 0.58) return null;
+    return {
+      node_id: node.id,
+      match: exact || score >= 0.95 ? "exact" : "heuristic",
+      confidence: Math.min(1, Number(score.toFixed(2))),
+      evidence: [...new Set(evidence)]
+    };
+  }
+
+  function getPathwayDomain() {
+    const domains = pathwayTaxonomy?.domains || {};
+    return domains[pathwayDomainId] || Object.values(domains)[0] || null;
+  }
+
+  function getPathwaySourceData() {
+    return pathwayUseFilters ? filteredData : globalData;
+  }
+
+  function aggregatePathway(domain) {
+    const data = getPathwaySourceData();
+    const byNode = {};
+    (domain.nodes || []).forEach(node => byNode[node.id] = { exact:[], inferred:[], all:[] });
+
+    data.forEach(item => {
+      (domain.nodes || []).forEach(node => {
+        const match = pathwayNodeMatches(item, node);
+        if (!match) return;
+        byNode[node.id].all.push({ item, match });
+        if (match.match === "exact") byNode[node.id].exact.push({ item, match });
+        else byNode[node.id].inferred.push({ item, match });
+      });
+    });
+
+    return byNode;
+  }
+
+  function initImplementationPathway() {
+    const select = document.getElementById("pathway-domain");
+    if (!select) return;
+    select.innerHTML = "";
+    Object.entries(pathwayTaxonomy?.domains || {}).forEach(([id, domain]) => {
+      const opt = document.createElement("option");
+      opt.value = id;
+      opt.textContent = domain.label;
+      select.appendChild(opt);
+    });
+
+    pathwayDomainId = select.value || "water_management";
+    pathwayUseFilters = document.getElementById("pathway-use-filters")?.checked ?? true;
+
+    select.onchange = () => {
+      pathwayDomainId = select.value;
+      const domain = getPathwayDomain();
+      pathwaySelectedNode = domain?.nodes?.find(n => n.id === "water_purification")?.id || domain?.nodes?.[0]?.id;
+      renderImplementationPathway();
+    };
+
+    document.getElementById("pathway-use-filters").onchange = e => {
+      pathwayUseFilters = e.target.checked;
+      renderImplementationPathway();
+    };
+
+    document.getElementById("pathway-reset").onclick = () => {
+      pathwaySelectedNode = getPathwayDomain()?.nodes?.find(n => n.id === "water_purification")?.id || getPathwayDomain()?.nodes?.[0]?.id || null;
+      renderImplementationPathway();
+    };
+
+    renderImplementationPathway();
+  }
+
+  function pathwayNodePositions(domain) {
+    const ids = (domain.nodes || []).map(n => n.id);
+    const positions = {
+      water_protection: [120, 220],
+      water_conservation: [120, 360],
+      water_harvesting: [330, 290],
+      water_storage: [520, 290],
+      water_distribution: [710, 290],
+      water_purification: [900, 290],
+      water_treatment: [900, 430],
+      water_sanitation: [900, 570],
+      wastewater_management: [1085, 570],
+      water_reuse: [1210, 570]
+    };
+    return Object.fromEntries(ids.map((id, i) => [id, positions[id] || [180 + (i%5)*190, 220 + Math.floor(i/5)*150]]));
+  }
+
+  function escapePathwaySvgText(v) {
+    return String(v || "").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  }
+
+  function escapeHtmlPathway(v) {
+    return String(v || "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function renderImplementationPathway() {
+    const domain = getPathwayDomain();
+    const svgNodes = document.getElementById("pathway-nodes");
+    const svgLinks = document.getElementById("pathway-links");
+    const detail = document.getElementById("pathway-detail");
+    if (!domain || !svgNodes || !svgLinks || !detail) return;
+
+    const stats = aggregatePathway(domain);
+    const pos = pathwayNodePositions(domain);
+    const data = getPathwaySourceData();
+
+    document.getElementById("pathway-scope-label").textContent =
+      pathwayUseFilters ? `Current Directory Filter · ${data.length} records` : `All Radar Records · ${data.length} records`;
+
+    const nodeById = Object.fromEntries(domain.nodes.map(n => [n.id, n]));
+    const mappedIds = new Set();
+    Object.values(stats).forEach(st => st.all.forEach(x => mappedIds.add(x.item.id)));
+
+    let linksHtml = "";
+    const seenEdges = new Set();
+
+    // Root → source branches
+    [["root","water_protection"],["root","water_conservation"]].forEach(([a,b]) => {
+      const p1 = [650, 82], p2 = pos[b];
+      linksHtml += `<path d="M ${p1[0]} ${p1[1]} Q 650 145 ${p2[0]} ${p2[1]-38}" class="pathway-connector"></path>`;
+    });
+
+    domain.nodes.forEach(node => {
+      (node.downstream || []).forEach(targetId => {
+        const edgeKey = [node.id, targetId].sort().join("::");
+        if (seenEdges.has(edgeKey) || !pos[targetId]) return;
+        seenEdges.add(edgeKey);
+        const [x1,y1] = pos[node.id], [x2,y2] = pos[targetId];
+        const midX = (x1 + x2) / 2;
+        const midY = (y1 + y2) / 2;
+        const isActive = node.id === pathwaySelectedNode || targetId === pathwaySelectedNode;
+        linksHtml += `<path d="M ${x1} ${y1} Q ${midX} ${midY - 22} ${x2} ${y2}" class="pathway-connector ${isActive ? 'active' : ''}"></path>`;
+      });
+    });
+    svgLinks.innerHTML = linksHtml;
+
+    const rootMarkup = `
+      <g class="pathway-node-card" role="img" aria-label="${escapePathwaySvgText(domain.label)}">
+        <rect x="540" y="18" width="220" height="68" rx="20" class="pathway-root-bg" filter="url(#pathway-shadow)"></rect>
+        <text x="650" y="47" text-anchor="middle" class="pathway-root-label">${escapePathwaySvgText(domain.label)}</text>
+        <text x="650" y="67" text-anchor="middle" class="pathway-root-count">${mappedIds.size} records mapped into pathway</text>
+      </g>`;
+
+    const nodeMarkup = domain.nodes.map(node => {
+      const st = stats[node.id];
+      const observed = st.exact.length;
+      const inferred = st.inferred.length;
+      const total = st.all.length;
+      const [x,y] = pos[node.id];
+      const active = node.id === pathwaySelectedNode;
+      const statusClass = observed ? "observed" : (inferred ? "inferred" : "gap");
+      const width = 158;
+      const height = 74;
+      const title = escapePathwaySvgText(node.label);
+
+      return `
+        <g class="pathway-node-card" tabindex="0" role="button" aria-label="${title}" onclick="selectPathwayNode('${node.id}')" onkeydown="if(event.key==='Enter') selectPathwayNode('${node.id}')">
+          <rect x="${x-width/2}" y="${y-height/2}" width="${width}" height="${height}" rx="18" class="pathway-node-bg ${active ? 'active' : ''}" filter="url(#pathway-shadow)"></rect>
+          <circle cx="${x-width/2+18}" cy="${y-12}" r="6" class="pathway-node-dot ${statusClass}"></circle>
+          <text x="${x-width/2+32}" y="${y-8}" class="pathway-label">${title}</text>
+          <text x="${x-width/2+32}" y="${y+12}" class="pathway-count">${observed} observed · ${inferred} inferred</text>
+          <text x="${x-width/2+32}" y="${y+30}" class="pathway-count">${total ? 'Evidence mapped' : 'No observation'}</text>
+          ${active ? `<rect x="${x-width/2-1.5}" y="${y-height/2-1.5}" width="${width+3}" height="${height+3}" rx="19" fill="none" stroke="#0f766e" stroke-width="2.5" opacity=".85"></rect>` : ""}
+        </g>`;
+    }).join("");
+
+    svgNodes.innerHTML = rootMarkup + nodeMarkup;
+    renderPathwayDetail(domain, nodeById[pathwaySelectedNode], stats[pathwaySelectedNode] || {exact:[],inferred:[],all:[]});
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  function selectPathwayNode(nodeId) {
+    pathwaySelectedNode = nodeId;
+    renderImplementationPathway();
+  }
+
+  function renderPathwayDetail(domain, node, stat) {
+    if (!node) {
+      document.getElementById("pathway-detail").innerHTML = '<div class="p-6 text-sm text-slate-400">Select a pathway node.</div>';
+      return;
+    }
+
+    const observed = stat.exact.length, inferred = stat.inferred.length, total = stat.all.length;
+    const upstream = (node.upstream || []).map(id => domain.nodes.find(n => n.id === id)).filter(Boolean);
+    const downstream = (node.downstream || []).map(id => domain.nodes.find(n => n.id === id)).filter(Boolean);
+
+    const evidence = [...stat.all]
+      .sort((a,b) => b.match.confidence - a.match.confidence)
+      .slice(0, 8);
+
+    const evidenceHtml = evidence.length ? evidence.map(({item, match}) => `
+      <div class="pathway-evidence-card border border-slate-100 rounded-2xl p-4 bg-slate-50/70">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-xl flex items-center justify-center ${match.match === 'exact' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'} shrink-0">
+            <i class="ph-fill ${match.match === 'exact' ? 'ph-check-circle' : 'ph-magic-wand'} text-lg"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center justify-between gap-3">
+              <p class="font-bold text-sm text-slate-800 line-clamp-2">${escapeHtmlPathway(item.title || 'Untitled')}</p>
+              <span class="text-[9px] font-black uppercase tracking-widest ${match.match === 'exact' ? 'text-emerald-600' : 'text-amber-600'} shrink-0">${match.match} · ${Math.round(match.confidence*100)}%</span>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-1">${escapeHtmlPathway(item.location?.country || 'Global')} · ${escapeHtmlPathway(item.innovation_level || 'Unknown')}</p>
+            <p class="text-[11px] text-slate-600 leading-relaxed mt-2 line-clamp-3">${escapeHtmlPathway(item.summary || '')}</p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              ${(match.evidence || []).map(ev => `<span class="text-[9px] font-bold px-2 py-1 rounded-full bg-white border border-slate-200 text-slate-500 uppercase">${escapeHtmlPathway(ev)}</span>`).join('')}
+            </div>
+            <button onclick="openModal('${item.id}')" class="mt-3 text-[10px] font-bold text-emerald-700 hover:text-emerald-900">Open full record →</button>
+          </div>
+        </div>
+      </div>`).join("") : '<div class="text-xs italic text-slate-400 bg-slate-50 border border-dashed border-slate-200 rounded-2xl p-5">No observed or inferred records are mapped to this node within the selected scope.</div>';
+
+    document.getElementById("pathway-detail").innerHTML = `
+      <div class="p-6 h-full overflow-y-auto no-scrollbar">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-100">${escapeHtmlPathway(node.stage || 'Pathway')}</span>
+          <span class="text-[10px] font-black text-slate-400 uppercase">${total} mapped</span>
+        </div>
+        <h3 class="text-2xl font-black text-slate-800 mt-4 leading-tight">${escapeHtmlPathway(node.label)}</h3>
+        <p class="text-sm text-slate-500 leading-relaxed mt-2">${escapeHtmlPathway(node.description)}</p>
+
+        <div class="grid grid-cols-3 gap-2 mt-5">
+          <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-3 text-center">
+            <p class="text-xl font-black text-emerald-700">${observed}</p><p class="text-[9px] font-bold uppercase text-emerald-600">Observed</p>
+          </div>
+          <div class="bg-amber-50 border border-amber-100 rounded-xl p-3 text-center">
+            <p class="text-xl font-black text-amber-700">${inferred}</p><p class="text-[9px] font-bold uppercase text-amber-600">Inferred</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-100 rounded-xl p-3 text-center">
+            <p class="text-xl font-black text-slate-500">${total ? '—' : '0'}</p><p class="text-[9px] font-bold uppercase text-slate-400">Gap</p>
+          </div>
+        </div>
+
+        <div class="mt-6 space-y-4">
+          <div>
+            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Upstream</p>
+            <div class="flex flex-wrap gap-2">${upstream.length ? upstream.map(n => `<button onclick="selectPathwayNode('${n.id}')" class="text-[10px] font-bold px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">${escapeHtmlPathway(n.label)}</button>`).join('') : '<span class="text-xs text-slate-400">Source node</span>'}</div>
+          </div>
+          <div>
+            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Downstream</p>
+            <div class="flex flex-wrap gap-2">${downstream.length ? downstream.map(n => `<button onclick="selectPathwayNode('${n.id}')" class="text-[10px] font-bold px-2.5 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700">${escapeHtmlPathway(n.label)}</button>`).join('') : '<span class="text-xs text-slate-400">End of pathway</span>'}</div>
+          </div>
+        </div>
+
+        <div class="mt-7">
+          <div class="flex items-center justify-between mb-3">
+            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400">Mapped Innovations</p>
+            <span class="text-[10px] text-slate-400">${Math.min(8,total)} shown</span>
+          </div>
+          <div class="space-y-3">${evidenceHtml}</div>
+        </div>
+      </div>`;
   }
 
   // ═══════════════════════════════════════════════════════
