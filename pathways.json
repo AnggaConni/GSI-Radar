@@ -1004,53 +1004,53 @@
         "viewBox": [
           0,
           0,
-          1300,
+          1600,
           680
         ],
         "root": [
-          650,
+          800,
           80
         ],
         "nodes": {
           "water_protection": [
-            120,
-            205
+            140,
+            210
           ],
           "water_conservation": [
-            120,
-            340
+            140,
+            345
           ],
           "water_harvesting": [
-            330,
-            270
+            360,
+            278
           ],
           "water_storage": [
-            520,
-            270
+            580,
+            278
           ],
           "water_distribution": [
-            710,
-            270
+            800,
+            278
           ],
           "water_purification": [
-            900,
-            270
+            1020,
+            278
           ],
           "water_treatment": [
-            900,
-            410
+            1020,
+            430
           ],
           "water_sanitation": [
-            900,
-            540
+            1020,
+            575
           ],
           "wastewater_management": [
-            1060,
-            540
+            1240,
+            575
           ],
           "water_reuse": [
-            1195,
-            540
+            1460,
+            575
           ]
         }
       },
