@@ -33,6 +33,7 @@ DATA_FILE        = os.path.join(BASE_DIR, "data.json")
 RESUME_FILE      = os.path.join(BASE_DIR, "resume.json")
 HISTORY_FILE     = os.path.join(BASE_DIR, "history.json")
 REPORT_MD_FILE   = os.path.join(BASE_DIR, "report.md")
+PATHWAY_FILE      = os.path.join(BASE_DIR, "pathways.json")
 
 # ✅ NEW: Configurable schedule intervals via environment variables.
 # You can set these in your system/CI without touching the code.
@@ -330,6 +331,85 @@ def calculate_advanced_metrics(data):
     except Exception:
         return data
 
+
+# =====================================================================
+# IMPLEMENTATION PATHWAY CLASSIFICATION
+# =====================================================================
+
+def normalize_pathway_text(value):
+    return " ".join(
+        unicodedata.normalize("NFKC", str(value or "")).lower()
+        .replace("&", " and ")
+        .split()
+    )
+
+def classify_pathway_record(item, taxonomy):
+    """Map an innovation record onto one or more predefined pathway nodes."""
+    matches = []
+    domains = taxonomy.get("domains", {}) if isinstance(taxonomy, dict) else {}
+
+    corpus = " ".join([
+        str(item.get("title", "")),
+        str(item.get("summary", "")),
+        str(item.get("impact", {}).get("problem_solved", "")),
+        str(item.get("process", {}).get("how_it_works", "")),
+        " ".join(item.get("process", {}).get("step_by_step", []) or []),
+        " ".join(item.get("process", {}).get("materials_used", []) or [])
+    ])
+    corpus_n = normalize_pathway_text(corpus)
+    title_n = normalize_pathway_text(item.get("title", ""))
+
+    category_values = [normalize_pathway_text(x) for x in (item.get("category", []) or [])]
+
+    for domain_id, domain in domains.items():
+        for node in domain.get("nodes", []) or []:
+            aliases = [normalize_pathway_text(x) for x in (node.get("aliases", []) or [])]
+            keywords = [normalize_pathway_text(x) for x in (node.get("keywords", []) or [])]
+            score = 0.0
+            exact = False
+            evidence = []
+
+            for alias in aliases:
+                if any(c == alias or c in alias or alias in c for c in category_values):
+                    score = max(score, 1.0)
+                    exact = True
+                    evidence.append("category")
+
+            if any(alias and alias in title_n for alias in aliases):
+                score = max(score, 0.76)
+                evidence.append("title")
+
+            if any(k and k in corpus_n for k in aliases + keywords):
+                score = max(score, 0.68)
+                evidence.append("narrative")
+
+            if any(k and k in normalize_pathway_text(item.get("process", {}).get("how_it_works", "")) for k in keywords):
+                score = max(score, 0.72)
+                evidence.append("process")
+
+            if score >= 0.58:
+                matches.append({
+                    "domain_id": domain_id,
+                    "node_id": node.get("id"),
+                    "match": "exact" if exact else "heuristic",
+                    "confidence": round(min(1.0, score), 2),
+                    "evidence": sorted(set(evidence))
+                })
+
+    matches.sort(key=lambda x: (-x["confidence"], x["node_id"]))
+    return matches
+
+def enrich_pathway_matches(database, taxonomy):
+    changed = False
+    for item in database:
+        new_matches = classify_pathway_record(item, taxonomy)
+        old_matches = item.get("pathway_matches", [])
+        if old_matches != new_matches:
+            item["pathway_matches"] = new_matches
+            changed = True
+    return changed
+
+
 # =====================================================================
 # CORE TASKS: DATA CRAWL & RESUME GENERATION
 # =====================================================================
@@ -400,6 +480,8 @@ def run_discovery_pipeline(api_key, database, max_items=3):
         final_item["location"]["lat"], final_item["location"]["lon"] = lat, lon
 
         final_item = calculate_advanced_metrics(final_item)
+        taxonomy = load_json_file(PATHWAY_FILE, {"domains": {}})
+        final_item["pathway_matches"] = classify_pathway_record(final_item, taxonomy)
         database.append(final_item)
         success_count += 1
         log.info(f"🔥 Processed: {final_item['title']}")
@@ -707,6 +789,9 @@ def main():
                 db = db["inventory"]  # Ekstrak list jika ini file bekas ICH Radar
             else:
                 db = []  # Reset menjadi list kosong agar aman di-append
+        pathway_taxonomy = load_json_file(PATHWAY_FILE, {"domains": {}})
+        pathway_changed = False
+
         history = load_json_file(HISTORY_FILE, {
             "last_data_crawl": "2000-01-01T00:00:00",
             "last_resume_gen": "2000-01-01T00:00:00"
@@ -749,10 +834,17 @@ def main():
             log.info("--- 🟢 STARTING DATA PIPELINE ---")
             # ✅ CHANGED: Using MAX_ITEMS_PER_RUN env-var constant
             found = run_discovery_pipeline(api_key, db, max_items=MAX_ITEMS_PER_RUN)
-            if found > 0:
+            pathway_changed = enrich_pathway_matches(db, pathway_taxonomy)
+            if found > 0 or pathway_changed:
                 save_json_file(DATA_FILE, db)
             history["last_data_crawl"] = now.isoformat()
             log.info(f"🟢 DATA PIPELINE COMPLETE. Added {found} new items. Total: {len(db)}")
+
+        # Enrich legacy records during resume-only runs as well.
+        if not do_data:
+            pathway_changed = enrich_pathway_matches(db, pathway_taxonomy)
+            if pathway_changed:
+                save_json_file(DATA_FILE, db)
 
         if do_resume:
             log.info("--- 🔵 STARTING RESUME PIPELINE ---")
