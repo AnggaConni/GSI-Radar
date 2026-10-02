@@ -299,7 +299,61 @@
             "greywater reuse"
           ]
         }
-      ]
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "water_protection": [
+            120,
+            205
+          ],
+          "water_conservation": [
+            120,
+            340
+          ],
+          "water_harvesting": [
+            330,
+            270
+          ],
+          "water_storage": [
+            520,
+            270
+          ],
+          "water_distribution": [
+            710,
+            270
+          ],
+          "water_purification": [
+            900,
+            270
+          ],
+          "water_treatment": [
+            900,
+            410
+          ],
+          "water_sanitation": [
+            900,
+            540
+          ],
+          "wastewater_management": [
+            1060,
+            540
+          ],
+          "water_reuse": [
+            1195,
+            540
+          ]
+        }
+      }
     }
   }
 }
