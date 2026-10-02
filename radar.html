@@ -925,7 +925,7 @@ function populateCategoryFilter() {
       if (r.ok) pathwayTaxonomy = await r.json();
       else throw new Error();
     } catch(e) {
-      pathwayTaxonomy = getFallbackPathwayTaxonomy();
+      pathwayTaxonomy = { version:"1.1", domains:{} };
     }
 
     // 3. Load resume.json (Laporan Intelijen)
@@ -1672,87 +1672,6 @@ function renderCatChart(cats) {
   // ═══════════════════════════════════════════════════════
   // IMPLEMENTATION PATHWAY — STATIC TAXONOMY + DYNAMIC EVIDENCE
   // ═══════════════════════════════════════════════════════
-  function getFallbackPathwayTaxonomy() {
-    return {"version":"1.0","domains":{"water_management":{"label":"Water Management","description":"A source-to-reuse pathway for water protection, supply, treatment, WASH and post-use management.","color":"#0f766e","nodes":[{"id":"water_protection","label":"Water Protection","stage":"Source","order":1,"description":"Protect water sources and catchments from contamination and degradation.","upstream":[],"downstream":["water_harvesting"],"aliases":["Water Protection","Watershed Protection","Source Water Protection","River Protection","Water Source Protection"],"keywords":["watershed","catchment","river protection","source protection","water quality protection"]},{"id":"water_conservation","label":"Water Conservation","stage":"Source","order":1.5,"description":"Reduce unnecessary water use and improve water-use efficiency.","upstream":[],"downstream":["water_harvesting"],"aliases":["Water Conservation","Water Saving","Water Efficiency","Water Stewardship"],"keywords":["water saving","water efficient","water efficiency","reduce water use","stewardship"]},{"id":"water_harvesting","label":"Water Harvesting","stage":"Supply","order":2,"description":"Capture available water from rain, runoff or other local sources.","upstream":["water_protection","water_conservation"],"downstream":["water_storage"],"aliases":["Water Harvesting","Rainwater Harvesting","Rainwater Collection","Rainwater Catchment","Fog Harvesting","Dew Harvesting"],"keywords":["rainwater","rain water","catchment","runoff collection","fog harvesting","dew harvesting"]},{"id":"water_storage","label":"Water Storage","stage":"Supply","order":3,"description":"Store water safely between collection and distribution or treatment.","upstream":["water_harvesting"],"downstream":["water_distribution"],"aliases":["Water Storage","Household Water Storage","Water Tank","Cistern","Reservoir","Water Container"],"keywords":["water tank","cistern","reservoir","storage tank","water container","stored water"]},{"id":"water_distribution","label":"Water Distribution","stage":"Supply","order":4,"description":"Move water from a source or storage point to users and service points.","upstream":["water_storage"],"downstream":["water_purification"],"aliases":["Water Distribution","Water Supply","Water Delivery","Water Access","Piped Water"],"keywords":["distribution","piped water","water delivery","water supply","water access"]},{"id":"water_purification","label":"Water Purification","stage":"Treatment","order":5,"description":"Remove or inactivate contaminants to make water safer for intended use.","upstream":["water_distribution"],"downstream":["water_treatment"],"aliases":["Water Purification","Water Filtration","Water Filter","Biosand Filter","Ceramic Filter","Water Disinfection","SODIS"],"keywords":["purification","filter","filtration","biosand","ceramic filter","disinfection","sodis","pathogen removal","safe drinking water"]},{"id":"water_treatment","label":"Water Treatment","stage":"Treatment","order":6,"description":"Apply treatment processes such as disinfection, coagulation, biological treatment or desalination.","upstream":["water_purification"],"downstream":["water_sanitation"],"aliases":["Water Treatment","Drinking Water Treatment","Wastewater Treatment","Water Disinfection","Chlorination","Desalination"],"keywords":["chlorination","coagulation","flocculation","desalination","treatment plant","wastewater treatment","sewage treatment"]},{"id":"water_sanitation","label":"WASH & Sanitation","stage":"Use","order":7,"description":"Connect safe water with sanitation and hygiene practices at the point of use.","upstream":["water_treatment"],"downstream":["wastewater_management"],"aliases":["Water & Sanitation","Water and Sanitation","WASH","Sanitation","Ecological Sanitation","Composting Toilet","Toilet","Latrine","Handwashing","Hygiene"],"keywords":["wash","sanitation","toilet","latrine","handwashing","hygiene","ecosan","ecological sanitation","composting toilet","fecal"]},{"id":"wastewater_management","label":"Wastewater Management","stage":"Post-use","order":8,"description":"Collect, contain, treat and safely manage wastewater, greywater, blackwater and fecal sludge.","upstream":["water_sanitation"],"downstream":["water_reuse"],"aliases":["Wastewater Management","Wastewater","Greywater","Blackwater","Sewage","Fecal Sludge","Sludge Management"],"keywords":["wastewater","greywater","grey water","blackwater","sewage","fecal sludge","septage","sludge"]},{"id":"water_reuse","label":"Water Reuse","stage":"Post-use","order":9,"description":"Safely reuse recovered water or treated effluent for appropriate purposes.","upstream":["wastewater_management"],"downstream":[],"aliases":["Water Reuse","Wastewater Reuse","Greywater Reuse","Water Recycling","Treated Water Reuse"],"keywords":["reuse","re-use","water recycling","reclaimed water","treated effluent","greywater reuse"]}]}}};
-  }
-
-  function normalizePathwayText(v) {
-    return String(v || "").normalize("NFKC").toLowerCase().replace(/[&]/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
-  }
-
-  function pathwayNodeMatches(item, node) {
-    const categoryText = (item.category || []).map(normalizePathwayText);
-    const titleText = normalizePathwayText(item.title);
-    const summaryText = normalizePathwayText(item.summary);
-    const processText = normalizePathwayText([
-      item.process?.how_it_works,
-      ...(item.process?.step_by_step || []),
-      ...(item.process?.materials_used || [])
-    ].join(" "));
-    const impactText = normalizePathwayText(item.impact?.problem_solved);
-    const aliases = (node.aliases || []).map(normalizePathwayText);
-    const keywords = (node.keywords || []).map(normalizePathwayText);
-
-    let score = 0;
-    let exact = false;
-    let evidence = [];
-
-    aliases.forEach(alias => {
-      if (categoryText.some(c => c === alias || c.includes(alias) || alias.includes(c))) {
-        score = Math.max(score, 1);
-        exact = true;
-        evidence.push("category");
-      }
-    });
-
-    if (aliases.some(a => a && titleText.includes(a))) { score = Math.max(score, 0.76); evidence.push("title"); }
-    if (keywords.some(k => k && summaryText.includes(k)) || aliases.some(a => a && summaryText.includes(a))) { score = Math.max(score, 0.68); evidence.push("summary"); }
-    if (keywords.some(k => k && processText.includes(k)) || aliases.some(a => a && processText.includes(a))) { score = Math.max(score, 0.72); evidence.push("process"); }
-    if (keywords.some(k => k && impactText.includes(k))) { score = Math.max(score, 0.58); evidence.push("impact"); }
-
-    const stored = (item.pathway_matches || []).find(m => m.node_id === node.id);
-    if (stored && Number.isFinite(Number(stored.confidence))) {
-      score = Math.max(score, Number(stored.confidence));
-      exact = stored.match === "exact" || exact;
-      evidence = [...new Set(evidence.concat(stored.evidence || []))];
-    }
-
-    if (score < 0.58) return null;
-    return {
-      node_id: node.id,
-      match: exact || score >= 0.95 ? "exact" : "heuristic",
-      confidence: Math.min(1, Number(score.toFixed(2))),
-      evidence: [...new Set(evidence)]
-    };
-  }
-
-  function getPathwayDomain() {
-    const domains = pathwayTaxonomy?.domains || {};
-    return domains[pathwayDomainId] || Object.values(domains)[0] || null;
-  }
-
-  function getPathwaySourceData() {
-    return pathwayUseFilters ? filteredData : globalData;
-  }
-
-  function aggregatePathway(domain) {
-    const data = getPathwaySourceData();
-    const byNode = {};
-    (domain.nodes || []).forEach(node => byNode[node.id] = { exact:[], inferred:[], all:[] });
-
-    data.forEach(item => {
-      (domain.nodes || []).forEach(node => {
-        const match = pathwayNodeMatches(item, node);
-        if (!match) return;
-        byNode[node.id].all.push({ item, match });
-        if (match.match === "exact") byNode[node.id].exact.push({ item, match });
-        else byNode[node.id].inferred.push({ item, match });
-      });
-    });
-
-    return byNode;
-  }
-
   function initImplementationPathway() {
     const select = document.getElementById("pathway-domain");
     if (!select) return;
@@ -1764,13 +1683,13 @@ function renderCatChart(cats) {
       select.appendChild(opt);
     });
 
-    pathwayDomainId = select.value || "water_management";
+    pathwayDomainId = select.value || Object.keys(pathwayTaxonomy?.domains || {})[0] || "";
     pathwayUseFilters = document.getElementById("pathway-use-filters")?.checked ?? true;
 
     select.onchange = () => {
       pathwayDomainId = select.value;
       const domain = getPathwayDomain();
-      pathwaySelectedNode = domain?.nodes?.find(n => n.id === "water_purification")?.id || domain?.nodes?.[0]?.id;
+      pathwaySelectedNode = domain?.nodes?.[0]?.id || null;
       renderImplementationPathway();
     };
 
@@ -1780,7 +1699,7 @@ function renderCatChart(cats) {
     };
 
     document.getElementById("pathway-reset").onclick = () => {
-      pathwaySelectedNode = getPathwayDomain()?.nodes?.find(n => n.id === "water_purification")?.id || getPathwayDomain()?.nodes?.[0]?.id || null;
+      pathwaySelectedNode = getPathwayDomain()?.nodes?.[0]?.id || null;
       resetPathwayView();
       renderImplementationPathway();
     };
@@ -1897,7 +1816,14 @@ function renderCatChart(cats) {
     const svgNodes = document.getElementById("pathway-nodes");
     const svgLinks = document.getElementById("pathway-links");
     const detail = document.getElementById("pathway-detail");
-    if (!domain || !svgNodes || !svgLinks || !detail) return;
+    if (!svgNodes || !svgLinks || !detail) return;
+    if (!domain) {
+      svgNodes.innerHTML = "";
+      svgLinks.innerHTML = "";
+      document.getElementById("pathway-scope-label").textContent = "No pathway taxonomy loaded";
+      detail.innerHTML = '<div class="p-6 text-sm text-slate-400">No pathway definitions are available.</div>';
+      return;
+    }
 
     const stats = aggregatePathway(domain);
     const pos = pathwayNodePositions(domain);
