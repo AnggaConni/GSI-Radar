@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "domains": {
     "water_management": {
       "label": "Water Management",
@@ -351,6 +351,1642 @@
           "water_reuse": [
             1195,
             540
+          ]
+        }
+      }
+    },
+    "agriculture_food_security": {
+      "label": "Agriculture & Food Security",
+      "description": "A practical pathway from soil and seed systems through cultivation, water use, post-harvest handling and food access.",
+      "color": "#65a30d",
+      "nodes": [
+        {
+          "id": "soil_management",
+          "label": "Soil Management",
+          "stage": "Foundation",
+          "order": 1,
+          "description": "Improve soil fertility, structure, moisture retention and land stewardship.",
+          "upstream": [],
+          "downstream": [
+            "seed_systems"
+          ],
+          "aliases": [
+            "Soil Management"
+          ],
+          "keywords": [
+            "soil improvement",
+            "soil fertility",
+            "soil conservation",
+            "biochar",
+            "terra preta",
+            "compost"
+          ]
+        },
+        {
+          "id": "seed_systems",
+          "label": "Seed Systems",
+          "stage": "Inputs",
+          "order": 2,
+          "description": "Preserve, select, multiply and exchange locally appropriate planting material.",
+          "upstream": [
+            "soil_management"
+          ],
+          "downstream": [
+            "cultivation"
+          ],
+          "aliases": [
+            "Seed Systems"
+          ],
+          "keywords": [
+            "seed preservation",
+            "seed saving",
+            "local seed",
+            "traditional seed",
+            "seed exchange"
+          ]
+        },
+        {
+          "id": "cultivation",
+          "label": "Cultivation",
+          "stage": "Production",
+          "order": 3,
+          "description": "Grow crops using locally adapted techniques, tools and knowledge.",
+          "upstream": [
+            "seed_systems"
+          ],
+          "downstream": [
+            "water_for_agriculture"
+          ],
+          "aliases": [
+            "Cultivation"
+          ],
+          "keywords": [
+            "farming",
+            "cultivation",
+            "smallholder",
+            "organic farming",
+            "intercropping",
+            "milpa"
+          ]
+        },
+        {
+          "id": "water_for_agriculture",
+          "label": "Agricultural Water",
+          "stage": "Production",
+          "order": 4,
+          "description": "Provide water through irrigation, harvesting and efficient field practices.",
+          "upstream": [
+            "cultivation"
+          ],
+          "downstream": [
+            "harvest_postharvest"
+          ],
+          "aliases": [
+            "Agricultural Water"
+          ],
+          "keywords": [
+            "irrigation",
+            "drip irrigation",
+            "farm water",
+            "rainwater harvesting",
+            "water saving"
+          ]
+        },
+        {
+          "id": "harvest_postharvest",
+          "label": "Harvest & Post-Harvest",
+          "stage": "Processing",
+          "order": 5,
+          "description": "Reduce losses through harvesting, drying, storage and primary processing.",
+          "upstream": [
+            "water_for_agriculture"
+          ],
+          "downstream": [
+            "food_processing"
+          ],
+          "aliases": [
+            "Harvest & Post-Harvest"
+          ],
+          "keywords": [
+            "harvest",
+            "grain storage",
+            "food storage",
+            "thresher",
+            "drying",
+            "post harvest"
+          ]
+        },
+        {
+          "id": "food_processing",
+          "label": "Food Processing",
+          "stage": "Value Addition",
+          "order": 6,
+          "description": "Transform crops and agricultural outputs into usable or marketable food products.",
+          "upstream": [
+            "harvest_postharvest"
+          ],
+          "downstream": [
+            "food_access"
+          ],
+          "aliases": [
+            "Food Processing"
+          ],
+          "keywords": [
+            "food processing",
+            "food preservation",
+            "oil press",
+            "processing",
+            "fermentation"
+          ]
+        },
+        {
+          "id": "food_access",
+          "label": "Food Access",
+          "stage": "Outcome",
+          "order": 7,
+          "description": "Strengthen local food availability, affordability, resilience and community access.",
+          "upstream": [
+            "food_processing"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Food Access"
+          ],
+          "keywords": [
+            "food security",
+            "food access",
+            "community food",
+            "nutrition",
+            "local food"
+          ]
+        }
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "soil_management": [
+            115,
+            270
+          ],
+          "seed_systems": [
+            295,
+            270
+          ],
+          "cultivation": [
+            475,
+            270
+          ],
+          "water_for_agriculture": [
+            655,
+            270
+          ],
+          "harvest_postharvest": [
+            835,
+            270
+          ],
+          "food_processing": [
+            1015,
+            270
+          ],
+          "food_access": [
+            1190,
+            270
+          ]
+        }
+      }
+    },
+    "energy_access": {
+      "label": "Energy Access",
+      "description": "Local energy pathway from resource and generation through conversion, storage, distribution and end use.",
+      "color": "#0891b2",
+      "nodes": [
+        {
+          "id": "energy_resources",
+          "label": "Energy Resources",
+          "stage": "Source",
+          "order": 1,
+          "description": "Identify locally available renewable or recoverable energy resources.",
+          "upstream": [],
+          "downstream": [
+            "energy_generation"
+          ],
+          "aliases": [
+            "Energy Resources"
+          ],
+          "keywords": [
+            "solar",
+            "wind",
+            "hydro",
+            "biogas",
+            "biomass",
+            "energy resource"
+          ]
+        },
+        {
+          "id": "energy_generation",
+          "label": "Energy Generation",
+          "stage": "Generation",
+          "order": 2,
+          "description": "Generate useful electricity or heat from local resources.",
+          "upstream": [
+            "energy_resources"
+          ],
+          "downstream": [
+            "energy_conversion"
+          ],
+          "aliases": [
+            "Energy Generation"
+          ],
+          "keywords": [
+            "generator",
+            "solar panel",
+            "micro hydro",
+            "wind turbine",
+            "biogas",
+            "power generation"
+          ]
+        },
+        {
+          "id": "energy_conversion",
+          "label": "Energy Conversion",
+          "stage": "Conversion",
+          "order": 3,
+          "description": "Convert energy into a form suitable for local applications.",
+          "upstream": [
+            "energy_generation"
+          ],
+          "downstream": [
+            "energy_storage"
+          ],
+          "aliases": [
+            "Energy Conversion"
+          ],
+          "keywords": [
+            "inverter",
+            "converter",
+            "engine conversion",
+            "energy conversion",
+            "thermal"
+          ]
+        },
+        {
+          "id": "energy_storage",
+          "label": "Energy Storage",
+          "stage": "Storage",
+          "order": 4,
+          "description": "Store energy for continuity, mobility or demand balancing.",
+          "upstream": [
+            "energy_conversion"
+          ],
+          "downstream": [
+            "energy_distribution"
+          ],
+          "aliases": [
+            "Energy Storage"
+          ],
+          "keywords": [
+            "battery",
+            "energy storage",
+            "thermal storage",
+            "compressed air",
+            "battery charging"
+          ]
+        },
+        {
+          "id": "energy_distribution",
+          "label": "Energy Distribution",
+          "stage": "Access",
+          "order": 5,
+          "description": "Deliver electricity or energy services to homes, farms and community facilities.",
+          "upstream": [
+            "energy_storage"
+          ],
+          "downstream": [
+            "productive_energy_use"
+          ],
+          "aliases": [
+            "Energy Distribution"
+          ],
+          "keywords": [
+            "microgrid",
+            "distribution",
+            "electrification",
+            "power supply",
+            "grid"
+          ]
+        },
+        {
+          "id": "productive_energy_use",
+          "label": "Productive Energy Use",
+          "stage": "Use",
+          "order": 6,
+          "description": "Apply energy to productive, household, agricultural or community needs.",
+          "upstream": [
+            "energy_distribution"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Productive Energy Use"
+          ],
+          "keywords": [
+            "cooking",
+            "irrigation",
+            "lighting",
+            "productive use",
+            "charging",
+            "processing"
+          ]
+        }
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "energy_resources": [
+            120,
+            260
+          ],
+          "energy_generation": [
+            330,
+            260
+          ],
+          "energy_conversion": [
+            540,
+            260
+          ],
+          "energy_storage": [
+            750,
+            260
+          ],
+          "energy_distribution": [
+            960,
+            260
+          ],
+          "productive_energy_use": [
+            1170,
+            260
+          ]
+        }
+      }
+    },
+    "health_medical_access": {
+      "label": "Health & Medical Access",
+      "description": "Community health pathway from prevention and basic diagnosis to local treatment support and rehabilitation.",
+      "color": "#dc2626",
+      "nodes": [
+        {
+          "id": "prevention_hygiene",
+          "label": "Prevention & Hygiene",
+          "stage": "Prevention",
+          "order": 1,
+          "description": "Reduce avoidable illness through hygiene, prevention practices and community health action.",
+          "upstream": [],
+          "downstream": [
+            "health_screening"
+          ],
+          "aliases": [
+            "Prevention & Hygiene"
+          ],
+          "keywords": [
+            "hygiene",
+            "handwashing",
+            "prevention",
+            "community health",
+            "sanitation"
+          ]
+        },
+        {
+          "id": "health_screening",
+          "label": "Screening & Diagnosis",
+          "stage": "Detection",
+          "order": 2,
+          "description": "Identify health conditions using accessible screening or diagnostic tools.",
+          "upstream": [
+            "prevention_hygiene"
+          ],
+          "downstream": [
+            "medical_tools"
+          ],
+          "aliases": [
+            "Screening & Diagnosis"
+          ],
+          "keywords": [
+            "screening",
+            "diagnostic",
+            "diagnosis",
+            "testing",
+            "monitoring"
+          ]
+        },
+        {
+          "id": "medical_tools",
+          "label": "Medical Tools",
+          "stage": "Access",
+          "order": 3,
+          "description": "Provide low-cost, improvised or locally manufactured tools for care.",
+          "upstream": [
+            "health_screening"
+          ],
+          "downstream": [
+            "care_delivery"
+          ],
+          "aliases": [
+            "Medical Tools"
+          ],
+          "keywords": [
+            "medical device",
+            "medical tool",
+            "prosthetic",
+            "wheelchair",
+            "incubator",
+            "clinic"
+          ]
+        },
+        {
+          "id": "care_delivery",
+          "label": "Care Delivery",
+          "stage": "Treatment",
+          "order": 4,
+          "description": "Support frontline care and practical treatment in local settings.",
+          "upstream": [
+            "medical_tools"
+          ],
+          "downstream": [
+            "referral_logistics"
+          ],
+          "aliases": [
+            "Care Delivery"
+          ],
+          "keywords": [
+            "clinic",
+            "midwife",
+            "community care",
+            "treatment",
+            "health service"
+          ]
+        },
+        {
+          "id": "referral_logistics",
+          "label": "Referral & Logistics",
+          "stage": "Continuity",
+          "order": 5,
+          "description": "Move patients, supplies and information safely through the care pathway.",
+          "upstream": [
+            "care_delivery"
+          ],
+          "downstream": [
+            "rehabilitation_support"
+          ],
+          "aliases": [
+            "Referral & Logistics"
+          ],
+          "keywords": [
+            "ambulance",
+            "referral",
+            "cold chain",
+            "health logistics",
+            "transport"
+          ]
+        },
+        {
+          "id": "rehabilitation_support",
+          "label": "Rehabilitation & Support",
+          "stage": "Recovery",
+          "order": 6,
+          "description": "Support recovery, mobility, continuity and long-term function.",
+          "upstream": [
+            "referral_logistics"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Rehabilitation & Support"
+          ],
+          "keywords": [
+            "rehabilitation",
+            "prosthetic",
+            "mobility",
+            "assistive device",
+            "recovery"
+          ]
+        }
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "prevention_hygiene": [
+            115,
+            270
+          ],
+          "health_screening": [
+            300,
+            270
+          ],
+          "medical_tools": [
+            485,
+            270
+          ],
+          "care_delivery": [
+            670,
+            270
+          ],
+          "referral_logistics": [
+            855,
+            270
+          ],
+          "rehabilitation_support": [
+            1040,
+            270
+          ]
+        }
+      }
+    },
+    "construction_shelter": {
+      "label": "Construction & Shelter",
+      "description": "Built-environment pathway from materials and design through construction, sanitation, resilience and habitable shelter.",
+      "color": "#b45309",
+      "nodes": [
+        {
+          "id": "local_materials",
+          "label": "Local Materials",
+          "stage": "Inputs",
+          "order": 1,
+          "description": "Use locally available, recycled or low-cost building materials.",
+          "upstream": [],
+          "downstream": [
+            "design_adaptation"
+          ],
+          "aliases": [
+            "Local Materials"
+          ],
+          "keywords": [
+            "local material",
+            "bamboo",
+            "earthbag",
+            "rammed earth",
+            "recycled material",
+            "plastic bottle"
+          ]
+        },
+        {
+          "id": "design_adaptation",
+          "label": "Design & Adaptation",
+          "stage": "Design",
+          "order": 2,
+          "description": "Adapt building forms to local climate, hazards, skills and resources.",
+          "upstream": [
+            "local_materials"
+          ],
+          "downstream": [
+            "construction"
+          ],
+          "aliases": [
+            "Design & Adaptation"
+          ],
+          "keywords": [
+            "building design",
+            "adaptation",
+            "climate responsive",
+            "low cost housing",
+            "self-built"
+          ]
+        },
+        {
+          "id": "construction",
+          "label": "Construction",
+          "stage": "Build",
+          "order": 3,
+          "description": "Build or retrofit structures using accessible methods and local skills.",
+          "upstream": [
+            "design_adaptation"
+          ],
+          "downstream": [
+            "water_sanitation_infrastructure"
+          ],
+          "aliases": [
+            "Construction"
+          ],
+          "keywords": [
+            "construction",
+            "housing",
+            "building",
+            "roof",
+            "wall",
+            "masonry"
+          ]
+        },
+        {
+          "id": "water_sanitation_infrastructure",
+          "label": "Water & Sanitation Infrastructure",
+          "stage": "Services",
+          "order": 4,
+          "description": "Integrate water, drainage and sanitation systems into the built environment.",
+          "upstream": [
+            "construction"
+          ],
+          "downstream": [
+            "resilience_safety"
+          ],
+          "aliases": [
+            "Water & Sanitation Infrastructure"
+          ],
+          "keywords": [
+            "latrine",
+            "toilet",
+            "drainage",
+            "water system",
+            "sanitation infrastructure"
+          ]
+        },
+        {
+          "id": "resilience_safety",
+          "label": "Resilience & Safety",
+          "stage": "Protection",
+          "order": 5,
+          "description": "Improve structural, environmental and occupant safety.",
+          "upstream": [
+            "water_sanitation_infrastructure"
+          ],
+          "downstream": [
+            "habitable_shelter"
+          ],
+          "aliases": [
+            "Resilience & Safety"
+          ],
+          "keywords": [
+            "resilient",
+            "disaster",
+            "fire safety",
+            "structural safety",
+            "flood protection"
+          ]
+        },
+        {
+          "id": "habitable_shelter",
+          "label": "Habitable Shelter",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Provide safe, usable and durable places for people and communities.",
+          "upstream": [
+            "resilience_safety"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Habitable Shelter"
+          ],
+          "keywords": [
+            "shelter",
+            "housing",
+            "habitable",
+            "safe home",
+            "community building"
+          ]
+        }
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "local_materials": [
+            115,
+            270
+          ],
+          "design_adaptation": [
+            300,
+            270
+          ],
+          "construction": [
+            485,
+            270
+          ],
+          "water_sanitation_infrastructure": [
+            670,
+            270
+          ],
+          "resilience_safety": [
+            855,
+            270
+          ],
+          "habitable_shelter": [
+            1040,
+            270
+          ]
+        }
+      }
+    },
+    "education_communication": {
+      "label": "Education & Communication",
+      "description": "Learning pathway from access and learning tools through teaching, communication and community knowledge sharing.",
+      "color": "#7c3aed",
+      "nodes": [
+        {
+          "id": "learning_access",
+          "label": "Learning Access",
+          "stage": "Access",
+          "order": 1,
+          "description": "Expand access to learning opportunities where infrastructure is limited.",
+          "upstream": [],
+          "downstream": [
+            "learning_tools"
+          ],
+          "aliases": [
+            "Learning Access"
+          ],
+          "keywords": [
+            "offline education",
+            "rural school",
+            "learning access",
+            "education access"
+          ]
+        },
+        {
+          "id": "learning_tools",
+          "label": "Learning Tools",
+          "stage": "Tools",
+          "order": 2,
+          "description": "Provide low-cost, offline or repurposed tools that enable learning.",
+          "upstream": [
+            "learning_access"
+          ],
+          "downstream": [
+            "teaching_support"
+          ],
+          "aliases": [
+            "Learning Tools"
+          ],
+          "keywords": [
+            "learning tool",
+            "projector",
+            "tablet",
+            "repurposed device",
+            "education technology"
+          ]
+        },
+        {
+          "id": "teaching_support",
+          "label": "Teaching Support",
+          "stage": "Practice",
+          "order": 3,
+          "description": "Support teachers, facilitators and peer learning with adaptable methods.",
+          "upstream": [
+            "learning_tools"
+          ],
+          "downstream": [
+            "communication"
+          ],
+          "aliases": [
+            "Teaching Support"
+          ],
+          "keywords": [
+            "teacher",
+            "teaching",
+            "training",
+            "facilitator",
+            "peer learning"
+          ]
+        },
+        {
+          "id": "communication",
+          "label": "Communication",
+          "stage": "Connection",
+          "order": 4,
+          "description": "Enable community communication and information exchange.",
+          "upstream": [
+            "teaching_support"
+          ],
+          "downstream": [
+            "knowledge_sharing"
+          ],
+          "aliases": [
+            "Communication"
+          ],
+          "keywords": [
+            "community radio",
+            "communication",
+            "transmitter",
+            "information access"
+          ]
+        },
+        {
+          "id": "knowledge_sharing",
+          "label": "Knowledge Sharing",
+          "stage": "Knowledge",
+          "order": 5,
+          "description": "Capture and circulate practical, local and experiential knowledge.",
+          "upstream": [
+            "communication"
+          ],
+          "downstream": [
+            "learning_outcomes"
+          ],
+          "aliases": [
+            "Knowledge Sharing"
+          ],
+          "keywords": [
+            "knowledge sharing",
+            "local knowledge",
+            "traditional knowledge",
+            "community learning"
+          ]
+        },
+        {
+          "id": "learning_outcomes",
+          "label": "Learning Outcomes",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Translate access and learning into skills, agency and practical capability.",
+          "upstream": [
+            "knowledge_sharing"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Learning Outcomes"
+          ],
+          "keywords": [
+            "skills",
+            "capacity",
+            "learning outcomes",
+            "literacy",
+            "empowerment"
+          ]
+        }
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "learning_access": [
+            115,
+            270
+          ],
+          "learning_tools": [
+            300,
+            270
+          ],
+          "teaching_support": [
+            485,
+            270
+          ],
+          "communication": [
+            670,
+            270
+          ],
+          "knowledge_sharing": [
+            855,
+            270
+          ],
+          "learning_outcomes": [
+            1040,
+            270
+          ]
+        }
+      }
+    },
+    "tools_manufacturing": {
+      "label": "Tools & Manufacturing",
+      "description": "Making pathway from local materials and fabrication through adaptation, prototyping, repair and useful production.",
+      "color": "#475569",
+      "nodes": [
+        {
+          "id": "local_material_inputs",
+          "label": "Local Inputs",
+          "stage": "Inputs",
+          "order": 1,
+          "description": "Use locally available raw, reclaimed or repurposed materials.",
+          "upstream": [],
+          "downstream": [
+            "fabrication"
+          ],
+          "aliases": [
+            "Local Inputs"
+          ],
+          "keywords": [
+            "scrap metal",
+            "local material",
+            "recycled material",
+            "repurposed",
+            "workshop"
+          ]
+        },
+        {
+          "id": "fabrication",
+          "label": "Fabrication",
+          "stage": "Making",
+          "order": 2,
+          "description": "Fabricate components and tools using local workshops and practical skills.",
+          "upstream": [
+            "local_material_inputs"
+          ],
+          "downstream": [
+            "adaptation"
+          ],
+          "aliases": [
+            "Fabrication"
+          ],
+          "keywords": [
+            "blacksmith",
+            "fabrication",
+            "machining",
+            "foundry",
+            "workshop"
+          ]
+        },
+        {
+          "id": "adaptation",
+          "label": "Adaptation",
+          "stage": "Innovation",
+          "order": 3,
+          "description": "Modify existing equipment or tools to fit local needs and constraints.",
+          "upstream": [
+            "fabrication"
+          ],
+          "downstream": [
+            "prototyping"
+          ],
+          "aliases": [
+            "Adaptation"
+          ],
+          "keywords": [
+            "adapted",
+            "modification",
+            "repurpose",
+            "engine adaptation",
+            "local adaptation"
+          ]
+        },
+        {
+          "id": "prototyping",
+          "label": "Prototyping",
+          "stage": "Testing",
+          "order": 4,
+          "description": "Build and test working prototypes before wider use.",
+          "upstream": [
+            "adaptation"
+          ],
+          "downstream": [
+            "repair_maintenance"
+          ],
+          "aliases": [
+            "Prototyping"
+          ],
+          "keywords": [
+            "prototype",
+            "DIY",
+            "maker",
+            "testing",
+            "proof of concept"
+          ]
+        },
+        {
+          "id": "repair_maintenance",
+          "label": "Repair & Maintenance",
+          "stage": "Continuity",
+          "order": 5,
+          "description": "Extend useful life through repair, maintenance and component reuse.",
+          "upstream": [
+            "prototyping"
+          ],
+          "downstream": [
+            "productive_tool"
+          ],
+          "aliases": [
+            "Repair & Maintenance"
+          ],
+          "keywords": [
+            "repair",
+            "maintenance",
+            "retrofitting",
+            "reuse",
+            "spare part"
+          ]
+        },
+        {
+          "id": "productive_tool",
+          "label": "Productive Tool",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Deliver a practical tool or machine that solves a local production problem.",
+          "upstream": [
+            "repair_maintenance"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Productive Tool"
+          ],
+          "keywords": [
+            "tool",
+            "machine",
+            "thresher",
+            "press",
+            "equipment",
+            "productivity"
+          ]
+        }
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "local_material_inputs": [
+            115,
+            270
+          ],
+          "fabrication": [
+            300,
+            270
+          ],
+          "adaptation": [
+            485,
+            270
+          ],
+          "prototyping": [
+            670,
+            270
+          ],
+          "repair_maintenance": [
+            855,
+            270
+          ],
+          "productive_tool": [
+            1040,
+            270
+          ]
+        }
+      }
+    },
+    "environment_circular_economy": {
+      "label": "Environment & Circular Economy",
+      "description": "Environmental pathway from prevention and collection through recovery, treatment, reuse and ecological restoration.",
+      "color": "#16a34a",
+      "nodes": [
+        {
+          "id": "prevention_reduction",
+          "label": "Prevention & Reduction",
+          "stage": "Prevention",
+          "order": 1,
+          "description": "Reduce resource use and prevent waste or environmental damage at source.",
+          "upstream": [],
+          "downstream": [
+            "collection"
+          ],
+          "aliases": [
+            "Prevention & Reduction"
+          ],
+          "keywords": [
+            "waste reduction",
+            "prevention",
+            "resource efficiency",
+            "plastic reduction"
+          ]
+        },
+        {
+          "id": "collection",
+          "label": "Collection",
+          "stage": "Collection",
+          "order": 2,
+          "description": "Collect waste and recoverable materials from households and communities.",
+          "upstream": [
+            "prevention_reduction"
+          ],
+          "downstream": [
+            "sorting_recovery"
+          ],
+          "aliases": [
+            "Collection"
+          ],
+          "keywords": [
+            "waste collection",
+            "river cleanup",
+            "waste picker",
+            "collection"
+          ]
+        },
+        {
+          "id": "sorting_recovery",
+          "label": "Sorting & Recovery",
+          "stage": "Recovery",
+          "order": 3,
+          "description": "Separate materials for reuse, recycling or productive recovery.",
+          "upstream": [
+            "collection"
+          ],
+          "downstream": [
+            "treatment_processing"
+          ],
+          "aliases": [
+            "Sorting & Recovery"
+          ],
+          "keywords": [
+            "sorting",
+            "recycling",
+            "waste picker",
+            "material recovery",
+            "recovery"
+          ]
+        },
+        {
+          "id": "treatment_processing",
+          "label": "Treatment & Processing",
+          "stage": "Treatment",
+          "order": 4,
+          "description": "Process wastes into safer, reusable or transformed outputs.",
+          "upstream": [
+            "sorting_recovery"
+          ],
+          "downstream": [
+            "reuse_circularity"
+          ],
+          "aliases": [
+            "Treatment & Processing"
+          ],
+          "keywords": [
+            "composting",
+            "waste treatment",
+            "upcycling",
+            "processing",
+            "biogas"
+          ]
+        },
+        {
+          "id": "reuse_circularity",
+          "label": "Reuse & Circularity",
+          "stage": "Reuse",
+          "order": 5,
+          "description": "Return materials, nutrients or products into productive cycles.",
+          "upstream": [
+            "treatment_processing"
+          ],
+          "downstream": [
+            "ecosystem_restoration"
+          ],
+          "aliases": [
+            "Reuse & Circularity"
+          ],
+          "keywords": [
+            "reuse",
+            "upcycling",
+            "circular economy",
+            "compost",
+            "recycling"
+          ]
+        },
+        {
+          "id": "ecosystem_restoration",
+          "label": "Ecosystem Restoration",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Restore environmental quality, soil, waterways and ecosystem functions.",
+          "upstream": [
+            "reuse_circularity"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Ecosystem Restoration"
+          ],
+          "keywords": [
+            "restoration",
+            "river cleanup",
+            "soil restoration",
+            "biodiversity",
+            "ecosystem"
+          ]
+        }
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "prevention_reduction": [
+            115,
+            270
+          ],
+          "collection": [
+            300,
+            270
+          ],
+          "sorting_recovery": [
+            485,
+            270
+          ],
+          "treatment_processing": [
+            670,
+            270
+          ],
+          "reuse_circularity": [
+            855,
+            270
+          ],
+          "ecosystem_restoration": [
+            1040,
+            270
+          ]
+        }
+      }
+    },
+    "transport_mobility": {
+      "label": "Transportation & Mobility",
+      "description": "Mobility pathway from local transport needs through vehicle adaptation, logistics and accessible movement.",
+      "color": "#2563eb",
+      "nodes": [
+        {
+          "id": "mobility_need",
+          "label": "Mobility Need",
+          "stage": "Demand",
+          "order": 1,
+          "description": "Identify local transport, access and mobility constraints.",
+          "upstream": [],
+          "downstream": [
+            "vehicle_adaptation"
+          ],
+          "aliases": [
+            "Mobility Need"
+          ],
+          "keywords": [
+            "transport solution",
+            "mobility",
+            "rural transport",
+            "mobility need"
+          ]
+        },
+        {
+          "id": "vehicle_adaptation",
+          "label": "Vehicle Adaptation",
+          "stage": "Design",
+          "order": 2,
+          "description": "Modify or repurpose vehicles and components for local use.",
+          "upstream": [
+            "mobility_need"
+          ],
+          "downstream": [
+            "mobility_tools"
+          ],
+          "aliases": [
+            "Vehicle Adaptation"
+          ],
+          "keywords": [
+            "vehicle modification",
+            "cargo bicycle",
+            "boat motor",
+            "engine conversion",
+            "adaptation"
+          ]
+        },
+        {
+          "id": "mobility_tools",
+          "label": "Mobility Tools",
+          "stage": "Equipment",
+          "order": 3,
+          "description": "Deploy bicycles, carts, boats or other locally appropriate mobility tools.",
+          "upstream": [
+            "vehicle_adaptation"
+          ],
+          "downstream": [
+            "logistics"
+          ],
+          "aliases": [
+            "Mobility Tools"
+          ],
+          "keywords": [
+            "cargo bicycle",
+            "donkey cart",
+            "boat",
+            "motorcycle",
+            "transport tool"
+          ]
+        },
+        {
+          "id": "logistics",
+          "label": "Local Logistics",
+          "stage": "Movement",
+          "order": 4,
+          "description": "Move people, goods, food, water or medical supplies efficiently.",
+          "upstream": [
+            "mobility_tools"
+          ],
+          "downstream": [
+            "accessibility"
+          ],
+          "aliases": [
+            "Local Logistics"
+          ],
+          "keywords": [
+            "logistics",
+            "rural logistics",
+            "delivery",
+            "transport network",
+            "supply"
+          ]
+        },
+        {
+          "id": "accessibility",
+          "label": "Accessibility",
+          "stage": "Inclusion",
+          "order": 5,
+          "description": "Improve access for people, communities and essential services.",
+          "upstream": [
+            "logistics"
+          ],
+          "downstream": [
+            "mobility_outcome"
+          ],
+          "aliases": [
+            "Accessibility"
+          ],
+          "keywords": [
+            "accessibility",
+            "wheelchair",
+            "assistive mobility",
+            "inclusive transport"
+          ]
+        },
+        {
+          "id": "mobility_outcome",
+          "label": "Mobility Outcome",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Deliver safer, more affordable and appropriate movement.",
+          "upstream": [
+            "accessibility"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Mobility Outcome"
+          ],
+          "keywords": [
+            "safe transport",
+            "affordable transport",
+            "mobility access",
+            "travel time"
+          ]
+        }
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "mobility_need": [
+            115,
+            270
+          ],
+          "vehicle_adaptation": [
+            300,
+            270
+          ],
+          "mobility_tools": [
+            485,
+            270
+          ],
+          "logistics": [
+            670,
+            270
+          ],
+          "accessibility": [
+            855,
+            270
+          ],
+          "mobility_outcome": [
+            1040,
+            270
+          ]
+        }
+      }
+    },
+    "finance_social_innovation": {
+      "label": "Finance & Social Innovation",
+      "description": "Community resilience pathway from local organization and finance through cooperation, digital access and collective outcomes.",
+      "color": "#9333ea",
+      "nodes": [
+        {
+          "id": "local_organization",
+          "label": "Local Organization",
+          "stage": "Foundation",
+          "order": 1,
+          "description": "Organize community actors, cooperatives and local institutions around shared needs.",
+          "upstream": [],
+          "downstream": [
+            "community_finance"
+          ],
+          "aliases": [
+            "Local Organization"
+          ],
+          "keywords": [
+            "cooperative",
+            "community organization",
+            "grassroots",
+            "community group"
+          ]
+        },
+        {
+          "id": "community_finance",
+          "label": "Community Finance",
+          "stage": "Finance",
+          "order": 2,
+          "description": "Mobilize savings, rotating funds, barter or local finance mechanisms.",
+          "upstream": [
+            "local_organization"
+          ],
+          "downstream": [
+            "digital_access"
+          ],
+          "aliases": [
+            "Community Finance"
+          ],
+          "keywords": [
+            "community savings",
+            "rotating fund",
+            "barter",
+            "unbanked",
+            "local finance"
+          ]
+        },
+        {
+          "id": "digital_access",
+          "label": "Digital Access",
+          "stage": "Access",
+          "order": 3,
+          "description": "Use digital tools and mobile services to extend access and coordination.",
+          "upstream": [
+            "community_finance"
+          ],
+          "downstream": [
+            "collective_action"
+          ],
+          "aliases": [
+            "Digital Access"
+          ],
+          "keywords": [
+            "mobile money",
+            "digital access",
+            "mobile payment",
+            "community technology"
+          ]
+        },
+        {
+          "id": "collective_action",
+          "label": "Collective Action",
+          "stage": "Action",
+          "order": 4,
+          "description": "Turn shared resources and knowledge into coordinated local action.",
+          "upstream": [
+            "digital_access"
+          ],
+          "downstream": [
+            "social_enterprise"
+          ],
+          "aliases": [
+            "Collective Action"
+          ],
+          "keywords": [
+            "collective action",
+            "community initiative",
+            "cooperative",
+            "local enterprise"
+          ]
+        },
+        {
+          "id": "social_enterprise",
+          "label": "Social Enterprise",
+          "stage": "Enterprise",
+          "order": 5,
+          "description": "Create practical services or enterprises that sustain community solutions.",
+          "upstream": [
+            "collective_action"
+          ],
+          "downstream": [
+            "community_resilience"
+          ],
+          "aliases": [
+            "Social Enterprise"
+          ],
+          "keywords": [
+            "social enterprise",
+            "community enterprise",
+            "cooperative enterprise",
+            "local business"
+          ]
+        },
+        {
+          "id": "community_resilience",
+          "label": "Community Resilience",
+          "stage": "Outcome",
+          "order": 6,
+          "description": "Strengthen local capacity, livelihoods, inclusion and adaptive resilience.",
+          "upstream": [
+            "social_enterprise"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Community Resilience"
+          ],
+          "keywords": [
+            "resilience",
+            "livelihood",
+            "community empowerment",
+            "inclusion",
+            "self reliance"
+          ]
+        }
+      ],
+      "layout": {
+        "viewBox": [
+          0,
+          0,
+          1300,
+          680
+        ],
+        "root": [
+          650,
+          80
+        ],
+        "nodes": {
+          "local_organization": [
+            115,
+            270
+          ],
+          "community_finance": [
+            300,
+            270
+          ],
+          "digital_access": [
+            485,
+            270
+          ],
+          "collective_action": [
+            670,
+            270
+          ],
+          "social_enterprise": [
+            855,
+            270
+          ],
+          "community_resilience": [
+            1040,
+            270
           ]
         }
       }
