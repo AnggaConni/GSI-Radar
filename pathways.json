@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "domains": {
     "water_management": {
       "label": "Water Management",
@@ -29,7 +29,72 @@
             "river protection",
             "source protection",
             "water quality protection"
-          ]
+          ],
+          "implementation": {
+            "objective": "Protect water sources and catchments from contamination and degradation.",
+            "typical_inputs": [
+              "local resource"
+            ],
+            "typical_outputs": [
+              "available source"
+            ],
+            "skills": [
+              "resource assessment"
+            ],
+            "infrastructure": [
+              "source or collection point"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "resource assessment"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "resource assessment"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of water protection"
+            ],
+            "secondary": [
+              "Improved local capability through the source stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "water_conservation",
@@ -53,7 +118,72 @@
             "water efficiency",
             "reduce water use",
             "stewardship"
-          ]
+          ],
+          "implementation": {
+            "objective": "Reduce unnecessary water use and improve water-use efficiency.",
+            "typical_inputs": [
+              "local resource"
+            ],
+            "typical_outputs": [
+              "available source"
+            ],
+            "skills": [
+              "resource assessment"
+            ],
+            "infrastructure": [
+              "source or collection point"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "resource assessment"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "resource assessment"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of water conservation"
+            ],
+            "secondary": [
+              "Improved local capability through the source stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "water_harvesting",
@@ -83,7 +213,75 @@
             "runoff collection",
             "fog harvesting",
             "dew harvesting"
-          ]
+          ],
+          "implementation": {
+            "objective": "Capture available water from rain, runoff or other local sources.",
+            "typical_inputs": [
+              "resource"
+            ],
+            "typical_outputs": [
+              "available supply"
+            ],
+            "skills": [
+              "handling",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "basic storage or distribution infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "handling",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "handling",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of water harvesting"
+            ],
+            "secondary": [
+              "Improved local capability through the supply stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "water_storage",
@@ -112,7 +310,75 @@
             "storage tank",
             "water container",
             "stored water"
-          ]
+          ],
+          "implementation": {
+            "objective": "Store water safely between collection and distribution or treatment.",
+            "typical_inputs": [
+              "resource"
+            ],
+            "typical_outputs": [
+              "available supply"
+            ],
+            "skills": [
+              "handling",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "basic storage or distribution infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "handling",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "handling",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of water storage"
+            ],
+            "secondary": [
+              "Improved local capability through the supply stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "water_distribution",
@@ -139,7 +405,75 @@
             "water delivery",
             "water supply",
             "water access"
-          ]
+          ],
+          "implementation": {
+            "objective": "Move water from a source or storage point to users and service points.",
+            "typical_inputs": [
+              "resource"
+            ],
+            "typical_outputs": [
+              "available supply"
+            ],
+            "skills": [
+              "handling",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "basic storage or distribution infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "handling",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "handling",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of water distribution"
+            ],
+            "secondary": [
+              "Improved local capability through the supply stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "water_purification",
@@ -172,6 +506,87 @@
             "sodis",
             "pathogen removal",
             "safe drinking water"
+          ],
+          "implementation": {
+            "objective": "Remove or inactivate contaminants to make water safer for intended use.",
+            "typical_inputs": [
+              "case or material"
+            ],
+            "typical_outputs": [
+              "treated state"
+            ],
+            "skills": [
+              "process control",
+              "quality assurance"
+            ],
+            "infrastructure": [
+              "appropriate treatment infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "process control",
+              "quality assurance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "process control",
+              "quality assurance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of water purification"
+            ],
+            "secondary": [
+              "Improved local capability through the treatment stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "energy_access",
+              "node": "energy_generation",
+              "relationship": "can_support",
+              "reason": "Some purification solutions depend on electricity or off-grid energy."
+            },
+            {
+              "domain": "health_medical_access",
+              "node": "prevention_hygiene",
+              "relationship": "contributes_to",
+              "reason": "Safer water can support disease prevention and hygiene."
+            }
           ]
         },
         {
@@ -202,7 +617,75 @@
             "treatment plant",
             "wastewater treatment",
             "sewage treatment"
-          ]
+          ],
+          "implementation": {
+            "objective": "Apply treatment processes such as disinfection, coagulation, biological treatment or desalination.",
+            "typical_inputs": [
+              "case or material"
+            ],
+            "typical_outputs": [
+              "treated state"
+            ],
+            "skills": [
+              "process control",
+              "quality assurance"
+            ],
+            "infrastructure": [
+              "appropriate treatment infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "process control",
+              "quality assurance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "process control",
+              "quality assurance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of water treatment"
+            ],
+            "secondary": [
+              "Improved local capability through the treatment stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "water_sanitation",
@@ -239,6 +722,87 @@
             "ecological sanitation",
             "composting toilet",
             "fecal"
+          ],
+          "implementation": {
+            "objective": "Connect safe water with sanitation and hygiene practices at the point of use.",
+            "typical_inputs": [
+              "service/product"
+            ],
+            "typical_outputs": [
+              "service delivered"
+            ],
+            "skills": [
+              "safe use",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "point-of-use infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "safe use",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "safe use",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of wash & sanitation"
+            ],
+            "secondary": [
+              "Improved local capability through the use stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "health_medical_access",
+              "node": "prevention_hygiene",
+              "relationship": "supports",
+              "reason": "WASH is closely connected to preventive health practice."
+            },
+            {
+              "domain": "environment_circular_economy",
+              "node": "treatment_processing",
+              "relationship": "can_feed",
+              "reason": "Sanitation outputs may require environmental treatment or recovery."
+            }
           ]
         },
         {
@@ -271,7 +835,75 @@
             "fecal sludge",
             "septage",
             "sludge"
-          ]
+          ],
+          "implementation": {
+            "objective": "Collect, contain, treat and safely manage wastewater, greywater, blackwater and fecal sludge.",
+            "typical_inputs": [
+              "used material or service output"
+            ],
+            "typical_outputs": [
+              "contained/recovered material"
+            ],
+            "skills": [
+              "collection",
+              "safe handling"
+            ],
+            "infrastructure": [
+              "collection or treatment system"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "collection",
+              "safe handling"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "collection",
+              "safe handling"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of wastewater management"
+            ],
+            "secondary": [
+              "Improved local capability through the post-use stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "water_reuse",
@@ -297,7 +929,75 @@
             "reclaimed water",
             "treated effluent",
             "greywater reuse"
-          ]
+          ],
+          "implementation": {
+            "objective": "Safely reuse recovered water or treated effluent for appropriate purposes.",
+            "typical_inputs": [
+              "used material or service output"
+            ],
+            "typical_outputs": [
+              "contained/recovered material"
+            ],
+            "skills": [
+              "collection",
+              "safe handling"
+            ],
+            "infrastructure": [
+              "collection or treatment system"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "collection",
+              "safe handling"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "collection",
+              "safe handling"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution",
+            "traditional_knowledge",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "school",
+            "community",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of water reuse"
+            ],
+            "secondary": [
+              "Improved local capability through the post-use stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         }
       ],
       "layout": {
@@ -353,7 +1053,31 @@
             540
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "rural_household",
+        "school",
+        "community",
+        "municipality",
+        "small_enterprise",
+        "emergency_response"
+      ],
+      "evidence_types": [
+        "grassroots_innovation",
+        "community_project",
+        "institutional_solution",
+        "traditional_knowledge",
+        "adapted_technology"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "health_medical_access",
+        "environment_circular_economy",
+        "energy_access"
+      ]
     },
     "agriculture_food_security": {
       "label": "Agriculture & Food Security",
@@ -380,7 +1104,75 @@
             "biochar",
             "terra preta",
             "compost"
-          ]
+          ],
+          "implementation": {
+            "objective": "Improve soil fertility, structure, moisture retention and land stewardship.",
+            "typical_inputs": [
+              "local resources"
+            ],
+            "typical_outputs": [
+              "prepared conditions"
+            ],
+            "skills": [
+              "assessment",
+              "planning"
+            ],
+            "infrastructure": [
+              "local infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "assessment",
+              "planning"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "assessment",
+              "planning"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "farmer_innovation",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "smallholder_farm",
+            "community",
+            "school",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of soil management"
+            ],
+            "secondary": [
+              "Improved local capability through the foundation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "seed_systems",
@@ -403,7 +1195,76 @@
             "local seed",
             "traditional seed",
             "seed exchange"
-          ]
+          ],
+          "implementation": {
+            "objective": "Preserve, select, multiply and exchange locally appropriate planting material.",
+            "typical_inputs": [
+              "materials",
+              "knowledge"
+            ],
+            "typical_outputs": [
+              "usable inputs"
+            ],
+            "skills": [
+              "selection",
+              "handling"
+            ],
+            "infrastructure": [
+              "basic storage/workspace"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "selection",
+              "handling"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "selection",
+              "handling"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "farmer_innovation",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "smallholder_farm",
+            "community",
+            "school",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of seed systems"
+            ],
+            "secondary": [
+              "Improved local capability through the inputs stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "cultivation",
@@ -427,7 +1288,77 @@
             "organic farming",
             "intercropping",
             "milpa"
-          ]
+          ],
+          "implementation": {
+            "objective": "Grow crops using locally adapted techniques, tools and knowledge.",
+            "typical_inputs": [
+              "inputs",
+              "labour",
+              "local knowledge"
+            ],
+            "typical_outputs": [
+              "productive activity"
+            ],
+            "skills": [
+              "operation",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "basic productive infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "operation",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "operation",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "farmer_innovation",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "smallholder_farm",
+            "community",
+            "school",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of cultivation"
+            ],
+            "secondary": [
+              "Improved local capability through the production stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "water_for_agriculture",
@@ -450,7 +1381,77 @@
             "farm water",
             "rainwater harvesting",
             "water saving"
-          ]
+          ],
+          "implementation": {
+            "objective": "Provide water through irrigation, harvesting and efficient field practices.",
+            "typical_inputs": [
+              "inputs",
+              "labour",
+              "local knowledge"
+            ],
+            "typical_outputs": [
+              "productive activity"
+            ],
+            "skills": [
+              "operation",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "basic productive infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "operation",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "operation",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "farmer_innovation",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "smallholder_farm",
+            "community",
+            "school",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of agricultural water"
+            ],
+            "secondary": [
+              "Improved local capability through the production stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "harvest_postharvest",
@@ -474,7 +1475,75 @@
             "thresher",
             "drying",
             "post harvest"
-          ]
+          ],
+          "implementation": {
+            "objective": "Reduce losses through harvesting, drying, storage and primary processing.",
+            "typical_inputs": [
+              "raw outputs"
+            ],
+            "typical_outputs": [
+              "processed material/product"
+            ],
+            "skills": [
+              "processing",
+              "quality control"
+            ],
+            "infrastructure": [
+              "processing area or equipment"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "processing",
+              "quality control"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "processing",
+              "quality control"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "farmer_innovation",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "smallholder_farm",
+            "community",
+            "school",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of harvest & post-harvest"
+            ],
+            "secondary": [
+              "Improved local capability through the processing stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "food_processing",
@@ -497,6 +1566,87 @@
             "oil press",
             "processing",
             "fermentation"
+          ],
+          "implementation": {
+            "objective": "Transform crops and agricultural outputs into usable or marketable food products.",
+            "typical_inputs": [
+              "agricultural output"
+            ],
+            "typical_outputs": [
+              "higher-value product"
+            ],
+            "skills": [
+              "processing",
+              "quality control"
+            ],
+            "infrastructure": [
+              "small processing facility"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "processing",
+              "quality control"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "processing",
+              "quality control"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "farmer_innovation",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "smallholder_farm",
+            "community",
+            "school",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of food processing"
+            ],
+            "secondary": [
+              "Improved local capability through the value addition stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "energy_access",
+              "node": "productive_energy_use",
+              "relationship": "can_require",
+              "reason": "Processing often depends on energy services."
+            },
+            {
+              "domain": "environment_circular_economy",
+              "node": "reuse_circularity",
+              "relationship": "can_link",
+              "reason": "Processing residues can enter circular material flows."
+            }
           ]
         },
         {
@@ -518,7 +1668,75 @@
             "community food",
             "nutrition",
             "local food"
-          ]
+          ],
+          "implementation": {
+            "objective": "Strengthen local food availability, affordability, resilience and community access.",
+            "typical_inputs": [
+              "implemented solution"
+            ],
+            "typical_outputs": [
+              "community benefit"
+            ],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ],
+            "infrastructure": [
+              "appropriate service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "traditional_knowledge",
+            "farmer_innovation",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "smallholder_farm",
+            "community",
+            "school",
+            "cooperative"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of food access"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         }
       ],
       "layout": {
@@ -562,7 +1780,31 @@
             270
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "smallholder_farm",
+        "community",
+        "school",
+        "cooperative",
+        "small_enterprise",
+        "rural_household"
+      ],
+      "evidence_types": [
+        "traditional_knowledge",
+        "farmer_innovation",
+        "community_project",
+        "adapted_technology",
+        "institutional_solution"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "water_management",
+        "energy_access",
+        "environment_circular_economy"
+      ]
     },
     "energy_access": {
       "label": "Energy Access",
@@ -589,7 +1831,72 @@
             "biogas",
             "biomass",
             "energy resource"
-          ]
+          ],
+          "implementation": {
+            "objective": "Identify locally available renewable or recoverable energy resources.",
+            "typical_inputs": [
+              "local resource"
+            ],
+            "typical_outputs": [
+              "available source"
+            ],
+            "skills": [
+              "resource assessment"
+            ],
+            "infrastructure": [
+              "source or collection point"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "resource assessment"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "resource assessment"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "engineering_prototype",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of energy resources"
+            ],
+            "secondary": [
+              "Improved local capability through the source stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "energy_generation",
@@ -613,7 +1920,75 @@
             "wind turbine",
             "biogas",
             "power generation"
-          ]
+          ],
+          "implementation": {
+            "objective": "Generate useful electricity or heat from local resources.",
+            "typical_inputs": [
+              "energy resource"
+            ],
+            "typical_outputs": [
+              "electricity or heat"
+            ],
+            "skills": [
+              "operation",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "generation equipment"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "operation",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "operation",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "engineering_prototype",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of energy generation"
+            ],
+            "secondary": [
+              "Improved local capability through the generation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "energy_conversion",
@@ -636,7 +2011,75 @@
             "engine conversion",
             "energy conversion",
             "thermal"
-          ]
+          ],
+          "implementation": {
+            "objective": "Convert energy into a form suitable for local applications.",
+            "typical_inputs": [
+              "energy"
+            ],
+            "typical_outputs": [
+              "usable energy form"
+            ],
+            "skills": [
+              "calibration",
+              "operation"
+            ],
+            "infrastructure": [
+              "conversion equipment"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "calibration",
+              "operation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "calibration",
+              "operation"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "engineering_prototype",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of energy conversion"
+            ],
+            "secondary": [
+              "Improved local capability through the conversion stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "energy_storage",
@@ -659,7 +2102,75 @@
             "thermal storage",
             "compressed air",
             "battery charging"
-          ]
+          ],
+          "implementation": {
+            "objective": "Store energy for continuity, mobility or demand balancing.",
+            "typical_inputs": [
+              "energy or material"
+            ],
+            "typical_outputs": [
+              "stored resource"
+            ],
+            "skills": [
+              "safe storage",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "storage equipment"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "safe storage",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "safe storage",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "engineering_prototype",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of energy storage"
+            ],
+            "secondary": [
+              "Improved local capability through the storage stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "energy_distribution",
@@ -682,7 +2193,75 @@
             "electrification",
             "power supply",
             "grid"
-          ]
+          ],
+          "implementation": {
+            "objective": "Deliver electricity or energy services to homes, farms and community facilities.",
+            "typical_inputs": [
+              "service"
+            ],
+            "typical_outputs": [
+              "access"
+            ],
+            "skills": [
+              "deployment",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "access infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "deployment",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "deployment",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "engineering_prototype",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of energy distribution"
+            ],
+            "secondary": [
+              "Improved local capability through the access stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "productive_energy_use",
@@ -704,6 +2283,81 @@
             "productive use",
             "charging",
             "processing"
+          ],
+          "implementation": {
+            "objective": "Apply energy to productive, household, agricultural or community needs.",
+            "typical_inputs": [
+              "service/product"
+            ],
+            "typical_outputs": [
+              "service delivered"
+            ],
+            "skills": [
+              "safe use",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "point-of-use infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "safe use",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "safe use",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "grassroots_innovation",
+            "engineering_prototype",
+            "community_project",
+            "adapted_technology",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of productive energy use"
+            ],
+            "secondary": [
+              "Improved local capability through the use stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "agriculture_food_security",
+              "node": "water_for_agriculture",
+              "relationship": "can_support",
+              "reason": "Energy can enable water lifting, irrigation and processing."
+            }
           ]
         }
       ],
@@ -744,7 +2398,32 @@
             260
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "rural_household",
+        "community",
+        "school",
+        "small_enterprise",
+        "micro_enterprise",
+        "emergency_response"
+      ],
+      "evidence_types": [
+        "grassroots_innovation",
+        "engineering_prototype",
+        "community_project",
+        "adapted_technology",
+        "institutional_solution"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "water_management",
+        "agriculture_food_security",
+        "tools_manufacturing",
+        "transport_mobility"
+      ]
     },
     "health_medical_access": {
       "label": "Health & Medical Access",
@@ -770,7 +2449,72 @@
             "prevention",
             "community health",
             "sanitation"
-          ]
+          ],
+          "implementation": {
+            "objective": "Reduce avoidable illness through hygiene, prevention practices and community health action.",
+            "typical_inputs": [
+              "community knowledge"
+            ],
+            "typical_outputs": [
+              "reduced exposure"
+            ],
+            "skills": [
+              "health promotion"
+            ],
+            "infrastructure": [
+              "community health infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "health promotion"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "health promotion"
+            ]
+          },
+          "evidence_types": [
+            "community_health_practice",
+            "medical_device",
+            "grassroots_innovation",
+            "institutional_solution",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_clinic",
+            "community",
+            "school",
+            "household"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of prevention & hygiene"
+            ],
+            "secondary": [
+              "Improved local capability through the prevention stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "health_screening",
@@ -793,7 +2537,75 @@
             "diagnosis",
             "testing",
             "monitoring"
-          ]
+          ],
+          "implementation": {
+            "objective": "Identify health conditions using accessible screening or diagnostic tools.",
+            "typical_inputs": [
+              "health signals"
+            ],
+            "typical_outputs": [
+              "health information"
+            ],
+            "skills": [
+              "testing",
+              "interpretation"
+            ],
+            "infrastructure": [
+              "screening point"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "testing",
+              "interpretation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "testing",
+              "interpretation"
+            ]
+          },
+          "evidence_types": [
+            "community_health_practice",
+            "medical_device",
+            "grassroots_innovation",
+            "institutional_solution",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_clinic",
+            "community",
+            "school",
+            "household"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of screening & diagnosis"
+            ],
+            "secondary": [
+              "Improved local capability through the detection stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "medical_tools",
@@ -817,6 +2629,81 @@
             "wheelchair",
             "incubator",
             "clinic"
+          ],
+          "implementation": {
+            "objective": "Provide low-cost, improvised or locally manufactured tools for care.",
+            "typical_inputs": [
+              "service"
+            ],
+            "typical_outputs": [
+              "access"
+            ],
+            "skills": [
+              "deployment",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "access infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "deployment",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "deployment",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "community_health_practice",
+            "medical_device",
+            "grassroots_innovation",
+            "institutional_solution",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_clinic",
+            "community",
+            "school",
+            "household"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of medical tools"
+            ],
+            "secondary": [
+              "Improved local capability through the access stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "tools_manufacturing",
+              "node": "fabrication",
+              "relationship": "can_use",
+              "reason": "Local manufacturing can produce or maintain medical tools."
+            }
           ]
         },
         {
@@ -840,7 +2727,75 @@
             "community care",
             "treatment",
             "health service"
-          ]
+          ],
+          "implementation": {
+            "objective": "Support frontline care and practical treatment in local settings.",
+            "typical_inputs": [
+              "case or material"
+            ],
+            "typical_outputs": [
+              "treated state"
+            ],
+            "skills": [
+              "process control",
+              "quality assurance"
+            ],
+            "infrastructure": [
+              "appropriate treatment infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "process control",
+              "quality assurance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "process control",
+              "quality assurance"
+            ]
+          },
+          "evidence_types": [
+            "community_health_practice",
+            "medical_device",
+            "grassroots_innovation",
+            "institutional_solution",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_clinic",
+            "community",
+            "school",
+            "household"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of care delivery"
+            ],
+            "secondary": [
+              "Improved local capability through the treatment stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "referral_logistics",
@@ -863,7 +2818,75 @@
             "cold chain",
             "health logistics",
             "transport"
-          ]
+          ],
+          "implementation": {
+            "objective": "Move patients, supplies and information safely through the care pathway.",
+            "typical_inputs": [
+              "patient/service need"
+            ],
+            "typical_outputs": [
+              "continuity of care"
+            ],
+            "skills": [
+              "coordination",
+              "logistics"
+            ],
+            "infrastructure": [
+              "referral/logistics infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "coordination",
+              "logistics"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "coordination",
+              "logistics"
+            ]
+          },
+          "evidence_types": [
+            "community_health_practice",
+            "medical_device",
+            "grassroots_innovation",
+            "institutional_solution",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_clinic",
+            "community",
+            "school",
+            "household"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of referral & logistics"
+            ],
+            "secondary": [
+              "Improved local capability through the continuity stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "rehabilitation_support",
@@ -884,7 +2907,76 @@
             "mobility",
             "assistive device",
             "recovery"
-          ]
+          ],
+          "implementation": {
+            "objective": "Support recovery, mobility, continuity and long-term function.",
+            "typical_inputs": [
+              "used material",
+              "recovery need"
+            ],
+            "typical_outputs": [
+              "recovered value"
+            ],
+            "skills": [
+              "recovery",
+              "processing"
+            ],
+            "infrastructure": [
+              "recovery facility"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "recovery",
+              "processing"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "recovery",
+              "processing"
+            ]
+          },
+          "evidence_types": [
+            "community_health_practice",
+            "medical_device",
+            "grassroots_innovation",
+            "institutional_solution",
+            "adapted_technology"
+          ],
+          "implementation_contexts": [
+            "rural_clinic",
+            "community",
+            "school",
+            "household"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of rehabilitation & support"
+            ],
+            "secondary": [
+              "Improved local capability through the recovery stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         }
       ],
       "layout": {
@@ -924,7 +3016,32 @@
             270
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "rural_clinic",
+        "community",
+        "school",
+        "household",
+        "municipality",
+        "emergency_response"
+      ],
+      "evidence_types": [
+        "community_health_practice",
+        "medical_device",
+        "grassroots_innovation",
+        "institutional_solution",
+        "adapted_technology"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "water_management",
+        "education_communication",
+        "transport_mobility",
+        "tools_manufacturing"
+      ]
     },
     "construction_shelter": {
       "label": "Construction & Shelter",
@@ -951,6 +3068,82 @@
             "rammed earth",
             "recycled material",
             "plastic bottle"
+          ],
+          "implementation": {
+            "objective": "Use locally available, recycled or low-cost building materials.",
+            "typical_inputs": [
+              "materials",
+              "knowledge"
+            ],
+            "typical_outputs": [
+              "usable inputs"
+            ],
+            "skills": [
+              "selection",
+              "handling"
+            ],
+            "infrastructure": [
+              "basic storage/workspace"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "selection",
+              "handling"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "selection",
+              "handling"
+            ]
+          },
+          "evidence_types": [
+            "vernacular_knowledge",
+            "grassroots_construction",
+            "engineering_solution",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of local materials"
+            ],
+            "secondary": [
+              "Improved local capability through the inputs stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "environment_circular_economy",
+              "node": "reuse_circularity",
+              "relationship": "can_source_from",
+              "reason": "Recovered materials can become construction inputs."
+            }
           ]
         },
         {
@@ -974,7 +3167,76 @@
             "climate responsive",
             "low cost housing",
             "self-built"
-          ]
+          ],
+          "implementation": {
+            "objective": "Adapt building forms to local climate, hazards, skills and resources.",
+            "typical_inputs": [
+              "local constraints",
+              "knowledge"
+            ],
+            "typical_outputs": [
+              "design specification"
+            ],
+            "skills": [
+              "design",
+              "adaptation"
+            ],
+            "infrastructure": [
+              "workspace or design tools"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "design",
+              "adaptation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "design",
+              "adaptation"
+            ]
+          },
+          "evidence_types": [
+            "vernacular_knowledge",
+            "grassroots_construction",
+            "engineering_solution",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of design & adaptation"
+            ],
+            "secondary": [
+              "Improved local capability through the design stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "construction",
@@ -998,7 +3260,76 @@
             "roof",
             "wall",
             "masonry"
-          ]
+          ],
+          "implementation": {
+            "objective": "Build or retrofit structures using accessible methods and local skills.",
+            "typical_inputs": [
+              "design",
+              "materials"
+            ],
+            "typical_outputs": [
+              "built asset"
+            ],
+            "skills": [
+              "construction",
+              "quality control"
+            ],
+            "infrastructure": [
+              "construction workspace"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "construction",
+              "quality control"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "construction",
+              "quality control"
+            ]
+          },
+          "evidence_types": [
+            "vernacular_knowledge",
+            "grassroots_construction",
+            "engineering_solution",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of construction"
+            ],
+            "secondary": [
+              "Improved local capability through the build stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "water_sanitation_infrastructure",
@@ -1021,7 +3352,76 @@
             "drainage",
             "water system",
             "sanitation infrastructure"
-          ]
+          ],
+          "implementation": {
+            "objective": "Integrate water, drainage and sanitation systems into the built environment.",
+            "typical_inputs": [
+              "built asset",
+              "service components"
+            ],
+            "typical_outputs": [
+              "basic services"
+            ],
+            "skills": [
+              "installation",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "installation",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "installation",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "vernacular_knowledge",
+            "grassroots_construction",
+            "engineering_solution",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of water & sanitation infrastructure"
+            ],
+            "secondary": [
+              "Improved local capability through the services stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "resilience_safety",
@@ -1044,7 +3444,76 @@
             "fire safety",
             "structural safety",
             "flood protection"
-          ]
+          ],
+          "implementation": {
+            "objective": "Improve structural, environmental and occupant safety.",
+            "typical_inputs": [
+              "asset",
+              "hazard information"
+            ],
+            "typical_outputs": [
+              "safer asset"
+            ],
+            "skills": [
+              "risk management",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "protective systems"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "risk management",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "risk management",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "vernacular_knowledge",
+            "grassroots_construction",
+            "engineering_solution",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of resilience & safety"
+            ],
+            "secondary": [
+              "Improved local capability through the protection stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "habitable_shelter",
@@ -1065,7 +3534,75 @@
             "habitable",
             "safe home",
             "community building"
-          ]
+          ],
+          "implementation": {
+            "objective": "Provide safe, usable and durable places for people and communities.",
+            "typical_inputs": [
+              "implemented solution"
+            ],
+            "typical_outputs": [
+              "community benefit"
+            ],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ],
+            "infrastructure": [
+              "appropriate service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "vernacular_knowledge",
+            "grassroots_construction",
+            "engineering_solution",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "school",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of habitable shelter"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         }
       ],
       "layout": {
@@ -1105,7 +3642,32 @@
             270
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "rural_household",
+        "community",
+        "school",
+        "municipality",
+        "emergency_response",
+        "small_enterprise"
+      ],
+      "evidence_types": [
+        "vernacular_knowledge",
+        "grassroots_construction",
+        "engineering_solution",
+        "community_project",
+        "institutional_solution"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "water_management",
+        "environment_circular_economy",
+        "energy_access",
+        "tools_manufacturing"
+      ]
     },
     "education_communication": {
       "label": "Education & Communication",
@@ -1130,7 +3692,75 @@
             "rural school",
             "learning access",
             "education access"
-          ]
+          ],
+          "implementation": {
+            "objective": "Expand access to learning opportunities where infrastructure is limited.",
+            "typical_inputs": [
+              "service"
+            ],
+            "typical_outputs": [
+              "access"
+            ],
+            "skills": [
+              "deployment",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "access infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "deployment",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "deployment",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "teaching_practice",
+            "community_project",
+            "digital_innovation",
+            "traditional_knowledge",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "school",
+            "community",
+            "rural_household",
+            "training_center"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of learning access"
+            ],
+            "secondary": [
+              "Improved local capability through the access stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "learning_tools",
@@ -1153,6 +3783,82 @@
             "tablet",
             "repurposed device",
             "education technology"
+          ],
+          "implementation": {
+            "objective": "Provide low-cost, offline or repurposed tools that enable learning.",
+            "typical_inputs": [
+              "learning need",
+              "content"
+            ],
+            "typical_outputs": [
+              "usable learning tool"
+            ],
+            "skills": [
+              "setup",
+              "facilitation"
+            ],
+            "infrastructure": [
+              "learning space or device"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "setup",
+              "facilitation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "setup",
+              "facilitation"
+            ]
+          },
+          "evidence_types": [
+            "teaching_practice",
+            "community_project",
+            "digital_innovation",
+            "traditional_knowledge",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "school",
+            "community",
+            "rural_household",
+            "training_center"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of learning tools"
+            ],
+            "secondary": [
+              "Improved local capability through the tools stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": [
+            {
+              "domain": "tools_manufacturing",
+              "node": "productive_tool",
+              "relationship": "can_use",
+              "reason": "Locally fabricated tools can support learning environments."
+            }
           ]
         },
         {
@@ -1176,7 +3882,76 @@
             "training",
             "facilitator",
             "peer learning"
-          ]
+          ],
+          "implementation": {
+            "objective": "Support teachers, facilitators and peer learning with adaptable methods.",
+            "typical_inputs": [
+              "learning content",
+              "facilitator"
+            ],
+            "typical_outputs": [
+              "learning activity"
+            ],
+            "skills": [
+              "facilitation",
+              "feedback"
+            ],
+            "infrastructure": [
+              "training/learning environment"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "facilitation",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "facilitation",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "teaching_practice",
+            "community_project",
+            "digital_innovation",
+            "traditional_knowledge",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "school",
+            "community",
+            "rural_household",
+            "training_center"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of teaching support"
+            ],
+            "secondary": [
+              "Improved local capability through the practice stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "communication",
@@ -1198,7 +3973,76 @@
             "communication",
             "transmitter",
             "information access"
-          ]
+          ],
+          "implementation": {
+            "objective": "Enable community communication and information exchange.",
+            "typical_inputs": [
+              "information",
+              "communication channel"
+            ],
+            "typical_outputs": [
+              "connected users"
+            ],
+            "skills": [
+              "communication",
+              "digital literacy"
+            ],
+            "infrastructure": [
+              "communication channel"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "communication",
+              "digital literacy"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "communication",
+              "digital literacy"
+            ]
+          },
+          "evidence_types": [
+            "teaching_practice",
+            "community_project",
+            "digital_innovation",
+            "traditional_knowledge",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "school",
+            "community",
+            "rural_household",
+            "training_center"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of communication"
+            ],
+            "secondary": [
+              "Improved local capability through the connection stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "knowledge_sharing",
@@ -1220,7 +4064,76 @@
             "local knowledge",
             "traditional knowledge",
             "community learning"
-          ]
+          ],
+          "implementation": {
+            "objective": "Capture and circulate practical, local and experiential knowledge.",
+            "typical_inputs": [
+              "experience",
+              "documentation"
+            ],
+            "typical_outputs": [
+              "shared knowledge"
+            ],
+            "skills": [
+              "documentation",
+              "facilitation"
+            ],
+            "infrastructure": [
+              "knowledge repository or community space"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "documentation",
+              "facilitation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "documentation",
+              "facilitation"
+            ]
+          },
+          "evidence_types": [
+            "teaching_practice",
+            "community_project",
+            "digital_innovation",
+            "traditional_knowledge",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "school",
+            "community",
+            "rural_household",
+            "training_center"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of knowledge sharing"
+            ],
+            "secondary": [
+              "Improved local capability through the knowledge stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "learning_outcomes",
@@ -1241,7 +4154,75 @@
             "learning outcomes",
             "literacy",
             "empowerment"
-          ]
+          ],
+          "implementation": {
+            "objective": "Translate access and learning into skills, agency and practical capability.",
+            "typical_inputs": [
+              "implemented solution"
+            ],
+            "typical_outputs": [
+              "community benefit"
+            ],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ],
+            "infrastructure": [
+              "appropriate service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "teaching_practice",
+            "community_project",
+            "digital_innovation",
+            "traditional_knowledge",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "school",
+            "community",
+            "rural_household",
+            "training_center"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of learning outcomes"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         }
       ],
       "layout": {
@@ -1281,7 +4262,31 @@
             270
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "school",
+        "community",
+        "rural_household",
+        "training_center",
+        "municipality",
+        "online_offline_hybrid"
+      ],
+      "evidence_types": [
+        "teaching_practice",
+        "community_project",
+        "digital_innovation",
+        "traditional_knowledge",
+        "institutional_solution"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "health_medical_access",
+        "tools_manufacturing",
+        "digital_access"
+      ]
     },
     "tools_manufacturing": {
       "label": "Tools & Manufacturing",
@@ -1307,7 +4312,76 @@
             "recycled material",
             "repurposed",
             "workshop"
-          ]
+          ],
+          "implementation": {
+            "objective": "Use locally available raw, reclaimed or repurposed materials.",
+            "typical_inputs": [
+              "materials",
+              "knowledge"
+            ],
+            "typical_outputs": [
+              "usable inputs"
+            ],
+            "skills": [
+              "selection",
+              "handling"
+            ],
+            "infrastructure": [
+              "basic storage/workspace"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "selection",
+              "handling"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "selection",
+              "handling"
+            ]
+          },
+          "evidence_types": [
+            "DIY_innovation",
+            "engineering_prototype",
+            "maker_project",
+            "adapted_technology",
+            "repair_practice"
+          ],
+          "implementation_contexts": [
+            "maker_space",
+            "local_workshop",
+            "small_enterprise",
+            "farm"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of local inputs"
+            ],
+            "secondary": [
+              "Improved local capability through the inputs stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "fabrication",
@@ -1330,7 +4404,76 @@
             "machining",
             "foundry",
             "workshop"
-          ]
+          ],
+          "implementation": {
+            "objective": "Fabricate components and tools using local workshops and practical skills.",
+            "typical_inputs": [
+              "materials",
+              "design"
+            ],
+            "typical_outputs": [
+              "fabricated component"
+            ],
+            "skills": [
+              "fabrication",
+              "quality control"
+            ],
+            "infrastructure": [
+              "workshop"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "fabrication",
+              "quality control"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "fabrication",
+              "quality control"
+            ]
+          },
+          "evidence_types": [
+            "DIY_innovation",
+            "engineering_prototype",
+            "maker_project",
+            "adapted_technology",
+            "repair_practice"
+          ],
+          "implementation_contexts": [
+            "maker_space",
+            "local_workshop",
+            "small_enterprise",
+            "farm"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of fabrication"
+            ],
+            "secondary": [
+              "Improved local capability through the making stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "adaptation",
@@ -1353,7 +4496,75 @@
             "repurpose",
             "engine adaptation",
             "local adaptation"
-          ]
+          ],
+          "implementation": {
+            "objective": "Modify existing equipment or tools to fit local needs and constraints.",
+            "typical_inputs": [
+              "existing tool or system"
+            ],
+            "typical_outputs": [
+              "adapted solution"
+            ],
+            "skills": [
+              "prototyping",
+              "testing"
+            ],
+            "infrastructure": [
+              "workshop or maker space"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "prototyping",
+              "testing"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "prototyping",
+              "testing"
+            ]
+          },
+          "evidence_types": [
+            "DIY_innovation",
+            "engineering_prototype",
+            "maker_project",
+            "adapted_technology",
+            "repair_practice"
+          ],
+          "implementation_contexts": [
+            "maker_space",
+            "local_workshop",
+            "small_enterprise",
+            "farm"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of adaptation"
+            ],
+            "secondary": [
+              "Improved local capability through the innovation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "prototyping",
@@ -1376,7 +4587,75 @@
             "maker",
             "testing",
             "proof of concept"
-          ]
+          ],
+          "implementation": {
+            "objective": "Build and test working prototypes before wider use.",
+            "typical_inputs": [
+              "prototype"
+            ],
+            "typical_outputs": [
+              "validated prototype"
+            ],
+            "skills": [
+              "testing",
+              "measurement"
+            ],
+            "infrastructure": [
+              "test environment"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "testing",
+              "measurement"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "testing",
+              "measurement"
+            ]
+          },
+          "evidence_types": [
+            "DIY_innovation",
+            "engineering_prototype",
+            "maker_project",
+            "adapted_technology",
+            "repair_practice"
+          ],
+          "implementation_contexts": [
+            "maker_space",
+            "local_workshop",
+            "small_enterprise",
+            "farm"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of prototyping"
+            ],
+            "secondary": [
+              "Improved local capability through the testing stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "repair_maintenance",
@@ -1399,7 +4678,75 @@
             "retrofitting",
             "reuse",
             "spare part"
-          ]
+          ],
+          "implementation": {
+            "objective": "Extend useful life through repair, maintenance and component reuse.",
+            "typical_inputs": [
+              "patient/service need"
+            ],
+            "typical_outputs": [
+              "continuity of care"
+            ],
+            "skills": [
+              "coordination",
+              "logistics"
+            ],
+            "infrastructure": [
+              "referral/logistics infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "coordination",
+              "logistics"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "coordination",
+              "logistics"
+            ]
+          },
+          "evidence_types": [
+            "DIY_innovation",
+            "engineering_prototype",
+            "maker_project",
+            "adapted_technology",
+            "repair_practice"
+          ],
+          "implementation_contexts": [
+            "maker_space",
+            "local_workshop",
+            "small_enterprise",
+            "farm"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of repair & maintenance"
+            ],
+            "secondary": [
+              "Improved local capability through the continuity stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "productive_tool",
@@ -1421,7 +4768,75 @@
             "press",
             "equipment",
             "productivity"
-          ]
+          ],
+          "implementation": {
+            "objective": "Deliver a practical tool or machine that solves a local production problem.",
+            "typical_inputs": [
+              "implemented solution"
+            ],
+            "typical_outputs": [
+              "community benefit"
+            ],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ],
+            "infrastructure": [
+              "appropriate service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "DIY_innovation",
+            "engineering_prototype",
+            "maker_project",
+            "adapted_technology",
+            "repair_practice"
+          ],
+          "implementation_contexts": [
+            "maker_space",
+            "local_workshop",
+            "small_enterprise",
+            "farm"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of productive tool"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         }
       ],
       "layout": {
@@ -1461,7 +4876,32 @@
             270
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "maker_space",
+        "local_workshop",
+        "small_enterprise",
+        "farm",
+        "community",
+        "school"
+      ],
+      "evidence_types": [
+        "DIY_innovation",
+        "engineering_prototype",
+        "maker_project",
+        "adapted_technology",
+        "repair_practice"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "construction_shelter",
+        "energy_access",
+        "health_medical_access",
+        "agriculture_food_security"
+      ]
     },
     "environment_circular_economy": {
       "label": "Environment & Circular Economy",
@@ -1486,7 +4926,72 @@
             "prevention",
             "resource efficiency",
             "plastic reduction"
-          ]
+          ],
+          "implementation": {
+            "objective": "Reduce resource use and prevent waste or environmental damage at source.",
+            "typical_inputs": [
+              "community knowledge"
+            ],
+            "typical_outputs": [
+              "reduced exposure"
+            ],
+            "skills": [
+              "health promotion"
+            ],
+            "infrastructure": [
+              "community health infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "health promotion"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "health promotion"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "grassroots_innovation",
+            "traditional_knowledge",
+            "circular_business",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of prevention & reduction"
+            ],
+            "secondary": [
+              "Improved local capability through the prevention stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "collection",
@@ -1508,7 +5013,75 @@
             "river cleanup",
             "waste picker",
             "collection"
-          ]
+          ],
+          "implementation": {
+            "objective": "Collect waste and recoverable materials from households and communities.",
+            "typical_inputs": [
+              "implemented solution"
+            ],
+            "typical_outputs": [
+              "community benefit"
+            ],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ],
+            "infrastructure": [
+              "appropriate service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "grassroots_innovation",
+            "traditional_knowledge",
+            "circular_business",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of collection"
+            ],
+            "secondary": [
+              "Improved local capability through the collection stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "sorting_recovery",
@@ -1531,7 +5104,76 @@
             "waste picker",
             "material recovery",
             "recovery"
-          ]
+          ],
+          "implementation": {
+            "objective": "Separate materials for reuse, recycling or productive recovery.",
+            "typical_inputs": [
+              "used material",
+              "recovery need"
+            ],
+            "typical_outputs": [
+              "recovered value"
+            ],
+            "skills": [
+              "recovery",
+              "processing"
+            ],
+            "infrastructure": [
+              "recovery facility"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "recovery",
+              "processing"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "recovery",
+              "processing"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "grassroots_innovation",
+            "traditional_knowledge",
+            "circular_business",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of sorting & recovery"
+            ],
+            "secondary": [
+              "Improved local capability through the recovery stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "treatment_processing",
@@ -1554,7 +5196,75 @@
             "upcycling",
             "processing",
             "biogas"
-          ]
+          ],
+          "implementation": {
+            "objective": "Process wastes into safer, reusable or transformed outputs.",
+            "typical_inputs": [
+              "case or material"
+            ],
+            "typical_outputs": [
+              "treated state"
+            ],
+            "skills": [
+              "process control",
+              "quality assurance"
+            ],
+            "infrastructure": [
+              "appropriate treatment infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "process control",
+              "quality assurance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "process control",
+              "quality assurance"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "grassroots_innovation",
+            "traditional_knowledge",
+            "circular_business",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of treatment & processing"
+            ],
+            "secondary": [
+              "Improved local capability through the treatment stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "reuse_circularity",
@@ -1577,7 +5287,75 @@
             "circular economy",
             "compost",
             "recycling"
-          ]
+          ],
+          "implementation": {
+            "objective": "Return materials, nutrients or products into productive cycles.",
+            "typical_inputs": [
+              "recovered resource"
+            ],
+            "typical_outputs": [
+              "reused product/material"
+            ],
+            "skills": [
+              "redesign",
+              "quality control"
+            ],
+            "infrastructure": [
+              "reuse channel"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "redesign",
+              "quality control"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "redesign",
+              "quality control"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "grassroots_innovation",
+            "traditional_knowledge",
+            "circular_business",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of reuse & circularity"
+            ],
+            "secondary": [
+              "Improved local capability through the reuse stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "ecosystem_restoration",
@@ -1598,7 +5376,75 @@
             "soil restoration",
             "biodiversity",
             "ecosystem"
-          ]
+          ],
+          "implementation": {
+            "objective": "Restore environmental quality, soil, waterways and ecosystem functions.",
+            "typical_inputs": [
+              "implemented solution"
+            ],
+            "typical_outputs": [
+              "community benefit"
+            ],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ],
+            "infrastructure": [
+              "appropriate service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "community_project",
+            "grassroots_innovation",
+            "traditional_knowledge",
+            "circular_business",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "municipality",
+            "school",
+            "small_enterprise"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of ecosystem restoration"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         }
       ],
       "layout": {
@@ -1638,7 +5484,32 @@
             270
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "community",
+        "municipality",
+        "school",
+        "small_enterprise",
+        "farm",
+        "cooperative"
+      ],
+      "evidence_types": [
+        "community_project",
+        "grassroots_innovation",
+        "traditional_knowledge",
+        "circular_business",
+        "institutional_solution"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "water_management",
+        "agriculture_food_security",
+        "construction_shelter",
+        "energy_access"
+      ]
     },
     "transport_mobility": {
       "label": "Transportation & Mobility",
@@ -1663,7 +5534,75 @@
             "mobility",
             "rural transport",
             "mobility need"
-          ]
+          ],
+          "implementation": {
+            "objective": "Identify local transport, access and mobility constraints.",
+            "typical_inputs": [
+              "implemented solution"
+            ],
+            "typical_outputs": [
+              "community benefit"
+            ],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ],
+            "infrastructure": [
+              "appropriate service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "vehicle_adaptation",
+            "engineering_prototype",
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of mobility need"
+            ],
+            "secondary": [
+              "Improved local capability through the demand stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "vehicle_adaptation",
@@ -1686,7 +5625,76 @@
             "boat motor",
             "engine conversion",
             "adaptation"
-          ]
+          ],
+          "implementation": {
+            "objective": "Modify or repurpose vehicles and components for local use.",
+            "typical_inputs": [
+              "local constraints",
+              "knowledge"
+            ],
+            "typical_outputs": [
+              "design specification"
+            ],
+            "skills": [
+              "design",
+              "adaptation"
+            ],
+            "infrastructure": [
+              "workspace or design tools"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "design",
+              "adaptation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "design",
+              "adaptation"
+            ]
+          },
+          "evidence_types": [
+            "vehicle_adaptation",
+            "engineering_prototype",
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of vehicle adaptation"
+            ],
+            "secondary": [
+              "Improved local capability through the design stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "mobility_tools",
@@ -1709,7 +5717,76 @@
             "boat",
             "motorcycle",
             "transport tool"
-          ]
+          ],
+          "implementation": {
+            "objective": "Deploy bicycles, carts, boats or other locally appropriate mobility tools.",
+            "typical_inputs": [
+              "materials",
+              "design"
+            ],
+            "typical_outputs": [
+              "usable tool"
+            ],
+            "skills": [
+              "assembly",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "workshop or equipment"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "assembly",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "assembly",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "vehicle_adaptation",
+            "engineering_prototype",
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of mobility tools"
+            ],
+            "secondary": [
+              "Improved local capability through the equipment stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "logistics",
@@ -1732,7 +5809,75 @@
             "delivery",
             "transport network",
             "supply"
-          ]
+          ],
+          "implementation": {
+            "objective": "Move people, goods, food, water or medical supplies efficiently.",
+            "typical_inputs": [
+              "people or goods"
+            ],
+            "typical_outputs": [
+              "delivered people/goods"
+            ],
+            "skills": [
+              "logistics",
+              "routing"
+            ],
+            "infrastructure": [
+              "transport/logistics system"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "logistics",
+              "routing"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "logistics",
+              "routing"
+            ]
+          },
+          "evidence_types": [
+            "vehicle_adaptation",
+            "engineering_prototype",
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of local logistics"
+            ],
+            "secondary": [
+              "Improved local capability through the movement stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "accessibility",
@@ -1754,7 +5899,73 @@
             "wheelchair",
             "assistive mobility",
             "inclusive transport"
-          ]
+          ],
+          "implementation": {
+            "objective": "Improve access for people, communities and essential services.",
+            "typical_inputs": [
+              "mobility need",
+              "access constraints"
+            ],
+            "typical_outputs": [
+              "improved access"
+            ],
+            "skills": [
+              "inclusive design"
+            ],
+            "infrastructure": [
+              "accessible transport infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "inclusive design"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "inclusive design"
+            ]
+          },
+          "evidence_types": [
+            "vehicle_adaptation",
+            "engineering_prototype",
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of accessibility"
+            ],
+            "secondary": [
+              "Improved local capability through the inclusion stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "mobility_outcome",
@@ -1774,7 +5985,75 @@
             "affordable transport",
             "mobility access",
             "travel time"
-          ]
+          ],
+          "implementation": {
+            "objective": "Deliver safer, more affordable and appropriate movement.",
+            "typical_inputs": [
+              "implemented solution"
+            ],
+            "typical_outputs": [
+              "community benefit"
+            ],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ],
+            "infrastructure": [
+              "appropriate service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "vehicle_adaptation",
+            "engineering_prototype",
+            "grassroots_innovation",
+            "community_project",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "rural_household",
+            "community",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of mobility outcome"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         }
       ],
       "layout": {
@@ -1814,7 +6093,30 @@
             270
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "rural_household",
+        "community",
+        "small_enterprise",
+        "municipality",
+        "emergency_response"
+      ],
+      "evidence_types": [
+        "vehicle_adaptation",
+        "engineering_prototype",
+        "grassroots_innovation",
+        "community_project",
+        "institutional_solution"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "energy_access",
+        "health_medical_access",
+        "finance_social_innovation"
+      ]
     },
     "finance_social_innovation": {
       "label": "Finance & Social Innovation",
@@ -1839,7 +6141,75 @@
             "community organization",
             "grassroots",
             "community group"
-          ]
+          ],
+          "implementation": {
+            "objective": "Organize community actors, cooperatives and local institutions around shared needs.",
+            "typical_inputs": [
+              "local resources"
+            ],
+            "typical_outputs": [
+              "prepared conditions"
+            ],
+            "skills": [
+              "assessment",
+              "planning"
+            ],
+            "infrastructure": [
+              "local infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "assessment",
+              "planning"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "assessment",
+              "planning"
+            ]
+          },
+          "evidence_types": [
+            "community_finance",
+            "social_enterprise",
+            "grassroots_innovation",
+            "digital_innovation",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cooperative",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of local organization"
+            ],
+            "secondary": [
+              "Improved local capability through the foundation stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "community_finance",
@@ -1862,7 +6232,73 @@
             "barter",
             "unbanked",
             "local finance"
-          ]
+          ],
+          "implementation": {
+            "objective": "Mobilize savings, rotating funds, barter or local finance mechanisms.",
+            "typical_inputs": [
+              "savings",
+              "capital"
+            ],
+            "typical_outputs": [
+              "deployable finance"
+            ],
+            "skills": [
+              "financial management"
+            ],
+            "infrastructure": [
+              "finance mechanism"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "financial management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "financial management"
+            ]
+          },
+          "evidence_types": [
+            "community_finance",
+            "social_enterprise",
+            "grassroots_innovation",
+            "digital_innovation",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cooperative",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of community finance"
+            ],
+            "secondary": [
+              "Improved local capability through the finance stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "digital_access",
@@ -1884,7 +6320,75 @@
             "digital access",
             "mobile payment",
             "community technology"
-          ]
+          ],
+          "implementation": {
+            "objective": "Use digital tools and mobile services to extend access and coordination.",
+            "typical_inputs": [
+              "service"
+            ],
+            "typical_outputs": [
+              "access"
+            ],
+            "skills": [
+              "deployment",
+              "maintenance"
+            ],
+            "infrastructure": [
+              "access infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "deployment",
+              "maintenance"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "deployment",
+              "maintenance"
+            ]
+          },
+          "evidence_types": [
+            "community_finance",
+            "social_enterprise",
+            "grassroots_innovation",
+            "digital_innovation",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cooperative",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of digital access"
+            ],
+            "secondary": [
+              "Improved local capability through the access stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "collective_action",
@@ -1906,7 +6410,76 @@
             "community initiative",
             "cooperative",
             "local enterprise"
-          ]
+          ],
+          "implementation": {
+            "objective": "Turn shared resources and knowledge into coordinated local action.",
+            "typical_inputs": [
+              "shared resources",
+              "community coordination"
+            ],
+            "typical_outputs": [
+              "coordinated action"
+            ],
+            "skills": [
+              "coordination",
+              "participation"
+            ],
+            "infrastructure": [
+              "community organization"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "coordination",
+              "participation"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "coordination",
+              "participation"
+            ]
+          },
+          "evidence_types": [
+            "community_finance",
+            "social_enterprise",
+            "grassroots_innovation",
+            "digital_innovation",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cooperative",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of collective action"
+            ],
+            "secondary": [
+              "Improved local capability through the action stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "social_enterprise",
@@ -1928,7 +6501,73 @@
             "community enterprise",
             "cooperative enterprise",
             "local business"
-          ]
+          ],
+          "implementation": {
+            "objective": "Create practical services or enterprises that sustain community solutions.",
+            "typical_inputs": [
+              "solution",
+              "market or community need"
+            ],
+            "typical_outputs": [
+              "sustained service"
+            ],
+            "skills": [
+              "enterprise management"
+            ],
+            "infrastructure": [
+              "operational/market channel"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "enterprise management"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "enterprise management"
+            ]
+          },
+          "evidence_types": [
+            "community_finance",
+            "social_enterprise",
+            "grassroots_innovation",
+            "digital_innovation",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cooperative",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of social enterprise"
+            ],
+            "secondary": [
+              "Improved local capability through the enterprise stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         },
         {
           "id": "community_resilience",
@@ -1949,7 +6588,75 @@
             "community empowerment",
             "inclusion",
             "self reliance"
-          ]
+          ],
+          "implementation": {
+            "objective": "Strengthen local capacity, livelihoods, inclusion and adaptive resilience.",
+            "typical_inputs": [
+              "implemented solution"
+            ],
+            "typical_outputs": [
+              "community benefit"
+            ],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ],
+            "infrastructure": [
+              "appropriate service infrastructure"
+            ]
+          },
+          "requirements": {
+            "knowledge": [
+              "monitoring",
+              "feedback"
+            ],
+            "materials": [],
+            "equipment": [],
+            "skills": [
+              "monitoring",
+              "feedback"
+            ]
+          },
+          "evidence_types": [
+            "community_finance",
+            "social_enterprise",
+            "grassroots_innovation",
+            "digital_innovation",
+            "institutional_solution"
+          ],
+          "implementation_contexts": [
+            "community",
+            "cooperative",
+            "small_enterprise",
+            "municipality"
+          ],
+          "risk_profile": {
+            "hazards": [],
+            "critical_controls": [],
+            "note": "Context-specific risks should be validated before implementation."
+          },
+          "outcomes": {
+            "primary": [
+              "Successful implementation of community resilience"
+            ],
+            "secondary": [
+              "Improved local capability through the outcome stage"
+            ]
+          },
+          "alternatives": [],
+          "maturity_model": [
+            "experimental",
+            "demonstrated",
+            "locally_adopted",
+            "replicable",
+            "institutionalized"
+          ],
+          "gap_logic": {
+            "critical_evidence": [],
+            "supporting_evidence": [],
+            "interpretation": "Surface as an evidence gap only when no observed or sufficiently confident inferred records are mapped."
+          },
+          "cross_sector_links": []
         }
       ],
       "layout": {
@@ -1989,7 +6696,57 @@
             270
           ]
         }
-      }
+      },
+      "implementation_contexts": [
+        "community",
+        "cooperative",
+        "small_enterprise",
+        "municipality",
+        "rural_household",
+        "digital_platform"
+      ],
+      "evidence_types": [
+        "community_finance",
+        "social_enterprise",
+        "grassroots_innovation",
+        "digital_innovation",
+        "institutional_solution"
+      ],
+      "ontology_notes": {
+        "evidence_scope": "Current radar observations only",
+        "gap_interpretation": "A gap means no sufficient mapped observation in the current dataset; it does not mean the practice is absent globally."
+      },
+      "cross_sector_domains": [
+        "education_communication",
+        "transport_mobility",
+        "agriculture_food_security",
+        "health_medical_access"
+      ]
+    }
+  },
+  "ontology": {
+    "purpose": "Implementation Intelligence Ontology",
+    "principle": "pathway defines the system; nodes define implementation stages; evidence comes from the radar dataset",
+    "node_schema": {
+      "id": "stable identifier",
+      "label": "human-readable node name",
+      "stage": "position in implementation lifecycle",
+      "order": "relative pathway order",
+      "description": "what the node does",
+      "upstream": "preceding node ids",
+      "downstream": "following node ids",
+      "aliases": "explicit semantic matches",
+      "keywords": "heuristic discovery terms",
+      "implementation": "implementation intent, inputs, outputs, skills and infrastructure",
+      "requirements": "knowledge, materials, equipment and skills commonly needed",
+      "evidence_types": "types of evidence that can substantiate the node",
+      "implementation_contexts": "contexts where the node may be implemented",
+      "risk_profile": "known or typical implementation hazards and controls",
+      "outcomes": "primary and secondary outcomes",
+      "alternatives": "related or substitutable pathway nodes",
+      "maturity_model": "suggested maturity progression",
+      "gap_logic": "evidence gaps worth surfacing",
+      "cross_sector_links": "links to other thematic domains"
     }
   }
 }
