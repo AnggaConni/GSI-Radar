@@ -921,7 +921,7 @@ function populateCategoryFilter() {
 
     // 2. Load pathway taxonomy
     try {
-      const r = await fetch('pathways.json');
+      const r = await fetch('pathways.json?v=1.1.1');
       if (r.ok) pathwayTaxonomy = await r.json();
       else throw new Error();
     } catch(e) {
@@ -1672,6 +1672,15 @@ function renderCatChart(cats) {
   // ═══════════════════════════════════════════════════════
   // IMPLEMENTATION PATHWAY — STATIC TAXONOMY + DYNAMIC EVIDENCE
   // ═══════════════════════════════════════════════════════
+  function normalizePathwayText(v) {
+    return String(v || "")
+      .normalize("NFKC")
+      .toLowerCase()
+      .replace(/[&]/g, " and ")
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+  }
+
   function getPathwayDomain() {
     const domains = pathwayTaxonomy?.domains || {};
     return domains[pathwayDomainId] || Object.values(domains)[0] || null;
