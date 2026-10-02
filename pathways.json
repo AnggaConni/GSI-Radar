@@ -1,0 +1,305 @@
+{
+  "version": "1.0",
+  "domains": {
+    "water_management": {
+      "label": "Water Management",
+      "description": "A source-to-reuse pathway for water protection, supply, treatment, WASH and post-use management.",
+      "color": "#0f766e",
+      "nodes": [
+        {
+          "id": "water_protection",
+          "label": "Water Protection",
+          "stage": "Source",
+          "order": 1,
+          "description": "Protect water sources and catchments from contamination and degradation.",
+          "upstream": [],
+          "downstream": [
+            "water_harvesting"
+          ],
+          "aliases": [
+            "Water Protection",
+            "Watershed Protection",
+            "Source Water Protection",
+            "River Protection",
+            "Water Source Protection"
+          ],
+          "keywords": [
+            "watershed",
+            "catchment",
+            "river protection",
+            "source protection",
+            "water quality protection"
+          ]
+        },
+        {
+          "id": "water_conservation",
+          "label": "Water Conservation",
+          "stage": "Source",
+          "order": 1.5,
+          "description": "Reduce unnecessary water use and improve water-use efficiency.",
+          "upstream": [],
+          "downstream": [
+            "water_harvesting"
+          ],
+          "aliases": [
+            "Water Conservation",
+            "Water Saving",
+            "Water Efficiency",
+            "Water Stewardship"
+          ],
+          "keywords": [
+            "water saving",
+            "water efficient",
+            "water efficiency",
+            "reduce water use",
+            "stewardship"
+          ]
+        },
+        {
+          "id": "water_harvesting",
+          "label": "Water Harvesting",
+          "stage": "Supply",
+          "order": 2,
+          "description": "Capture available water from rain, runoff or other local sources.",
+          "upstream": [
+            "water_protection",
+            "water_conservation"
+          ],
+          "downstream": [
+            "water_storage"
+          ],
+          "aliases": [
+            "Water Harvesting",
+            "Rainwater Harvesting",
+            "Rainwater Collection",
+            "Rainwater Catchment",
+            "Fog Harvesting",
+            "Dew Harvesting"
+          ],
+          "keywords": [
+            "rainwater",
+            "rain water",
+            "catchment",
+            "runoff collection",
+            "fog harvesting",
+            "dew harvesting"
+          ]
+        },
+        {
+          "id": "water_storage",
+          "label": "Water Storage",
+          "stage": "Supply",
+          "order": 3,
+          "description": "Store water safely between collection and distribution or treatment.",
+          "upstream": [
+            "water_harvesting"
+          ],
+          "downstream": [
+            "water_distribution"
+          ],
+          "aliases": [
+            "Water Storage",
+            "Household Water Storage",
+            "Water Tank",
+            "Cistern",
+            "Reservoir",
+            "Water Container"
+          ],
+          "keywords": [
+            "water tank",
+            "cistern",
+            "reservoir",
+            "storage tank",
+            "water container",
+            "stored water"
+          ]
+        },
+        {
+          "id": "water_distribution",
+          "label": "Water Distribution",
+          "stage": "Supply",
+          "order": 4,
+          "description": "Move water from a source or storage point to users and service points.",
+          "upstream": [
+            "water_storage"
+          ],
+          "downstream": [
+            "water_purification"
+          ],
+          "aliases": [
+            "Water Distribution",
+            "Water Supply",
+            "Water Delivery",
+            "Water Access",
+            "Piped Water"
+          ],
+          "keywords": [
+            "distribution",
+            "piped water",
+            "water delivery",
+            "water supply",
+            "water access"
+          ]
+        },
+        {
+          "id": "water_purification",
+          "label": "Water Purification",
+          "stage": "Treatment",
+          "order": 5,
+          "description": "Remove or inactivate contaminants to make water safer for intended use.",
+          "upstream": [
+            "water_distribution"
+          ],
+          "downstream": [
+            "water_treatment"
+          ],
+          "aliases": [
+            "Water Purification",
+            "Water Filtration",
+            "Water Filter",
+            "Biosand Filter",
+            "Ceramic Filter",
+            "Water Disinfection",
+            "SODIS"
+          ],
+          "keywords": [
+            "purification",
+            "filter",
+            "filtration",
+            "biosand",
+            "ceramic filter",
+            "disinfection",
+            "sodis",
+            "pathogen removal",
+            "safe drinking water"
+          ]
+        },
+        {
+          "id": "water_treatment",
+          "label": "Water Treatment",
+          "stage": "Treatment",
+          "order": 6,
+          "description": "Apply treatment processes such as disinfection, coagulation, biological treatment or desalination.",
+          "upstream": [
+            "water_purification"
+          ],
+          "downstream": [
+            "water_sanitation"
+          ],
+          "aliases": [
+            "Water Treatment",
+            "Drinking Water Treatment",
+            "Wastewater Treatment",
+            "Water Disinfection",
+            "Chlorination",
+            "Desalination"
+          ],
+          "keywords": [
+            "chlorination",
+            "coagulation",
+            "flocculation",
+            "desalination",
+            "treatment plant",
+            "wastewater treatment",
+            "sewage treatment"
+          ]
+        },
+        {
+          "id": "water_sanitation",
+          "label": "WASH & Sanitation",
+          "stage": "Use",
+          "order": 7,
+          "description": "Connect safe water with sanitation and hygiene practices at the point of use.",
+          "upstream": [
+            "water_treatment"
+          ],
+          "downstream": [
+            "wastewater_management"
+          ],
+          "aliases": [
+            "Water & Sanitation",
+            "Water and Sanitation",
+            "WASH",
+            "Sanitation",
+            "Ecological Sanitation",
+            "Composting Toilet",
+            "Toilet",
+            "Latrine",
+            "Handwashing",
+            "Hygiene"
+          ],
+          "keywords": [
+            "wash",
+            "sanitation",
+            "toilet",
+            "latrine",
+            "handwashing",
+            "hygiene",
+            "ecosan",
+            "ecological sanitation",
+            "composting toilet",
+            "fecal"
+          ]
+        },
+        {
+          "id": "wastewater_management",
+          "label": "Wastewater Management",
+          "stage": "Post-use",
+          "order": 8,
+          "description": "Collect, contain, treat and safely manage wastewater, greywater, blackwater and fecal sludge.",
+          "upstream": [
+            "water_sanitation"
+          ],
+          "downstream": [
+            "water_reuse"
+          ],
+          "aliases": [
+            "Wastewater Management",
+            "Wastewater",
+            "Greywater",
+            "Blackwater",
+            "Sewage",
+            "Fecal Sludge",
+            "Sludge Management"
+          ],
+          "keywords": [
+            "wastewater",
+            "greywater",
+            "grey water",
+            "blackwater",
+            "sewage",
+            "fecal sludge",
+            "septage",
+            "sludge"
+          ]
+        },
+        {
+          "id": "water_reuse",
+          "label": "Water Reuse",
+          "stage": "Post-use",
+          "order": 9,
+          "description": "Safely reuse recovered water or treated effluent for appropriate purposes.",
+          "upstream": [
+            "wastewater_management"
+          ],
+          "downstream": [],
+          "aliases": [
+            "Water Reuse",
+            "Wastewater Reuse",
+            "Greywater Reuse",
+            "Water Recycling",
+            "Treated Water Reuse"
+          ],
+          "keywords": [
+            "reuse",
+            "re-use",
+            "water recycling",
+            "reclaimed water",
+            "treated effluent",
+            "greywater reuse"
+          ]
+        }
+      ]
+    }
+  }
+}
