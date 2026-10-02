@@ -410,6 +410,260 @@ def enrich_pathway_matches(database, taxonomy):
     return changed
 
 
+
+# =====================================================================
+# POLICY / ACTION -> IMPLEMENTATION INTELLIGENCE
+# =====================================================================
+
+def _stakeholder_group_from_context(context):
+    mapping = {
+        "community": "Communities & local organizations",
+        "community_group": "Communities & local organizations",
+        "municipality": "Local authorities & public services",
+        "government": "Public authorities & policymakers",
+        "school": "Schools, educators & youth",
+        "training_center": "Training & capacity-building actors",
+        "small_enterprise": "SMEs & local enterprises",
+        "small_enterprise": "SMEs & local enterprises",
+        "farm": "Farmers & producer groups",
+        "smallholder_farm": "Farmers & producer groups",
+        "cooperative": "Cooperatives & producer organizations",
+        "clinic": "Health practitioners & facilities",
+        "rural_clinic": "Health practitioners & facilities",
+        "household": "Households & end users",
+        "rural_household": "Households & end users",
+        "coastal": "Coastal communities & marine practitioners",
+        "fishing_community": "Fishing communities & marine practitioners",
+        "protected_area": "Conservation actors & site managers",
+        "cultural_group": "Cultural practitioners & custodians",
+        "cultural_institution": "Cultural institutions & custodians",
+        "research_site": "Researchers & scientific institutions",
+        "digital_platform": "Digital service providers & platforms",
+        "maker_space": "Makers, fabricators & technical practitioners",
+        "local_workshop": "Local workshops & technical practitioners",
+        "emergency_response": "Emergency, humanitarian & response actors",
+        "online_offline_hybrid": "Educators, communities & digital platforms"
+    }
+    return mapping.get(str(context).strip().lower(), None)
+
+
+def build_implementation_intelligence(database, report, taxonomy):
+    """Build a traceable bridge from observed innovation evidence to policy/action and implementation.
+
+    AI may enrich this structure in the report, but the evidence counts and pathway coverage
+    are derived from the database/taxonomy so they remain auditable.
+    """
+    domains = taxonomy.get("domains", {}) if isinstance(taxonomy, dict) else {}
+    node_index = {}
+    node_stats = {}
+
+    for domain_id, domain in domains.items():
+        for node in domain.get("nodes", []) or []:
+            node_id = node.get("id")
+            node_index[node_id] = (domain_id, domain, node)
+            node_stats[node_id] = {
+                "domain_id": domain_id,
+                "domain": domain.get("label", domain_id),
+                "node_id": node_id,
+                "label": node.get("label", node_id),
+                "observed": [],
+                "inferred": [],
+                "records": set()
+            }
+
+    evidence_total = {"observed": 0, "inferred": 0}
+    innovation_records = []
+
+    for item in database:
+        matches = item.get("pathway_matches", []) or []
+        pathway_nodes = []
+        for match in matches:
+            node_id = match.get("node_id")
+            if node_id not in node_stats:
+                continue
+            st = node_stats[node_id]
+            st["records"].add(item.get("id"))
+            pathway_nodes.append({
+                "domain_id": st["domain_id"],
+                "domain": st["domain"],
+                "node_id": node_id,
+                "node": st["label"],
+                "match": match.get("match", "heuristic"),
+                "confidence": match.get("confidence", 0),
+                "evidence": match.get("evidence", [])
+            })
+            if match.get("match") == "exact":
+                st["observed"].append(item.get("id"))
+                evidence_total["observed"] += 1
+            else:
+                st["inferred"].append(item.get("id"))
+                evidence_total["inferred"] += 1
+
+        if pathway_nodes:
+            innovation_records.append({
+                "id": item.get("id"),
+                "title": item.get("title", "Untitled"),
+                "country": item.get("location", {}).get("country", "Unknown"),
+                "priority_score": item.get("priority_score", 0),
+                "pathways": pathway_nodes
+            })
+
+    top_innovations = sorted(
+        innovation_records,
+        key=lambda x: (x.get("priority_score", 0), x.get("title", "")),
+        reverse=True
+    )[:12]
+
+    pathway_coverage = []
+    for domain_id, domain in domains.items():
+        domain_nodes = []
+        domain_records = set()
+        for node in domain.get("nodes", []) or []:
+            st = node_stats.get(node.get("id"), {})
+            records = st.get("records", set())
+            domain_records.update(records)
+            domain_nodes.append({
+                "node_id": node.get("id"),
+                "node": node.get("label", node.get("id")),
+                "stage": node.get("stage", ""),
+                "observed": len(set(st.get("observed", []))),
+                "inferred": len(set(st.get("inferred", []))),
+                "mapped_records": len(records)
+            })
+
+        domain_nodes.sort(key=lambda x: (-x["mapped_records"], x["node"]))
+        gaps = [x for x in domain_nodes if x["mapped_records"] == 0][:8]
+        pathway_coverage.append({
+            "domain_id": domain_id,
+            "domain": domain.get("label", domain_id),
+            "mapped_records": len(domain_records),
+            "nodes_with_evidence": sum(1 for x in domain_nodes if x["mapped_records"] > 0),
+            "total_nodes": len(domain_nodes),
+            "top_nodes": domain_nodes[:8],
+            "evidence_gaps": gaps
+        })
+
+    pathway_coverage.sort(key=lambda x: (-x["mapped_records"], x["domain"]))
+
+    stakeholders = {}
+    for domain in domains.values():
+        for node in domain.get("nodes", []) or []:
+            for context in node.get("implementation_contexts", []) or []:
+                group = _stakeholder_group_from_context(context)
+                if group:
+                    stakeholders.setdefault(group, {"group": group, "contexts": set(), "pathways": set()})
+                    stakeholders[group]["contexts"].add(context)
+                    stakeholders[group]["pathways"].add(node.get("label", ""))
+
+    stakeholder_rows = []
+    for row in stakeholders.values():
+        stakeholder_rows.append({
+            "group": row["group"],
+            "role": "Potential implementation, validation or feedback partner based on pathway context.",
+            "contexts": sorted(row["contexts"]),
+            "relevant_pathways": sorted([x for x in row["pathways"] if x])[:12]
+        })
+    stakeholder_rows.sort(key=lambda x: x["group"])
+
+    interventions = report.get("intervention_opportunities", []) or []
+    policy_options = []
+    for idx, option in enumerate(interventions, 1):
+        ptype = option.get("type", "research")
+        target = option.get("target", "Unnamed opportunity")
+        level = option.get("priority_level", "medium")
+        linked = []
+        target_text = normalize_pathway_text(" ".join([
+            str(target),
+            str(option.get("justification", ""))
+        ]))
+        for node_id, st in node_stats.items():
+            node_text = normalize_pathway_text(st["label"])
+            if node_text and (node_text in target_text or any(
+                k in target_text for k in (
+                    node_index[node_id][2].get("keywords", []) or []
+                )
+            )):
+                linked.append({
+                    "domain": st["domain"],
+                    "node": st["label"],
+                    "node_id": node_id
+                })
+        policy_options.append({
+            "option_id": f"PO-{idx:02d}",
+            "instrument": ptype,
+            "option": target,
+            "rationale": option.get("justification", ""),
+            "priority_level": level,
+            "linked_pathways": linked[:8],
+            "status": "evidence-informed opportunity; requires contextual validation before adoption"
+        })
+
+    implementation_actions = []
+    for option in policy_options:
+        horizon = "short" if option["instrument"] in ("training", "data") else ("medium" if option["instrument"] in ("research", "funding", "partnership") else "medium-long")
+        implementation_actions.append({
+            "option_id": option["option_id"],
+            "action": f"Pilot and validate: {option['option']}",
+            "lead_stakeholders": [x["group"] for x in stakeholder_rows[:6]],
+            "dependencies": [
+                "local contextual validation",
+                "risk and feasibility assessment",
+                "implementation partner"
+            ],
+            "time_horizon": horizon,
+            "success_indicators": [
+                "documented implementation evidence",
+                "validated risk controls",
+                "user or practitioner feedback",
+                "evidence of pathway progression"
+            ]
+        })
+
+    feedback_loop = [
+        {
+            "indicator": "New or changed evidence mapped to a pathway node",
+            "source": "GSI-Radar observation layer",
+            "trigger": "new exact match or high-confidence inferred match",
+            "response": "review pathway coverage and policy relevance"
+        },
+        {
+            "indicator": "Implementation result or safety evidence",
+            "source": "future implementation monitoring / linked evidence",
+            "trigger": "pilot outcome, risk event or documented field result",
+            "response": "update policy option, implementation guidance and pathway maturity"
+        },
+        {
+            "indicator": "Persistent evidence gap",
+            "source": "pathway coverage analysis",
+            "trigger": "node remains unobserved across reporting cycles",
+            "response": "consider targeted scanning, research or stakeholder outreach"
+        }
+    ]
+
+    pipeline = [
+        {"stage":"Innovation","description":"What innovations are being observed?","record_count":len(database),"basis":"data.json"},
+        {"stage":"Evidence","description":"What is directly observed versus inferred?","observed_matches":evidence_total["observed"],"inferred_matches":evidence_total["inferred"],"basis":"pathway_matches + source records"},
+        {"stage":"System Pathway","description":"Where does the innovation sit in a thematic system?","domains_mapped":sum(1 for x in pathway_coverage if x["mapped_records"] > 0),"basis":"pathways.json"},
+        {"stage":"Policy Relevance","description":"Why might the evidence matter for public policy, planning or institutional action?","items":len(interventions),"basis":"AI synthesis + intervention opportunities"},
+        {"stage":"Stakeholders","description":"Who may implement, validate, govern or provide feedback?","groups":len(stakeholder_rows),"basis":"pathway implementation contexts"},
+        {"stage":"Policy Options","description":"What types of policy or support instruments could respond?","options":len(policy_options),"basis":"intervention opportunities"},
+        {"stage":"Implementation","description":"What practical steps could translate an option into action?","actions":len(implementation_actions),"basis":"derived implementation scaffold; validate locally"},
+        {"stage":"Feedback","description":"How does implementation evidence return to the intelligence cycle?","feedback_loops":len(feedback_loop),"basis":"monitoring and future evidence"}
+    ]
+
+    return {
+        "schema_version": "1.0",
+        "pipeline": pipeline,
+        "innovation": {"top_records": top_innovations, "total_with_pathway_evidence": len(innovation_records)},
+        "evidence": {"observed_matches": evidence_total["observed"], "inferred_matches": evidence_total["inferred"]},
+        "system_pathways": pathway_coverage,
+        "policy_relevance": [],
+        "stakeholders": stakeholder_rows,
+        "policy_options": policy_options,
+        "implementation": implementation_actions,
+        "feedback": feedback_loop
+    }
+
 # =====================================================================
 # CORE TASKS: DATA CRAWL & RESUME GENERATION
 # =====================================================================
@@ -594,6 +848,47 @@ def generate_intelligence_report(api_key, database):
                     ""
                 ],
 
+                "implementation_intelligence": {
+                    "policy_relevance": [
+                        {
+                        "issue": "",
+                        "evidence_basis": "",
+                        "linked_pathways": [],
+                        "policy_relevance": "",
+                        "confidence": "low | medium | high"
+                        }
+                    ],
+                    "policy_options": [
+                        {
+                        "option_id": "",
+                        "instrument": "regulation | funding | training | research | data | partnership",
+                        "option": "",
+                        "rationale": "",
+                        "linked_evidence": [],
+                        "linked_pathways": [],
+                        "readiness": "exploratory | emerging | ready_for_pilot"
+                        }
+                    ],
+                    "implementation": [
+                        {
+                        "option_id": "",
+                        "action": "",
+                        "lead_stakeholders": [],
+                        "dependencies": [],
+                        "time_horizon": "short | medium | long",
+                        "success_indicators": []
+                        }
+                    ],
+                    "feedback": [
+                        {
+                        "indicator": "",
+                        "source": "",
+                        "trigger": "",
+                        "response": ""
+                        }
+                    ]
+                },
+
                 "charts": {
                     "innovation_by_region": [
                     { "region": "", "count": 0 }
@@ -652,7 +947,18 @@ def generate_intelligence_report(api_key, database):
                 - adapted
                 - formal
 
-                9. RECOMMENDATIONS
+                9. POLICY / ACTION -> IMPLEMENTATION
+                - Treat pathways.json as the system structure; do not invent pathway nodes.
+                - Use pathway evidence counts from the supplied pathway snapshot as the factual base.
+                - Policy relevance must be explicitly tied to observed evidence, risk, pathway concentration or evidence gaps.
+                - Stakeholders should be framed as potential actors/partners, not assumed commitments.
+                - Policy options must be options, not decisions; distinguish evidence from interpretation.
+                - Implementation actions should be framed as pilots, capacity support, research, governance or monitoring steps.
+                - Feedback must describe how future implementation evidence could update the intelligence cycle.
+                - Never claim that an implementation occurred unless supported by the supplied data.
+                - Keep policy statements concise, contextual and evidence-linked.
+
+                10. RECOMMENDATIONS
                 - Must be actionable (not generic)
                 - Max 5–8 items
 
@@ -666,7 +972,21 @@ def generate_intelligence_report(api_key, database):
                 - Keep text concise but meaningful
                 """
 
-    prompt = f"Analyze the following innovation dataset and generate the report.\n\nDATASET:\n{db_string}"
+    taxonomy = load_json_file(PATHWAY_FILE, {"domains": {}})
+    pathway_snapshot = build_implementation_intelligence(database, {"intervention_opportunities": []}, taxonomy)
+    compact_pathway_snapshot = {
+        "domains": pathway_snapshot.get("system_pathways", []),
+        "evidence": pathway_snapshot.get("evidence", {}),
+        "top_innovations": pathway_snapshot.get("innovation", {}).get("top_records", [])[:12]
+    }
+
+    prompt = (
+        "Analyze the following innovation dataset and generate the report.\n\n"
+        "PATHWAY STRUCTURE (from pathways.json):\n"
+        + json.dumps(compact_pathway_snapshot, ensure_ascii=False)
+        + "\n\nDATASET:\n"
+        + db_string
+    )
     new_report = call_gemini_with_retry(api_key, prompt, sys_prompt, expect_json=True)
 
     if new_report:
@@ -702,6 +1022,21 @@ def generate_intelligence_report(api_key, database):
         # Timpa angka di panel atas Risk Analysis
         if "risk_analysis" not in new_report:
             new_report["risk_analysis"] = {}
+        # Build an auditable implementation intelligence scaffold from database + taxonomy.
+        taxonomy = load_json_file(PATHWAY_FILE, {"domains": {}})
+        deterministic_ii = build_implementation_intelligence(database, new_report, taxonomy)
+        ai_ii = new_report.get("implementation_intelligence", {}) or {}
+
+        deterministic_ii["policy_relevance"] = ai_ii.get("policy_relevance", []) or []
+        if ai_ii.get("policy_options"):
+            deterministic_ii["policy_options"] = ai_ii.get("policy_options")
+        if ai_ii.get("implementation"):
+            deterministic_ii["implementation"] = ai_ii.get("implementation")
+        if ai_ii.get("feedback"):
+            deterministic_ii["feedback"] = ai_ii.get("feedback")
+        new_report["implementation_intelligence"] = deterministic_ii
+        new_report["report_metadata"]["schema_version"] = "2.0"
+
         new_report["risk_analysis"]["high_risk_cases"] = high_risk_count
         new_report["risk_analysis"]["critical_cases"] = critical_count
 
