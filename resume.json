@@ -1,691 +1,1452 @@
 [
-    {
-        "report_metadata": {
-            "report_id": "gsi-older",
-            "generated_at": "2026-03-31T10:58:45.679328",
-            "period": "Q1 2026",
-            "total_records_analyzed": 175
-        },
-        "global_summary": {
-            "total_innovations": 175,
-            "grassroots_percentage": 42.86,
-            "institutional_percentage": 30.86,
-            "semi_formal_percentage": 26.29
-        },
-        "top_categories": [
-            {
-                "category": "Waste Management & Upcycling",
-                "count": 24,
-                "trend": "increasing"
-            },
-            {
-                "category": "Sustainable Agriculture",
-                "count": 21,
-                "trend": "stable"
-            },
-            {
-                "category": "Renewable Energy",
-                "count": 18,
-                "trend": "increasing"
-            },
-            {
-                "category": "Water & Sanitation",
-                "count": 17,
-                "trend": "stable"
-            },
-            {
-                "category": "Healthcare & Diagnostics",
-                "count": 12,
-                "trend": "increasing"
-            }
-        ],
-        "geographic_insights": [
-            {
-                "region": "East Africa (Kenya, Uganda, Malawi)",
-                "key_pattern": "Dominance of DIY energy and mechanical repurposing (Biogas, Engine ECUs, Windmills).",
-                "risk_level": "high"
-            },
-            {
-                "region": "Southeast Asia (Indonesia, Philippines)",
-                "key_pattern": "Sophisticated institutional-grassroots hybrids in marine conservation and circular economy (Waste Banks, Seaweed Bioplastics).",
-                "risk_level": "low"
-            },
-            {
-                "region": "Latin America (Haiti, Colombia, Brazil)",
-                "key_pattern": "Focus on resilient infrastructure and circular sanitation (Plastic bricks, Container-based toilets).",
-                "risk_level": "medium"
-            }
-        ],
-        "risk_analysis": {
-            "high_risk_cases": 11,
-            "critical_cases": 11,
-            "top_risk_types": [
-                "Explosion (Methane/Compressed Air)",
-                "Biological (Pathogen exposure in DIY sanitation)",
-                "Toxic Fumes (Plastic melting/E-waste)",
-                "Fire (DIY Electronics/Battery storage)"
-            ],
-            "emerging_risks": [
-                "Thermal runaway in repurposed lithium batteries for rural lighting.",
-                "Groundwater contamination from unlined DIY composting pits.",
-                "Respiratory damage from unregulated plastic-to-brick melting operations."
-            ]
-        },
-        "innovation_patterns": [
-            {
-                "pattern_name": "Circular Sanitation",
-                "description": "Transforming human waste into agricultural fertilizer via thermophilic composting.",
-                "regions": [
-                    "Haiti",
-                    "Uganda",
-                    "USA",
-                    "Kenya"
-                ],
-                "risk_level": "medium"
-            },
-            {
-                "pattern_name": "Plastic-to-Infrastructure",
-                "description": "Repurposing PET bottles and sachets into housing, schools, and paving blocks.",
-                "regions": [
-                    "Nigeria",
-                    "Ghana",
-                    "Colombia",
-                    "Guatemala"
-                ],
-                "risk_level": "medium"
-            },
-            {
-                "pattern_name": "Indigenous-Tech Hybrids",
-                "description": "Integrating traditional ecological knowledge with AI, Drones, and IoT.",
-                "regions": [
-                    "Brazil",
-                    "Australia",
-                    "Canada",
-                    "New Zealand"
-                ],
-                "risk_level": "low"
-            },
-            {
-                "pattern_name": "Frugal Diagnostics",
-                "description": "Hand-powered or paper-based medical tools for off-grid clinics.",
-                "regions": [
-                    "Global",
-                    "India",
-                    "USA"
-                ],
-                "risk_level": "low"
-            }
-        ],
-        "hidden_gems": [
-            {
-                "title": "Paperfuge",
-                "country": "USA",
-                "reason": "Achieves 125,000 RPM using string and paper; replaces $1,000+ equipment for pennies."
-            },
-            {
-                "title": "Sack Gardening",
-                "country": "Kenya",
-                "reason": "Enables high-density food production in slums with zero arable land."
-            },
-            {
-                "title": "Raghav FM",
-                "country": "India",
-                "reason": "Functional community radio transmitter built for under $1 using scrap."
-            },
-            {
-                "title": "Liter of Light",
-                "country": "Philippines",
-                "reason": "Zero-carbon daytime lighting using water refraction in PET bottles."
-            },
-            {
-                "title": "Milpa System",
-                "country": "Mexico",
-                "reason": "Ancient polyculture that maintains soil fertility without synthetic inputs for centuries."
-            }
-        ],
-        "intervention_opportunities": [
-            {
-                "type": "regulation",
-                "target": "DIY Biogas Systems",
-                "priority_level": "high",
-                "justification": "High explosion risk in residential areas; needs standardized pressure relief valves."
-            },
-            {
-                "type": "training",
-                "target": "Plastic Upcycling Enterprises",
-                "priority_level": "medium",
-                "justification": "Workers exposed to toxic VOCs during melting; requires fume extraction education."
-            },
-            {
-                "type": "funding",
-                "target": "Frugal Diagnostic Tools",
-                "priority_level": "high",
-                "justification": "High impact on neonatal and maternal mortality with minimal capital requirement."
-            }
-        ],
-        "knowledge_insights": {
-            "most_common_source": "Adapted from existing",
-            "trend": "shifting",
-            "observation": "Knowledge is evolving from purely 'Traditional' or 'Self-taught' toward 'Hybrid' models where grassroots actors adopt high-tech sensors (IoT/Drones) to validate ancestral practices."
-        },
-        "recommendations": [
-            "Develop 'Safety-in-a-Box' kits for DIY energy innovators (fuses, valves, masks).",
-            "Incentivize 'Waste Bank' models globally to formalize informal recycling sectors.",
-            "Establish a global 'Frugal Tech' certification to fast-track medical device adoption.",
-            "Protect Indigenous data sovereignty in AI-hybrid conservation projects.",
-            "Scale 'Circular Sanitation' by linking urban waste to rural fertilizer markets."
-        ],
-        "charts": {
-            "innovation_by_region": [
-                {
-                    "region": "Africa",
-                    "count": 42
-                },
-                {
-                    "region": "Asia",
-                    "count": 31
-                },
-                {
-                    "region": "Americas",
-                    "count": 22
-                },
-                {
-                    "region": "Europe/Oceania",
-                    "count": 8
-                }
-            ],
-            "risk_distribution": [
-                {
-                    "level": "High",
-                    "count": 11
-                },
-                {
-                    "level": "Medium",
-                    "count": 62
-                },
-                {
-                    "level": "Low",
-                    "count": 102
-                }
-            ],
-            "knowledge_source_trend": [
-                {
-                    "source": "Traditional",
-                    "count": 28
-                },
-                {
-                    "source": "Adapted",
-                    "count": 41
-                },
-                {
-                    "source": "Formal",
-                    "count": 34
-                }
-            ]
-        }
+  {
+    "report_metadata": {
+      "report_id": "gsi-older",
+      "generated_at": "2026-03-31T10:58:45.679328",
+      "period": "Q1 2026",
+      "total_records_analyzed": 175
     },
-    {
-        "report_metadata": {
-            "report_id": "gsi-older",
-            "generated_at": "2026-06-30T02:52:16.780063",
-            "period": "Q2 2026",
-            "total_records_analyzed": 265
-        },
-        "global_summary": {
-            "total_innovations": 265,
-            "grassroots_percentage": 41.51,
-            "institutional_percentage": 30.19,
-            "semi_formal_percentage": 28.3
-        },
-        "top_categories": [
-            {
-                "category": "Waste Management & Circular Economy",
-                "count": 38,
-                "trend": "increasing"
-            },
-            {
-                "category": "Sustainable Agriculture",
-                "count": 32,
-                "trend": "stable"
-            },
-            {
-                "category": "Renewable Energy",
-                "count": 24,
-                "trend": "increasing"
-            },
-            {
-                "category": "Healthcare & Diagnostics",
-                "count": 22,
-                "trend": "stable"
-            },
-            {
-                "category": "Water & Sanitation",
-                "count": 20,
-                "trend": "stable"
-            }
-        ],
-        "geographic_insights": [
-            {
-                "region": "Southeast Asia (Indonesia/Philippines)",
-                "key_pattern": "Institutional disaster risk reduction and seaweed-based bioproducts.",
-                "risk_level": "low"
-            },
-            {
-                "region": "East Africa (Kenya/Uganda)",
-                "key_pattern": "Circular sanitation systems and Pay-As-You-Go energy models.",
-                "risk_level": "medium"
-            },
-            {
-                "region": "Latin America (Bolivia/Nicaragua/Mexico)",
-                "key_pattern": "Manual deep-well drilling and ancient agricultural terrace restoration.",
-                "risk_level": "medium"
-            },
-            {
-                "region": "South Asia (India)",
-                "key_pattern": "Frugal medical diagnostics and traditional-to-digital financial systems.",
-                "risk_level": "low"
-            }
-        ],
-        "risk_analysis": {
-            "high_risk_cases": 12,
-            "critical_cases": 12,
-            "top_risk_types": [
-                "Fire Hazard",
-                "Explosion",
-                "Biological/Pathogen Exposure",
-                "Toxic Fumes"
-            ],
-            "emerging_risks": [
-                "DIY Biogas pressure management in residential areas.",
-                "Toxic off-gassing from melting unclassified plastic waste for construction.",
-                "Pathogen survival in improperly managed thermophilic composting systems.",
-                "Structural collapse of high-weight vertical rain barrel stacks."
-            ]
-        },
-        "innovation_patterns": [
-            {
-                "pattern_name": "Waste-to-Infrastructure",
-                "description": "Repurposing plastic bottles, glass, and wind turbine blades into housing, bridges, and paving.",
-                "regions": [
-                    "Nigeria",
-                    "Guatemala",
-                    "Netherlands",
-                    "Kenya"
-                ],
-                "risk_level": "medium"
-            },
-            {
-                "pattern_name": "Indigenous Tech Integration",
-                "description": "Combining ancestral knowledge (tracking, fire management) with drones, AI, and IoT.",
-                "regions": [
-                    "Brazil",
-                    "Australia",
-                    "Canada",
-                    "Arctic"
-                ],
-                "risk_level": "low"
-            },
-            {
-                "pattern_name": "Frugal Medical Diagnostics",
-                "description": "Miniaturizing lab processes (centrifugation, microscopy) using paper, string, and smartphone lenses.",
-                "regions": [
-                    "USA",
-                    "India",
-                    "Mexico"
-                ],
-                "risk_level": "low"
-            }
-        ],
-        "hidden_gems": [
-            {
-                "title": "Liter of Light",
-                "country": "Philippines",
-                "reason": "Zero-carbon, zero-cost daytime lighting using refraction; highly scalable and safe."
-            },
-            {
-                "title": "Zaï Technique",
-                "country": "Burkina Faso",
-                "reason": "Low-tech soil restoration using termites; high impact on desertification reversal."
-            },
-            {
-                "title": "Paperfuge",
-                "country": "USA/Global",
-                "reason": "Hand-powered centrifuge reaching 125,000 rpm for $0.20; revolutionary for rural clinics."
-            },
-            {
-                "title": "Sack Gardening",
-                "country": "Kenya",
-                "reason": "High-density urban farming in slums with zero land requirement."
-            },
-            {
-                "title": "Biopore Infiltration Holes",
-                "country": "Indonesia",
-                "reason": "Simultaneous flood mitigation and composting using simple manual augers."
-            }
-        ],
-        "intervention_opportunities": [
-            {
-                "type": "training",
-                "target": "Grassroots Biogas and Humanure Managers",
-                "priority_level": "high",
-                "justification": "High inherent risk of explosion and disease transmission requires standardized safety protocols."
-            },
-            {
-                "type": "regulation",
-                "target": "Recycled Plastic Building Materials",
-                "priority_level": "medium",
-                "justification": "Fire safety and toxic fume standards are needed for plastic-based roofing and bricks."
-            },
-            {
-                "type": "research",
-                "target": "Scavenged Plastic Leaching",
-                "priority_level": "medium",
-                "justification": "Verify if scavenged bottles used in hydroponics/water storage leach toxins into food/water."
-            },
-            {
-                "type": "funding",
-                "target": "Seaweed-based Bioplastics",
-                "priority_level": "high",
-                "justification": "Institutional innovation with high scalability to replace single-use petroleum plastics."
-            }
-        ],
-        "knowledge_insights": {
-            "most_common_source": "adapted_from_existing",
-            "trend": "shifting",
-            "observation": "Innovations are moving from purely traditional methods to 'Hybrid Tech' where IoT/AI validates ancestral wisdom."
-        },
-        "recommendations": [
-            "Standardize and distribute pictorial safety manuals for DIY energy and sanitation systems.",
-            "Establish legal frameworks for community-managed social currencies to survive national liquidity crises.",
-            "Incentivize the use of '0km building' materials like 3D-printed raw earth (TECLA).",
-            "Formalize e-waste dismantling hubs to provide safe components for grassroots roboticists.",
-            "Integrate mobile money agents with traditional cooperatives (SACCOs) to bridge the digital divide."
-        ],
-        "charts": {
-            "innovation_by_region": [
-                {
-                    "region": "East Africa",
-                    "count": 35
-                },
-                {
-                    "region": "Southeast Asia",
-                    "count": 25
-                },
-                {
-                    "region": "Latin America",
-                    "count": 20
-                },
-                {
-                    "region": "South Asia",
-                    "count": 16
-                },
-                {
-                    "region": "West Africa",
-                    "count": 15
-                },
-                {
-                    "region": "North America",
-                    "count": 15
-                },
-                {
-                    "region": "Europe",
-                    "count": 10
-                }
-            ],
-            "risk_distribution": [
-                {
-                    "level": "High",
-                    "count": 12
-                },
-                {
-                    "level": "Medium",
-                    "count": 88
-                },
-                {
-                    "level": "Low",
-                    "count": 165
-                }
-            ],
-            "knowledge_source_trend": [
-                {
-                    "source": "Adapted from Existing",
-                    "count": 58
-                },
-                {
-                    "source": "Traditional",
-                    "count": 34
-                },
-                {
-                    "source": "Formal Education",
-                    "count": 31
-                },
-                {
-                    "source": "Self-Taught",
-                    "count": 13
-                }
-            ]
-        }
+    "global_summary": {
+      "total_innovations": 175,
+      "grassroots_percentage": 42.86,
+      "institutional_percentage": 30.86,
+      "semi_formal_percentage": 26.29
     },
-    {
-        "report_metadata": {
-            "report_id": "gsi-current",
-            "generated_at": "2026-09-28T03:13:43.026574",
-            "period": "Q3 2026",
-            "total_records_analyzed": 372
+    "top_categories": [
+      {
+        "category": "Waste Management & Upcycling",
+        "count": 24,
+        "trend": "increasing"
+      },
+      {
+        "category": "Sustainable Agriculture",
+        "count": 21,
+        "trend": "stable"
+      },
+      {
+        "category": "Renewable Energy",
+        "count": 18,
+        "trend": "increasing"
+      },
+      {
+        "category": "Water & Sanitation",
+        "count": 17,
+        "trend": "stable"
+      },
+      {
+        "category": "Healthcare & Diagnostics",
+        "count": 12,
+        "trend": "increasing"
+      }
+    ],
+    "geographic_insights": [
+      {
+        "region": "East Africa (Kenya, Uganda, Malawi)",
+        "key_pattern": "Dominance of DIY energy and mechanical repurposing (Biogas, Engine ECUs, Windmills).",
+        "risk_level": "high"
+      },
+      {
+        "region": "Southeast Asia (Indonesia, Philippines)",
+        "key_pattern": "Sophisticated institutional-grassroots hybrids in marine conservation and circular economy (Waste Banks, Seaweed Bioplastics).",
+        "risk_level": "low"
+      },
+      {
+        "region": "Latin America (Haiti, Colombia, Brazil)",
+        "key_pattern": "Focus on resilient infrastructure and circular sanitation (Plastic bricks, Container-based toilets).",
+        "risk_level": "medium"
+      }
+    ],
+    "risk_analysis": {
+      "high_risk_cases": 11,
+      "critical_cases": 11,
+      "top_risk_types": [
+        "Explosion (Methane/Compressed Air)",
+        "Biological (Pathogen exposure in DIY sanitation)",
+        "Toxic Fumes (Plastic melting/E-waste)",
+        "Fire (DIY Electronics/Battery storage)"
+      ],
+      "emerging_risks": [
+        "Thermal runaway in repurposed lithium batteries for rural lighting.",
+        "Groundwater contamination from unlined DIY composting pits.",
+        "Respiratory damage from unregulated plastic-to-brick melting operations."
+      ]
+    },
+    "innovation_patterns": [
+      {
+        "pattern_name": "Circular Sanitation",
+        "description": "Transforming human waste into agricultural fertilizer via thermophilic composting.",
+        "regions": [
+          "Haiti",
+          "Uganda",
+          "USA",
+          "Kenya"
+        ],
+        "risk_level": "medium"
+      },
+      {
+        "pattern_name": "Plastic-to-Infrastructure",
+        "description": "Repurposing PET bottles and sachets into housing, schools, and paving blocks.",
+        "regions": [
+          "Nigeria",
+          "Ghana",
+          "Colombia",
+          "Guatemala"
+        ],
+        "risk_level": "medium"
+      },
+      {
+        "pattern_name": "Indigenous-Tech Hybrids",
+        "description": "Integrating traditional ecological knowledge with AI, Drones, and IoT.",
+        "regions": [
+          "Brazil",
+          "Australia",
+          "Canada",
+          "New Zealand"
+        ],
+        "risk_level": "low"
+      },
+      {
+        "pattern_name": "Frugal Diagnostics",
+        "description": "Hand-powered or paper-based medical tools for off-grid clinics.",
+        "regions": [
+          "Global",
+          "India",
+          "USA"
+        ],
+        "risk_level": "low"
+      }
+    ],
+    "hidden_gems": [
+      {
+        "title": "Paperfuge",
+        "country": "USA",
+        "reason": "Achieves 125,000 RPM using string and paper; replaces $1,000+ equipment for pennies."
+      },
+      {
+        "title": "Sack Gardening",
+        "country": "Kenya",
+        "reason": "Enables high-density food production in slums with zero arable land."
+      },
+      {
+        "title": "Raghav FM",
+        "country": "India",
+        "reason": "Functional community radio transmitter built for under $1 using scrap."
+      },
+      {
+        "title": "Liter of Light",
+        "country": "Philippines",
+        "reason": "Zero-carbon daytime lighting using water refraction in PET bottles."
+      },
+      {
+        "title": "Milpa System",
+        "country": "Mexico",
+        "reason": "Ancient polyculture that maintains soil fertility without synthetic inputs for centuries."
+      }
+    ],
+    "intervention_opportunities": [
+      {
+        "type": "regulation",
+        "target": "DIY Biogas Systems",
+        "priority_level": "high",
+        "justification": "High explosion risk in residential areas; needs standardized pressure relief valves."
+      },
+      {
+        "type": "training",
+        "target": "Plastic Upcycling Enterprises",
+        "priority_level": "medium",
+        "justification": "Workers exposed to toxic VOCs during melting; requires fume extraction education."
+      },
+      {
+        "type": "funding",
+        "target": "Frugal Diagnostic Tools",
+        "priority_level": "high",
+        "justification": "High impact on neonatal and maternal mortality with minimal capital requirement."
+      }
+    ],
+    "knowledge_insights": {
+      "most_common_source": "Adapted from existing",
+      "trend": "shifting",
+      "observation": "Knowledge is evolving from purely 'Traditional' or 'Self-taught' toward 'Hybrid' models where grassroots actors adopt high-tech sensors (IoT/Drones) to validate ancestral practices."
+    },
+    "recommendations": [
+      "Develop 'Safety-in-a-Box' kits for DIY energy innovators (fuses, valves, masks).",
+      "Incentivize 'Waste Bank' models globally to formalize informal recycling sectors.",
+      "Establish a global 'Frugal Tech' certification to fast-track medical device adoption.",
+      "Protect Indigenous data sovereignty in AI-hybrid conservation projects.",
+      "Scale 'Circular Sanitation' by linking urban waste to rural fertilizer markets."
+    ],
+    "charts": {
+      "innovation_by_region": [
+        {
+          "region": "Africa",
+          "count": 42
         },
-        "global_summary": {
-            "total_innovations": 372,
-            "grassroots_percentage": 43.28,
-            "institutional_percentage": 26.08,
-            "semi_formal_percentage": 30.65
+        {
+          "region": "Asia",
+          "count": 31
         },
-        "top_categories": [
-            {
-                "category": "Waste Management & Upcycling",
-                "count": 34,
-                "trend": "increasing"
-            },
-            {
-                "category": "Sustainable Agriculture",
-                "count": 28,
-                "trend": "stable"
-            },
-            {
-                "category": "Healthcare & Diagnostics",
-                "count": 22,
-                "trend": "increasing"
-            },
-            {
-                "category": "Renewable Energy (Biogas/Solar)",
-                "count": 19,
-                "trend": "stable"
-            },
-            {
-                "category": "Water & Sanitation",
-                "count": 18,
-                "trend": "increasing"
-            }
-        ],
-        "geographic_insights": [
-            {
-                "region": "East Africa",
-                "key_pattern": "Dominance of circular economy models (plastic-to-bricks) and mobile-integrated microfinance.",
-                "risk_level": "medium"
-            },
-            {
-                "region": "Southeast Asia",
-                "key_pattern": "Strong institutional focus on aerospace, maritime security, and seaweed-based biotechnology.",
-                "risk_level": "low"
-            },
-            {
-                "region": "South Asia",
-                "key_pattern": "High concentration of frugal medical engineering and traditional knowledge scaling.",
-                "risk_level": "low"
-            },
-            {
-                "region": "Latin America",
-                "key_pattern": "Leadership in container-based sanitation and indigenous land-monitoring technology.",
-                "risk_level": "medium"
-            }
-        ],
-        "risk_analysis": {
-            "high_risk_cases": 14,
-            "critical_cases": 14,
-            "top_risk_types": [
-                "Fire/Explosion (Biogas & Engine Mods)",
-                "Toxic Fumes (Plastic Melting)",
-                "Biological Pathogens (Waste Handling)",
-                "Heavy Metal Exposure (E-waste)"
-            ],
-            "emerging_risks": [
-                "Microplastic shedding from upcycled roofing and paving materials.",
-                "Asphyxiation in traditional underground anaerobic grain storage.",
-                "Structural failure of high-weight DIY vertical water storage stacks."
-            ]
+        {
+          "region": "Americas",
+          "count": 22
         },
-        "innovation_patterns": [
-            {
-                "pattern_name": "Hybrid Indigenous-Tech",
-                "description": "Integrating AI, IoT, and Drones with ancestral knowledge for fire and maritime management.",
-                "regions": [
-                    "Australia",
-                    "Brazil",
-                    "Canada"
-                ],
-                "risk_level": "low"
-            },
-            {
-                "pattern_name": "Plastic-to-Infrastructure",
-                "description": "Repurposing PET/HDPE into bricks, tiles, and houses via sand-composite melting.",
-                "regions": [
-                    "Kenya",
-                    "Nigeria",
-                    "Colombia",
-                    "Cameroon"
-                ],
-                "risk_level": "high"
-            },
-            {
-                "pattern_name": "Container-Based Sanitation (CBS)",
-                "description": "Decentralized dry-toilet services converting human waste into agricultural-grade compost.",
-                "regions": [
-                    "Haiti",
-                    "Kenya",
-                    "Uganda"
-                ],
-                "risk_level": "medium"
-            }
-        ],
-        "hidden_gems": [
-            {
-                "title": "Paperfuge",
-                "country": "USA/Global",
-                "reason": "125,000 RPM hand-powered centrifuge for $0.20; massive diagnostic impact."
-            },
-            {
-                "title": "Zaï technique",
-                "country": "Burkina Faso",
-                "reason": "Zero-cost soil restoration method that has reversed desertification for millions of hectares."
-            },
-            {
-                "title": "Liter of Light",
-                "country": "Philippines",
-                "reason": "Zero-carbon daytime lighting using only water, bleach, and a plastic bottle."
-            },
-            {
-                "title": "Bhungroo",
-                "country": "India",
-                "reason": "Sub-surface injection of monsoon water to prevent floods and solve dry-season drought."
-            },
-            {
-                "title": "MittiCool",
-                "country": "India",
-                "reason": "Zero-electricity terracotta refrigerator using passive evaporative cooling."
-            }
-        ],
-        "intervention_opportunities": [
-            {
-                "type": "regulation",
-                "target": "Grassroots Biogas & Engine Conversions",
-                "priority_level": "high",
-                "justification": "Critical explosion and fire risks found in DIY methane storage and vehicle fuel-system modifications."
-            },
-            {
-                "type": "research",
-                "target": "Plastic-Sand Composite Durability",
-                "priority_level": "medium",
-                "justification": "Lack of data on long-term UV degradation and toxic off-gassing for upcycled roofing tiles."
-            },
-            {
-                "type": "training",
-                "target": "E-waste Upcycling Safety",
-                "priority_level": "high",
-                "justification": "Innovators are handling lead, mercury, and cadmium without adequate respiratory or dermal protection."
-            }
-        ],
-        "knowledge_insights": {
-            "most_common_source": "adapted_from_existing",
-            "trend": "shifting",
-            "observation": "Transition from purely traditional methods to 'Hybrid Innovations' where formal scientific data (satellite/AI) validates or scales traditional ecological knowledge."
-        },
-        "recommendations": [
-            "Deploy standardized safety kits (pressure valves/flame arrestors) for grassroots biogas adopters.",
-            "Establish a global certification standard for upcycled plastic construction materials to ensure fire safety.",
-            "Incentivize the integration of informal waste pickers into formal digital payment and insurance networks.",
-            "Promote the 'Cool Burning' fire management model to global climate agencies as a wildfire mitigation strategy.",
-            "Scale 'First-Flush' filtration training for DIY rainwater harvesters to reduce waterborne disease risks."
-        ],
-        "charts": {
-            "innovation_by_region": [
-                {
-                    "region": "Africa",
-                    "count": 55
-                },
-                {
-                    "region": "Asia",
-                    "count": 48
-                },
-                {
-                    "region": "Americas",
-                    "count": 25
-                },
-                {
-                    "region": "Europe",
-                    "count": 9
-                }
-            ],
-            "risk_distribution": [
-                {
-                    "level": "High",
-                    "count": 14
-                },
-                {
-                    "level": "Medium",
-                    "count": 125
-                },
-                {
-                    "level": "Low",
-                    "count": 233
-                }
-            ],
-            "knowledge_source_trend": [
-                {
-                    "source": "traditional",
-                    "count": 35
-                },
-                {
-                    "source": "adapted",
-                    "count": 50
-                },
-                {
-                    "source": "formal",
-                    "count": 30
-                },
-                {
-                    "source": "self-taught",
-                    "count": 22
-                }
-            ]
+        {
+          "region": "Europe/Oceania",
+          "count": 8
         }
+      ],
+      "risk_distribution": [
+        {
+          "level": "High",
+          "count": 11
+        },
+        {
+          "level": "Medium",
+          "count": 62
+        },
+        {
+          "level": "Low",
+          "count": 102
+        }
+      ],
+      "knowledge_source_trend": [
+        {
+          "source": "Traditional",
+          "count": 28
+        },
+        {
+          "source": "Adapted",
+          "count": 41
+        },
+        {
+          "source": "Formal",
+          "count": 34
+        }
+      ]
     }
+  },
+  {
+    "report_metadata": {
+      "report_id": "gsi-older",
+      "generated_at": "2026-06-30T02:52:16.780063",
+      "period": "Q2 2026",
+      "total_records_analyzed": 265
+    },
+    "global_summary": {
+      "total_innovations": 265,
+      "grassroots_percentage": 41.51,
+      "institutional_percentage": 30.19,
+      "semi_formal_percentage": 28.3
+    },
+    "top_categories": [
+      {
+        "category": "Waste Management & Circular Economy",
+        "count": 38,
+        "trend": "increasing"
+      },
+      {
+        "category": "Sustainable Agriculture",
+        "count": 32,
+        "trend": "stable"
+      },
+      {
+        "category": "Renewable Energy",
+        "count": 24,
+        "trend": "increasing"
+      },
+      {
+        "category": "Healthcare & Diagnostics",
+        "count": 22,
+        "trend": "stable"
+      },
+      {
+        "category": "Water & Sanitation",
+        "count": 20,
+        "trend": "stable"
+      }
+    ],
+    "geographic_insights": [
+      {
+        "region": "Southeast Asia (Indonesia/Philippines)",
+        "key_pattern": "Institutional disaster risk reduction and seaweed-based bioproducts.",
+        "risk_level": "low"
+      },
+      {
+        "region": "East Africa (Kenya/Uganda)",
+        "key_pattern": "Circular sanitation systems and Pay-As-You-Go energy models.",
+        "risk_level": "medium"
+      },
+      {
+        "region": "Latin America (Bolivia/Nicaragua/Mexico)",
+        "key_pattern": "Manual deep-well drilling and ancient agricultural terrace restoration.",
+        "risk_level": "medium"
+      },
+      {
+        "region": "South Asia (India)",
+        "key_pattern": "Frugal medical diagnostics and traditional-to-digital financial systems.",
+        "risk_level": "low"
+      }
+    ],
+    "risk_analysis": {
+      "high_risk_cases": 12,
+      "critical_cases": 12,
+      "top_risk_types": [
+        "Fire Hazard",
+        "Explosion",
+        "Biological/Pathogen Exposure",
+        "Toxic Fumes"
+      ],
+      "emerging_risks": [
+        "DIY Biogas pressure management in residential areas.",
+        "Toxic off-gassing from melting unclassified plastic waste for construction.",
+        "Pathogen survival in improperly managed thermophilic composting systems.",
+        "Structural collapse of high-weight vertical rain barrel stacks."
+      ]
+    },
+    "innovation_patterns": [
+      {
+        "pattern_name": "Waste-to-Infrastructure",
+        "description": "Repurposing plastic bottles, glass, and wind turbine blades into housing, bridges, and paving.",
+        "regions": [
+          "Nigeria",
+          "Guatemala",
+          "Netherlands",
+          "Kenya"
+        ],
+        "risk_level": "medium"
+      },
+      {
+        "pattern_name": "Indigenous Tech Integration",
+        "description": "Combining ancestral knowledge (tracking, fire management) with drones, AI, and IoT.",
+        "regions": [
+          "Brazil",
+          "Australia",
+          "Canada",
+          "Arctic"
+        ],
+        "risk_level": "low"
+      },
+      {
+        "pattern_name": "Frugal Medical Diagnostics",
+        "description": "Miniaturizing lab processes (centrifugation, microscopy) using paper, string, and smartphone lenses.",
+        "regions": [
+          "USA",
+          "India",
+          "Mexico"
+        ],
+        "risk_level": "low"
+      }
+    ],
+    "hidden_gems": [
+      {
+        "title": "Liter of Light",
+        "country": "Philippines",
+        "reason": "Zero-carbon, zero-cost daytime lighting using refraction; highly scalable and safe."
+      },
+      {
+        "title": "Zaï Technique",
+        "country": "Burkina Faso",
+        "reason": "Low-tech soil restoration using termites; high impact on desertification reversal."
+      },
+      {
+        "title": "Paperfuge",
+        "country": "USA/Global",
+        "reason": "Hand-powered centrifuge reaching 125,000 rpm for $0.20; revolutionary for rural clinics."
+      },
+      {
+        "title": "Sack Gardening",
+        "country": "Kenya",
+        "reason": "High-density urban farming in slums with zero land requirement."
+      },
+      {
+        "title": "Biopore Infiltration Holes",
+        "country": "Indonesia",
+        "reason": "Simultaneous flood mitigation and composting using simple manual augers."
+      }
+    ],
+    "intervention_opportunities": [
+      {
+        "type": "training",
+        "target": "Grassroots Biogas and Humanure Managers",
+        "priority_level": "high",
+        "justification": "High inherent risk of explosion and disease transmission requires standardized safety protocols."
+      },
+      {
+        "type": "regulation",
+        "target": "Recycled Plastic Building Materials",
+        "priority_level": "medium",
+        "justification": "Fire safety and toxic fume standards are needed for plastic-based roofing and bricks."
+      },
+      {
+        "type": "research",
+        "target": "Scavenged Plastic Leaching",
+        "priority_level": "medium",
+        "justification": "Verify if scavenged bottles used in hydroponics/water storage leach toxins into food/water."
+      },
+      {
+        "type": "funding",
+        "target": "Seaweed-based Bioplastics",
+        "priority_level": "high",
+        "justification": "Institutional innovation with high scalability to replace single-use petroleum plastics."
+      }
+    ],
+    "knowledge_insights": {
+      "most_common_source": "adapted_from_existing",
+      "trend": "shifting",
+      "observation": "Innovations are moving from purely traditional methods to 'Hybrid Tech' where IoT/AI validates ancestral wisdom."
+    },
+    "recommendations": [
+      "Standardize and distribute pictorial safety manuals for DIY energy and sanitation systems.",
+      "Establish legal frameworks for community-managed social currencies to survive national liquidity crises.",
+      "Incentivize the use of '0km building' materials like 3D-printed raw earth (TECLA).",
+      "Formalize e-waste dismantling hubs to provide safe components for grassroots roboticists.",
+      "Integrate mobile money agents with traditional cooperatives (SACCOs) to bridge the digital divide."
+    ],
+    "charts": {
+      "innovation_by_region": [
+        {
+          "region": "East Africa",
+          "count": 35
+        },
+        {
+          "region": "Southeast Asia",
+          "count": 25
+        },
+        {
+          "region": "Latin America",
+          "count": 20
+        },
+        {
+          "region": "South Asia",
+          "count": 16
+        },
+        {
+          "region": "West Africa",
+          "count": 15
+        },
+        {
+          "region": "North America",
+          "count": 15
+        },
+        {
+          "region": "Europe",
+          "count": 10
+        }
+      ],
+      "risk_distribution": [
+        {
+          "level": "High",
+          "count": 12
+        },
+        {
+          "level": "Medium",
+          "count": 88
+        },
+        {
+          "level": "Low",
+          "count": 165
+        }
+      ],
+      "knowledge_source_trend": [
+        {
+          "source": "Adapted from Existing",
+          "count": 58
+        },
+        {
+          "source": "Traditional",
+          "count": 34
+        },
+        {
+          "source": "Formal Education",
+          "count": 31
+        },
+        {
+          "source": "Self-Taught",
+          "count": 13
+        }
+      ]
+    }
+  },
+  {
+    "report_metadata": {
+      "report_id": "gsi-current",
+      "generated_at": "2026-09-28T03:13:43.026574",
+      "period": "Q3 2026",
+      "total_records_analyzed": 372,
+      "schema_version": "2.0"
+    },
+    "global_summary": {
+      "total_innovations": 372,
+      "grassroots_percentage": 43.28,
+      "institutional_percentage": 26.08,
+      "semi_formal_percentage": 30.65
+    },
+    "top_categories": [
+      {
+        "category": "Waste Management & Upcycling",
+        "count": 34,
+        "trend": "increasing"
+      },
+      {
+        "category": "Sustainable Agriculture",
+        "count": 28,
+        "trend": "stable"
+      },
+      {
+        "category": "Healthcare & Diagnostics",
+        "count": 22,
+        "trend": "increasing"
+      },
+      {
+        "category": "Renewable Energy (Biogas/Solar)",
+        "count": 19,
+        "trend": "stable"
+      },
+      {
+        "category": "Water & Sanitation",
+        "count": 18,
+        "trend": "increasing"
+      }
+    ],
+    "geographic_insights": [
+      {
+        "region": "East Africa",
+        "key_pattern": "Dominance of circular economy models (plastic-to-bricks) and mobile-integrated microfinance.",
+        "risk_level": "medium"
+      },
+      {
+        "region": "Southeast Asia",
+        "key_pattern": "Strong institutional focus on aerospace, maritime security, and seaweed-based biotechnology.",
+        "risk_level": "low"
+      },
+      {
+        "region": "South Asia",
+        "key_pattern": "High concentration of frugal medical engineering and traditional knowledge scaling.",
+        "risk_level": "low"
+      },
+      {
+        "region": "Latin America",
+        "key_pattern": "Leadership in container-based sanitation and indigenous land-monitoring technology.",
+        "risk_level": "medium"
+      }
+    ],
+    "risk_analysis": {
+      "high_risk_cases": 14,
+      "critical_cases": 14,
+      "top_risk_types": [
+        "Fire/Explosion (Biogas & Engine Mods)",
+        "Toxic Fumes (Plastic Melting)",
+        "Biological Pathogens (Waste Handling)",
+        "Heavy Metal Exposure (E-waste)"
+      ],
+      "emerging_risks": [
+        "Microplastic shedding from upcycled roofing and paving materials.",
+        "Asphyxiation in traditional underground anaerobic grain storage.",
+        "Structural failure of high-weight DIY vertical water storage stacks."
+      ]
+    },
+    "innovation_patterns": [
+      {
+        "pattern_name": "Hybrid Indigenous-Tech",
+        "description": "Integrating AI, IoT, and Drones with ancestral knowledge for fire and maritime management.",
+        "regions": [
+          "Australia",
+          "Brazil",
+          "Canada"
+        ],
+        "risk_level": "low"
+      },
+      {
+        "pattern_name": "Plastic-to-Infrastructure",
+        "description": "Repurposing PET/HDPE into bricks, tiles, and houses via sand-composite melting.",
+        "regions": [
+          "Kenya",
+          "Nigeria",
+          "Colombia",
+          "Cameroon"
+        ],
+        "risk_level": "high"
+      },
+      {
+        "pattern_name": "Container-Based Sanitation (CBS)",
+        "description": "Decentralized dry-toilet services converting human waste into agricultural-grade compost.",
+        "regions": [
+          "Haiti",
+          "Kenya",
+          "Uganda"
+        ],
+        "risk_level": "medium"
+      }
+    ],
+    "hidden_gems": [
+      {
+        "title": "Paperfuge",
+        "country": "USA/Global",
+        "reason": "125,000 RPM hand-powered centrifuge for $0.20; massive diagnostic impact."
+      },
+      {
+        "title": "Zaï technique",
+        "country": "Burkina Faso",
+        "reason": "Zero-cost soil restoration method that has reversed desertification for millions of hectares."
+      },
+      {
+        "title": "Liter of Light",
+        "country": "Philippines",
+        "reason": "Zero-carbon daytime lighting using only water, bleach, and a plastic bottle."
+      },
+      {
+        "title": "Bhungroo",
+        "country": "India",
+        "reason": "Sub-surface injection of monsoon water to prevent floods and solve dry-season drought."
+      },
+      {
+        "title": "MittiCool",
+        "country": "India",
+        "reason": "Zero-electricity terracotta refrigerator using passive evaporative cooling."
+      }
+    ],
+    "intervention_opportunities": [
+      {
+        "type": "regulation",
+        "target": "Grassroots Biogas & Engine Conversions",
+        "priority_level": "high",
+        "justification": "Critical explosion and fire risks found in DIY methane storage and vehicle fuel-system modifications."
+      },
+      {
+        "type": "research",
+        "target": "Plastic-Sand Composite Durability",
+        "priority_level": "medium",
+        "justification": "Lack of data on long-term UV degradation and toxic off-gassing for upcycled roofing tiles."
+      },
+      {
+        "type": "training",
+        "target": "E-waste Upcycling Safety",
+        "priority_level": "high",
+        "justification": "Innovators are handling lead, mercury, and cadmium without adequate respiratory or dermal protection."
+      }
+    ],
+    "knowledge_insights": {
+      "most_common_source": "adapted_from_existing",
+      "trend": "shifting",
+      "observation": "Transition from purely traditional methods to 'Hybrid Innovations' where formal scientific data (satellite/AI) validates or scales traditional ecological knowledge."
+    },
+    "recommendations": [
+      "Deploy standardized safety kits (pressure valves/flame arrestors) for grassroots biogas adopters.",
+      "Establish a global certification standard for upcycled plastic construction materials to ensure fire safety.",
+      "Incentivize the integration of informal waste pickers into formal digital payment and insurance networks.",
+      "Promote the 'Cool Burning' fire management model to global climate agencies as a wildfire mitigation strategy.",
+      "Scale 'First-Flush' filtration training for DIY rainwater harvesters to reduce waterborne disease risks."
+    ],
+    "charts": {
+      "innovation_by_region": [
+        {
+          "region": "Africa",
+          "count": 55
+        },
+        {
+          "region": "Asia",
+          "count": 48
+        },
+        {
+          "region": "Americas",
+          "count": 25
+        },
+        {
+          "region": "Europe",
+          "count": 9
+        }
+      ],
+      "risk_distribution": [
+        {
+          "level": "High",
+          "count": 14
+        },
+        {
+          "level": "Medium",
+          "count": 125
+        },
+        {
+          "level": "Low",
+          "count": 233
+        }
+      ],
+      "knowledge_source_trend": [
+        {
+          "source": "traditional",
+          "count": 35
+        },
+        {
+          "source": "adapted",
+          "count": 50
+        },
+        {
+          "source": "formal",
+          "count": 30
+        },
+        {
+          "source": "self-taught",
+          "count": 22
+        }
+      ]
+    },
+    "implementation_intelligence": {
+      "schema_version": "1.0",
+      "status": "partial_backfill",
+      "status_note": "Policy/action structure backfilled from the existing Q3 report. Exact pathway evidence counts will be refreshed by the next Python resume generation.",
+      "pipeline": [
+        {
+          "stage": "Innovation",
+          "description": "What innovations are being observed?",
+          "record_count": 372,
+          "basis": "data.json / report metadata"
+        },
+        {
+          "stage": "Evidence",
+          "description": "What is directly observed versus inferred?",
+          "metric": "Refresh on next resume generation",
+          "basis": "pathway_matches"
+        },
+        {
+          "stage": "System Pathway",
+          "description": "Where does the innovation sit in a thematic system?",
+          "domains_defined": 20,
+          "basis": "pathways.json"
+        },
+        {
+          "stage": "Policy Relevance",
+          "description": "Why might the evidence matter for public policy, planning or institutional action?",
+          "items": 3,
+          "basis": "intervention opportunities"
+        },
+        {
+          "stage": "Stakeholders",
+          "description": "Who may implement, validate, govern or provide feedback?",
+          "groups": 19,
+          "basis": "pathway implementation contexts"
+        },
+        {
+          "stage": "Policy Options",
+          "description": "What types of policy or support instruments could respond?",
+          "options": 3,
+          "basis": "intervention opportunities"
+        },
+        {
+          "stage": "Implementation",
+          "description": "What practical steps could translate an option into action?",
+          "actions": 5,
+          "basis": "existing recommendations + implementation scaffold"
+        },
+        {
+          "stage": "Feedback",
+          "description": "How does implementation evidence return to the intelligence cycle?",
+          "feedback_loops": 3,
+          "basis": "monitoring and future evidence"
+        }
+      ],
+      "innovation": {
+        "top_records": [],
+        "total_with_pathway_evidence": null
+      },
+      "evidence": {
+        "observed_matches": null,
+        "inferred_matches": null
+      },
+      "system_pathways": [
+        {
+          "domain": "Water Management",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Agriculture & Food Security",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Energy Access",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Health & Medical Access",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Construction & Shelter",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Education & Communication",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Tools & Manufacturing",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Environment & Circular Economy",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Transportation & Mobility",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Finance & Social Innovation",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Climate Adaptation & Disaster Resilience",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Biodiversity & Ecosystem Restoration",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Marine & Coastal Systems",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Digital Transformation & AI",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Governance & Public Services",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Social Inclusion & Accessibility",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Livelihoods & Employment",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Culture & Heritage",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Urban & Community Systems",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        },
+        {
+          "domain": "Peace & Community Resilience",
+          "status": "taxonomy available; evidence coverage refresh pending"
+        }
+      ],
+      "policy_relevance": [
+        {
+          "issue": "Grassroots Biogas & Engine Conversions",
+          "evidence_basis": "Critical explosion and fire risks found in DIY methane storage and vehicle fuel-system modifications.",
+          "linked_pathways": [
+            {
+              "domain": "Energy Access",
+              "node": "Energy Resources",
+              "node_id": "energy_resources"
+            },
+            {
+              "domain": "Energy Access",
+              "node": "Energy Generation",
+              "node_id": "energy_generation"
+            },
+            {
+              "domain": "Energy Access",
+              "node": "Energy Conversion",
+              "node_id": "energy_conversion"
+            },
+            {
+              "domain": "Tools & Manufacturing",
+              "node": "Adaptation",
+              "node_id": "adaptation"
+            },
+            {
+              "domain": "Tools & Manufacturing",
+              "node": "Prototyping",
+              "node_id": "prototyping"
+            },
+            {
+              "domain": "Environment & Circular Economy",
+              "node": "Treatment & Processing",
+              "node_id": "treatment_processing"
+            },
+            {
+              "domain": "Transportation & Mobility",
+              "node": "Vehicle Adaptation",
+              "node_id": "vehicle_adaptation"
+            },
+            {
+              "domain": "Finance & Social Innovation",
+              "node": "Local Organization",
+              "node_id": "local_organization"
+            }
+          ],
+          "policy_relevance": "The observed signal may warrant policy attention, targeted capacity support, further research or safeguards; any policy response should be validated in its local institutional and implementation context.",
+          "confidence": "medium"
+        },
+        {
+          "issue": "Plastic-Sand Composite Durability",
+          "evidence_basis": "Lack of data on long-term UV degradation and toxic off-gassing for upcycled roofing tiles.",
+          "linked_pathways": [
+            {
+              "domain": "Construction & Shelter",
+              "node": "Construction",
+              "node_id": "construction"
+            }
+          ],
+          "policy_relevance": "The observed signal may warrant policy attention, targeted capacity support, further research or safeguards; any policy response should be validated in its local institutional and implementation context.",
+          "confidence": "medium"
+        },
+        {
+          "issue": "E-waste Upcycling Safety",
+          "evidence_basis": "Innovators are handling lead, mercury, and cadmium without adequate respiratory or dermal protection.",
+          "linked_pathways": [
+            {
+              "domain": "Environment & Circular Economy",
+              "node": "Treatment & Processing",
+              "node_id": "treatment_processing"
+            },
+            {
+              "domain": "Environment & Circular Economy",
+              "node": "Reuse & Circularity",
+              "node_id": "reuse_circularity"
+            },
+            {
+              "domain": "Urban & Community Systems",
+              "node": "Local Mobility",
+              "node_id": "local_mobility"
+            }
+          ],
+          "policy_relevance": "The observed signal may warrant policy attention, targeted capacity support, further research or safeguards; any policy response should be validated in its local institutional and implementation context.",
+          "confidence": "medium"
+        }
+      ],
+      "stakeholders": [
+        {
+          "group": "Coastal communities & marine practitioners",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "coastal"
+          ],
+          "relevant_pathways": [
+            "Ecosystem Restoration",
+            "Coastal Monitoring",
+            "Mangrove Restoration",
+            "Coastal Protection",
+            "Blue Carbon",
+            "Sustainable Fisheries",
+            "Coastal Livelihoods"
+          ]
+        },
+        {
+          "group": "Communities & local organizations",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "community"
+          ],
+          "relevant_pathways": [
+            "Water Protection",
+            "Water Conservation",
+            "Water Harvesting",
+            "Water Storage",
+            "Water Distribution",
+            "Water Purification",
+            "Water Treatment",
+            "WASH & Sanitation",
+            "Wastewater Management",
+            "Water Reuse"
+          ]
+        },
+        {
+          "group": "Conservation actors & site managers",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "protected_area"
+          ],
+          "relevant_pathways": [
+            "Biodiversity Mapping",
+            "Conservation & Protection",
+            "Habitat Management",
+            "Species Recovery",
+            "Blue Carbon"
+          ]
+        },
+        {
+          "group": "Cooperatives & producer organizations",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "cooperative"
+          ],
+          "relevant_pathways": [
+            "Soil Management",
+            "Seed Systems",
+            "Cultivation",
+            "Agricultural Water",
+            "Harvest & Post-Harvest",
+            "Food Processing",
+            "Food Access",
+            "Local Organization",
+            "Community Finance",
+            "Digital Access"
+          ]
+        },
+        {
+          "group": "Cultural institutions & custodians",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "cultural_institution"
+          ],
+          "relevant_pathways": [
+            "Documentation",
+            "Safeguarding"
+          ]
+        },
+        {
+          "group": "Cultural practitioners & custodians",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "cultural_group"
+          ],
+          "relevant_pathways": [
+            "Living Heritage",
+            "Cultural Continuity"
+          ]
+        },
+        {
+          "group": "Emergency, humanitarian & response actors",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "emergency_response"
+          ],
+          "relevant_pathways": [
+            "Emergency Response"
+          ]
+        },
+        {
+          "group": "Farmers & producer groups",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "smallholder_farm",
+            "farm"
+          ],
+          "relevant_pathways": [
+            "Soil Management",
+            "Seed Systems",
+            "Cultivation",
+            "Agricultural Water",
+            "Harvest & Post-Harvest",
+            "Food Processing",
+            "Food Access",
+            "Local Inputs",
+            "Fabrication",
+            "Adaptation"
+          ]
+        },
+        {
+          "group": "Fishing communities & marine practitioners",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "fishing_community"
+          ],
+          "relevant_pathways": [
+            "Sustainable Fisheries"
+          ]
+        },
+        {
+          "group": "Health practitioners & facilities",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "rural_clinic",
+            "clinic"
+          ],
+          "relevant_pathways": [
+            "Prevention & Hygiene",
+            "Screening & Diagnosis",
+            "Medical Tools",
+            "Care Delivery",
+            "Referral & Logistics",
+            "Rehabilitation & Support",
+            "Assistive Solutions"
+          ]
+        },
+        {
+          "group": "Households & end users",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "rural_household",
+            "household"
+          ],
+          "relevant_pathways": [
+            "Water Protection",
+            "Water Conservation",
+            "Water Harvesting",
+            "Water Storage",
+            "Water Distribution",
+            "Water Purification",
+            "Water Treatment",
+            "WASH & Sanitation",
+            "Wastewater Management",
+            "Water Reuse"
+          ]
+        },
+        {
+          "group": "Local authorities & public services",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "municipality"
+          ],
+          "relevant_pathways": [
+            "Water Protection",
+            "Water Conservation",
+            "Water Harvesting",
+            "Water Storage",
+            "Water Distribution",
+            "Water Purification",
+            "Water Treatment",
+            "WASH & Sanitation",
+            "Wastewater Management",
+            "Water Reuse"
+          ]
+        },
+        {
+          "group": "Local workshops & technical practitioners",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "local_workshop"
+          ],
+          "relevant_pathways": [
+            "Local Inputs",
+            "Fabrication",
+            "Adaptation",
+            "Prototyping",
+            "Repair & Maintenance",
+            "Productive Tool"
+          ]
+        },
+        {
+          "group": "Makers, fabricators & technical practitioners",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "maker_space"
+          ],
+          "relevant_pathways": [
+            "Local Inputs",
+            "Fabrication",
+            "Adaptation",
+            "Prototyping",
+            "Repair & Maintenance",
+            "Productive Tool"
+          ]
+        },
+        {
+          "group": "Public authorities & policymakers",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "government"
+          ],
+          "relevant_pathways": [
+            "Policy Implementation"
+          ]
+        },
+        {
+          "group": "Researchers & scientific institutions",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "research_site"
+          ],
+          "relevant_pathways": [
+            "Biodiversity Mapping"
+          ]
+        },
+        {
+          "group": "Schools, educators & youth",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "school"
+          ],
+          "relevant_pathways": [
+            "Water Protection",
+            "Water Conservation",
+            "Water Harvesting",
+            "Water Storage",
+            "Water Distribution",
+            "Water Purification",
+            "Water Treatment",
+            "WASH & Sanitation",
+            "Wastewater Management",
+            "Water Reuse"
+          ]
+        },
+        {
+          "group": "SMEs & local enterprises",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "small_enterprise"
+          ],
+          "relevant_pathways": [
+            "Energy Resources",
+            "Energy Generation",
+            "Energy Conversion",
+            "Energy Storage",
+            "Energy Distribution",
+            "Productive Energy Use",
+            "Local Inputs",
+            "Fabrication",
+            "Adaptation",
+            "Prototyping"
+          ]
+        },
+        {
+          "group": "Training & capacity-building actors",
+          "role": "Potential implementation, validation or feedback partner based on pathway context.",
+          "contexts": [
+            "training_center"
+          ],
+          "relevant_pathways": [
+            "Learning Access",
+            "Learning Tools",
+            "Teaching Support",
+            "Communication",
+            "Knowledge Sharing",
+            "Learning Outcomes"
+          ]
+        }
+      ],
+      "policy_options": [
+        {
+          "option_id": "PO-01",
+          "instrument": "regulation",
+          "option": "Grassroots Biogas & Engine Conversions",
+          "rationale": "Critical explosion and fire risks found in DIY methane storage and vehicle fuel-system modifications.",
+          "priority_level": "high",
+          "linked_evidence": [
+            "Critical explosion and fire risks found in DIY methane storage and vehicle fuel-system modifications."
+          ],
+          "linked_pathways": [
+            {
+              "domain": "Energy Access",
+              "node": "Energy Resources",
+              "node_id": "energy_resources"
+            },
+            {
+              "domain": "Energy Access",
+              "node": "Energy Generation",
+              "node_id": "energy_generation"
+            },
+            {
+              "domain": "Energy Access",
+              "node": "Energy Conversion",
+              "node_id": "energy_conversion"
+            },
+            {
+              "domain": "Tools & Manufacturing",
+              "node": "Adaptation",
+              "node_id": "adaptation"
+            },
+            {
+              "domain": "Tools & Manufacturing",
+              "node": "Prototyping",
+              "node_id": "prototyping"
+            },
+            {
+              "domain": "Environment & Circular Economy",
+              "node": "Treatment & Processing",
+              "node_id": "treatment_processing"
+            },
+            {
+              "domain": "Transportation & Mobility",
+              "node": "Vehicle Adaptation",
+              "node_id": "vehicle_adaptation"
+            },
+            {
+              "domain": "Finance & Social Innovation",
+              "node": "Local Organization",
+              "node_id": "local_organization"
+            }
+          ],
+          "status": "Evidence-informed opportunity; not a policy decision."
+        },
+        {
+          "option_id": "PO-02",
+          "instrument": "research",
+          "option": "Plastic-Sand Composite Durability",
+          "rationale": "Lack of data on long-term UV degradation and toxic off-gassing for upcycled roofing tiles.",
+          "priority_level": "medium",
+          "linked_evidence": [
+            "Lack of data on long-term UV degradation and toxic off-gassing for upcycled roofing tiles."
+          ],
+          "linked_pathways": [
+            {
+              "domain": "Construction & Shelter",
+              "node": "Construction",
+              "node_id": "construction"
+            }
+          ],
+          "status": "Evidence-informed opportunity; not a policy decision."
+        },
+        {
+          "option_id": "PO-03",
+          "instrument": "training",
+          "option": "E-waste Upcycling Safety",
+          "rationale": "Innovators are handling lead, mercury, and cadmium without adequate respiratory or dermal protection.",
+          "priority_level": "high",
+          "linked_evidence": [
+            "Innovators are handling lead, mercury, and cadmium without adequate respiratory or dermal protection."
+          ],
+          "linked_pathways": [
+            {
+              "domain": "Environment & Circular Economy",
+              "node": "Treatment & Processing",
+              "node_id": "treatment_processing"
+            },
+            {
+              "domain": "Environment & Circular Economy",
+              "node": "Reuse & Circularity",
+              "node_id": "reuse_circularity"
+            },
+            {
+              "domain": "Urban & Community Systems",
+              "node": "Local Mobility",
+              "node_id": "local_mobility"
+            }
+          ],
+          "status": "Evidence-informed opportunity; not a policy decision."
+        }
+      ],
+      "implementation": [
+        {
+          "option_id": "PO-01",
+          "action": "Deploy standardized safety kits (pressure valves/flame arrestors) for grassroots biogas adopters.",
+          "lead_stakeholders": [
+            "Coastal communities & marine practitioners",
+            "Communities & local organizations",
+            "Conservation actors & site managers",
+            "Cooperatives & producer organizations",
+            "Cultural institutions & custodians",
+            "Cultural practitioners & custodians"
+          ],
+          "dependencies": [
+            "local contextual validation",
+            "risk and feasibility assessment",
+            "implementation partner"
+          ],
+          "time_horizon": "medium",
+          "success_indicators": [
+            "documented implementation evidence",
+            "validated safeguards or controls",
+            "user/practitioner feedback"
+          ]
+        },
+        {
+          "option_id": "PO-02",
+          "action": "Establish a global certification standard for upcycled plastic construction materials to ensure fire safety.",
+          "lead_stakeholders": [
+            "Coastal communities & marine practitioners",
+            "Communities & local organizations",
+            "Conservation actors & site managers",
+            "Cooperatives & producer organizations",
+            "Cultural institutions & custodians",
+            "Cultural practitioners & custodians"
+          ],
+          "dependencies": [
+            "local contextual validation",
+            "risk and feasibility assessment",
+            "implementation partner"
+          ],
+          "time_horizon": "medium",
+          "success_indicators": [
+            "documented implementation evidence",
+            "validated safeguards or controls",
+            "user/practitioner feedback"
+          ]
+        },
+        {
+          "option_id": "PO-03",
+          "action": "Incentivize the integration of informal waste pickers into formal digital payment and insurance networks.",
+          "lead_stakeholders": [
+            "Coastal communities & marine practitioners",
+            "Communities & local organizations",
+            "Conservation actors & site managers",
+            "Cooperatives & producer organizations",
+            "Cultural institutions & custodians",
+            "Cultural practitioners & custodians"
+          ],
+          "dependencies": [
+            "local contextual validation",
+            "risk and feasibility assessment",
+            "implementation partner"
+          ],
+          "time_horizon": "medium",
+          "success_indicators": [
+            "documented implementation evidence",
+            "validated safeguards or controls",
+            "user/practitioner feedback"
+          ]
+        },
+        {
+          "option_id": "REC-04",
+          "action": "Promote the 'Cool Burning' fire management model to global climate agencies as a wildfire mitigation strategy.",
+          "lead_stakeholders": [
+            "Coastal communities & marine practitioners",
+            "Communities & local organizations",
+            "Conservation actors & site managers",
+            "Cooperatives & producer organizations",
+            "Cultural institutions & custodians",
+            "Cultural practitioners & custodians"
+          ],
+          "dependencies": [
+            "local contextual validation",
+            "risk and feasibility assessment",
+            "implementation partner"
+          ],
+          "time_horizon": "medium",
+          "success_indicators": [
+            "documented implementation evidence",
+            "validated safeguards or controls",
+            "user/practitioner feedback"
+          ]
+        },
+        {
+          "option_id": "REC-05",
+          "action": "Scale 'First-Flush' filtration training for DIY rainwater harvesters to reduce waterborne disease risks.",
+          "lead_stakeholders": [
+            "Coastal communities & marine practitioners",
+            "Communities & local organizations",
+            "Conservation actors & site managers",
+            "Cooperatives & producer organizations",
+            "Cultural institutions & custodians",
+            "Cultural practitioners & custodians"
+          ],
+          "dependencies": [
+            "local contextual validation",
+            "risk and feasibility assessment",
+            "implementation partner"
+          ],
+          "time_horizon": "medium",
+          "success_indicators": [
+            "documented implementation evidence",
+            "validated safeguards or controls",
+            "user/practitioner feedback"
+          ]
+        }
+      ],
+      "feedback": [
+        {
+          "indicator": "New or changed evidence mapped to a pathway node",
+          "source": "GSI-Radar observation layer",
+          "trigger": "new exact match or high-confidence inferred match",
+          "response": "review pathway coverage and policy relevance"
+        },
+        {
+          "indicator": "Implementation result or safety evidence",
+          "source": "future implementation monitoring / linked evidence",
+          "trigger": "pilot outcome, risk event or documented field result",
+          "response": "update policy option, implementation guidance and pathway maturity"
+        },
+        {
+          "indicator": "Persistent evidence gap",
+          "source": "pathway coverage analysis",
+          "trigger": "node remains unobserved across reporting cycles",
+          "response": "consider targeted scanning, research or stakeholder outreach"
+        }
+      ]
+    }
+  }
 ]
