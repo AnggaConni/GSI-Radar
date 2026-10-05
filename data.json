@@ -51216,5 +51216,567 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "8c94032598e60cc7a1d1c77561d3b6c6",
+        "timestamp": "2026-10-05T03:41:20.658021",
+        "title": "SWaCH (Solid Waste Collection and Handling) Cooperative",
+        "sources": [
+            "https://swachcoop.com/",
+            "https://www.wiego.org/resources/swach-pune-india-case-study",
+            "https://doughnuteconomics.org/case-studies/swach-pune"
+        ],
+        "summary": "A worker-owned cooperative of over 3,500 waste pickers in Pune that operates a decentralized waste management system through a public-private partnership, focusing on doorstep collection and in-situ composting.",
+        "category": [
+            "Waste Management",
+            "Social Enterprise",
+            "Circular Economy"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "India",
+            "region": "Pune, Maharashtra",
+            "lat": 18.5213738,
+            "lon": 73.8545071
+        },
+        "process": {
+            "how_it_works": "The model uses a decentralized approach where waste pickers collect segregated waste directly from households. Organic waste is processed on-site or at neighborhood composting units, while recyclables are diverted from landfills.",
+            "materials_used": [
+                "Segregated household waste",
+                "In-situ composting units",
+                "Collection vehicles/pushcarts"
+            ],
+            "step_by_step": [
+                "Waste pickers collect segregated waste directly from residential doorsteps",
+                "Organic waste is separated and processed in decentralized composting units within complexes or neighborhoods",
+                "Recyclable materials are sorted and sold by pickers to supplement their income",
+                "Non-recyclable residual waste is handed over to the municipal collection system"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides formal livelihoods for marginalized waste pickers, reduces municipal waste management costs, and prevents organic waste from reaching landfills.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Biological",
+                "Occupational safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The SWaCH model is a social and logistical innovation rather than a high-risk chemical or energy experiment. While waste handling involves inherent biological hazards and potential exposure to sharp objects, these are managed through formalization and the use of safety gear. Decentralized composting significantly reduces the environmental and fire risks associated with large-scale methane accumulation in centralized landfills."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "social_enterprise",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "collection",
+                "match": "heuristic",
+                "confidence": 0.76,
+                "evidence": [
+                    "narrative",
+                    "process",
+                    "title"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "soil_management",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "sorting_recovery",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "collective_action",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_resilience",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "income_generation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "local_organization",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "urban_services",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "2d5bf7619305bf047f5d4d9707a0ecd0",
+        "timestamp": "2026-10-05T03:41:37.903719",
+        "title": "TakaTaka Solutions Waste Management Model",
+        "sources": [
+            "https://takatakasolutions.com/",
+            "https://unfccc.int/climate-action/momentum-for-change/lighthouse-activities/takataka-waste-management-and-composting",
+            "https://www.takatakasolutions.com/"
+        ],
+        "summary": "A social enterprise model in Nairobi's informal settlements that employs local youth to collect and sort waste, converting organic waste into compost to reduce pollution and create jobs.",
+        "category": [
+            "Waste Management",
+            "Social Enterprise",
+            "Circular Economy",
+            "Urban Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "Nairobi",
+            "lat": -1.2890006,
+            "lon": 36.8172812
+        },
+        "process": {
+            "how_it_works": "Disadvantaged youth collect waste from low-income households for a minimal fee; the waste is then sorted at local facilities where organic components are processed into high-quality compost.",
+            "materials_used": [
+                "Organic waste",
+                "Waste collection tools",
+                "Sorting equipment",
+                "Composting facilities"
+            ],
+            "step_by_step": [
+                "Employment of disadvantaged youth from local informal settlements.",
+                "Collection of waste from over 1,500 low-income households.",
+                "Transportation of waste to local sorting facilities.",
+                "Manual sorting of waste to isolate the organic fraction (approx. 60%).",
+                "Conversion of organic waste into high-quality compost through controlled decomposition."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Absence of municipal waste collection in slums, environmental pollution from open burning, methane emissions, and high youth unemployment.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the initiative has high social value, waste management in informal settlements involves significant risks. Hazards include exposure to pathogens and hazardous household chemicals during sorting, potential methane buildup during composting which poses fire and explosion risks, and environmental contamination from leachate if not properly contained. Workers require consistent access to PPE and safety training."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "social_enterprise",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "soil_management",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "collection",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "income_generation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "microenterprise",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "productive_assets",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "referral_logistics",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "sorting_recovery",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "urban_services",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "099c6f92b7fb039d06824b7ed9c5522b",
+        "timestamp": "2026-10-05T03:41:54.878754",
+        "title": "Mother Earth Foundation's Ten-Step Zero-Waste Program",
+        "sources": [
+            "https://www.motherearthphil.org/",
+            "https://www.breakfreefromplastic.org/2020/10/20/juanazero-malabon-branch/",
+            "https://motherearthphil.org/",
+            "https://www.gaia.org/resource/zero-waste-cities-philippines/",
+            "https://www.no-burn.org/zero-waste-in-potrero-philippines/",
+            "https://www.zerowasteworld.org/"
+        ],
+        "summary": "A decentralized community-led waste management system in Metro Manila that transforms neighborhoods into zero-waste zones through source segregation, local Material Recovery Facilities (MRFs), and the professionalization of waste workers into environmental technicians.",
+        "category": [
+            "Waste Management",
+            "Sustainability",
+            "Circular Economy",
+            "Social Empowerment"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Philippines",
+            "region": "Metro Manila",
+            "lat": 14.5736108,
+            "lon": 121.0329706
+        },
+        "process": {
+            "how_it_works": "The system utilizes a decentralized approach where waste is segregated at the source (households) and processed at neighborhood-level Material Recovery Facilities (MRFs) to produce organic fertilizer and manage recyclables locally.",
+            "materials_used": [
+                "Kitchen scraps",
+                "Garden waste",
+                "Composting bins",
+                "Organic fertilizer",
+                "Segregated waste bins"
+            ],
+            "step_by_step": [
+                "Conducting community baseline surveys and orientations",
+                "Establishing a Material Recovery Facility (MRF) at the Barangay level",
+                "Implementing strict source segregation of waste in households",
+                "Hiring and training local waste workers as 'environmental technicians'",
+                "Daily collection of segregated organic and recyclable waste",
+                "Processing organic waste into compost/fertilizer at the MRF",
+                "Selling organic fertilizer to generate income for workers and sustain the facility"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Inefficient urban waste disposal, high landfill dependency, and poor working conditions/lack of formal income for informal waste pickers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The program is a low-risk social and environmental innovation. The primary hazards are biological (pathogens from food waste) and environmental (potential leachate), but these are managed through formal training, source segregation, and decentralized Material Recovery Facilities. Transforming informal waste picking into a structured 'environmental technician' role inherently improves safety and reduces the hazards compared to traditional landfill scavenging."
+        },
+        "priority_score": 42,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "climate_adaptation_disaster_resilience",
+                "node_id": "recovery_resilience",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "rehabilitation_support",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "sorting_recovery",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "collection",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "food_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "local_material_inputs",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "local_materials",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "productive_energy_use",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "soil_management",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "education_communication",
+                "node_id": "teaching_support",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "urban_services",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
