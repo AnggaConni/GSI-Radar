@@ -51778,5 +51778,378 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "4d54bb7a1d62ecaf4ecfb14fdb5f585e",
+        "timestamp": "2026-10-07T03:55:32.375719",
+        "title": "Sahas Chitlange's Low-Cost Mini Biogas Plant",
+        "sources": [
+            "https://www.instructables.com/Biogas-at-Home-Cheap-and-Easy/",
+            "https://www.youtube.com/watch?v=R6u_D26W_9E"
+        ],
+        "summary": "A 14-year-old innovator from India developed an affordable, small-scale biogas plant using recycled plastic containers to convert cow dung into methane gas for cooking and organic fertilizer.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "DIY Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "",
+            "lat": 22.3511148,
+            "lon": 78.6677428
+        },
+        "process": {
+            "how_it_works": "The system uses anaerobic digestion to break down organic waste in an oxygen-free environment, producing methane gas that is captured in a floating gas holder for household use.",
+            "materials_used": [
+                "50-liter plastic tank",
+                "20-liter paint bucket",
+                "Cow dung",
+                "Water",
+                "Scrap materials",
+                "Gas tubing"
+            ],
+            "step_by_step": [
+                "Mix 5kg of cow dung with water to create a slurry.",
+                "Pour the slurry into the 50-liter plastic tank, which serves as the primary digester.",
+                "Invert a 20-liter paint bucket and place it inside the tank to act as a floating gas holder.",
+                "Allow the anaerobic digestion process to occur, generating methane gas.",
+                "The gas collects in the floating bucket, causing it to rise.",
+                "Connect the gas holder to a burner via tubing to use the gas for cooking."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a clean, extremely low-cost energy source for cooking while managing organic waste and producing fertilizer.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Fire hazard",
+                "Explosion",
+                "Toxic",
+                "Environment"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The innovation involves the production and storage of methane, which is highly flammable and explosive. Using scrap materials and plastic buckets for a DIY gas holder lacks critical safety features such as pressure relief valves, flame arrestors, and professional-grade seals. Furthermore, anaerobic digestion produces hydrogen sulfide, which is toxic, and any methane leakage poses an environmental risk as a potent greenhouse gas."
+        },
+        "priority_score": 56,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_generation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_resources",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "productive_energy_use",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "3b91e1d5eadad407a22485bb59f66869",
+        "timestamp": "2026-10-07T03:55:54.890821",
+        "title": "Underground Biogas Digester for Rural Households",
+        "sources": [
+            "https://gulfnews.com/world/asia/india/indias-cow-dung-biogas-eases-lpg-shortage-amid-middle-east-energy-crisis-1.1714545582352",
+            "https://www.bbc.com/news/world-asia-india-63028385"
+        ],
+        "summary": "Gauri Devi from Nekpur village uses an underground biogas digester to convert cow dung and water into methane gas for cooking, offering a sustainable and cheaper alternative to LPG cylinders while producing organic fertilizer.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Rural Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Uttar Pradesh",
+            "lat": 27.1303344,
+            "lon": 80.859666
+        },
+        "process": {
+            "how_it_works": "The system utilizes anaerobic digestion where organic waste decomposes in an airtight underground tank to release methane gas, which is then captured and piped for use.",
+            "materials_used": [
+                "Cow dung",
+                "Water",
+                "Underground digester tank",
+                "Gas storage balloon",
+                "Piping system"
+            ],
+            "step_by_step": [
+                "Collect cow dung from livestock",
+                "Mix the cow dung with water in buckets to create a slurry",
+                "Feed the mixture into the underground digester tank",
+                "Allow the organic matter to decompose and release methane gas",
+                "Capture the gas in a storage balloon located on top of the system",
+                "Pipe the stored gas directly to the kitchen stove for cooking"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of LPG cylinders and lack of reliable energy for cooking in rural areas.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 5,
+            "risk_type": [
+                "Fire hazard",
+                "Explosion",
+                "Toxic",
+                "Environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The biogas digester produces and stores methane, which is highly flammable and poses an explosion risk if leaks occur in confined spaces. Additionally, biogas contains trace amounts of hydrogen sulfide, which is toxic. While the system is a standard decentralized energy solution, the use of a storage balloon requires careful maintenance to prevent punctures and leaks. Environmental risks include methane leakage, a potent greenhouse gas, if the system is not airtight."
+        },
+        "priority_score": 38,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_generation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_resources",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "productive_energy_use",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "1e3773ab63d5e9d281570a10ccb04769",
+        "timestamp": "2026-10-07T03:56:13.640658",
+        "title": "DIY Biogas Digester in Barichara",
+        "sources": [
+            "https://medium.com/@cathyholt/kitchen-waste-biogas-digesters-29497e64467c"
+        ],
+        "summary": "A community-led project in Barichara, Colombia, that utilizes low-cost plastic drums to create an anaerobic digestion system. It converts kitchen scraps and organic waste into clean cooking fuel and nutrient-rich liquid fertilizer, reducing methane emissions and reliance on chemical inputs.",
+        "category": [
+            "Renewable Energy",
+            "Waste Management",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Colombia",
+            "region": "Barichara",
+            "lat": 6.6357156,
+            "lon": -73.2234417
+        },
+        "process": {
+            "how_it_works": "The system uses anaerobic fermentation where methanogenic bacteria break down organic matter in an oxygen-free environment to produce methane gas.",
+            "materials_used": [
+                "Plastic drums",
+                "Improvised seals",
+                "Cow manure (starter)",
+                "Kitchen scraps",
+                "Organic waste"
+            ],
+            "step_by_step": [
+                "Assemble plastic drums with improvised seals to ensure an anaerobic environment.",
+                "Prime the system with a 10% cow manure starter to introduce essential methanogenic bacteria.",
+                "Feed the system with organic waste and kitchen scraps.",
+                "Capture the resulting biogas for cooking fuel.",
+                "Collect the liquid effluent for use as fertilizer."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces atmospheric methane release from traditional composting, provides free cooking fuel, and replaces expensive chemical fertilizers.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 8,
+            "risk_type": [
+                "fire",
+                "explosion",
+                "toxic",
+                "pathogen"
+            ],
+            "safety_level": "low",
+            "needs_intervention": true,
+            "explanation": "The use of improvised seals and plastic drums to contain methane gas presents a high risk of leaks and explosions. Biogas is highly flammable and contains toxic hydrogen sulfide. Grassroots DIY systems often lack critical safety components like pressure relief valves, flame arrestors, and professional leak testing, making them hazardous in residential settings."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": true,
+        "pathway_matches": [
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "food_processing",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_generation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_resources",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "productive_energy_use",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "prototyping",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "soil_management",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
