@@ -52151,5 +52151,522 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "8237884c2f551e8b1d65046c693614ee",
+        "timestamp": "2026-10-09T04:14:01.095371",
+        "title": "KOLEKT App",
+        "sources": [
+            "https://bvrio.org",
+            "https://www.bvrio.org/news/10-million-kgs-of-waste-traded-through-innovative-app-helping-informal-waste-pickers-in-developing-countries",
+            "https://www.circularaction.com",
+            "https://circularaction.com/kolekt"
+        ],
+        "summary": "A digital marketplace and tracking tool designed for informal waste pickers in developing nations to facilitate the transparent trade of recyclable materials and ensure fair pricing, even for users without smartphones.",
+        "category": [
+            "Waste Management",
+            "Digital Inclusion",
+            "Circular Economy"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Brazil, Mozambique, Vietnam",
+            "region": "Global South",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The app connects waste pickers directly with generators and buyers. It uses a unique 'offline' inclusion model where intermediaries can log transaction data for pickers who do not own smartphones, ensuring they are still part of the traceable supply chain.",
+            "materials_used": [
+                "Mobile application software",
+                "Cloud-based database",
+                "Smartphones"
+            ],
+            "step_by_step": [
+                "Waste pickers collect recyclable materials from generators.",
+                "Transactions are initiated between the picker and a buyer or recycling center.",
+                "The transaction details, including weight and material type, are logged into the KOLEKT app.",
+                "If the picker lacks a smartphone, an intermediary logs the data on their behalf to maintain the record.",
+                "The app verifies the transaction, providing a traceable record and ensuring the picker receives fair market value."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Addresses unfair pricing, lack of transparency, and digital exclusion for informal waste workers while improving waste traceability.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The KOLEKT app is a digital logistics and financial tool designed for supply chain traceability and economic inclusion. It does not involve any chemical processes, energy generation, or hazardous material handling. While waste picking involves physical labor, the innovation itself is a software solution that poses no fire, explosion, or toxic risks."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "collection",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_resilience",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_generation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "logistics",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "peace_community_resilience",
+                "node_id": "social_cohesion",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "sorting_recovery",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "governance_public_services",
+                "node_id": "accountability",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "digital_tools",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "local_mobility",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "849885b6d7fdff6560f7ad860ee0891a",
+        "timestamp": "2026-10-09T04:14:18.027623",
+        "title": "Recycling Reclaimer Trolley",
+        "sources": [
+            "https://shonaquip.co.za/",
+            "https://www.groundup.org.za/article/cape-town-waste-pickers-get-new-trolleys/",
+            "https://shonaquipse.org.za/empowering-informal-waste-pickers-a-sustainable-solution/",
+            "https://www.engineeringnews.co.za/article/new-innovative-trolleys-introduced-for-waste-pickers-in-bellville-2025-01-24"
+        ],
+        "summary": "A purpose-built, ergonomic transport tool designed by the social enterprise Shonaquip to replace stolen retail shopping carts used by informal waste pickers. The trolley is engineered to reduce physical strain, improve safety on urban roads, and professionalize the work of reclaimers to reduce social stigma.",
+        "category": [
+            "Waste Management",
+            "Social Innovation",
+            "Ergonomics",
+            "Urban Logistics"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "South Africa",
+            "region": "Urban centers",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The trolley utilizes ergonomic design principles to shift the center of gravity of heavy loads, making it easier to push or pull over long distances and uneven pavements compared to standard retail carts.",
+            "materials_used": [
+                "Steel tubing",
+                "Heavy-duty industrial wheels",
+                "Ergonomic handles",
+                "Reflective tape",
+                "Braking system"
+            ],
+            "step_by_step": [
+                "Assess the physical requirements and load weights of informal waste pickers",
+                "Design a frame that balances high-volume capacity with maneuverability",
+                "Incorporate safety features such as reflectors and improved braking for urban traffic",
+                "Manufacture the units using durable materials capable of withstanding heavy daily use",
+                "Distribute to reclaimers through social enterprise programs to replace improvised equipment"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces long-term musculoskeletal injuries, decreases the risk of traffic accidents, and mitigates the criminalization of waste pickers who previously relied on stolen shopping carts.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "physical safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Recycling Reclaimer Trolley is an ergonomic mechanical tool designed to mitigate existing hazards faced by waste pickers. While transporting heavy loads in urban traffic environments presents minor physical risks, the innovation itself is a safety improvement over improvised equipment and does not involve hazardous chemicals or high-energy systems."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "collection",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "education_communication",
+                "node_id": "learning_outcomes",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "local_mobility",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "microenterprise",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_tools",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "productive_assets",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "referral_logistics",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "social_enterprise",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "sorting_recovery",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "d106c24bada82e3a075c6dc5676ff334",
+        "timestamp": "2026-10-09T04:14:43.977761",
+        "title": "Ashaya Chemo-Mechanical MLP Upcycling",
+        "sources": [
+            "https://hmfoundation.com/2022/07/01/5-innovations-that-enable-social-inclusion-while-turning-waste-into-value/",
+            "https://www.ashaya.in/"
+        ],
+        "summary": "Ashaya is a social enterprise that has developed a specialized chemo-mechanical process to upcycle multi-layered plastic (MLP) packaging—traditionally deemed unrecyclable—into high-quality materials for premium products, while empowering informal waste pickers through decentralized mini-factories.",
+        "category": [
+            "Waste Management",
+            "Circular Economy",
+            "Social Innovation",
+            "Sustainable Materials"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "India",
+            "region": "Pune",
+            "lat": 18.5213738,
+            "lon": 73.8545071
+        },
+        "process": {
+            "how_it_works": "A proprietary chemo-mechanical process breaks down complex multi-layered plastics into high-quality raw materials that can be molded into premium consumer goods.",
+            "materials_used": [
+                "Multi-layered plastic (MLP) waste",
+                "Chemical reagents",
+                "Water"
+            ],
+            "step_by_step": [
+                "Collection of MLP waste by informal waste pickers",
+                "Washing and cleaning of the waste",
+                "Drying and shredding the plastic",
+                "Chemical treatment to process the multi-layered components",
+                "Transformation into high-quality materials",
+                "Manufacturing of final products like sunglasses"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a recycling solution for multi-layered plastics (MLP) that are typically non-recyclable, while formalizing and upskilling the informal waste picker sector.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "fire hazard",
+                "toxic",
+                "chemical exposure"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The 'chemo-mechanical' process involves the use of chemical solvents to separate bonded layers of multi-layered plastics (MLP), which can release toxic fumes and present fire hazards. Decentralizing this process into 'mini-factories' operated by formerly informal waste pickers requires rigorous safety protocols, industrial-grade ventilation, and personal protective equipment to prevent long-term health issues and accidental chemical exposure."
+        },
+        "priority_score": 62,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "care_delivery",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "collection",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "harvest_postharvest",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "local_mobility",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "microenterprise",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "social_enterprise",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "sorting_recovery",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "water_management",
+                "node_id": "water_sanitation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
