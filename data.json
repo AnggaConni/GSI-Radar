@@ -52668,5 +52668,337 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "b373942254b4ddb488e55c61aef28a4d",
+        "timestamp": "2026-10-12T03:57:46.669168",
+        "title": "Pedal-operated pulse thresher",
+        "sources": [
+            "https://nif.org.in/innovation/pedal-operated-pulse-thresher/100",
+            "https://nif.org.in/innovation/pedal-operated-pulse-thresher/1004",
+            "https://nif.org.in/innovation/pedal-operated-pulse-thresher/438"
+        ],
+        "summary": "A human-powered threshing machine developed by Santosh Saha to automate the separation and cleaning of pulses like green gram and black gram, specifically designed for small-scale farmers without access to electricity or expensive machinery.",
+        "category": [
+            "Agriculture",
+            "Post-harvest Technology",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "Bargarh, Odisha",
+            "lat": 21.2319922,
+            "lon": 83.5652737
+        },
+        "process": {
+            "how_it_works": "The machine uses a pedal-driven mechanism where human power rotates a threshing drum and a sieving unit. As the operator pedals, the drum separates the seeds from the pods while the sieving unit filters out impurities.",
+            "materials_used": [
+                "Metal frame",
+                "Pedal unit",
+                "Threshing drum",
+                "Sieving unit",
+                "Chains and sprockets",
+                "Bearings"
+            ],
+            "step_by_step": [
+                "The operator sits on the machine and begins pedaling to initiate the rotation.",
+                "Harvested pulse crops are fed into the rotating threshing drum.",
+                "The mechanical action of the drum breaks the pods to release the seeds.",
+                "The seeds and husks fall onto the integrated sieving unit.",
+                "The sieving unit vibrates or rotates to separate the clean seeds from the dust and pod fragments."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces the high labor intensity, time, and physical drudgery associated with manual pulse separation for small-scale farmers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Mechanical Safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The pedal-operated pulse thresher is a human-powered mechanical device. It poses minimal risk as it lacks combustible fuels, high-voltage electricity, or toxic chemicals. Potential risks are limited to mechanical hazards such as entanglement in moving parts (chains or the threshing drum) and dust inhalation during the cleaning process, which can be managed with basic safety precautions."
+        },
+        "priority_score": 42,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "water_management",
+                "node_id": "water_purification",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "harvest_postharvest",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "c7b22495522de214fa92d887360a73e0",
+        "timestamp": "2026-10-12T03:58:03.815778",
+        "title": "Hand-operated Sorghum Thresher",
+        "sources": [
+            "https://www.haramaya.edu.et/",
+            "https://www.ajol.info/index.php/ejst/article/view/178841",
+            "https://www.researchgate.net/publication/328221832_Development_of_Hand_Operated_Sorghum_Thresher"
+        ],
+        "summary": "A manual sorghum thresher developed by Haramaya University researchers and local farmers in Ethiopia. The device uses a hand-cranked drum and concave system to thresh grain, providing an electricity-free solution for smallholders to reduce post-harvest losses and improve grain quality.",
+        "category": [
+            "Agriculture",
+            "Mechanical Engineering",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Ethiopia",
+            "region": "East Hararghe",
+            "lat": 9.5921731,
+            "lon": 41.8634795
+        },
+        "process": {
+            "how_it_works": "A manual cranking handle is used to rotate a threshing drum against a concave system, which mechanically separates the sorghum grain from the heads without the need for fuel or electricity.",
+            "materials_used": [
+                "Manual cranking handle",
+                "Threshing drum",
+                "Concave system",
+                "Metal frame"
+            ],
+            "step_by_step": [
+                "Harvest the sorghum crops from the field",
+                "Feed the sorghum heads into the machine's intake",
+                "Manually turn the cranking handle to rotate the internal drum",
+                "The drum and concave system thresh the grain through mechanical friction",
+                "Collect the separated grain and remove the residual stalks"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High post-harvest losses, lack of access to electricity/fuel, and unavailability of affordable mechanized processing in remote areas.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Mechanical",
+                "Respiratory"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a manual mechanical device with no fuel or electrical components, making it inherently safe from fire or explosion risks. The primary hazards are mechanical injury from moving parts (fingers getting caught in the drum) and respiratory irritation from sorghum dust and chaff. These can be managed with basic safety precautions and simple personal protective equipment."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "cultivation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "food_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "harvest_postharvest",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "productive_energy_use",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "529de13861f50dc9b66672fae503bc67",
+        "timestamp": "2026-10-12T03:58:26.736879",
+        "title": "Bridgewater InvenTeam Pedal-Powered Thresher",
+        "sources": [
+            "https://lemelson.mit.edu/inventeams/bridgewater-raritan-high-school",
+            "https://lemelson.mit.edu/teams/bridgewater-raritan-high-school",
+            "https://www.youtube.com/watch?v=YplwdysJFCg"
+        ],
+        "summary": "A pedal-powered threshing machine developed by high school students to assist small-scale farmers in developing nations by providing a faster, more efficient alternative to manual threshing using locally sourced materials and human leg power.",
+        "category": [
+            "Agriculture",
+            "Sustainable Technology",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "USA",
+            "region": "New Jersey",
+            "lat": 40.0757384,
+            "lon": -74.4041622
+        },
+        "process": {
+            "how_it_works": "The device utilizes a bicycle-style pedal mechanism to drive a rotating threshing drum. By using leg power, which is more efficient than arm power, the operator can rotate the drum at speeds necessary to separate grain from stalks.",
+            "materials_used": [
+                "Bicycle components",
+                "Threshing drum",
+                "Metal frame",
+                "Locally available materials"
+            ],
+            "step_by_step": [
+                "Construct a stable frame using locally available metal or wood.",
+                "Integrate a bicycle-like pedal and chain drive mechanism into the frame.",
+                "Connect the drive system to a cylindrical threshing drum.",
+                "Calibrate the drum distance and rotation speed for specific grains like wheat, rice, or barley.",
+                "The operator pedals the machine while grain is fed into the rotating drum to separate the seeds."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Increases agricultural productivity for small-scale farmers who cannot afford motorized mechanization but find manual threshing too slow and labor-intensive.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Mechanical"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risks are mechanical in nature, involving moving parts such as the bicycle chain and the rotating threshing drum, which pose a risk of entanglement or injury. Additionally, the threshing process generates organic dust that could be a respiratory irritant. However, the device lacks high-energy fuel sources or hazardous chemicals, making it relatively safe for its intended use."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "harvest_postharvest",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
