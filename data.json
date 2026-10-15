@@ -53000,5 +53000,436 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "5709468ca150b66de4156c18f3f597b9",
+        "timestamp": "2026-10-15T02:52:56.403739",
+        "title": "Tiny Shiny Home Earthbag Village",
+        "sources": [
+            "https://tinyshinyhome.com",
+            "https://www.youtube.com/watch?v=z3h5tXBrzq8",
+            "https://tinyshinyhome.com/hyperadobe-safety-101",
+            "https://faircompanies.com/videos/5-years-building-private-village-out-of-free-dirt-for-family-of-6/"
+        ],
+        "summary": "A family of six is constructing a self-sufficient, off-grid village on 11 acres of Arizona desert using hyperadobe and superadobe earthbag techniques to create affordable and sustainable housing.",
+        "category": [
+            "Sustainable Architecture",
+            "Off-grid Living",
+            "Permaculture",
+            "Earthbag Construction"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Cochise County, Arizona",
+            "lat": 31.8514532,
+            "lon": -109.8181858
+        },
+        "process": {
+            "how_it_works": "The project utilizes hyperadobe and superadobe methods which involve filling mesh bags with locally sourced earth and stacking them to create durable, thermally efficient structures.",
+            "materials_used": [
+                "Mesh bags",
+                "Local earth",
+                "Solar panels",
+                "Water catchment systems",
+                "Permaculture infrastructure"
+            ],
+            "step_by_step": [
+                "Site preparation and excavation on raw desert land",
+                "Filling mesh bags with local soil and tamping them down",
+                "Stacking bags in circular or structural patterns to form walls",
+                "Integrating off-grid utilities including solar power and water collection",
+                "Finishing structures with protective plaster or adobe coatings"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High costs of traditional housing and environmental impact of conventional construction materials.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "self-taught"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Structural",
+                "Fire",
+                "Safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The project uses hyperadobe, which is inherently fire-resistant and low-toxicity. However, the massive 5,000-square-foot scale of the DIY structural build poses potential risks for structural integrity and collapse if not properly engineered. Additionally, off-grid solar power systems involve battery storage, which presents a fire and chemical hazard if improperly installed or maintained in a desert environment."
+        },
+        "priority_score": 50,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "construction",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_conversion",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "collection",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_distribution",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_generation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_resources",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "habitable_shelter",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "local_materials",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "water_management",
+                "node_id": "water_harvesting",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "water_management",
+                "node_id": "water_protection",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "a0bfdd3944918ea2e544e8f5eb6dad77",
+        "timestamp": "2026-10-15T02:53:16.193532",
+        "title": "Mulabari Earthbag Housing Project",
+        "sources": [
+            "https://www.goodearthglobal.org/completed-projects",
+            "https://www.goodearthglobal.org/",
+            "https://www.naturalbuildingblog.com/30-earthquake-resistant-earthbag-houses-in-mulabari-nepal/",
+            "https://www.earthbagbuilding.com/"
+        ],
+        "summary": "A community-led reconstruction initiative in Mulabari, Nepal, that built 30 earthquake-resistant homes using earthbag technology following the 2015 disaster. The project utilized a 'self-build' model where families worked in groups to provide labor and gain technical construction skills.",
+        "category": [
+            "Sustainable Construction",
+            "Disaster Recovery",
+            "Community Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nepal",
+            "region": "Mulabari",
+            "lat": 27.9594287,
+            "lon": 82.6247909
+        },
+        "process": {
+            "how_it_works": "The system uses bags filled with local soil, stacked in layers and tamped down to create solid, load-bearing walls. Barbed wire is placed between layers to provide tensile strength and prevent shifting, while earthbag buttresses provide lateral stability against seismic forces.",
+            "materials_used": [
+                "Polypropylene bags",
+                "Local earth/soil",
+                "Barbed wire",
+                "Stone for foundations",
+                "Timber for porches"
+            ],
+            "step_by_step": [
+                "Families are organized into groups of ten to share labor.",
+                "Foundations are dug and filled with stone to prevent moisture wicking.",
+                "Bags are filled with local soil and laid in courses.",
+                "Barbed wire is placed between courses for structural reinforcement.",
+                "Earthbag buttresses are integrated into the walls for earthquake resistance.",
+                "Traditional architectural elements like wrap-around porches are added.",
+                "Walls are plastered with mud or lime to protect the bags from UV light."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable, earthquake-resistant housing and loss of technical building capacity in rural mountain villages.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "structural"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Earthbag construction is a well-established, low-risk building method that utilizes non-combustible, non-toxic, and locally sourced materials. The primary risk is structural integrity, which was addressed through technical training and the inclusion of buttresses for earthquake resistance. It does not involve hazardous chemicals or high-energy processes."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "construction",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "local_materials",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "habitable_shelter",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "education_communication",
+                "node_id": "learning_outcomes",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "climate_adaptation_disaster_resilience",
+                "node_id": "recovery_resilience",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "resilience_safety",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "d7dba942ef5a67b1eebd0bde1cbe89fb",
+        "timestamp": "2026-10-15T02:53:38.472389",
+        "title": "Al-Jawasreh Community Center",
+        "sources": [
+            "https://www.archdaily.com/229640/community-center-for-al-jawasreh-village-kikuma-watanabe",
+            "https://www.archdaily.com/488059/al-jawasreh-community-center-kikuma-watanabe",
+            "http://www.earthbagbuilding.com/projects/jordan.htm",
+            "http://www.kikuma-watanabe.com/works/al-jawasreh-community-center/"
+        ],
+        "summary": "A public facility in Jordan constructed through a hybrid of traditional stone masonry and earthbag technology, designed to be self-built by the local community to provide a thermally efficient vocational and educational hub.",
+        "category": [
+            "Sustainable Architecture",
+            "Earth Construction",
+            "Community Development"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Jordan",
+            "region": "Al-Jawasreh, near the Dead Sea",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The building utilizes earthbag construction, where local soil is packed into bags to create thick, load-bearing walls with high thermal mass. This is combined with traditional stone masonry to provide structural stability and aesthetic integration, naturally cooling the interior in desert heat.",
+            "materials_used": [
+                "Local soil",
+                "Polypropylene bags",
+                "Traditional stone",
+                "Barbed wire",
+                "Plaster",
+                "Cement"
+            ],
+            "step_by_step": [
+                "Excavate the site and lay a foundation suitable for heavy wall loads",
+                "Fill polypropylene bags with local soil and tamp them until compacted",
+                "Lay the earthbags in staggered courses to form the walls",
+                "Place strands of barbed wire between courses to act as mortar and prevent bag slippage",
+                "Integrate traditional stone masonry for specific structural elements and facade work",
+                "Apply a protective plaster coating over the earthbags to prevent UV damage and erosion",
+                "Install roofing and interior finishes for vocational use"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost of conventional construction materials and the need for climate-resilient community spaces in harsh desert environments.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional",
+                "adapted_from_existing",
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Structural safety"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The project utilizes non-combustible and non-toxic natural materials such as earth and stone, posing minimal fire or chemical risk. While the construction was grassroots-led, the involvement of a professional architect and the use of established earthbag techniques ensure structural stability. The primary risks are standard construction-related physical hazards rather than chemical or energy-related dangers."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "construction",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_conversion",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "local_materials",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "design_adaptation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "resilience_safety",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
