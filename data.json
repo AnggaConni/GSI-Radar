@@ -53431,5 +53431,335 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "ae82b63ac20352881b0ac4147ec9b5d4",
+        "timestamp": "2026-10-18T02:42:57.273829",
+        "title": "M-Pesa Human ATM Model",
+        "sources": [
+            "https://www.forbes.com/sites/tobyshapshak/2021/05/19/world-bank-to-help-mtn-grow-its-human-atms-mobile-money-network/",
+            "https://www.cgap.org/research/publication/poor-people-using-mobile-financial-services",
+            "https://www.safaricom.co.ke",
+            "https://knowledge.wharton.upenn.edu/article/how-mobile-money-fosters-financial-inclusion/",
+            "https://www.vodafone.com/about-vodafone/what-we-do/m-pesa"
+        ],
+        "summary": "A decentralized mobile money agent network in Kenya that transforms local retail shops into banking hubs, allowing unbanked populations to perform financial transactions via feature phones.",
+        "category": [
+            "Fintech",
+            "Mobile Banking",
+            "Financial Inclusion"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2796562,
+            "lon": 36.816147
+        },
+        "process": {
+            "how_it_works": "Local shopkeepers and vendors act as intermediaries (agents) who facilitate the exchange of physical cash for digital mobile money and vice versa using a basic telecommunications network.",
+            "materials_used": [
+                "Feature phones",
+                "SIM cards",
+                "Cash",
+                "Mobile money platform software",
+                "Retail kiosk infrastructure"
+            ],
+            "step_by_step": [
+                "User visits a registered local agent (village kiosk or shop)",
+                "User provides physical cash to the agent for a digital deposit or initiates a withdrawal request via their phone",
+                "The agent uses their specialized SIM menu to transfer digital credit to the user or confirms receipt of the user's digital payment",
+                "The agent provides physical cash to the user (in case of withdrawal) or updates the user's digital balance (in case of deposit)",
+                "Both parties receive an immediate SMS confirmation of the transaction"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the need for physical bank branches in remote areas and provides financial services to the unbanked.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Financial",
+                "Physical Security"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a financial service model utilizing existing retail infrastructure. It does not involve hazardous chemicals, high-energy systems, or industrial processes. The primary risks are socio-economic or security-related (theft or fraud) rather than physical safety hazards like fire or toxicity."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "education_communication",
+                "node_id": "communication",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "digital_access",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_finance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "260e66d7eed9639113c6e038da45d301",
+        "timestamp": "2026-10-18T02:43:12.001828",
+        "title": "Mobile Airtime as Shadow Currency",
+        "sources": [
+            "https://www.reddit.com/r/Zambia/comments/1fv7f8m/how_to_convert_airtime_to_mobile_money/",
+            "https://aimtoget.com/",
+            "https://eazymobile.ng/airtime-to-cash",
+            "https://eazymobile.com.ng/"
+        ],
+        "summary": "In Nigeria and Zambia, mobile airtime is utilized as a liquid asset or 'shadow currency' to bypass cash shortages. Users convert mobile credit into physical cash or use it for direct payments through informal peer-to-peer exchanges and specialized third-party platforms.",
+        "category": [
+            "Fintech",
+            "Mobile Economy",
+            "Grassroots Finance"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Nigeria, Zambia",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Users transfer excess mobile credit to a third-party platform or an informal agent who then provides the user with physical cash or a bank transfer, minus a service fee.",
+            "materials_used": [
+                "Mobile phone",
+                "Airtime credit",
+                "USSD codes",
+                "Mobile applications"
+            ],
+            "step_by_step": [
+                "User accumulates or purchases mobile airtime credit.",
+                "User accesses a platform like Aimtoget or Eazymobile, or meets an informal agent.",
+                "The user transfers the airtime to the platform's designated number via USSD or app interface.",
+                "The platform validates the transfer and calculates the cash value after fees.",
+                "The equivalent value is sent to the user's bank account or provided in physical cash."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides financial liquidity and payment options for unbanked populations and those in regions facing physical currency shortages.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "financial"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation is a digital financial workaround involving the exchange of mobile airtime for cash or goods. It does not utilize chemicals, high-energy systems, or physical manufacturing processes, posing no risk of fire, explosion, toxicity, or environmental damage."
+        },
+        "priority_score": 48,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_finance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "digital_tools",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "2436a2630e6c14c6fc25bbdc051578e2",
+        "timestamp": "2026-10-18T02:43:28.156252",
+        "title": "Digitized Village Savings and Loan Associations (VSLAs)",
+        "sources": [
+            "https://www.csae.ox.ac.uk/increasing-mobile-banking-use-among-rural-populations-in-ghana",
+            "https://www.gsma.com",
+            "https://www.uncdf.org/article/7810/does-mobile-money-improve-financial-inclusion",
+            "https://openknowledge.worldbank.org/handle/10986/31753",
+            "https://www.care.org",
+            "https://www.uncdf.org"
+        ],
+        "summary": "A digital transformation of traditional community-based savings groups in rural Ghana and Uganda that integrates mobile money to replace physical lockboxes and manual ledgers, enhancing security and financial inclusion.",
+        "category": [
+            "FinTech",
+            "Financial Inclusion",
+            "Digital Transformation",
+            "Social Innovation"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Ghana, Uganda",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Traditional VSLA structures are moved onto mobile money platforms where members contribute savings and repay loans through digital wallets instead of physical cash, creating a verifiable digital audit trail.",
+            "materials_used": [
+                "Mobile phones",
+                "Mobile money accounts",
+                "SIM cards",
+                "Digital ledger applications"
+            ],
+            "step_by_step": [
+                "Transition existing VSLA groups from physical cash boxes to group-linked mobile money accounts.",
+                "Register all group members for individual mobile money wallets.",
+                "Execute weekly savings contributions via mobile money transfers.",
+                "Disburse loans to members digitally and track repayments through automated digital ledgers.",
+                "Aggregate transaction data to create digital credit profiles for members.",
+                "Leverage digital history to facilitate access to formal banking products and larger loans."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates security risks associated with storing physical cash, reduces manual accounting errors, and provides a formal financial footprint for unbanked individuals.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a digital financial service and does not involve any chemical, thermal, or physical processes that would pose fire, explosion, or toxic risks. It enhances physical safety by reducing the need for cash storage and manual record-keeping."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "construction",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "digital_access",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_finance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_resilience",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "peace_community_resilience",
+                "node_id": "social_cohesion",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
