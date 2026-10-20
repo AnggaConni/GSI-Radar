@@ -53761,5 +53761,433 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "1780a46bf5504562656094b449c6a8c4",
+        "timestamp": "2026-10-20T03:06:12.301096",
+        "title": "Zubabox Solar-Powered Internet Hub",
+        "sources": [
+            "https://www.computeraid.org/wp-content/uploads/2024/05/social-media-zubabox_0.jpg",
+            "https://www.computeraid.org/"
+        ],
+        "summary": "A solar-powered internet hub housed in a repurposed shipping container, utilizing refurbished ICT equipment to provide digital literacy and educational resources to off-grid communities.",
+        "category": [
+            "Education",
+            "Sustainability",
+            "Information Technology",
+            "Renewable Energy"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "United Kingdom",
+            "region": "Africa and South America",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The Zubabox functions as a self-sustaining digital classroom. It uses solar panels to power refurbished computers inside a modified shipping container, providing internet access and educational tools to areas without reliable electricity.",
+            "materials_used": [
+                "Shipping container",
+                "Solar panels",
+                "Refurbished computers",
+                "Educational software",
+                "Batteries",
+                "Inverters"
+            ],
+            "step_by_step": [
+                "Gather unused ICT equipment from UK corporations and individuals.",
+                "Clean, repair, and refurbish the collected hardware.",
+                "Load computers with specialized educational software.",
+                "Retrofit a shipping container with solar power infrastructure and workstations.",
+                "Deploy the completed hub to rural or off-grid locations in target regions."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces e-waste in developed nations while addressing the digital divide and lack of electricity in remote educational settings.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic",
+                "Electrical safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The Zubabox involves refurbished electronics and solar energy storage systems (batteries) housed in metal containers. Potential risks include battery thermal runaway, fire hazards from aging electrical components, and the presence of toxic heavy metals inherent in e-waste. While the project is professionally managed, deployment in remote, high-temperature environments requires robust maintenance and disposal protocols for end-of-life batteries and hardware."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "digital_access_connectivity",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_generation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_resources",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "productive_assets",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "adaptation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_conversion",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_distribution",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "education_communication",
+                "node_id": "learning_outcomes",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "local_material_inputs",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "repair_maintenance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "be0623e5f3903d3ceb267206a7669ead",
+        "timestamp": "2026-10-20T03:06:27.745310",
+        "title": "MobiLiteracy",
+        "sources": [
+            "https://www.creativeassociatesinternational.com",
+            "https://www.worldvision.org",
+            "https://www.usaid.gov/sites/default/files/2022-05/MobiLiteracy_Uganda_Final_Report.pdf",
+            "https://www.theguardian.com/sustainable-business/2014/aug/20/mobile-based-tools-education-millions-literacy"
+        ],
+        "summary": "A literacy program in Uganda that repurposes basic mobile feature phones to deliver daily reading lessons and audio-guided instruction to parents and children in low-income households, bypassing the need for expensive smartphones or tablets.",
+        "category": [
+            "Education",
+            "Mobile Technology",
+            "Literacy"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda",
+            "region": "East Africa",
+            "lat": 0.2858775,
+            "lon": 32.6077523
+        },
+        "process": {
+            "how_it_works": "The initiative utilizes SMS and audio technology to broadcast literacy curriculum to simple mobile devices, enabling parents—including those who are illiterate—to facilitate their children's learning through audio-guided lessons.",
+            "materials_used": [
+                "Basic feature phones",
+                "SMS technology",
+                "Audio recordings",
+                "Local language curriculum"
+            ],
+            "step_by_step": [
+                "Enroll households that possess basic mobile feature phones.",
+                "Develop literacy content and reading lessons in local languages.",
+                "Distribute daily lessons via SMS and automated audio calls.",
+                "Parents use the audio guidance to lead their children through reading exercises.",
+                "Track engagement and progress through mobile-based interactions."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to educational materials and high costs of digital learning tools in remote or low-income communities.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "MobiLiteracy utilizes existing consumer-grade mobile hardware for educational content delivery. There are no chemical, thermal, or mechanical risks associated with this social innovation, as it relies on standard SMS and audio functions of feature phones already in use by the public."
+        },
+        "priority_score": 48,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "education_communication",
+                "node_id": "learning_outcomes",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "adaptation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "education_communication",
+                "node_id": "learning_tools",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "productive_assets",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "7ee56fbb6dba933e5bb88359c1e830ff",
+        "timestamp": "2026-10-20T03:06:42.569491",
+        "title": "Worldreader Mobile Reading App",
+        "sources": [
+            "https://unesdoc.unesco.org/ark:/48223/pf0000227436",
+            "https://www.worldreader.org",
+            "https://www.worldreader.org/"
+        ],
+        "summary": "Worldreader transforms personal mobile phones, including low-end models, into digital e-readers using a specialized app optimized for low-bandwidth environments to provide access to a vast library of books in developing regions.",
+        "category": [
+            "Education",
+            "Digital Inclusion",
+            "Information Technology"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Multiple",
+            "region": "Sub-Saharan Africa and India",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "A mobile application is designed to deliver compressed digital content to small screens over slow data networks, allowing users to access a cloud-based library on devices they already own.",
+            "materials_used": [
+                "Mobile phones (including legacy/feature phones)",
+                "Low-bandwidth optimized software",
+                "Digital book repository",
+                "Mobile data networks"
+            ],
+            "step_by_step": [
+                "Develop a software application optimized for low-bandwidth and small-screen mobile devices.",
+                "Partner with publishers to acquire digital rights for educational and local content.",
+                "Deploy the application via mobile app stores or pre-loading on devices.",
+                "Users download the app and access the library using existing mobile data.",
+                "Provide offline reading capabilities to minimize data costs for the user."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Scarcity of physical books and libraries in developing countries due to high distribution costs and infrastructure gaps.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a software-based educational platform that repurposes existing mobile hardware. It does not involve chemical processes, energy generation, or physical hazards. The primary risks are digital in nature (data privacy), which fall outside the scope of physical safety hazards like fire, explosion, or toxicity."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "digital_tools",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "data_collection",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_distribution",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "market_access",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "water_management",
+                "node_id": "water_distribution",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
