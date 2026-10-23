@@ -54189,5 +54189,318 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "07de07913f79c0b14c13646f1d7f8676",
+        "timestamp": "2026-10-23T03:03:26.938800",
+        "title": "Red de Trueque (Barter Network)",
+        "sources": [
+            "https://truthout.org/articles/barter-networks-lessons-from-argentina-for-greece/",
+            "https://www.theguardian.com/world/2002/aug/28/argentina.comment",
+            "https://www.bbc.com/news/world-latin-america-45453393",
+            "https://hdl.handle.net/2152/120810",
+            "https://en.wikipedia.org/wiki/Cr%C3%A9dito",
+            "https://p2pfoundation.net/Red_de_Trueque"
+        ],
+        "summary": "A massive informal economic adaptation during the Argentine Great Depression where citizens established a decentralized system of barter clubs. Participants used a private, non-state currency called 'Créditos' to exchange goods and services, bypassing the collapsed formal banking system and the devalued national peso.",
+        "category": [
+            "Alternative Economics",
+            "Social Innovation",
+            "Community Currency"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Argentina",
+            "region": "National",
+            "lat": -34.8134274,
+            "lon": -58.5420585
+        },
+        "process": {
+            "how_it_works": "Participants joined local 'nodos' (nodes) where they traded goods and services using printed vouchers called 'Créditos'. This created a closed-loop economy that functioned independently of the national central bank.",
+            "materials_used": [
+                "Créditos (printed scrip/vouchers)",
+                "Local produce",
+                "Professional skills",
+                "Community meeting spaces"
+            ],
+            "step_by_step": [
+                "Establishment of a local 'nodo' or barter club by community members.",
+                "Issuance of 'Créditos' to members based on their initial contribution of goods or services.",
+                "Organization of regular market days where members trade items ranging from food to professional services.",
+                "Validation of transactions using the community currency rather than the national peso.",
+                "Expansion of the network through the inter-linking of different local nodes."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Total lack of liquidity and loss of purchasing power due to the collapse of the formal banking system and hyper-devaluation of the national currency.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Red de Trueque is a socio-economic innovation involving the exchange of goods and services using a community-based currency. It does not involve chemical processes, energy production, or hazardous materials, and therefore presents no physical risks such as fire, explosion, or toxicity."
+        },
+        "priority_score": 54,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "adaptation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_finance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "design_adaptation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "education_communication",
+                "node_id": "learning_outcomes",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "vehicle_adaptation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "3fe268a5af52acda2c4fa8596dbd2215",
+        "timestamp": "2026-10-23T03:03:51.275130",
+        "title": "Community Exchange System (CES)",
+        "sources": [
+            "https://en.wikipedia.org/wiki/Community_Exchange_System",
+            "https://www.capetownmagazine.com/community-exchange-system",
+            "https://www.community-exchange.org/home/",
+            "https://www.community-exchange.org/"
+        ],
+        "summary": "A global, internet-based network originating in Cape Town that facilitates the exchange of goods and services using a non-monetary digital ledger system called 'talents,' bypassing the need for traditional currency and direct barter.",
+        "category": [
+            "Alternative Finance",
+            "Social Innovation",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "South Africa",
+            "region": "Cape Town",
+            "lat": -33.9288301,
+            "lon": 18.4172197
+        },
+        "process": {
+            "how_it_works": "The system uses a centralized digital ledger to track debits and credits in a unit of account called 'talents.' This allows members to trade goods and services without a direct 'double coincidence of wants,' as credits earned from one person can be spent with any other member of the network.",
+            "materials_used": [
+                "Internet-based software platform",
+                "Digital ledger",
+                "Local labor and services",
+                "Artisanal goods"
+            ],
+            "step_by_step": [
+                "A member lists a good or service they can provide on the digital platform.",
+                "Another member 'purchases' the offering using the 'talents' unit of account.",
+                "The system records a credit for the seller and a debit for the buyer in the centralized ledger.",
+                "The seller uses their accumulated credits to acquire different goods or services from other participants in the network."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to traditional capital in marginalized communities and the formal market's failure to value community care and small-scale production.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Community Exchange System (CES) is a socio-economic innovation focused on digital accounting and community-based trade. It does not involve any chemical processes, energy production, or physical activities that pose fire, explosion, or environmental hazards."
+        },
+        "priority_score": 54,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "care_delivery",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_finance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fa5eb46ce43121e894f3875aa305ae25",
+        "timestamp": "2026-10-23T03:04:14.796890",
+        "title": "Venezuelan Informal Barter Economy",
+        "sources": [
+            "https://www.reuters.com/article/us-venezuela-economy-barter-idUSKBN1JF19F",
+            "https://www.theguardian.com/world/2019/mar/14/venezuela-barter-dollars-hyperinflation-economy",
+            "https://mises.org/mises-wire/venezuela-turns-barter",
+            "https://www.bbc.com/news/world-latin-america-44561020",
+            "https://globalnews.ca/news/5361091/venezuela-rural-barter-system/"
+        ],
+        "summary": "A widespread informal barter system emerged in Venezuela as a survival strategy against hyperinflation, where citizens exchange basic food commodities directly for essential services and other goods, bypassing the devalued national currency.",
+        "category": [
+            "Economics",
+            "Social Innovation",
+            "Survival Strategy"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Venezuela",
+            "region": "South America",
+            "lat": -25.5234878,
+            "lon": -54.5902331
+        },
+        "process": {
+            "how_it_works": "Direct commodity-for-service or commodity-for-commodity exchange facilitated by social media and local physical markets to bypass the lack of stable currency.",
+            "materials_used": [
+                "Corn flour",
+                "Rice",
+                "Coffee",
+                "WhatsApp",
+                "Facebook",
+                "Basic food staples"
+            ],
+            "step_by_step": [
+                "Acquire basic food staples or possess a specialized skill.",
+                "Identify a specific need (e.g., medical care, repair) or a surplus item for trade.",
+                "List the available item or service on social media groups (WhatsApp/Facebook) or visit a local informal market.",
+                "Negotiate the exchange rate based on the current perceived value of the commodities.",
+                "Perform the physical exchange of goods for the service or other goods."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Access to essential goods and services when the national currency (bolívar) loses its function as a medium of exchange.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "none"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The innovation described is a socio-economic adaptation involving the barter of basic commodities for services. It does not involve chemical processes, energy production, or hazardous materials that would pose a risk of fire, explosion, or toxicity."
+        },
+        "priority_score": 64,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_finance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "repair_maintenance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
