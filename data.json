@@ -54502,5 +54502,282 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "0f2ea8aefb421626091e8c4e4ad13c3b",
+        "timestamp": "2026-10-26T02:51:23.323985",
+        "title": "AAK Zero-Cost Rocket Stoves",
+        "sources": [
+            "https://www.aak.com/sustainability/better-livelihoods/kolo-nafaso/",
+            "https://www.aak.com/news-service/2018/rocket-stoves-in-west-africa/"
+        ],
+        "summary": "A sustainability project in Burkina Faso that trains local women to build fuel-efficient rocket stoves using indigenous, zero-cost materials to replace inefficient three-stone fires.",
+        "category": [
+            "Clean Cooking",
+            "Sustainable Energy",
+            "Women's Empowerment",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Burkina Faso",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The stove utilizes a rocket-style design which creates an insulated combustion chamber to improve heat transfer and burn fuel more completely than open fires.",
+            "materials_used": [
+                "termite sand",
+                "dried straw",
+                "cow dung"
+            ],
+            "step_by_step": [
+                "Gather local indigenous materials including termite sand, straw, and cow dung.",
+                "Mix the materials together to create a heat-resistant and insulating clay-like substance.",
+                "Mold the mixture into a rocket stove structure with a dedicated fuel inlet and a vertical chimney.",
+                "Allow the handmade unit to dry and harden before use."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High wood consumption, dangerous indoor smoke levels, labor-intensive fuel collection, and accidental burn risks for children.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a safety improvement over traditional three-stone fires. It uses inert, natural materials to contain combustion, reducing the risk of accidental burns and indoor air pollution. While it involves fire, the design significantly lowers existing environmental and health risks."
+        },
+        "priority_score": 52,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "collection",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "c84b547a438546d99be6d40141f639bf",
+        "timestamp": "2026-10-26T02:51:38.165285",
+        "title": "Aid Africa Six-Brick Rocket Stove",
+        "sources": [
+            "https://www.aidafrica.org",
+            "https://www.aidafrica.net/rocket-stoves/"
+        ],
+        "summary": "A highly efficient cooking stove made from six lightweight, insulating bricks crafted from local materials. The design ensures complete fuel combustion, significantly reducing wood usage and smoke emissions while cutting cooking time in half.",
+        "category": [
+            "Clean Energy",
+            "Environment",
+            "Women's Empowerment",
+            "Health"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda",
+            "region": "East Africa",
+            "lat": 0.2858775,
+            "lon": 32.6077523
+        },
+        "process": {
+            "how_it_works": "The stove utilizes six specialized bricks designed with high porosity to be extremely lightweight and insulating. This insulation maintains a high temperature within the combustion chamber, allowing for more complete combustion of wood fuel.",
+            "materials_used": [
+                "Local clay",
+                "Organic combustible material (to create air pockets)",
+                "Water"
+            ],
+            "step_by_step": [
+                "Mix local clay with organic materials that will burn away during firing.",
+                "Mold the mixture into six specific brick shapes.",
+                "Fire the bricks in a kiln to create a lightweight, porous, and insulating ceramic structure.",
+                "Assemble the six bricks into the rocket stove configuration at the user's home.",
+                "Place a pot on top and feed small amounts of wood into the opening."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces wood consumption by 66%, cuts particulate matter emissions by 75%, and addresses time poverty for women by halving cooking time.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "fire hazard"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The 'Six-Brick' rocket stove is a significant safety and health improvement over traditional open-fire cooking. While it involves combustion, the design contains the fire within an insulated chamber, reducing the risk of accidental burns and significantly lowering toxic smoke emissions. The primary risk is the inherent fire hazard associated with any wood-burning cooking appliance."
+        },
+        "priority_score": 52,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "local_material_inputs",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "local_materials",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "productive_energy_use",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "39f8548b2df2356407c29659c0348d98",
+        "timestamp": "2026-10-26T02:51:52.242931",
+        "title": "Kuniokoa Stove",
+        "sources": [
+            "https://burnstoves.com/stoves/kuniokoa/",
+            "https://burndesignlab.org/projects/the-kuniokoa/",
+            "https://burnstoves.com/products/wood-stoves"
+        ],
+        "summary": "A high-performance, natural-draft rocket stove designed to reduce firewood consumption and improve thermal efficiency for households in East Africa.",
+        "category": [
+            "Clean Cooking",
+            "Renewable Energy",
+            "Sustainable Manufacturing"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya",
+            "region": "East Africa",
+            "lat": -1.2796562,
+            "lon": 36.816147
+        },
+        "process": {
+            "how_it_works": "The stove utilizes a natural-draft rocket design with a high-alloy stainless steel combustion chamber and a specialized ashtray that maintains optimal airflow for complete combustion.",
+            "materials_used": [
+                "High-alloy stainless steel",
+                "Specialized ashtray components"
+            ],
+            "step_by_step": [
+                "Firewood is placed into the high-alloy stainless steel combustion chamber.",
+                "The fuel is ignited, initiating a natural-draft airflow.",
+                "The specialized ashtray regulates the air intake to maintain high temperatures.",
+                "Thermal energy is transferred to the cooking pot at a 37% efficiency rate.",
+                "Ash is collected in the tray for easy removal without disrupting airflow."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Local deforestation, high firewood consumption, and high household fuel expenses.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Fire hazard",
+                "Toxic"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Kuniokoa is a professionally engineered and mass-produced consumer product designed to mitigate the high risks associated with traditional open-fire cooking. While it involves active combustion (fire hazard) and produces exhaust (toxic CO/particulates), its design significantly improves safety, reduces fuel consumption, and lowers emissions compared to the baseline technology it replaces."
+        },
+        "priority_score": 58,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_conversion",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "productive_energy_use",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
