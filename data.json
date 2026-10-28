@@ -54779,5 +54779,459 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "44e70dc6049220e91878498c888dc2a3",
+        "timestamp": "2026-10-28T03:41:46.971945",
+        "title": "Officine REcycle Cargo Bike Upcycling",
+        "sources": [
+            "https://www.designboom.com/diy/recycle-custom-cargo-bicycles-italy-08-22-2017/",
+            "https://www.officinerecycle.com/en/tutorial",
+            "https://www.instructables.com/REcycle-How-to-Build-a-Two-Wheel-Cargo-bike/",
+            "https://www.officinerecycle.com/"
+        ],
+        "summary": "An Italian artisanal workshop that upcycles discarded steel mountain bike frames into custom, front-loading cargo bicycles. By combining salvaged rear frames with CNC-machined front structures, they create sustainable, high-quality transport solutions while fostering a DIY community through workshops and kits.",
+        "category": [
+            "Upcycling",
+            "Sustainable Transport",
+            "Circular Economy",
+            "Artisanal Manufacturing"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Italy",
+            "region": "Modena",
+            "lat": 44.5384728,
+            "lon": 10.9359609
+        },
+        "process": {
+            "how_it_works": "The workshop repurposes the rear triangle of a discarded steel mountain bike and welds it to a custom-engineered, CNC-machined front-loading cargo extension.",
+            "materials_used": [
+                "Discarded steel mountain bike frames",
+                "CNC-machined steel tubes",
+                "Welding consumables",
+                "Bicycle components"
+            ],
+            "step_by_step": [
+                "Salvage and prepare a discarded steel mountain bike frame",
+                "CNC-machine the components for the new front-loading structure",
+                "Align the recycled rear frame with the new front structure",
+                "Weld the components using a 'three-tube' design to maximize robustness",
+                "Smooth the welds and apply finishing touches according to customer geometry",
+                "Assemble the final cargo bike with necessary components"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Reduces industrial waste by repurposing old bicycle frames and provides a sustainable, custom alternative to expensive, mass-produced cargo bikes.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 5,
+            "risk_type": [
+                "structural failure",
+                "fire hazard",
+                "toxic fumes"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The innovation involves structural welding and modification of bicycle frames to create cargo-carrying vehicles. The primary risks are structural integrity under heavy loads, especially regarding the DIY kits provided to amateurs. Operational risks include fire hazards from welding and toxic fumes from stripping old paint or welding treated steel. While artisanal, the safety level is medium provided standard industrial welding protocols and structural testing are followed."
+        },
+        "priority_score": 31,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "adaptation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "fabrication",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "local_material_inputs",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "local_mobility",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_need",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_tools",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "prototyping",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "referral_logistics",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "vehicle_adaptation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "02aa8ff327e972723ffe6316bcd61757",
+        "timestamp": "2026-10-28T03:42:13.421842",
+        "title": "Bikeducken Cargo Bike",
+        "sources": [
+            "https://hackaday.com/2014/09/04/many-gave-their-lives-for-this-cargo-bike-to-be-re-born/",
+            "https://hackaday.com/2012/10/05/the-bikeducken-is-a-frankenbike-cargo-hauler/"
+        ],
+        "summary": "A custom-built 'Frankenbike' longtail cargo hauler created by merging a standard mountain bike frame with the rear triangle of a smaller child's bike using scrap materials.",
+        "category": [
+            "Transportation",
+            "Upcycling",
+            "DIY Engineering"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "",
+            "lat": 39.7837304,
+            "lon": -100.445882
+        },
+        "process": {
+            "how_it_works": "The modification extends the bicycle's wheelbase by welding a secondary rear frame onto the primary seat tube, creating a 'longtail' configuration that allows for a larger, heavy-duty cargo rack.",
+            "materials_used": [
+                "26-inch mountain bike frame",
+                "20-inch child's mountain bike frame",
+                "Scrap metal from a sofa frame",
+                "Welding rods"
+            ],
+            "step_by_step": [
+                "Remove the head tube from the 20-inch child's mountain bike frame.",
+                "Notch the top and down tubes of the smaller frame to perfectly contour to the seat tube of the 26-inch mountain bike.",
+                "Weld the notched tubes of the smaller frame onto the seat tube of the larger frame.",
+                "Fabricate a heavy-duty rear cargo rack using scrap metal salvaged from a discarded sofa frame.",
+                "Assemble components to ensure a stable, high-capacity utility vehicle."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Provides a high-capacity utility vehicle at zero material cost by upcycling discarded frames and scrap metal.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 6,
+            "risk_type": [
+                "structural failure",
+                "safety gear"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While an innovative example of upcycling, DIY welding of load-bearing bicycle frames poses a significant risk of structural failure. Using scrap metal (sofa frames) and unknown alloys without professional stress testing or certified welding techniques can lead to catastrophic frame collapse under cargo loads or during motion, potentially causing serious injury to the rider or others."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "adaptation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "education_communication",
+                "node_id": "learning_outcomes",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "local_material_inputs",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "local_mobility",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "493426bc928db4df5c56eb5a85571d52",
+        "timestamp": "2026-10-28T03:42:35.923830",
+        "title": "8freight Cargo Bike TIG Welding Restoration",
+        "sources": [
+            "https://www.youtube.com/watch?v=Guoo-huxL8k"
+        ],
+        "summary": "A specialized repair and modification project for a Mike Burrows-designed 8freight cargo bike frame. The restoration involved using precision TIG welding to join thick structural aluminum piping to very thin frame tubing, salvaging a high-end vehicle that would otherwise have been scrapped.",
+        "category": [
+            "Transportation",
+            "Repair & Maintenance",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "United Kingdom",
+            "region": "",
+            "lat": 54.7023545,
+            "lon": -3.2765753
+        },
+        "process": {
+            "how_it_works": "The process uses TIG (Tungsten Inert Gas) welding to fuse structural aluminum reinforcements to a damaged lightweight frame, specifically managing the heat transfer between materials of significantly different thicknesses.",
+            "materials_used": [
+                "1mm aluminum frame tubing",
+                "3-4mm structural aluminum piping",
+                "TIG welder",
+                "Aluminum filler rod"
+            ],
+            "step_by_step": [
+                "Assess structural damage to the 8freight aluminum frame",
+                "Source structural aluminum piping (3-4mm) to match the required reinforcement",
+                "Clean and prepare the aluminum surfaces to remove oxidation",
+                "Precision align the thick piping with the thin 1mm frame tubing",
+                "Perform TIG welding using high-precision heat control to prevent 'blowing holes' in the thin tubing",
+                "Cool and inspect the welds for structural integrity and alignment"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Prevents the disposal of expensive, specialized cargo bike frames by enabling complex structural repairs that standard workshops cannot perform.",
+            "scale": "low"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 5,
+            "risk_type": [
+                "safety gear",
+                "toxic"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is structural failure of the aluminum frame. Welding aluminum creates a heat-affected zone that significantly weakens the material unless post-weld heat treatment is applied. For a cargo bike designed for heavy loads, this poses a safety risk if the frame fails during use. Standard welding risks include toxic fumes and the need for specialized safety gear (PPE)."
+        },
+        "priority_score": 31,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "repair_maintenance",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "adaptation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "ecosystem_restoration",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "fabrication",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "local_material_inputs",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "biodiversity_ecosystem_restoration",
+                "node_id": "restoration",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
