@@ -55233,5 +55233,421 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "064f37ffa63ae3cde126f503e43d146a",
+        "timestamp": "2026-10-30T04:02:11.917420",
+        "title": "Living Goods 'Business-in-a-Box' Healthcare Model",
+        "sources": [
+            "https://livinggoods.org",
+            "https://livinggoods.org/category/community-health-workers/",
+            "https://livinggoods.org/our-programs/"
+        ],
+        "summary": "Living Goods transforms community health workers into micro-entrepreneurs using the 'DESC' framework (Digitally-enabled, Equipped, Supervised, and Compensated) to provide door-to-door maternal and child health services.",
+        "category": [
+            "Healthcare",
+            "Digital Health",
+            "Social Entrepreneurship"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Multiple",
+            "region": "Sub-Saharan Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Community health workers are professionalized through a digital platform and a business model that allows them to earn income while delivering life-saving health interventions directly to remote households.",
+            "materials_used": [
+                "Proprietary mobile application",
+                "Diagnostic kits",
+                "Essential medicines",
+                "Health-related consumer products"
+            ],
+            "step_by_step": [
+                "Recruit and train community health workers (CHWs) from within their own villages.",
+                "Equip CHWs with a mobile app for real-time data tracking and a stock of essential health products.",
+                "CHWs conduct door-to-door household visits to identify high-risk pregnancies and treat common childhood illnesses.",
+                "Supervisors monitor CHW performance and patient outcomes via a digital dashboard.",
+                "CHWs earn income through a combination of product sales and performance-based incentives."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High under-five mortality rates and lack of access to primary healthcare in remote or underserved communities.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "medium",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "safety gear"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "This innovation is a social and digital healthcare delivery model. It does not involve hazardous chemicals, high-energy systems, or industrial processes. The only physical safety considerations involve standard medical hygiene and personal protective equipment for community health workers when treating infectious diseases."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "prevention_hygiene",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "care_delivery",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "decision_support",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "digital_tools",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "health_screening",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ff238c901ef1dcdb0fe4e607410689eb",
+        "timestamp": "2026-10-30T04:02:28.754756",
+        "title": "Operation ASHA (OpASHA) eCompliance Model",
+        "sources": [
+            "https://socialinnovationinhealth.org/case-studies/operation-asha/",
+            "https://www.opasha.org/",
+            "https://en.wikipedia.org/wiki/Operation_ASHA"
+        ],
+        "summary": "A community-driven TB treatment model that utilizes biometric fingerprinting and local infrastructure to ensure medication adherence and accessibility for low-income populations.",
+        "category": [
+            "Healthcare",
+            "Social Innovation",
+            "Digital Health"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "India",
+            "region": "South Asia",
+            "lat": 21.4117746,
+            "lon": 39.889743
+        },
+        "process": {
+            "how_it_works": "The model uses an 'eCompliance' biometric system to track medication adherence by requiring both the patient and the provider to scan their fingerprints at the time of delivery, ensuring physical presence and compliance.",
+            "materials_used": [
+                "Biometric fingerprint scanners",
+                "Mobile devices or tablets",
+                "TB medication",
+                "Local community infrastructure (temples, shops, homes)"
+            ],
+            "step_by_step": [
+                "Identify and train local community members to act as health providers and counselors",
+                "Establish treatment centers within existing local infrastructure to minimize patient travel",
+                "Enroll TB patients into the eCompliance biometric system",
+                "Verify every medication dose delivery through a synchronized fingerprint scan between provider and patient",
+                "Monitor data in real-time to identify missed doses and trigger immediate home visits"
+            ]
+        },
+        "impact": {
+            "problem_solved": "High tuberculosis treatment default rates caused by long commutes, lost wages, and social stigma in low-income areas.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "Infection Control"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "Operation ASHA is a public health delivery model for tuberculosis treatment. The innovation involves logistics, biometric tracking, and community engagement rather than hazardous chemical or energy processes. The primary risk is the inherent infectious nature of TB, which is managed through standard clinical protocols and trained providers."
+        },
+        "priority_score": 58,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "logistics",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "accessibility",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "care_delivery",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "social_inclusion_accessibility",
+                "node_id": "independent_access",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "education_communication",
+                "node_id": "learning_tools",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "adbb210017f9fcc5d03c2b1786b65d69",
+        "timestamp": "2026-10-30T04:02:45.914098",
+        "title": "Zipline National-Scale Drone Delivery System",
+        "sources": [
+            "https://www.youtube.com/watch?v=Kb65-ium5gY",
+            "https://www.forbes.com/sites/carolynfortino/2024/04/27/ziplines-milestone-1-million-commercial-drone-deliveries/",
+            "https://www.flyzipline.com/"
+        ],
+        "summary": "The world's first national-scale drone delivery system utilizing autonomous electric aircraft to deliver critical medical supplies like blood and vaccines to remote health facilities, bypassing infrastructure barriers.",
+        "category": [
+            "Healthcare",
+            "Logistics",
+            "Robotics",
+            "Aerospace"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Rwanda, Ghana",
+            "region": "Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Autonomous electric aircraft (Zips) deliver medical supplies via parachute drops to remote clinics after receiving orders via text or phone calls.",
+            "materials_used": [
+                "Autonomous electric aircraft (Zips)",
+                "Parachutes",
+                "AI and navigation software",
+                "Launch and recovery infrastructure",
+                "Cold-chain packaging"
+            ],
+            "step_by_step": [
+                "A health worker at a remote facility places an order for supplies via text or call.",
+                "The order is processed at a centralized Zipline distribution center.",
+                "Medical supplies are packed into a Zip drone and the flight path is programmed.",
+                "The drone is launched using an electric catapult system.",
+                "The Zip flies autonomously to the delivery site using GPS and AI.",
+                "The drone drops the package via parachute at a designated landing zone without landing.",
+                "The drone returns to the distribution center and is recovered via a wire-capture system."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates 'last mile' delivery delays caused by poor road infrastructure, preventing stockouts of life-saving medical supplies.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "high",
+            "difficulty": "hard"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "Safety",
+                "Fire"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The primary risks involve the use of lithium-ion batteries (fire hazard) and autonomous flight in shared airspace (safety). However, Zipline operates as a professional aerospace entity with redundant systems and regulatory oversight. The risk is low and well-managed compared to the high life-saving impact."
+        },
+        "priority_score": 56,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "logistics",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "referral_logistics",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "care_delivery",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "medical_tools",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_distribution",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "market_access",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "climate_adaptation_disaster_resilience",
+                "node_id": "recovery_resilience",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "rehabilitation_support",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "sorting_recovery",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "water_management",
+                "node_id": "water_distribution",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
