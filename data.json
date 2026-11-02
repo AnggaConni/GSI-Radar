@@ -55649,5 +55649,535 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "b040b18c99d0c0a6443610f21c62cbd6",
+        "timestamp": "2026-11-02T03:59:37.220279",
+        "title": "GiveLove Humanure Sanitation System",
+        "sources": [
+            "https://givelove.org",
+            "https://givelove.org/",
+            "https://humanurehandbook.com/downloads/GiveLove_Haiti_Paper.pdf",
+            "https://givelove.org/video-gallery/"
+        ],
+        "summary": "A community-wide sanitation project in Haiti that utilizes the 'Humanure' thermophilic composting method to transform human waste into safe, pathogen-free fertilizer using low-cost, locally sourced materials.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Sustainable Agriculture"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Haiti",
+            "region": "Santo Village, Leogane",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "The system uses thermophilic (high-temperature) biological activity to break down human waste. By layering waste with carbon-rich materials, the compost reaches temperatures high enough to kill pathogens, resulting in safe fertilizer.",
+            "materials_used": [
+                "20-liter plastic receptacles",
+                "60-liter plastic receptacles",
+                "Sugarcane bagasse",
+                "Recycled shipping pallets",
+                "Locally sourced construction materials"
+            ],
+            "step_by_step": [
+                "Toilets are built using simple structures and plastic receptacles for waste collection.",
+                "Users cover waste with sugarcane bagasse to manage moisture, prevent odors, and provide carbon.",
+                "Full receptacles are collected and transported to a centralized composting area.",
+                "Waste is deposited into above-ground compost bins constructed from recycled shipping pallets.",
+                "The compost is monitored as thermophilic activity eliminates pathogens over time.",
+                "The finished, safe compost is used as fertilizer for local agriculture."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of sanitation infrastructure following natural disasters, prevention of waterborne diseases, and protection of local water sources from contamination.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Biological",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk involves the handling of human waste and the potential for pathogen survival if thermophilic temperatures (55-60°C) are not consistently reached or maintained. While the method is scientifically sound, its grassroots implementation requires strict adherence to safety protocols and monitoring to prevent the spread of diseases like cholera or parasitic infections."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "water_management",
+                "node_id": "water_sanitation",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative",
+                    "title"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "water_sanitation_infrastructure",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "soil_management",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "collection",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "construction",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "prevention_hygiene",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "prevention_reduction",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "referral_logistics",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "resilience_safety",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "994d14abcb75e17161572380198d6417",
+        "timestamp": "2026-11-02T03:59:55.448976",
+        "title": "Ecological Sanitation (Ecosan) Toilets for Flood-Prone Areas",
+        "sources": [
+            "https://genr.world/composting-toilets-for-refugee-resilience-regenerative-sanitation-in-nakivale-camp-uganda/",
+            "https://yiceuganda.org/",
+            "https://re-alliance.org/ecosan-composting-toilets/"
+        ],
+        "summary": "YICE Uganda implemented Urine-Diverting Dry Toilets (UDDT) in the Nakivale Refugee Camp, featuring flood-proof containers and waste separation to manage sanitation in high-groundwater areas and produce organic fertilizer.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Agriculture",
+            "Disaster Resilience"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Uganda",
+            "region": "Nakivale Refugee Camp",
+            "lat": -0.789864,
+            "lon": 30.9293269
+        },
+        "process": {
+            "how_it_works": "The system utilizes a Urine-Diverting Dry Toilet (UDDT) design to separate liquid and solid waste at the source, using specialized flood-proof containers that prevent contamination during high-water events and facilitate easy waste removal.",
+            "materials_used": [
+                "Urine-diverting toilet units",
+                "Flood-proof containers",
+                "Composting bins",
+                "Training manuals"
+            ],
+            "step_by_step": [
+                "Install the UDDT unit with specialized flood-proof containers above the groundwater level",
+                "Separate liquid and solid waste at the source to minimize odor and pathogens",
+                "Swap out containers once they are full and transport them to a safe composting area",
+                "Treat the waste through a safe composting process",
+                "Apply the treated by-products as fertilizer in household gardens"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Unstable sanitation in high-groundwater regions, prevalence of waterborne diseases like cholera, and local food insecurity.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "biological",
+                "environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": false,
+            "explanation": "The primary risk is biological exposure to human pathogens during the swapping and composting process. While the design is intended to be flood-proof and includes training, any failure in the containment or treatment process in a high-density refugee setting could lead to localized outbreaks. However, the system is a significant improvement over traditional pit latrines in flood-prone areas."
+        },
+        "priority_score": 50,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "water_management",
+                "node_id": "water_sanitation",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative",
+                    "process",
+                    "title"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "water_sanitation_infrastructure",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "construction",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "food_access",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "prevention_hygiene",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "referral_logistics",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "soil_management",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "education_communication",
+                "node_id": "teaching_support",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "treatment_processing",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "23af50d17463664a16665bf785ff3fa8",
+        "timestamp": "2026-11-02T04:00:12.992692",
+        "title": "Saniwise Technologies DIY Eco-Toilet",
+        "sources": [
+            "https://kenya.un.org/en/241432-young-people-invent-award-winning-eco-toilet",
+            "https://saniwisetechnologies.com/"
+        ],
+        "summary": "A youth-led initiative in Kisumu, Kenya, that provides affordable eco-toilets made from recycled materials. The system uses black soldier fly larvae to rapidly compost human waste into nutrient-rich manure and high-protein animal feed.",
+        "category": [
+            "Sanitation",
+            "Waste Management",
+            "Agriculture",
+            "Circular Economy"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Kenya",
+            "region": "Kisumu",
+            "lat": -0.1029109,
+            "lon": 34.7541761
+        },
+        "process": {
+            "how_it_works": "The system utilizes black soldier fly larvae (BSFL) to biologically digest solid human waste, converting it into compost and protein-rich biomass much faster than traditional decomposition.",
+            "materials_used": [
+                "Recycled plastic waste",
+                "Tetra packs",
+                "Black soldier fly larvae"
+            ],
+            "step_by_step": [
+                "Construct the toilet structure using recycled plastics and tetra packs",
+                "Collect solid human waste in a specialized containment unit",
+                "Introduce black soldier fly larvae into the waste containment",
+                "Allow the larvae to consume and break down the solid waste",
+                "Harvest the resulting nutrient-rich manure for agricultural use",
+                "Harvest the mature larvae to be used as high-protein chicken feed"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable sanitation, high costs of commercial fertilizers, and expensive animal feed for rural farmers.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 7,
+            "risk_type": [
+                "Biological",
+                "Health",
+                "Environmental"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The primary risk involves the handling and processing of human waste in a DIY grassroots setting. While Black Soldier Fly larvae effectively reduce waste, there is a high risk of pathogen transmission (e.g., E. coli, salmonella, parasites) if the process is not strictly controlled. Using larvae raised on human excreta as animal feed and the resulting compost for crops requires rigorous testing to ensure they do not introduce diseases into the food chain. Additionally, DIY construction using recycled materials must ensure complete containment to prevent groundwater contamination."
+        },
+        "priority_score": 62,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "water_management",
+                "node_id": "water_sanitation",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative",
+                    "title"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "water_sanitation_infrastructure",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_resources",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "environment_circular_economy",
+                "node_id": "reuse_circularity",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "soil_management",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "harvest_postharvest",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "local_material_inputs",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "construction_shelter",
+                "node_id": "local_materials",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "prevention_hygiene",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "prototyping",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
