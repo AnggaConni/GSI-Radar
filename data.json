@@ -56179,5 +56179,568 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "f19fe1e4f129ad0c1f93ae0d13609d43",
+        "timestamp": "2026-11-04T04:33:00.132144",
+        "title": "DIY PVC Wheelchair",
+        "sources": [
+            "https://www.catalannews.com/society-science/item/two-catalan-students-design-low-cost-wheelchair-for-developing-countries",
+            "https://fundacioisidreesteve.org",
+            "https://edgeryders.eu/t/students-design-low-cost-wheelchair-for-developing-countries/6868",
+            "https://www.upc.edu"
+        ],
+        "summary": "A low-cost, modular wheelchair constructed from PVC pipes and bicycle parts, designed by students at the Universitat Politècnica de Catalunya to provide a repairable mobility solution for resource-limited settings.",
+        "category": [
+            "Mobility",
+            "Assistive Technology",
+            "Social Innovation",
+            "Industrial Design"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Spain",
+            "region": "Catalonia",
+            "lat": 41.8523094,
+            "lon": 1.5745043
+        },
+        "process": {
+            "how_it_works": "The design utilizes lightweight PVC plumbing pipes for a modular frame and standard bicycle wheels for propulsion, allowing for easy assembly, disassembly, and maintenance without specialized equipment.",
+            "materials_used": [
+                "PVC plumbing pipes",
+                "Bicycle wheels",
+                "Supermarket trolley wheels",
+                "Screws",
+                "Nuts"
+            ],
+            "step_by_step": [
+                "Cut and prepare PVC plumbing pipes for the modular frame",
+                "Assemble the frame structure using screws and nuts",
+                "Mount two large bicycle wheels for the main propulsion system",
+                "Attach two supermarket trolley wheels as front casters for steering",
+                "Finalize assembly using basic manual tools"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of affordable and repairable mobility aids for individuals in developing countries with limited access to medical infrastructure.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Mechanical failure",
+                "Safety hazard"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the project addresses a critical social need, the use of PVC plumbing pipes for structural load-bearing in a mobility aid poses risks. PVC is susceptible to UV degradation, temperature-induced brittleness, and fatigue failure. Unlike metal, PVC can snap suddenly rather than bending, potentially leading to user injury. Structural integrity and long-term durability testing are necessary to ensure safety in diverse environmental conditions."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "local_mobility",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_need",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_outcome",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_tools",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "productive_assets",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "repair_maintenance",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "accessibility",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "social_inclusion_accessibility",
+                "node_id": "assistive_solutions",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "medical_tools",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "prototyping",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "rehabilitation_support",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "04e686258e75da21351f9b62764c595c",
+        "timestamp": "2026-11-04T04:33:20.961890",
+        "title": "Kigali Chair Project",
+        "sources": [
+            "https://inhabitat.com/simple-wheelchairs-made-from-reused-plastic-chairs-help-injured-people-in-rwanda/",
+            "https://www.josepmora.com/",
+            "https://www.dezeen.com/2013/01/29/kigali-chair-project-by-josep-mora-and-clara-romani/",
+            "https://www.designboom.com/design/these-retrofitted-plastic-chairs-address-basic-mobility-needs-in-developing-countries-11-14-2022/"
+        ],
+        "summary": "The Kigali Chair Project transforms ubiquitous, inexpensive plastic monobloc chairs into functional wheelchairs by mounting them on simple, locally-made wheeled frames, providing an affordable mobility solution in Rwanda.",
+        "category": [
+            "Mobility",
+            "Healthcare",
+            "Sustainable Design",
+            "Appropriate Technology"
+        ],
+        "innovation_level": "semi-formal",
+        "location": {
+            "country": "Rwanda",
+            "region": "Kigali",
+            "lat": -1.9534357,
+            "lon": 30.1140089
+        },
+        "process": {
+            "how_it_works": "The project retrofits mass-produced plastic chairs onto a custom-built frame equipped with standard wheels, significantly lowering the cost of the seating component of a wheelchair.",
+            "materials_used": [
+                "Plastic monobloc chairs",
+                "Metal or wooden frames",
+                "Bicycle wheels",
+                "Standard wheelchair wheels",
+                "Fasteners"
+            ],
+            "step_by_step": [
+                "Procure a standard, low-cost plastic monobloc chair.",
+                "Construct a simple frame designed to interface with the chair base.",
+                "Securely mount the plastic chair onto the frame.",
+                "Attach standard bicycle or wheelchair wheels to the frame.",
+                "Assemble and maintain the unit within local hospital workshops using basic tools."
+            ]
+        },
+        "impact": {
+            "problem_solved": "High cost and lack of availability of traditional wheelchairs, along with the difficulty of sourcing replacement parts in developing regions.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "easy"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education",
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 4,
+            "risk_type": [
+                "Mechanical Failure",
+                "Safety"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "While the project offers an affordable mobility solution, monobloc plastic chairs are not designed for the structural stresses of a wheelchair and can become brittle due to UV exposure, leading to potential collapse. Additionally, the lack of specialized pressure-relieving surfaces in standard plastic chairs poses a significant risk of pressure sores (decubitus ulcers) for long-term users, which requires clinical oversight."
+        },
+        "priority_score": 60,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "local_mobility",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_need",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_outcome",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_tools",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "accessibility",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "social_inclusion_accessibility",
+                "node_id": "assistive_solutions",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "medical_tools",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "fabrication",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "local_material_inputs",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "productive_assets",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "rehabilitation_support",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "64ce392ddbcd1af12ec6150ee188be06",
+        "timestamp": "2026-11-04T04:33:35.787490",
+        "title": "Leveraged Freedom Chair (LFC)",
+        "sources": [
+            "https://edge.mit.edu/article/mit-student-designs-wheelchair-developing-nations/",
+            "https://www.grit.mit.edu/",
+            "https://mobility.mit.edu/",
+            "https://www.gritwheelchairs.com/blog/grit-freedom-chair-product-spotlight",
+            "https://techxlab.org/solutions/grit-leveraged-freedom-chair/"
+        ],
+        "summary": "An all-terrain wheelchair designed for rural environments, utilizing a lever-driven propulsion system and standard bicycle parts to provide high torque and ease of maintenance.",
+        "category": [
+            "Mobility",
+            "Assistive Technology",
+            "Mechanical Engineering"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Kenya, Haiti, India",
+            "region": "Global South",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Users push long levers that provide mechanical advantage (torque) to drive the wheels, allowing for movement over uneven surfaces like mud and sand.",
+            "materials_used": [
+                "Bicycle chains",
+                "Freewheels",
+                "Bearings",
+                "Steel tubing",
+                "Standard bicycle parts"
+            ],
+            "step_by_step": [
+                "Fabricate the frame using steel tubing in local workshops",
+                "Integrate a drivetrain using standard bicycle chains and freewheels",
+                "Attach long levers to the drivetrain for user propulsion",
+                "Equip with wheels suitable for rough terrain"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Inaccessibility of rough terrain for standard wheelchair users in developing countries.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "formal_education"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 2,
+            "risk_type": [
+                "mechanical"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Leveraged Freedom Chair is a mechanical mobility device using standard bicycle components and steel. Risks are primarily associated with the quality of local welding and potential pinch points in the lever-driven drivetrain. It poses no chemical, fire, or explosive hazards."
+        },
+        "priority_score": 42,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "urban_community_systems",
+                "node_id": "local_mobility",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_need",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_outcome",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "mobility_tools",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "transport_mobility",
+                "node_id": "accessibility",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "social_inclusion_accessibility",
+                "node_id": "assistive_solutions",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "fabrication",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "social_inclusion_accessibility",
+                "node_id": "independent_access",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "local_material_inputs",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "health_medical_access",
+                "node_id": "medical_tools",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "repair_maintenance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
