@@ -56742,5 +56742,361 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "a5820a12e247ffc3be648230dc40154d",
+        "timestamp": "2026-11-06T04:47:57.448009",
+        "title": "Village Savings and Loan Association (VSLA)",
+        "sources": [
+            "https://www.care.org/our-work/poverty-and-hunger/economic-empowerment/village-savings-and-loan-associations/",
+            "https://www.carenederland.org/how-vslas-were-central-to-success/",
+            "https://www.care.org/news-and-stories/news/in-photos-women-transforming-lives-through-savings-groups/",
+            "https://www.careinternational.org.uk/stories/zemzems-story-vsla-member-entrepreneur-and-farmer-now-i-see-what-i-am-capable-of"
+        ],
+        "summary": "A self-managed community microfinance model where groups of 15 to 30 members pool savings to provide internal loans, secured by a multi-lock physical box system and concluded with a full distribution of assets.",
+        "category": [
+            "Finance",
+            "Community Development",
+            "Microfinance"
+        ],
+        "innovation_level": "institutional",
+        "location": {
+            "country": "Niger",
+            "region": "West Africa",
+            "lat": null,
+            "lon": null
+        },
+        "process": {
+            "how_it_works": "Members contribute regular savings to a group fund, which is then used to provide high-interest loans to members. The interest earned remains within the group, increasing the total pool of capital for the annual share-out.",
+            "materials_used": [
+                "Physical lockbox",
+                "Three padlocks",
+                "Three unique keys",
+                "Ledger books",
+                "Member passbooks"
+            ],
+            "step_by_step": [
+                "Form a group of 15-30 members and establish bylaws",
+                "Elect a management committee and assign key-holders",
+                "Conduct regular meetings for members to contribute savings",
+                "Approve and issue small loans to members from the pooled savings",
+                "Secure the funds in a lockbox where three different members hold the keys to ensure transparency",
+                "At the end of a 9-12 month cycle, distribute the total savings and interest back to members proportional to their investment"
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to formal banking and credit for rural or marginalized populations.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "theft"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The VSLA model is a social and financial innovation that involves no chemical, explosive, or environmental hazards. The primary physical risk is the security of the lockbox (theft), which is addressed by the group's internal governance and multi-key system."
+        },
+        "priority_score": 54,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_finance",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "governance_public_services",
+                "node_id": "accountability",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "energy_access",
+                "node_id": "energy_distribution",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "market_access",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "water_management",
+                "node_id": "water_distribution",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "061235d7d1537b9fb53877562f6a1a8f",
+        "timestamp": "2026-11-06T04:48:11.702761",
+        "title": "VSLA Collective Asset Ownership (Community Tractor)",
+        "sources": [
+            "https://www.care.org/news-and-stories/news/in-photos-women-transforming-lives-through-savings-groups/",
+            "https://www.wwf.org.uk/projects/transforming-lives-through-community-banks"
+        ],
+        "summary": "A Village Savings and Loan Association (VSLA) in coastal Tanzania innovated by pooling rotating funds and interest to purchase a community tractor, transitioning from manual labor to mechanized farming and creating a rental business model.",
+        "category": [
+            "Finance",
+            "Agriculture",
+            "Community Development"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "Tanzania",
+            "region": "Coastal region",
+            "lat": -10.2559988,
+            "lon": 40.0466843
+        },
+        "process": {
+            "how_it_works": "Members of a savings group pool their collective savings and interest earnings to purchase a high-value agricultural asset. This asset is then managed as a group business, providing services to members and renting it out to non-members for profit.",
+            "materials_used": [
+                "Rotating savings funds",
+                "Interest earnings",
+                "Tractor"
+            ],
+            "step_by_step": [
+                "Formation of a Village Savings and Loan Association (VSLA).",
+                "Accumulation of capital through regular member contributions and interest from internal loans.",
+                "Collective decision-making to pivot from individual lending to asset investment.",
+                "Purchase of a community tractor.",
+                "Establishment of a management structure to handle maintenance and rental schedules.",
+                "Renting the tractor to village farmers to generate secondary income."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Eliminates the reliance on subsistence manual labor and addresses the lack of access to affordable mechanized farming equipment.",
+            "scale": "medium"
+        },
+        "replicability": {
+            "cost_level": "high",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "adapted_from_existing"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 3,
+            "risk_type": [
+                "safety gear",
+                "environment"
+            ],
+            "safety_level": "medium",
+            "needs_intervention": true,
+            "explanation": "The transition from manual labor to mechanized farming involves heavy machinery, which carries risks of physical injury and requires specific safety training and gear. Additionally, the use of internal combustion engines introduces fuel handling hazards and environmental impacts like carbon emissions and soil compaction."
+        },
+        "priority_score": 46,
+        "hidden_gem": false,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_finance",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category",
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "agriculture_food_security",
+                "node_id": "cultivation",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "livelihoods_employment",
+                "node_id": "productive_assets",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "productive_tool",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "tools_manufacturing",
+                "node_id": "repair_maintenance",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "b4dc9d607119541d086bc1f39cdcfcde",
+        "timestamp": "2026-11-06T04:48:28.555317",
+        "title": "Ber-Berry Co-op",
+        "sources": [
+            "https://www.history.com/this-day-in-history/berry-gordy-jr-founds-motown-records",
+            "https://www.motownmuseum.org/",
+            "https://www.skypointfcu.com/got-a-savings-goal-consider-forming-a-savings-circle/"
+        ],
+        "summary": "A family-based rotating savings and credit association (ROSCA) established by the Gordy family in Detroit. It served as an informal venture capital fund, providing the $800 seed loan that Berry Gordy used to launch Motown Records in 1959, bypassing systemic banking barriers.",
+        "category": [
+            "Finance",
+            "Social Innovation",
+            "Entrepreneurship"
+        ],
+        "innovation_level": "grassroots",
+        "location": {
+            "country": "USA",
+            "region": "Detroit, Michigan",
+            "lat": 42.3315509,
+            "lon": -83.0466403
+        },
+        "process": {
+            "how_it_works": "Family members contribute a fixed monthly amount to a collective pool, which is then made available as loans to members for business or personal needs based on group approval and strict repayment terms.",
+            "materials_used": [
+                "Cash contributions",
+                "Social capital/Trust",
+                "Financial ledger"
+            ],
+            "step_by_step": [
+                "Establish a family cooperative fund with clear membership rules.",
+                "Collect fixed monthly contributions from all members ($10 per month in the original model).",
+                "Allow members to pitch business ideas or needs to the group to request a loan.",
+                "Disburse the requested capital once approved by the family board.",
+                "Repay the loan with interest to ensure the fund continues to grow for future members."
+            ]
+        },
+        "impact": {
+            "problem_solved": "Lack of access to traditional banking and venture capital for minority entrepreneurs due to systemic exclusion.",
+            "scale": "high"
+        },
+        "replicability": {
+            "cost_level": "low",
+            "difficulty": "medium"
+        },
+        "origin": {
+            "knowledge_source": [
+                "traditional"
+            ]
+        },
+        "risk_assessment": {
+            "risk_score": 1,
+            "risk_type": [
+                "financial"
+            ],
+            "safety_level": "high",
+            "needs_intervention": false,
+            "explanation": "The Ber-Berry Co-op is a social and financial innovation involving a rotating savings circle. It poses no physical risks such as fire, explosion, or toxicity. The risks are purely financial and social, relating to debt repayment and capital management within a family or community structure."
+        },
+        "priority_score": 54,
+        "hidden_gem": true,
+        "critical_flag": false,
+        "pathway_matches": [
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "community_finance",
+                "match": "exact",
+                "confidence": 1.0,
+                "evidence": [
+                    "category"
+                ]
+            },
+            {
+                "domain_id": "digital_transformation_ai",
+                "node_id": "ai_automation",
+                "match": "heuristic",
+                "confidence": 0.72,
+                "evidence": [
+                    "narrative",
+                    "process"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "collective_action",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "finance_social_innovation",
+                "node_id": "local_organization",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            },
+            {
+                "domain_id": "peace_community_resilience",
+                "node_id": "trust_relationships",
+                "match": "heuristic",
+                "confidence": 0.68,
+                "evidence": [
+                    "narrative"
+                ]
+            }
+        ]
     }
 ]
